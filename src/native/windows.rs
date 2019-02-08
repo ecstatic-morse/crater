@@ -1,4 +1,5 @@
 use crate::prelude::*;
+use std::fs::File;
 use std::path::Path;
 use winapi::um::handleapi::CloseHandle;
 use winapi::um::processthreadsapi::{OpenProcess, TerminateProcess};
@@ -19,13 +20,15 @@ pub(crate) fn kill_process(id: u32) -> Fallible<()> {
 }
 
 pub(crate) fn current_user() -> u32 {
-    unimplemented!();
+    0
 }
 
-pub(crate) fn is_executable<P: AsRef<Path>>(_path: P) -> Fallible<bool> {
-    unimplemented!();
+pub(crate) fn is_executable<P: AsRef<Path>>(path: P) -> Fallible<bool> {
+    File::open(path)
+        .map(|_| true)
+        .map_err(Into::into)
 }
 
 pub(crate) fn make_executable<P: AsRef<Path>>(_path: P) -> Fallible<()> {
-    unimplemented!();
+    Ok(())
 }
