@@ -1,7 +1,7 @@
 use crate::dirs::{CARGO_HOME, RUSTUP_HOME};
 use crate::docker::DockerEnv;
 use crate::docker::{ContainerBuilder, MountPerms};
-use crate::native;
+use crate::{dirs, native};
 use crate::prelude::*;
 use crate::utils::size::Size;
 use failure::Error;
@@ -229,7 +229,7 @@ impl<'a> SandboxedCommand<'a> {
             match self.command.binary {
                 Binary::Global(path) => path,
                 Binary::InstalledByCrater(path) => {
-                    PathBuf::from("/opt/crater/cargo-home/bin").join(path)
+                    dirs::container::CARGO_BIN_DIR.join(path)
                 }
             }
             .to_string_lossy()
@@ -248,10 +248,10 @@ impl<'a> SandboxedCommand<'a> {
 
         self.container = self
             .container
-            .mount(source_dir, "/opt/crater/workdir", MountPerms::ReadOnly)
-            .env("SOURCE_DIR", "/opt/crater/workdir")
+            .mount(source_dir, dirs::container::WORK_DIR.to_str().unwrap(), MountPerms::ReadOnly)
+            .env("SOURCE_DIR", dirs::container::WORK_DIR.to_str().unwrap())
             .env("MAP_USER_ID", native::current_user().to_string())
-            .workdir("/opt/crater/workdir")
+            .workdir(dirs::container::WORK_DIR.to_str().unwrap())
             .cmd(cmd);
 
         for (key, value) in self.command.env {
@@ -264,14 +264,14 @@ impl<'a> SandboxedCommand<'a> {
         if self.command.local_rustup {
             self.container = self
                 .container
-                .mount(&*CARGO_HOME, "/opt/crater/cargo-home", MountPerms::ReadOnly)
+                .mount(&*CARGO_HOME, dirs::container::CARGO_HOME.to_str().unwrap(), MountPerms::ReadOnly)
                 .mount(
                     &*RUSTUP_HOME,
-                    "/opt/crater/rustup-home",
+                    dirs::container::RUSTUP_HOME.to_str().unwrap(),
                     MountPerms::ReadOnly,
                 )
-                .env("CARGO_HOME", "/opt/crater/cargo-home")
-                .env("RUSTUP_HOME", "/opt/crater/rustup-home");
+                .env("CARGO_HOME", dirs::container::CARGO_HOME.to_str().unwrap())
+                .env("RUSTUP_HOME", dirs::container::RUSTUP_HOME.to_str().unwrap());
         }
 
         self.container.run(self.command.quiet)
