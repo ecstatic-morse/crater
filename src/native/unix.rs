@@ -34,13 +34,6 @@ fn executable_mode_for(path: &Path) -> Fallible<u32> {
     }
 }
 
-pub(crate) fn is_executable<P: AsRef<Path>>(path: P) -> Fallible<bool> {
-    let path = path.as_ref();
-
-    let expected_mode = executable_mode_for(&path)?;
-    Ok(path.metadata()?.mode() & expected_mode == expected_mode)
-}
-
 pub(crate) fn make_executable<P: AsRef<Path>>(path: P) -> Fallible<()> {
     let path = path.as_ref();
 
@@ -55,7 +48,8 @@ pub(crate) fn make_executable<P: AsRef<Path>>(path: P) -> Fallible<()> {
 
 #[cfg(test)]
 mod tests {
-    use super::{current_group, current_user, is_executable, kill_process, make_executable};
+    use crate::native::is_executable;
+    use super::{current_group, current_user, kill_process, make_executable};
     use nix::unistd::{Gid, Uid};
     use std::fs::File;
     use std::os::unix::process::ExitStatusExt;
@@ -89,10 +83,10 @@ mod tests {
 
         // Create the temp file and make sure it's not executable
         File::create(&path).unwrap();
-        assert!(!is_executable(&path).unwrap());
+        assert!(!is_executable(&path));
 
         // And then make it executable
         make_executable(&path).unwrap();
-        assert!(is_executable(&path).unwrap());
+        assert!(is_executable(&path));
     }
 }

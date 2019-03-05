@@ -35,7 +35,7 @@ impl InstallableTool for Rustup {
             return Ok(false);
         }
 
-        Ok(native::is_executable(path)?)
+        Ok(native::is_executable(path))
     }
 
     fn install(&self) -> Fallible<()> {
@@ -56,6 +56,8 @@ impl InstallableTool for Rustup {
         {
             let mut file = File::create(installer)?;
             io::copy(&mut resp, &mut file)?;
+
+            #[cfg(unix)]
             native::make_executable(installer)?;
         }
 

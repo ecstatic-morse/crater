@@ -38,7 +38,7 @@ impl InstallableTool for BinaryCrate {
             return Ok(false);
         }
 
-        Ok(native::is_executable(path)?)
+        Ok(native::is_executable(path))
     }
 
     fn install(&self) -> Fallible<()> {

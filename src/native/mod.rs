@@ -1,3 +1,5 @@
+pub(crate) use is_executable::is_executable;
+
 #[cfg(unix)]
 mod unix;
 #[cfg(unix)]
