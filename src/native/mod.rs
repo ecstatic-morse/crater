@@ -1,5 +1,3 @@
-pub(crate) use is_executable::is_executable;
-
 #[cfg(unix)]
 mod unix;
 #[cfg(unix)]
@@ -9,3 +7,5 @@ pub(crate) use self::unix::*;
 mod windows;
 #[cfg(windows)]
 pub(crate) use self::windows::*;
+
+pub(crate) use is_executable::is_executable;

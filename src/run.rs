@@ -1,6 +1,6 @@
 use crate::dirs::{CARGO_HOME, RUSTUP_HOME};
 use crate::docker::DockerEnv;
-use crate::docker::{ContainerBuilder, MountPerms};
+use crate::docker::{self, ContainerBuilder, MountPerms};
 use crate::{dirs, native};
 use crate::prelude::*;
 use crate::utils::size::Size;
@@ -200,8 +200,18 @@ pub(crate) struct SandboxedCommand<'a> {
 
 impl<'a> SandboxedCommand<'a> {
     fn new(command: RunCommand, docker_env: &'a DockerEnv) -> Self {
+        #[cfg(windows)]
+        {
+            match docker::windows::container_isolation_for_env(docker_env) {
+                Ok(docker::windows::ContainerIsolation::HyperV) => warn!("Command will be run using HyperV"),
+                Err(e) => warn!("Container is based on an incompatible build of Windows: {}", e),
+
+                _ => (),
+            }
+        }
+
         let container = ContainerBuilder::new(docker_env)
-            .env("USER_ID", native::current_user().to_string())
+            .env("USER_ID", native::current_user().unwrap())
             .enable_networking(false);
 
         SandboxedCommand { command, container }
@@ -250,7 +260,7 @@ impl<'a> SandboxedCommand<'a> {
             .container
             .mount(source_dir, dirs::container::WORK_DIR.to_str().unwrap(), MountPerms::ReadOnly)
             .env("SOURCE_DIR", dirs::container::WORK_DIR.to_str().unwrap())
-            .env("MAP_USER_ID", native::current_user().to_string())
+            .env("MAP_USER_ID", native::current_user().unwrap())
             .workdir(dirs::container::WORK_DIR.to_str().unwrap())
             .cmd(cmd);
 

@@ -51,6 +51,18 @@ impl DockerEnv {
             .enable_timeout(false)
             .run()
     }
+
+    #[cfg(windows)]
+    fn build_number(&self) -> Fallible<crate::native::WindowsBuild> {
+        RunCommand::new("docker")
+            .args(&["run", &self.image, "powershell", "-Command", include_str!("./native/windows-build.ps1")])
+            .run_capture()?
+            .0
+            .first()
+            .unwrap()
+            .parse()
+            .map_err(Into::into)
+    }
 }
 
 #[derive(Copy, Clone, PartialEq, Eq)]
@@ -295,5 +307,91 @@ impl Container {
         RunCommand::new("docker")
             .args(&["rm", "-f", &self.id])
             .run()
+    }
+}
+
+#[cfg(windows)]
+pub(crate) mod windows {
+    use crate::native::{self, WindowsBuild};
+    use crate::prelude::*;
+    use super::DockerEnv;
+
+    /// The type of isolation a container can be run with.
+    /// 
+    /// Containers which can be run with `Process` isolation can also be run using `HyperV`.
+    #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
+    pub(crate) enum ContainerIsolation {
+        HyperV,
+        Process,
+    }
+
+    pub(crate) fn container_isolation_for_env(env: &DockerEnv) -> Fallible<ContainerIsolation> {
+        let host = native::build_number();
+        let guest: WindowsBuild = env.build_number().unwrap();
+
+        container_isolation(host, guest)
+    }
+
+    fn container_isolation(host: WindowsBuild, guest: WindowsBuild) -> Fallible<ContainerIsolation> {
+        use std::cmp::Ordering::*;
+        use self::ContainerIsolation::*;
+
+        if host.major != guest.major {
+            bail!("Major version mismatch");
+        }
+
+        if host.minor != guest.minor {
+            bail!("Minor version mismatch");
+        }
+
+        match host.build.cmp(&guest.build) {
+            Less => bail!("Host build must be newer than container build"),
+            Greater => Ok(HyperV),
+
+            // For releases earlier than Windows 1709, guest must have the same revision number as host.
+            Equal if host.revision == guest.revision || host.build >= 16299 => Ok(Process), 
+
+            _ => bail!("Revision mismatch for Windows release <= 1709"),
+        }
+    }
+
+    #[cfg(test)]
+    mod tests {
+        use super::*;
+
+        #[test]
+        fn test_container_build() {
+            let build = DockerEnv::new("mcr.microsoft.com/windows/servercore:10.0.16299.967")
+                .build_number()
+                .unwrap();
+
+            assert_eq!(build, "10.0.16299.967".parse().unwrap());
+        }
+
+        #[test]
+        fn test_container_isolation() {
+            let win2016: WindowsBuild = "10.0.14393.953".parse().unwrap();
+            let win1709: WindowsBuild = "10.0.16299.967".parse().unwrap();
+            let win1803: WindowsBuild = "10.0.17134.590".parse().unwrap();
+
+            assert_eq!(container_isolation(win1803, win1709).unwrap(), ContainerIsolation::HyperV);
+            assert_eq!(container_isolation(win1803, win2016).unwrap(), ContainerIsolation::HyperV);
+
+            assert_eq!(container_isolation(win1709, win1709).unwrap(), ContainerIsolation::Process);
+            assert!(container_isolation(win2016, win1709).is_err());
+        }
+
+        #[test]
+        fn test_revision_number_mismatch() {
+            let host2016: WindowsBuild = "10.0.14393.196".parse().unwrap();
+            let guest2016: WindowsBuild = "10.0.14393.257".parse().unwrap();
+
+            assert!(container_isolation(host2016, guest2016).is_err());
+
+            let host1803: WindowsBuild = "10.0.17134.196".parse().unwrap();
+            let guest1803: WindowsBuild = "10.0.17134.257".parse().unwrap();
+
+            assert_eq!(container_isolation(host1803, guest1803).unwrap(), ContainerIsolation::Process);
+        }
     }
 }
