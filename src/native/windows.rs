@@ -9,7 +9,7 @@ use winapi::um::processthreadsapi::{OpenProcess, TerminateProcess};
 use winapi::um::winnt::PROCESS_TERMINATE;
 use winreg::{RegKey, enums::HKEY_LOCAL_MACHINE};
 
-const PS_GET_WINDOWS_BUILD: &str = include_str!("windows-build.ps1");
+const PS_GET_WINDOWS_BUILD: &str = include_str!("./windows-build.ps1");
 
 /// A 4-part version number which identifies a particular build of Windows.
 #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
@@ -108,7 +108,8 @@ pub(crate) fn current_user() -> Fallible<String> {
         panic!("Buffer was too small for GetUserNameW");
     }
 
-    OsString::from_wide(&buf[..(len as usize)])
+    let len = (len as usize) - 1;
+    OsString::from_wide(&buf[..len])
         .into_string()
         .map_err(|_| format_err!("Username was not valid Unicode"))
 }

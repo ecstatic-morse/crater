@@ -15,6 +15,7 @@ pub(crate) fn is_running() -> bool {
         .is_ok()
 }
 
+#[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub(crate) struct DockerEnv {
     image: String,
     local: bool,
@@ -314,6 +315,8 @@ impl Container {
 pub(crate) mod windows {
     use crate::native::{self, WindowsBuild};
     use crate::prelude::*;
+    use std::collections::HashMap;
+    use std::sync::{Arc, Mutex};
     use super::DockerEnv;
 
     /// The type of isolation a container can be run with.
@@ -325,11 +328,19 @@ pub(crate) mod windows {
         Process,
     }
 
-    pub(crate) fn container_isolation_for_env(env: &DockerEnv) -> Fallible<ContainerIsolation> {
-        let host = native::build_number();
-        let guest: WindowsBuild = env.build_number().unwrap();
+    pub(crate) fn container_isolation_for_env(env: &DockerEnv) -> Result<ContainerIsolation, Arc<failure::Error>> {
+        lazy_static! {
+            static ref CACHE: Mutex<HashMap<DockerEnv, Result<ContainerIsolation, Arc<failure::Error>>>> = Default::default();
+        }
 
-        container_isolation(host, guest)
+        let mut cache = CACHE.lock().unwrap();
+        cache.entry(env.clone()).or_insert_with(|| {
+            let host = native::build_number();
+            let guest: WindowsBuild = env.build_number().unwrap();
+
+            container_isolation(host, guest)
+                .map_err(Arc::new)
+        }).clone()
     }
 
     fn container_isolation(host: WindowsBuild, guest: WindowsBuild) -> Fallible<ContainerIsolation> {
