@@ -42,9 +42,10 @@ impl FromStr for WindowsBuild {
     type Err = Error;
 
     fn from_str(s: &str) -> Fallible<Self> {
-        let parts: Vec<u32> = s.split(".")
+        let parts: Result<Vec<u32>, _> = s.split(".")
             .map(|s| s.parse())
-            .collect()?;
+            .collect();
+        let parts = parts:;
 
         let (major, minor, build, revision) = match &parts[..] {
             [a, b, c, d] => (*a, *b, *c, *d),
