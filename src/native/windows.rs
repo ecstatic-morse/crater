@@ -45,7 +45,7 @@ impl FromStr for WindowsBuild {
         let parts: Result<Vec<u32>, _> = s.split(".")
             .map(|s| s.parse())
             .collect();
-        let parts = parts:;
+        let parts = parts?;
 
         let (major, minor, build, revision) = match &parts[..] {
             [a, b, c, d] => (*a, *b, *c, *d),
