@@ -9,8 +9,6 @@ use winapi::um::processthreadsapi::{OpenProcess, TerminateProcess};
 use winapi::um::winnt::PROCESS_TERMINATE;
 use winreg::{RegKey, enums::HKEY_LOCAL_MACHINE};
 
-const PS_GET_WINDOWS_BUILD: &str = include_str!("./windows-build.ps1");
-
 /// A 4-part version number which identifies a particular build of Windows.
 #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub(crate) struct WindowsBuild {
@@ -44,11 +42,10 @@ impl FromStr for WindowsBuild {
     type Err = Error;
 
     fn from_str(s: &str) -> Fallible<Self> {
-        let parts: Result<Vec<u32>, _> = s.split(".")
+        let parts: Vec<u32> = s.split(".")
             .map(|s| s.parse())
-            .collect();
+            .collect()?;
 
-        let parts = parts?;
         let (major, minor, build, revision) = match &parts[..] {
             [a, b, c, d] => (*a, *b, *c, *d),
 
@@ -108,7 +105,7 @@ pub(crate) fn current_user() -> Fallible<String> {
         panic!("Buffer was too small for GetUserNameW");
     }
 
-    let len = (len as usize) - 1;
+    let len = (len as usize) - 1; // Omit null terminator
     OsString::from_wide(&buf[..len])
         .into_string()
         .map_err(|_| format_err!("Username was not valid Unicode"))

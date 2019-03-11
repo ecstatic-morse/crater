@@ -31,7 +31,6 @@ is_executable = "0.1.2"
 lazy_static = "1.0"
 mime = "0.3.1"
 minifier = { version = "0.0.20", features = ["html"] }
-nix = "0.11.0"
 paste = "0.1.3"
 petgraph = "0.4.11"
 r2d2 = "0.8.2"
@@ -60,13 +59,18 @@ toml = "0.4.6"
 url = "1.1"
 walkdir = "2"
 warp = "0.1.9"
-winapi = "0.3"
-winreg = "0.6"
 log = "0.4.6"
 env_logger = "0.6.0"
 hmac = "0.7"
 sha-1 = "0.8"
 rust_team_data = { git = "https://github.com/rust-lang/team" }
+
+[target.'cfg(unix)'.dependencies]
+nix = "0.11.0"
+
+[target.'cfg(windows)'.dependencies]
+winapi = "0.3"
+winreg = "0.6"
 
 [dev-dependencies]
 assert_cmd = "0.10.1"

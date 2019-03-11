@@ -211,7 +211,7 @@ impl<'a> SandboxedCommand<'a> {
         }
 
         let container = ContainerBuilder::new(docker_env)
-            .env("USER_ID", native::current_user().unwrap())
+            .env("USER_ID", native::current_user().unwrap().to_string())
             .enable_networking(false);
 
         SandboxedCommand { command, container }
@@ -260,7 +260,7 @@ impl<'a> SandboxedCommand<'a> {
             .container
             .mount(source_dir, dirs::container::WORK_DIR.to_str().unwrap(), MountPerms::ReadOnly)
             .env("SOURCE_DIR", dirs::container::WORK_DIR.to_str().unwrap())
-            .env("MAP_USER_ID", native::current_user().unwrap())
+            .env("MAP_USER_ID", native::current_user().unwrap().to_string())
             .workdir(dirs::container::WORK_DIR.to_str().unwrap())
             .cmd(cmd);
 
