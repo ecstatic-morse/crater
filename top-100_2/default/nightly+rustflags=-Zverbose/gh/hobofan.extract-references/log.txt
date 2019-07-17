@@ -1,0 +1,346 @@
+[INFO] cloning repository hobofan/extract-references
+[INFO] running `"git" "clone" "--bare" "git://github.com/hobofan/extract-references.git" "work\\cache\\sources\\gh\\hobofan\\extract-references"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\hobofan\extract-references'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hobofan\\extract-references" "work\\ex\\default\\sources\\nightly\\gh\\hobofan\\extract-references"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\hobofan\extract-references'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hobofan\\extract-references" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\hobofan\\extract-references"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\hobofan\extract-references'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 7ebc8d272517e0bc07a043fbb79cf819c1e03f92
+[INFO] sha for GitHub repo hobofan/extract-references: 7ebc8d272517e0bc07a043fbb79cf819c1e03f92
+[INFO] validating manifest of hobofan/extract-references on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hobofan/extract-references on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hobofan/extract-references
+[INFO] finished frobbing hobofan/extract-references
+[INFO] frobbed toml for hobofan/extract-references written to work\ex\default\sources\nightly\gh\hobofan\extract-references\Cargo.toml
+[INFO] started frobbing hobofan/extract-references
+[INFO] finished frobbing hobofan/extract-references
+[INFO] frobbed toml for hobofan/extract-references written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\hobofan\extract-references\Cargo.toml
+[INFO] crate hobofan/extract-references already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded pdf-extract v0.4.6
+[INFO] [stderr]   Downloaded pom v1.1.0
+[INFO] [stderr]   Downloaded postscript v0.11.1
+[INFO] [stderr]   Downloaded lopdf v0.15.3
+[INFO] [stderr]   Downloaded euclid v0.15.6
+[INFO] [stderr]   Downloaded serde v1.0.88
+[INFO] [stderr]   Downloaded heapsize v0.4.2
+[INFO] [stderr]   Downloaded adobe-cmap-parser v0.3.3
+[INFO] [stderr]   Downloaded lopdf v0.19.0
+[INFO] [stderr]   Downloaded type1-encoding-parser v0.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing hobofan/extract-references against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\hobofan\\extract-references,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2c60c3e89b479a2f77aef621a3f28252d19b3d786f9d97d1103097cf70684fee
+[INFO] running `"docker" "start" "-a" "2c60c3e89b479a2f77aef621a3f28252d19b3d786f9d97d1103097cf70684fee"`
+[INFO] [stderr]    Compiling libc v0.2.48
+[INFO] [stderr]    Compiling proc-macro2 v0.4.27
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling cc v1.0.29
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling num-derive v0.2.4
+[INFO] [stderr]    Compiling crc32fast v1.1.2
+[INFO] [stderr]    Compiling color_quant v1.0.1
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling serde v1.0.88
+[INFO] [stderr]    Compiling encoding_index_tests v0.1.4
+[INFO] [stderr]    Compiling heapsize v0.4.2
+[INFO] [stderr]    Compiling scoped_threadpool v0.1.9
+[INFO] [stderr]    Compiling linked-hash-map v0.3.0
+[INFO] [stderr]    Compiling regex v1.1.0
+[INFO] [stderr]    Compiling dtoa v0.4.3
+[INFO] [stderr]    Compiling pom v1.1.0
+[INFO] [stderr]    Compiling postscript v0.11.1
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling inflate v0.4.5
+[INFO] [stderr]    Compiling encoding-index-korean v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-simpchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-tradchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-japanese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-singlebyte v1.20141219.5
+[INFO] [stderr]    Compiling gif v0.10.1
+[INFO] [stderr]    Compiling regex-syntax v0.6.5
+[INFO] [stderr]    Compiling miniz-sys v0.1.11
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling adobe-cmap-parser v0.3.3
+[INFO] [stderr]    Compiling type1-encoding-parser v0.1.0
+[INFO] [stderr]    Compiling encoding v0.2.33
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling deflate v0.7.19
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling aho-corasick v0.6.10
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling quote v0.6.11
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling num-rational v0.1.42
+[INFO] [stderr]    Compiling syn v0.15.26
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling flate2 v0.2.20
+[INFO] [stderr]    Compiling flate2 v1.0.6
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling png v0.12.0
+[INFO] [stderr]    Compiling euclid v0.15.6
+[INFO] [stderr]    Compiling rayon v1.0.3
+[INFO] [stderr]    Compiling chrono v0.3.0
+[INFO] [stderr]    Compiling lopdf v0.19.0
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling image v0.19.0
+[INFO] [stderr]    Compiling lopdf v0.15.3
+[INFO] [stderr]    Compiling pdf-extract v0.4.6
+[INFO] [stderr]    Compiling extract-references v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4m 36s
+[INFO] running `"docker" "inspect" "2c60c3e89b479a2f77aef621a3f28252d19b3d786f9d97d1103097cf70684fee"`
+[INFO] running `"docker" "rm" "-f" "2c60c3e89b479a2f77aef621a3f28252d19b3d786f9d97d1103097cf70684fee"`
+[INFO] [stdout] 2c60c3e89b479a2f77aef621a3f28252d19b3d786f9d97d1103097cf70684fee
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\hobofan\\extract-references,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 62bbef2a35eea89019d54a98127ffde0110dc6d0d89d4d4898f34faab0e02e94
+[INFO] running `"docker" "start" "-a" "62bbef2a35eea89019d54a98127ffde0110dc6d0d89d4d4898f34faab0e02e94"`
+[INFO] [stderr]    Compiling extract-references v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.88s
+[INFO] running `"docker" "inspect" "62bbef2a35eea89019d54a98127ffde0110dc6d0d89d4d4898f34faab0e02e94"`
+[INFO] running `"docker" "rm" "-f" "62bbef2a35eea89019d54a98127ffde0110dc6d0d89d4d4898f34faab0e02e94"`
+[INFO] [stdout] 62bbef2a35eea89019d54a98127ffde0110dc6d0d89d4d4898f34faab0e02e94
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\hobofan\\extract-references,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] a2928319136e1d4664082b8cecf060aa14795fa0c61fc2d08f18a0388b88ceea
+[INFO] running `"docker" "start" "-a" "a2928319136e1d4664082b8cecf060aa14795fa0c61fc2d08f18a0388b88ceea"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.03s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\extract_references-9f9c16e1bba146ee.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test raw_text::tests::reference_item_pattern_fixture_1 ... FAILED
+[INFO] [stdout] test raw_text::tests::reference_section_by_header_fixture_1 ... FAILED
+[INFO] [stdout] test raw_text::tests::references_fixture_1 ... FAILED
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- raw_text::tests::reference_item_pattern_fixture_1 stdout ----
+[INFO] [stdout] thread 'raw_text::tests::reference_item_pattern_fixture_1' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:1051:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7634aa9bc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7634aa9bc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7634adf3e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7634adf3e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7634adb4d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7634ae7d0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7634ae304 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7634ae1e9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7634bf43c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff7634bf53f - core::result::unwrap_failed
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stdout]   10:     0x7ff763094576 - core::result::Result<extract_references::raw_text::RawText, std::io::error::Error>::unwrap<extract_references::raw_text::RawText,std::io::error::Error>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:852
+[INFO] [stdout]   11:     0x7ff763096429 - extract_references::raw_text::tests::reference_item_pattern_fixture_1
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:77
+[INFO] [stdout]   12:     0x7ff7630963ce - extract_references::raw_text::tests::reference_item_pattern_fixture_1::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:76
+[INFO] [stdout]   13:     0x7ff763098abb - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff7632afba7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   15:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7632cf168 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7632cf168 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7632cf168 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   19:     0x7ff7632a1a5e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff7632a7bfe - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff7632a7bfe - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff7632a7bfe - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff7632a82a0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff7632a82a0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff7632a82a0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff7632a82a0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff76349f777 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   29:     0x7ff7634b0e46 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   30:     0x7ff7634b0e46 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff7634b0e46 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff999cf7974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- raw_text::tests::reference_section_by_header_fixture_1 stdout ----
+[INFO] [stdout] thread 'raw_text::tests::reference_section_by_header_fixture_1' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:1051:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7634aa9bc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7634aa9bc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7634adf3e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7634adf3e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7634adb4d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7634ae7d0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7634ae304 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7634ae1e9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7634bf43c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stderr] error: test failed, to rerun pass '--bin extract-references'
+[INFO] [stdout]    9:     0x7ff7634bf53f - core::result::unwrap_failed
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stdout]   10:     0x7ff763094576 - core::result::Result<extract_references::raw_text::RawText, std::io::error::Error>::unwrap<extract_references::raw_text::RawText,std::io::error::Error>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:852
+[INFO] [stdout]   11:     0x7ff7630961fc - extract_references::raw_text::tests::reference_section_by_header_fixture_1
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:68
+[INFO] [stdout]   12:     0x7ff76309619e - extract_references::raw_text::tests::reference_section_by_header_fixture_1::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:67
+[INFO] [stdout]   13:     0x7ff763098a1b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff7632afba7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   15:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7632cf168 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7632cf168 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7632cf168 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   19:     0x7ff7632a1a5e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff7632a7bfe - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff7632a7bfe - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff7632a7bfe - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff7632a82a0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff7632a82a0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff7632a82a0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff7632a82a0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff76349f777 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   29:     0x7ff7634b0e46 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   30:     0x7ff7634b0e46 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff7634b0e46 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff999cf7974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- raw_text::tests::references_fixture_1 stdout ----
+[INFO] [stdout] thread 'raw_text::tests::references_fixture_1' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:1051:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7634aa9bc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7634aa9bc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7634adf3e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7634adf3e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7634adb4d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7634ae7d0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7634ae304 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7634ae1e9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7634bf43c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff7634bf53f - core::result::unwrap_failed
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stdout]   10:     0x7ff763094576 - core::result::Result<extract_references::raw_text::RawText, std::io::error::Error>::unwrap<extract_references::raw_text::RawText,std::io::error::Error>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:852
+[INFO] [stdout]   11:     0x7ff76309656c - extract_references::raw_text::tests::references_fixture_1
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:83
+[INFO] [stdout]   12:     0x7ff76309650e - extract_references::raw_text::tests::references_fixture_1::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\raw_text.rs:82
+[INFO] [stdout]   13:     0x7ff763098a6b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff7632afba7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   15:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7632cf168 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7632cf168 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7632cf168 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   19:     0x7ff7632a1a5e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff7632a7bfe - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff7632a7bfe - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff7632a7bfe - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff7634b2492 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff7632a82a0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff7632a82a0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff7632a82a0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff7632a82a0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff76349f777 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   29:     0x7ff7634b0e46 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   30:     0x7ff7634b0e46 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff7634b0e46 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff999cf7974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     raw_text::tests::reference_item_pattern_fixture_1
+[INFO] [stdout]     raw_text::tests::reference_section_by_header_fixture_1
+[INFO] [stdout]     raw_text::tests::references_fixture_1
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a2928319136e1d4664082b8cecf060aa14795fa0c61fc2d08f18a0388b88ceea"`
+[INFO] running `"docker" "rm" "-f" "a2928319136e1d4664082b8cecf060aa14795fa0c61fc2d08f18a0388b88ceea"`
+[INFO] [stdout] a2928319136e1d4664082b8cecf060aa14795fa0c61fc2d08f18a0388b88ceea

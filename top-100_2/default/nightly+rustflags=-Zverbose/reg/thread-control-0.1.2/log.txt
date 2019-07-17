@@ -1,0 +1,57 @@
+[INFO] fetching crate thread-control 0.1.2...
+[INFO] extracting crate thread-control 0.1.2 into work\ex\default\sources\nightly\reg\thread-control\0.1.2
+[INFO] extracting crate thread-control 0.1.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\thread-control\0.1.2
+[INFO] validating manifest of thread-control-0.1.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of thread-control-0.1.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing thread-control-0.1.2
+[INFO] finished frobbing thread-control-0.1.2
+[INFO] frobbed toml for thread-control-0.1.2 written to work\ex\default\sources\nightly\reg\thread-control\0.1.2\Cargo.toml
+[INFO] started frobbing thread-control-0.1.2
+[INFO] finished frobbing thread-control-0.1.2
+[INFO] frobbed toml for thread-control-0.1.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\thread-control\0.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing thread-control-0.1.2 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\thread-control\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 3df98de6f005b8e7bcb186f8f3f7e2797670cd05214e241c1e061bf42053dc10
+[INFO] running `"docker" "start" "-a" "3df98de6f005b8e7bcb186f8f3f7e2797670cd05214e241c1e061bf42053dc10"`
+[INFO] [stderr]    Compiling thread-control v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.88s
+[INFO] running `"docker" "inspect" "3df98de6f005b8e7bcb186f8f3f7e2797670cd05214e241c1e061bf42053dc10"`
+[INFO] running `"docker" "rm" "-f" "3df98de6f005b8e7bcb186f8f3f7e2797670cd05214e241c1e061bf42053dc10"`
+[INFO] [stdout] 3df98de6f005b8e7bcb186f8f3f7e2797670cd05214e241c1e061bf42053dc10
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\thread-control\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 27faf1688a0de40925fea1a10f6b288b6df01d5fc448e1c57bcdc3f90b3e3305
+[INFO] running `"docker" "start" "-a" "27faf1688a0de40925fea1a10f6b288b6df01d5fc448e1c57bcdc3f90b3e3305"`
+[INFO] [stderr]    Compiling thread-control v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.05s
+[INFO] running `"docker" "inspect" "27faf1688a0de40925fea1a10f6b288b6df01d5fc448e1c57bcdc3f90b3e3305"`
+[INFO] running `"docker" "rm" "-f" "27faf1688a0de40925fea1a10f6b288b6df01d5fc448e1c57bcdc3f90b3e3305"`
+[INFO] [stdout] 27faf1688a0de40925fea1a10f6b288b6df01d5fc448e1c57bcdc3f90b3e3305
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\thread-control\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] bdf9943c3a206c7f4d5bf6c72e7beddb625d1dd273567fc8b05e482956c8b07c
+[INFO] running `"docker" "start" "-a" "bdf9943c3a206c7f4d5bf6c72e7beddb625d1dd273567fc8b05e482956c8b07c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\thread_control-62ae942ec39d8e80.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests thread-control
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test src\lib.rs -  (line 5) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 25) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 44) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "bdf9943c3a206c7f4d5bf6c72e7beddb625d1dd273567fc8b05e482956c8b07c"`
+[INFO] running `"docker" "rm" "-f" "bdf9943c3a206c7f4d5bf6c72e7beddb625d1dd273567fc8b05e482956c8b07c"`
+[INFO] [stdout] bdf9943c3a206c7f4d5bf6c72e7beddb625d1dd273567fc8b05e482956c8b07c

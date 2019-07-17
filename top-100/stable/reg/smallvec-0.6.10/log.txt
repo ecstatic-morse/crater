@@ -1,0 +1,109 @@
+[INFO] fetching crate smallvec 0.6.10...
+[INFO] extracting crate smallvec 0.6.10 into work\ex\default\sources\stable\reg\smallvec\0.6.10
+[INFO] extracting crate smallvec 0.6.10 into work\ex\default\sources\beta\reg\smallvec\0.6.10
+[INFO] validating manifest of smallvec-0.6.10 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of smallvec-0.6.10 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing smallvec-0.6.10
+[INFO] finished frobbing smallvec-0.6.10
+[INFO] frobbed toml for smallvec-0.6.10 written to work\ex\default\sources\stable\reg\smallvec\0.6.10\Cargo.toml
+[INFO] started frobbing smallvec-0.6.10
+[INFO] finished frobbing smallvec-0.6.10
+[INFO] frobbed toml for smallvec-0.6.10 written to work\ex\default\sources\beta\reg\smallvec\0.6.10\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing smallvec-0.6.10 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f04b468268f956b469b204565b1dbbe85aebcc096387c95bf558106a68aeadc2
+[INFO] running `"docker" "start" "-a" "f04b468268f956b469b204565b1dbbe85aebcc096387c95bf558106a68aeadc2"`
+[INFO] [stderr]    Compiling smallvec v0.6.10 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.77s
+[INFO] running `"docker" "inspect" "f04b468268f956b469b204565b1dbbe85aebcc096387c95bf558106a68aeadc2"`
+[INFO] running `"docker" "rm" "-f" "f04b468268f956b469b204565b1dbbe85aebcc096387c95bf558106a68aeadc2"`
+[INFO] [stdout] f04b468268f956b469b204565b1dbbe85aebcc096387c95bf558106a68aeadc2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 79db38ded16e9616cec3f6817b1845a46c963002394ad74cdff1bfa0d1929f12
+[INFO] running `"docker" "start" "-a" "79db38ded16e9616cec3f6817b1845a46c963002394ad74cdff1bfa0d1929f12"`
+[INFO] [stderr]    Compiling smallvec v0.6.10 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.49s
+[INFO] running `"docker" "inspect" "79db38ded16e9616cec3f6817b1845a46c963002394ad74cdff1bfa0d1929f12"`
+[INFO] running `"docker" "rm" "-f" "79db38ded16e9616cec3f6817b1845a46c963002394ad74cdff1bfa0d1929f12"`
+[INFO] [stdout] 79db38ded16e9616cec3f6817b1845a46c963002394ad74cdff1bfa0d1929f12
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 5f1d3a219d53cf9107198718fc6c709a83a1471a6c4a8d6eada85032df8c0919
+[INFO] running `"docker" "start" "-a" "5f1d3a219d53cf9107198718fc6c709a83a1471a6c4a8d6eada85032df8c0919"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\smallvec-34e4f31ed7f8f7c6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 44 tests
+[INFO] [stdout] test tests::drain ... ok
+[INFO] [stdout] test tests::drain_rev ... ok
+[INFO] [stdout] test tests::grow_spilled_same_size ... ok
+[INFO] [stdout] test tests::grow_to_shrink ... ok
+[INFO] [stdout] test tests::into_iter ... ok
+[INFO] [stdout] test tests::into_iter_drop ... ok
+[INFO] [stdout] test tests::into_iter_rev ... ok
+[INFO] [stdout] test tests::issue_4 ... ok
+[INFO] [stdout] test tests::issue_5 ... ok
+[INFO] [stdout] test tests::resumable_extend ... ok
+[INFO] [stdout] test tests::test_as_mut ... ok
+[INFO] [stdout] test tests::shrink_to_fit_unspill ... ok
+[INFO] [stdout] test tests::test_as_ref ... ok
+[INFO] [stdout] test tests::test_borrow ... ok
+[INFO] [stdout] test tests::test_borrow_mut ... ok
+[INFO] [stdout] test tests::test_capacity ... ok
+[INFO] [stdout] test tests::test_dedup ... ok
+[INFO] [stdout] test tests::test_double_spill ... ok
+[INFO] [stdout] test tests::test_exact_size_iterator ... ok
+[INFO] [stdout] test tests::test_eq ... ok
+[INFO] [stdout] test tests::test_extend_from_slice ... ok
+[INFO] [stdout] test tests::test_from ... ok
+[INFO] [stdout] test tests::test_from_slice ... ok
+[INFO] [stdout] test tests::test_from_vec ... ok
+[INFO] [stdout] test tests::test_hash ... ok
+[INFO] [stdout] test tests::test_inline ... ok
+[INFO] [stdout] test tests::test_insert_from_slice ... ok
+[INFO] [stdout] test tests::test_drop_panic_smallvec ... ok
+[INFO] [stdout] test tests::test_insert_many ... ok
+[INFO] [stdout] test tests::test_insert_many_long_hint ... ok
+[INFO] [stdout] test tests::test_insert_many_short_hint ... ok
+[INFO] [stdout] test tests::test_into_inner ... ok
+[INFO] [stdout] test tests::test_into_vec ... ok
+[INFO] [stdout] test tests::test_ord ... ok
+[INFO] [stdout] test tests::test_resize ... ok
+[INFO] [stdout] test tests::test_retain ... ok
+[INFO] [stdout] test tests::test_insert_many_panic ... ok
+[INFO] [stdout] test tests::test_spill ... ok
+[INFO] [stdout] test tests::test_truncate ... ok
+[INFO] [stdout] test tests::test_with_capacity ... ok
+[INFO] [stdout] test tests::test_write ... ok
+[INFO] [stdout] test tests::test_invalid_grow ... ok
+[INFO] [stdout] test tests::test_zero ... ok
+[INFO] [stdout] test tests::veclike_deref_slice ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 44 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests smallvec
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf_and_len (line 495) ... ok
+[INFO] [stdout] test lib.rs - SmallVec (line 381) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf (line 475) ... ok
+[INFO] [stdout] test lib.rs - ExtendFromSlice (line 207) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf_and_len_unchecked (line 513) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_elem (line 1108) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_raw_parts (line 986) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_vec (line 439) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::with_capacity (line 420) ... ok
+[INFO] [stdout] test lib.rs - VecLike (line 161) ... ok
+[INFO] [stdout] test lib.rs - smallvec (line 80) ... ok
+[INFO] [stdout] test lib.rs - smallvec (line 93) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5f1d3a219d53cf9107198718fc6c709a83a1471a6c4a8d6eada85032df8c0919"`
+[INFO] running `"docker" "rm" "-f" "5f1d3a219d53cf9107198718fc6c709a83a1471a6c4a8d6eada85032df8c0919"`
+[INFO] [stdout] 5f1d3a219d53cf9107198718fc6c709a83a1471a6c4a8d6eada85032df8c0919

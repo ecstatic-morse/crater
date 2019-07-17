@@ -1,0 +1,71 @@
+[INFO] cloning repository LogoiLab/injektilo
+[INFO] running `"git" "clone" "--bare" "git://github.com/LogoiLab/injektilo.git" "work\\cache\\sources\\gh\\LogoiLab\\injektilo"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\LogoiLab\injektilo'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\LogoiLab\\injektilo" "work\\ex\\default\\sources\\stable\\gh\\LogoiLab\\injektilo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\LogoiLab\injektilo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\LogoiLab\\injektilo" "work\\ex\\default\\sources\\beta\\gh\\LogoiLab\\injektilo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\LogoiLab\injektilo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 0e1f87d5344f9c5d3bd01c81513e52b9ccdc8878
+[INFO] sha for GitHub repo LogoiLab/injektilo: 0e1f87d5344f9c5d3bd01c81513e52b9ccdc8878
+[INFO] validating manifest of LogoiLab/injektilo on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of LogoiLab/injektilo on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing LogoiLab/injektilo
+[INFO] finished frobbing LogoiLab/injektilo
+[INFO] frobbed toml for LogoiLab/injektilo written to work\ex\default\sources\stable\gh\LogoiLab\injektilo\Cargo.toml
+[INFO] started frobbing LogoiLab/injektilo
+[INFO] finished frobbing LogoiLab/injektilo
+[INFO] frobbed toml for LogoiLab/injektilo written to work\ex\default\sources\beta\gh\LogoiLab\injektilo\Cargo.toml
+[INFO] crate LogoiLab/injektilo already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_json v1.0.4
+[INFO] [stderr]   Downloaded num-traits v0.1.40
+[INFO] [stderr]   Downloaded serde_derive v1.0.16
+[INFO] [stderr]   Downloaded serde_derive_internals v0.16.0
+[INFO] [stderr]   Downloaded curl v0.4.8
+[INFO] [stderr]   Downloaded socket2 v0.2.4
+[INFO] [stderr]   Downloaded libc v0.2.32
+[INFO] [stderr]   Downloaded openssl-sys v0.9.20
+[INFO] [stderr]   Downloaded openssl-probe v0.1.1
+[INFO] [stderr]   Downloaded curl-sys v0.3.15
+[INFO] [stderr]   Downloaded libz-sys v1.0.18
+[INFO] [stderr]   Downloaded serde v1.0.16
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing LogoiLab/injektilo against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\LogoiLab\\injektilo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 923019a5f3a8b08c00cdec5553508eee31dc7e5c2cc28e9dc9ee16eaae604e51
+[INFO] running `"docker" "start" "-a" "923019a5f3a8b08c00cdec5553508eee31dc7e5c2cc28e9dc9ee16eaae604e51"`
+[INFO] [stderr]    Compiling cc v1.0.3
+[INFO] [stderr]    Compiling vcpkg v0.2.2
+[INFO] [stderr]    Compiling pkg-config v0.3.9
+[INFO] [stderr]    Compiling libc v0.2.32
+[INFO] [stderr]    Compiling serde v1.0.16
+[INFO] [stderr]    Compiling num-traits v0.1.40
+[INFO] [stderr]    Compiling serde_derive_internals v0.16.0
+[INFO] [stderr]    Compiling socket2 v0.2.4
+[INFO] [stderr]    Compiling libz-sys v1.0.18
+[INFO] [stderr]    Compiling curl-sys v0.3.15
+[INFO] [stderr]    Compiling serde_derive v1.0.16
+[INFO] [stderr]    Compiling curl v0.4.8
+[INFO] [stderr]    Compiling serde_json v1.0.4
+[INFO] [stderr]    Compiling injektilo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]  --> src\main.rs:3:1
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | #![feature(alloc_system)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0554`.
+[INFO] [stderr] error: Could not compile `injektilo`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "923019a5f3a8b08c00cdec5553508eee31dc7e5c2cc28e9dc9ee16eaae604e51"`
+[INFO] running `"docker" "rm" "-f" "923019a5f3a8b08c00cdec5553508eee31dc7e5c2cc28e9dc9ee16eaae604e51"`
+[INFO] [stdout] 923019a5f3a8b08c00cdec5553508eee31dc7e5c2cc28e9dc9ee16eaae604e51

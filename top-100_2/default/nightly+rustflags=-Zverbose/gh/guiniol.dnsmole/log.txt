@@ -1,0 +1,65 @@
+[INFO] cloning repository guiniol/dnsmole
+[INFO] running `"git" "clone" "--bare" "git://github.com/guiniol/dnsmole.git" "work\\cache\\sources\\gh\\guiniol\\dnsmole"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\guiniol\dnsmole'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guiniol\\dnsmole" "work\\ex\\default\\sources\\nightly\\gh\\guiniol\\dnsmole"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\guiniol\dnsmole'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guiniol\\dnsmole" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\guiniol\\dnsmole"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\guiniol\dnsmole'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b05311aa8df2900257c736c52de83e86e6c78307
+[INFO] sha for GitHub repo guiniol/dnsmole: b05311aa8df2900257c736c52de83e86e6c78307
+[INFO] validating manifest of guiniol/dnsmole on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of guiniol/dnsmole on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing guiniol/dnsmole
+[INFO] finished frobbing guiniol/dnsmole
+[INFO] frobbed toml for guiniol/dnsmole written to work\ex\default\sources\nightly\gh\guiniol\dnsmole\Cargo.toml
+[INFO] started frobbing guiniol/dnsmole
+[INFO] finished frobbing guiniol/dnsmole
+[INFO] frobbed toml for guiniol/dnsmole written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\guiniol\dnsmole\Cargo.toml
+[INFO] crate guiniol/dnsmole already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\guiniol\dnsmole\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing guiniol/dnsmole against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\guiniol\\dnsmole,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] be0e5d456866c508b985cba0158f65536fe711674143b09f54fc38bde06a6465
+[INFO] running `"docker" "start" "-a" "be0e5d456866c508b985cba0158f65536fe711674143b09f54fc38bde06a6465"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling dnsmole v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 52.91s
+[INFO] running `"docker" "inspect" "be0e5d456866c508b985cba0158f65536fe711674143b09f54fc38bde06a6465"`
+[INFO] running `"docker" "rm" "-f" "be0e5d456866c508b985cba0158f65536fe711674143b09f54fc38bde06a6465"`
+[INFO] [stdout] be0e5d456866c508b985cba0158f65536fe711674143b09f54fc38bde06a6465
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\guiniol\\dnsmole,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e94d991407bfbde1d1c156847446d5db0a12d81a834bb8a1356fd3a7dc854731
+[INFO] running `"docker" "start" "-a" "e94d991407bfbde1d1c156847446d5db0a12d81a834bb8a1356fd3a7dc854731"`
+[INFO] [stderr]    Compiling dnsmole v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.79s
+[INFO] running `"docker" "inspect" "e94d991407bfbde1d1c156847446d5db0a12d81a834bb8a1356fd3a7dc854731"`
+[INFO] running `"docker" "rm" "-f" "e94d991407bfbde1d1c156847446d5db0a12d81a834bb8a1356fd3a7dc854731"`
+[INFO] [stdout] e94d991407bfbde1d1c156847446d5db0a12d81a834bb8a1356fd3a7dc854731
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\guiniol\\dnsmole,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c09b0de4fd5b3de8c98eb75f5a6a68fb20d48e05727d3459ae9a81e8e8494287
+[INFO] running `"docker" "start" "-a" "c09b0de4fd5b3de8c98eb75f5a6a68fb20d48e05727d3459ae9a81e8e8494287"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.53s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dnsmole-2af5854ac5b10860.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c09b0de4fd5b3de8c98eb75f5a6a68fb20d48e05727d3459ae9a81e8e8494287"`
+[INFO] running `"docker" "rm" "-f" "c09b0de4fd5b3de8c98eb75f5a6a68fb20d48e05727d3459ae9a81e8e8494287"`
+[INFO] [stdout] c09b0de4fd5b3de8c98eb75f5a6a68fb20d48e05727d3459ae9a81e8e8494287

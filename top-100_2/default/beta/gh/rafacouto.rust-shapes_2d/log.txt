@@ -1,0 +1,55 @@
+[INFO] cloning repository rafacouto/rust-shapes_2d
+[INFO] running `"git" "clone" "--bare" "git://github.com/rafacouto/rust-shapes_2d.git" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rafacouto\rust-shapes_2d'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d" "work\\ex\\default\\sources\\stable\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\rafacouto\rust-shapes_2d'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d" "work\\ex\\default\\sources\\beta\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\rafacouto\rust-shapes_2d'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b697be973d808d046119239971bba53ea8fb0513
+[INFO] sha for GitHub repo rafacouto/rust-shapes_2d: b697be973d808d046119239971bba53ea8fb0513
+[INFO] validating manifest of rafacouto/rust-shapes_2d on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rafacouto/rust-shapes_2d on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rafacouto/rust-shapes_2d
+[INFO] finished frobbing rafacouto/rust-shapes_2d
+[INFO] frobbed toml for rafacouto/rust-shapes_2d written to work\ex\default\sources\stable\gh\rafacouto\rust-shapes_2d\Cargo.toml
+[INFO] started frobbing rafacouto/rust-shapes_2d
+[INFO] finished frobbing rafacouto/rust-shapes_2d
+[INFO] frobbed toml for rafacouto/rust-shapes_2d written to work\ex\default\sources\beta\gh\rafacouto\rust-shapes_2d\Cargo.toml
+[INFO] crate rafacouto/rust-shapes_2d already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rafacouto/rust-shapes_2d against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafacouto\\rust-shapes_2d,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] afe52b65dc26ae4083a42cac07c80e05bbbc3dddf6d4faf5924f717d838e2b6d
+[INFO] running `"docker" "start" "-a" "afe52b65dc26ae4083a42cac07c80e05bbbc3dddf6d4faf5924f717d838e2b6d"`
+[INFO] [stderr]    Compiling shapes_2d v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.13s
+[INFO] running `"docker" "inspect" "afe52b65dc26ae4083a42cac07c80e05bbbc3dddf6d4faf5924f717d838e2b6d"`
+[INFO] running `"docker" "rm" "-f" "afe52b65dc26ae4083a42cac07c80e05bbbc3dddf6d4faf5924f717d838e2b6d"`
+[INFO] [stdout] afe52b65dc26ae4083a42cac07c80e05bbbc3dddf6d4faf5924f717d838e2b6d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafacouto\\rust-shapes_2d,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 996c741c1db71ccee5d756670f6c669fd79daf06489d6ea85a2f99edf731e28a
+[INFO] running `"docker" "start" "-a" "996c741c1db71ccee5d756670f6c669fd79daf06489d6ea85a2f99edf731e28a"`
+[INFO] [stderr]    Compiling shapes_2d v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.91s
+[INFO] running `"docker" "inspect" "996c741c1db71ccee5d756670f6c669fd79daf06489d6ea85a2f99edf731e28a"`
+[INFO] running `"docker" "rm" "-f" "996c741c1db71ccee5d756670f6c669fd79daf06489d6ea85a2f99edf731e28a"`
+[INFO] [stdout] 996c741c1db71ccee5d756670f6c669fd79daf06489d6ea85a2f99edf731e28a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafacouto\\rust-shapes_2d,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 7e1f5a0000a582e86fc95a4aa680d83aaab8fdfc69fddc1260fe8d393df0c5b2
+[INFO] running `"docker" "start" "-a" "7e1f5a0000a582e86fc95a4aa680d83aaab8fdfc69fddc1260fe8d393df0c5b2"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\shapes_2d-bf0f1bb259b6e83e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7e1f5a0000a582e86fc95a4aa680d83aaab8fdfc69fddc1260fe8d393df0c5b2"`
+[INFO] running `"docker" "rm" "-f" "7e1f5a0000a582e86fc95a4aa680d83aaab8fdfc69fddc1260fe8d393df0c5b2"`
+[INFO] [stdout] 7e1f5a0000a582e86fc95a4aa680d83aaab8fdfc69fddc1260fe8d393df0c5b2

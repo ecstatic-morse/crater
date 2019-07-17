@@ -1,0 +1,57 @@
+[INFO] cloning repository McGittyHub/my-weight
+[INFO] running `"git" "clone" "--bare" "git://github.com/McGittyHub/my-weight.git" "work\\cache\\sources\\gh\\McGittyHub\\my-weight"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\McGittyHub\my-weight'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\McGittyHub\\my-weight" "work\\ex\\default\\sources\\stable\\gh\\McGittyHub\\my-weight"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\McGittyHub\my-weight'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\McGittyHub\\my-weight" "work\\ex\\default\\sources\\beta\\gh\\McGittyHub\\my-weight"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\McGittyHub\my-weight'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] cf4532fd282489b447baf2fd7d50a131609e349b
+[INFO] sha for GitHub repo McGittyHub/my-weight: cf4532fd282489b447baf2fd7d50a131609e349b
+[INFO] validating manifest of McGittyHub/my-weight on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of McGittyHub/my-weight on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing McGittyHub/my-weight
+[INFO] finished frobbing McGittyHub/my-weight
+[INFO] frobbed toml for McGittyHub/my-weight written to work\ex\default\sources\stable\gh\McGittyHub\my-weight\Cargo.toml
+[INFO] started frobbing McGittyHub/my-weight
+[INFO] finished frobbing McGittyHub/my-weight
+[INFO] frobbed toml for McGittyHub/my-weight written to work\ex\default\sources\beta\gh\McGittyHub\my-weight\Cargo.toml
+[INFO] crate McGittyHub/my-weight already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing McGittyHub/my-weight against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\McGittyHub\\my-weight,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c7b29b9cdacabe20643cc1eacdce5cde38fa2ae8a14f9d0070a98e9a1eb9d56b
+[INFO] running `"docker" "start" "-a" "c7b29b9cdacabe20643cc1eacdce5cde38fa2ae8a14f9d0070a98e9a1eb9d56b"`
+[INFO] [stderr]    Compiling my-weight v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.27s
+[INFO] running `"docker" "inspect" "c7b29b9cdacabe20643cc1eacdce5cde38fa2ae8a14f9d0070a98e9a1eb9d56b"`
+[INFO] running `"docker" "rm" "-f" "c7b29b9cdacabe20643cc1eacdce5cde38fa2ae8a14f9d0070a98e9a1eb9d56b"`
+[INFO] [stdout] c7b29b9cdacabe20643cc1eacdce5cde38fa2ae8a14f9d0070a98e9a1eb9d56b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\McGittyHub\\my-weight,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e11bd5ed040e5da4d728ae1ec96c7ab7ed40c769792cda3d3e47c6bf149bb090
+[INFO] running `"docker" "start" "-a" "e11bd5ed040e5da4d728ae1ec96c7ab7ed40c769792cda3d3e47c6bf149bb090"`
+[INFO] [stderr]    Compiling my-weight v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.81s
+[INFO] running `"docker" "inspect" "e11bd5ed040e5da4d728ae1ec96c7ab7ed40c769792cda3d3e47c6bf149bb090"`
+[INFO] running `"docker" "rm" "-f" "e11bd5ed040e5da4d728ae1ec96c7ab7ed40c769792cda3d3e47c6bf149bb090"`
+[INFO] [stdout] e11bd5ed040e5da4d728ae1ec96c7ab7ed40c769792cda3d3e47c6bf149bb090
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\McGittyHub\\my-weight,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 4ae40b1f7c1267fb56ac60f9f943d6f259f978dcf9571fe68fa5bc573b26d93e
+[INFO] running `"docker" "start" "-a" "4ae40b1f7c1267fb56ac60f9f943d6f259f978dcf9571fe68fa5bc573b26d93e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\my_weight-189eb20a17d54cf9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4ae40b1f7c1267fb56ac60f9f943d6f259f978dcf9571fe68fa5bc573b26d93e"`
+[INFO] running `"docker" "rm" "-f" "4ae40b1f7c1267fb56ac60f9f943d6f259f978dcf9571fe68fa5bc573b26d93e"`
+[INFO] [stdout] 4ae40b1f7c1267fb56ac60f9f943d6f259f978dcf9571fe68fa5bc573b26d93e

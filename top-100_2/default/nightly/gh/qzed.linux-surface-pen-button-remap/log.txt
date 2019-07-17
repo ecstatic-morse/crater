@@ -1,0 +1,119 @@
+[INFO] cloning repository qzed/linux-surface-pen-button-remap
+[INFO] running `"git" "clone" "--bare" "git://github.com/qzed/linux-surface-pen-button-remap.git" "work\\cache\\sources\\gh\\qzed\\linux-surface-pen-button-remap"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\qzed\linux-surface-pen-button-remap'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\qzed\\linux-surface-pen-button-remap" "work\\ex\\default\\sources\\nightly\\gh\\qzed\\linux-surface-pen-button-remap"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\qzed\linux-surface-pen-button-remap'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\qzed\\linux-surface-pen-button-remap" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\qzed\\linux-surface-pen-button-remap"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\qzed\linux-surface-pen-button-remap'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 8e72bced01e4b74e9045fbef8c571a2d9a0f531a
+[INFO] sha for GitHub repo qzed/linux-surface-pen-button-remap: 8e72bced01e4b74e9045fbef8c571a2d9a0f531a
+[INFO] validating manifest of qzed/linux-surface-pen-button-remap on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of qzed/linux-surface-pen-button-remap on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing qzed/linux-surface-pen-button-remap
+[INFO] finished frobbing qzed/linux-surface-pen-button-remap
+[INFO] frobbed toml for qzed/linux-surface-pen-button-remap written to work\ex\default\sources\nightly\gh\qzed\linux-surface-pen-button-remap\Cargo.toml
+[INFO] started frobbing qzed/linux-surface-pen-button-remap
+[INFO] finished frobbing qzed/linux-surface-pen-button-remap
+[INFO] frobbed toml for qzed/linux-surface-pen-button-remap written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\qzed\linux-surface-pen-button-remap\Cargo.toml
+[INFO] crate qzed/linux-surface-pen-button-remap already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libc v0.2.54
+[INFO] [stderr]   Downloaded evdev-rs v0.2.0
+[INFO] [stderr]   Downloaded evdev-sys v0.2.0
+[INFO] [stderr]   Downloaded cc v1.0.36
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing qzed/linux-surface-pen-button-remap against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\qzed\\linux-surface-pen-button-remap,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] b4c4400456b84e2603ce0dfdc197278e7f96f8776deb466af7d2f855c2734629
+[INFO] running `"docker" "start" "-a" "b4c4400456b84e2603ce0dfdc197278e7f96f8776deb466af7d2f855c2734629"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling libc v0.2.54
+[INFO] [stderr]    Compiling cc v1.0.36
+[INFO] [stderr]    Compiling nix v0.13.0
+[INFO] [stderr]    Compiling void v1.0.2
+[INFO] [stderr]    Compiling glob v0.3.0
+[INFO] [stderr]    Compiling evdev-sys v0.2.0
+[INFO] [stderr] error: failed to run custom build command for `evdev-sys v0.2.0`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\evdev-sys-85e9c17be4e4df48\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] cargo:rustc-link-search=C:\crater\target\debug\build\evdev-sys-259cea24169c7181\out/lib
+[INFO] [stderr] cargo:root=C:\crater\target\debug\build\evdev-sys-259cea24169c7181\out
+[INFO] [stderr] cargo:include=C:\crater\target\debug\build\evdev-sys-259cea24169c7181\out/include
+[INFO] [stderr] cargo:rerun-if-changed=libevdev/autogen.sh
+[INFO] [stderr] cargo:rustc-link-lib=static=evdev
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] CRATE_CC_NO_DEFAULTS = None
+[INFO] [stderr] CARGO_CFG_TARGET_FEATURE = Some("fxsr,mmx,sse,sse2")
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] running: "sh" "/c/crater/cargo-home/registry/src/github.com-1ecc6299db9ec823/evdev-sys-0.2.0/libevdev/autogen.sh" "--host=x86_64-pc-windows-msvc" "--prefix=/C/crater/target/debug/build/evdev-sys-259cea24169c7181/out"
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'cmd.status() return the error The system cannot find the file specified. (os error 2)', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\evdev-sys-0.2.0\build.rs:75:13
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff79ae6c96c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff79ae6c96c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff79ae6fd3e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff79ae6fd3e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff79ae6f9c2 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff79ae70540 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff79ae70074 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff79ae6ffc2 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff79ada4186 - build_script_build::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\evdev-sys-0.2.0\build.rs:75
+[INFO] [stderr]    9:     0x7ff79ada379c - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\evdev-sys-0.2.0\build.rs:64
+[INFO] [stderr]   10:     0x7ff79ada14d0 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   11:     0x7ff79ae6feb7 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   12:     0x7ff79ae6feb7 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   13:     0x7ff79ae7a172 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   14:     0x7ff79ae70762 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   15:     0x7ff79ae70762 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   16:     0x7ff79ae70762 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   17:     0x7ff79ada14ab - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   18:     0x7ff79ada46a0 - main
+[INFO] [stderr]   19:     0x7ff79ae880c0 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   20:     0x7ff79ae880c0 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   21:     0x7ff99bd47974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] running `"docker" "inspect" "b4c4400456b84e2603ce0dfdc197278e7f96f8776deb466af7d2f855c2734629"`
+[INFO] running `"docker" "rm" "-f" "b4c4400456b84e2603ce0dfdc197278e7f96f8776deb466af7d2f855c2734629"`
+[INFO] [stdout] b4c4400456b84e2603ce0dfdc197278e7f96f8776deb466af7d2f855c2734629

@@ -1,0 +1,53 @@
+[INFO] fetching crate rust_test_crate_abed 0.1.0...
+[INFO] extracting crate rust_test_crate_abed 0.1.0 into work\ex\default\sources\nightly\reg\rust_test_crate_abed\0.1.0
+[INFO] extracting crate rust_test_crate_abed 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rust_test_crate_abed\0.1.0
+[INFO] validating manifest of rust_test_crate_abed-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rust_test_crate_abed-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rust_test_crate_abed-0.1.0
+[INFO] finished frobbing rust_test_crate_abed-0.1.0
+[INFO] frobbed toml for rust_test_crate_abed-0.1.0 written to work\ex\default\sources\nightly\reg\rust_test_crate_abed\0.1.0\Cargo.toml
+[INFO] started frobbing rust_test_crate_abed-0.1.0
+[INFO] finished frobbing rust_test_crate_abed-0.1.0
+[INFO] frobbed toml for rust_test_crate_abed-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rust_test_crate_abed\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rust_test_crate_abed-0.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\rust_test_crate_abed\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 60bae66efde059becb7236c565b0e02e71f185b067c7a8e43840f7aaa62f270f
+[INFO] running `"docker" "start" "-a" "60bae66efde059becb7236c565b0e02e71f185b067c7a8e43840f7aaa62f270f"`
+[INFO] [stderr]    Compiling rust_test_crate_abed v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.64s
+[INFO] running `"docker" "inspect" "60bae66efde059becb7236c565b0e02e71f185b067c7a8e43840f7aaa62f270f"`
+[INFO] running `"docker" "rm" "-f" "60bae66efde059becb7236c565b0e02e71f185b067c7a8e43840f7aaa62f270f"`
+[INFO] [stdout] 60bae66efde059becb7236c565b0e02e71f185b067c7a8e43840f7aaa62f270f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\rust_test_crate_abed\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] fbb8d1aada7a4095cc44dddacc0ee023e31a4e8488ef83d8aa96ad29e2cd9426
+[INFO] running `"docker" "start" "-a" "fbb8d1aada7a4095cc44dddacc0ee023e31a4e8488ef83d8aa96ad29e2cd9426"`
+[INFO] [stderr]    Compiling rust_test_crate_abed v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.65s
+[INFO] running `"docker" "inspect" "fbb8d1aada7a4095cc44dddacc0ee023e31a4e8488ef83d8aa96ad29e2cd9426"`
+[INFO] running `"docker" "rm" "-f" "fbb8d1aada7a4095cc44dddacc0ee023e31a4e8488ef83d8aa96ad29e2cd9426"`
+[INFO] [stdout] fbb8d1aada7a4095cc44dddacc0ee023e31a4e8488ef83d8aa96ad29e2cd9426
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\rust_test_crate_abed\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 8935028eeafc4dcfeba25cc3f1bf01e68a653ae83f6ecd7cd73408d3a74ddc84
+[INFO] running `"docker" "start" "-a" "8935028eeafc4dcfeba25cc3f1bf01e68a653ae83f6ecd7cd73408d3a74ddc84"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_test_crate_abed-781baa051944bbe0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rust_test_crate_abed
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8935028eeafc4dcfeba25cc3f1bf01e68a653ae83f6ecd7cd73408d3a74ddc84"`
+[INFO] running `"docker" "rm" "-f" "8935028eeafc4dcfeba25cc3f1bf01e68a653ae83f6ecd7cd73408d3a74ddc84"`
+[INFO] [stdout] 8935028eeafc4dcfeba25cc3f1bf01e68a653ae83f6ecd7cd73408d3a74ddc84

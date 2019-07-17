@@ -1,0 +1,130 @@
+[INFO] cloning repository pepeul1191/rust-tutorial
+[INFO] running `"git" "clone" "--bare" "git://github.com/pepeul1191/rust-tutorial.git" "work\\cache\\sources\\gh\\pepeul1191\\rust-tutorial"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\pepeul1191\rust-tutorial'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pepeul1191\\rust-tutorial" "work\\ex\\default\\sources\\stable\\gh\\pepeul1191\\rust-tutorial"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\pepeul1191\rust-tutorial'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pepeul1191\\rust-tutorial" "work\\ex\\default\\sources\\beta\\gh\\pepeul1191\\rust-tutorial"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\pepeul1191\rust-tutorial'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b6a44b11db61c9d3e3eecf17c68275655e18cdde
+[INFO] sha for GitHub repo pepeul1191/rust-tutorial: b6a44b11db61c9d3e3eecf17c68275655e18cdde
+[INFO] validating manifest of pepeul1191/rust-tutorial on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of pepeul1191/rust-tutorial on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing pepeul1191/rust-tutorial
+[INFO] finished frobbing pepeul1191/rust-tutorial
+[INFO] frobbed toml for pepeul1191/rust-tutorial written to work\ex\default\sources\stable\gh\pepeul1191\rust-tutorial\Cargo.toml
+[INFO] started frobbing pepeul1191/rust-tutorial
+[INFO] finished frobbing pepeul1191/rust-tutorial
+[INFO] frobbed toml for pepeul1191/rust-tutorial written to work\ex\default\sources\beta\gh\pepeul1191\rust-tutorial\Cargo.toml
+[INFO] crate pepeul1191/rust-tutorial already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded nickel v0.10.1
+[INFO] [stderr]   Downloaded time v0.1.39
+[INFO] [stderr]   Downloaded winapi v0.3.3
+[INFO] [stderr]   Downloaded winapi-x86_64-pc-windows-gnu v0.3.2
+[INFO] [stderr]   Downloaded winapi-i686-pc-windows-gnu v0.3.2
+[INFO] [stderr]   Downloaded redox_syscall v0.1.37
+[INFO] [stderr]   Downloaded libc v0.2.36
+[INFO] [stderr]   Downloaded regex v0.2.5
+[INFO] [stderr]   Downloaded utf8-ranges v1.0.0
+[INFO] [stderr]   Downloaded thread_local v0.3.5
+[INFO] [stderr]   Downloaded lazy_static v1.0.0
+[INFO] [stderr]   Downloaded regex-syntax v0.4.2
+[INFO] [stderr]   Downloaded memchr v2.0.1
+[INFO] [stderr]   Downloaded aho-corasick v0.6.4
+[INFO] [stderr]   Downloaded mustache v0.8.2
+[INFO] [stderr]   Downloaded log v0.4.1
+[INFO] [stderr]   Downloaded cfg-if v0.1.2
+[INFO] [stderr]   Downloaded hyper v0.10.13
+[INFO] [stderr]   Downloaded base64 v0.6.0
+[INFO] [stderr]   Downloaded safemem v0.2.0
+[INFO] [stderr]   Downloaded byteorder v1.2.1
+[INFO] [stderr]   Downloaded groupable v0.2.0
+[INFO] [stderr]   Downloaded url v1.6.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing pepeul1191/rust-tutorial against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\pepeul1191\\rust-tutorial,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] f34a87a684b9b4ffc01f5bc528c8e4dce7368efc5b90283be99fd1d9bff449a3
+[INFO] running `"docker" "start" "-a" "f34a87a684b9b4ffc01f5bc528c8e4dce7368efc5b90283be99fd1d9bff449a3"`
+[INFO] [stderr]    Compiling version_check v0.1.3
+[INFO] [stderr]    Compiling cfg-if v0.1.2
+[INFO] [stderr]    Compiling winapi v0.3.3
+[INFO] [stderr]    Compiling matches v0.1.6
+[INFO] [stderr]    Compiling unicode-normalization v0.1.5
+[INFO] [stderr]    Compiling void v1.0.2
+[INFO] [stderr]    Compiling libc v0.2.36
+[INFO] [stderr]    Compiling byteorder v1.2.1
+[INFO] [stderr]    Compiling lazy_static v1.0.0
+[INFO] [stderr]    Compiling safemem v0.2.0
+[INFO] [stderr]    Compiling utf8-ranges v1.0.0
+[INFO] [stderr]    Compiling language-tags v0.2.2
+[INFO] [stderr]    Compiling httparse v1.2.3
+[INFO] [stderr]    Compiling regex-syntax v0.4.2
+[INFO] [stderr]    Compiling typeable v0.1.2
+[INFO] [stderr]    Compiling groupable v0.2.0
+[INFO] [stderr]    Compiling modifier v0.1.0
+[INFO] [stderr]    Compiling log v0.4.1
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unreachable v1.0.0
+[INFO] [stderr]    Compiling memchr v2.0.1
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling base64 v0.6.0
+[INFO] [stderr]    Compiling thread_local v0.3.5
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling aho-corasick v0.6.4
+[INFO] [stderr]    Compiling idna v0.1.4
+[INFO] [stderr]    Compiling plugin v0.2.6
+[INFO] [stderr]    Compiling mime v0.2.6
+[INFO] [stderr]    Compiling mustache v0.8.2
+[INFO] [stderr]    Compiling regex v0.2.5
+[INFO] [stderr]    Compiling url v1.6.0
+[INFO] [stderr]    Compiling time v0.1.39
+[INFO] [stderr] warning[E0713]: borrow may still be in use when destructor runs
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\url-1.6.0\src\form_urlencoded.rs:261:40
+[INFO] [stderr]     |
+[INFO] [stderr] 259 | impl<'a> Target for ::UrlQuery<'a> {
+[INFO] [stderr]     |      -- lifetime `'a` defined here
+[INFO] [stderr] 260 |     fn as_mut_string(&mut self) -> &mut String { &mut self.url.serialization }
+[INFO] [stderr] 261 |     fn finish(self) -> &'a mut ::Url { self.url }
+[INFO] [stderr]     |                                        ^^^^^^^^ - here, drop of `self` needs exclusive access to `*self.url`, because the type `UrlQuery<'_>` implements the `Drop` trait
+[INFO] [stderr]     |                                        |
+[INFO] [stderr]     |                                        returning this value requires that `*self.url` is borrowed for `'a`
+[INFO] [stderr]     |
+[INFO] [stderr]     = warning: this error has been downgraded to a warning for backwards compatibility with previous releases
+[INFO] [stderr]     = warning: this represents potential undefined behavior in your code and this warning will become a hard error in the future
+[INFO] [stderr]     = note: for more information, try `rustc --explain E0729`
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling hyper v0.10.13
+[INFO] [stderr]    Compiling nickel v0.10.1
+[INFO] [stderr]    Compiling nickel-demo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 12s
+[INFO] running `"docker" "inspect" "f34a87a684b9b4ffc01f5bc528c8e4dce7368efc5b90283be99fd1d9bff449a3"`
+[INFO] running `"docker" "rm" "-f" "f34a87a684b9b4ffc01f5bc528c8e4dce7368efc5b90283be99fd1d9bff449a3"`
+[INFO] [stdout] f34a87a684b9b4ffc01f5bc528c8e4dce7368efc5b90283be99fd1d9bff449a3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\pepeul1191\\rust-tutorial,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] b1868514bc3c6c786fd7a80ba88d82a89144843234135385f882e761001362e3
+[INFO] running `"docker" "start" "-a" "b1868514bc3c6c786fd7a80ba88d82a89144843234135385f882e761001362e3"`
+[INFO] [stderr]    Compiling nickel-demo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.80s
+[INFO] running `"docker" "inspect" "b1868514bc3c6c786fd7a80ba88d82a89144843234135385f882e761001362e3"`
+[INFO] running `"docker" "rm" "-f" "b1868514bc3c6c786fd7a80ba88d82a89144843234135385f882e761001362e3"`
+[INFO] [stdout] b1868514bc3c6c786fd7a80ba88d82a89144843234135385f882e761001362e3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\pepeul1191\\rust-tutorial,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 433bb04271c8fb3db27effc8831c33ac882879ca6ebcffdb519550fabac243a6
+[INFO] running `"docker" "start" "-a" "433bb04271c8fb3db27effc8831c33ac882879ca6ebcffdb519550fabac243a6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\nickel_demo-88c8d46e344031c2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "433bb04271c8fb3db27effc8831c33ac882879ca6ebcffdb519550fabac243a6"`
+[INFO] running `"docker" "rm" "-f" "433bb04271c8fb3db27effc8831c33ac882879ca6ebcffdb519550fabac243a6"`
+[INFO] [stdout] 433bb04271c8fb3db27effc8831c33ac882879ca6ebcffdb519550fabac243a6

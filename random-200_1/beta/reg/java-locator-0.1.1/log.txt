@@ -1,0 +1,126 @@
+[INFO] fetching crate java-locator 0.1.1...
+[INFO] extracting crate java-locator 0.1.1 into work\ex\default\sources\stable\reg\java-locator\0.1.1
+[INFO] extracting crate java-locator 0.1.1 into work\ex\default\sources\beta\reg\java-locator\0.1.1
+[INFO] validating manifest of java-locator-0.1.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of java-locator-0.1.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing java-locator-0.1.1
+[INFO] finished frobbing java-locator-0.1.1
+[INFO] frobbed toml for java-locator-0.1.1 written to work\ex\default\sources\stable\reg\java-locator\0.1.1\Cargo.toml
+[INFO] started frobbing java-locator-0.1.1
+[INFO] finished frobbing java-locator-0.1.1
+[INFO] frobbed toml for java-locator-0.1.1 written to work\ex\default\sources\beta\reg\java-locator\0.1.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing java-locator-0.1.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\java-locator\\0.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 1fb9145b0d447ee281b77a4f464c87bc336779a0dc7512cfba467bb3b101be15
+[INFO] running `"docker" "start" "-a" "1fb9145b0d447ee281b77a4f464c87bc336779a0dc7512cfba467bb3b101be15"`
+[INFO] [stderr]    Compiling java-locator v0.1.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.74s
+[INFO] running `"docker" "inspect" "1fb9145b0d447ee281b77a4f464c87bc336779a0dc7512cfba467bb3b101be15"`
+[INFO] running `"docker" "rm" "-f" "1fb9145b0d447ee281b77a4f464c87bc336779a0dc7512cfba467bb3b101be15"`
+[INFO] [stdout] 1fb9145b0d447ee281b77a4f464c87bc336779a0dc7512cfba467bb3b101be15
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\java-locator\\0.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 618abdc2627e6291ac069284e36ac89d2254e00925d8e0819bead16ab85e2364
+[INFO] running `"docker" "start" "-a" "618abdc2627e6291ac069284e36ac89d2254e00925d8e0819bead16ab85e2364"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling java-locator v0.1.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.70s
+[INFO] running `"docker" "inspect" "618abdc2627e6291ac069284e36ac89d2254e00925d8e0819bead16ab85e2364"`
+[INFO] running `"docker" "rm" "-f" "618abdc2627e6291ac069284e36ac89d2254e00925d8e0819bead16ab85e2364"`
+[INFO] [stdout] 618abdc2627e6291ac069284e36ac89d2254e00925d8e0819bead16ab85e2364
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\java-locator\\0.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 23267e7b323eede214b563fefb592b5e2906e2eb09a5287d6d87653f86f62f7f
+[INFO] running `"docker" "start" "-a" "23267e7b323eede214b563fefb592b5e2906e2eb09a5287d6d87653f86f62f7f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\java_locator-9439aeff8f3a6cf5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test unit_tests::locate_java_home_test ... FAILED
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- unit_tests::locate_java_home_test stdout ----
+[INFO] [stdout] thread 'unit_tests::locate_java_home_test' panicked at 'called `Result::unwrap()` on an `Err` value: JavaLocatorError { description: "Java is not installed or not added in the system PATH" }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7f8b636fc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7f8b636fc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7f8b66bae - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7f8b66bae - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7f8b667bb - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7f8b67440 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7f8b66f74 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7f8b66e59 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7f8b7a4cc - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff7f8adce31 - core::result::unwrap_failed<java_locator::errors::JavaLocatorError>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff7f8add8fe - core::result::Result<alloc::string::String, java_locator::errors::JavaLocatorError>::unwrap<alloc::string::String,java_locator::errors::JavaLocatorError>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\result.rs:800
+[INFO] [stdout]   11:     0x7ff7f8ade75f - java_locator::unit_tests::locate_java_home_test
+[INFO] [stdout]                                at C:\crater\workdir\src\lib.rs:264
+[INFO] [stdout]   12:     0x7ff7f8ade70e - java_locator::unit_tests::locate_java_home_test::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\lib.rs:263
+[INFO] [stdout]   13:     0x7ff7f8ad528b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff7f8aedd97 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   15:     0x7ff7f8b71b82 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7f8b0cd9b - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7f8b0cd9b - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7f8b0cd9b - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stdout]   19:     0x7ff7f8adfc1e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff7f8ae5aae - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff7f8ae5aae - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff7f8ae5aae - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff7f8b71b82 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff7f8ae60b0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff7f8ae60b0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff7f8ae60b0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff7f8ae60b0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff7f8b56877 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   29:     0x7ff7f8b70887 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   30:     0x7ff7f8b70887 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff7f8b70887 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff99cc07974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     unit_tests::locate_java_home_test
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "23267e7b323eede214b563fefb592b5e2906e2eb09a5287d6d87653f86f62f7f"`
+[INFO] running `"docker" "rm" "-f" "23267e7b323eede214b563fefb592b5e2906e2eb09a5287d6d87653f86f62f7f"`
+[INFO] [stdout] 23267e7b323eede214b563fefb592b5e2906e2eb09a5287d6d87653f86f62f7f

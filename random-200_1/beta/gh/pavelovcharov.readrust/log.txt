@@ -1,0 +1,211 @@
+[INFO] cloning repository pavelovcharov/readrust
+[INFO] running `"git" "clone" "--bare" "git://github.com/pavelovcharov/readrust.git" "work\\cache\\sources\\gh\\pavelovcharov\\readrust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\pavelovcharov\readrust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pavelovcharov\\readrust" "work\\ex\\default\\sources\\stable\\gh\\pavelovcharov\\readrust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\pavelovcharov\readrust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pavelovcharov\\readrust" "work\\ex\\default\\sources\\beta\\gh\\pavelovcharov\\readrust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\pavelovcharov\readrust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 127b0639bfdb617443d9a6a0b9f0390c819230d8
+[INFO] sha for GitHub repo pavelovcharov/readrust: 127b0639bfdb617443d9a6a0b9f0390c819230d8
+[INFO] validating manifest of pavelovcharov/readrust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of pavelovcharov/readrust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing pavelovcharov/readrust
+[INFO] finished frobbing pavelovcharov/readrust
+[INFO] frobbed toml for pavelovcharov/readrust written to work\ex\default\sources\stable\gh\pavelovcharov\readrust\Cargo.toml
+[INFO] started frobbing pavelovcharov/readrust
+[INFO] finished frobbing pavelovcharov/readrust
+[INFO] frobbed toml for pavelovcharov/readrust written to work\ex\default\sources\beta\gh\pavelovcharov\readrust\Cargo.toml
+[INFO] crate pavelovcharov/readrust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_json v1.0.9
+[INFO] [stderr]   Downloaded lazycell v0.6.0
+[INFO] [stderr]   Downloaded tokio-core v0.1.12
+[INFO] [stderr]   Downloaded tempdir v0.3.6
+[INFO] [stderr]   Downloaded take v0.1.0
+[INFO] [stderr]   Downloaded relay v0.1.1
+[INFO] [stderr]   Downloaded tokio-proto v0.1.1
+[INFO] [stderr]   Downloaded httparse v1.2.4
+[INFO] [stderr]   Downloaded atty v0.2.6
+[INFO] [stderr]   Downloaded vec_map v0.8.0
+[INFO] [stderr]   Downloaded dtoa v0.4.2
+[INFO] [stderr]   Downloaded serde_derive v1.0.27
+[INFO] [stderr]   Downloaded prettytable-rs v0.6.7
+[INFO] [stderr]   Downloaded serde_derive_internals v0.19.0
+[INFO] [stderr]   Downloaded rand v0.3.22
+[INFO] [stderr]   Downloaded rand v0.4.2
+[INFO] [stderr]   Downloaded winapi v0.3.4
+[INFO] [stderr]   Downloaded bitflags v1.0.1
+[INFO] [stderr]   Downloaded reqwest v0.8.4
+[INFO] [stderr]   Downloaded tokio-tls v0.1.4
+[INFO] [stderr]   Downloaded tokio-io v0.1.5
+[INFO] [stderr]   Downloaded bytes v0.4.6
+[INFO] [stderr]   Downloaded slab v0.4.0
+[INFO] [stderr]   Downloaded scoped-tls v0.1.0
+[INFO] [stderr]   Downloaded futures v0.1.18
+[INFO] [stderr]   Downloaded slab v0.3.0
+[INFO] [stderr]   Downloaded net2 v0.2.31
+[INFO] [stderr]   Downloaded mio v0.6.13
+[INFO] [stderr]   Downloaded security-framework-sys v0.1.16
+[INFO] [stderr]   Downloaded remove_dir_all v0.3.0
+[INFO] [stderr]   Downloaded security-framework v0.1.16
+[INFO] [stderr]   Downloaded schannel v0.1.10
+[INFO] [stderr]   Downloaded openssl v0.9.23
+[INFO] [stderr]   Downloaded openssl-sys v0.9.24
+[INFO] [stderr]   Downloaded vcpkg v0.2.2
+[INFO] [stderr]   Downloaded serde_urlencoded v0.5.1
+[INFO] [stderr]   Downloaded mime v0.3.5
+[INFO] [stderr]   Downloaded mime_guess v2.0.0-alpha.3
+[INFO] [stderr]   Downloaded unicase v2.1.0
+[INFO] [stderr]   Downloaded libflate v0.1.14
+[INFO] [stderr]   Downloaded build_const v0.2.0
+[INFO] [stderr]   Downloaded cc v1.0.4
+[INFO] [stderr]   Downloaded adler32 v1.0.2
+[INFO] [stderr]   Downloaded hyper-tls v0.1.2
+[INFO] [stderr]   Downloaded crc v1.7.0
+[INFO] [stderr]   Downloaded hyper v0.11.18
+[INFO] [stderr]   Downloaded tokio-service v0.1.0
+[INFO] [stderr]   Downloaded smallvec v0.2.1
+[INFO] [stderr]   Downloaded term v0.4.6
+[INFO] [stderr]   Downloaded textwrap v0.9.0
+[INFO] [stderr]   Downloaded ansi_term v0.10.2
+[INFO] [stderr]   Downloaded base64 v0.9.0
+[INFO] [stderr]   Downloaded native-tls v0.1.5
+[INFO] [stderr]   Downloaded unicode-width v0.1.4
+[INFO] [stderr]   Downloaded itoa v0.3.4
+[INFO] [stderr]   Downloaded encode_unicode v0.3.1
+[INFO] [stderr]   Downloaded csv v0.15.0
+[INFO] [stderr]   Downloaded clap v2.29.4
+[INFO] [stderr]   Downloaded serde v1.0.27
+[INFO] [stderr]   Downloaded num-traits v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing pavelovcharov/readrust against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\pavelovcharov\\readrust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6b57a79bb0f76e11d5c070cf61ed92fd9b7da142f26d07c31909b2f7f592627b
+[INFO] running `"docker" "start" "-a" "6b57a79bb0f76e11d5c070cf61ed92fd9b7da142f26d07c31909b2f7f592627b"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling siphasher v0.2.2
+[INFO] [stderr]    Compiling lazycell v0.6.0
+[INFO] [stderr]    Compiling slab v0.3.0
+[INFO] [stderr]    Compiling futures v0.1.18
+[INFO] [stderr]    Compiling build_const v0.2.0
+[INFO] [stderr]    Compiling scoped-tls v0.1.0
+[INFO] [stderr]    Compiling slab v0.4.0
+[INFO] [stderr]    Compiling take v0.1.0
+[INFO] [stderr]    Compiling smallvec v0.2.1
+[INFO] [stderr]    Compiling num-traits v0.2.0
+[INFO] [stderr]    Compiling httparse v1.2.4
+[INFO] [stderr]    Compiling serde v1.0.27
+[INFO] [stderr]    Compiling adler32 v1.0.2
+[INFO] [stderr]    Compiling itoa v0.3.4
+[INFO] [stderr]    Compiling dtoa v0.4.2
+[INFO] [stderr]    Compiling unicode-width v0.1.4
+[INFO] [stderr]    Compiling vec_map v0.8.0
+[INFO] [stderr]    Compiling encode_unicode v0.3.1
+[INFO] [stderr]    Compiling bitflags v1.0.1
+[INFO] [stderr]    Compiling ansi_term v0.10.2
+[INFO] [stderr]    Compiling unicase v2.1.0
+[INFO] [stderr]    Compiling memchr v1.0.2
+[INFO] [stderr]    Compiling crc v1.7.0
+[INFO] [stderr]    Compiling base64 v0.9.0
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling textwrap v0.9.0
+[INFO] [stderr]    Compiling tokio-service v0.1.0
+[INFO] [stderr]    Compiling relay v0.1.1
+[INFO] [stderr]    Compiling bytes v0.4.6
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling csv v0.15.0
+[INFO] [stderr]    Compiling tokio-io v0.1.5
+[INFO] [stderr]    Compiling net2 v0.2.31
+[INFO] [stderr]    Compiling term v0.4.6
+[INFO] [stderr]    Compiling phf_shared v0.7.21
+[INFO] [stderr]    Compiling mime v0.3.5
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.1
+[INFO] [stderr]    Compiling serde_json v1.0.9
+[INFO] [stderr]    Compiling libflate v0.1.14
+[INFO] [stderr]    Compiling serde_derive_internals v0.19.0
+[INFO] [stderr]    Compiling phf v0.7.21
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling schannel v0.1.10
+[INFO] [stderr]    Compiling time v0.1.39
+[INFO] [stderr]    Compiling atty v0.2.6
+[INFO] [stderr]    Compiling serde_derive v1.0.27
+[INFO] [stderr]    Compiling mio v0.6.13
+[INFO] [stderr]    Compiling prettytable-rs v0.6.7
+[INFO] [stderr]    Compiling clap v2.29.4
+[INFO] [stderr]    Compiling rand v0.3.22
+[INFO] [stderr]    Compiling native-tls v0.1.5
+[INFO] [stderr]    Compiling phf_generator v0.7.21
+[INFO] [stderr]    Compiling uuid v0.5.1
+[INFO] [stderr]    Compiling tokio-core v0.1.12
+[INFO] [stderr]    Compiling phf_codegen v0.7.21
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.3
+[INFO] [stderr]    Compiling tokio-proto v0.1.1
+[INFO] [stderr]    Compiling tokio-tls v0.1.4
+[INFO] [stderr] error: failed to run custom build command for `mime_guess v2.0.0-alpha.3`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\mime_guess-2248feedcabf3c1a\build-script-gen_mime_types` (exit code: 101)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 5, kind: PermissionDenied, message: "Access is denied." }', src\libcore\result.rs:999:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff61325c0cc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff61325c0cc - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff61325f16e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff61325f16e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff61325edf3 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff61325f8e0 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff61325f414 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff61325f2f9 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stderr]    8:     0x7ff61326a32c - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stderr]    9:     0x7ff61321d741 - core::result::unwrap_failed<std::io::error::Error>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stderr]   10:     0x7ff61321f895 - core::result::Result<std::fs::File, std::io::error::Error>::unwrap<std::fs::File,std::io::error::Error>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\result.rs:800
+[INFO] [stderr]   11:     0x7ff61322230e - build_script_gen_mime_types::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\mime_guess-2.0.0-alpha.3\src\gen_mime_types.rs:22
+[INFO] [stderr]   12:     0x7ff6132241a0 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   13:     0x7ff61325f2e7 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stderr]   14:     0x7ff61325f2e7 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stderr]   15:     0x7ff613262232 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   16:     0x7ff61325fb02 - std::panicking::try
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stderr]   17:     0x7ff61325fb02 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff61325fb02 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stderr]   19:     0x7ff61322417b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   20:     0x7ff613223820 - main
+[INFO] [stderr]   21:     0x7ff61326f274 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   22:     0x7ff61326f274 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   23:     0x7ff999ca7974 - BaseThreadInitThunk
+[INFO] [stderr]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "6b57a79bb0f76e11d5c070cf61ed92fd9b7da142f26d07c31909b2f7f592627b"`
+[INFO] running `"docker" "rm" "-f" "6b57a79bb0f76e11d5c070cf61ed92fd9b7da142f26d07c31909b2f7f592627b"`
+[INFO] [stdout] 6b57a79bb0f76e11d5c070cf61ed92fd9b7da142f26d07c31909b2f7f592627b

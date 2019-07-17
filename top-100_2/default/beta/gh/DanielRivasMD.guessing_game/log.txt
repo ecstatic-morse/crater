@@ -1,0 +1,57 @@
+[INFO] cloning repository DanielRivasMD/guessing_game
+[INFO] running `"git" "clone" "--bare" "git://github.com/DanielRivasMD/guessing_game.git" "work\\cache\\sources\\gh\\DanielRivasMD\\guessing_game"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\DanielRivasMD\guessing_game'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\DanielRivasMD\\guessing_game" "work\\ex\\default\\sources\\stable\\gh\\DanielRivasMD\\guessing_game"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\DanielRivasMD\guessing_game'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\DanielRivasMD\\guessing_game" "work\\ex\\default\\sources\\beta\\gh\\DanielRivasMD\\guessing_game"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\DanielRivasMD\guessing_game'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a66c76ecb7601f00f572cf2862ab0d2f01f728a5
+[INFO] sha for GitHub repo DanielRivasMD/guessing_game: a66c76ecb7601f00f572cf2862ab0d2f01f728a5
+[INFO] validating manifest of DanielRivasMD/guessing_game on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of DanielRivasMD/guessing_game on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing DanielRivasMD/guessing_game
+[INFO] finished frobbing DanielRivasMD/guessing_game
+[INFO] frobbed toml for DanielRivasMD/guessing_game written to work\ex\default\sources\stable\gh\DanielRivasMD\guessing_game\Cargo.toml
+[INFO] started frobbing DanielRivasMD/guessing_game
+[INFO] finished frobbing DanielRivasMD/guessing_game
+[INFO] frobbed toml for DanielRivasMD/guessing_game written to work\ex\default\sources\beta\gh\DanielRivasMD\guessing_game\Cargo.toml
+[INFO] crate DanielRivasMD/guessing_game already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing DanielRivasMD/guessing_game against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\DanielRivasMD\\guessing_game,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] d26de260df4698c02326ab806f400597b525a892bf5ec284378d95ee16941842
+[INFO] running `"docker" "start" "-a" "d26de260df4698c02326ab806f400597b525a892bf5ec284378d95ee16941842"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling guessing_game_rust v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 22.04s
+[INFO] running `"docker" "inspect" "d26de260df4698c02326ab806f400597b525a892bf5ec284378d95ee16941842"`
+[INFO] running `"docker" "rm" "-f" "d26de260df4698c02326ab806f400597b525a892bf5ec284378d95ee16941842"`
+[INFO] [stdout] d26de260df4698c02326ab806f400597b525a892bf5ec284378d95ee16941842
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\DanielRivasMD\\guessing_game,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 62d33b01a4e85401eacc80e5253cd8de4d3b18fb4c0d0da2784ace33346bc3b2
+[INFO] running `"docker" "start" "-a" "62d33b01a4e85401eacc80e5253cd8de4d3b18fb4c0d0da2784ace33346bc3b2"`
+[INFO] [stderr]    Compiling guessing_game_rust v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.21s
+[INFO] running `"docker" "inspect" "62d33b01a4e85401eacc80e5253cd8de4d3b18fb4c0d0da2784ace33346bc3b2"`
+[INFO] running `"docker" "rm" "-f" "62d33b01a4e85401eacc80e5253cd8de4d3b18fb4c0d0da2784ace33346bc3b2"`
+[INFO] [stdout] 62d33b01a4e85401eacc80e5253cd8de4d3b18fb4c0d0da2784ace33346bc3b2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\DanielRivasMD\\guessing_game,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] e79e1938d6cd47bad9deabd4c0f07bd6e54cf7bb01613d3503d44d764230f6c3
+[INFO] running `"docker" "start" "-a" "e79e1938d6cd47bad9deabd4c0f07bd6e54cf7bb01613d3503d44d764230f6c3"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\guessing_game_rust-21e69bc4adb149c3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e79e1938d6cd47bad9deabd4c0f07bd6e54cf7bb01613d3503d44d764230f6c3"`
+[INFO] running `"docker" "rm" "-f" "e79e1938d6cd47bad9deabd4c0f07bd6e54cf7bb01613d3503d44d764230f6c3"`
+[INFO] [stdout] e79e1938d6cd47bad9deabd4c0f07bd6e54cf7bb01613d3503d44d764230f6c3

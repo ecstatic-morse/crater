@@ -1,0 +1,139 @@
+[INFO] cloning repository aisrael/juniper-hyper-demo
+[INFO] running `"git" "clone" "--bare" "git://github.com/aisrael/juniper-hyper-demo.git" "work\\cache\\sources\\gh\\aisrael\\juniper-hyper-demo"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\aisrael\juniper-hyper-demo'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\aisrael\\juniper-hyper-demo" "work\\ex\\default\\sources\\stable\\gh\\aisrael\\juniper-hyper-demo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\aisrael\juniper-hyper-demo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\aisrael\\juniper-hyper-demo" "work\\ex\\default\\sources\\beta\\gh\\aisrael\\juniper-hyper-demo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\aisrael\juniper-hyper-demo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b08175a256e6648f859308c2407fcf1f6748957e
+[INFO] sha for GitHub repo aisrael/juniper-hyper-demo: b08175a256e6648f859308c2407fcf1f6748957e
+[INFO] validating manifest of aisrael/juniper-hyper-demo on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of aisrael/juniper-hyper-demo on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing aisrael/juniper-hyper-demo
+[INFO] finished frobbing aisrael/juniper-hyper-demo
+[INFO] frobbed toml for aisrael/juniper-hyper-demo written to work\ex\default\sources\stable\gh\aisrael\juniper-hyper-demo\Cargo.toml
+[INFO] started frobbing aisrael/juniper-hyper-demo
+[INFO] finished frobbing aisrael/juniper-hyper-demo
+[INFO] frobbed toml for aisrael/juniper-hyper-demo written to work\ex\default\sources\beta\gh\aisrael\juniper-hyper-demo\Cargo.toml
+[INFO] crate aisrael/juniper-hyper-demo already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded simplelog v0.6.0
+[INFO] [stderr]   Downloaded juniper_hyper v0.3.0
+[INFO] [stderr]   Downloaded juniper v0.12.0
+[INFO] [stderr]   Downloaded juniper_codegen v0.12.0
+[INFO] [stderr]   Downloaded hyper v0.12.32
+[INFO] [stderr]   Downloaded graphql-parser v0.2.3
+[INFO] [stderr]   Downloaded ascii v0.9.2
+[INFO] [stderr]   Downloaded term v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing aisrael/juniper-hyper-demo against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\aisrael\\juniper-hyper-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 9642ebd20b72856ea73a15d5b67a9fca2e3bbe445786f9404a1c72c5217a607c
+[INFO] running `"docker" "start" "-a" "9642ebd20b72856ea73a15d5b67a9fca2e3bbe445786f9404a1c72c5217a607c"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling futures v0.1.28
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling utf8-ranges v1.0.3
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling ascii v0.9.2
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling regex-syntax v0.6.8
+[INFO] [stderr]    Compiling tokio-sync v0.1.6
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling serde v1.0.94
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling ryu v1.0.0
+[INFO] [stderr]    Compiling want v0.2.0
+[INFO] [stderr]    Compiling hyper v0.12.32
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling num_cpus v1.10.1
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling combine v3.8.1
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling tokio-buf v0.1.1
+[INFO] [stderr]    Compiling string v0.2.1
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling indexmap v1.0.2
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling dirs v1.0.5
+[INFO] [stderr]    Compiling backtrace v0.3.32
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling h2 v0.1.25
+[INFO] [stderr]    Compiling http-body v0.1.0
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling term v0.5.2
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling serde_derive v1.0.94
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.15
+[INFO] [stderr]    Compiling simplelog v0.6.0
+[INFO] [stderr]    Compiling juniper_codegen v0.12.0
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling tokio-fs v0.1.6
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling graphql-parser v0.2.3
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio v0.1.22
+[INFO] [stderr]    Compiling juniper v0.12.0
+[INFO] [stderr]    Compiling juniper_hyper v0.3.0
+[INFO] [stderr]    Compiling server v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7m 09s
+[INFO] running `"docker" "inspect" "9642ebd20b72856ea73a15d5b67a9fca2e3bbe445786f9404a1c72c5217a607c"`
+[INFO] running `"docker" "rm" "-f" "9642ebd20b72856ea73a15d5b67a9fca2e3bbe445786f9404a1c72c5217a607c"`
+[INFO] [stdout] 9642ebd20b72856ea73a15d5b67a9fca2e3bbe445786f9404a1c72c5217a607c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\aisrael\\juniper-hyper-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 346f94f2c86bab934021fa14e830f3c5474767b4ae1928c9533bcee6a6549f74
+[INFO] running `"docker" "start" "-a" "346f94f2c86bab934021fa14e830f3c5474767b4ae1928c9533bcee6a6549f74"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling server v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.32s
+[INFO] running `"docker" "inspect" "346f94f2c86bab934021fa14e830f3c5474767b4ae1928c9533bcee6a6549f74"`
+[INFO] running `"docker" "rm" "-f" "346f94f2c86bab934021fa14e830f3c5474767b4ae1928c9533bcee6a6549f74"`
+[INFO] [stdout] 346f94f2c86bab934021fa14e830f3c5474767b4ae1928c9533bcee6a6549f74
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\aisrael\\juniper-hyper-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] dba243a8bf3a60da034341876ac96785fefb6b20a4c2d97bde5b1f1cf3de0293
+[INFO] running `"docker" "start" "-a" "dba243a8bf3a60da034341876ac96785fefb6b20a4c2d97bde5b1f1cf3de0293"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.64s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\server-26ef0d00e5a48cb0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "dba243a8bf3a60da034341876ac96785fefb6b20a4c2d97bde5b1f1cf3de0293"`
+[INFO] running `"docker" "rm" "-f" "dba243a8bf3a60da034341876ac96785fefb6b20a4c2d97bde5b1f1cf3de0293"`
+[INFO] [stdout] dba243a8bf3a60da034341876ac96785fefb6b20a4c2d97bde5b1f1cf3de0293

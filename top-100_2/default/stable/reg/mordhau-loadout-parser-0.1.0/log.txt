@@ -1,0 +1,68 @@
+[INFO] fetching crate mordhau-loadout-parser 0.1.0...
+[INFO] extracting crate mordhau-loadout-parser 0.1.0 into work\ex\default\sources\stable\reg\mordhau-loadout-parser\0.1.0
+[INFO] extracting crate mordhau-loadout-parser 0.1.0 into work\ex\default\sources\beta\reg\mordhau-loadout-parser\0.1.0
+[INFO] validating manifest of mordhau-loadout-parser-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mordhau-loadout-parser-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mordhau-loadout-parser-0.1.0
+[INFO] finished frobbing mordhau-loadout-parser-0.1.0
+[INFO] frobbed toml for mordhau-loadout-parser-0.1.0 written to work\ex\default\sources\stable\reg\mordhau-loadout-parser\0.1.0\Cargo.toml
+[INFO] started frobbing mordhau-loadout-parser-0.1.0
+[INFO] finished frobbing mordhau-loadout-parser-0.1.0
+[INFO] frobbed toml for mordhau-loadout-parser-0.1.0 written to work\ex\default\sources\beta\reg\mordhau-loadout-parser\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mordhau-loadout-parser-0.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mordhau-loadout-parser\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 9bec986d874164331714065777535b1bbbc567649d308f373f23b6cd4f640659
+[INFO] running `"docker" "start" "-a" "9bec986d874164331714065777535b1bbbc567649d308f373f23b6cd4f640659"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling num-derive v0.2.5
+[INFO] [stderr]    Compiling backtrace-sys v0.1.31
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling mordhau-loadout-parser v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 20.99s
+[INFO] running `"docker" "inspect" "9bec986d874164331714065777535b1bbbc567649d308f373f23b6cd4f640659"`
+[INFO] running `"docker" "rm" "-f" "9bec986d874164331714065777535b1bbbc567649d308f373f23b6cd4f640659"`
+[INFO] [stdout] 9bec986d874164331714065777535b1bbbc567649d308f373f23b6cd4f640659
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mordhau-loadout-parser\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ea519350bd6d0fd1854367d1734164b5e374caa5aba19bcaa5b5736c678684e9
+[INFO] running `"docker" "start" "-a" "ea519350bd6d0fd1854367d1734164b5e374caa5aba19bcaa5b5736c678684e9"`
+[INFO] [stderr]    Compiling mordhau-loadout-parser v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.97s
+[INFO] running `"docker" "inspect" "ea519350bd6d0fd1854367d1734164b5e374caa5aba19bcaa5b5736c678684e9"`
+[INFO] running `"docker" "rm" "-f" "ea519350bd6d0fd1854367d1734164b5e374caa5aba19bcaa5b5736c678684e9"`
+[INFO] [stdout] ea519350bd6d0fd1854367d1734164b5e374caa5aba19bcaa5b5736c678684e9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mordhau-loadout-parser\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 55f63c2a47d7fa4955ffaa8f0fdbd416a9982674d0437f809aef5b4e0082287a
+[INFO] running `"docker" "start" "-a" "55f63c2a47d7fa4955ffaa8f0fdbd416a9982674d0437f809aef5b4e0082287a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.46s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mordhau_loadout_parser-133f5865b2c2a345.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test parser::tests::parse_bool ... ok
+[INFO] [stdout] test parser::tests::parse_int ... ok
+[INFO] [stdout] test parser::tests::parse_key ... ok
+[INFO] [stdout] test parser::tests::parse_key_value ... ok
+[INFO] [stdout] test parser::tests::parse_key_value_list ... ok
+[INFO] [stdout] test parser::tests::parse_real_data ... ok
+[INFO] [stdout] test parser::tests::parse_string ... ok
+[INFO] [stdout] test parser::tests::parse_value ... ok
+[INFO] [stdout] test parser::tests::parse_value_list ... ok
+[INFO] [stdout] test tests::parses_data ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests mordhau-loadout-parser
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "55f63c2a47d7fa4955ffaa8f0fdbd416a9982674d0437f809aef5b4e0082287a"`
+[INFO] running `"docker" "rm" "-f" "55f63c2a47d7fa4955ffaa8f0fdbd416a9982674d0437f809aef5b4e0082287a"`
+[INFO] [stdout] 55f63c2a47d7fa4955ffaa8f0fdbd416a9982674d0437f809aef5b4e0082287a

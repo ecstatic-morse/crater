@@ -1,0 +1,107 @@
+[INFO] cloning repository mebobby2/roguelike
+[INFO] running `"git" "clone" "--bare" "git://github.com/mebobby2/roguelike.git" "work\\cache\\sources\\gh\\mebobby2\\roguelike"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\mebobby2\roguelike'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\mebobby2\\roguelike" "work\\ex\\default\\sources\\stable\\gh\\mebobby2\\roguelike"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\mebobby2\roguelike'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\mebobby2\\roguelike" "work\\ex\\default\\sources\\beta\\gh\\mebobby2\\roguelike"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\mebobby2\roguelike'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] af3f5e190a50d6a2f95e73573b400bb6cc46341c
+[INFO] sha for GitHub repo mebobby2/roguelike: af3f5e190a50d6a2f95e73573b400bb6cc46341c
+[INFO] validating manifest of mebobby2/roguelike on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mebobby2/roguelike on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mebobby2/roguelike
+[INFO] finished frobbing mebobby2/roguelike
+[INFO] frobbed toml for mebobby2/roguelike written to work\ex\default\sources\stable\gh\mebobby2\roguelike\Cargo.toml
+[INFO] started frobbing mebobby2/roguelike
+[INFO] finished frobbing mebobby2/roguelike
+[INFO] frobbed toml for mebobby2/roguelike written to work\ex\default\sources\beta\gh\mebobby2\roguelike\Cargo.toml
+[INFO] crate mebobby2/roguelike already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/tomassedovic/tcod-rs.git`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded pkg-config v0.3.8
+[INFO] [stderr]   Downloaded bitflags v0.1.1
+[INFO] [stderr]   Downloaded gcc v0.3.41
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing mebobby2/roguelike against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\mebobby2\\roguelike,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 159dafee0cc219e653c5fc3d614566a4638e38cfc249609566e5f46b8cf1469e
+[INFO] running `"docker" "start" "-a" "159dafee0cc219e653c5fc3d614566a4638e38cfc249609566e5f46b8cf1469e"`
+[INFO] [stderr]    Compiling pkg-config v0.3.8
+[INFO] [stderr]    Compiling gcc v0.3.41
+[INFO] [stderr]    Compiling libc v0.2.19
+[INFO] [stderr]    Compiling bitflags v0.1.1
+[INFO] [stderr]    Compiling roguelike v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]    Compiling lazy_static v0.1.16
+[INFO] [stderr]    Compiling rand v0.3.15
+[INFO] [stderr] error: failed to run custom build command for `roguelike v0.1.0 (C:\crater\workdir)`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\roguelike-86bab923c7b488c3\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] foo bar
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:999:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff600d749fd - std::sys::windows::backtrace::set_frames
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stderr]    1:     0x7ff600d749fd - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stderr]    2:     0x7ff600d749fd - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stderr]    3:     0x7ff600d777dd - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stderr]    4:     0x7ff600d777dd - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stderr]    5:     0x7ff600d774da - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:211
+[INFO] [stderr]    6:     0x7ff600d77f4f - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stderr]    7:     0x7ff600d77a83 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stderr]    8:     0x7ff600d77968 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stderr]    9:     0x7ff600d8393b - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stderr]   10:     0x7ff600d66270 - core::result::unwrap_failed<std::io::error::Error>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:18
+[INFO] [stderr]   11:     0x7ff600d667d2 - core::result::Result<std::process::ExitStatus, std::io::error::Error>::unwrap<std::process::ExitStatus,std::io::error::Error>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\result.rs:800
+[INFO] [stderr]   12:     0x7ff600d6744c - build_script_build::main
+[INFO] [stderr]                                at C:\crater\workdir\build.rs:13
+[INFO] [stderr]   13:     0x7ff600d649af - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   14:     0x7ff600d77956 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:49
+[INFO] [stderr]   15:     0x7ff600d77956 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:293
+[INFO] [stderr]   16:     0x7ff600d80611 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stderr]   17:     0x7ff600d78171 - std::panicking::try
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:272
+[INFO] [stderr]   18:     0x7ff600d78171 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panic.rs:394
+[INFO] [stderr]   19:     0x7ff600d78171 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:48
+[INFO] [stderr]   20:     0x7ff600d6498a - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   21:     0x7ff600d6772f - main
+[INFO] [stderr]   22:     0x7ff600d888b7 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   23:     0x7ff600d888b7 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   24:     0x7ff99a2e7973 - BaseThreadInitThunk
+[INFO] [stderr]   25:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "159dafee0cc219e653c5fc3d614566a4638e38cfc249609566e5f46b8cf1469e"`
+[INFO] running `"docker" "rm" "-f" "159dafee0cc219e653c5fc3d614566a4638e38cfc249609566e5f46b8cf1469e"`
+[INFO] [stdout] 159dafee0cc219e653c5fc3d614566a4638e38cfc249609566e5f46b8cf1469e

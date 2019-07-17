@@ -1,0 +1,65 @@
+[INFO] fetching crate mime 0.3.13...
+[INFO] extracting crate mime 0.3.13 into work\ex\default\sources\stable\reg\mime\0.3.13
+[INFO] extracting crate mime 0.3.13 into work\ex\default\sources\beta\reg\mime\0.3.13
+[INFO] validating manifest of mime-0.3.13 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mime-0.3.13 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mime-0.3.13
+[INFO] finished frobbing mime-0.3.13
+[INFO] frobbed toml for mime-0.3.13 written to work\ex\default\sources\stable\reg\mime\0.3.13\Cargo.toml
+[INFO] started frobbing mime-0.3.13
+[INFO] finished frobbing mime-0.3.13
+[INFO] frobbed toml for mime-0.3.13 written to work\ex\default\sources\beta\reg\mime\0.3.13\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mime-0.3.13 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mime\\0.3.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] b850fe71e17f51663487f4933eccaabbc22a06a6a4bb7cf5c859cbd3637cda11
+[INFO] running `"docker" "start" "-a" "b850fe71e17f51663487f4933eccaabbc22a06a6a4bb7cf5c859cbd3637cda11"`
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling mime v0.3.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.65s
+[INFO] running `"docker" "inspect" "b850fe71e17f51663487f4933eccaabbc22a06a6a4bb7cf5c859cbd3637cda11"`
+[INFO] running `"docker" "rm" "-f" "b850fe71e17f51663487f4933eccaabbc22a06a6a4bb7cf5c859cbd3637cda11"`
+[INFO] [stdout] b850fe71e17f51663487f4933eccaabbc22a06a6a4bb7cf5c859cbd3637cda11
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mime\\0.3.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f502cfb25c4d1ecb9f80d3b58d5e7d9f35a154475d23bfdac7c95a8757ad336d
+[INFO] running `"docker" "start" "-a" "f502cfb25c4d1ecb9f80d3b58d5e7d9f35a154475d23bfdac7c95a8757ad336d"`
+[INFO] [stderr]    Compiling mime v0.3.13 (C:\crater\workdir)
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:332:17
+[INFO] [stderr]     |
+[INFO] [stderr] 332 |             b'a'...b'z' |
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:27:9
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | #![deny(warnings)]
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(ellipsis_inclusive_range_patterns)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:333:17
+[INFO] [stderr]     |
+[INFO] [stderr] 333 |             b'A'...b'Z' |
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:334:17
+[INFO] [stderr]     |
+[INFO] [stderr] 334 |             b'0'...b'9' |
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 3 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `mime`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "f502cfb25c4d1ecb9f80d3b58d5e7d9f35a154475d23bfdac7c95a8757ad336d"`
+[INFO] running `"docker" "rm" "-f" "f502cfb25c4d1ecb9f80d3b58d5e7d9f35a154475d23bfdac7c95a8757ad336d"`
+[INFO] [stdout] f502cfb25c4d1ecb9f80d3b58d5e7d9f35a154475d23bfdac7c95a8757ad336d

@@ -1,0 +1,54 @@
+[INFO] fetching crate dirs-sys 0.3.3...
+[INFO] extracting crate dirs-sys 0.3.3 into work\ex\default\sources\stable\reg\dirs-sys\0.3.3
+[INFO] extracting crate dirs-sys 0.3.3 into work\ex\default\sources\beta\reg\dirs-sys\0.3.3
+[INFO] validating manifest of dirs-sys-0.3.3 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dirs-sys-0.3.3 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dirs-sys-0.3.3
+[INFO] finished frobbing dirs-sys-0.3.3
+[INFO] frobbed toml for dirs-sys-0.3.3 written to work\ex\default\sources\stable\reg\dirs-sys\0.3.3\Cargo.toml
+[INFO] started frobbing dirs-sys-0.3.3
+[INFO] finished frobbing dirs-sys-0.3.3
+[INFO] frobbed toml for dirs-sys-0.3.3 written to work\ex\default\sources\beta\reg\dirs-sys\0.3.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dirs-sys-0.3.3 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\dirs-sys\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] f80d90018dd3e38b749c8d4eb9e2777ad142d3b340d4825e894c718a786f1bea
+[INFO] running `"docker" "start" "-a" "f80d90018dd3e38b749c8d4eb9e2777ad142d3b340d4825e894c718a786f1bea"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling dirs-sys v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 27.95s
+[INFO] running `"docker" "inspect" "f80d90018dd3e38b749c8d4eb9e2777ad142d3b340d4825e894c718a786f1bea"`
+[INFO] running `"docker" "rm" "-f" "f80d90018dd3e38b749c8d4eb9e2777ad142d3b340d4825e894c718a786f1bea"`
+[INFO] [stdout] f80d90018dd3e38b749c8d4eb9e2777ad142d3b340d4825e894c718a786f1bea
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\dirs-sys\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3816679ef6665bf48113b5280f620df55cce3480f6663720e53adb5c875f97b6
+[INFO] running `"docker" "start" "-a" "3816679ef6665bf48113b5280f620df55cce3480f6663720e53adb5c875f97b6"`
+[INFO] [stderr]    Compiling dirs-sys v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.04s
+[INFO] running `"docker" "inspect" "3816679ef6665bf48113b5280f620df55cce3480f6663720e53adb5c875f97b6"`
+[INFO] running `"docker" "rm" "-f" "3816679ef6665bf48113b5280f620df55cce3480f6663720e53adb5c875f97b6"`
+[INFO] [stdout] 3816679ef6665bf48113b5280f620df55cce3480f6663720e53adb5c875f97b6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\dirs-sys\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] c660c045b5a5351604a67121924d8742c95c27fc37ac67ed9ad813b50cab7b02
+[INFO] running `"docker" "start" "-a" "c660c045b5a5351604a67121924d8742c95c27fc37ac67ed9ad813b50cab7b02"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.29s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dirs_sys-523db3a6e590f4f8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests dirs-sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c660c045b5a5351604a67121924d8742c95c27fc37ac67ed9ad813b50cab7b02"`
+[INFO] running `"docker" "rm" "-f" "c660c045b5a5351604a67121924d8742c95c27fc37ac67ed9ad813b50cab7b02"`
+[INFO] [stdout] c660c045b5a5351604a67121924d8742c95c27fc37ac67ed9ad813b50cab7b02

@@ -1,0 +1,35 @@
+[INFO] cloning repository wbjohnston/sgbe
+[INFO] running `"git" "clone" "--bare" "git://github.com/wbjohnston/sgbe.git" "work\\cache\\sources\\gh\\wbjohnston\\sgbe"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\wbjohnston\sgbe'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\wbjohnston\\sgbe" "work\\ex\\default\\sources\\nightly\\gh\\wbjohnston\\sgbe"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\wbjohnston\sgbe'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\wbjohnston\\sgbe" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\wbjohnston\\sgbe"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\wbjohnston\sgbe'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] d4be50267e7e0df3304ed348bf2064a64b7b9f93
+[INFO] sha for GitHub repo wbjohnston/sgbe: d4be50267e7e0df3304ed348bf2064a64b7b9f93
+[INFO] validating manifest of wbjohnston/sgbe on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of wbjohnston/sgbe on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing wbjohnston/sgbe
+[INFO] removed workspace from wbjohnston/sgbe
+[INFO] removed path dependency core from wbjohnston/sgbe
+[INFO] finished frobbing wbjohnston/sgbe
+[INFO] frobbed toml for wbjohnston/sgbe written to work\ex\default\sources\nightly\gh\wbjohnston\sgbe\Cargo.toml
+[INFO] started frobbing wbjohnston/sgbe
+[INFO] removed workspace from wbjohnston/sgbe
+[INFO] removed path dependency core from wbjohnston/sgbe
+[INFO] finished frobbing wbjohnston/sgbe
+[INFO] frobbed toml for wbjohnston/sgbe written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\wbjohnston\sgbe\Cargo.toml
+[INFO] crate wbjohnston/sgbe already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Updating crates.io index
+[INFO] [stderr] error: no matching package named `core` found
+[INFO] [stderr] location searched: registry `https://github.com/rust-lang/crates.io-index`
+[INFO] [stderr] required by package `sgbe v0.1.0 (C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\wbjohnston\sgbe)`
+[ERROR] this task or one of its parent failed!
+[ERROR] command `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"` failed

@@ -1,0 +1,181 @@
+[INFO] crate serde 1.0.97 is already in cache
+[INFO] extracting crate serde 1.0.97 into work\ex\default\sources\nightly\reg\serde\1.0.97
+[INFO] extracting crate serde 1.0.97 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde\1.0.97
+[INFO] validating manifest of serde-1.0.97 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of serde-1.0.97 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing serde-1.0.97
+[INFO] finished frobbing serde-1.0.97
+[INFO] frobbed toml for serde-1.0.97 written to work\ex\default\sources\nightly\reg\serde\1.0.97\Cargo.toml
+[INFO] started frobbing serde-1.0.97
+[INFO] finished frobbing serde-1.0.97
+[INFO] frobbed toml for serde-1.0.97 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde\1.0.97\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing serde-1.0.97 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde\\1.0.97,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e64b4a0235d3639de23e5c47808652ca3abf8fea6408f5cffd4d188c8b9e2615
+[INFO] running `"docker" "start" "-a" "e64b4a0235d3639de23e5c47808652ca3abf8fea6408f5cffd4d188c8b9e2615"`
+[INFO] [stderr]    Compiling serde v1.0.97 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 31.32s
+[INFO] running `"docker" "inspect" "e64b4a0235d3639de23e5c47808652ca3abf8fea6408f5cffd4d188c8b9e2615"`
+[INFO] running `"docker" "rm" "-f" "e64b4a0235d3639de23e5c47808652ca3abf8fea6408f5cffd4d188c8b9e2615"`
+[INFO] [stdout] e64b4a0235d3639de23e5c47808652ca3abf8fea6408f5cffd4d188c8b9e2615
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde\\1.0.97,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 90a2598a153415a658172e17a6d77dced4976fd886da87c7f52464f9cf145064
+[INFO] running `"docker" "start" "-a" "90a2598a153415a658172e17a6d77dced4976fd886da87c7f52464f9cf145064"`
+[INFO] [stderr]    Compiling serde v1.0.97 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 29.84s
+[INFO] running `"docker" "inspect" "90a2598a153415a658172e17a6d77dced4976fd886da87c7f52464f9cf145064"`
+[INFO] running `"docker" "rm" "-f" "90a2598a153415a658172e17a6d77dced4976fd886da87c7f52464f9cf145064"`
+[INFO] [stdout] 90a2598a153415a658172e17a6d77dced4976fd886da87c7f52464f9cf145064
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde\\1.0.97,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 710ec16fc905f0f834f562badfcfee750e41edd90d1fc787194ecd4965351aea
+[INFO] running `"docker" "start" "-a" "710ec16fc905f0f834f562badfcfee750e41edd90d1fc787194ecd4965351aea"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.34s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde-efa95dcc12fd12c5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests serde
+[INFO] [stdout] 
+[INFO] [stdout] running 70 tests
+[INFO] [stdout] test src\de\mod.rs - de::DeserializeOwned (line 573) ... ok
+[INFO] [stdout] test src\de\ignored_any.rs - de::ignored_any::IgnoredAny (line 13) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::DeserializeSeed (line 612) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::DeserializeSeed (line 626) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::DeserializeSeed (line 659) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::Deserializer::is_human_readable (line 1149) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::Error::custom (line 157) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::Expected (line 427) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::IntoDeserializer (line 2211) ... FAILED
+[INFO] [stdout] test src\de\mod.rs - de::Expected (line 452) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::VariantAccess::newtype_variant_seed (line 2048) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::Unexpected (line 302) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::VariantAccess::struct_variant (line 2151) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::VariantAccess::tuple_variant (line 2104) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::VariantAccess::unit_variant (line 2008) ... ok
+[INFO] [stdout] test src\de\value.rs - de::value (line 4) ... FAILED
+[INFO] [stdout] test src\de\mod.rs - de::Visitor (line 1226) ... ok
+[INFO] [stdout] test src\de\mod.rs - de::Visitor::expecting (line 1267) ... ok
+[INFO] [stdout] test src\integer128.rs - serde_if_integer128 (line 53) ... ok
+[INFO] [stdout] test src\integer128.rs - serde_if_integer128 (line 64) ... ok
+[INFO] [stdout] test src\integer128.rs - serde_if_integer128 (line 12) ... ok
+[INFO] [stdout] test src\macros.rs - forward_to_deserialize_any (line 14) ... ok
+[INFO] [stdout] test src\macros.rs - forward_to_deserialize_any (line 50) ... ok
+[INFO] [stdout] test src\ser\impossible.rs - ser::impossible::Impossible (line 18) ... ok
+[INFO] [stdout] test src\macros.rs - forward_to_deserialize_any (line 81) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Error::custom (line 141) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeMap (line 1718) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serialize::serialize (line 214) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeSeq (line 1451) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeStruct (line 1829) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeStructVariant (line 1889) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeTuple (line 1515) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeTuple (line 1545) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeTupleStruct (line 1615) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::collect_map (line 1286) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::SerializeTupleVariant (line 1660) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::collect_seq (line 1249) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::collect_str (line 1326) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_bool (line 381) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::is_human_readable (line 1402) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_char (line 662) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_bytes (line 704) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_i128 (line 484) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_f32 (line 623) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_f64 (line 641) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_i16 (line 425) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_i64 (line 465) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_map (line 1123) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_i32 (line 447) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_i8 (line 403) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_none (line 733) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_newtype_struct (line 876) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_newtype_variant (line 904) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_seq (line 942) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_some (line 766) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_struct_variant (line 1207) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_struct (line 1171) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_str (line 680) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_tuple (line 1017) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_tuple (line 987) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_tuple_variant (line 1077) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_tuple_struct (line 1045) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_u128 (line 594) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_u16 (line 535) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_u64 (line 575) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_u32 (line 557) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_u8 (line 513) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_unit (line 801) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_unit_struct (line 821) ... ok
+[INFO] [stdout] test src\ser\mod.rs - ser::Serializer::serialize_unit_variant (line 843) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\de\mod.rs - de::IntoDeserializer (line 2211) stdout ----
+[INFO] [stdout] error: cannot find derive macro `Deserialize` in this scope
+[INFO] [stdout]  --> src\de\mod.rs:2216:10
+[INFO] [stdout]   |
+[INFO] [stdout] 8 | #[derive(Deserialize)]
+[INFO] [stdout]   |          ^^^^^^^^^^^
+[INFO] [stdout] 
+[INFO] [stdout] error[E0599]: no variant or associated item named `deserialize` found for type `main::Setting` in the current scope
+[INFO] [stdout]   --> src\de\mod.rs:2226:15
+[INFO] [stdout]    |
+[INFO] [stdout] 9  | enum Setting {
+[INFO] [stdout]    | ------------ variant or associated item `deserialize` not found here
+[INFO] [stdout] ...
+[INFO] [stdout] 18 |         Self::deserialize(s.into_deserializer())
+[INFO] [stdout]    |               ^^^^^^^^^^^ variant or associated item not found in `main::Setting`
+[INFO] [stdout]    |
+[INFO] [stdout]    = help: items from traits can only be used if the trait is implemented and in scope
+[INFO] [stdout]    = note: the following traits define an item `deserialize`, perhaps you need to implement one of them:
+[INFO] [stdout]            candidate #1: `serde::Deserialize`
+[INFO] [stdout]            candidate #2: `serde::de::DeserializeSeed`
+[INFO] [stdout] 
+[INFO] [stdout] error: aborting due to 2 previous errors
+[INFO] [stdout] 
+[INFO] [stdout] For more information about this error, try `rustc --explain E0599`.
+[INFO] [stdout] Couldn't compile the test.
+[INFO] [stdout] ---- src\de\value.rs - de::value (line 4) stdout ----
+[INFO] [stdout] error: cannot find derive macro `Deserialize` in this scope
+[INFO] [stdout]  --> src\de\value.rs:9:10
+[INFO] [stdout]   |
+[INFO] [stdout] 8 | #[derive(Deserialize)]
+[INFO] [stdout]   |          ^^^^^^^^^^^
+[INFO] [stdout] 
+[INFO] [stdout] error[E0599]: no variant or associated item named `deserialize` found for type `main::Setting` in the current scope
+[INFO] [stdout]   --> src\de\value.rs:19:15
+[INFO] [stdout]    |
+[INFO] [stdout] 9  | enum Setting {
+[INFO] [stdout]    | ------------ variant or associated item `deserialize` not found here
+[INFO] [stdout] ...
+[INFO] [stdout] 18 |         Self::deserialize(s.into_deserializer())
+[INFO] [stdout]    |               ^^^^^^^^^^^ variant or associated item not found in `main::Setting`
+[INFO] [stdout]    |
+[INFO] [stdout]    = help: items from traits can only be used if the trait is implemented and in scope
+[INFO] [stdout]    = note: the following traits define an item `deserialize`, perhaps you need to implement one of them:
+[INFO] [stdout]            candidate #1: `serde::Deserialize`
+[INFO] [stdout]            candidate #2: `serde::de::DeserializeSeed`
+[INFO] [stdout] 
+[INFO] [stdout] error: aborting due to 2 previous errors
+[INFO] [stdout] 
+[INFO] [stdout] For more information about this error, try `rustc --explain E0599`.
+[INFO] [stdout] Couldn't compile the test.
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     src\de\mod.rs - de::IntoDeserializer (line 2211)
+[INFO] [stdout]     src\de\value.rs - de::value (line 4)
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 68 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--doc'
+[INFO] running `"docker" "inspect" "710ec16fc905f0f834f562badfcfee750e41edd90d1fc787194ecd4965351aea"`
+[INFO] running `"docker" "rm" "-f" "710ec16fc905f0f834f562badfcfee750e41edd90d1fc787194ecd4965351aea"`
+[INFO] [stdout] 710ec16fc905f0f834f562badfcfee750e41edd90d1fc787194ecd4965351aea

@@ -1,0 +1,63 @@
+[INFO] cloning repository hoodie/json-tools
+[INFO] running `"git" "clone" "--bare" "git://github.com/hoodie/json-tools.git" "work\\cache\\sources\\gh\\hoodie\\json-tools"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\hoodie\json-tools'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hoodie\\json-tools" "work\\ex\\default\\sources\\stable\\gh\\hoodie\\json-tools"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\hoodie\json-tools'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hoodie\\json-tools" "work\\ex\\default\\sources\\beta\\gh\\hoodie\\json-tools"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\hoodie\json-tools'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3041f1060f507e5309efcf4176a8944c17348a24
+[INFO] sha for GitHub repo hoodie/json-tools: 3041f1060f507e5309efcf4176a8944c17348a24
+[INFO] validating manifest of hoodie/json-tools on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hoodie/json-tools on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hoodie/json-tools
+[INFO] finished frobbing hoodie/json-tools
+[INFO] frobbed toml for hoodie/json-tools written to work\ex\default\sources\stable\gh\hoodie\json-tools\Cargo.toml
+[INFO] started frobbing hoodie/json-tools
+[INFO] finished frobbing hoodie/json-tools
+[INFO] frobbed toml for hoodie/json-tools written to work\ex\default\sources\beta\gh\hoodie\json-tools\Cargo.toml
+[INFO] crate hoodie/json-tools already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hoodie/json-tools against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\hoodie\\json-tools,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 95c2463a94063615a61c48bd1185d5d6f911ab5486148c938bda9ea3fa1a0ef9
+[INFO] running `"docker" "start" "-a" "95c2463a94063615a61c48bd1185d5d6f911ab5486148c938bda9ea3fa1a0ef9"`
+[INFO] [stderr]    Compiling serde v1.0.87
+[INFO] [stderr]    Compiling serde_json v1.0.38
+[INFO] [stderr]    Compiling json-tools v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 50.77s
+[INFO] running `"docker" "inspect" "95c2463a94063615a61c48bd1185d5d6f911ab5486148c938bda9ea3fa1a0ef9"`
+[INFO] running `"docker" "rm" "-f" "95c2463a94063615a61c48bd1185d5d6f911ab5486148c938bda9ea3fa1a0ef9"`
+[INFO] [stdout] 95c2463a94063615a61c48bd1185d5d6f911ab5486148c938bda9ea3fa1a0ef9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\hoodie\\json-tools,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 87a25b49a73193b2ae77e27f31ddd99bd9e0fda90c81f2549344fcc1a0067272
+[INFO] running `"docker" "start" "-a" "87a25b49a73193b2ae77e27f31ddd99bd9e0fda90c81f2549344fcc1a0067272"`
+[INFO] [stderr]    Compiling json-tools v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.67s
+[INFO] running `"docker" "inspect" "87a25b49a73193b2ae77e27f31ddd99bd9e0fda90c81f2549344fcc1a0067272"`
+[INFO] running `"docker" "rm" "-f" "87a25b49a73193b2ae77e27f31ddd99bd9e0fda90c81f2549344fcc1a0067272"`
+[INFO] [stdout] 87a25b49a73193b2ae77e27f31ddd99bd9e0fda90c81f2549344fcc1a0067272
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\hoodie\\json-tools,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] ece7b206dba18c6057096d0addf210d695341ec6edaacdcdfe3e8b76038dfa81
+[INFO] running `"docker" "start" "-a" "ece7b206dba18c6057096d0addf210d695341ec6edaacdcdfe3e8b76038dfa81"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\json_to_js-c8360557678a6628.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\shrink_json-7b1f793b773401ab.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ece7b206dba18c6057096d0addf210d695341ec6edaacdcdfe3e8b76038dfa81"`
+[INFO] running `"docker" "rm" "-f" "ece7b206dba18c6057096d0addf210d695341ec6edaacdcdfe3e8b76038dfa81"`
+[INFO] [stdout] ece7b206dba18c6057096d0addf210d695341ec6edaacdcdfe3e8b76038dfa81

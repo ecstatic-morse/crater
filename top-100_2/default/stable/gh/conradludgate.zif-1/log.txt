@@ -1,0 +1,35 @@
+[INFO] cloning repository conradludgate/zif-1
+[INFO] running `"git" "clone" "--bare" "git://github.com/conradludgate/zif-1.git" "work\\cache\\sources\\gh\\conradludgate\\zif-1"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\conradludgate\zif-1'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\conradludgate\\zif-1" "work\\ex\\default\\sources\\stable\\gh\\conradludgate\\zif-1"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\conradludgate\zif-1'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\conradludgate\\zif-1" "work\\ex\\default\\sources\\beta\\gh\\conradludgate\\zif-1"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\conradludgate\zif-1'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 1af77b0f0023271534ff75ad58058f0536f65c3d
+[INFO] sha for GitHub repo conradludgate/zif-1: 1af77b0f0023271534ff75ad58058f0536f65c3d
+[INFO] validating manifest of conradludgate/zif-1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of conradludgate/zif-1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing conradludgate/zif-1
+[INFO] finished frobbing conradludgate/zif-1
+[INFO] frobbed toml for conradludgate/zif-1 written to work\ex\default\sources\stable\gh\conradludgate\zif-1\Cargo.toml
+[INFO] started frobbing conradludgate/zif-1
+[INFO] finished frobbing conradludgate/zif-1
+[INFO] frobbed toml for conradludgate/zif-1 written to work\ex\default\sources\beta\gh\conradludgate\zif-1\Cargo.toml
+[INFO] crate conradludgate/zif-1 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/wjh/servo`
+[INFO] [stderr] error: failed to load source for a dependency on `libservo`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   Unable to update https://github.com/wjh/servo?rev=761880bb05583b1ca6fc7aea6c24babc7e4f1628#761880bb
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   failed to stat 'C:/Users/mackendy/src/crater/work/local/cargo-home/git/checkouts/servo-e1912835efb1e5e2/761880b/tests/wpt/metadata/html/browsers/the-window-object/apis-for-creating-and-navigating-browsing-contexts-by-name/open-features-negative-innerwidth-innerheight.html.ini': The filename or extension is too long.
+[INFO] [stderr] ; class=Os (2); code=Exists (-4)
+[ERROR] this task or one of its parent failed!
+[ERROR] command `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"` failed

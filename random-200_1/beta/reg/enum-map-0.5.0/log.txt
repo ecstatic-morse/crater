@@ -1,0 +1,100 @@
+[INFO] fetching crate enum-map 0.5.0...
+[INFO] extracting crate enum-map 0.5.0 into work\ex\default\sources\stable\reg\enum-map\0.5.0
+[INFO] extracting crate enum-map 0.5.0 into work\ex\default\sources\beta\reg\enum-map\0.5.0
+[INFO] validating manifest of enum-map-0.5.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of enum-map-0.5.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing enum-map-0.5.0
+[INFO] finished frobbing enum-map-0.5.0
+[INFO] frobbed toml for enum-map-0.5.0 written to work\ex\default\sources\stable\reg\enum-map\0.5.0\Cargo.toml
+[INFO] started frobbing enum-map-0.5.0
+[INFO] finished frobbing enum-map-0.5.0
+[INFO] frobbed toml for enum-map-0.5.0 written to work\ex\default\sources\beta\reg\enum-map\0.5.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde-feature-hack v0.2.0
+[INFO] [stderr]   Downloaded array-macro v1.0.3
+[INFO] [stderr]   Downloaded enum-map-derive v0.4.1
+[INFO] [stderr]   Downloaded enum-map-internals v0.1.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing enum-map-0.5.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enum-map\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 878ae57dc00e78532ebbe49260aa4dd5855c14099b2fb61407971e1949799501
+[INFO] running `"docker" "start" "-a" "878ae57dc00e78532ebbe49260aa4dd5855c14099b2fb61407971e1949799501"`
+[INFO] [stderr]    Compiling array-macro v1.0.3
+[INFO] [stderr]    Compiling syn v0.14.9
+[INFO] [stderr]    Compiling enum-map-internals v0.1.3
+[INFO] [stderr]    Compiling enum-map-derive v0.4.1
+[INFO] [stderr]    Compiling enum-map v0.5.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.17s
+[INFO] running `"docker" "inspect" "878ae57dc00e78532ebbe49260aa4dd5855c14099b2fb61407971e1949799501"`
+[INFO] running `"docker" "rm" "-f" "878ae57dc00e78532ebbe49260aa4dd5855c14099b2fb61407971e1949799501"`
+[INFO] [stdout] 878ae57dc00e78532ebbe49260aa4dd5855c14099b2fb61407971e1949799501
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enum-map\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d37e26db31215dd4932f47418c08ed0b32eb4d4db2969ab9fe733569a40624a5
+[INFO] running `"docker" "start" "-a" "d37e26db31215dd4932f47418c08ed0b32eb4d4db2969ab9fe733569a40624a5"`
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling serde-feature-hack v0.2.0
+[INFO] [stderr]    Compiling serde_test v1.0.97
+[INFO] [stderr]    Compiling enum-map v0.5.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.99s
+[INFO] running `"docker" "inspect" "d37e26db31215dd4932f47418c08ed0b32eb4d4db2969ab9fe733569a40624a5"`
+[INFO] running `"docker" "rm" "-f" "d37e26db31215dd4932f47418c08ed0b32eb4d4db2969ab9fe733569a40624a5"`
+[INFO] [stdout] d37e26db31215dd4932f47418c08ed0b32eb4d4db2969ab9fe733569a40624a5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enum-map\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 3398bb6a39f7c596052aaba710afbf1c371a5cbf3569bc2c6d1d18b8b7dd1e84
+[INFO] running `"docker" "start" "-a" "3398bb6a39f7c596052aaba710afbf1c371a5cbf3569bc2c6d1d18b8b7dd1e84"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.35s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\enum_map-3881ffb173ae490a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde-07b1271b86b567b0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-b7d8f4d0a663ccde.exe
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test assert_enum_map_does_not_copy_sync_send_dependency_of_keys ... ok
+[INFO] [stdout] test discriminants ... ok
+[INFO] [stdout] test empty_map ... ok
+[INFO] [stdout] test extend ... ok
+[INFO] [stdout] test empty_value ... ok
+[INFO] [stdout] test into_iter ... ok
+[INFO] [stdout] test into_iter_drop ... ok
+[INFO] [stdout] test huge_enum ... ok
+[INFO] [stdout] test into_iter_len ... ok
+[INFO] [stdout] test into_iter_u8 ... ok
+[INFO] [stdout] test iter_mut_len ... ok
+[INFO] [stdout] test iter_mut_next_back ... ok
+[INFO] [stdout] test iterator_len ... ok
+[INFO] [stdout] test iterator_next_back ... ok
+[INFO] [stdout] test test_bool ... ok
+[INFO] [stdout] test test_clone ... ok
+[INFO] [stdout] test test_debug ... ok
+[INFO] [stdout] test test_hash ... ok
+[INFO] [stdout] test test_u8 ... ok
+[INFO] [stderr]    Doc-tests enum-map
+[INFO] [stdout] test values_len ... ok
+[INFO] [stdout] test values_mut_next_back ... ok
+[INFO] [stdout] test values_rev_collect ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 8) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3398bb6a39f7c596052aaba710afbf1c371a5cbf3569bc2c6d1d18b8b7dd1e84"`
+[INFO] running `"docker" "rm" "-f" "3398bb6a39f7c596052aaba710afbf1c371a5cbf3569bc2c6d1d18b8b7dd1e84"`
+[INFO] [stdout] 3398bb6a39f7c596052aaba710afbf1c371a5cbf3569bc2c6d1d18b8b7dd1e84

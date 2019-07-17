@@ -1,0 +1,57 @@
+[INFO] fetching crate tokio-u8-codec 0.1.0...
+[INFO] extracting crate tokio-u8-codec 0.1.0 into work\ex\default\sources\nightly\reg\tokio-u8-codec\0.1.0
+[INFO] extracting crate tokio-u8-codec 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tokio-u8-codec\0.1.0
+[INFO] validating manifest of tokio-u8-codec-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tokio-u8-codec-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tokio-u8-codec-0.1.0
+[INFO] finished frobbing tokio-u8-codec-0.1.0
+[INFO] frobbed toml for tokio-u8-codec-0.1.0 written to work\ex\default\sources\nightly\reg\tokio-u8-codec\0.1.0\Cargo.toml
+[INFO] started frobbing tokio-u8-codec-0.1.0
+[INFO] finished frobbing tokio-u8-codec-0.1.0
+[INFO] frobbed toml for tokio-u8-codec-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tokio-u8-codec\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tokio-u8-codec-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\tokio-u8-codec\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2ef82ca003c321343f9ecd369d918ba4516dfba50294731eb648894aebfb8e18
+[INFO] running `"docker" "start" "-a" "2ef82ca003c321343f9ecd369d918ba4516dfba50294731eb648894aebfb8e18"`
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling futures v0.1.28
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling tokio-u8-codec v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 18.27s
+[INFO] running `"docker" "inspect" "2ef82ca003c321343f9ecd369d918ba4516dfba50294731eb648894aebfb8e18"`
+[INFO] running `"docker" "rm" "-f" "2ef82ca003c321343f9ecd369d918ba4516dfba50294731eb648894aebfb8e18"`
+[INFO] [stdout] 2ef82ca003c321343f9ecd369d918ba4516dfba50294731eb648894aebfb8e18
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\tokio-u8-codec\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 24d5c31eab66e718bbf4b4d9da92f70a4c0fddf1f63633f2524036cdc4021c4e
+[INFO] running `"docker" "start" "-a" "24d5c31eab66e718bbf4b4d9da92f70a4c0fddf1f63633f2524036cdc4021c4e"`
+[INFO] [stderr]    Compiling tokio-u8-codec v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.70s
+[INFO] running `"docker" "inspect" "24d5c31eab66e718bbf4b4d9da92f70a4c0fddf1f63633f2524036cdc4021c4e"`
+[INFO] running `"docker" "rm" "-f" "24d5c31eab66e718bbf4b4d9da92f70a4c0fddf1f63633f2524036cdc4021c4e"`
+[INFO] [stdout] 24d5c31eab66e718bbf4b4d9da92f70a4c0fddf1f63633f2524036cdc4021c4e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\tokio-u8-codec\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 1fe79db9278e3da41012965ec061a9110361c76278ca08c5654cad99d7b94945
+[INFO] running `"docker" "start" "-a" "1fe79db9278e3da41012965ec061a9110361c76278ca08c5654cad99d7b94945"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tokio_u8_codec-2dcfdf795a356bc7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests tokio-u8-codec
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 6) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "1fe79db9278e3da41012965ec061a9110361c76278ca08c5654cad99d7b94945"`
+[INFO] running `"docker" "rm" "-f" "1fe79db9278e3da41012965ec061a9110361c76278ca08c5654cad99d7b94945"`
+[INFO] [stdout] 1fe79db9278e3da41012965ec061a9110361c76278ca08c5654cad99d7b94945

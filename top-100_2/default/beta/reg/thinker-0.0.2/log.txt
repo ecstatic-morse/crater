@@ -1,0 +1,55 @@
+[INFO] fetching crate thinker 0.0.2...
+[INFO] extracting crate thinker 0.0.2 into work\ex\default\sources\stable\reg\thinker\0.0.2
+[INFO] extracting crate thinker 0.0.2 into work\ex\default\sources\beta\reg\thinker\0.0.2
+[INFO] validating manifest of thinker-0.0.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of thinker-0.0.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing thinker-0.0.2
+[INFO] finished frobbing thinker-0.0.2
+[INFO] frobbed toml for thinker-0.0.2 written to work\ex\default\sources\stable\reg\thinker\0.0.2\Cargo.toml
+[INFO] started frobbing thinker-0.0.2
+[INFO] finished frobbing thinker-0.0.2
+[INFO] frobbed toml for thinker-0.0.2 written to work\ex\default\sources\beta\reg\thinker\0.0.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing thinker-0.0.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\thinker\\0.0.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] d425fd7982bd570b46ba8a212e55d7ab7c41e43fe6487553fb8eecfcc492af79
+[INFO] running `"docker" "start" "-a" "d425fd7982bd570b46ba8a212e55d7ab7c41e43fe6487553fb8eecfcc492af79"`
+[INFO] [stderr]    Compiling thinker v0.0.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.92s
+[INFO] running `"docker" "inspect" "d425fd7982bd570b46ba8a212e55d7ab7c41e43fe6487553fb8eecfcc492af79"`
+[INFO] running `"docker" "rm" "-f" "d425fd7982bd570b46ba8a212e55d7ab7c41e43fe6487553fb8eecfcc492af79"`
+[INFO] [stdout] d425fd7982bd570b46ba8a212e55d7ab7c41e43fe6487553fb8eecfcc492af79
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\thinker\\0.0.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 84d15449006b12ae90ef64c13e64dea613cb7f6ebbc1cacde48467ed94492cab
+[INFO] running `"docker" "start" "-a" "84d15449006b12ae90ef64c13e64dea613cb7f6ebbc1cacde48467ed94492cab"`
+[INFO] [stderr]    Compiling thinker v0.0.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.66s
+[INFO] running `"docker" "inspect" "84d15449006b12ae90ef64c13e64dea613cb7f6ebbc1cacde48467ed94492cab"`
+[INFO] running `"docker" "rm" "-f" "84d15449006b12ae90ef64c13e64dea613cb7f6ebbc1cacde48467ed94492cab"`
+[INFO] [stdout] 84d15449006b12ae90ef64c13e64dea613cb7f6ebbc1cacde48467ed94492cab
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\thinker\\0.0.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 9568d59ad6af6b5c2044da09e5136cf482de57cd840e1a5ea412c2086d7a3fda
+[INFO] running `"docker" "start" "-a" "9568d59ad6af6b5c2044da09e5136cf482de57cd840e1a5ea412c2086d7a3fda"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.36s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\thinker-7fa1a794068cc408.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests thinker
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9568d59ad6af6b5c2044da09e5136cf482de57cd840e1a5ea412c2086d7a3fda"`
+[INFO] running `"docker" "rm" "-f" "9568d59ad6af6b5c2044da09e5136cf482de57cd840e1a5ea412c2086d7a3fda"`
+[INFO] [stdout] 9568d59ad6af6b5c2044da09e5136cf482de57cd840e1a5ea412c2086d7a3fda

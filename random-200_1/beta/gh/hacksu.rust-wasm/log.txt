@@ -1,0 +1,79 @@
+[INFO] cloning repository hacksu/rust-wasm
+[INFO] running `"git" "clone" "--bare" "git://github.com/hacksu/rust-wasm.git" "work\\cache\\sources\\gh\\hacksu\\rust-wasm"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\hacksu\rust-wasm'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hacksu\\rust-wasm" "work\\ex\\default\\sources\\stable\\gh\\hacksu\\rust-wasm"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\hacksu\rust-wasm'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hacksu\\rust-wasm" "work\\ex\\default\\sources\\beta\\gh\\hacksu\\rust-wasm"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\hacksu\rust-wasm'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 65497b4b867a7fa9c033c0439759f50fe869b1a3
+[INFO] sha for GitHub repo hacksu/rust-wasm: 65497b4b867a7fa9c033c0439759f50fe869b1a3
+[INFO] validating manifest of hacksu/rust-wasm on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hacksu/rust-wasm on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hacksu/rust-wasm
+[INFO] finished frobbing hacksu/rust-wasm
+[INFO] frobbed toml for hacksu/rust-wasm written to work\ex\default\sources\stable\gh\hacksu\rust-wasm\Cargo.toml
+[INFO] started frobbing hacksu/rust-wasm
+[INFO] finished frobbing hacksu/rust-wasm
+[INFO] frobbed toml for hacksu/rust-wasm written to work\ex\default\sources\beta\gh\hacksu\rust-wasm\Cargo.toml
+[INFO] crate hacksu/rust-wasm already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded yew v0.2.0
+[INFO] [stderr]   Downloaded stdweb v0.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hacksu/rust-wasm against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\hacksu\\rust-wasm,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] e7f1227f5275d25bcd1121c0270ee032f6f8c698ee1b4f3da1293bb958cb6324
+[INFO] running `"docker" "start" "-a" "e7f1227f5275d25bcd1121c0270ee032f6f8c698ee1b4f3da1293bb958cb6324"`
+[INFO] [stderr]    Compiling dtoa v0.4.2
+[INFO] [stderr]    Compiling itoa v0.3.4
+[INFO] [stderr]    Compiling num-traits v0.1.41
+[INFO] [stderr]    Compiling serde v1.0.27
+[INFO] [stderr]    Compiling serde_json v1.0.9
+[INFO] [stderr]    Compiling stdweb v0.3.0
+[INFO] [stderr]    Compiling yew v0.2.0
+[INFO] [stderr]    Compiling rust-wasm v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1120
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.exe" "C:\\crater\\target\\debug\\deps\\rust_wasm-a1c81699c508eb50.4gno5ysadnzayq8b.rcgu.o" "/OPT:REF,NOICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\libyew-7cb6284ee73400b3.rlib" "C:\\crater\\target\\debug\\deps\\libstdweb-6aa23f6f3e5443b6.rlib" "C:\\crater\\target\\debug\\deps\\libserde_json-a0dde056f458f297.rlib" "C:\\crater\\target\\debug\\deps\\libdtoa-1e5ea5f89a40b98a.rlib" "C:\\crater\\target\\debug\\deps\\libitoa-d5cade6237385f56.rlib" "C:\\crater\\target\\debug\\deps\\libnum_traits-0a3c2aacbd5d9ab6.rlib" "C:\\crater\\target\\debug\\deps\\libserde-d3ea76422f00cec4.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libstd-ae440165b54f3716.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libpanic_unwind-8a83f4a09865bc9f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libbacktrace-1850b48c943180da.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_demangle-0a5e03c766fa20b5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libhashbrown-d1709237ec5374af.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_alloc-775541a947236e83.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libunwind-2e4c68437e8b5e9c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcfg_if-b5a30980482ab3ec.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liblibc-ab3a9fb5d30a4dfd.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liballoc-001c7ac0c20c5e0f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_core-6b49372d6bd9e0c5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcore-29633d14c5ac589c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcompiler_builtins-843b3d69fb034b53.rlib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib"
+[INFO] [stderr]   = note: libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.12.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.11.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.3.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.15.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.10.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.13.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.7.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.9.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.14.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.4.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libyew-7cb6284ee73400b3.rlib(yew-7cb6284ee73400b3.yew.b049rsop-cgu.14.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libyew-7cb6284ee73400b3.rlib(yew-7cb6284ee73400b3.yew.b049rsop-cgu.13.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.8.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.2.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.7.rcgu.o : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libyew-7cb6284ee73400b3.rlib(yew-7cb6284ee73400b3.yew.b049rsop-cgu.3.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libyew-7cb6284ee73400b3.rlib(yew-7cb6284ee73400b3.yew.b049rsop-cgu.11.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libyew-7cb6284ee73400b3.rlib(yew-7cb6284ee73400b3.yew.b049rsop-cgu.2.rcgu.o) : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.15.rcgu.o : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.3.rcgu.o : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.5.rcgu.o : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           rust_wasm-a1c81699c508eb50.rust_wasm.dlpern51-cgu.6.rcgu.o : error LNK2001: unresolved external symbol emscripten_asm_const_int
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.7.rcgu.o) : error LNK2019: unresolved external symbol emscripten_pause_main_loop referenced in function _ZN6stdweb7webcore3ffi10emscripten10event_loop17hccc3f6ddecf2f87cE
+[INFO] [stderr]           libstdweb-6aa23f6f3e5443b6.rlib(stdweb-6aa23f6f3e5443b6.stdweb.ahh9sfam-cgu.7.rcgu.o) : error LNK2019: unresolved external symbol emscripten_set_main_loop referenced in function _ZN6stdweb7webcore3ffi10emscripten10event_loop17hccc3f6ddecf2f87cE
+[INFO] [stderr]           C:\crater\target\debug\deps\rust_wasm-a1c81699c508eb50.exe : fatal error LNK1120: 3 unresolved externals
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `rust-wasm`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "e7f1227f5275d25bcd1121c0270ee032f6f8c698ee1b4f3da1293bb958cb6324"`
+[INFO] running `"docker" "rm" "-f" "e7f1227f5275d25bcd1121c0270ee032f6f8c698ee1b4f3da1293bb958cb6324"`
+[INFO] [stdout] e7f1227f5275d25bcd1121c0270ee032f6f8c698ee1b4f3da1293bb958cb6324

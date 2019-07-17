@@ -1,0 +1,101 @@
+[INFO] fetching crate toml 0.5.1...
+[INFO] extracting crate toml 0.5.1 into work\ex\default\sources\stable\reg\toml\0.5.1
+[INFO] extracting crate toml 0.5.1 into work\ex\default\sources\beta\reg\toml\0.5.1
+[INFO] validating manifest of toml-0.5.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of toml-0.5.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing toml-0.5.1
+[INFO] finished frobbing toml-0.5.1
+[INFO] frobbed toml for toml-0.5.1 written to work\ex\default\sources\stable\reg\toml\0.5.1\Cargo.toml
+[INFO] started frobbing toml-0.5.1
+[INFO] finished frobbing toml-0.5.1
+[INFO] frobbed toml for toml-0.5.1 written to work\ex\default\sources\beta\reg\toml\0.5.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded linked-hash-map v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing toml-0.5.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 4d0fb6597ce69d3e18c568e00df5483f2b9bc9cdc561a5dd104bd555746356e8
+[INFO] running `"docker" "start" "-a" "4d0fb6597ce69d3e18c568e00df5483f2b9bc9cdc561a5dd104bd555746356e8"`
+[INFO] [stderr]    Compiling serde v1.0.95
+[INFO] [stderr]    Compiling toml v0.5.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 44.98s
+[INFO] running `"docker" "inspect" "4d0fb6597ce69d3e18c568e00df5483f2b9bc9cdc561a5dd104bd555746356e8"`
+[INFO] running `"docker" "rm" "-f" "4d0fb6597ce69d3e18c568e00df5483f2b9bc9cdc561a5dd104bd555746356e8"`
+[INFO] [stdout] 4d0fb6597ce69d3e18c568e00df5483f2b9bc9cdc561a5dd104bd555746356e8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 877ab34810164d6934aef2a08dffbcc92f0c00fbbe22bc30aee44476f0147671
+[INFO] running `"docker" "start" "-a" "877ab34810164d6934aef2a08dffbcc92f0c00fbbe22bc30aee44476f0147671"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling ryu v1.0.0
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling serde_derive v1.0.95
+[INFO] [stderr]    Compiling toml v0.5.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 05s
+[INFO] running `"docker" "inspect" "877ab34810164d6934aef2a08dffbcc92f0c00fbbe22bc30aee44476f0147671"`
+[INFO] running `"docker" "rm" "-f" "877ab34810164d6934aef2a08dffbcc92f0c00fbbe22bc30aee44476f0147671"`
+[INFO] [stdout] 877ab34810164d6934aef2a08dffbcc92f0c00fbbe22bc30aee44476f0147671
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 443544a5b9bf39ca8b898ff97815b1f13f3bab870a27828094e3a4b8b8850ea8
+[INFO] running `"docker" "start" "-a" "443544a5b9bf39ca8b898ff97815b1f13f3bab870a27828094e3a4b8b8850ea8"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.37s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\toml-46cd9525faf7b9b3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test tokens::tests::all ... ok
+[INFO] [stdout] test tokens::tests::bad_comment ... ok
+[INFO] [stdout] test tokens::tests::bare_cr_bad ... ok
+[INFO] [stdout] test tokens::tests::basic_strings ... ok
+[INFO] [stdout] test tokens::tests::keylike ... ok
+[INFO] [stdout] test tokens::tests::literal_strings ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\enum_external_deserialize-1859c7dd0495a927.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test enum_array::from_dotted_table ... ignored
+[INFO] [stdout] test enum_newtype::from_dotted_table ... ignored
+[INFO] [stdout] test enum_array::from_inline_tables ... ok
+[INFO] [stdout] test enum_newtype::from_inline_table ... ok
+[INFO] [stdout] test enum_struct::from_dotted_table ... ok
+[INFO] [stdout] test enum_struct::from_inline_table ... ok
+[INFO] [stdout] test enum_tuple::from_dotted_table ... ok
+[INFO] [stdout] test enum_tuple::from_inline_table ... ok
+[INFO] [stdout] test enum_unit::from_dotted_table ... ok
+[INFO] [stdout] test enum_unit::from_inline_table ... ok
+[INFO] [stdout] test enum_unit::from_str ... ok
+[INFO] [stdout] test extra_field_returns_expected_empty_table_error ... ok
+[INFO] [stdout] test extra_field_returns_expected_empty_table_error_struct_variant ... ok
+[INFO] [stdout] test invalid_variant_returns_error_with_good_message_inline_table ... ok
+[INFO] [stdout] test invalid_variant_returns_error_with_good_message_string ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests toml
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test src\lib.rs -  (line 26) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 46) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 113) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 79) ... ok
+[INFO] [stdout] test src\de.rs - de::from_str (line 43) ... ok
+[INFO] [stdout] test src\ser.rs - ser (line 14) ... ok
+[INFO] [stdout] test src\macros.rs - toml (line 9) ... ok
+[INFO] [stdout] test src\ser.rs - ser::tables_last (line 1583) ... ok
+[INFO] [stdout] test src\ser.rs - ser::to_string (line 57) ... ok
+[INFO] [stdout] test src\spanned.rs - spanned (line 1) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "443544a5b9bf39ca8b898ff97815b1f13f3bab870a27828094e3a4b8b8850ea8"`
+[INFO] running `"docker" "rm" "-f" "443544a5b9bf39ca8b898ff97815b1f13f3bab870a27828094e3a4b8b8850ea8"`
+[INFO] [stdout] 443544a5b9bf39ca8b898ff97815b1f13f3bab870a27828094e3a4b8b8850ea8

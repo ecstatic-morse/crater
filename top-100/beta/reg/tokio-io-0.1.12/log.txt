@@ -1,0 +1,63 @@
+[INFO] fetching crate tokio-io 0.1.12...
+[INFO] extracting crate tokio-io 0.1.12 into work\ex\default\sources\stable\reg\tokio-io\0.1.12
+[INFO] extracting crate tokio-io 0.1.12 into work\ex\default\sources\beta\reg\tokio-io\0.1.12
+[INFO] validating manifest of tokio-io-0.1.12 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tokio-io-0.1.12 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tokio-io-0.1.12
+[INFO] finished frobbing tokio-io-0.1.12
+[INFO] frobbed toml for tokio-io-0.1.12 written to work\ex\default\sources\stable\reg\tokio-io\0.1.12\Cargo.toml
+[INFO] started frobbing tokio-io-0.1.12
+[INFO] finished frobbing tokio-io-0.1.12
+[INFO] frobbed toml for tokio-io-0.1.12 written to work\ex\default\sources\beta\reg\tokio-io\0.1.12\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tokio-io-0.1.12 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\tokio-io\\0.1.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 1126015d08ea5aaa79de5d9a091f0d6cac56363e71fd4cb908580c02409e9150
+[INFO] running `"docker" "start" "-a" "1126015d08ea5aaa79de5d9a091f0d6cac56363e71fd4cb908580c02409e9150"`
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling tokio-io v0.1.12 (C:\crater\workdir)
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\lib.rs:24:28
+[INFO] [stderr]    |
+[INFO] [stderr] 24 | pub type IoFuture<T> = Box<Future<Item = T, Error = std_io::Error> + Send>;
+[INFO] [stderr]    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = T, Error = std_io::Error> + Send`
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:1:54
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | #![deny(missing_docs, missing_debug_implementations, warnings)]
+[INFO] [stderr]    |                                                      ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\lib.rs:27:28
+[INFO] [stderr]    |
+[INFO] [stderr] 27 | pub type IoStream<T> = Box<Stream<Item = T, Error = std_io::Error> + Send>;
+[INFO] [stderr]    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item = T, Error = std_io::Error> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\lib.rs:68:19
+[INFO] [stderr]    |
+[INFO] [stderr] 68 |     _assert::<Box<AsyncRead>>();
+[INFO] [stderr]    |                   ^^^^^^^^^ help: use `dyn`: `dyn AsyncRead`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\lib.rs:69:19
+[INFO] [stderr]    |
+[INFO] [stderr] 69 |     _assert::<Box<AsyncWrite>>();
+[INFO] [stderr]    |                   ^^^^^^^^^^ help: use `dyn`: `dyn AsyncWrite`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `tokio-io`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "1126015d08ea5aaa79de5d9a091f0d6cac56363e71fd4cb908580c02409e9150"`
+[INFO] running `"docker" "rm" "-f" "1126015d08ea5aaa79de5d9a091f0d6cac56363e71fd4cb908580c02409e9150"`
+[INFO] [stdout] 1126015d08ea5aaa79de5d9a091f0d6cac56363e71fd4cb908580c02409e9150

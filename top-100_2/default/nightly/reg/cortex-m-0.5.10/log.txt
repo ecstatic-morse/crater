@@ -1,0 +1,76 @@
+[INFO] crate cortex-m 0.5.10 is already in cache
+[INFO] extracting crate cortex-m 0.5.10 into work\ex\default\sources\nightly\reg\cortex-m\0.5.10
+[INFO] extracting crate cortex-m 0.5.10 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\cortex-m\0.5.10
+[INFO] validating manifest of cortex-m-0.5.10 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cortex-m-0.5.10 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cortex-m-0.5.10
+[INFO] finished frobbing cortex-m-0.5.10
+[INFO] frobbed toml for cortex-m-0.5.10 written to work\ex\default\sources\nightly\reg\cortex-m\0.5.10\Cargo.toml
+[INFO] started frobbing cortex-m-0.5.10
+[INFO] finished frobbing cortex-m-0.5.10
+[INFO] frobbed toml for cortex-m-0.5.10 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\cortex-m\0.5.10\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing cortex-m-0.5.10 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\cortex-m\\0.5.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 56233ba27f244cec37e319c7e593a330ae57c5df5001dc4bcf17d6d0caac5c7e
+[INFO] running `"docker" "start" "-a" "56233ba27f244cec37e319c7e593a330ae57c5df5001dc4bcf17d6d0caac5c7e"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling cortex-m v0.5.10 (C:\crater\workdir)
+[INFO] [stderr]    Compiling aligned v0.2.0
+[INFO] [stderr]    Compiling as-slice v0.1.0
+[INFO] [stderr]    Compiling aligned v0.3.1
+[INFO] [stderr]    Compiling cortex-m v0.6.0
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.70s
+[INFO] running `"docker" "inspect" "56233ba27f244cec37e319c7e593a330ae57c5df5001dc4bcf17d6d0caac5c7e"`
+[INFO] running `"docker" "rm" "-f" "56233ba27f244cec37e319c7e593a330ae57c5df5001dc4bcf17d6d0caac5c7e"`
+[INFO] [stdout] 56233ba27f244cec37e319c7e593a330ae57c5df5001dc4bcf17d6d0caac5c7e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\cortex-m\\0.5.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8a5d65146864c6bc8b264079dce28411e345fc46ce9a80c3a8b16ea70b3436d3
+[INFO] running `"docker" "start" "-a" "8a5d65146864c6bc8b264079dce28411e345fc46ce9a80c3a8b16ea70b3436d3"`
+[INFO] [stderr]    Compiling cortex-m v0.5.10 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.74s
+[INFO] running `"docker" "inspect" "8a5d65146864c6bc8b264079dce28411e345fc46ce9a80c3a8b16ea70b3436d3"`
+[INFO] running `"docker" "rm" "-f" "8a5d65146864c6bc8b264079dce28411e345fc46ce9a80c3a8b16ea70b3436d3"`
+[INFO] [stdout] 8a5d65146864c6bc8b264079dce28411e345fc46ce9a80c3a8b16ea70b3436d3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\cortex-m\\0.5.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 35396c354e704c06f5f60bd0700afb6f0655d57a3b704a715855423147ed8c93
+[INFO] running `"docker" "start" "-a" "35396c354e704c06f5f60bd0700afb6f0655d57a3b704a715855423147ed8c93"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.32s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\cortex_m-ac669b410b6f4977.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test peripheral::test::cpuid ... ok
+[INFO] [stdout] test peripheral::test::dcb ... ok
+[INFO] [stdout] test peripheral::test::dwt ... ok
+[INFO] [stdout] test peripheral::test::fpb ... ok
+[INFO] [stdout] test peripheral::test::fpu ... ok
+[INFO] [stdout] test peripheral::test::itm ... ok
+[INFO] [stdout] test peripheral::test::mpu ... ok
+[INFO] [stderr]    Doc-tests cortex-m
+[INFO] [stdout] test peripheral::test::nvic ... ok
+[INFO] [stdout] test peripheral::test::scb ... ok
+[INFO] [stdout] test peripheral::test::syst ... ok
+[INFO] [stdout] test peripheral::test::tpiu ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test src\macros.rs - singleton (line 35) ... ok
+[INFO] [stdout] test src\peripheral\mod.rs - peripheral (line 10) ... ok
+[INFO] [stdout] test src\macros.rs - macros::CFAIL (line 79) ... ok
+[INFO] [stdout] test src\peripheral\mod.rs - peripheral (line 24) ... ok
+[INFO] [stdout] test src\peripheral\mod.rs - peripheral (line 38) ... ok
+[INFO] [stdout] test src\peripheral\mod.rs - peripheral (line 58) ... ok
+[INFO] [stdout] test src\macros.rs - macros::CPASS (line 93) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "35396c354e704c06f5f60bd0700afb6f0655d57a3b704a715855423147ed8c93"`
+[INFO] running `"docker" "rm" "-f" "35396c354e704c06f5f60bd0700afb6f0655d57a3b704a715855423147ed8c93"`
+[INFO] [stdout] 35396c354e704c06f5f60bd0700afb6f0655d57a3b704a715855423147ed8c93

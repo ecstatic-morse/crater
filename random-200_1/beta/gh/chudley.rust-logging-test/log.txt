@@ -1,0 +1,73 @@
+[INFO] cloning repository chudley/rust-logging-test
+[INFO] running `"git" "clone" "--bare" "git://github.com/chudley/rust-logging-test.git" "work\\cache\\sources\\gh\\chudley\\rust-logging-test"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\chudley\rust-logging-test'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chudley\\rust-logging-test" "work\\ex\\default\\sources\\stable\\gh\\chudley\\rust-logging-test"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\chudley\rust-logging-test'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chudley\\rust-logging-test" "work\\ex\\default\\sources\\beta\\gh\\chudley\\rust-logging-test"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\chudley\rust-logging-test'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 0ad9b202e5b4bedef0fadf3deb591b7401ee50a5
+[INFO] sha for GitHub repo chudley/rust-logging-test: 0ad9b202e5b4bedef0fadf3deb591b7401ee50a5
+[INFO] validating manifest of chudley/rust-logging-test on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of chudley/rust-logging-test on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing chudley/rust-logging-test
+[INFO] finished frobbing chudley/rust-logging-test
+[INFO] frobbed toml for chudley/rust-logging-test written to work\ex\default\sources\stable\gh\chudley\rust-logging-test\Cargo.toml
+[INFO] started frobbing chudley/rust-logging-test
+[INFO] finished frobbing chudley/rust-logging-test
+[INFO] frobbed toml for chudley/rust-logging-test written to work\ex\default\sources\beta\gh\chudley\rust-logging-test\Cargo.toml
+[INFO] crate chudley/rust-logging-test already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded slog-bunyan v2.1.0
+[INFO] [stderr]   Downloaded slog v2.4.1
+[INFO] [stderr]   Downloaded slog-json v2.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing chudley/rust-logging-test against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\chudley\\rust-logging-test,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 1f425c200f792bf489f35d2c2ade6ee3349da20b753abd7ff78b9c7b58391953
+[INFO] running `"docker" "start" "-a" "1f425c200f792bf489f35d2c2ade6ee3349da20b753abd7ff78b9c7b58391953"`
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling libc v0.2.48
+[INFO] [stderr]    Compiling serde v1.0.87
+[INFO] [stderr]    Compiling slog v2.4.1
+[INFO] [stderr]    Compiling void v1.0.2
+[INFO] [stderr]    Compiling nix v0.8.1
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling chrono v0.3.0
+[INFO] [stderr]    Compiling serde_json v1.0.38
+[INFO] [stderr]    Compiling slog-json v2.3.0
+[INFO] [stderr]    Compiling slog-bunyan v2.1.0
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `unistd` in `nix`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\slog-bunyan-2.1.0\lib.rs:37:16
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |     match nix::unistd::gethostname(&mut buf) {
+[INFO] [stderr]    |                ^^^^^^ could not find `unistd` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `unistd` in `nix`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\slog-bunyan-2.1.0\lib.rs:63:27
+[INFO] [stderr]    |
+[INFO] [stderr] 63 |             "pid" => nix::unistd::getpid() as usize,
+[INFO] [stderr]    |                           ^^^^^^ could not find `unistd` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0433`.
+[INFO] [stderr] error: Could not compile `slog-bunyan`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "1f425c200f792bf489f35d2c2ade6ee3349da20b753abd7ff78b9c7b58391953"`
+[INFO] running `"docker" "rm" "-f" "1f425c200f792bf489f35d2c2ade6ee3349da20b753abd7ff78b9c7b58391953"`
+[INFO] [stdout] 1f425c200f792bf489f35d2c2ade6ee3349da20b753abd7ff78b9c7b58391953

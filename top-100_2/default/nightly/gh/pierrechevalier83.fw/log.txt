@@ -1,0 +1,55 @@
+[INFO] cloning repository pierrechevalier83/fw
+[INFO] running `"git" "clone" "--bare" "git://github.com/pierrechevalier83/fw.git" "work\\cache\\sources\\gh\\pierrechevalier83\\fw"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\pierrechevalier83\fw'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pierrechevalier83\\fw" "work\\ex\\default\\sources\\nightly\\gh\\pierrechevalier83\\fw"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\pierrechevalier83\fw'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pierrechevalier83\\fw" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\pierrechevalier83\\fw"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\pierrechevalier83\fw'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 788ca13e15f645e8d0722a6e779e47c5fd7094a1
+[INFO] sha for GitHub repo pierrechevalier83/fw: 788ca13e15f645e8d0722a6e779e47c5fd7094a1
+[INFO] validating manifest of pierrechevalier83/fw on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of pierrechevalier83/fw on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing pierrechevalier83/fw
+[INFO] finished frobbing pierrechevalier83/fw
+[INFO] frobbed toml for pierrechevalier83/fw written to work\ex\default\sources\nightly\gh\pierrechevalier83\fw\Cargo.toml
+[INFO] started frobbing pierrechevalier83/fw
+[INFO] finished frobbing pierrechevalier83/fw
+[INFO] frobbed toml for pierrechevalier83/fw written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\pierrechevalier83\fw\Cargo.toml
+[INFO] crate pierrechevalier83/fw already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing pierrechevalier83/fw against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\pierrechevalier83\\fw,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 245be405930084ef148e197490664473a59439474f6415ec960b34ed4859a1d6
+[INFO] running `"docker" "start" "-a" "245be405930084ef148e197490664473a59439474f6415ec960b34ed4859a1d6"`
+[INFO] [stderr]    Compiling fw v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.85s
+[INFO] running `"docker" "inspect" "245be405930084ef148e197490664473a59439474f6415ec960b34ed4859a1d6"`
+[INFO] running `"docker" "rm" "-f" "245be405930084ef148e197490664473a59439474f6415ec960b34ed4859a1d6"`
+[INFO] [stdout] 245be405930084ef148e197490664473a59439474f6415ec960b34ed4859a1d6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\pierrechevalier83\\fw,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 338bc2b43438da7a414b8df3289c3e44c7c4411d7cb104032b6834d904ef2f89
+[INFO] running `"docker" "start" "-a" "338bc2b43438da7a414b8df3289c3e44c7c4411d7cb104032b6834d904ef2f89"`
+[INFO] [stderr]    Compiling fw v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.26s
+[INFO] running `"docker" "inspect" "338bc2b43438da7a414b8df3289c3e44c7c4411d7cb104032b6834d904ef2f89"`
+[INFO] running `"docker" "rm" "-f" "338bc2b43438da7a414b8df3289c3e44c7c4411d7cb104032b6834d904ef2f89"`
+[INFO] [stdout] 338bc2b43438da7a414b8df3289c3e44c7c4411d7cb104032b6834d904ef2f89
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\pierrechevalier83\\fw,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3de9ff2c034c6c9db289ed1ed4c846dde76372364a047f1c8dd1f6c2f6de570d
+[INFO] running `"docker" "start" "-a" "3de9ff2c034c6c9db289ed1ed4c846dde76372364a047f1c8dd1f6c2f6de570d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.13s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\fw-8954fe6d6f1f1ec2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3de9ff2c034c6c9db289ed1ed4c846dde76372364a047f1c8dd1f6c2f6de570d"`
+[INFO] running `"docker" "rm" "-f" "3de9ff2c034c6c9db289ed1ed4c846dde76372364a047f1c8dd1f6c2f6de570d"`
+[INFO] [stdout] 3de9ff2c034c6c9db289ed1ed4c846dde76372364a047f1c8dd1f6c2f6de570d

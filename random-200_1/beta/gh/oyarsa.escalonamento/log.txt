@@ -1,0 +1,60 @@
+[INFO] cloning repository oyarsa/escalonamento
+[INFO] running `"git" "clone" "--bare" "git://github.com/oyarsa/escalonamento.git" "work\\cache\\sources\\gh\\oyarsa\\escalonamento"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\oyarsa\escalonamento'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\oyarsa\\escalonamento" "work\\ex\\default\\sources\\stable\\gh\\oyarsa\\escalonamento"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\oyarsa\escalonamento'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\oyarsa\\escalonamento" "work\\ex\\default\\sources\\beta\\gh\\oyarsa\\escalonamento"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\oyarsa\escalonamento'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ddec7a9d39404f73cd70a60d940032934770154e
+[INFO] sha for GitHub repo oyarsa/escalonamento: ddec7a9d39404f73cd70a60d940032934770154e
+[INFO] validating manifest of oyarsa/escalonamento on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of oyarsa/escalonamento on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing oyarsa/escalonamento
+[INFO] finished frobbing oyarsa/escalonamento
+[INFO] frobbed toml for oyarsa/escalonamento written to work\ex\default\sources\stable\gh\oyarsa\escalonamento\Cargo.toml
+[INFO] started frobbing oyarsa/escalonamento
+[INFO] finished frobbing oyarsa/escalonamento
+[INFO] frobbed toml for oyarsa/escalonamento written to work\ex\default\sources\beta\gh\oyarsa\escalonamento\Cargo.toml
+[INFO] crate oyarsa/escalonamento already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libc v0.2.17
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing oyarsa/escalonamento against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\oyarsa\\escalonamento,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 2ff73772975c20d1ff12457c01bc96a701c644a4769fd0b2a1550c34eba74b73
+[INFO] running `"docker" "start" "-a" "2ff73772975c20d1ff12457c01bc96a701c644a4769fd0b2a1550c34eba74b73"`
+[INFO] [stderr]    Compiling libc v0.2.17
+[INFO] [stderr]    Compiling rand v0.3.15
+[INFO] [stderr]    Compiling escalonamento v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 19.75s
+[INFO] running `"docker" "inspect" "2ff73772975c20d1ff12457c01bc96a701c644a4769fd0b2a1550c34eba74b73"`
+[INFO] running `"docker" "rm" "-f" "2ff73772975c20d1ff12457c01bc96a701c644a4769fd0b2a1550c34eba74b73"`
+[INFO] [stdout] 2ff73772975c20d1ff12457c01bc96a701c644a4769fd0b2a1550c34eba74b73
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\oyarsa\\escalonamento,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d53bfaac37ccbbe608370b490c0b60aa0f6957fc2155c802d11774765c1637f0
+[INFO] running `"docker" "start" "-a" "d53bfaac37ccbbe608370b490c0b60aa0f6957fc2155c802d11774765c1637f0"`
+[INFO] [stderr]    Compiling escalonamento v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.90s
+[INFO] running `"docker" "inspect" "d53bfaac37ccbbe608370b490c0b60aa0f6957fc2155c802d11774765c1637f0"`
+[INFO] running `"docker" "rm" "-f" "d53bfaac37ccbbe608370b490c0b60aa0f6957fc2155c802d11774765c1637f0"`
+[INFO] [stdout] d53bfaac37ccbbe608370b490c0b60aa0f6957fc2155c802d11774765c1637f0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\oyarsa\\escalonamento,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 4d778c4b5b7c6b7d0e80ad4f810081cc057017c4097df3fef7a6dab46dcc6287
+[INFO] running `"docker" "start" "-a" "4d778c4b5b7c6b7d0e80ad4f810081cc057017c4097df3fef7a6dab46dcc6287"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\escalonamento-b22a2e0110609733.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4d778c4b5b7c6b7d0e80ad4f810081cc057017c4097df3fef7a6dab46dcc6287"`
+[INFO] running `"docker" "rm" "-f" "4d778c4b5b7c6b7d0e80ad4f810081cc057017c4097df3fef7a6dab46dcc6287"`
+[INFO] [stdout] 4d778c4b5b7c6b7d0e80ad4f810081cc057017c4097df3fef7a6dab46dcc6287

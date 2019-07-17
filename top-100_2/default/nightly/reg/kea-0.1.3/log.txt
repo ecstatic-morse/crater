@@ -1,0 +1,135 @@
+[INFO] fetching crate kea 0.1.3...
+[INFO] extracting crate kea 0.1.3 into work\ex\default\sources\nightly\reg\kea\0.1.3
+[INFO] extracting crate kea 0.1.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\kea\0.1.3
+[INFO] validating manifest of kea-0.1.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of kea-0.1.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing kea-0.1.3
+[INFO] finished frobbing kea-0.1.3
+[INFO] frobbed toml for kea-0.1.3 written to work\ex\default\sources\nightly\reg\kea\0.1.3\Cargo.toml
+[INFO] started frobbing kea-0.1.3
+[INFO] finished frobbing kea-0.1.3
+[INFO] frobbed toml for kea-0.1.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\kea\0.1.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded pacman v0.1.3
+[INFO] [stderr]   Downloaded alpm-rs v0.1.24
+[INFO] [stderr]   Downloaded aur-client v0.1.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing kea-0.1.3 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\kea\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ed4c28faf986cc1bd82d454f3b1d0f5301c0b0bdaa14777f38aa38b271859583
+[INFO] running `"docker" "start" "-a" "ed4c28faf986cc1bd82d454f3b1d0f5301c0b0bdaa14777f38aa38b271859583"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling numtoa v0.1.0
+[INFO] [stderr]    Compiling pacman v0.1.3
+[INFO] [stderr]    Compiling libgit2-sys v0.7.11
+[INFO] [stderr]    Compiling hyper v0.12.33
+[INFO] [stderr]    Compiling want v0.2.0
+[INFO] [stderr]    Compiling alpm-rs v0.1.24
+[INFO] [stderr]    Compiling termion v1.5.3
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\lib.rs:24:9
+[INFO] [stderr]    |
+[INFO] [stderr] 24 | pub use sys::size::terminal_size;
+[INFO] [stderr]    |         ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\lib.rs:25:9
+[INFO] [stderr]    |
+[INFO] [stderr] 25 | pub use sys::tty::{is_tty, get_tty};
+[INFO] [stderr]    |         ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:5:5
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use sys::tty::get_tty;
+[INFO] [stderr]   |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:29:5
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | use sys::attr::{get_terminal_attr, raw_terminal_attr, set_terminal_attr};
+[INFO] [stderr]    |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `sys`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:28:5
+[INFO] [stderr]    |
+[INFO] [stderr] 28 | use sys::Termios;
+[INFO] [stderr]    |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_tty` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:14:36
+[INFO] [stderr]    |
+[INFO] [stderr] 14 |     thread::spawn(move || for i in get_tty().unwrap().bytes() {
+[INFO] [stderr]    |                                    ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_tty` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:43:36
+[INFO] [stderr]    |
+[INFO] [stderr] 43 |     thread::spawn(move || for i in get_tty().unwrap().bytes() {
+[INFO] [stderr]    |                                    ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:45:9
+[INFO] [stderr]    |
+[INFO] [stderr] 45 |         set_terminal_attr(&self.prev_ios).unwrap();
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:90:23
+[INFO] [stderr]    |
+[INFO] [stderr] 90 |         let mut ios = get_terminal_attr()?;
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `raw_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:93:9
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |         raw_terminal_attr(&mut ios);
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:95:9
+[INFO] [stderr]    |
+[INFO] [stderr] 95 |         set_terminal_attr(&ios)?;
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:106:9
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         set_terminal_attr(&self.prev_ios)?;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:111:23
+[INFO] [stderr]     |
+[INFO] [stderr] 111 |         let mut ios = get_terminal_attr()?;
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `raw_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:112:9
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |         raw_terminal_attr(&mut ios);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:113:9
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |         set_terminal_attr(&ios)?;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 15 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `termion`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "ed4c28faf986cc1bd82d454f3b1d0f5301c0b0bdaa14777f38aa38b271859583"`
+[INFO] running `"docker" "rm" "-f" "ed4c28faf986cc1bd82d454f3b1d0f5301c0b0bdaa14777f38aa38b271859583"`
+[INFO] [stdout] ed4c28faf986cc1bd82d454f3b1d0f5301c0b0bdaa14777f38aa38b271859583

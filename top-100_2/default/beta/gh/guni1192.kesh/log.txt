@@ -1,0 +1,86 @@
+[INFO] cloning repository guni1192/kesh
+[INFO] running `"git" "clone" "--bare" "git://github.com/guni1192/kesh.git" "work\\cache\\sources\\gh\\guni1192\\kesh"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\guni1192\kesh'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guni1192\\kesh" "work\\ex\\default\\sources\\stable\\gh\\guni1192\\kesh"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\guni1192\kesh'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guni1192\\kesh" "work\\ex\\default\\sources\\beta\\gh\\guni1192\\kesh"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\guni1192\kesh'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ef3220995c20dd4d73994c5afdc363c85ad910da
+[INFO] sha for GitHub repo guni1192/kesh: ef3220995c20dd4d73994c5afdc363c85ad910da
+[INFO] validating manifest of guni1192/kesh on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of guni1192/kesh on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing guni1192/kesh
+[INFO] finished frobbing guni1192/kesh
+[INFO] frobbed toml for guni1192/kesh written to work\ex\default\sources\stable\gh\guni1192\kesh\Cargo.toml
+[INFO] started frobbing guni1192/kesh
+[INFO] finished frobbing guni1192/kesh
+[INFO] frobbed toml for guni1192/kesh written to work\ex\default\sources\beta\gh\guni1192\kesh\Cargo.toml
+[INFO] crate guni1192/kesh already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded whoami v0.2.3
+[INFO] [stderr]   Downloaded colored v1.6.1
+[INFO] [stderr]   Downloaded nix v0.11.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing guni1192/kesh against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\guni1192\\kesh,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 46f0582e91bbcd2bf0dfacc2d96ef9365d7c3ec37d34beca15b9b14e35458b6a
+[INFO] running `"docker" "start" "-a" "46f0582e91bbcd2bf0dfacc2d96ef9365d7c3ec37d34beca15b9b14e35458b6a"`
+[INFO] [stderr]    Compiling libc v0.2.44
+[INFO] [stderr]    Compiling nix v0.11.0
+[INFO] [stderr]    Compiling colored v1.6.1
+[INFO] [stderr]    Compiling whoami v0.2.3
+[INFO] [stderr]    Compiling kesh v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `sys` in `nix`
+[INFO] [stderr]  --> src\main.rs:6:10
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | use nix::sys::wait::{waitpid, WaitStatus};
+[INFO] [stderr]   |          ^^^ could not find `sys` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `nix::unistd`
+[INFO] [stderr]  --> src\main.rs:7:10
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | use nix::unistd::{execve, fork, ForkResult};
+[INFO] [stderr]   |          ^^^^^^ could not find `unistd` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `nix::unistd`
+[INFO] [stderr]  --> src\buildin.rs:4:10
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use nix::unistd::chdir;
+[INFO] [stderr]   |          ^^^^^^ could not find `unistd` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `WaitStatus`
+[INFO] [stderr]   --> src\main.rs:53:17
+[INFO] [stderr]    |
+[INFO] [stderr] 53 |                 WaitStatus::Exited(_, _) => {}
+[INFO] [stderr]    |                 ^^^^^^^^^^ use of undeclared type or module `WaitStatus`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `WaitStatus`
+[INFO] [stderr]   --> src\main.rs:54:17
+[INFO] [stderr]    |
+[INFO] [stderr] 54 |                 WaitStatus::Signaled(_, _, _) => {}
+[INFO] [stderr]    |                 ^^^^^^^^^^ use of undeclared type or module `WaitStatus`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `waitpid` in this scope
+[INFO] [stderr]   --> src\main.rs:52:19
+[INFO] [stderr]    |
+[INFO] [stderr] 52 |             match waitpid(child, None).expect("waitpid faild") {
+[INFO] [stderr]    |                   ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 6 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `kesh`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "46f0582e91bbcd2bf0dfacc2d96ef9365d7c3ec37d34beca15b9b14e35458b6a"`
+[INFO] running `"docker" "rm" "-f" "46f0582e91bbcd2bf0dfacc2d96ef9365d7c3ec37d34beca15b9b14e35458b6a"`
+[INFO] [stdout] 46f0582e91bbcd2bf0dfacc2d96ef9365d7c3ec37d34beca15b9b14e35458b6a

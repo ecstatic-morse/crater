@@ -1,0 +1,64 @@
+[INFO] cloning repository dmarov/i3blocks_scripts
+[INFO] running `"git" "clone" "--bare" "git://github.com/dmarov/i3blocks_scripts.git" "work\\cache\\sources\\gh\\dmarov\\i3blocks_scripts"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\dmarov\i3blocks_scripts'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dmarov\\i3blocks_scripts" "work\\ex\\default\\sources\\nightly\\gh\\dmarov\\i3blocks_scripts"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\dmarov\i3blocks_scripts'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dmarov\\i3blocks_scripts" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\dmarov\\i3blocks_scripts"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\dmarov\i3blocks_scripts'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3dc11c5b26d56eece6d495129444a149fc7a5480
+[INFO] sha for GitHub repo dmarov/i3blocks_scripts: 3dc11c5b26d56eece6d495129444a149fc7a5480
+[INFO] validating manifest of dmarov/i3blocks_scripts on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dmarov/i3blocks_scripts on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dmarov/i3blocks_scripts
+[INFO] finished frobbing dmarov/i3blocks_scripts
+[INFO] frobbed toml for dmarov/i3blocks_scripts written to work\ex\default\sources\nightly\gh\dmarov\i3blocks_scripts\Cargo.toml
+[INFO] started frobbing dmarov/i3blocks_scripts
+[INFO] finished frobbing dmarov/i3blocks_scripts
+[INFO] frobbed toml for dmarov/i3blocks_scripts written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\dmarov\i3blocks_scripts\Cargo.toml
+[INFO] crate dmarov/i3blocks_scripts already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dmarov/i3blocks_scripts against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\dmarov\\i3blocks_scripts,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c0425f0a4b4ffbb5f96338860402683c770802c4bc1d305c27ca493360f09cdc
+[INFO] running `"docker" "start" "-a" "c0425f0a4b4ffbb5f96338860402683c770802c4bc1d305c27ca493360f09cdc"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libc v0.2.51
+[INFO] [stderr]    Compiling serde v1.0.90
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling serde_json v1.0.39
+[INFO] [stderr]    Compiling i3blocks_scripts v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 58.11s
+[INFO] running `"docker" "inspect" "c0425f0a4b4ffbb5f96338860402683c770802c4bc1d305c27ca493360f09cdc"`
+[INFO] running `"docker" "rm" "-f" "c0425f0a4b4ffbb5f96338860402683c770802c4bc1d305c27ca493360f09cdc"`
+[INFO] [stdout] c0425f0a4b4ffbb5f96338860402683c770802c4bc1d305c27ca493360f09cdc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\dmarov\\i3blocks_scripts,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e3e368997408fb686a3a463ff98f43337927a5dfe7e69c280f52a5279a1af208
+[INFO] running `"docker" "start" "-a" "e3e368997408fb686a3a463ff98f43337927a5dfe7e69c280f52a5279a1af208"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling i3blocks_scripts v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.07s
+[INFO] running `"docker" "inspect" "e3e368997408fb686a3a463ff98f43337927a5dfe7e69c280f52a5279a1af208"`
+[INFO] running `"docker" "rm" "-f" "e3e368997408fb686a3a463ff98f43337927a5dfe7e69c280f52a5279a1af208"`
+[INFO] [stdout] e3e368997408fb686a3a463ff98f43337927a5dfe7e69c280f52a5279a1af208
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\dmarov\\i3blocks_scripts,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] ba66b7ad12885fd788abfc6381b592e273031467d550c158df1439d470973e38
+[INFO] running `"docker" "start" "-a" "ba66b7ad12885fd788abfc6381b592e273031467d550c158df1439d470973e38"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.49s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\i3blocks_scripts-0b87ded229aea7fe.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ba66b7ad12885fd788abfc6381b592e273031467d550c158df1439d470973e38"`
+[INFO] running `"docker" "rm" "-f" "ba66b7ad12885fd788abfc6381b592e273031467d550c158df1439d470973e38"`
+[INFO] [stdout] ba66b7ad12885fd788abfc6381b592e273031467d550c158df1439d470973e38

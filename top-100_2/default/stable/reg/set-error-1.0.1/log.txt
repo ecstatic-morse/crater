@@ -1,0 +1,54 @@
+[INFO] fetching crate set-error 1.0.1...
+[INFO] extracting crate set-error 1.0.1 into work\ex\default\sources\stable\reg\set-error\1.0.1
+[INFO] extracting crate set-error 1.0.1 into work\ex\default\sources\beta\reg\set-error\1.0.1
+[INFO] validating manifest of set-error-1.0.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of set-error-1.0.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing set-error-1.0.1
+[INFO] finished frobbing set-error-1.0.1
+[INFO] frobbed toml for set-error-1.0.1 written to work\ex\default\sources\stable\reg\set-error\1.0.1\Cargo.toml
+[INFO] started frobbing set-error-1.0.1
+[INFO] finished frobbing set-error-1.0.1
+[INFO] frobbed toml for set-error-1.0.1 written to work\ex\default\sources\beta\reg\set-error\1.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing set-error-1.0.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\set-error\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 99f6bbf8731c8bdb27fc67e0a93e39d0d4de1455c7d1a5db3d71eeba56da29cc
+[INFO] running `"docker" "start" "-a" "99f6bbf8731c8bdb27fc67e0a93e39d0d4de1455c7d1a5db3d71eeba56da29cc"`
+[INFO] [stderr]    Compiling set-error v1.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.03s
+[INFO] running `"docker" "inspect" "99f6bbf8731c8bdb27fc67e0a93e39d0d4de1455c7d1a5db3d71eeba56da29cc"`
+[INFO] running `"docker" "rm" "-f" "99f6bbf8731c8bdb27fc67e0a93e39d0d4de1455c7d1a5db3d71eeba56da29cc"`
+[INFO] [stdout] 99f6bbf8731c8bdb27fc67e0a93e39d0d4de1455c7d1a5db3d71eeba56da29cc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\set-error\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 44d695f27e72978df347034485523aae78c10d8e7e6c7f67eb9847981c164d90
+[INFO] running `"docker" "start" "-a" "44d695f27e72978df347034485523aae78c10d8e7e6c7f67eb9847981c164d90"`
+[INFO] [stderr]    Compiling set-error v1.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.53s
+[INFO] running `"docker" "inspect" "44d695f27e72978df347034485523aae78c10d8e7e6c7f67eb9847981c164d90"`
+[INFO] running `"docker" "rm" "-f" "44d695f27e72978df347034485523aae78c10d8e7e6c7f67eb9847981c164d90"`
+[INFO] [stdout] 44d695f27e72978df347034485523aae78c10d8e7e6c7f67eb9847981c164d90
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\set-error\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 8be9cabdbe6f8680d20560908f24376e2f6d10d8d492d0c1ed65de49a90e71c7
+[INFO] running `"docker" "start" "-a" "8be9cabdbe6f8680d20560908f24376e2f6d10d8d492d0c1ed65de49a90e71c7"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.51s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\set_error-b1d28e1987597ce6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests set-error
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs - ChangeError (line 9) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8be9cabdbe6f8680d20560908f24376e2f6d10d8d492d0c1ed65de49a90e71c7"`
+[INFO] running `"docker" "rm" "-f" "8be9cabdbe6f8680d20560908f24376e2f6d10d8d492d0c1ed65de49a90e71c7"`
+[INFO] [stdout] 8be9cabdbe6f8680d20560908f24376e2f6d10d8d492d0c1ed65de49a90e71c7

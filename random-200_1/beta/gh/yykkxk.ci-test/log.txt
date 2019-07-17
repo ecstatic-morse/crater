@@ -1,0 +1,59 @@
+[INFO] cloning repository yykkxk/ci-test
+[INFO] running `"git" "clone" "--bare" "git://github.com/yykkxk/ci-test.git" "work\\cache\\sources\\gh\\yykkxk\\ci-test"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\yykkxk\ci-test'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\yykkxk\\ci-test" "work\\ex\\default\\sources\\stable\\gh\\yykkxk\\ci-test"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\yykkxk\ci-test'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\yykkxk\\ci-test" "work\\ex\\default\\sources\\beta\\gh\\yykkxk\\ci-test"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\yykkxk\ci-test'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] d6d93dd1e0e487ccef42e6108daec392f2514051
+[INFO] sha for GitHub repo yykkxk/ci-test: d6d93dd1e0e487ccef42e6108daec392f2514051
+[INFO] validating manifest of yykkxk/ci-test on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of yykkxk/ci-test on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing yykkxk/ci-test
+[INFO] finished frobbing yykkxk/ci-test
+[INFO] frobbed toml for yykkxk/ci-test written to work\ex\default\sources\stable\gh\yykkxk\ci-test\Cargo.toml
+[INFO] started frobbing yykkxk/ci-test
+[INFO] finished frobbing yykkxk/ci-test
+[INFO] frobbed toml for yykkxk/ci-test written to work\ex\default\sources\beta\gh\yykkxk\ci-test\Cargo.toml
+[INFO] crate yykkxk/ci-test already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing yykkxk/ci-test against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\yykkxk\\ci-test,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6092f67eaaf7e38a626400a41ee08998779cad99817f14e47f2944adcf774e0e
+[INFO] running `"docker" "start" "-a" "6092f67eaaf7e38a626400a41ee08998779cad99817f14e47f2944adcf774e0e"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling ci-test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 36.49s
+[INFO] running `"docker" "inspect" "6092f67eaaf7e38a626400a41ee08998779cad99817f14e47f2944adcf774e0e"`
+[INFO] running `"docker" "rm" "-f" "6092f67eaaf7e38a626400a41ee08998779cad99817f14e47f2944adcf774e0e"`
+[INFO] [stdout] 6092f67eaaf7e38a626400a41ee08998779cad99817f14e47f2944adcf774e0e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\yykkxk\\ci-test,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3d969f62689aa3abba7b28bcf02a9163fbb41670ff2fd0e0b00784b74cf7bed9
+[INFO] running `"docker" "start" "-a" "3d969f62689aa3abba7b28bcf02a9163fbb41670ff2fd0e0b00784b74cf7bed9"`
+[INFO] [stderr]    Compiling ci-test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.04s
+[INFO] running `"docker" "inspect" "3d969f62689aa3abba7b28bcf02a9163fbb41670ff2fd0e0b00784b74cf7bed9"`
+[INFO] running `"docker" "rm" "-f" "3d969f62689aa3abba7b28bcf02a9163fbb41670ff2fd0e0b00784b74cf7bed9"`
+[INFO] [stdout] 3d969f62689aa3abba7b28bcf02a9163fbb41670ff2fd0e0b00784b74cf7bed9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\yykkxk\\ci-test,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] b01fe487f0ea0d737ba6f5e6b29fdc7206b3739f084c74996d797e15251b2bca
+[INFO] running `"docker" "start" "-a" "b01fe487f0ea0d737ba6f5e6b29fdc7206b3739f084c74996d797e15251b2bca"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ci_test-a8a7598c42777193.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b01fe487f0ea0d737ba6f5e6b29fdc7206b3739f084c74996d797e15251b2bca"`
+[INFO] running `"docker" "rm" "-f" "b01fe487f0ea0d737ba6f5e6b29fdc7206b3739f084c74996d797e15251b2bca"`
+[INFO] [stdout] b01fe487f0ea0d737ba6f5e6b29fdc7206b3739f084c74996d797e15251b2bca

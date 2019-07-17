@@ -1,0 +1,62 @@
+[INFO] cloning repository sigoden/calc-rs
+[INFO] running `"git" "clone" "--bare" "git://github.com/sigoden/calc-rs.git" "work\\cache\\sources\\gh\\sigoden\\calc-rs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\sigoden\calc-rs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sigoden\\calc-rs" "work\\ex\\default\\sources\\nightly\\gh\\sigoden\\calc-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\sigoden\calc-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sigoden\\calc-rs" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sigoden\\calc-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sigoden\calc-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] e062770d20fd49cd0a8a1a57c07acc7807e0aba5
+[INFO] sha for GitHub repo sigoden/calc-rs: e062770d20fd49cd0a8a1a57c07acc7807e0aba5
+[INFO] validating manifest of sigoden/calc-rs on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sigoden/calc-rs on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sigoden/calc-rs
+[INFO] finished frobbing sigoden/calc-rs
+[INFO] frobbed toml for sigoden/calc-rs written to work\ex\default\sources\nightly\gh\sigoden\calc-rs\Cargo.toml
+[INFO] started frobbing sigoden/calc-rs
+[INFO] finished frobbing sigoden/calc-rs
+[INFO] frobbed toml for sigoden/calc-rs written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sigoden\calc-rs\Cargo.toml
+[INFO] crate sigoden/calc-rs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sigoden/calc-rs against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\sigoden\\calc-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7ff91d24cac4d9db5235b14bcec521cabfd1582c1b29e8d99b0f93ffe900c784
+[INFO] running `"docker" "start" "-a" "7ff91d24cac4d9db5235b14bcec521cabfd1582c1b29e8d99b0f93ffe900c784"`
+[INFO] [stderr]    Compiling calc-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.08s
+[INFO] running `"docker" "inspect" "7ff91d24cac4d9db5235b14bcec521cabfd1582c1b29e8d99b0f93ffe900c784"`
+[INFO] running `"docker" "rm" "-f" "7ff91d24cac4d9db5235b14bcec521cabfd1582c1b29e8d99b0f93ffe900c784"`
+[INFO] [stdout] 7ff91d24cac4d9db5235b14bcec521cabfd1582c1b29e8d99b0f93ffe900c784
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\sigoden\\calc-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 182eb7c829253046ae4846cc87d0bbe4911321bc9e506fcb7f7580e877e917d3
+[INFO] running `"docker" "start" "-a" "182eb7c829253046ae4846cc87d0bbe4911321bc9e506fcb7f7580e877e917d3"`
+[INFO] [stderr]    Compiling calc-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0277]: can't compare `std::vec::Vec<lex::Tok>` with `std::result::Result<std::vec::Vec<lex::Tok>, _>`
+[INFO] [stderr]   --> src\lex.rs:50:9
+[INFO] [stderr]    |
+[INFO] [stderr] 50 | /         assert_eq!(
+[INFO] [stderr] 51 | |             lex("24 / (4 - 4)"),
+[INFO] [stderr] 52 | |             Ok(vec![
+[INFO] [stderr] 53 | |                 Tok::Num(24),
+[INFO] [stderr] ...  |
+[INFO] [stderr] 61 | |             ])
+[INFO] [stderr] 62 | |         )
+[INFO] [stderr]    | |_________^ no implementation for `std::vec::Vec<lex::Tok> == std::result::Result<std::vec::Vec<lex::Tok>, _>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: the trait `std::cmp::PartialEq<std::result::Result<std::vec::Vec<lex::Tok>, _>>` is not implemented for `std::vec::Vec<lex::Tok>`
+[INFO] [stderr]    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0277`.
+[INFO] [stderr] error: Could not compile `calc-rs`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "182eb7c829253046ae4846cc87d0bbe4911321bc9e506fcb7f7580e877e917d3"`
+[INFO] running `"docker" "rm" "-f" "182eb7c829253046ae4846cc87d0bbe4911321bc9e506fcb7f7580e877e917d3"`
+[INFO] [stdout] 182eb7c829253046ae4846cc87d0bbe4911321bc9e506fcb7f7580e877e917d3

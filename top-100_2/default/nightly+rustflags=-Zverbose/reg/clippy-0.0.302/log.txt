@@ -1,0 +1,38 @@
+[INFO] crate clippy 0.0.302 is already in cache
+[INFO] extracting crate clippy 0.0.302 into work\ex\default\sources\nightly\reg\clippy\0.0.302
+[INFO] extracting crate clippy 0.0.302 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\clippy\0.0.302
+[INFO] validating manifest of clippy-0.0.302 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of clippy-0.0.302 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing clippy-0.0.302
+[INFO] finished frobbing clippy-0.0.302
+[INFO] frobbed toml for clippy-0.0.302 written to work\ex\default\sources\nightly\reg\clippy\0.0.302\Cargo.toml
+[INFO] started frobbing clippy-0.0.302
+[INFO] finished frobbing clippy-0.0.302
+[INFO] frobbed toml for clippy-0.0.302 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\clippy\0.0.302\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing clippy-0.0.302 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\clippy\\0.0.302,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5ccffd7ee69545636c874b4b114e58e657b81205742f266893e5868c64f1d677
+[INFO] running `"docker" "start" "-a" "5ccffd7ee69545636c874b4b114e58e657b81205742f266893e5868c64f1d677"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling dirs v1.0.5
+[INFO] [stderr]    Compiling term v0.5.2
+[INFO] [stderr]    Compiling clippy v0.0.302 (C:\crater\workdir)
+[INFO] [stderr] error: failed to run custom build command for `clippy v0.0.302 (C:\crater\workdir)`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\clippy-445e0d48aea0681b\build-script-build` (exit code: 1)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] [1m[31m
+[INFO] [stderr] error: [0m[37mClippy is no longer available via crates.io
+[INFO] [stderr] 
+[INFO] [stderr] [1m[32mhelp: [0m[37mplease run `[1mrustup component add clippy-preview[0m[37m` instead
+[INFO] [stderr] [0m
+[INFO] running `"docker" "inspect" "5ccffd7ee69545636c874b4b114e58e657b81205742f266893e5868c64f1d677"`
+[INFO] running `"docker" "rm" "-f" "5ccffd7ee69545636c874b4b114e58e657b81205742f266893e5868c64f1d677"`
+[INFO] [stdout] 5ccffd7ee69545636c874b4b114e58e657b81205742f266893e5868c64f1d677

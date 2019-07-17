@@ -1,0 +1,33 @@
+[INFO] crate bytes 0.4.12 is already in cache
+[INFO] extracting crate bytes 0.4.12 into work\ex\default\sources\nightly\reg\bytes\0.4.12
+[INFO] extracting crate bytes 0.4.12 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytes\0.4.12
+[INFO] validating manifest of bytes-0.4.12 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bytes-0.4.12 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bytes-0.4.12
+[INFO] finished frobbing bytes-0.4.12
+[INFO] frobbed toml for bytes-0.4.12 written to work\ex\default\sources\nightly\reg\bytes\0.4.12\Cargo.toml
+[INFO] started frobbing bytes-0.4.12
+[INFO] finished frobbing bytes-0.4.12
+[INFO] frobbed toml for bytes-0.4.12 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytes\0.4.12\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bytes-0.4.12 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\bytes\\0.4.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6713fea0be15745ab6fdb1aca0018aac4e8f21791d380de8db24357040c2d36d
+[INFO] running `"docker" "start" "-a" "6713fea0be15745ab6fdb1aca0018aac4e8f21791d380de8db24357040c2d36d"`
+[INFO] [stderr]    Compiling bytes v0.4.12 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.31s
+[INFO] running `"docker" "inspect" "6713fea0be15745ab6fdb1aca0018aac4e8f21791d380de8db24357040c2d36d"`
+[INFO] running `"docker" "rm" "-f" "6713fea0be15745ab6fdb1aca0018aac4e8f21791d380de8db24357040c2d36d"`
+[INFO] [stdout] 6713fea0be15745ab6fdb1aca0018aac4e8f21791d380de8db24357040c2d36d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\bytes\\0.4.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 248ca980e757e2f263b80d8a89374e20e7ffcb113d861b62ad5deb258fc2e8c2
+[INFO] running `"docker" "start" "-a" "248ca980e757e2f263b80d8a89374e20e7ffcb113d861b62ad5deb258fc2e8c2"`
+[INFO] [stderr] Error response from daemon: i/o timeout
+[INFO] running `"docker" "inspect" "248ca980e757e2f263b80d8a89374e20e7ffcb113d861b62ad5deb258fc2e8c2"`
+[INFO] running `"docker" "rm" "-f" "248ca980e757e2f263b80d8a89374e20e7ffcb113d861b62ad5deb258fc2e8c2"`
+[INFO] [stdout] 248ca980e757e2f263b80d8a89374e20e7ffcb113d861b62ad5deb258fc2e8c2

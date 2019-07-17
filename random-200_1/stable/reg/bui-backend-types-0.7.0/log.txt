@@ -1,0 +1,57 @@
+[INFO] fetching crate bui-backend-types 0.7.0...
+[INFO] extracting crate bui-backend-types 0.7.0 into work\ex\default\sources\stable\reg\bui-backend-types\0.7.0
+[INFO] extracting crate bui-backend-types 0.7.0 into work\ex\default\sources\beta\reg\bui-backend-types\0.7.0
+[INFO] validating manifest of bui-backend-types-0.7.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bui-backend-types-0.7.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bui-backend-types-0.7.0
+[INFO] finished frobbing bui-backend-types-0.7.0
+[INFO] frobbed toml for bui-backend-types-0.7.0 written to work\ex\default\sources\stable\reg\bui-backend-types\0.7.0\Cargo.toml
+[INFO] started frobbing bui-backend-types-0.7.0
+[INFO] finished frobbing bui-backend-types-0.7.0
+[INFO] frobbed toml for bui-backend-types-0.7.0 written to work\ex\default\sources\beta\reg\bui-backend-types\0.7.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bui-backend-types-0.7.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\bui-backend-types\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a1f11b69a34993be41867eff71a50a39a8fcbdfa6dc7f2316898562769b71886
+[INFO] running `"docker" "start" "-a" "a1f11b69a34993be41867eff71a50a39a8fcbdfa6dc7f2316898562769b71886"`
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling bui-backend-types v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.62s
+[INFO] running `"docker" "inspect" "a1f11b69a34993be41867eff71a50a39a8fcbdfa6dc7f2316898562769b71886"`
+[INFO] running `"docker" "rm" "-f" "a1f11b69a34993be41867eff71a50a39a8fcbdfa6dc7f2316898562769b71886"`
+[INFO] [stdout] a1f11b69a34993be41867eff71a50a39a8fcbdfa6dc7f2316898562769b71886
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\bui-backend-types\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 60b73c3a18833f7fbc4fbc2151cd82f42b93b4b798de11dc4a3db82fc44beabc
+[INFO] running `"docker" "start" "-a" "60b73c3a18833f7fbc4fbc2151cd82f42b93b4b798de11dc4a3db82fc44beabc"`
+[INFO] [stderr]    Compiling bui-backend-types v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.95s
+[INFO] running `"docker" "inspect" "60b73c3a18833f7fbc4fbc2151cd82f42b93b4b798de11dc4a3db82fc44beabc"`
+[INFO] running `"docker" "rm" "-f" "60b73c3a18833f7fbc4fbc2151cd82f42b93b4b798de11dc4a3db82fc44beabc"`
+[INFO] [stdout] 60b73c3a18833f7fbc4fbc2151cd82f42b93b4b798de11dc4a3db82fc44beabc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\bui-backend-types\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 24e1556a63607e7ba29a20bebc104312661e3eb0122d76865b4b5f0a75ca0b83
+[INFO] running `"docker" "start" "-a" "24e1556a63607e7ba29a20bebc104312661e3eb0122d76865b4b5f0a75ca0b83"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bui_backend_types-54415bf24ef26bc2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests bui-backend-types
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "24e1556a63607e7ba29a20bebc104312661e3eb0122d76865b4b5f0a75ca0b83"`
+[INFO] running `"docker" "rm" "-f" "24e1556a63607e7ba29a20bebc104312661e3eb0122d76865b4b5f0a75ca0b83"`
+[INFO] [stdout] 24e1556a63607e7ba29a20bebc104312661e3eb0122d76865b4b5f0a75ca0b83

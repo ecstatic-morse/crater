@@ -1,0 +1,130 @@
+[INFO] crate semver 0.9.0 is already in cache
+[INFO] extracting crate semver 0.9.0 into work\ex\default\sources\nightly\reg\semver\0.9.0
+[INFO] extracting crate semver 0.9.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\semver\0.9.0
+[INFO] validating manifest of semver-0.9.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of semver-0.9.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing semver-0.9.0
+[INFO] finished frobbing semver-0.9.0
+[INFO] frobbed toml for semver-0.9.0 written to work\ex\default\sources\nightly\reg\semver\0.9.0\Cargo.toml
+[INFO] started frobbing semver-0.9.0
+[INFO] finished frobbing semver-0.9.0
+[INFO] frobbed toml for semver-0.9.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\semver\0.9.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing semver-0.9.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\semver\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 04235c58cefd6b6a7346a4889aaa015c8e2041ab6f39cd5a318a67584288a395
+[INFO] running `"docker" "start" "-a" "04235c58cefd6b6a7346a4889aaa015c8e2041ab6f39cd5a318a67584288a395"`
+[INFO] [stderr]    Compiling semver v0.9.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.91s
+[INFO] running `"docker" "inspect" "04235c58cefd6b6a7346a4889aaa015c8e2041ab6f39cd5a318a67584288a395"`
+[INFO] running `"docker" "rm" "-f" "04235c58cefd6b6a7346a4889aaa015c8e2041ab6f39cd5a318a67584288a395"`
+[INFO] [stdout] 04235c58cefd6b6a7346a4889aaa015c8e2041ab6f39cd5a318a67584288a395
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\semver\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] eb914d9adef90f50a14e1ac4986f4cd2c6c2476a45c81ce5b4c5551606c47448
+[INFO] running `"docker" "start" "-a" "eb914d9adef90f50a14e1ac4986f4cd2c6c2476a45c81ce5b4c5551606c47448"`
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling cmake v0.1.40
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling curl-sys v0.4.20
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11
+[INFO] [stderr]    Compiling libgit2-sys v0.6.19
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling git2 v0.6.11
+[INFO] [stderr]    Compiling crates-index v0.5.1
+[INFO] [stderr]    Compiling semver v0.9.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 48s
+[INFO] running `"docker" "inspect" "eb914d9adef90f50a14e1ac4986f4cd2c6c2476a45c81ce5b4c5551606c47448"`
+[INFO] running `"docker" "rm" "-f" "eb914d9adef90f50a14e1ac4986f4cd2c6c2476a45c81ce5b4c5551606c47448"`
+[INFO] [stdout] eb914d9adef90f50a14e1ac4986f4cd2c6c2476a45c81ce5b4c5551606c47448
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\semver\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 7de37d911e8f71030549e1ca52b4b81eefa70493cf594ea3a68b75ae98c71641
+[INFO] running `"docker" "start" "-a" "7de37d911e8f71030549e1ca52b4b81eefa70493cf594ea3a68b75ae98c71641"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.66s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\semver-982662d39afe3938.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 33 tests
+[INFO] [stdout] test version::tests::test_eq ... ok
+[INFO] [stdout] test version::tests::test_from_str ... ok
+[INFO] [stdout] test version::tests::test_from_str_errors ... ok
+[INFO] [stdout] test version::tests::test_ge ... ok
+[INFO] [stdout] test version::tests::test_gt ... ok
+[INFO] [stdout] test version::tests::test_increment_clear_metadata ... ok
+[INFO] [stdout] test version::tests::test_increment_keep_prerelease ... ok
+[INFO] [stdout] test version::tests::test_increment_major ... ok
+[INFO] [stdout] test version::tests::test_increment_minor ... ok
+[INFO] [stdout] test version::tests::test_increment_patch ... ok
+[INFO] [stdout] test version::tests::test_le ... ok
+[INFO] [stdout] test version::tests::test_lt ... ok
+[INFO] [stdout] test version::tests::test_ne ... ok
+[INFO] [stdout] test version::tests::test_parse ... ok
+[INFO] [stdout] test version::tests::test_prerelease_check ... ok
+[INFO] [stdout] test version::tests::test_show ... ok
+[INFO] [stdout] test version::tests::test_spec_order ... ok
+[INFO] [stdout] test version::tests::test_to_string ... ok
+[INFO] [stdout] test version_req::test::test_any ... ok
+[INFO] [stdout] test version_req::test::test_cargo3202 ... ok
+[INFO] [stdout] test version_req::test::test_eq_hash ... ok
+[INFO] [stdout] test version_req::test::test_from_str ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\deprecation-6a01fd552d20f6da.exe
+[INFO] [stdout] test version_req::test::test_multiple ... ok
+[INFO] [stdout] test version_req::test::test_ordering ... ok
+[INFO] [stdout] test version_req::test::test_parse_metadata_see_issue_88_see_issue_88 ... ok
+[INFO] [stdout] test version_req::test::test_parsing_compatible ... ok
+[INFO] [stdout] test version_req::test::test_parsing_default ... ok
+[INFO] [stdout] test version_req::test::test_parsing_exact ... ok
+[INFO] [stdout] test version_req::test::test_parsing_greater_than ... ok
+[INFO] [stdout] test version_req::test::test_parsing_less_than ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\regression-180ddd65643bd5e3.exe
+[INFO] [stdout] test version_req::test::test_parsing_tilde ... ok
+[INFO] [stdout] test version_req::test::test_parsing_wildcard ... ok
+[INFO] [stdout] test version_req::test::test_pre ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 33 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_regressions ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde-190f336c10bf4504.exe
+[INFO] [stdout] running 0 tests
+[INFO] [stderr]    Doc-tests semver
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test src\lib.rs -  (line 59) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 112) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 44) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 71) ... ok
+[INFO] [stdout] test src\version_req.rs - version_req::VersionReq::exact (line 274) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 83) ... ok
+[INFO] [stdout] test src\version_req.rs - version_req::VersionReq::any (line 204) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 95) ... ok
+[INFO] [stdout] test src\version_req.rs - version_req::VersionReq::parse (line 221) ... ok
+[INFO] [stdout] test src\version_req.rs - version_req::VersionReq::matches (line 289) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7de37d911e8f71030549e1ca52b4b81eefa70493cf594ea3a68b75ae98c71641"`
+[INFO] running `"docker" "rm" "-f" "7de37d911e8f71030549e1ca52b4b81eefa70493cf594ea3a68b75ae98c71641"`
+[INFO] [stdout] 7de37d911e8f71030549e1ca52b4b81eefa70493cf594ea3a68b75ae98c71641

@@ -1,0 +1,68 @@
+[INFO] cloning repository No9/rs
+[INFO] running `"git" "clone" "--bare" "git://github.com/No9/rs.git" "work\\cache\\sources\\gh\\No9\\rs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\No9\rs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\No9\\rs" "work\\ex\\default\\sources\\stable\\gh\\No9\\rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\No9\rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\No9\\rs" "work\\ex\\default\\sources\\beta\\gh\\No9\\rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\No9\rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 59d49dc846ec0f8e318cd7778ac672b5aa2a6534
+[INFO] sha for GitHub repo No9/rs: 59d49dc846ec0f8e318cd7778ac672b5aa2a6534
+[INFO] validating manifest of No9/rs on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of No9/rs on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing No9/rs
+[INFO] finished frobbing No9/rs
+[INFO] frobbed toml for No9/rs written to work\ex\default\sources\stable\gh\No9\rs\Cargo.toml
+[INFO] started frobbing No9/rs
+[INFO] finished frobbing No9/rs
+[INFO] frobbed toml for No9/rs written to work\ex\default\sources\beta\gh\No9\rs\Cargo.toml
+[INFO] crate No9/rs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing No9/rs against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\No9\\rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 9f2d6b1d5c45c5df3091a9f5a53a2ee11f5ac681db3fc052d77fea0c9399c742
+[INFO] running `"docker" "start" "-a" "9f2d6b1d5c45c5df3091a9f5a53a2ee11f5ac681db3fc052d77fea0c9399c742"`
+[INFO] [stderr]    Compiling rscalc v1.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.63s
+[INFO] running `"docker" "inspect" "9f2d6b1d5c45c5df3091a9f5a53a2ee11f5ac681db3fc052d77fea0c9399c742"`
+[INFO] running `"docker" "rm" "-f" "9f2d6b1d5c45c5df3091a9f5a53a2ee11f5ac681db3fc052d77fea0c9399c742"`
+[INFO] [stdout] 9f2d6b1d5c45c5df3091a9f5a53a2ee11f5ac681db3fc052d77fea0c9399c742
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\No9\\rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a4515b7556e2232f112c8b9281370bfa31f63bad120bc2b6bae467e36c518f86
+[INFO] running `"docker" "start" "-a" "a4515b7556e2232f112c8b9281370bfa31f63bad120bc2b6bae467e36c518f86"`
+[INFO] [stderr]    Compiling rscalc v1.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.14s
+[INFO] running `"docker" "inspect" "a4515b7556e2232f112c8b9281370bfa31f63bad120bc2b6bae467e36c518f86"`
+[INFO] running `"docker" "rm" "-f" "a4515b7556e2232f112c8b9281370bfa31f63bad120bc2b6bae467e36c518f86"`
+[INFO] [stdout] a4515b7556e2232f112c8b9281370bfa31f63bad120bc2b6bae467e36c518f86
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\No9\\rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 1b477d1539a709f49f6d263399911e93e273ee1808f268101558558502e6461c
+[INFO] running `"docker" "start" "-a" "1b477d1539a709f49f6d263399911e93e273ee1808f268101558558502e6461c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.40s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rscalc-39e063e453083728.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-5456ad7824cdf595.exe
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test::output_test ... ok
+[INFO] [stderr]    Doc-tests rscalc
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "1b477d1539a709f49f6d263399911e93e273ee1808f268101558558502e6461c"`
+[INFO] running `"docker" "rm" "-f" "1b477d1539a709f49f6d263399911e93e273ee1808f268101558558502e6461c"`
+[INFO] [stdout] 1b477d1539a709f49f6d263399911e93e273ee1808f268101558558502e6461c

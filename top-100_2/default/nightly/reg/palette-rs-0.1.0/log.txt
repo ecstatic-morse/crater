@@ -1,0 +1,52 @@
+[INFO] fetching crate palette-rs 0.1.0...
+[INFO] extracting crate palette-rs 0.1.0 into work\ex\default\sources\nightly\reg\palette-rs\0.1.0
+[INFO] extracting crate palette-rs 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\palette-rs\0.1.0
+[INFO] validating manifest of palette-rs-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of palette-rs-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing palette-rs-0.1.0
+[INFO] finished frobbing palette-rs-0.1.0
+[INFO] frobbed toml for palette-rs-0.1.0 written to work\ex\default\sources\nightly\reg\palette-rs\0.1.0\Cargo.toml
+[INFO] started frobbing palette-rs-0.1.0
+[INFO] finished frobbing palette-rs-0.1.0
+[INFO] frobbed toml for palette-rs-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\palette-rs\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded matrix_display v0.4.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing palette-rs-0.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\palette-rs\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6aed4ff31f3f81b46128f37e41f9f6ceadd83762ece039eadd403cf98bc02fe8
+[INFO] running `"docker" "start" "-a" "6aed4ff31f3f81b46128f37e41f9f6ceadd83762ece039eadd403cf98bc02fe8"`
+[INFO] [stderr]    Compiling ansi_term v0.9.0
+[INFO] [stderr]    Compiling unicode-segmentation v1.3.0
+[INFO] [stderr]    Compiling matrix_display v0.4.1
+[INFO] [stderr]    Compiling palette-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.99s
+[INFO] running `"docker" "inspect" "6aed4ff31f3f81b46128f37e41f9f6ceadd83762ece039eadd403cf98bc02fe8"`
+[INFO] running `"docker" "rm" "-f" "6aed4ff31f3f81b46128f37e41f9f6ceadd83762ece039eadd403cf98bc02fe8"`
+[INFO] [stdout] 6aed4ff31f3f81b46128f37e41f9f6ceadd83762ece039eadd403cf98bc02fe8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\palette-rs\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3283575b315c1a306cc0c660ccf911f990e6e9e58c58607820462903bc2dfd9f
+[INFO] running `"docker" "start" "-a" "3283575b315c1a306cc0c660ccf911f990e6e9e58c58607820462903bc2dfd9f"`
+[INFO] [stderr]    Compiling palette-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.71s
+[INFO] running `"docker" "inspect" "3283575b315c1a306cc0c660ccf911f990e6e9e58c58607820462903bc2dfd9f"`
+[INFO] running `"docker" "rm" "-f" "3283575b315c1a306cc0c660ccf911f990e6e9e58c58607820462903bc2dfd9f"`
+[INFO] [stdout] 3283575b315c1a306cc0c660ccf911f990e6e9e58c58607820462903bc2dfd9f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\palette-rs\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] a6f646678e421a68b4107da6a6139b30743a8a5aa2b41ab88163a44de0c24b8d
+[INFO] running `"docker" "start" "-a" "a6f646678e421a68b4107da6a6139b30743a8a5aa2b41ab88163a44de0c24b8d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\palette_rs-6b482b0a092aa128.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a6f646678e421a68b4107da6a6139b30743a8a5aa2b41ab88163a44de0c24b8d"`
+[INFO] running `"docker" "rm" "-f" "a6f646678e421a68b4107da6a6139b30743a8a5aa2b41ab88163a44de0c24b8d"`
+[INFO] [stdout] a6f646678e421a68b4107da6a6139b30743a8a5aa2b41ab88163a44de0c24b8d

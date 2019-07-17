@@ -1,0 +1,92 @@
+[INFO] cloning repository Mijyuoon/imagechopper
+[INFO] running `"git" "clone" "--bare" "git://github.com/Mijyuoon/imagechopper.git" "work\\cache\\sources\\gh\\Mijyuoon\\imagechopper"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Mijyuoon\imagechopper'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Mijyuoon\\imagechopper" "work\\ex\\default\\sources\\stable\\gh\\Mijyuoon\\imagechopper"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Mijyuoon\imagechopper'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Mijyuoon\\imagechopper" "work\\ex\\default\\sources\\beta\\gh\\Mijyuoon\\imagechopper"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Mijyuoon\imagechopper'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4f96a30988b68c991e2d2a7f8b3175622d956d29
+[INFO] sha for GitHub repo Mijyuoon/imagechopper: 4f96a30988b68c991e2d2a7f8b3175622d956d29
+[INFO] validating manifest of Mijyuoon/imagechopper on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Mijyuoon/imagechopper on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Mijyuoon/imagechopper
+[INFO] finished frobbing Mijyuoon/imagechopper
+[INFO] frobbed toml for Mijyuoon/imagechopper written to work\ex\default\sources\stable\gh\Mijyuoon\imagechopper\Cargo.toml
+[INFO] started frobbing Mijyuoon/imagechopper
+[INFO] finished frobbing Mijyuoon/imagechopper
+[INFO] frobbed toml for Mijyuoon/imagechopper written to work\ex\default\sources\beta\gh\Mijyuoon\imagechopper\Cargo.toml
+[INFO] crate Mijyuoon/imagechopper already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded raster v0.2.0
+[INFO] [stderr]   Downloaded inflate v0.1.1
+[INFO] [stderr]   Downloaded flate2 v0.2.20
+[INFO] [stderr]   Downloaded miniz-sys v0.1.10
+[INFO] [stderr]   Downloaded image v0.10.4
+[INFO] [stderr]   Downloaded byteorder v0.5.3
+[INFO] [stderr]   Downloaded png v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Mijyuoon/imagechopper against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Mijyuoon\\imagechopper,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6d219d41941971942ad9bf3d800277cd186247a88442fa22ee87213fa5d0295d
+[INFO] running `"docker" "start" "-a" "6d219d41941971942ad9bf3d800277cd186247a88442fa22ee87213fa5d0295d"`
+[INFO] [stderr]    Compiling nodrop v0.1.12
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling rayon v1.0.2
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling inflate v0.1.1
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling byteorder v0.5.3
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling color_quant v1.0.1
+[INFO] [stderr]    Compiling lazy_static v1.1.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling miniz-sys v0.1.10
+[INFO] [stderr]    Compiling arrayvec v0.4.7
+[INFO] [stderr]    Compiling gif v0.9.2
+[INFO] [stderr]    Compiling rand v0.4.3
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling flate2 v0.2.20
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling enum_primitive v0.1.1
+[INFO] [stderr]    Compiling num-bigint v0.1.44
+[INFO] [stderr]    Compiling png v0.5.2
+[INFO] [stderr]    Compiling num-rational v0.1.42
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling image v0.10.4
+[INFO] [stderr]    Compiling raster v0.2.0
+[INFO] [stderr]    Compiling imagechopper v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 26s
+[INFO] running `"docker" "inspect" "6d219d41941971942ad9bf3d800277cd186247a88442fa22ee87213fa5d0295d"`
+[INFO] running `"docker" "rm" "-f" "6d219d41941971942ad9bf3d800277cd186247a88442fa22ee87213fa5d0295d"`
+[INFO] [stdout] 6d219d41941971942ad9bf3d800277cd186247a88442fa22ee87213fa5d0295d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Mijyuoon\\imagechopper,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6bc37ac2780a990217795f4fd8b386f392d92da828299ee01060b70bb5694e02
+[INFO] running `"docker" "start" "-a" "6bc37ac2780a990217795f4fd8b386f392d92da828299ee01060b70bb5694e02"`
+[INFO] [stderr]    Compiling imagechopper v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.32s
+[INFO] running `"docker" "inspect" "6bc37ac2780a990217795f4fd8b386f392d92da828299ee01060b70bb5694e02"`
+[INFO] running `"docker" "rm" "-f" "6bc37ac2780a990217795f4fd8b386f392d92da828299ee01060b70bb5694e02"`
+[INFO] [stdout] 6bc37ac2780a990217795f4fd8b386f392d92da828299ee01060b70bb5694e02
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Mijyuoon\\imagechopper,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 5b2a67f37da9b4a50f5262f3f51c2a8921aaab754e75da5c5566214ed84e290e
+[INFO] running `"docker" "start" "-a" "5b2a67f37da9b4a50f5262f3f51c2a8921aaab754e75da5c5566214ed84e290e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\imagechopper-4259ea2eea432f58.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5b2a67f37da9b4a50f5262f3f51c2a8921aaab754e75da5c5566214ed84e290e"`
+[INFO] running `"docker" "rm" "-f" "5b2a67f37da9b4a50f5262f3f51c2a8921aaab754e75da5c5566214ed84e290e"`
+[INFO] [stdout] 5b2a67f37da9b4a50f5262f3f51c2a8921aaab754e75da5c5566214ed84e290e

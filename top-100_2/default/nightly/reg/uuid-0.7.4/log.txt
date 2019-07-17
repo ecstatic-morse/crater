@@ -1,0 +1,121 @@
+[INFO] crate uuid 0.7.4 is already in cache
+[INFO] extracting crate uuid 0.7.4 into work\ex\default\sources\nightly\reg\uuid\0.7.4
+[INFO] extracting crate uuid 0.7.4 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\uuid\0.7.4
+[INFO] validating manifest of uuid-0.7.4 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of uuid-0.7.4 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing uuid-0.7.4
+[INFO] finished frobbing uuid-0.7.4
+[INFO] frobbed toml for uuid-0.7.4 written to work\ex\default\sources\nightly\reg\uuid\0.7.4\Cargo.toml
+[INFO] started frobbing uuid-0.7.4
+[INFO] finished frobbing uuid-0.7.4
+[INFO] frobbed toml for uuid-0.7.4 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\uuid\0.7.4\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded slog v2.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing uuid-0.7.4 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e66dacf9414eabaee1eae2c2f717ad23df3e8da2b06c7bfab8095e722fc17616
+[INFO] running `"docker" "start" "-a" "e66dacf9414eabaee1eae2c2f717ad23df3e8da2b06c7bfab8095e722fc17616"`
+[INFO] [stderr]    Compiling uuid v0.7.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.30s
+[INFO] running `"docker" "inspect" "e66dacf9414eabaee1eae2c2f717ad23df3e8da2b06c7bfab8095e722fc17616"`
+[INFO] running `"docker" "rm" "-f" "e66dacf9414eabaee1eae2c2f717ad23df3e8da2b06c7bfab8095e722fc17616"`
+[INFO] [stdout] e66dacf9414eabaee1eae2c2f717ad23df3e8da2b06c7bfab8095e722fc17616
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6f75ce0bec9f97e9a9e29786eaedb83d489df8f1ec82e4e0a19ac52d74f480b0
+[INFO] running `"docker" "start" "-a" "6f75ce0bec9f97e9a9e29786eaedb83d489df8f1ec82e4e0a19ac52d74f480b0"`
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling serde_test v1.0.97
+[INFO] [stderr]    Compiling uuid v0.7.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.73s
+[INFO] running `"docker" "inspect" "6f75ce0bec9f97e9a9e29786eaedb83d489df8f1ec82e4e0a19ac52d74f480b0"`
+[INFO] running `"docker" "rm" "-f" "6f75ce0bec9f97e9a9e29786eaedb83d489df8f1ec82e4e0a19ac52d74f480b0"`
+[INFO] [stdout] 6f75ce0bec9f97e9a9e29786eaedb83d489df8f1ec82e4e0a19ac52d74f480b0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 6e93e312f00754f4d730dd1fabfbe1743b538cd17b82b919066943a87da27113
+[INFO] running `"docker" "start" "-a" "6e93e312f00754f4d730dd1fabfbe1743b538cd17b82b919066943a87da27113"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.35s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\uuid-c77d865e2d40e66b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 29 tests
+[INFO] [stdout] test core_support::tests::test_uuid_compare ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_default ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_display ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_lowerhex ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_operator_eq ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_to_string ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_upperhex ... ok
+[INFO] [stdout] test tests::test_as_bytes ... ok
+[INFO] [stdout] test tests::test_as_fields ... ok
+[INFO] [stdout] test tests::test_fields_le_are_actually_le ... ok
+[INFO] [stdout] test tests::test_bytes_roundtrip ... ok
+[INFO] [stdout] test tests::test_fields_le_roundtrip ... ok
+[INFO] [stdout] test tests::test_fields_roundtrip ... ok
+[INFO] [stdout] test tests::test_from_bytes ... ok
+[INFO] [stdout] test tests::test_from_fields ... ok
+[INFO] [stdout] test tests::test_from_fields_le ... ok
+[INFO] [stdout] test tests::test_from_random_bytes ... ok
+[INFO] [stdout] test tests::test_from_slice ... ok
+[INFO] [stdout] test tests::test_get_variant ... ok
+[INFO] [stdout] test tests::test_iterbytes_impl_for_uuid ... ok
+[INFO] [stdout] test tests::test_nil ... ok
+[INFO] [stdout] test tests::test_parse_uuid_v4 ... ok
+[INFO] [stdout] test tests::test_predefined_namespaces ... ok
+[INFO] [stdout] test tests::test_string_roundtrip ... ok
+[INFO] [stdout] test tests::test_to_hyphenated_string ... ok
+[INFO] [stdout] test tests::test_to_simple_string ... ok
+[INFO] [stdout] test tests::test_to_simple_string_matching ... ok
+[INFO] [stdout] test tests::test_to_urn_string ... ok
+[INFO] [stdout] test tests::test_upper_lower_hex ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests uuid
+[INFO] [stdout] 
+[INFO] [stdout] running 35 tests
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Hyphenated::encode_lower (line 299) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Hyphenated::encode_upper (line 345) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::HyphenatedRef::encode_upper (line 466) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::HyphenatedRef::encode_lower (line 416) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Simple::encode_lower (line 539) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::SimpleRef::encode_upper (line 697) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::SimpleRef::encode_lower (line 654) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Simple::encode_upper (line 582) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::UrnRef::encode_upper (line 944) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Urn::encode_lower (line 770) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Urn::encode_upper (line 820) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::UrnRef::encode_lower (line 894) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_bytes (line 67) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder (line 25) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::build (line 211) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_bytes (line 49) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_fields (line 140) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_fields (line 157) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_slice (line 106) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 91) ... ignored
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_slice (line 89) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::nil (line 180) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::as_fields (line 732) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 79) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::encode_buffer (line 1004) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields (line 434) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields (line 450) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields_le (line 502) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_random_bytes (line 622) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_slice (line 562) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_slice (line 578) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::nil (line 409) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::to_fields_le (line 773) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 18) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 24) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 34 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6e93e312f00754f4d730dd1fabfbe1743b538cd17b82b919066943a87da27113"`
+[INFO] running `"docker" "rm" "-f" "6e93e312f00754f4d730dd1fabfbe1743b538cd17b82b919066943a87da27113"`
+[INFO] [stdout] 6e93e312f00754f4d730dd1fabfbe1743b538cd17b82b919066943a87da27113

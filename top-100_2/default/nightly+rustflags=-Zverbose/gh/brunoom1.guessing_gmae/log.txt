@@ -1,0 +1,60 @@
+[INFO] cloning repository brunoom1/guessing_gmae
+[INFO] running `"git" "clone" "--bare" "git://github.com/brunoom1/guessing_gmae.git" "work\\cache\\sources\\gh\\brunoom1\\guessing_gmae"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\brunoom1\guessing_gmae'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brunoom1\\guessing_gmae" "work\\ex\\default\\sources\\nightly\\gh\\brunoom1\\guessing_gmae"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\brunoom1\guessing_gmae'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brunoom1\\guessing_gmae" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\brunoom1\\guessing_gmae"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\brunoom1\guessing_gmae'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f897aa40f44a5afe3c8eb20a37f4f5f41fce02e5
+[INFO] sha for GitHub repo brunoom1/guessing_gmae: f897aa40f44a5afe3c8eb20a37f4f5f41fce02e5
+[INFO] validating manifest of brunoom1/guessing_gmae on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of brunoom1/guessing_gmae on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing brunoom1/guessing_gmae
+[INFO] finished frobbing brunoom1/guessing_gmae
+[INFO] frobbed toml for brunoom1/guessing_gmae written to work\ex\default\sources\nightly\gh\brunoom1\guessing_gmae\Cargo.toml
+[INFO] started frobbing brunoom1/guessing_gmae
+[INFO] finished frobbing brunoom1/guessing_gmae
+[INFO] frobbed toml for brunoom1/guessing_gmae written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\brunoom1\guessing_gmae\Cargo.toml
+[INFO] crate brunoom1/guessing_gmae already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\brunoom1\guessing_gmae\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing brunoom1/guessing_gmae against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\brunoom1\\guessing_gmae,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 80c578bbc62468d6d42a307ba6d708eba4b4de3f0fca2ba893337396ea98aa41
+[INFO] running `"docker" "start" "-a" "80c578bbc62468d6d42a307ba6d708eba4b4de3f0fca2ba893337396ea98aa41"`
+[INFO] [stderr]    Compiling guessing_game v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.69s
+[INFO] running `"docker" "inspect" "80c578bbc62468d6d42a307ba6d708eba4b4de3f0fca2ba893337396ea98aa41"`
+[INFO] running `"docker" "rm" "-f" "80c578bbc62468d6d42a307ba6d708eba4b4de3f0fca2ba893337396ea98aa41"`
+[INFO] [stdout] 80c578bbc62468d6d42a307ba6d708eba4b4de3f0fca2ba893337396ea98aa41
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\brunoom1\\guessing_gmae,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 0b8526b450cdf87b280b1cb2290c974d24fd8c47c2f3420d54aea0054c7716c3
+[INFO] running `"docker" "start" "-a" "0b8526b450cdf87b280b1cb2290c974d24fd8c47c2f3420d54aea0054c7716c3"`
+[INFO] [stderr]    Compiling guessing_game v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.02s
+[INFO] running `"docker" "inspect" "0b8526b450cdf87b280b1cb2290c974d24fd8c47c2f3420d54aea0054c7716c3"`
+[INFO] running `"docker" "rm" "-f" "0b8526b450cdf87b280b1cb2290c974d24fd8c47c2f3420d54aea0054c7716c3"`
+[INFO] [stdout] 0b8526b450cdf87b280b1cb2290c974d24fd8c47c2f3420d54aea0054c7716c3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\brunoom1\\guessing_gmae,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 5145ca8e0a11d596f02b2ad581a6faf1d9eccc4f8ddfe42c8697a76518ed27de
+[INFO] running `"docker" "start" "-a" "5145ca8e0a11d596f02b2ad581a6faf1d9eccc4f8ddfe42c8697a76518ed27de"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\guessing_game-96361562c071232f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5145ca8e0a11d596f02b2ad581a6faf1d9eccc4f8ddfe42c8697a76518ed27de"`
+[INFO] running `"docker" "rm" "-f" "5145ca8e0a11d596f02b2ad581a6faf1d9eccc4f8ddfe42c8697a76518ed27de"`
+[INFO] [stdout] 5145ca8e0a11d596f02b2ad581a6faf1d9eccc4f8ddfe42c8697a76518ed27de

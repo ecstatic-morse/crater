@@ -1,0 +1,88 @@
+[INFO] fetching crate glium_text_rusttype 0.3.2...
+[INFO] extracting crate glium_text_rusttype 0.3.2 into work\ex\default\sources\stable\reg\glium_text_rusttype\0.3.2
+[INFO] extracting crate glium_text_rusttype 0.3.2 into work\ex\default\sources\beta\reg\glium_text_rusttype\0.3.2
+[INFO] validating manifest of glium_text_rusttype-0.3.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of glium_text_rusttype-0.3.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing glium_text_rusttype-0.3.2
+[INFO] finished frobbing glium_text_rusttype-0.3.2
+[INFO] frobbed toml for glium_text_rusttype-0.3.2 written to work\ex\default\sources\stable\reg\glium_text_rusttype\0.3.2\Cargo.toml
+[INFO] started frobbing glium_text_rusttype-0.3.2
+[INFO] finished frobbing glium_text_rusttype-0.3.2
+[INFO] frobbed toml for glium_text_rusttype-0.3.2 written to work\ex\default\sources\beta\reg\glium_text_rusttype\0.3.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rusttype v0.7.7
+[INFO] [stderr]   Downloaded gleam v0.6.18
+[INFO] [stderr]   Downloaded glutin v0.17.0
+[INFO] [stderr]   Downloaded winit v0.16.2
+[INFO] [stderr]   Downloaded wayland-sys v0.20.12
+[INFO] [stderr]   Downloaded wayland-client v0.20.12
+[INFO] [stderr]   Downloaded wayland-scanner v0.20.12
+[INFO] [stderr]   Downloaded wayland-commons v0.20.12
+[INFO] [stderr]   Downloaded smithay-client-toolkit v0.2.6
+[INFO] [stderr]   Downloaded nix v0.11.1
+[INFO] [stderr]   Downloaded core-graphics v0.14.0
+[INFO] [stderr]   Downloaded wayland-protocols v0.20.12
+[INFO] [stderr]   Downloaded cocoa v0.15.0
+[INFO] [stderr]   Downloaded glium v0.22.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing glium_text_rusttype-0.3.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\glium_text_rusttype\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c43cd0faa2395a79ba762f4e47610d812ee810d8373bec9f7acdc1c14a50797f
+[INFO] running `"docker" "start" "-a" "c43cd0faa2395a79ba762f4e47610d812ee810d8373bec9f7acdc1c14a50797f"`
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling khronos_api v2.2.0
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling shared_library v0.1.9
+[INFO] [stderr]    Compiling stb_truetype v0.2.6
+[INFO] [stderr]    Compiling ordered-float v1.0.2
+[INFO] [stderr]    Compiling approx v0.3.2
+[INFO] [stderr]    Compiling xml-rs v0.7.0
+[INFO] [stderr]    Compiling rusttype v0.7.7
+[INFO] [stderr]    Compiling gl_generator v0.9.0
+[INFO] [stderr]    Compiling glutin v0.17.0
+[INFO] [stderr]    Compiling glium v0.22.0
+[INFO] [stderr]    Compiling winit v0.16.2
+[INFO] [stderr]    Compiling glium_text_rusttype v0.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 57s
+[INFO] running `"docker" "inspect" "c43cd0faa2395a79ba762f4e47610d812ee810d8373bec9f7acdc1c14a50797f"`
+[INFO] running `"docker" "rm" "-f" "c43cd0faa2395a79ba762f4e47610d812ee810d8373bec9f7acdc1c14a50797f"`
+[INFO] [stdout] c43cd0faa2395a79ba762f4e47610d812ee810d8373bec9f7acdc1c14a50797f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\glium_text_rusttype\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9512c02559c3f88e95ff1a4ce44f04f9e697f78d9dfdb2eb327218cf2d7cd5d2
+[INFO] running `"docker" "start" "-a" "9512c02559c3f88e95ff1a4ce44f04f9e697f78d9dfdb2eb327218cf2d7cd5d2"`
+[INFO] [stderr]    Compiling cgmath v0.16.1
+[INFO] [stderr]    Compiling approx v0.1.1
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling glium_text_rusttype v0.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 51.38s
+[INFO] running `"docker" "inspect" "9512c02559c3f88e95ff1a4ce44f04f9e697f78d9dfdb2eb327218cf2d7cd5d2"`
+[INFO] running `"docker" "rm" "-f" "9512c02559c3f88e95ff1a4ce44f04f9e697f78d9dfdb2eb327218cf2d7cd5d2"`
+[INFO] [stdout] 9512c02559c3f88e95ff1a4ce44f04f9e697f78d9dfdb2eb327218cf2d7cd5d2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\glium_text_rusttype\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] c7b5fe3084aa50c2baa78233a6b634506edff19df53d5c6eaa0195648c1e94c2
+[INFO] running `"docker" "start" "-a" "c7b5fe3084aa50c2baa78233a6b634506edff19df53d5c6eaa0195648c1e94c2"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.58s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\glium_text_rusttype-85363ae32c8ceab3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests glium_text_rusttype
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 5) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c7b5fe3084aa50c2baa78233a6b634506edff19df53d5c6eaa0195648c1e94c2"`
+[INFO] running `"docker" "rm" "-f" "c7b5fe3084aa50c2baa78233a6b634506edff19df53d5c6eaa0195648c1e94c2"`
+[INFO] [stdout] c7b5fe3084aa50c2baa78233a6b634506edff19df53d5c6eaa0195648c1e94c2

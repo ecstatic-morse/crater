@@ -1,0 +1,57 @@
+[INFO] fetching crate opusic-sys 0.2.2...
+[INFO] extracting crate opusic-sys 0.2.2 into work\ex\default\sources\stable\reg\opusic-sys\0.2.2
+[INFO] extracting crate opusic-sys 0.2.2 into work\ex\default\sources\beta\reg\opusic-sys\0.2.2
+[INFO] validating manifest of opusic-sys-0.2.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of opusic-sys-0.2.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing opusic-sys-0.2.2
+[INFO] finished frobbing opusic-sys-0.2.2
+[INFO] frobbed toml for opusic-sys-0.2.2 written to work\ex\default\sources\stable\reg\opusic-sys\0.2.2\Cargo.toml
+[INFO] started frobbing opusic-sys-0.2.2
+[INFO] finished frobbing opusic-sys-0.2.2
+[INFO] frobbed toml for opusic-sys-0.2.2 written to work\ex\default\sources\beta\reg\opusic-sys\0.2.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bindgen v0.43.2
+[INFO] [stderr]   Downloaded clang-sys v0.26.4
+[INFO] [stderr]   Downloaded proc-macro2 v0.3.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing opusic-sys-0.2.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\opusic-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] b10f06c09d5ff5f8a3b573eb0c13049959a4c759e63441baa7ea41a14d105791
+[INFO] running `"docker" "start" "-a" "b10f06c09d5ff5f8a3b573eb0c13049959a4c759e63441baa7ea41a14d105791"`
+[INFO] [stderr]    Compiling opusic-sys v0.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.39s
+[INFO] running `"docker" "inspect" "b10f06c09d5ff5f8a3b573eb0c13049959a4c759e63441baa7ea41a14d105791"`
+[INFO] running `"docker" "rm" "-f" "b10f06c09d5ff5f8a3b573eb0c13049959a4c759e63441baa7ea41a14d105791"`
+[INFO] [stdout] b10f06c09d5ff5f8a3b573eb0c13049959a4c759e63441baa7ea41a14d105791
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\opusic-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 503e3baa011879d7e907f1b79a6a20fd8e3422bfa30b260d9c6c212821318f08
+[INFO] running `"docker" "start" "-a" "503e3baa011879d7e907f1b79a6a20fd8e3422bfa30b260d9c6c212821318f08"`
+[INFO] [stderr]    Compiling opusic-sys v0.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.39s
+[INFO] running `"docker" "inspect" "503e3baa011879d7e907f1b79a6a20fd8e3422bfa30b260d9c6c212821318f08"`
+[INFO] running `"docker" "rm" "-f" "503e3baa011879d7e907f1b79a6a20fd8e3422bfa30b260d9c6c212821318f08"`
+[INFO] [stdout] 503e3baa011879d7e907f1b79a6a20fd8e3422bfa30b260d9c6c212821318f08
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\opusic-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 749090366a87e822f8ebbd541504db6ad2eef45d5df8414adad122ec1f1e8ef7
+[INFO] running `"docker" "start" "-a" "749090366a87e822f8ebbd541504db6ad2eef45d5df8414adad122ec1f1e8ef7"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\opusic_sys-6df550cca2622ca1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests opusic-sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "749090366a87e822f8ebbd541504db6ad2eef45d5df8414adad122ec1f1e8ef7"`
+[INFO] running `"docker" "rm" "-f" "749090366a87e822f8ebbd541504db6ad2eef45d5df8414adad122ec1f1e8ef7"`
+[INFO] [stdout] 749090366a87e822f8ebbd541504db6ad2eef45d5df8414adad122ec1f1e8ef7

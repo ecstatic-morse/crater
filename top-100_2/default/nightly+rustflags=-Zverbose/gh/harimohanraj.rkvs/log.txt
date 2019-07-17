@@ -1,0 +1,198 @@
+[INFO] cloning repository harimohanraj/rkvs
+[INFO] running `"git" "clone" "--bare" "git://github.com/harimohanraj/rkvs.git" "work\\cache\\sources\\gh\\harimohanraj\\rkvs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\harimohanraj\rkvs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\harimohanraj\\rkvs" "work\\ex\\default\\sources\\nightly\\gh\\harimohanraj\\rkvs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\harimohanraj\rkvs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\harimohanraj\\rkvs" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\harimohanraj\\rkvs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\harimohanraj\rkvs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] fe66eda254f4cebe6d7f3a41f1520178c8932ce4
+[INFO] sha for GitHub repo harimohanraj/rkvs: fe66eda254f4cebe6d7f3a41f1520178c8932ce4
+[INFO] validating manifest of harimohanraj/rkvs on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of harimohanraj/rkvs on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing harimohanraj/rkvs
+[INFO] finished frobbing harimohanraj/rkvs
+[INFO] frobbed toml for harimohanraj/rkvs written to work\ex\default\sources\nightly\gh\harimohanraj\rkvs\Cargo.toml
+[INFO] started frobbing harimohanraj/rkvs
+[INFO] finished frobbing harimohanraj/rkvs
+[INFO] frobbed toml for harimohanraj/rkvs written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\harimohanraj\rkvs\Cargo.toml
+[INFO] crate harimohanraj/rkvs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\harimohanraj\rkvs\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded slab v0.1.3
+[INFO] [stderr]   Downloaded bytes v0.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing harimohanraj/rkvs against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\harimohanraj\\rkvs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 73fd23a0266b76f74b3eada99005d27b61a4d2cb376af2847bb4be1ec033d18f
+[INFO] running `"docker" "start" "-a" "73fd23a0266b76f74b3eada99005d27b61a4d2cb376af2847bb4be1ec033d18f"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling utf8-ranges v0.1.3
+[INFO] [stderr]    Compiling regex-syntax v0.3.9
+[INFO] [stderr]    Compiling slab v0.1.3
+[INFO] [stderr]    Compiling bytes v0.3.0
+[INFO] [stderr]    Compiling memchr v0.1.11
+[INFO] [stderr]    Compiling thread-id v2.0.0
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling thread_local v0.2.7
+[INFO] [stderr]    Compiling aho-corasick v0.5.3
+[INFO] [stderr]    Compiling regex v0.1.80
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling env_logger v0.3.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling rkvs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]   --> src\main.rs:48:23
+[INFO] [stderr]    |
+[INFO] [stderr] 48 |             interest: EventSet::hup(),     
+[INFO] [stderr]    |                       ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]   --> src\main.rs:55:30
+[INFO] [stderr]    |
+[INFO] [stderr] 55 |         self.interest.insert(EventSet::readable());
+[INFO] [stderr]    |                              ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]    --> src\main.rs:104:30
+[INFO] [stderr]     |
+[INFO] [stderr] 104 |         self.interest.remove(EventSet::readable());
+[INFO] [stderr]     |                              ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]    --> src\main.rs:123:30
+[INFO] [stderr]     |
+[INFO] [stderr] 123 |         self.interest.remove(EventSet::writable());
+[INFO] [stderr]     |                              ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]    --> src\main.rs:129:30
+[INFO] [stderr]     |
+[INFO] [stderr] 129 |         self.interest.insert(EventSet::writable());
+[INFO] [stderr]     |                              ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]    --> src\main.rs:244:29
+[INFO] [stderr]     |
+[INFO] [stderr] 244 |                             EventSet::readable(),
+[INFO] [stderr]     |                             ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventSet`
+[INFO] [stderr]    --> src\main.rs:255:31
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |                               EventSet::readable(),
+[INFO] [stderr]     |                               ^^^^^^^^ use of undeclared type or module `EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `EventLoop`
+[INFO] [stderr]    --> src\main.rs:358:30
+[INFO] [stderr]     |
+[INFO] [stderr] 358 |         let mut event_loop = EventLoop::new().unwrap();
+[INFO] [stderr]     |                              ^^^^^^^^^ use of undeclared type or module `EventLoop`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventSet` in this scope
+[INFO] [stderr]   --> src\main.rs:38:12
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |     interest: EventSet,    
+[INFO] [stderr]    |               ^^^^^^^^ help: a trait with a similar name exists: `Evented`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]   --> src\main.rs:54:45
+[INFO] [stderr]    |
+[INFO] [stderr] 54 |     fn register(&mut self, event_loop: &mut EventLoop<Server>) -> Result<()> {
+[INFO] [stderr]    |                                             ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 7  | use mio::deprecated::EventLoop;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]   --> src\main.rs:64:47
+[INFO] [stderr]    |
+[INFO] [stderr] 64 |     fn reregister(&mut self, event_loop: &mut EventLoop<Server>) -> Result<()> {
+[INFO] [stderr]    |                                               ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 7  | use mio::deprecated::EventLoop;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]    --> src\main.rs:157:40
+[INFO] [stderr]     |
+[INFO] [stderr] 157 |     fn accept(&mut self, event_loop: &mut EventLoop<Server>) {
+[INFO] [stderr]     |                                           ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use mio::deprecated::EventLoop;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]    --> src\main.rs:241:45
+[INFO] [stderr]     |
+[INFO] [stderr] 241 |     fn register(&mut self, event_loop: &mut EventLoop<Server>) -> io::Result<()> {
+[INFO] [stderr]     |                                             ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use mio::deprecated::EventLoop;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]    --> src\main.rs:252:47
+[INFO] [stderr]     |
+[INFO] [stderr] 252 |     fn reregister(&mut self, event_loop: &mut EventLoop<Server>) -> io::Result<()> { 
+[INFO] [stderr]     |                                               ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use mio::deprecated::EventLoop;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0405]: cannot find trait `Handler` in this scope
+[INFO] [stderr]    --> src\main.rs:264:6
+[INFO] [stderr]     |
+[INFO] [stderr] 264 | impl Handler for Server {
+[INFO] [stderr]     |      ^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use mio::deprecated::Handler;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventLoop` in this scope
+[INFO] [stderr]    --> src\main.rs:268:42
+[INFO] [stderr]     |
+[INFO] [stderr] 268 |     fn ready(&mut self, event_loop: &mut EventLoop<Server>, token: Token, events: EventSet) {
+[INFO] [stderr]     |                                          ^^^^^^^^^ not found in this scope
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use mio::deprecated::EventLoop;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `EventSet` in this scope
+[INFO] [stderr]    --> src\main.rs:268:83
+[INFO] [stderr]     |
+[INFO] [stderr] 268 |     fn ready(&mut self, event_loop: &mut EventLoop<Server>, token: Token, events: EventSet) {
+[INFO] [stderr]     |                                                                                   ^^^^^^^^ help: a trait with a similar name exists: `Evented`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 17 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0405, E0412, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0405`.
+[INFO] [stderr] error: Could not compile `rkvs`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "73fd23a0266b76f74b3eada99005d27b61a4d2cb376af2847bb4be1ec033d18f"`
+[INFO] running `"docker" "rm" "-f" "73fd23a0266b76f74b3eada99005d27b61a4d2cb376af2847bb4be1ec033d18f"`
+[INFO] [stdout] 73fd23a0266b76f74b3eada99005d27b61a4d2cb376af2847bb4be1ec033d18f

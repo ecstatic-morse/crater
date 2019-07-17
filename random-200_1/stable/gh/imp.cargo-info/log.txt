@@ -1,0 +1,148 @@
+[INFO] cloning repository imp/cargo-info
+[INFO] running `"git" "clone" "--bare" "git://github.com/imp/cargo-info.git" "work\\cache\\sources\\gh\\imp\\cargo-info"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\imp\cargo-info'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\imp\\cargo-info" "work\\ex\\default\\sources\\stable\\gh\\imp\\cargo-info"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\imp\cargo-info'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\imp\\cargo-info" "work\\ex\\default\\sources\\beta\\gh\\imp\\cargo-info"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\imp\cargo-info'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ba110cdafb389bc191e09957c69185c78918a439
+[INFO] sha for GitHub repo imp/cargo-info: ba110cdafb389bc191e09957c69185c78918a439
+[INFO] validating manifest of imp/cargo-info on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of imp/cargo-info on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing imp/cargo-info
+[INFO] finished frobbing imp/cargo-info
+[INFO] frobbed toml for imp/cargo-info written to work\ex\default\sources\stable\gh\imp\cargo-info\Cargo.toml
+[INFO] started frobbing imp/cargo-info
+[INFO] finished frobbing imp/cargo-info
+[INFO] frobbed toml for imp/cargo-info written to work\ex\default\sources\beta\gh\imp\cargo-info\Cargo.toml
+[INFO] crate imp/cargo-info already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded requests v0.0.30
+[INFO] [stderr]   Downloaded url v1.7.1
+[INFO] [stderr]   Downloaded log v0.4.3
+[INFO] [stderr]   Downloaded errno v0.2.4
+[INFO] [stderr]   Downloaded chrono-humanize v0.0.11
+[INFO] [stderr]   Downloaded chrono v0.4.5
+[INFO] [stderr]   Downloaded openssl v0.9.24
+[INFO] [stderr]   Downloaded httparse v1.3.2
+[INFO] [stderr]   Downloaded openssl-sys v0.9.33
+[INFO] [stderr]   Downloaded pkg-config v0.3.12
+[INFO] [stderr]   Downloaded cfg-if v0.1.4
+[INFO] [stderr]   Downloaded matches v0.1.7
+[INFO] [stderr]   Downloaded failure v0.1.1
+[INFO] [stderr]   Downloaded failure_derive v0.1.1
+[INFO] [stderr]   Downloaded vcpkg v0.2.4
+[INFO] [stderr]   Downloaded backtrace-sys v0.1.23
+[INFO] [stderr]   Downloaded synstructure v0.6.1
+[INFO] [stderr]   Downloaded json v0.11.13
+[INFO] [stderr]   Downloaded hyper-native-tls v0.2.4
+[INFO] [stderr]   Downloaded schannel v0.1.13
+[INFO] [stderr]   Downloaded lazy_static v1.0.2
+[INFO] [stderr]   Downloaded errno-dragonfly v0.1.1
+[INFO] [stderr]   Downloaded pager v0.14.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing imp/cargo-info against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\imp\\cargo-info,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c2f08565e018c8e2c0b6822c28cb4bcf90558ae06b523463e495f5194277453f
+[INFO] running `"docker" "start" "-a" "c2f08565e018c8e2c0b6822c28cb4bcf90558ae06b523463e495f5194277453f"`
+[INFO] [stderr]    Compiling cfg-if v0.1.4
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling version_check v0.1.4
+[INFO] [stderr]    Compiling matches v0.1.7
+[INFO] [stderr]    Compiling unicode-normalization v0.1.7
+[INFO] [stderr]    Compiling httparse v1.3.2
+[INFO] [stderr]    Compiling num-traits v0.2.5
+[INFO] [stderr]    Compiling libc v0.2.42
+[INFO] [stderr]    Compiling lazy_static v1.0.2
+[INFO] [stderr]    Compiling byteorder v1.2.4
+[INFO] [stderr]    Compiling antidote v1.0.0
+[INFO] [stderr]    Compiling json v0.11.13
+[INFO] [stderr]    Compiling log v0.4.3
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling base64 v0.6.0
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling mime v0.2.6
+[INFO] [stderr]    Compiling url v1.7.1
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling synstructure v0.6.1
+[INFO] [stderr]    Compiling schannel v0.1.13
+[INFO] [stderr]    Compiling time v0.1.40
+[INFO] [stderr]    Compiling errno v0.2.4
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling backtrace v0.3.9
+[INFO] [stderr]    Compiling failure_derive v0.1.1
+[INFO] [stderr]    Compiling pager v0.14.0
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `unix` in `os`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\utils.rs:3:14
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | use std::os::unix::ffi::OsStringExt;
+[INFO] [stderr]   |              ^^^^ could not find `unix` in `os`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `pid_t` in module `libc`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\utils.rs:21:24
+[INFO] [stderr]    |
+[INFO] [stderr] 21 | pub fn fork() -> libc::pid_t {
+[INFO] [stderr]    |                        ^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `fork` in module `libc`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\utils.rs:22:20
+[INFO] [stderr]    |
+[INFO] [stderr] 22 |     unsafe { libc::fork() }
+[INFO] [stderr]    |                    ^^^^ not found in `libc`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use utils::fork;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `STDOUT_FILENO` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\lib.rs:145:55
+[INFO] [stderr]     |
+[INFO] [stderr] 145 |         if self.skip_on_notty && !utils::isatty(libc::STDOUT_FILENO) {
+[INFO] [stderr]     |                                                       ^^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `STDOUT_FILENO` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\lib.rs:161:52
+[INFO] [stderr]     |
+[INFO] [stderr] 161 |                     utils::dup2(main_stdout, libc::STDOUT_FILENO);
+[INFO] [stderr]     |                                                    ^^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `STDIN_FILENO` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\lib.rs:166:52
+[INFO] [stderr]     |
+[INFO] [stderr] 166 |                     utils::dup2(pager_stdin, libc::STDIN_FILENO);
+[INFO] [stderr]     |                                                    ^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no method named `into_vec` found for type `std::ffi::OsString` in the current scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\utils.rs:10:44
+[INFO] [stderr]    |
+[INFO] [stderr] 10 |     unsafe { CString::from_vec_unchecked(s.into_vec()) }
+[INFO] [stderr]    |                                            ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0061]: this function takes 3 parameters but 1 parameter was supplied
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\pager-0.14.0\src\utils.rs:46:25
+[INFO] [stderr]    |
+[INFO] [stderr] 46 |     assert_eq!(unsafe { libc::pipe(fds.as_mut_ptr()) }, 0);
+[INFO] [stderr]    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 3 parameters
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 8 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0061, E0412, E0425, E0433, E0599.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0061`.
+[INFO] [stderr] error: Could not compile `pager`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "c2f08565e018c8e2c0b6822c28cb4bcf90558ae06b523463e495f5194277453f"`
+[INFO] running `"docker" "rm" "-f" "c2f08565e018c8e2c0b6822c28cb4bcf90558ae06b523463e495f5194277453f"`
+[INFO] [stdout] c2f08565e018c8e2c0b6822c28cb4bcf90558ae06b523463e495f5194277453f

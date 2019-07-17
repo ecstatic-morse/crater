@@ -1,0 +1,92 @@
+[INFO] cloning repository chansuke/rs-mandelbrot
+[INFO] running `"git" "clone" "--bare" "git://github.com/chansuke/rs-mandelbrot.git" "work\\cache\\sources\\gh\\chansuke\\rs-mandelbrot"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\chansuke\rs-mandelbrot'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chansuke\\rs-mandelbrot" "work\\ex\\default\\sources\\nightly\\gh\\chansuke\\rs-mandelbrot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\chansuke\rs-mandelbrot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chansuke\\rs-mandelbrot" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\chansuke\\rs-mandelbrot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\chansuke\rs-mandelbrot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f548aa42c7d97713a41025d9cfbf367f6248ec5f
+[INFO] sha for GitHub repo chansuke/rs-mandelbrot: f548aa42c7d97713a41025d9cfbf367f6248ec5f
+[INFO] validating manifest of chansuke/rs-mandelbrot on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of chansuke/rs-mandelbrot on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing chansuke/rs-mandelbrot
+[INFO] finished frobbing chansuke/rs-mandelbrot
+[INFO] frobbed toml for chansuke/rs-mandelbrot written to work\ex\default\sources\nightly\gh\chansuke\rs-mandelbrot\Cargo.toml
+[INFO] started frobbing chansuke/rs-mandelbrot
+[INFO] finished frobbing chansuke/rs-mandelbrot
+[INFO] frobbed toml for chansuke/rs-mandelbrot written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\chansuke\rs-mandelbrot\Cargo.toml
+[INFO] crate chansuke/rs-mandelbrot already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded image v0.13.0
+[INFO] [stderr]   Downloaded png v0.7.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing chansuke/rs-mandelbrot against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\chansuke\\rs-mandelbrot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 586277e114bc02bb82ade2d35d51abaa034e80086e17998212f4c8e121dba795
+[INFO] running `"docker" "start" "-a" "586277e114bc02bb82ade2d35d51abaa034e80086e17998212f4c8e121dba795"`
+[INFO] [stderr]    Compiling version_check v0.1.4
+[INFO] [stderr]    Compiling cfg-if v0.1.5
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling num-traits v0.2.5
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling libc v0.2.43
+[INFO] [stderr]    Compiling rayon v1.0.2
+[INFO] [stderr]    Compiling byteorder v1.2.4
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling inflate v0.2.0
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling lazy_static v1.1.0
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling deflate v0.7.18
+[INFO] [stderr]    Compiling gif v0.9.2
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling num-complex v0.1.43
+[INFO] [stderr]    Compiling enum_primitive v0.1.1
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling png v0.7.0
+[INFO] [stderr]    Compiling num-bigint v0.1.44
+[INFO] [stderr]    Compiling num-rational v0.1.42
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling image v0.13.0
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 40s
+[INFO] running `"docker" "inspect" "586277e114bc02bb82ade2d35d51abaa034e80086e17998212f4c8e121dba795"`
+[INFO] running `"docker" "rm" "-f" "586277e114bc02bb82ade2d35d51abaa034e80086e17998212f4c8e121dba795"`
+[INFO] [stdout] 586277e114bc02bb82ade2d35d51abaa034e80086e17998212f4c8e121dba795
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\chansuke\\rs-mandelbrot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a4b40f9fa05918912c9d6320a4c02c643a62200cc7997cccccfd95413f26ecfc
+[INFO] running `"docker" "start" "-a" "a4b40f9fa05918912c9d6320a4c02c643a62200cc7997cccccfd95413f26ecfc"`
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.60s
+[INFO] running `"docker" "inspect" "a4b40f9fa05918912c9d6320a4c02c643a62200cc7997cccccfd95413f26ecfc"`
+[INFO] running `"docker" "rm" "-f" "a4b40f9fa05918912c9d6320a4c02c643a62200cc7997cccccfd95413f26ecfc"`
+[INFO] [stdout] a4b40f9fa05918912c9d6320a4c02c643a62200cc7997cccccfd95413f26ecfc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\chansuke\\rs-mandelbrot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 8827460a5546bb70da26d93c42d060941eb2e85ba875085119b39038ff263c54
+[INFO] running `"docker" "start" "-a" "8827460a5546bb70da26d93c42d060941eb2e85ba875085119b39038ff263c54"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.57s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mandelbrot-d3e9b1bebb3492b8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test test_parse_complex ... ok
+[INFO] [stdout] test test_parse_pair ... ok
+[INFO] [stdout] test test_pixel_to_point ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8827460a5546bb70da26d93c42d060941eb2e85ba875085119b39038ff263c54"`
+[INFO] running `"docker" "rm" "-f" "8827460a5546bb70da26d93c42d060941eb2e85ba875085119b39038ff263c54"`
+[INFO] [stdout] 8827460a5546bb70da26d93c42d060941eb2e85ba875085119b39038ff263c54

@@ -1,0 +1,162 @@
+[INFO] cloning repository arve0/actix-cors
+[INFO] running `"git" "clone" "--bare" "git://github.com/arve0/actix-cors.git" "work\\cache\\sources\\gh\\arve0\\actix-cors"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\arve0\actix-cors'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\arve0\\actix-cors" "work\\ex\\default\\sources\\nightly\\gh\\arve0\\actix-cors"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\arve0\actix-cors'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\arve0\\actix-cors" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\arve0\\actix-cors"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\arve0\actix-cors'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a57232e6ede59cb8351ebf57bcd2b9f532d82dd6
+[INFO] sha for GitHub repo arve0/actix-cors: a57232e6ede59cb8351ebf57bcd2b9f532d82dd6
+[INFO] validating manifest of arve0/actix-cors on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of arve0/actix-cors on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing arve0/actix-cors
+[INFO] finished frobbing arve0/actix-cors
+[INFO] frobbed toml for arve0/actix-cors written to work\ex\default\sources\nightly\gh\arve0\actix-cors\Cargo.toml
+[INFO] started frobbing arve0/actix-cors
+[INFO] finished frobbing arve0/actix-cors
+[INFO] frobbed toml for arve0/actix-cors written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\arve0\actix-cors\Cargo.toml
+[INFO] crate arve0/actix-cors already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded actix-web v1.0.0
+[INFO] [stderr]   Downloaded serde_derive v1.0.92
+[INFO] [stderr]   Downloaded syn v0.15.35
+[INFO] [stderr]   Downloaded awc v0.2.1
+[INFO] [stderr]   Downloaded actix-http v0.2.3
+[INFO] [stderr]   Downloaded backtrace v0.3.30
+[INFO] [stderr]   Downloaded h2 v0.1.23
+[INFO] [stderr]   Downloaded tokio-openssl v0.3.0
+[INFO] [stderr]   Downloaded serde v1.0.92
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing arve0/actix-cors against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\arve0\\actix-cors,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1e8077a248a69dbfa97c8f84a98bdd72ee00c55c4a614233e7ac4b8609a7b4cb
+[INFO] running `"docker" "start" "-a" "1e8077a248a69dbfa97c8f84a98bdd72ee00c55c4a614233e7ac4b8609a7b4cb"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libc v0.2.58
+[INFO] [stderr]    Compiling syn v0.15.35
+[INFO] [stderr]    Compiling encoding_index_tests v0.1.4
+[INFO] [stderr]    Compiling futures v0.1.27
+[INFO] [stderr]    Compiling foreign-types-shared v0.1.1
+[INFO] [stderr]    Compiling ipconfig v0.2.0
+[INFO] [stderr]    Compiling openssl v0.10.23
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling quick-error v1.2.2
+[INFO] [stderr]    Compiling ryu v0.2.8
+[INFO] [stderr]    Compiling serde v1.0.92
+[INFO] [stderr]    Compiling widestring v0.4.0
+[INFO] [stderr]    Compiling regex v1.1.7
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling hashbrown v0.3.1
+[INFO] [stderr]    Compiling copyless v0.1.3
+[INFO] [stderr]    Compiling backtrace v0.3.30
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling backtrace-sys v0.1.28
+[INFO] [stderr]    Compiling brotli-sys v0.3.2
+[INFO] [stderr]    Compiling ring v0.14.6
+[INFO] [stderr]    Compiling encoding-index-japanese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-singlebyte v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-korean v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-simpchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-tradchinese v1.20141219.5
+[INFO] [stderr]    Compiling openssl-sys v0.9.47
+[INFO] [stderr]    Compiling foreign-types v0.3.2
+[INFO] [stderr]    Compiling lru-cache v0.1.2
+[INFO] [stderr]    Compiling regex-syntax v0.6.7
+[INFO] [stderr]    Compiling tokio-sync v0.1.6
+[INFO] [stderr]    Compiling actix-service v0.4.1
+[INFO] [stderr]    Compiling tokio-executor v0.1.7
+[INFO] [stderr]    Compiling encoding v0.2.33
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling miniz-sys v0.1.12
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling winutil v0.1.1
+[INFO] [stderr]    Compiling socket2 v0.3.9
+[INFO] [stderr]    Compiling winreg v0.6.0
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling string v0.2.0
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling threadpool v1.7.1
+[INFO] [stderr]    Compiling flate2 v1.0.7
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling hostname v0.1.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling brotli2 v0.3.2
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling h2 v0.1.23
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling resolv-conf v0.6.2
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling parking_lot_core v0.5.0
+[INFO] [stderr]    Compiling actix-codec v0.1.2
+[INFO] [stderr]    Compiling tokio-openssl v0.3.0
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling enum-as-inner v0.2.1
+[INFO] [stderr]    Compiling serde_derive v1.0.92
+[INFO] [stderr]    Compiling derive_more v0.14.1
+[INFO] [stderr]    Compiling actix-web-codegen v0.1.2
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling actix-utils v0.4.1
+[INFO] [stderr]    Compiling parking_lot v0.8.0
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling actix-threadpool v0.1.1
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio-signal v0.2.7
+[INFO] [stderr]    Compiling actix-rt v0.2.2
+[INFO] [stderr]    Compiling trust-dns-proto v0.7.4
+[INFO] [stderr]    Compiling actix-server-config v0.1.1
+[INFO] [stderr]    Compiling actix-server v0.5.1
+[INFO] [stderr]    Compiling trust-dns-resolver v0.11.1
+[INFO] [stderr]    Compiling actix-connect v0.2.0
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.5
+[INFO] [stderr]    Compiling serde_json v1.0.39
+[INFO] [stderr]    Compiling actix-router v0.1.5
+[INFO] [stderr]    Compiling actix-http v0.2.3
+[INFO] [stderr]    Compiling awc v0.2.1
+[INFO] [stderr]    Compiling actix-web v1.0.0
+[INFO] [stderr]    Compiling actix-cors v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7m 40s
+[INFO] running `"docker" "inspect" "1e8077a248a69dbfa97c8f84a98bdd72ee00c55c4a614233e7ac4b8609a7b4cb"`
+[INFO] running `"docker" "rm" "-f" "1e8077a248a69dbfa97c8f84a98bdd72ee00c55c4a614233e7ac4b8609a7b4cb"`
+[INFO] [stdout] 1e8077a248a69dbfa97c8f84a98bdd72ee00c55c4a614233e7ac4b8609a7b4cb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\arve0\\actix-cors,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ae0ad61c850fe70d9bb8a53206210ce07073e30e3baa9e226b2a91e6945625ea
+[INFO] running `"docker" "start" "-a" "ae0ad61c850fe70d9bb8a53206210ce07073e30e3baa9e226b2a91e6945625ea"`
+[INFO] [stderr]    Compiling actix-cors v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.06s
+[INFO] running `"docker" "inspect" "ae0ad61c850fe70d9bb8a53206210ce07073e30e3baa9e226b2a91e6945625ea"`
+[INFO] running `"docker" "rm" "-f" "ae0ad61c850fe70d9bb8a53206210ce07073e30e3baa9e226b2a91e6945625ea"`
+[INFO] [stdout] ae0ad61c850fe70d9bb8a53206210ce07073e30e3baa9e226b2a91e6945625ea
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\arve0\\actix-cors,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3bd20fe2b56650632af3e8e454f9de159e04336293b2a251f29ac77976651314
+[INFO] running `"docker" "start" "-a" "3bd20fe2b56650632af3e8e454f9de159e04336293b2a251f29ac77976651314"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.01s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\actix_cors-a31346f138437f1d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3bd20fe2b56650632af3e8e454f9de159e04336293b2a251f29ac77976651314"`
+[INFO] running `"docker" "rm" "-f" "3bd20fe2b56650632af3e8e454f9de159e04336293b2a251f29ac77976651314"`
+[INFO] [stdout] 3bd20fe2b56650632af3e8e454f9de159e04336293b2a251f29ac77976651314

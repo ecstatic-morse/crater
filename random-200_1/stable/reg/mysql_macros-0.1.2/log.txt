@@ -1,0 +1,53 @@
+[INFO] fetching crate mysql_macros 0.1.2...
+[INFO] extracting crate mysql_macros 0.1.2 into work\ex\default\sources\stable\reg\mysql_macros\0.1.2
+[INFO] extracting crate mysql_macros 0.1.2 into work\ex\default\sources\beta\reg\mysql_macros\0.1.2
+[INFO] validating manifest of mysql_macros-0.1.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mysql_macros-0.1.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mysql_macros-0.1.2
+[INFO] finished frobbing mysql_macros-0.1.2
+[INFO] frobbed toml for mysql_macros-0.1.2 written to work\ex\default\sources\stable\reg\mysql_macros\0.1.2\Cargo.toml
+[INFO] started frobbing mysql_macros-0.1.2
+[INFO] finished frobbing mysql_macros-0.1.2
+[INFO] frobbed toml for mysql_macros-0.1.2 written to work\ex\default\sources\beta\reg\mysql_macros\0.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mysql_macros-0.1.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mysql_macros\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] e5a84d50934fd9aca418e927bc6bcd907d0a3989cccb8274e6c825c3ddfeb7a0
+[INFO] running `"docker" "start" "-a" "e5a84d50934fd9aca418e927bc6bcd907d0a3989cccb8274e6c825c3ddfeb7a0"`
+[INFO] [stderr]    Compiling mysql_macros v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.86s
+[INFO] running `"docker" "inspect" "e5a84d50934fd9aca418e927bc6bcd907d0a3989cccb8274e6c825c3ddfeb7a0"`
+[INFO] running `"docker" "rm" "-f" "e5a84d50934fd9aca418e927bc6bcd907d0a3989cccb8274e6c825c3ddfeb7a0"`
+[INFO] [stdout] e5a84d50934fd9aca418e927bc6bcd907d0a3989cccb8274e6c825c3ddfeb7a0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mysql_macros\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8a7699bac9e352bde99616dd8621ec0c8fe0cc1ad8843ae89dc5e97fe9f4e98d
+[INFO] running `"docker" "start" "-a" "8a7699bac9e352bde99616dd8621ec0c8fe0cc1ad8843ae89dc5e97fe9f4e98d"`
+[INFO] [stderr]    Compiling mysql_macros v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.98s
+[INFO] running `"docker" "inspect" "8a7699bac9e352bde99616dd8621ec0c8fe0cc1ad8843ae89dc5e97fe9f4e98d"`
+[INFO] running `"docker" "rm" "-f" "8a7699bac9e352bde99616dd8621ec0c8fe0cc1ad8843ae89dc5e97fe9f4e98d"`
+[INFO] [stdout] 8a7699bac9e352bde99616dd8621ec0c8fe0cc1ad8843ae89dc5e97fe9f4e98d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mysql_macros\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 17b22682c933183b38f80e3808dfc405ba77deb300507bcab40f0c2a3f4ded13
+[INFO] running `"docker" "start" "-a" "17b22682c933183b38f80e3808dfc405ba77deb300507bcab40f0c2a3f4ded13"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mysql_macros-cccf7bf3f7ef05b0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests mysql_macros
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "17b22682c933183b38f80e3808dfc405ba77deb300507bcab40f0c2a3f4ded13"`
+[INFO] running `"docker" "rm" "-f" "17b22682c933183b38f80e3808dfc405ba77deb300507bcab40f0c2a3f4ded13"`
+[INFO] [stdout] 17b22682c933183b38f80e3808dfc405ba77deb300507bcab40f0c2a3f4ded13

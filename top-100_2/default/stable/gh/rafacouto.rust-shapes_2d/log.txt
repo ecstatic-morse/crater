@@ -1,0 +1,34 @@
+[INFO] cloning repository rafacouto/rust-shapes_2d
+[INFO] running `"git" "clone" "--bare" "git://github.com/rafacouto/rust-shapes_2d.git" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rafacouto\rust-shapes_2d'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d" "work\\ex\\default\\sources\\stable\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\rafacouto\rust-shapes_2d'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafacouto\\rust-shapes_2d" "work\\ex\\default\\sources\\beta\\gh\\rafacouto\\rust-shapes_2d"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\rafacouto\rust-shapes_2d'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b697be973d808d046119239971bba53ea8fb0513
+[INFO] sha for GitHub repo rafacouto/rust-shapes_2d: b697be973d808d046119239971bba53ea8fb0513
+[INFO] validating manifest of rafacouto/rust-shapes_2d on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rafacouto/rust-shapes_2d on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rafacouto/rust-shapes_2d
+[INFO] finished frobbing rafacouto/rust-shapes_2d
+[INFO] frobbed toml for rafacouto/rust-shapes_2d written to work\ex\default\sources\stable\gh\rafacouto\rust-shapes_2d\Cargo.toml
+[INFO] started frobbing rafacouto/rust-shapes_2d
+[INFO] finished frobbing rafacouto/rust-shapes_2d
+[INFO] frobbed toml for rafacouto/rust-shapes_2d written to work\ex\default\sources\beta\gh\rafacouto\rust-shapes_2d\Cargo.toml
+[INFO] crate rafacouto/rust-shapes_2d already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rafacouto/rust-shapes_2d against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\rafacouto\\rust-shapes_2d,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c71da3be2bab68a1ece270fdf760a32b9a53ffeb48543deb1520940b7b1c43eb
+[INFO] running `"docker" "start" "-a" "c71da3be2bab68a1ece270fdf760a32b9a53ffeb48543deb1520940b7b1c43eb"`
+[INFO] [stderr]    Compiling shapes_2d v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.36s
+[INFO] running `"docker" "inspect" "c71da3be2bab68a1ece270fdf760a32b9a53ffeb48543deb1520940b7b1c43eb"`
+[INFO] running `"docker" "rm" "-f" "c71da3be2bab68a1ece270fdf760a32b9a53ffeb48543deb1520940b7b1c43eb"`
+[INFO] [stdout] c71da3be2bab68a1ece270fdf760a32b9a53ffeb48543deb1520940b7b1c43eb

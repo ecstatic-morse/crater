@@ -1,0 +1,57 @@
+[INFO] cloning repository dmit/conway
+[INFO] running `"git" "clone" "--bare" "git://github.com/dmit/conway.git" "work\\cache\\sources\\gh\\dmit\\conway"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\dmit\conway'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dmit\\conway" "work\\ex\\default\\sources\\nightly\\gh\\dmit\\conway"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\dmit\conway'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dmit\\conway" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\dmit\\conway"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\dmit\conway'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4504514442bf2feecedb502ad9ee4ebaf37fda75
+[INFO] sha for GitHub repo dmit/conway: 4504514442bf2feecedb502ad9ee4ebaf37fda75
+[INFO] validating manifest of dmit/conway on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dmit/conway on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dmit/conway
+[INFO] finished frobbing dmit/conway
+[INFO] frobbed toml for dmit/conway written to work\ex\default\sources\nightly\gh\dmit\conway\Cargo.toml
+[INFO] started frobbing dmit/conway
+[INFO] finished frobbing dmit/conway
+[INFO] frobbed toml for dmit/conway written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\dmit\conway\Cargo.toml
+[INFO] crate dmit/conway already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing dmit/conway against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\dmit\\conway,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 848a2d0fa7a506422d076ec92b6867d7a7631b4a3300272c753e02972add2447
+[INFO] running `"docker" "start" "-a" "848a2d0fa7a506422d076ec92b6867d7a7631b4a3300272c753e02972add2447"`
+[INFO] [stderr]    Compiling conway v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.43s
+[INFO] running `"docker" "inspect" "848a2d0fa7a506422d076ec92b6867d7a7631b4a3300272c753e02972add2447"`
+[INFO] running `"docker" "rm" "-f" "848a2d0fa7a506422d076ec92b6867d7a7631b4a3300272c753e02972add2447"`
+[INFO] [stdout] 848a2d0fa7a506422d076ec92b6867d7a7631b4a3300272c753e02972add2447
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\dmit\\conway,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ce84ba8f0c2fca3a4a9d18164488cf43fe33071dedcf92c6dfa909f346a7299b
+[INFO] running `"docker" "start" "-a" "ce84ba8f0c2fca3a4a9d18164488cf43fe33071dedcf92c6dfa909f346a7299b"`
+[INFO] [stderr]    Compiling conway v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.87s
+[INFO] running `"docker" "inspect" "ce84ba8f0c2fca3a4a9d18164488cf43fe33071dedcf92c6dfa909f346a7299b"`
+[INFO] running `"docker" "rm" "-f" "ce84ba8f0c2fca3a4a9d18164488cf43fe33071dedcf92c6dfa909f346a7299b"`
+[INFO] [stdout] ce84ba8f0c2fca3a4a9d18164488cf43fe33071dedcf92c6dfa909f346a7299b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\dmit\\conway,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2eb009d384c636e029cd163a4261b419b40b8dccaa170b895d4bee5b3cd41779
+[INFO] running `"docker" "start" "-a" "2eb009d384c636e029cd163a4261b419b40b8dccaa170b895d4bee5b3cd41779"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\conway-9398e56d28d888b7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2eb009d384c636e029cd163a4261b419b40b8dccaa170b895d4bee5b3cd41779"`
+[INFO] running `"docker" "rm" "-f" "2eb009d384c636e029cd163a4261b419b40b8dccaa170b895d4bee5b3cd41779"`
+[INFO] [stdout] 2eb009d384c636e029cd163a4261b419b40b8dccaa170b895d4bee5b3cd41779

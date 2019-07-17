@@ -1,0 +1,89 @@
+[INFO] cloning repository luisfos/rust_render
+[INFO] running `"git" "clone" "--bare" "git://github.com/luisfos/rust_render.git" "work\\cache\\sources\\gh\\luisfos\\rust_render"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\luisfos\rust_render'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\luisfos\\rust_render" "work\\ex\\default\\sources\\stable\\gh\\luisfos\\rust_render"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\luisfos\rust_render'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\luisfos\\rust_render" "work\\ex\\default\\sources\\beta\\gh\\luisfos\\rust_render"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\luisfos\rust_render'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 42c8e28e6cd803cb46975603965aa16e7ea7e0a1
+[INFO] sha for GitHub repo luisfos/rust_render: 42c8e28e6cd803cb46975603965aa16e7ea7e0a1
+[INFO] validating manifest of luisfos/rust_render on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of luisfos/rust_render on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing luisfos/rust_render
+[INFO] finished frobbing luisfos/rust_render
+[INFO] frobbed toml for luisfos/rust_render written to work\ex\default\sources\stable\gh\luisfos\rust_render\Cargo.toml
+[INFO] started frobbing luisfos/rust_render
+[INFO] finished frobbing luisfos/rust_render
+[INFO] frobbed toml for luisfos/rust_render written to work\ex\default\sources\beta\gh\luisfos\rust_render\Cargo.toml
+[INFO] crate luisfos/rust_render already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rand v0.6.4
+[INFO] [stderr]   Downloaded libc v0.2.47
+[INFO] [stderr]   Downloaded rand_os v0.1.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing luisfos/rust_render against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\luisfos\\rust_render,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 1fff58c1bd457f75f9ea78558d72e0f990ba8a10fdb2558ebff3246b201305e6
+[INFO] running `"docker" "start" "-a" "1fff58c1bd457f75f9ea78558d72e0f990ba8a10fdb2558ebff3246b201305e6"`
+[INFO] [stderr]    Compiling autocfg v0.1.2
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.4
+[INFO] [stderr]    Compiling rand_os v0.1.1
+[INFO] [stderr]    Compiling rust_render v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 55.51s
+[INFO] running `"docker" "inspect" "1fff58c1bd457f75f9ea78558d72e0f990ba8a10fdb2558ebff3246b201305e6"`
+[INFO] running `"docker" "rm" "-f" "1fff58c1bd457f75f9ea78558d72e0f990ba8a10fdb2558ebff3246b201305e6"`
+[INFO] [stdout] 1fff58c1bd457f75f9ea78558d72e0f990ba8a10fdb2558ebff3246b201305e6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\luisfos\\rust_render,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6bf00063d88c44bac547d677d0f2552facf9ab54cb5124bdeab27aaac5df176d
+[INFO] running `"docker" "start" "-a" "6bf00063d88c44bac547d677d0f2552facf9ab54cb5124bdeab27aaac5df176d"`
+[INFO] [stderr]    Compiling rust_render v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.63s
+[INFO] running `"docker" "inspect" "6bf00063d88c44bac547d677d0f2552facf9ab54cb5124bdeab27aaac5df176d"`
+[INFO] running `"docker" "rm" "-f" "6bf00063d88c44bac547d677d0f2552facf9ab54cb5124bdeab27aaac5df176d"`
+[INFO] [stdout] 6bf00063d88c44bac547d677d0f2552facf9ab54cb5124bdeab27aaac5df176d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\luisfos\\rust_render,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 054a2e761f3cd09a3471197a385d0b638251314b6fb7837d7f9428ed35c7453d
+[INFO] running `"docker" "start" "-a" "054a2e761f3cd09a3471197a385d0b638251314b6fb7837d7f9428ed35c7453d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.56s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_render-5ec812984684c76a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test math::tests::test_add ... ok
+[INFO] [stdout] test math::tests::test_difficult ... ok
+[INFO] [stdout] test math::tests::test_length ... ok
+[INFO] [stdout] test math::tests::test_mul ... ok
+[INFO] [stdout] test math::tests::test_normalize ... ok
+[INFO] [stdout] test math::tests::test_sub ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_render-2110d23049cbd700.exe
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test math::tests::test_add ... ok
+[INFO] [stderr]    Doc-tests rust_render
+[INFO] [stdout] test math::tests::test_difficult ... ok
+[INFO] [stdout] test math::tests::test_length ... ok
+[INFO] [stdout] test math::tests::test_mul ... ok
+[INFO] [stdout] test math::tests::test_normalize ... ok
+[INFO] [stdout] test math::tests::test_sub ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "054a2e761f3cd09a3471197a385d0b638251314b6fb7837d7f9428ed35c7453d"`
+[INFO] running `"docker" "rm" "-f" "054a2e761f3cd09a3471197a385d0b638251314b6fb7837d7f9428ed35c7453d"`
+[INFO] [stdout] 054a2e761f3cd09a3471197a385d0b638251314b6fb7837d7f9428ed35c7453d

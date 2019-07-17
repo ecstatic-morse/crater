@@ -1,0 +1,77 @@
+[INFO] cloning repository brisad/age
+[INFO] running `"git" "clone" "--bare" "git://github.com/brisad/age.git" "work\\cache\\sources\\gh\\brisad\\age"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\brisad\age'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brisad\\age" "work\\ex\\default\\sources\\stable\\gh\\brisad\\age"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\brisad\age'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brisad\\age" "work\\ex\\default\\sources\\beta\\gh\\brisad\\age"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\brisad\age'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3308e01da96d4690e9da8b9ab4ee52237db83ac5
+[INFO] sha for GitHub repo brisad/age: 3308e01da96d4690e9da8b9ab4ee52237db83ac5
+[INFO] validating manifest of brisad/age on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of brisad/age on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing brisad/age
+[INFO] finished frobbing brisad/age
+[INFO] frobbed toml for brisad/age written to work\ex\default\sources\stable\gh\brisad\age\Cargo.toml
+[INFO] started frobbing brisad/age
+[INFO] finished frobbing brisad/age
+[INFO] frobbed toml for brisad/age written to work\ex\default\sources\beta\gh\brisad\age\Cargo.toml
+[INFO] crate brisad/age already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded chrono v0.2.25
+[INFO] [stderr]   Downloaded redox_syscall v0.1.16
+[INFO] [stderr]   Downloaded num v0.1.36
+[INFO] [stderr]   Downloaded num-traits v0.1.36
+[INFO] [stderr]   Downloaded num-iter v0.1.32
+[INFO] [stderr]   Downloaded num-integer v0.1.32
+[INFO] [stderr]   Downloaded time v0.1.36
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing brisad/age against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brisad\\age,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 55100b118ad5845ed5700dd65623beeb4ab498505ef3c611d06e6389b89e5fb1
+[INFO] running `"docker" "start" "-a" "55100b118ad5845ed5700dd65623beeb4ab498505ef3c611d06e6389b89e5fb1"`
+[INFO] [stderr]    Compiling num-traits v0.1.36
+[INFO] [stderr]    Compiling libc v0.2.20
+[INFO] [stderr]    Compiling time v0.1.36
+[INFO] [stderr]    Compiling num-integer v0.1.32
+[INFO] [stderr]    Compiling num-iter v0.1.32
+[INFO] [stderr]    Compiling num v0.1.36
+[INFO] [stderr]    Compiling chrono v0.2.25
+[INFO] [stderr]    Compiling age v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.51s
+[INFO] running `"docker" "inspect" "55100b118ad5845ed5700dd65623beeb4ab498505ef3c611d06e6389b89e5fb1"`
+[INFO] running `"docker" "rm" "-f" "55100b118ad5845ed5700dd65623beeb4ab498505ef3c611d06e6389b89e5fb1"`
+[INFO] [stdout] 55100b118ad5845ed5700dd65623beeb4ab498505ef3c611d06e6389b89e5fb1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brisad\\age,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d7ba87b5f35e668d1836cd37af4b564759afba58e029c58269a47156a096dba8
+[INFO] running `"docker" "start" "-a" "d7ba87b5f35e668d1836cd37af4b564759afba58e029c58269a47156a096dba8"`
+[INFO] [stderr]    Compiling age v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.74s
+[INFO] running `"docker" "inspect" "d7ba87b5f35e668d1836cd37af4b564759afba58e029c58269a47156a096dba8"`
+[INFO] running `"docker" "rm" "-f" "d7ba87b5f35e668d1836cd37af4b564759afba58e029c58269a47156a096dba8"`
+[INFO] [stdout] d7ba87b5f35e668d1836cd37af4b564759afba58e029c58269a47156a096dba8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brisad\\age,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] b815345c8d7f77937cd803764a1c51dabf81a2022257d65bbade03d6499f234a
+[INFO] running `"docker" "start" "-a" "b815345c8d7f77937cd803764a1c51dabf81a2022257d65bbade03d6499f234a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.23s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\age-e3113c2bbd7b6f8c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test test::no_panic_for_special_date ... ok
+[INFO] [stdout] test test::parse_empty_string ... ok
+[INFO] [stdout] test test::parse_invalid_date ... ok
+[INFO] [stdout] test test::parse_invalid_date2 ... ok
+[INFO] [stdout] test test::parse_other_persons_date ... ok
+[INFO] [stdout] test test::parse_valid_date ... ok
+[INFO] [stdout] test test::parse_with_trailing_strings ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b815345c8d7f77937cd803764a1c51dabf81a2022257d65bbade03d6499f234a"`
+[INFO] running `"docker" "rm" "-f" "b815345c8d7f77937cd803764a1c51dabf81a2022257d65bbade03d6499f234a"`
+[INFO] [stdout] b815345c8d7f77937cd803764a1c51dabf81a2022257d65bbade03d6499f234a

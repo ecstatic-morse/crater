@@ -1,0 +1,121 @@
+[INFO] fetching crate getopts 0.2.19...
+[INFO] extracting crate getopts 0.2.19 into work\ex\default\sources\stable\reg\getopts\0.2.19
+[INFO] extracting crate getopts 0.2.19 into work\ex\default\sources\beta\reg\getopts\0.2.19
+[INFO] validating manifest of getopts-0.2.19 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of getopts-0.2.19 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing getopts-0.2.19
+[INFO] finished frobbing getopts-0.2.19
+[INFO] frobbed toml for getopts-0.2.19 written to work\ex\default\sources\stable\reg\getopts\0.2.19\Cargo.toml
+[INFO] started frobbing getopts-0.2.19
+[INFO] finished frobbing getopts-0.2.19
+[INFO] frobbed toml for getopts-0.2.19 written to work\ex\default\sources\beta\reg\getopts\0.2.19\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing getopts-0.2.19 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\getopts\\0.2.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 3bbd3aa8baf6fdb8dc7233832e96f4665765ebb87fb798851aa2a4d8895f1753
+[INFO] running `"docker" "start" "-a" "3bbd3aa8baf6fdb8dc7233832e96f4665765ebb87fb798851aa2a4d8895f1753"`
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling getopts v0.2.19 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.12s
+[INFO] running `"docker" "inspect" "3bbd3aa8baf6fdb8dc7233832e96f4665765ebb87fb798851aa2a4d8895f1753"`
+[INFO] running `"docker" "rm" "-f" "3bbd3aa8baf6fdb8dc7233832e96f4665765ebb87fb798851aa2a4d8895f1753"`
+[INFO] [stdout] 3bbd3aa8baf6fdb8dc7233832e96f4665765ebb87fb798851aa2a4d8895f1753
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\getopts\\0.2.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 29e8092a00e9015f05990f7893ed140714b05b849c5946e4b6ee2dc0ce0cf627
+[INFO] running `"docker" "start" "-a" "29e8092a00e9015f05990f7893ed140714b05b849c5946e4b6ee2dc0ce0cf627"`
+[INFO] [stderr]    Compiling getopts v0.2.19 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.27s
+[INFO] running `"docker" "inspect" "29e8092a00e9015f05990f7893ed140714b05b849c5946e4b6ee2dc0ce0cf627"`
+[INFO] running `"docker" "rm" "-f" "29e8092a00e9015f05990f7893ed140714b05b849c5946e4b6ee2dc0ce0cf627"`
+[INFO] [stdout] 29e8092a00e9015f05990f7893ed140714b05b849c5946e4b6ee2dc0ce0cf627
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\getopts\\0.2.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] f9d09049dc0a1c1432447721f627f4d53aebe70a5895116b8c8881ab9f9d6fee
+[INFO] running `"docker" "start" "-a" "f9d09049dc0a1c1432447721f627f4d53aebe70a5895116b8c8881ab9f9d6fee"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.32s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\getopts-3f8234ab01ce0a6f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 58 tests
+[INFO] [stdout] test tests::test_aliases_long_and_short ... ok
+[INFO] [stdout] test tests::test_args_with_equals ... ok
+[INFO] [stdout] test tests::test_combined ... ok
+[INFO] [stdout] test tests::test_free_argument_is_hyphen ... ok
+[INFO] [stdout] test tests::test_long_only_mode ... ok
+[INFO] [stdout] test tests::test_long_only_mode_no_short_parse ... ok
+[INFO] [stdout] test tests::test_long_only_usage ... ok
+[INFO] [stdout] test tests::test_long_to_short ... ok
+[INFO] [stdout] test tests::test_mixed_stop ... ok
+[INFO] [stdout] test tests::test_mixed_stop_hyphen ... ok
+[INFO] [stdout] test tests::test_multi ... ok
+[INFO] [stdout] test tests::test_nonexistant_opt ... ok
+[INFO] [stdout] test tests::test_normal_mode_no_long_parse ... ok
+[INFO] [stdout] test tests::test_nospace ... ok
+[INFO] [stdout] test tests::test_nospace_conflict ... ok
+[INFO] [stdout] test tests::test_opt_default ... ok
+[INFO] [stdout] test tests::test_opt_end ... ok
+[INFO] [stdout] test tests::test_long_name_too_short ... ok
+[INFO] [stdout] test tests::test_opt_get ... ok
+[INFO] [stdout] test tests::test_opt_get_default ... ok
+[INFO] [stdout] test tests::test_opt_only_end ... ok
+[INFO] [stdout] test tests::test_opt_positions ... ok
+[INFO] [stdout] test tests::test_opt_strs_pos ... ok
+[INFO] [stdout] test tests::test_optflag ... ok
+[INFO] [stdout] test tests::test_optflag_long_arg ... ok
+[INFO] [stdout] test tests::test_optflag_missing ... ok
+[INFO] [stdout] test tests::test_optflag_multi ... ok
+[INFO] [stdout] test tests::test_optflag_short_arg ... ok
+[INFO] [stdout] test tests::test_optflagmulti_long1 ... ok
+[INFO] [stdout] test tests::test_optflagmulti_long2 ... ok
+[INFO] [stdout] test tests::test_optflagmulti_mix ... ok
+[INFO] [stdout] test tests::test_optflagmulti_short1 ... ok
+[INFO] [stdout] test tests::test_optflagmulti_short2a ... ok
+[INFO] [stdout] test tests::test_optflagmulti_short2b ... ok
+[INFO] [stdout] test tests::test_optflagopt ... ok
+[INFO] [stdout] test tests::test_optmulti ... ok
+[INFO] [stdout] test tests::test_optmulti_missing ... ok
+[INFO] [stdout] test tests::test_optmulti_multi ... ok
+[INFO] [stdout] test tests::test_optmulti_no_arg ... ok
+[INFO] [stdout] test tests::test_optopt ... ok
+[INFO] [stdout] test tests::test_optopt_missing ... ok
+[INFO] [stdout] test tests::test_optopt_multi ... ok
+[INFO] [stdout] test tests::test_optopt_no_arg ... ok
+[INFO] [stdout] test tests::test_reqopt ... ok
+[INFO] [stdout] test tests::test_reqopt_missing ... ok
+[INFO] [stdout] test tests::test_reqopt_multi ... ok
+[INFO] [stdout] test tests::test_reqopt_no_arg ... ok
+[INFO] [stdout] test tests::test_short_usage ... ok
+[INFO] [stdout] test tests::test_split_within ... ok
+[INFO] [stdout] test tests::test_unrecognized_option ... ok
+[INFO] [stdout] test tests::test_usage ... ok
+[INFO] [stdout] test tests::test_usage_description_multibyte_handling ... ok
+[INFO] [stdout] test tests::test_usage_description_newline_handling ... ok
+[INFO] [stdout] test tests::test_usage_description_wrapping ... ok
+[INFO] [stdout] test tests::test_usage_long_only ... ok
+[INFO] [stdout] test tests::test_undefined_opt_present ... ok
+[INFO] [stdout] test tests::test_usage_multiwidth ... ok
+[INFO] [stdout] test tests::test_usage_short_only ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 58 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\smoke-d4ffa4ce35590c8f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test main ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests getopts
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\lib.rs -  (line 51) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 41) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f9d09049dc0a1c1432447721f627f4d53aebe70a5895116b8c8881ab9f9d6fee"`
+[INFO] running `"docker" "rm" "-f" "f9d09049dc0a1c1432447721f627f4d53aebe70a5895116b8c8881ab9f9d6fee"`
+[INFO] [stdout] f9d09049dc0a1c1432447721f627f4d53aebe70a5895116b8c8881ab9f9d6fee

@@ -1,0 +1,50 @@
+[INFO] fetching crate macos-spotify 0.0.3...
+[INFO] extracting crate macos-spotify 0.0.3 into work\ex\default\sources\stable\reg\macos-spotify\0.0.3
+[INFO] extracting crate macos-spotify 0.0.3 into work\ex\default\sources\beta\reg\macos-spotify\0.0.3
+[INFO] validating manifest of macos-spotify-0.0.3 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of macos-spotify-0.0.3 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing macos-spotify-0.0.3
+[INFO] finished frobbing macos-spotify-0.0.3
+[INFO] frobbed toml for macos-spotify-0.0.3 written to work\ex\default\sources\stable\reg\macos-spotify\0.0.3\Cargo.toml
+[INFO] started frobbing macos-spotify-0.0.3
+[INFO] finished frobbing macos-spotify-0.0.3
+[INFO] frobbed toml for macos-spotify-0.0.3 written to work\ex\default\sources\beta\reg\macos-spotify\0.0.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded four-char-code v0.0.3
+[INFO] [stderr]   Downloaded four-char-code-macros-impl v0.0.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing macos-spotify-0.0.3 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\macos-spotify\\0.0.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 65d8b5084f630f9c0b2ea1c2347a17ebcefd8b5bbf950da4b406af714031f948
+[INFO] running `"docker" "start" "-a" "65d8b5084f630f9c0b2ea1c2347a17ebcefd8b5bbf950da4b406af714031f948"`
+[INFO] [stderr]    Compiling encoding_index_tests v0.1.4
+[INFO] [stderr]    Compiling proc-macro-hack v0.5.8
+[INFO] [stderr]    Compiling encoding-index-japanese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-singlebyte v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-korean v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-tradchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-simpchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding v0.2.33
+[INFO] [stderr]    Compiling four-char-code-macros-impl v0.0.1
+[INFO] [stderr]    Compiling four-char-code v0.0.3
+[INFO] [stderr]    Compiling macos-spotify v0.0.3 (C:\crater\workdir)
+[INFO] [stderr] error[E0455]: native frameworks are only available on macOS targets
+[INFO] [stderr]    --> src\sys.rs:147:1
+[INFO] [stderr]     |
+[INFO] [stderr] 147 | #[link(name = "CoreServices", kind = "framework")]
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0455`.
+[INFO] [stderr] error: Could not compile `macos-spotify`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "65d8b5084f630f9c0b2ea1c2347a17ebcefd8b5bbf950da4b406af714031f948"`
+[INFO] running `"docker" "rm" "-f" "65d8b5084f630f9c0b2ea1c2347a17ebcefd8b5bbf950da4b406af714031f948"`
+[INFO] [stdout] 65d8b5084f630f9c0b2ea1c2347a17ebcefd8b5bbf950da4b406af714031f948

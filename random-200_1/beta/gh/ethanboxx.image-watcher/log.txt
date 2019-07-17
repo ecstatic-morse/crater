@@ -1,0 +1,98 @@
+[INFO] cloning repository ethanboxx/image-watcher
+[INFO] running `"git" "clone" "--bare" "git://github.com/ethanboxx/image-watcher.git" "work\\cache\\sources\\gh\\ethanboxx\\image-watcher"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ethanboxx\image-watcher'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ethanboxx\\image-watcher" "work\\ex\\default\\sources\\stable\\gh\\ethanboxx\\image-watcher"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\ethanboxx\image-watcher'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ethanboxx\\image-watcher" "work\\ex\\default\\sources\\beta\\gh\\ethanboxx\\image-watcher"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\ethanboxx\image-watcher'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3a6598eb2764cb6fc5706f7b77b84d25c2cef454
+[INFO] sha for GitHub repo ethanboxx/image-watcher: 3a6598eb2764cb6fc5706f7b77b84d25c2cef454
+[INFO] validating manifest of ethanboxx/image-watcher on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ethanboxx/image-watcher on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ethanboxx/image-watcher
+[INFO] finished frobbing ethanboxx/image-watcher
+[INFO] frobbed toml for ethanboxx/image-watcher written to work\ex\default\sources\stable\gh\ethanboxx\image-watcher\Cargo.toml
+[INFO] started frobbing ethanboxx/image-watcher
+[INFO] finished frobbing ethanboxx/image-watcher
+[INFO] frobbed toml for ethanboxx/image-watcher written to work\ex\default\sources\beta\gh\ethanboxx\image-watcher\Cargo.toml
+[INFO] crate ethanboxx/image-watcher already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded yaml-rust v0.4.3
+[INFO] [stderr]   Downloaded set-error v1.0.1
+[INFO] [stderr]   Downloaded read_input v0.8.0
+[INFO] [stderr]   Downloaded file-watcher v0.0.18
+[INFO] [stderr]   Downloaded term_size v0.3.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ethanboxx/image-watcher against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\ethanboxx\\image-watcher,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 87105db2d693a39c408c3dffda8b98b416e70743a87a8529680ade4a0655a52b
+[INFO] running `"docker" "start" "-a" "87105db2d693a39c408c3dffda8b98b416e70743a87a8529680ade4a0655a52b"`
+[INFO] [stderr]    Compiling arrayvec v0.4.10
+[INFO] [stderr]    Compiling libc v0.2.55
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling syn v0.15.34
+[INFO] [stderr]    Compiling byteorder v1.3.1
+[INFO] [stderr]    Compiling rayon v1.0.3
+[INFO] [stderr]    Compiling num-rational v0.2.1
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling set-error v1.0.1
+[INFO] [stderr]    Compiling strsim v0.8.0
+[INFO] [stderr]    Compiling read_input v0.8.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling gif v0.10.1
+[INFO] [stderr]    Compiling file-watcher v0.0.18
+[INFO] [stderr]    Compiling yaml-rust v0.4.3
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling deflate v0.7.19
+[INFO] [stderr]    Compiling term_size v0.3.1
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling png v0.14.1
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling same-file v1.0.4
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling walkdir v2.2.7
+[INFO] [stderr]    Compiling num-derive v0.2.5
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling tiff v0.2.2
+[INFO] [stderr]    Compiling image v0.21.1
+[INFO] [stderr]    Compiling image-watcher v0.0.23 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 27s
+[INFO] running `"docker" "inspect" "87105db2d693a39c408c3dffda8b98b416e70743a87a8529680ade4a0655a52b"`
+[INFO] running `"docker" "rm" "-f" "87105db2d693a39c408c3dffda8b98b416e70743a87a8529680ade4a0655a52b"`
+[INFO] [stdout] 87105db2d693a39c408c3dffda8b98b416e70743a87a8529680ade4a0655a52b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\ethanboxx\\image-watcher,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3155bcec21878819c68f345c71b895ea55991edf9670c7d5f5b793d01d17df34
+[INFO] running `"docker" "start" "-a" "3155bcec21878819c68f345c71b895ea55991edf9670c7d5f5b793d01d17df34"`
+[INFO] [stderr]    Compiling image-watcher v0.0.23 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.37s
+[INFO] running `"docker" "inspect" "3155bcec21878819c68f345c71b895ea55991edf9670c7d5f5b793d01d17df34"`
+[INFO] running `"docker" "rm" "-f" "3155bcec21878819c68f345c71b895ea55991edf9670c7d5f5b793d01d17df34"`
+[INFO] [stdout] 3155bcec21878819c68f345c71b895ea55991edf9670c7d5f5b793d01d17df34
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\ethanboxx\\image-watcher,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 3e5d4151bb7828900b7d1d652138e50917aef88aa3e28aee5baddc5ab5dc8e97
+[INFO] running `"docker" "start" "-a" "3e5d4151bb7828900b7d1d652138e50917aef88aa3e28aee5baddc5ab5dc8e97"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.13s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\image_watcher-b51ab83728446e7e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3e5d4151bb7828900b7d1d652138e50917aef88aa3e28aee5baddc5ab5dc8e97"`
+[INFO] running `"docker" "rm" "-f" "3e5d4151bb7828900b7d1d652138e50917aef88aa3e28aee5baddc5ab5dc8e97"`
+[INFO] [stdout] 3e5d4151bb7828900b7d1d652138e50917aef88aa3e28aee5baddc5ab5dc8e97

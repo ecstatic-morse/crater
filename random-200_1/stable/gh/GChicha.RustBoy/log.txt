@@ -1,0 +1,84 @@
+[INFO] cloning repository GChicha/RustBoy
+[INFO] running `"git" "clone" "--bare" "git://github.com/GChicha/RustBoy.git" "work\\cache\\sources\\gh\\GChicha\\RustBoy"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\GChicha\RustBoy'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\GChicha\\RustBoy" "work\\ex\\default\\sources\\stable\\gh\\GChicha\\RustBoy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\GChicha\RustBoy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\GChicha\\RustBoy" "work\\ex\\default\\sources\\beta\\gh\\GChicha\\RustBoy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\GChicha\RustBoy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] e458bd711c3e76fc3c3f86941279e9895a865192
+[INFO] sha for GitHub repo GChicha/RustBoy: e458bd711c3e76fc3c3f86941279e9895a865192
+[INFO] validating manifest of GChicha/RustBoy on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of GChicha/RustBoy on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing GChicha/RustBoy
+[INFO] finished frobbing GChicha/RustBoy
+[INFO] frobbed toml for GChicha/RustBoy written to work\ex\default\sources\stable\gh\GChicha\RustBoy\Cargo.toml
+[INFO] started frobbing GChicha/RustBoy
+[INFO] finished frobbing GChicha/RustBoy
+[INFO] frobbed toml for GChicha/RustBoy written to work\ex\default\sources\beta\gh\GChicha\RustBoy\Cargo.toml
+[INFO] crate GChicha/RustBoy already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded glium v0.20.0
+[INFO] [stderr]   Downloaded glutin v0.12.2
+[INFO] [stderr]   Downloaded x11-dl v2.17.5
+[INFO] [stderr]   Downloaded libc v0.2.40
+[INFO] [stderr]   Downloaded cc v1.0.9
+[INFO] [stderr]   Downloaded tempfile v3.0.2
+[INFO] [stderr]   Downloaded remove_dir_all v0.5.0
+[INFO] [stderr]   Downloaded gl_generator v0.8.0
+[INFO] [stderr]   Downloaded gleam v0.4.31
+[INFO] [stderr]   Downloaded backtrace v0.3.5
+[INFO] [stderr]   Downloaded rustc-demangle v0.1.7
+[INFO] [stderr]   Downloaded backtrace-sys v0.1.16
+[INFO] [stderr]   Downloaded smallvec v0.6.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing GChicha/RustBoy against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\GChicha\\RustBoy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f611c94bc9dfefdedae09786075b205dc6e259aa15c0839d6fef38ea1db6d7f1
+[INFO] running `"docker" "start" "-a" "f611c94bc9dfefdedae09786075b205dc6e259aa15c0839d6fef38ea1db6d7f1"`
+[INFO] [stderr]    Compiling khronos_api v2.2.0
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling libc v0.2.40
+[INFO] [stderr]    Compiling rustc-demangle v0.1.7
+[INFO] [stderr]    Compiling smallvec v0.6.0
+[INFO] [stderr]    Compiling xml-rs v0.7.0
+[INFO] [stderr]    Compiling textwrap v0.9.0
+[INFO] [stderr]    Compiling shared_library v0.1.8
+[INFO] [stderr]    Compiling gl_generator v0.8.0
+[INFO] [stderr]    Compiling glutin v0.12.2
+[INFO] [stderr]    Compiling glium v0.20.0
+[INFO] [stderr]    Compiling winit v0.10.0
+[INFO] [stderr]    Compiling backtrace v0.3.5
+[INFO] [stderr]    Compiling atty v0.2.10
+[INFO] [stderr]    Compiling clap v2.31.2
+[INFO] [stderr]    Compiling gb_emulator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3m 05s
+[INFO] running `"docker" "inspect" "f611c94bc9dfefdedae09786075b205dc6e259aa15c0839d6fef38ea1db6d7f1"`
+[INFO] running `"docker" "rm" "-f" "f611c94bc9dfefdedae09786075b205dc6e259aa15c0839d6fef38ea1db6d7f1"`
+[INFO] [stdout] f611c94bc9dfefdedae09786075b205dc6e259aa15c0839d6fef38ea1db6d7f1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\GChicha\\RustBoy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6fce9323d8b5f073766cb19d9eef938141fa02da46a61ce38cc2b8e55f294028
+[INFO] running `"docker" "start" "-a" "6fce9323d8b5f073766cb19d9eef938141fa02da46a61ce38cc2b8e55f294028"`
+[INFO] [stderr]    Compiling gb_emulator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.10s
+[INFO] running `"docker" "inspect" "6fce9323d8b5f073766cb19d9eef938141fa02da46a61ce38cc2b8e55f294028"`
+[INFO] running `"docker" "rm" "-f" "6fce9323d8b5f073766cb19d9eef938141fa02da46a61ce38cc2b8e55f294028"`
+[INFO] [stdout] 6fce9323d8b5f073766cb19d9eef938141fa02da46a61ce38cc2b8e55f294028
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\GChicha\\RustBoy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 4fa761654f6bb43ee381d9f37dc63e85b90a17ae47d91f16014e58654e1aff0a
+[INFO] running `"docker" "start" "-a" "4fa761654f6bb43ee381d9f37dc63e85b90a17ae47d91f16014e58654e1aff0a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.88s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\gb_emulator-b69685525ed26c99.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4fa761654f6bb43ee381d9f37dc63e85b90a17ae47d91f16014e58654e1aff0a"`
+[INFO] running `"docker" "rm" "-f" "4fa761654f6bb43ee381d9f37dc63e85b90a17ae47d91f16014e58654e1aff0a"`
+[INFO] [stdout] 4fa761654f6bb43ee381d9f37dc63e85b90a17ae47d91f16014e58654e1aff0a

@@ -1,0 +1,288 @@
+[INFO] fetching crate docopt 1.1.0...
+[INFO] extracting crate docopt 1.1.0 into work\ex\default\sources\stable\reg\docopt\1.1.0
+[INFO] extracting crate docopt 1.1.0 into work\ex\default\sources\beta\reg\docopt\1.1.0
+[INFO] validating manifest of docopt-1.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of docopt-1.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing docopt-1.1.0
+[INFO] finished frobbing docopt-1.1.0
+[INFO] frobbed toml for docopt-1.1.0 written to work\ex\default\sources\stable\reg\docopt\1.1.0\Cargo.toml
+[INFO] started frobbing docopt-1.1.0
+[INFO] finished frobbing docopt-1.1.0
+[INFO] frobbed toml for docopt-1.1.0 written to work\ex\default\sources\beta\reg\docopt\1.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing docopt-1.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\docopt\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a6cb7cf384b34a7bb1b8f24d0f23950d3e6608a2f2bf39e2b2e4a0fc68318d16
+[INFO] running `"docker" "start" "-a" "a6cb7cf384b34a7bb1b8f24d0f23950d3e6608a2f2bf39e2b2e4a0fc68318d16"`
+[INFO] [stderr]    Compiling serde v1.0.95
+[INFO] [stderr]    Compiling strsim v0.9.2
+[INFO] [stderr]    Compiling docopt v1.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 08s
+[INFO] running `"docker" "inspect" "a6cb7cf384b34a7bb1b8f24d0f23950d3e6608a2f2bf39e2b2e4a0fc68318d16"`
+[INFO] running `"docker" "rm" "-f" "a6cb7cf384b34a7bb1b8f24d0f23950d3e6608a2f2bf39e2b2e4a0fc68318d16"`
+[INFO] [stdout] a6cb7cf384b34a7bb1b8f24d0f23950d3e6608a2f2bf39e2b2e4a0fc68318d16
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\docopt\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c5c975c1db67605b54ccc90e5e56ba8b6ad4f18da88f61b588521a6316298670
+[INFO] running `"docker" "start" "-a" "c5c975c1db67605b54ccc90e5e56ba8b6ad4f18da88f61b588521a6316298670"`
+[INFO] [stderr]    Compiling docopt v1.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.44s
+[INFO] running `"docker" "inspect" "c5c975c1db67605b54ccc90e5e56ba8b6ad4f18da88f61b588521a6316298670"`
+[INFO] running `"docker" "rm" "-f" "c5c975c1db67605b54ccc90e5e56ba8b6ad4f18da88f61b588521a6316298670"`
+[INFO] [stdout] c5c975c1db67605b54ccc90e5e56ba8b6ad4f18da88f61b588521a6316298670
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\docopt\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 6664e26d75aefd5190c7e56a802daf8e37ee23e4a9f9b3ac7bc0ff9366e24e2c
+[INFO] running `"docker" "start" "-a" "6664e26d75aefd5190c7e56a802daf8e37ee23e4a9f9b3ac7bc0ff9366e24e2c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.49s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\docopt-e87807a3018950c0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 227 tests
+[INFO] [stdout] test test::regression_issue_195 ... ok
+[INFO] [stdout] test test::suggestions::test_suggest_1 ... ok
+[INFO] [stdout] test test::regression_issue_12 ... ok
+[INFO] [stdout] test test::regression_issue_219 ... ok
+[INFO] [stdout] test test::suggestions::test_suggest_2 ... ok
+[INFO] [stdout] test test::suggestions::test_suggest_3 ... ok
+[INFO] [stdout] test test::suggestions::test_suggest_4 ... ok
+[INFO] [stdout] test test::suggestions::test_suggest_5 ... ok
+[INFO] [stdout] test test::test_issue_129 ... ok
+[INFO] [stdout] test test::test_issue_13 ... ok
+[INFO] [stdout] test test::testcases::test_0_testcases ... ok
+[INFO] [stdout] test test::test_unit_struct ... ok
+[INFO] [stdout] test test::testcases::test_100_testcases ... ok
+[INFO] [stdout] test test::testcases::test_102_testcases ... ok
+[INFO] [stdout] test test::testcases::test_101_testcases ... ok
+[INFO] [stdout] test test::testcases::test_103_testcases ... ok
+[INFO] [stdout] test test::testcases::test_104_testcases ... ok
+[INFO] [stdout] test test::testcases::test_105_testcases ... ok
+[INFO] [stdout] test test::testcases::test_106_testcases ... ok
+[INFO] [stdout] test test::testcases::test_107_testcases ... ok
+[INFO] [stdout] test test::testcases::test_108_testcases ... ok
+[INFO] [stdout] test test::testcases::test_109_testcases ... ok
+[INFO] [stdout] test test::testcases::test_110_testcases ... ok
+[INFO] [stdout] test test::testcases::test_10_testcases ... ok
+[INFO] [stdout] test test::testcases::test_112_testcases ... ok
+[INFO] [stdout] test test::testcases::test_113_testcases ... ok
+[INFO] [stdout] test test::testcases::test_114_testcases ... ok
+[INFO] [stdout] test test::testcases::test_115_testcases ... ok
+[INFO] [stdout] test test::testcases::test_117_testcases ... ok
+[INFO] [stdout] test test::testcases::test_118_testcases ... ok
+[INFO] [stdout] test test::testcases::test_119_testcases ... ok
+[INFO] [stdout] test test::testcases::test_11_testcases ... ok
+[INFO] [stdout] test test::testcases::test_111_testcases ... ok
+[INFO] [stdout] test test::testcases::test_120_testcases ... ok
+[INFO] [stdout] test test::testcases::test_121_testcases ... ok
+[INFO] [stdout] test test::testcases::test_122_testcases ... ok
+[INFO] [stdout] test test::testcases::test_124_testcases ... ok
+[INFO] [stdout] test test::testcases::test_125_testcases ... ok
+[INFO] [stdout] test test::testcases::test_126_testcases ... ok
+[INFO] [stdout] test test::testcases::test_127_testcases ... ok
+[INFO] [stdout] test test::testcases::test_116_testcases ... ok
+[INFO] [stdout] test test::testcases::test_12_testcases ... ok
+[INFO] [stdout] test test::testcases::test_128_testcases ... ok
+[INFO] [stdout] test test::testcases::test_131_testcases ... ok
+[INFO] [stdout] test test::testcases::test_130_testcases ... ok
+[INFO] [stdout] test test::testcases::test_133_testcases ... ok
+[INFO] [stdout] test test::testcases::test_134_testcases ... ok
+[INFO] [stdout] test test::testcases::test_135_testcases ... ok
+[INFO] [stdout] test test::testcases::test_136_testcases ... ok
+[INFO] [stdout] test test::testcases::test_137_testcases ... ok
+[INFO] [stdout] test test::testcases::test_138_testcases ... ok
+[INFO] [stdout] test test::testcases::test_139_testcases ... ok
+[INFO] [stdout] test test::testcases::test_123_testcases ... ok
+[INFO] [stdout] test test::testcases::test_140_testcases ... ok
+[INFO] [stdout] test test::testcases::test_141_testcases ... ok
+[INFO] [stdout] test test::testcases::test_142_testcases ... ok
+[INFO] [stdout] test test::testcases::test_143_testcases ... ok
+[INFO] [stdout] test test::testcases::test_144_testcases ... ok
+[INFO] [stdout] test test::testcases::test_145_testcases ... ok
+[INFO] [stdout] test test::testcases::test_146_testcases ... ok
+[INFO] [stdout] test test::testcases::test_147_testcases ... ok
+[INFO] [stdout] test test::testcases::test_148_testcases ... ok
+[INFO] [stdout] test test::testcases::test_149_testcases ... ok
+[INFO] [stdout] test test::testcases::test_14_testcases ... ok
+[INFO] [stdout] test test::testcases::test_150_testcases ... ok
+[INFO] [stdout] test test::testcases::test_151_testcases ... ok
+[INFO] [stdout] test test::testcases::test_152_testcases ... ok
+[INFO] [stdout] test test::testcases::test_129_testcases ... ok
+[INFO] [stdout] test test::testcases::test_153_testcases ... ok
+[INFO] [stdout] test test::testcases::test_154_testcases ... ok
+[INFO] [stdout] test test::testcases::test_155_testcases ... ok
+[INFO] [stdout] test test::testcases::test_157_testcases ... ok
+[INFO] [stdout] test test::testcases::test_156_testcases ... ok
+[INFO] [stdout] test test::testcases::test_159_testcases ... ok
+[INFO] [stdout] test test::testcases::test_158_testcases ... ok
+[INFO] [stdout] test test::testcases::test_15_testcases ... ok
+[INFO] [stdout] test test::testcases::test_160_testcases ... ok
+[INFO] [stdout] test test::testcases::test_161_testcases ... ok
+[INFO] [stdout] test test::testcases::test_162_testcases ... ok
+[INFO] [stdout] test test::testcases::test_163_testcases ... ok
+[INFO] [stdout] test test::testcases::test_132_testcases ... ok
+[INFO] [stdout] test test::testcases::test_164_testcases ... ok
+[INFO] [stdout] test test::testcases::test_166_testcases ... ok
+[INFO] [stdout] test test::testcases::test_165_testcases ... ok
+[INFO] [stdout] test test::testcases::test_167_testcases ... ok
+[INFO] [stdout] test test::testcases::test_168_testcases ... ok
+[INFO] [stdout] test test::testcases::test_169_testcases ... ok
+[INFO] [stdout] test test::testcases::test_170_testcases ... ok
+[INFO] [stdout] test test::testcases::test_171_testcases ... ok
+[INFO] [stdout] test test::testcases::test_172_testcases ... ok
+[INFO] [stdout] test test::testcases::test_173_testcases ... ok
+[INFO] [stdout] test test::testcases::test_174_testcases ... ok
+[INFO] [stdout] test test::testcases::test_175_testcases ... ok
+[INFO] [stdout] test test::testcases::test_13_testcases ... ok
+[INFO] [stdout] test test::testcases::test_176_testcases ... ok
+[INFO] [stdout] test test::testcases::test_177_testcases ... ok
+[INFO] [stdout] test test::testcases::test_178_testcases ... ok
+[INFO] [stdout] test test::testcases::test_179_testcases ... ok
+[INFO] [stdout] test test::testcases::test_180_testcases ... ok
+[INFO] [stdout] test test::testcases::test_181_testcases ... ok
+[INFO] [stdout] test test::testcases::test_183_testcases ... ok
+[INFO] [stdout] test test::testcases::test_184_testcases ... ok
+[INFO] [stdout] test test::testcases::test_185_testcases ... ok
+[INFO] [stdout] test test::testcases::test_186_testcases ... ok
+[INFO] [stdout] test test::testcases::test_187_testcases ... ok
+[INFO] [stdout] test test::testcases::test_16_testcases ... ok
+[INFO] [stdout] test test::testcases::test_188_testcases ... ok
+[INFO] [stdout] test test::testcases::test_189_testcases ... ok
+[INFO] [stdout] test test::testcases::test_190_testcases ... ok
+[INFO] [stdout] test test::testcases::test_191_testcases ... ok
+[INFO] [stdout] test test::testcases::test_192_testcases ... ok
+[INFO] [stdout] test test::testcases::test_193_testcases ... ok
+[INFO] [stdout] test test::testcases::test_194_testcases ... ok
+[INFO] [stdout] test test::testcases::test_195_testcases ... ok
+[INFO] [stdout] test test::testcases::test_17_testcases ... ok
+[INFO] [stdout] test test::testcases::test_196_testcases ... ok
+[INFO] [stdout] test test::testcases::test_198_testcases ... ok
+[INFO] [stdout] test test::testcases::test_197_testcases ... ok
+[INFO] [stdout] test test::testcases::test_199_testcases ... ok
+[INFO] [stdout] test test::testcases::test_19_testcases ... ok
+[INFO] [stdout] test test::testcases::test_200_testcases ... ok
+[INFO] [stdout] test test::testcases::test_201_testcases ... ok
+[INFO] [stdout] test test::testcases::test_202_testcases ... ok
+[INFO] [stdout] test test::testcases::test_203_testcases ... ok
+[INFO] [stdout] test test::testcases::test_204_testcases ... ok
+[INFO] [stdout] test test::testcases::test_205_testcases ... ok
+[INFO] [stdout] test test::testcases::test_206_testcases ... ok
+[INFO] [stdout] test test::testcases::test_207_testcases ... ok
+[INFO] [stdout] test test::testcases::test_182_testcases ... ok
+[INFO] [stdout] test test::testcases::test_18_testcases ... ok
+[INFO] [stdout] test test::testcases::test_20_testcases ... ok
+[INFO] [stdout] test test::testcases::test_210_testcases ... ok
+[INFO] [stdout] test test::testcases::test_211_testcases ... ok
+[INFO] [stdout] test test::testcases::test_1_testcases ... ok
+[INFO] [stdout] test test::testcases::test_212_testcases ... ok
+[INFO] [stdout] test test::testcases::test_213_testcases ... ok
+[INFO] [stdout] test test::testcases::test_214_testcases ... ok
+[INFO] [stdout] test test::testcases::test_215_testcases ... ok
+[INFO] [stdout] test test::testcases::test_208_testcases ... ok
+[INFO] [stdout] test test::testcases::test_21_testcases ... ok
+[INFO] [stdout] test test::testcases::test_22_testcases ... ok
+[INFO] [stdout] test test::testcases::test_23_testcases ... ok
+[INFO] [stdout] test test::testcases::test_24_testcases ... ok
+[INFO] [stdout] test test::testcases::test_25_testcases ... ok
+[INFO] [stdout] test test::testcases::test_26_testcases ... ok
+[INFO] [stdout] test test::testcases::test_27_testcases ... ok
+[INFO] [stdout] test test::testcases::test_28_testcases ... ok
+[INFO] [stdout] test test::testcases::test_29_testcases ... ok
+[INFO] [stdout] test test::testcases::test_209_testcases ... ok
+[INFO] [stdout] test test::testcases::test_2_testcases ... ok
+[INFO] [stdout] test test::testcases::test_30_testcases ... ok
+[INFO] [stdout] test test::testcases::test_33_testcases ... ok
+[INFO] [stdout] test test::testcases::test_34_testcases ... ok
+[INFO] [stdout] test test::testcases::test_35_testcases ... ok
+[INFO] [stdout] test test::testcases::test_36_testcases ... ok
+[INFO] [stdout] test test::testcases::test_31_testcases ... ok
+[INFO] [stdout] test test::testcases::test_39_testcases ... ok
+[INFO] [stdout] test test::testcases::test_3_testcases ... ok
+[INFO] [stdout] test test::testcases::test_40_testcases ... ok
+[INFO] [stdout] test test::testcases::test_32_testcases ... ok
+[INFO] [stdout] test test::testcases::test_37_testcases ... ok
+[INFO] [stdout] test test::testcases::test_43_testcases ... ok
+[INFO] [stdout] test test::testcases::test_44_testcases ... ok
+[INFO] [stdout] test test::testcases::test_38_testcases ... ok
+[INFO] [stdout] test test::testcases::test_46_testcases ... ok
+[INFO] [stdout] test test::testcases::test_41_testcases ... ok
+[INFO] [stdout] test test::testcases::test_48_testcases ... ok
+[INFO] [stdout] test test::testcases::test_49_testcases ... ok
+[INFO] [stdout] test test::testcases::test_42_testcases ... ok
+[INFO] [stdout] test test::testcases::test_45_testcases ... ok
+[INFO] [stdout] test test::testcases::test_47_testcases ... ok
+[INFO] [stdout] test test::testcases::test_52_testcases ... ok
+[INFO] [stdout] test test::testcases::test_4_testcases ... ok
+[INFO] [stdout] test test::testcases::test_50_testcases ... ok
+[INFO] [stdout] test test::testcases::test_55_testcases ... ok
+[INFO] [stdout] test test::testcases::test_56_testcases ... ok
+[INFO] [stdout] test test::testcases::test_51_testcases ... ok
+[INFO] [stdout] test test::testcases::test_58_testcases ... ok
+[INFO] [stdout] test test::testcases::test_59_testcases ... ok
+[INFO] [stdout] test test::testcases::test_5_testcases ... ok
+[INFO] [stdout] test test::testcases::test_60_testcases ... ok
+[INFO] [stdout] test test::testcases::test_61_testcases ... ok
+[INFO] [stdout] test test::testcases::test_53_testcases ... ok
+[INFO] [stdout] test test::testcases::test_54_testcases ... ok
+[INFO] [stdout] test test::testcases::test_64_testcases ... ok
+[INFO] [stdout] test test::testcases::test_57_testcases ... ok
+[INFO] [stdout] test test::testcases::test_66_testcases ... ok
+[INFO] [stdout] test test::testcases::test_67_testcases ... ok
+[INFO] [stdout] test test::testcases::test_62_testcases ... ok
+[INFO] [stdout] test test::testcases::test_63_testcases ... ok
+[INFO] [stdout] test test::testcases::test_6_testcases ... ok
+[INFO] [stdout] test test::testcases::test_70_testcases ... ok
+[INFO] [stdout] test test::testcases::test_65_testcases ... ok
+[INFO] [stdout] test test::testcases::test_71_testcases ... ok
+[INFO] [stdout] test test::testcases::test_68_testcases ... ok
+[INFO] [stdout] test test::testcases::test_74_testcases ... ok
+[INFO] [stdout] test test::testcases::test_75_testcases ... ok
+[INFO] [stdout] test test::testcases::test_69_testcases ... ok
+[INFO] [stdout] test test::testcases::test_76_testcases ... ok
+[INFO] [stdout] test test::testcases::test_77_testcases ... ok
+[INFO] [stdout] test test::testcases::test_72_testcases ... ok
+[INFO] [stdout] test test::testcases::test_79_testcases ... ok
+[INFO] [stdout] test test::testcases::test_80_testcases ... ok
+[INFO] [stdout] test test::testcases::test_73_testcases ... ok
+[INFO] [stdout] test test::testcases::test_81_testcases ... ok
+[INFO] [stdout] test test::testcases::test_82_testcases ... ok
+[INFO] [stdout] test test::testcases::test_78_testcases ... ok
+[INFO] [stdout] test test::testcases::test_84_testcases ... ok
+[INFO] [stdout] test test::testcases::test_85_testcases ... ok
+[INFO] [stdout] test test::testcases::test_86_testcases ... ok
+[INFO] [stdout] test test::testcases::test_7_testcases ... ok
+[INFO] [stdout] test test::testcases::test_88_testcases ... ok
+[INFO] [stdout] test test::testcases::test_89_testcases ... ok
+[INFO] [stdout] test test::testcases::test_8_testcases ... ok
+[INFO] [stdout] test test::testcases::test_90_testcases ... ok
+[INFO] [stdout] test test::testcases::test_83_testcases ... ok
+[INFO] [stdout] test test::testcases::test_91_testcases ... ok
+[INFO] [stdout] test test::testcases::test_92_testcases ... ok
+[INFO] [stdout] test test::testcases::test_93_testcases ... ok
+[INFO] [stdout] test test::testcases::test_94_testcases ... ok
+[INFO] [stdout] test test::testcases::test_95_testcases ... ok
+[INFO] [stdout] test test::testcases::test_87_testcases ... ok
+[INFO] [stdout] test test::testcases::test_96_testcases ... ok
+[INFO] [stdout] test test::testcases::test_97_testcases ... ok
+[INFO] [stdout] test test::testcases::test_98_testcases ... ok
+[INFO] [stdout] test test::testcases::test_99_testcases ... ok
+[INFO] [stdout] test test::testcases::test_9_testcases ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 227 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests docopt
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test src\dopt.rs - dopt::Error (line 36) ... ok
+[INFO] [stdout] test src\dopt.rs - dopt::Deserializer (line 625) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 11) ... ok
+[INFO] [stdout] test src\dopt.rs - dopt::ArgvMap::deserialize (line 345) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 48) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 89) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6664e26d75aefd5190c7e56a802daf8e37ee23e4a9f9b3ac7bc0ff9366e24e2c"`
+[INFO] running `"docker" "rm" "-f" "6664e26d75aefd5190c7e56a802daf8e37ee23e4a9f9b3ac7bc0ff9366e24e2c"`
+[INFO] [stdout] 6664e26d75aefd5190c7e56a802daf8e37ee23e4a9f9b3ac7bc0ff9366e24e2c

@@ -1,0 +1,82 @@
+[INFO] cloning repository dogHere/rust-bst
+[INFO] running `"git" "clone" "--bare" "git://github.com/dogHere/rust-bst.git" "work\\cache\\sources\\gh\\dogHere\\rust-bst"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\dogHere\rust-bst'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dogHere\\rust-bst" "work\\ex\\default\\sources\\stable\\gh\\dogHere\\rust-bst"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\dogHere\rust-bst'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dogHere\\rust-bst" "work\\ex\\default\\sources\\beta\\gh\\dogHere\\rust-bst"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\dogHere\rust-bst'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 39ad6b0b42bd5f4095800d2a1eb99f8492716f88
+[INFO] sha for GitHub repo dogHere/rust-bst: 39ad6b0b42bd5f4095800d2a1eb99f8492716f88
+[INFO] validating manifest of dogHere/rust-bst on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dogHere/rust-bst on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dogHere/rust-bst
+[INFO] finished frobbing dogHere/rust-bst
+[INFO] frobbed toml for dogHere/rust-bst written to work\ex\default\sources\stable\gh\dogHere\rust-bst\Cargo.toml
+[INFO] started frobbing dogHere/rust-bst
+[INFO] finished frobbing dogHere/rust-bst
+[INFO] frobbed toml for dogHere/rust-bst written to work\ex\default\sources\beta\gh\dogHere\rust-bst\Cargo.toml
+[INFO] crate dogHere/rust-bst already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dogHere/rust-bst against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\dogHere\\rust-bst,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 164a77d96dba23c26cd005aca523aa89f8a38f02862ec651f592770a431f3e58
+[INFO] running `"docker" "start" "-a" "164a77d96dba23c26cd005aca523aa89f8a38f02862ec651f592770a431f3e58"`
+[INFO] [stderr]    Compiling bst_rs v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.07s
+[INFO] running `"docker" "inspect" "164a77d96dba23c26cd005aca523aa89f8a38f02862ec651f592770a431f3e58"`
+[INFO] running `"docker" "rm" "-f" "164a77d96dba23c26cd005aca523aa89f8a38f02862ec651f592770a431f3e58"`
+[INFO] [stdout] 164a77d96dba23c26cd005aca523aa89f8a38f02862ec651f592770a431f3e58
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\dogHere\\rust-bst,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ee95eb4fa153a4d990601679aad2912dda037dd378fb568319a147f7e3b35aec
+[INFO] running `"docker" "start" "-a" "ee95eb4fa153a4d990601679aad2912dda037dd378fb568319a147f7e3b35aec"`
+[INFO] [stderr]    Compiling bst_rs v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.34s
+[INFO] running `"docker" "inspect" "ee95eb4fa153a4d990601679aad2912dda037dd378fb568319a147f7e3b35aec"`
+[INFO] running `"docker" "rm" "-f" "ee95eb4fa153a4d990601679aad2912dda037dd378fb568319a147f7e3b35aec"`
+[INFO] [stdout] ee95eb4fa153a4d990601679aad2912dda037dd378fb568319a147f7e3b35aec
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\dogHere\\rust-bst,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 108e77bd96896c34b9596baf1a8e2ddd06565ea207d8b429cdd0593e45873e90
+[INFO] running `"docker" "start" "-a" "108e77bd96896c34b9596baf1a8e2ddd06565ea207d8b429cdd0593e45873e90"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bst_rs-84a4f72b5fee76ea.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test tree::tests::new_tree ... ok
+[INFO] [stdout] test tree::tests::tree_delete ... ok
+[INFO] [stdout] test tree::tests::tree_exists ... ok
+[INFO] [stdout] test tree::tests::tree_find ... ok
+[INFO] [stdout] test tree::tests::tree_max ... ok
+[INFO] [stdout] test tree::tests::tree_min ... ok
+[INFO] [stdout] test tree::tests::tree_push ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bst_rs-26e1c381b9bafd29.exe
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests bst_rs
+[INFO] [stdout] 
+[INFO] [stdout] running 8 tests
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::exists (line 261) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 4) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::delete (line 291) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::find (line 232) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::new (line 128) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::min (line 176) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::max (line 205) ... ok
+[INFO] [stdout] test src\tree.rs - tree::Tree<T>::push (line 146) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "108e77bd96896c34b9596baf1a8e2ddd06565ea207d8b429cdd0593e45873e90"`
+[INFO] running `"docker" "rm" "-f" "108e77bd96896c34b9596baf1a8e2ddd06565ea207d8b429cdd0593e45873e90"`
+[INFO] [stdout] 108e77bd96896c34b9596baf1a8e2ddd06565ea207d8b429cdd0593e45873e90

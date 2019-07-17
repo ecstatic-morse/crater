@@ -1,0 +1,68 @@
+[INFO] crate hex 0.3.2 is already in cache
+[INFO] extracting crate hex 0.3.2 into work\ex\default\sources\nightly\reg\hex\0.3.2
+[INFO] extracting crate hex 0.3.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\hex\0.3.2
+[INFO] validating manifest of hex-0.3.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hex-0.3.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hex-0.3.2
+[INFO] finished frobbing hex-0.3.2
+[INFO] frobbed toml for hex-0.3.2 written to work\ex\default\sources\nightly\reg\hex\0.3.2\Cargo.toml
+[INFO] started frobbing hex-0.3.2
+[INFO] finished frobbing hex-0.3.2
+[INFO] frobbed toml for hex-0.3.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\hex\0.3.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hex-0.3.2 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 811aec72fbcdb2d638903d6a35592c1b02b6db24ba19f1132c721ffdfeba40a9
+[INFO] running `"docker" "start" "-a" "811aec72fbcdb2d638903d6a35592c1b02b6db24ba19f1132c721ffdfeba40a9"`
+[INFO] [stderr]    Compiling hex v0.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.22s
+[INFO] running `"docker" "inspect" "811aec72fbcdb2d638903d6a35592c1b02b6db24ba19f1132c721ffdfeba40a9"`
+[INFO] running `"docker" "rm" "-f" "811aec72fbcdb2d638903d6a35592c1b02b6db24ba19f1132c721ffdfeba40a9"`
+[INFO] [stdout] 811aec72fbcdb2d638903d6a35592c1b02b6db24ba19f1132c721ffdfeba40a9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8486644dea4cef2528c6f2b4864cf9dfccdd09f33d01b6664ccfb36e92c40e9e
+[INFO] running `"docker" "start" "-a" "8486644dea4cef2528c6f2b4864cf9dfccdd09f33d01b6664ccfb36e92c40e9e"`
+[INFO] [stderr]    Compiling hex v0.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.61s
+[INFO] running `"docker" "inspect" "8486644dea4cef2528c6f2b4864cf9dfccdd09f33d01b6664ccfb36e92c40e9e"`
+[INFO] running `"docker" "rm" "-f" "8486644dea4cef2528c6f2b4864cf9dfccdd09f33d01b6664ccfb36e92c40e9e"`
+[INFO] [stdout] 8486644dea4cef2528c6f2b4864cf9dfccdd09f33d01b6664ccfb36e92c40e9e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 837beffb0f21c84c91f449887868a3fc8d506894977edafd95da4ce091e4eac4
+[INFO] running `"docker" "start" "-a" "837beffb0f21c84c91f449887868a3fc8d506894977edafd95da4ce091e4eac4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hex-67d3e4b4d05971d4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test test::test_decode ... ok
+[INFO] [stdout] test test::test_empty ... ok
+[INFO] [stdout] test test::test_encode ... ok
+[INFO] [stdout] test test::test_from_hex_array ... ok
+[INFO] [stdout] test test::test_from_hex_okay_str ... ok
+[INFO] [stdout] test test::test_from_hex_okay_bytes ... ok
+[INFO] [stdout] test test::test_from_hex_whitespace ... ok
+[INFO] [stdout] test test::test_invalid_char ... ok
+[INFO] [stdout] test test::test_invalid_length ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests hex
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test src\lib.rs - decode (line 283) ... ok
+[INFO] [stdout] test src\lib.rs - FromHex (line 132) ... ok
+[INFO] [stdout] test src\lib.rs - ToHex (line 38) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 19) ... ok
+[INFO] [stdout] test src\lib.rs - encode_upper (line 265) ... ok
+[INFO] [stdout] test src\lib.rs - encode (line 247) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "837beffb0f21c84c91f449887868a3fc8d506894977edafd95da4ce091e4eac4"`
+[INFO] running `"docker" "rm" "-f" "837beffb0f21c84c91f449887868a3fc8d506894977edafd95da4ce091e4eac4"`
+[INFO] [stdout] 837beffb0f21c84c91f449887868a3fc8d506894977edafd95da4ce091e4eac4

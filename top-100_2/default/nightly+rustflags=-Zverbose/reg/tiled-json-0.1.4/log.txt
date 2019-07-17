@@ -1,0 +1,1096 @@
+[INFO] fetching crate tiled-json 0.1.4...
+[INFO] extracting crate tiled-json 0.1.4 into work\ex\default\sources\nightly\reg\tiled-json\0.1.4
+[INFO] extracting crate tiled-json 0.1.4 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tiled-json\0.1.4
+[INFO] validating manifest of tiled-json-0.1.4 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tiled-json-0.1.4 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tiled-json-0.1.4
+[INFO] finished frobbing tiled-json-0.1.4
+[INFO] frobbed toml for tiled-json-0.1.4 written to work\ex\default\sources\nightly\reg\tiled-json\0.1.4\Cargo.toml
+[INFO] started frobbing tiled-json-0.1.4
+[INFO] finished frobbing tiled-json-0.1.4
+[INFO] frobbed toml for tiled-json-0.1.4 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tiled-json\0.1.4\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_macros v0.7.15
+[INFO] [stderr]   Downloaded quasi_macros v0.16.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tiled-json-0.1.4 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\tiled-json\\0.1.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d8978daea302177a9362cf01a5bc23df085c6e6c824681e95f0593d028c7edc9
+[INFO] running `"docker" "start" "-a" "d8978daea302177a9362cf01a5bc23df085c6e6c824681e95f0593d028c7edc9"`
+[INFO] [stderr]    Compiling aster v0.22.1
+[INFO] [stderr]    Compiling serde_codegen v0.7.15
+[INFO] [stderr]    Compiling quasi v0.16.0
+[INFO] [stderr]    Compiling serde_codegen_internals v0.4.0
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:33:13
+[INFO] [stderr]    |
+[INFO] [stderr] 33 | use syntax::codemap::{DUMMY_SP, Spanned, dummy_spanned};
+[INFO] [stderr]    |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\ast.rs:2:5
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap;
+[INFO] [stderr] 
+[INFO] [stderr]   |     ^^^^^^^^^^^^^^^ no `codemap` in the root
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lib.rs:13:13
+[INFO] [stderr]    |
+[INFO] [stderr] 13 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]    |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:5:13
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use syntax::codemap::{Span, Spanned, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\arm.rs:6:13
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\attr.rs:5:13
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use syntax::codemap::{DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::fold`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:7:13
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | use syntax::fold::Folder;
+[INFO] [stderr]   |             ^^^^ could not find `fold` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\block.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\constant.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::parse::token::InternedString`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:9:34
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use syntax::parse::token::{self, InternedString};
+[INFO] [stderr]   |                                  ^^^^^^^^^^^^^^ no `InternedString` in `parse::token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::parse::parse_tts_from_source_str`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:36:37
+[INFO] [stderr]    |
+[INFO] [stderr] 36 | use syntax::parse::{self, classify, parse_tts_from_source_str, token};
+[INFO] [stderr]    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]    |                                     |
+[INFO] [stderr]    |                                     no `parse_tts_from_source_str` in `parse`
+[INFO] [stderr]    |                                     help: a similar name exists in the module: `parse_crate_from_source_str`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\expr.rs:6:13
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | use syntax::codemap::{DUMMY_SP, Span, Spanned, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::util::ThinVec`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:40:5
+[INFO] [stderr]    |
+[INFO] [stderr] 40 | use syntax::util::ThinVec;
+[INFO] [stderr]    |     ^^^^^^^^^^^^^^^^^^^^^ no `ThinVec` in `util`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::print::pprust::lit_to_string`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:11:29
+[INFO] [stderr]    |
+[INFO] [stderr] 11 | use syntax::print::pprust::{lit_to_string, meta_item_to_string};
+[INFO] [stderr]    |                             ^^^^^^^^^^^^^
+[INFO] [stderr]    |                             |
+[INFO] [stderr]    |                             no `lit_to_string` in `print::pprust`
+[INFO] [stderr]    |                             help: a similar name exists in the module: `pat_to_string`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\fn_decl.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:144:9
+[INFO] [stderr]     |
+[INFO] [stderr] 144 |         panictry!(parse_tts_from_source_str("<quote expansion>".to_string(), s, cx.cfg(), cx.parse_sess()))
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:159:9
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |         panictry!(parse_tts_from_source_str("<quote expansion>".to_string(), s, cx.cfg(), cx.parse_sess()))
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::abi`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:5:13
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use syntax::abi::Abi;
+[INFO] [stderr]   |             ^^^ could not find `abi` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:344:9
+[INFO] [stderr]     |
+[INFO] [stderr] 344 |         panictry!(parse::parse_item_from_source_str(
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:352:9
+[INFO] [stderr]     |
+[INFO] [stderr] 352 |         panictry!(parse::parse_stmt_from_source_str(
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:7:13
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | use syntax::codemap::{DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:360:9
+[INFO] [stderr]     |
+[INFO] [stderr] 360 |         panictry!(parse::parse_expr_from_source_str(
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::parse::token::keywords`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:8:5
+[INFO] [stderr]   |
+[INFO] [stderr] 8 | use syntax::parse::token::keywords;
+[INFO] [stderr]   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `keywords` in `parse::token`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:368:9
+[INFO] [stderr]     |
+[INFO] [stderr] 368 |         panictry!(parse::parse_tts_from_source_str(
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:377:9
+[INFO] [stderr]     |
+[INFO] [stderr] 377 |         panictry!(parser.parse_expr())
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lit.rs:5:13
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:381:9
+[INFO] [stderr]     |
+[INFO] [stderr] 381 |         panictry!(parser.parse_item())
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved imports `syntax::codemap`, `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\mac.rs:2:23
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{self, DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^   ^^^^ no `codemap` in the root
+[INFO] [stderr]   |             |
+[INFO] [stderr]   |             could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:385:9
+[INFO] [stderr]     |
+[INFO] [stderr] 385 |         panictry!(parser.parse_pat())
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `quote` in `ext`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\mac.rs:5:18
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use syntax::ext::quote::rt::ToTokens;
+[INFO] [stderr]   |                  ^^^^^ could not find `quote` in `ext`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:389:9
+[INFO] [stderr]     |
+[INFO] [stderr] 389 |         panictry!(parser.parse_arm())
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:393:9
+[INFO] [stderr]     |
+[INFO] [stderr] 393 |         panictry!(parser.parse_ty())
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::ext::base::DummyMacroLoader`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\mac.rs:3:25
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | use syntax::ext::base::{DummyMacroLoader, ExtCtxt};
+[INFO] [stderr]   |                         ^^^^^^^^^^^^^^^^ no `DummyMacroLoader` in `ext::base`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:397:5
+[INFO] [stderr]     |
+[INFO] [stderr] 397 |     panictry!(parser.parse_stmt())
+[INFO] [stderr]     |     ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::abi`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\method.rs:1:13
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use syntax::abi::Abi;
+[INFO] [stderr]   |             ^^^ could not find `abi` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:401:9
+[INFO] [stderr]     |
+[INFO] [stderr] 401 |         panictry!(parser.parse_attribute(permit_inner))
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\method.rs:3:13
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\pat.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span, Spanned, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\qpath.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\self_.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\stmt.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\struct_field.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:4:13
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\variant.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span, respan};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\variant_data.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:2:13
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use syntax::codemap::{DUMMY_SP, Span};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `panictry!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:587:15
+[INFO] [stderr]     |
+[INFO] [stderr] 587 |     let tts = panictry!(parse::parse_tts_from_source_str(
+[INFO] [stderr]     |               ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0532]: expected tuple struct/variant, found unit variant `ast::MetaItemKind::Word`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:144:21
+[INFO] [stderr]     |
+[INFO] [stderr] 144 |                     ast::MetaItemKind::Word(ref name) if name == &"deny_unknown_fields" => {
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^^^^^^^ not a tuple struct/variant
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `intern_and_get_ident` in module `token`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:301:28
+[INFO] [stderr]     |
+[INFO] [stderr] 301 |             None => token::intern_and_get_ident(&index.to_string()),
+[INFO] [stderr]     |                            ^^^^^^^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0532]: expected tuple struct/variant, found unit variant `ast::MetaItemKind::Word`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:325:21
+[INFO] [stderr]     |
+[INFO] [stderr] 325 |                     ast::MetaItemKind::Word(ref name) if name == &"default" => {
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^^^^^^^ not a tuple struct/variant
+[INFO] [stderr] 
+[INFO] [stderr] error[E0532]: expected tuple struct/variant, found unit variant `ast::MetaItemKind::Word`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:337:21
+[INFO] [stderr]     |
+[INFO] [stderr] 337 |                     ast::MetaItemKind::Word(ref name) if name == &"skip_serializing" => {
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^^^^^^^ not a tuple struct/variant
+[INFO] [stderr] 
+[INFO] [stderr] error[E0532]: expected tuple struct/variant, found unit variant `ast::MetaItemKind::Word`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:342:21
+[INFO] [stderr]     |
+[INFO] [stderr] 342 |                     ast::MetaItemKind::Word(ref name) if name == &"skip_deserializing" => {
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^^^^^^^ not a tuple struct/variant
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `Delimited` in module `tokenstream`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:533:42
+[INFO] [stderr]     |
+[INFO] [stderr] 533 |                     Rc::new(tokenstream::Delimited {
+[INFO] [stderr]     |                                          ^^^^^^^^^ not found in `tokenstream`
+[INFO] [stderr] help: possible candidates are found in other modules, you can import them into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::ext::tt::quoted::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::ext::tt::quoted::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::tokenstream::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `SequenceRepetition` in module `tokenstream`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\serde_codegen_internals-0.4.0\src\attr.rs:544:42
+[INFO] [stderr]     |
+[INFO] [stderr] 544 |                     Rc::new(tokenstream::SequenceRepetition {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^ not found in `tokenstream`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::ext::tt::quoted::SequenceRepetition;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `generics_to_string` in module `pprust`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:142:25
+[INFO] [stderr]     |
+[INFO] [stderr] 142 |         let s = pprust::generics_to_string(self);
+[INFO] [stderr]     |                         ^^^^^^^^^^^^^^^^^^ help: a function with a similar name exists: `expr_to_string`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `NtArm` in module `token`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:192:68
+[INFO] [stderr]     |
+[INFO] [stderr] 192 |         vec![TokenTree::Token(DUMMY_SP, token::Interpolated(token::NtArm(self.clone())))]
+[INFO] [stderr]     |                                                                    ^^^^^ not found in `token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `Delimited` in module `tokenstream`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:230:69
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |         r.push(TokenTree::Delimited(self.span, Rc::new(tokenstream::Delimited {
+[INFO] [stderr]     |                                                                     ^^^^^^^^^ not found in `tokenstream`
+[INFO] [stderr] help: possible candidates are found in other modules, you can import them into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::ext::tt::quoted::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::ext::tt::quoted::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::tokenstream::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `intern_and_get_ident` in module `token`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:244:20
+[INFO] [stderr]     |
+[INFO] [stderr] 244 |             token::intern_and_get_ident(self), ast::StrStyle::Cooked);
+[INFO] [stderr]     |                    ^^^^^^^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `Delimited` in module `tokenstream`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:251:66
+[INFO] [stderr]     |
+[INFO] [stderr] 251 |         vec![TokenTree::Delimited(DUMMY_SP, Rc::new(tokenstream::Delimited {
+[INFO] [stderr]     |                                                                  ^^^^^^^^^ not found in `tokenstream`
+[INFO] [stderr] help: possible candidates are found in other modules, you can import them into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::ext::tt::quoted::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::ext::tt::quoted::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | use syntax::tokenstream::TokenTree::Delimited;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `Attribute_` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:559:26
+[INFO] [stderr]     |
+[INFO] [stderr] 559 | impl_wrap_repeat! { ast::Attribute_ }
+[INFO] [stderr]     |                          ^^^^^^^^^^ help: a struct with a similar name exists: `Attribute`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0603]: module `classify` is private
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:36:27
+[INFO] [stderr]    |
+[INFO] [stderr] 36 | use syntax::parse::{self, classify, parse_tts_from_source_str, token};
+[INFO] [stderr]    |                           ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 13 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0422, E0425, E0432, E0532.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0422`.
+[INFO] [stderr] error[E0207]: the type parameter `T` is not constrained by the impl trait, self type, or predicates
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:72:6
+[INFO] [stderr]    |
+[INFO] [stderr] 72 | impl<T: ToTokens> ToTokens for Spanned<T> {
+[INFO] [stderr]    |      ^ unconstrained type parameter
+[INFO] [stderr] 
+[INFO] [stderr] error[E0207]: the type parameter `T` is not constrained by the impl trait, self type, or predicates
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\quasi-0.16.0\src\lib.rs:535:6
+[INFO] [stderr]     |
+[INFO] [stderr] 535 | impl<T: Clone> IntoWrappedRepeat for Spanned<T> {
+[INFO] [stderr]     |      ^ unconstrained type parameter
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 25 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0207, E0412, E0422, E0425, E0432, E0603.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0207`.
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `PathListItemKind` in `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:426:49
+[INFO] [stderr]     |
+[INFO] [stderr] 426 |         self.idents.push(respan(self.span, ast::PathListItemKind::Mod {
+[INFO] [stderr]     |                                                 ^^^^^^^^^^^^^^^^ could not find `PathListItemKind` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `PathListItemKind` in `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:436:49
+[INFO] [stderr]     |
+[INFO] [stderr] 436 |         self.idents.push(respan(self.span, ast::PathListItemKind::Ident {
+[INFO] [stderr]     |                                                 ^^^^^^^^^^^^^^^^ could not find `PathListItemKind` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `serde_codegen_internals`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: Could not compile `quasi`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `PathParameters` in `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:286:31
+[INFO] [stderr]     |
+[INFO] [stderr] 286 |         let parameters = ast::PathParameters::AngleBracketed(data);
+[INFO] [stderr]     |                               ^^^^^^^^^^^^^^ could not find `PathParameters` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `TyParamBound` in `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:98:31
+[INFO] [stderr]    |
+[INFO] [stderr] 98 |         self.bounds.push(ast::TyParamBound::RegionTyParamBound(lifetime));
+[INFO] [stderr]    |                               ^^^^^^^^^^^^ could not find `TyParamBound` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `TyParamBound` in `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:174:26
+[INFO] [stderr]     |
+[INFO] [stderr] 174 |         let bound = ast::TyParamBound::TraitTyParamBound(poly_trait, modifier);
+[INFO] [stderr]     |                          ^^^^^^^^^^^^ could not find `TyParamBound` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `TyParamBound` in `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:206:35
+[INFO] [stderr]     |
+[INFO] [stderr] 206 |         self.callback.invoke(ast::TyParamBound::RegionTyParamBound(lifetime))
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^ could not find `TyParamBound` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `Attribute_` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\attr.rs:51:43
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |         let attr = respan(self.span, ast::Attribute_ {
+[INFO] [stderr]    |                                           ^^^^^^^^^^ help: a struct with a similar name exists: `Attribute`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\attr.rs:171:18
+[INFO] [stderr]     |
+[INFO] [stderr] 171 |     name: token::InternedString,
+[INFO] [stderr]     |                  ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::symbol::InternedString;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\attr.rs:278:18
+[INFO] [stderr]     |
+[INFO] [stderr] 278 |     name: token::InternedString,
+[INFO] [stderr]     |                  ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 1   | use syntax::symbol::InternedString;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:20:25
+[INFO] [stderr]    |
+[INFO] [stderr] 20 |     lifetimes: Vec<ast::LifetimeDef>,
+[INFO] [stderr]    |                         ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:21:25
+[INFO] [stderr]    |
+[INFO] [stderr] 21 |     ty_params: Vec<ast::TyParam>,
+[INFO] [stderr]    |                         ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:88:51
+[INFO] [stderr]    |
+[INFO] [stderr] 88 |     pub fn with_lifetime(mut self, lifetime: ast::LifetimeDef) -> Self {
+[INFO] [stderr]    |                                                   ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:106:41
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         where I: IntoIterator<Item=ast::TyParam>,
+[INFO] [stderr]     |                                         ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:122:51
+[INFO] [stderr]     |
+[INFO] [stderr] 122 |     pub fn with_ty_param(mut self, ty_param: ast::TyParam) -> Self {
+[INFO] [stderr]     |                                                   ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:225:21
+[INFO] [stderr]     |
+[INFO] [stderr] 225 | impl<F> Invoke<ast::LifetimeDef> for GenericsBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:230:36
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |     fn invoke(self, lifetime: ast::LifetimeDef) -> Self {
+[INFO] [stderr]     |                                    ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:235:21
+[INFO] [stderr]     |
+[INFO] [stderr] 235 | impl<F> Invoke<ast::TyParam> for GenericsBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\generics.rs:240:36
+[INFO] [stderr]     |
+[INFO] [stderr] 240 |     fn invoke(self, ty_param: ast::TyParam) -> Self {
+[INFO] [stderr]     |                                    ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `ViewPath_` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:112:44
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |     pub fn build_use(self, view_path: ast::ViewPath_) -> F::Result {
+[INFO] [stderr]     |                                            ^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `ViewPathSimple` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:382:37
+[INFO] [stderr]     |
+[INFO] [stderr] 382 |         self.builder.build_use(ast::ViewPathSimple(id.to_ident(), self.path))
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `ViewPathGlob` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:394:37
+[INFO] [stderr]     |
+[INFO] [stderr] 394 |         self.builder.build_use(ast::ViewPathGlob(self.path))
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `PathListItem` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:414:22
+[INFO] [stderr]     |
+[INFO] [stderr] 414 |     idents: Vec<ast::PathListItem>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `ViewPathList` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:445:37
+[INFO] [stderr]     |
+[INFO] [stderr] 445 |         self.builder.build_use(ast::ViewPathList(self.path, self.idents))
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0423]: expected function, found struct `ast::Name`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:728:38
+[INFO] [stderr]     |
+[INFO] [stderr] 728 |         self.builder.build_item_kind(ast::Name(0).to_ident(), item_mac)
+[INFO] [stderr]     |                                      ^^^^^^^^^ constructor is not visible here due to private fields
+[INFO] [stderr] help: possible better candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 3   | use syntax::print::pprust::AnnNode::Name;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:806:22
+[INFO] [stderr]     |
+[INFO] [stderr] 806 |     bounds: Vec<ast::TyParamBound>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:828:37
+[INFO] [stderr]     |
+[INFO] [stderr] 828 |         where I: Iterator<Item=ast::TyParamBound>,
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:834:45
+[INFO] [stderr]     |
+[INFO] [stderr] 834 |     pub fn with_bound(mut self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:899:21
+[INFO] [stderr]     |
+[INFO] [stderr] 899 | impl<F> Invoke<ast::TyParamBound> for ItemTraitBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:904:33
+[INFO] [stderr]     |
+[INFO] [stderr] 904 |     fn invoke(self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:1073:22
+[INFO] [stderr]      |
+[INFO] [stderr] 1073 |     bounds: Vec<ast::TyParamBound>,
+[INFO] [stderr]      |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:1080:37
+[INFO] [stderr]      |
+[INFO] [stderr] 1080 |         where I: Iterator<Item=ast::TyParamBound>,
+[INFO] [stderr]      |                                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:1086:45
+[INFO] [stderr]      |
+[INFO] [stderr] 1086 |     pub fn with_bound(mut self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]      |                                             ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:1115:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1115 | impl<F> Invoke<ast::TyParamBound> for ItemTraitTypeBuilder<F>
+[INFO] [stderr]      |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\item.rs:1120:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1120 |     fn invoke(self, bound: ast::TyParamBound) -> Self::Result {
+[INFO] [stderr]      |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:32:40
+[INFO] [stderr]    |
+[INFO] [stderr] 32 |     fn into_lifetime_def(self) -> ast::LifetimeDef;
+[INFO] [stderr]    |                                        ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:35:31
+[INFO] [stderr]    |
+[INFO] [stderr] 35 | impl IntoLifetimeDef for ast::LifetimeDef {
+[INFO] [stderr]    |                               ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:36:40
+[INFO] [stderr]    |
+[INFO] [stderr] 36 |     fn into_lifetime_def(self) -> ast::LifetimeDef {
+[INFO] [stderr]    |                                        ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:42:40
+[INFO] [stderr]    |
+[INFO] [stderr] 42 |     fn into_lifetime_def(self) -> ast::LifetimeDef {
+[INFO] [stderr]    |                                        ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:43:14
+[INFO] [stderr]    |
+[INFO] [stderr] 43 |         ast::LifetimeDef {
+[INFO] [stderr]    |              ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:51:40
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |     fn into_lifetime_def(self) -> ast::LifetimeDef {
+[INFO] [stderr]    |                                        ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:57:40
+[INFO] [stderr]    |
+[INFO] [stderr] 57 |     fn into_lifetime_def(self) -> ast::LifetimeDef {
+[INFO] [stderr]    |                                        ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:79:26
+[INFO] [stderr]    |
+[INFO] [stderr] 79 |     where F: Invoke<ast::LifetimeDef>,
+[INFO] [stderr]    |                          ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lifetime.rs:111:35
+[INFO] [stderr]     |
+[INFO] [stderr] 111 |         self.callback.invoke(ast::LifetimeDef {
+[INFO] [stderr]     |                                   ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0405]: cannot find trait `ToTokens` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\mac.rs:64:43
+[INFO] [stderr]    |
+[INFO] [stderr] 64 |         where I: IntoIterator<Item=T>, T: ToTokens
+[INFO] [stderr]    |                                           ^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0405]: cannot find trait `ToTokens` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\mac.rs:70:18
+[INFO] [stderr]    |
+[INFO] [stderr] 70 |         where T: ToTokens
+[INFO] [stderr]    |                  ^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `intern` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\name.rs:18:16
+[INFO] [stderr]    |
+[INFO] [stderr] 18 |         token::intern(*self)
+[INFO] [stderr]    |                ^^^^^^ not found in `token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TypeBinding` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:182:24
+[INFO] [stderr]     |
+[INFO] [stderr] 182 |     bindings: Vec<ast::TypeBinding>,
+[INFO] [stderr]     |                        ^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TypeBinding` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:264:49
+[INFO] [stderr]     |
+[INFO] [stderr] 264 |     pub fn with_binding(mut self, binding: ast::TypeBinding) -> Self {
+[INFO] [stderr]     |                                                 ^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `AngleBracketedParameterData` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:280:25
+[INFO] [stderr]     |
+[INFO] [stderr] 280 |         let data = ast::AngleBracketedParameterData {
+[INFO] [stderr]     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `TypeBinding` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\path.rs:321:40
+[INFO] [stderr]     |
+[INFO] [stderr] 321 |         self.builder.with_binding(ast::TypeBinding {
+[INFO] [stderr]     |                                        ^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:12:44
+[INFO] [stderr]    |
+[INFO] [stderr] 12 |     fn to_interned_string(&self) -> token::InternedString;
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:15:34
+[INFO] [stderr]    |
+[INFO] [stderr] 15 | impl ToInternedString for token::InternedString {
+[INFO] [stderr]    |                                  ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:16:44
+[INFO] [stderr]    |
+[INFO] [stderr] 16 |     fn to_interned_string(&self) -> token::InternedString {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:22:44
+[INFO] [stderr]    |
+[INFO] [stderr] 22 |     fn to_interned_string(&self) -> token::InternedString {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `intern_and_get_ident` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:23:16
+[INFO] [stderr]    |
+[INFO] [stderr] 23 |         token::intern_and_get_ident(self)
+[INFO] [stderr]    |                ^^^^^^^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:28:44
+[INFO] [stderr]    |
+[INFO] [stderr] 28 |     fn to_interned_string(&self) -> token::InternedString {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:34:44
+[INFO] [stderr]    |
+[INFO] [stderr] 34 |     fn to_interned_string(&self) -> token::InternedString {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\str.rs:40:44
+[INFO] [stderr]    |
+[INFO] [stderr] 40 |     fn to_interned_string(&self) -> token::InternedString {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 1  | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:445:22
+[INFO] [stderr]     |
+[INFO] [stderr] 445 |     bounds: Vec<ast::TyParamBound>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:452:37
+[INFO] [stderr]     |
+[INFO] [stderr] 452 |         where I: Iterator<Item=ast::TyParamBound>,
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:458:45
+[INFO] [stderr]     |
+[INFO] [stderr] 458 |     pub fn with_bound(mut self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:497:21
+[INFO] [stderr]     |
+[INFO] [stderr] 497 | impl<F> Invoke<ast::TyParamBound> for TyObjectSumTyBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty.rs:502:33
+[INFO] [stderr]     |
+[INFO] [stderr] 502 |     fn invoke(self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:18:22
+[INFO] [stderr]    |
+[INFO] [stderr] 18 |     bounds: Vec<ast::TyParamBound>,
+[INFO] [stderr]    |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:29:41
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     pub fn from_ty_param(ty_param: ast::TyParam) -> Self {
+[INFO] [stderr]    |                                         ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:35:26
+[INFO] [stderr]    |
+[INFO] [stderr] 35 |     where F: Invoke<ast::TyParam>,
+[INFO] [stderr]    |                          ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:49:68
+[INFO] [stderr]    |
+[INFO] [stderr] 49 |     pub fn from_ty_param_with_callback(callback: F, ty_param: ast::TyParam) -> Self {
+[INFO] [stderr]    |                                                                    ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:74:45
+[INFO] [stderr]    |
+[INFO] [stderr] 74 |     pub fn with_bound(mut self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]    |                                             ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0422]: cannot find struct, variant or union type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:103:35
+[INFO] [stderr]     |
+[INFO] [stderr] 103 |         self.callback.invoke(ast::TyParam {
+[INFO] [stderr]     |                                   ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:114:26
+[INFO] [stderr]     |
+[INFO] [stderr] 114 |     where F: Invoke<ast::TyParam>,
+[INFO] [stderr]     |                          ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:123:21
+[INFO] [stderr]     |
+[INFO] [stderr] 123 | impl<F> Invoke<ast::TyParamBound> for TyParamBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:124:26
+[INFO] [stderr]     |
+[INFO] [stderr] 124 |     where F: Invoke<ast::TyParam>,
+[INFO] [stderr]     |                          ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:128:33
+[INFO] [stderr]     |
+[INFO] [stderr] 128 |     fn invoke(self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:134:26
+[INFO] [stderr]     |
+[INFO] [stderr] 134 |     where F: Invoke<ast::TyParam>,
+[INFO] [stderr]     |                          ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:157:26
+[INFO] [stderr]     |
+[INFO] [stderr] 157 |     where F: Invoke<ast::TyParamBound>,
+[INFO] [stderr]     |                          ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:218:26
+[INFO] [stderr]     |
+[INFO] [stderr] 218 |     where F: Invoke<ast::TyParamBound>,
+[INFO] [stderr]     |                          ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:233:25
+[INFO] [stderr]     |
+[INFO] [stderr] 233 |     lifetimes: Vec<ast::LifetimeDef>,
+[INFO] [stderr]     |                         ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:282:21
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | impl<F> Invoke<ast::LifetimeDef> for PolyTraitRefBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\ty_param.rs:287:36
+[INFO] [stderr]     |
+[INFO] [stderr] 287 |     fn invoke(self, lifetime: ast::LifetimeDef) -> Self {
+[INFO] [stderr]     |                                    ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:110:31
+[INFO] [stderr]     |
+[INFO] [stderr] 110 |     bound_lifetimes: Vec<ast::LifetimeDef>,
+[INFO] [stderr]     |                               ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:129:41
+[INFO] [stderr]     |
+[INFO] [stderr] 129 |     pub fn with_bound(self, bound: ast::TyParamBound) -> WhereBoundPredicateTyBoundsBuilder<F> {
+[INFO] [stderr]     |                                         ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:169:21
+[INFO] [stderr]     |
+[INFO] [stderr] 169 | impl<F> Invoke<ast::LifetimeDef> for WhereBoundPredicateTyBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:174:36
+[INFO] [stderr]     |
+[INFO] [stderr] 174 |     fn invoke(self, lifetime: ast::LifetimeDef) -> Self {
+[INFO] [stderr]     |                                    ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:179:21
+[INFO] [stderr]     |
+[INFO] [stderr] 179 | impl<F> Invoke<ast::TyParamBound> for WhereBoundPredicateTyBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:184:33
+[INFO] [stderr]     |
+[INFO] [stderr] 184 |     fn invoke(self, bound: ast::TyParamBound) -> Self::Result {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:195:31
+[INFO] [stderr]     |
+[INFO] [stderr] 195 |     bound_lifetimes: Vec<ast::LifetimeDef>,
+[INFO] [stderr]     |                               ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:196:22
+[INFO] [stderr]     |
+[INFO] [stderr] 196 |     bounds: Vec<ast::TyParamBound>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:215:45
+[INFO] [stderr]     |
+[INFO] [stderr] 215 |     pub fn with_bound(mut self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:250:21
+[INFO] [stderr]     |
+[INFO] [stderr] 250 | impl<F> Invoke<ast::LifetimeDef> for WhereBoundPredicateTyBoundsBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `LifetimeDef` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:255:36
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |     fn invoke(self, lifetime: ast::LifetimeDef) -> Self {
+[INFO] [stderr]     |                                    ^^^^^^^^^^^ help: a struct with a similar name exists: `Lifetime`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:260:21
+[INFO] [stderr]     |
+[INFO] [stderr] 260 | impl<F> Invoke<ast::TyParamBound> for WhereBoundPredicateTyBoundsBuilder<F>
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParamBound` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\where_predicate.rs:265:33
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |     fn invoke(self, bound: ast::TyParamBound) -> Self {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `InternedString` in module `token`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lib.rs:63:54
+[INFO] [stderr]    |
+[INFO] [stderr] 63 |     pub fn interned_string<S>(&self, s: S) -> token::InternedString
+[INFO] [stderr]    |                                                      ^^^^^^^^^^^^^^ not found in `token`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]    |
+[INFO] [stderr] 12 | use syntax::symbol::InternedString;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `TyParam` in module `ast`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\aster-0.22.1\src\lib.rs:123:48
+[INFO] [stderr]     |
+[INFO] [stderr] 123 |     pub fn from_ty_param(&self, ty_param: ast::TyParam) -> ty_param::TyParamBuilder {
+[INFO] [stderr]     |                                                ^^^^^^^ not found in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 123 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0405, E0412, E0422, E0423, E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0405`.
+[INFO] [stderr] error: Could not compile `aster`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "d8978daea302177a9362cf01a5bc23df085c6e6c824681e95f0593d028c7edc9"`
+[INFO] running `"docker" "rm" "-f" "d8978daea302177a9362cf01a5bc23df085c6e6c824681e95f0593d028c7edc9"`
+[INFO] [stdout] d8978daea302177a9362cf01a5bc23df085c6e6c824681e95f0593d028c7edc9

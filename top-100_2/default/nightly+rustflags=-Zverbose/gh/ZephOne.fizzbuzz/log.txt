@@ -1,0 +1,55 @@
+[INFO] cloning repository ZephOne/fizzbuzz
+[INFO] running `"git" "clone" "--bare" "git://github.com/ZephOne/fizzbuzz.git" "work\\cache\\sources\\gh\\ZephOne\\fizzbuzz"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ZephOne\fizzbuzz'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ZephOne\\fizzbuzz" "work\\ex\\default\\sources\\nightly\\gh\\ZephOne\\fizzbuzz"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\ZephOne\fizzbuzz'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ZephOne\\fizzbuzz" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ZephOne\\fizzbuzz"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ZephOne\fizzbuzz'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ce1a07c6c59419ea8f0d4c5c6bc39d186d85cbc6
+[INFO] sha for GitHub repo ZephOne/fizzbuzz: ce1a07c6c59419ea8f0d4c5c6bc39d186d85cbc6
+[INFO] validating manifest of ZephOne/fizzbuzz on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ZephOne/fizzbuzz on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ZephOne/fizzbuzz
+[INFO] finished frobbing ZephOne/fizzbuzz
+[INFO] frobbed toml for ZephOne/fizzbuzz written to work\ex\default\sources\nightly\gh\ZephOne\fizzbuzz\Cargo.toml
+[INFO] started frobbing ZephOne/fizzbuzz
+[INFO] finished frobbing ZephOne/fizzbuzz
+[INFO] frobbed toml for ZephOne/fizzbuzz written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ZephOne\fizzbuzz\Cargo.toml
+[INFO] crate ZephOne/fizzbuzz already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ZephOne/fizzbuzz against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ZephOne\\fizzbuzz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 81cf75f55053c73539b5a5ca9c10df757cfc899c311fa9a69f8e9337e3f949ee
+[INFO] running `"docker" "start" "-a" "81cf75f55053c73539b5a5ca9c10df757cfc899c311fa9a69f8e9337e3f949ee"`
+[INFO] [stderr]    Compiling fizzbuzz v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.76s
+[INFO] running `"docker" "inspect" "81cf75f55053c73539b5a5ca9c10df757cfc899c311fa9a69f8e9337e3f949ee"`
+[INFO] running `"docker" "rm" "-f" "81cf75f55053c73539b5a5ca9c10df757cfc899c311fa9a69f8e9337e3f949ee"`
+[INFO] [stdout] 81cf75f55053c73539b5a5ca9c10df757cfc899c311fa9a69f8e9337e3f949ee
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ZephOne\\fizzbuzz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 803175d40686e7872d3e2e62fa1f1401f9e0d01abca90e0198d16768018d2995
+[INFO] running `"docker" "start" "-a" "803175d40686e7872d3e2e62fa1f1401f9e0d01abca90e0198d16768018d2995"`
+[INFO] [stderr]    Compiling fizzbuzz v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.78s
+[INFO] running `"docker" "inspect" "803175d40686e7872d3e2e62fa1f1401f9e0d01abca90e0198d16768018d2995"`
+[INFO] running `"docker" "rm" "-f" "803175d40686e7872d3e2e62fa1f1401f9e0d01abca90e0198d16768018d2995"`
+[INFO] [stdout] 803175d40686e7872d3e2e62fa1f1401f9e0d01abca90e0198d16768018d2995
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ZephOne\\fizzbuzz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 443b37ab8a5ecb4c48645773277acbc70f222608a40ec2767f26eff0c9f6c393
+[INFO] running `"docker" "start" "-a" "443b37ab8a5ecb4c48645773277acbc70f222608a40ec2767f26eff0c9f6c393"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\fizzbuzz-af50697ce1a3072f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "443b37ab8a5ecb4c48645773277acbc70f222608a40ec2767f26eff0c9f6c393"`
+[INFO] running `"docker" "rm" "-f" "443b37ab8a5ecb4c48645773277acbc70f222608a40ec2767f26eff0c9f6c393"`
+[INFO] [stdout] 443b37ab8a5ecb4c48645773277acbc70f222608a40ec2767f26eff0c9f6c393

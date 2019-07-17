@@ -1,0 +1,134 @@
+[INFO] fetching crate lyon_geom 0.12.7...
+[INFO] extracting crate lyon_geom 0.12.7 into work\ex\default\sources\stable\reg\lyon_geom\0.12.7
+[INFO] extracting crate lyon_geom 0.12.7 into work\ex\default\sources\beta\reg\lyon_geom\0.12.7
+[INFO] validating manifest of lyon_geom-0.12.7 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of lyon_geom-0.12.7 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing lyon_geom-0.12.7
+[INFO] finished frobbing lyon_geom-0.12.7
+[INFO] frobbed toml for lyon_geom-0.12.7 written to work\ex\default\sources\stable\reg\lyon_geom\0.12.7\Cargo.toml
+[INFO] started frobbing lyon_geom-0.12.7
+[INFO] finished frobbing lyon_geom-0.12.7
+[INFO] frobbed toml for lyon_geom-0.12.7 written to work\ex\default\sources\beta\reg\lyon_geom\0.12.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded euclid v0.19.9
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing lyon_geom-0.12.7 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lyon_geom\\0.12.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 3413e42fd42d8651b6d7db4397b963293dbc2c2fdd73ed54f1709d8bf7fb1b3e
+[INFO] running `"docker" "start" "-a" "3413e42fd42d8651b6d7db4397b963293dbc2c2fdd73ed54f1709d8bf7fb1b3e"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling euclid_macros v0.1.0
+[INFO] [stderr]    Compiling euclid v0.19.9
+[INFO] [stderr]    Compiling lyon_geom v0.12.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 32.58s
+[INFO] running `"docker" "inspect" "3413e42fd42d8651b6d7db4397b963293dbc2c2fdd73ed54f1709d8bf7fb1b3e"`
+[INFO] running `"docker" "rm" "-f" "3413e42fd42d8651b6d7db4397b963293dbc2c2fdd73ed54f1709d8bf7fb1b3e"`
+[INFO] [stdout] 3413e42fd42d8651b6d7db4397b963293dbc2c2fdd73ed54f1709d8bf7fb1b3e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lyon_geom\\0.12.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 126c8b4f88c98233e9e8cb60eaed999472c3b226165789ed0d1a610bf8adb8e8
+[INFO] running `"docker" "start" "-a" "126c8b4f88c98233e9e8cb60eaed999472c3b226165789ed0d1a610bf8adb8e8"`
+[INFO] [stderr]    Compiling lyon_geom v0.12.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.74s
+[INFO] running `"docker" "inspect" "126c8b4f88c98233e9e8cb60eaed999472c3b226165789ed0d1a610bf8adb8e8"`
+[INFO] running `"docker" "rm" "-f" "126c8b4f88c98233e9e8cb60eaed999472c3b226165789ed0d1a610bf8adb8e8"`
+[INFO] [stdout] 126c8b4f88c98233e9e8cb60eaed999472c3b226165789ed0d1a610bf8adb8e8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lyon_geom\\0.12.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 29640bd71edf18f6552f1b6934d4adb2b0917ceb89bc8e61fcf44ceda75a3a72
+[INFO] running `"docker" "start" "-a" "29640bd71edf18f6552f1b6934d4adb2b0917ceb89bc8e61fcf44ceda75a3a72"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.23s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lyon_geom-48585916f2183c62.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 75 tests
+[INFO] [stdout] test arc::negative_flattening_step ... ok
+[INFO] [stdout] test arc::test_bounding_rect ... ok
+[INFO] [stdout] test arc::test_from_svg_arc ... ok
+[INFO] [stdout] test arc::test_to_quadratics_and_cubics ... ok
+[INFO] [stdout] test cubic_bezier::derivatives ... ok
+[INFO] [stdout] test cubic_bezier::fast_bounding_rect_for_cubic_bezier_segment ... ok
+[INFO] [stdout] test cubic_bezier::fat_line ... ok
+[INFO] [stdout] test cubic_bezier::is_linear ... ok
+[INFO] [stdout] test cubic_bezier::minimum_bounding_rect_for_cubic_bezier_segment ... ok
+[INFO] [stdout] test cubic_bezier::monotonic_solve_t_for_x ... ok
+[INFO] [stdout] test cubic_bezier::test_cubic_intersection_deduping ... ok
+[INFO] [stdout] test cubic_bezier::test_line_segment_intersections ... ok
+[INFO] [stdout] test cubic_bezier::test_monotonic ... ok
+[INFO] [stdout] test cubic_bezier::test_parameters_for_value ... ok
+[INFO] [stdout] test cubic_bezier::x_extrema_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier::x_maximum_t_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier::x_minimum_t_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier::y_extrema_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier::y_maximum_t_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier::y_minimum_t_for_simple_cubic_segment ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_control_point_touching ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_curve_curve_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_duplicated_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_endpoint_not_an_intersection ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_interior_endpoint ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_line_curve_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_line_line_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_loops ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_glancing_intersection ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_no_duplicated_root ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_point_curve_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_result_distance ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_self_intersections ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_similar_loops ... ok
+[INFO] [stdout] test cubic_to_quadratic::test_cubic_to_monotonic_quadratics ... ok
+[INFO] [stdout] test cubic_to_quadratic::test_cubic_to_quadratics ... ok
+[INFO] [stdout] test flatten_cubic::test_issue_19 ... ok
+[INFO] [stdout] test cubic_bezier_intersections::test_cubic_subcurve_intersections ... ok
+[INFO] [stdout] test flatten_cubic::test_issue_194 ... ok
+[INFO] [stdout] test flatten_cubic::test_iterator_builder_1 ... ok
+[INFO] [stdout] test flatten_cubic::test_iterator_builder_2 ... ok
+[INFO] [stdout] test flatten_cubic::test_iterator_builder_3 ... ok
+[INFO] [stdout] test line::bounding_rect ... ok
+[INFO] [stdout] test line::contains_segment ... ok
+[INFO] [stdout] test line::distance_to_point ... ok
+[INFO] [stdout] test line::horizontal_line_intersection ... ok
+[INFO] [stdout] test line::intersection_overlap ... ok
+[INFO] [stdout] test line::intersection_touching ... ok
+[INFO] [stdout] test line::offset ... ok
+[INFO] [stdout] test line::overlap ... ok
+[INFO] [stdout] test line::intersection_rotated ... ok
+[INFO] [stdout] test line::set_length ... ok
+[INFO] [stdout] test line::solve_y_for_x ... ok
+[INFO] [stdout] test monotonic::two_intersections ... ok
+[INFO] [stdout] test quadratic_bezier::bounding_rect_for_monotonic_quadratic_bezier_segment ... ok
+[INFO] [stdout] test quadratic_bezier::derivatives ... ok
+[INFO] [stdout] test quadratic_bezier::fast_bounding_rect_for_quadratic_bezier_segment ... ok
+[INFO] [stdout] test quadratic_bezier::fat_line ... ok
+[INFO] [stdout] test quadratic_bezier::is_linear ... ok
+[INFO] [stdout] test quadratic_bezier::length_straight_line ... ok
+[INFO] [stdout] test quadratic_bezier::local_x_extremum_for_simple_segment ... ok
+[INFO] [stdout] test quadratic_bezier::local_y_extremum_for_simple_segment ... ok
+[INFO] [stdout] test quadratic_bezier::minimum_bounding_rect_for_quadratic_bezier_segment ... ok
+[INFO] [stdout] test quadratic_bezier::monotonic_solve_t_for_x ... ok
+[INFO] [stdout] test quadratic_bezier::test_flattening ... ok
+[INFO] [stdout] test quadratic_bezier::x_maximum_t_for_simple_segment ... ok
+[INFO] [stdout] test quadratic_bezier::x_minimum_t_for_simple_segment ... ok
+[INFO] [stdout] test quadratic_bezier::y_maximum_t_for_simple_segment ... ok
+[INFO] [stdout] test quadratic_bezier::y_minimum_t_for_simple_segment ... ok
+[INFO] [stdout] test triangle::test_segment_intersection ... ok
+[INFO] [stdout] test triangle::test_segments ... ok
+[INFO] [stdout] test triangle::test_triangle_contains ... ok
+[INFO] [stdout] test triangle::test_bounding_rect ... ok
+[INFO] [stdout] test utils::cubic_polynomial ... ok
+[INFO] [stdout] test triangle::test_triangle_intersections ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 75 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests lyon_geom
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "29640bd71edf18f6552f1b6934d4adb2b0917ceb89bc8e61fcf44ceda75a3a72"`
+[INFO] running `"docker" "rm" "-f" "29640bd71edf18f6552f1b6934d4adb2b0917ceb89bc8e61fcf44ceda75a3a72"`
+[INFO] [stdout] 29640bd71edf18f6552f1b6934d4adb2b0917ceb89bc8e61fcf44ceda75a3a72

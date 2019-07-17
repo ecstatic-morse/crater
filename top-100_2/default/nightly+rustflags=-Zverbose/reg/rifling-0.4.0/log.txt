@@ -1,0 +1,95 @@
+[INFO] fetching crate rifling 0.4.0...
+[INFO] extracting crate rifling 0.4.0 into work\ex\default\sources\nightly\reg\rifling\0.4.0
+[INFO] extracting crate rifling 0.4.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rifling\0.4.0
+[INFO] validating manifest of rifling-0.4.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rifling-0.4.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rifling-0.4.0
+[INFO] removed 0 missing examples
+[INFO] finished frobbing rifling-0.4.0
+[INFO] frobbed toml for rifling-0.4.0 written to work\ex\default\sources\nightly\reg\rifling\0.4.0\Cargo.toml
+[INFO] started frobbing rifling-0.4.0
+[INFO] removed 0 missing examples
+[INFO] finished frobbing rifling-0.4.0
+[INFO] frobbed toml for rifling-0.4.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rifling\0.4.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rifling-0.4.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rifling\\0.4.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6f350126d90739f96c68f48c4ef683fada9e54ddda55be10b34941f7c519110f
+[INFO] running `"docker" "start" "-a" "6f350126d90739f96c68f48c4ef683fada9e54ddda55be10b34941f7c519110f"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling untrusted v0.6.2
+[INFO] [stderr]    Compiling hex v0.3.2
+[INFO] [stderr]    Compiling ring v0.14.6
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.15
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling tokio v0.1.22
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling hyper v0.12.33
+[INFO] [stderr]    Compiling rifling v0.4.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 32s
+[INFO] running `"docker" "inspect" "6f350126d90739f96c68f48c4ef683fada9e54ddda55be10b34941f7c519110f"`
+[INFO] running `"docker" "rm" "-f" "6f350126d90739f96c68f48c4ef683fada9e54ddda55be10b34941f7c519110f"`
+[INFO] [stdout] 6f350126d90739f96c68f48c4ef683fada9e54ddda55be10b34941f7c519110f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rifling\\0.4.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4568c35bcbf193580c6e30774a183ba1b75cf13ad135471cc703b52e81b4c244
+[INFO] running `"docker" "start" "-a" "4568c35bcbf193580c6e30774a183ba1b75cf13ad135471cc703b52e81b4c244"`
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling env_logger v0.6.2
+[INFO] [stderr]    Compiling pretty_env_logger v0.3.0
+[INFO] [stderr]    Compiling rifling v0.4.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 51.29s
+[INFO] running `"docker" "inspect" "4568c35bcbf193580c6e30774a183ba1b75cf13ad135471cc703b52e81b4c244"`
+[INFO] running `"docker" "rm" "-f" "4568c35bcbf193580c6e30774a183ba1b75cf13ad135471cc703b52e81b4c244"`
+[INFO] [stdout] 4568c35bcbf193580c6e30774a183ba1b75cf13ad135471cc703b52e81b4c244
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rifling\\0.4.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 62e901ada80410d79c208ae0f7c69ebad49b3119a6ec178695045645a1f6965e
+[INFO] running `"docker" "start" "-a" "62e901ada80410d79c208ae0f7c69ebad49b3119a6ec178695045645a1f6965e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rifling-cb49936d7e44cf65.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test hook::tests::payload_authentication_fail ... ok
+[INFO] [stdout] test hook::tests::payload_authentication_ring ... ok
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rifling
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test src\lib.rs -  (line 11) ... ok
+[INFO] [stdout] test src\hook.rs - hook::Hook::new (line 84) ... ok
+[INFO] [stdout] test src\hook.rs - hook (line 9) ... ok
+[INFO] [stdout] test src\handler\hyper.rs - handler::hyper (line 7) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "62e901ada80410d79c208ae0f7c69ebad49b3119a6ec178695045645a1f6965e"`
+[INFO] running `"docker" "rm" "-f" "62e901ada80410d79c208ae0f7c69ebad49b3119a6ec178695045645a1f6965e"`
+[INFO] [stdout] 62e901ada80410d79c208ae0f7c69ebad49b3119a6ec178695045645a1f6965e

@@ -1,0 +1,59 @@
+[INFO] fetching crate ilc-format-energymech 0.2.0...
+[INFO] extracting crate ilc-format-energymech 0.2.0 into work\ex\default\sources\nightly\reg\ilc-format-energymech\0.2.0
+[INFO] extracting crate ilc-format-energymech 0.2.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ilc-format-energymech\0.2.0
+[INFO] validating manifest of ilc-format-energymech-0.2.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ilc-format-energymech-0.2.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ilc-format-energymech-0.2.0
+[INFO] finished frobbing ilc-format-energymech-0.2.0
+[INFO] frobbed toml for ilc-format-energymech-0.2.0 written to work\ex\default\sources\nightly\reg\ilc-format-energymech\0.2.0\Cargo.toml
+[INFO] started frobbing ilc-format-energymech-0.2.0
+[INFO] finished frobbing ilc-format-energymech-0.2.0
+[INFO] frobbed toml for ilc-format-energymech-0.2.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ilc-format-energymech\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded ilc-base v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ilc-format-energymech-0.2.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\ilc-format-energymech\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 392ab178407188b448beab1a326e023dfde90a23a4b35f707a09f49058d812e7
+[INFO] running `"docker" "start" "-a" "392ab178407188b448beab1a326e023dfde90a23a4b35f707a09f49058d812e7"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.2.25
+[INFO] [stderr]    Compiling ilc-base v0.2.0
+[INFO] [stderr]    Compiling ilc-format-energymech v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 28.89s
+[INFO] running `"docker" "inspect" "392ab178407188b448beab1a326e023dfde90a23a4b35f707a09f49058d812e7"`
+[INFO] running `"docker" "rm" "-f" "392ab178407188b448beab1a326e023dfde90a23a4b35f707a09f49058d812e7"`
+[INFO] [stdout] 392ab178407188b448beab1a326e023dfde90a23a4b35f707a09f49058d812e7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\ilc-format-energymech\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 05c4523dcd961676e357d58d65f193d6ce911e7ebd8d0032f5a6e0a1037d8800
+[INFO] running `"docker" "start" "-a" "05c4523dcd961676e357d58d65f193d6ce911e7ebd8d0032f5a6e0a1037d8800"`
+[INFO] [stderr]    Compiling ilc-format-energymech v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.17s
+[INFO] running `"docker" "inspect" "05c4523dcd961676e357d58d65f193d6ce911e7ebd8d0032f5a6e0a1037d8800"`
+[INFO] running `"docker" "rm" "-f" "05c4523dcd961676e357d58d65f193d6ce911e7ebd8d0032f5a6e0a1037d8800"`
+[INFO] [stdout] 05c4523dcd961676e357d58d65f193d6ce911e7ebd8d0032f5a6e0a1037d8800
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\ilc-format-energymech\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 4d0630668f141acd0add3df75cefd4b2dbe50a0cf78a78c2635835e4e14bdd29
+[INFO] running `"docker" "start" "-a" "4d0630668f141acd0add3df75cefd4b2dbe50a0cf78a78c2635835e4e14bdd29"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.40s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ilc_format_energymech-43dba1cf860c2928.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests ilc-format-energymech
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4d0630668f141acd0add3df75cefd4b2dbe50a0cf78a78c2635835e4e14bdd29"`
+[INFO] running `"docker" "rm" "-f" "4d0630668f141acd0add3df75cefd4b2dbe50a0cf78a78c2635835e4e14bdd29"`
+[INFO] [stdout] 4d0630668f141acd0add3df75cefd4b2dbe50a0cf78a78c2635835e4e14bdd29

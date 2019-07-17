@@ -1,0 +1,170 @@
+[INFO] fetching crate time 0.1.42...
+[INFO] extracting crate time 0.1.42 into work\ex\default\sources\stable\reg\time\0.1.42
+[INFO] extracting crate time 0.1.42 into work\ex\default\sources\beta\reg\time\0.1.42
+[INFO] validating manifest of time-0.1.42 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of time-0.1.42 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing time-0.1.42
+[INFO] finished frobbing time-0.1.42
+[INFO] frobbed toml for time-0.1.42 written to work\ex\default\sources\stable\reg\time\0.1.42\Cargo.toml
+[INFO] started frobbing time-0.1.42
+[INFO] finished frobbing time-0.1.42
+[INFO] frobbed toml for time-0.1.42 written to work\ex\default\sources\beta\reg\time\0.1.42\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rustc-serialize v0.3.24
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing time-0.1.42 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\time\\0.1.42,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 606df8c5c9d1d00de624985a876e64e51501620472a5421f089ebd44ccb49524
+[INFO] running `"docker" "start" "-a" "606df8c5c9d1d00de624985a876e64e51501620472a5421f089ebd44ccb49524"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling time v0.1.42 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:336:17
+[INFO] [stderr]     |
+[INFO] [stderr] 336 |             '0' ... '9' => value = value * 10 + (ch as i64 - '0' as i64),
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:359:17
+[INFO] [stderr]     |
+[INFO] [stderr] 359 |             '0' ... '9' => {
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:605:11
+[INFO] [stderr]     |
+[INFO] [stderr] 605 |         (0...6, 0...11) => (),
+[INFO] [stderr]     |           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:605:18
+[INFO] [stderr]     |
+[INFO] [stderr] 605 |         (0...6, 0...11) => (),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:606:18
+[INFO] [stderr]     |
+[INFO] [stderr] 606 |         (_wday, 0...11) => return Err(InvalidDayOfWeek),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:607:11
+[INFO] [stderr]     |
+[INFO] [stderr] 607 |         (0...6, _mon) => return Err(InvalidMonth),
+[INFO] [stderr]     |           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'winapi::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\parse.rs:329:21
+[INFO] [stderr]     |
+[INFO] [stderr] 329 |         let s2 = ss.trim_left_matches(" ");
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 25.41s
+[INFO] running `"docker" "inspect" "606df8c5c9d1d00de624985a876e64e51501620472a5421f089ebd44ccb49524"`
+[INFO] running `"docker" "rm" "-f" "606df8c5c9d1d00de624985a876e64e51501620472a5421f089ebd44ccb49524"`
+[INFO] [stdout] 606df8c5c9d1d00de624985a876e64e51501620472a5421f089ebd44ccb49524
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\time\\0.1.42,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] b12cb3e94848d41d25b80afbbf3750288e6f2b0a79c8fd54c47b897dca9a32f2
+[INFO] running `"docker" "start" "-a" "b12cb3e94848d41d25b80afbbf3750288e6f2b0a79c8fd54c47b897dca9a32f2"`
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling time v0.1.42 (C:\crater\workdir)
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:336:17
+[INFO] [stderr]     |
+[INFO] [stderr] 336 |             '0' ... '9' => value = value * 10 + (ch as i64 - '0' as i64),
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:37:24
+[INFO] [stderr]     |
+[INFO] [stderr] 37  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(ellipsis_inclusive_range_patterns)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\parse.rs:359:17
+[INFO] [stderr]     |
+[INFO] [stderr] 359 |             '0' ... '9' => {
+[INFO] [stderr]     |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: the item `ONCE_INIT` is imported redundantly
+[INFO] [stderr]    --> src\sys.rs:983:25
+[INFO] [stderr]     |
+[INFO] [stderr] 695 |     use std::sync::{Once, ONCE_INIT};
+[INFO] [stderr]     |                           --------- the item `ONCE_INIT` is already imported here
+[INFO] [stderr] ...
+[INFO] [stderr] 983 |         use std::sync::{ONCE_INIT, Once};
+[INFO] [stderr]     |                         ^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:37:24
+[INFO] [stderr]     |
+[INFO] [stderr] 37  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(unused_imports)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: the item `Once` is imported redundantly
+[INFO] [stderr]    --> src\sys.rs:983:36
+[INFO] [stderr]     |
+[INFO] [stderr] 695 |     use std::sync::{Once, ONCE_INIT};
+[INFO] [stderr]     |                     ---- the item `Once` is already imported here
+[INFO] [stderr] ...
+[INFO] [stderr] 983 |         use std::sync::{ONCE_INIT, Once};
+[INFO] [stderr]     |                                    ^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:605:11
+[INFO] [stderr]     |
+[INFO] [stderr] 605 |         (0...6, 0...11) => (),
+[INFO] [stderr]     |           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:605:18
+[INFO] [stderr]     |
+[INFO] [stderr] 605 |         (0...6, 0...11) => (),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:606:18
+[INFO] [stderr]     |
+[INFO] [stderr] 606 |         (_wday, 0...11) => return Err(InvalidDayOfWeek),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:607:11
+[INFO] [stderr]     |
+[INFO] [stderr] 607 |         (0...6, _mon) => return Err(InvalidMonth),
+[INFO] [stderr]     |           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'winapi::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\parse.rs:329:21
+[INFO] [stderr]     |
+[INFO] [stderr] 329 |         let s2 = ss.trim_left_matches(" ");
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:37:24
+[INFO] [stderr]     |
+[INFO] [stderr] 37  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(deprecated)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 9 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `time`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "b12cb3e94848d41d25b80afbbf3750288e6f2b0a79c8fd54c47b897dca9a32f2"`
+[INFO] running `"docker" "rm" "-f" "b12cb3e94848d41d25b80afbbf3750288e6f2b0a79c8fd54c47b897dca9a32f2"`
+[INFO] [stdout] b12cb3e94848d41d25b80afbbf3750288e6f2b0a79c8fd54c47b897dca9a32f2

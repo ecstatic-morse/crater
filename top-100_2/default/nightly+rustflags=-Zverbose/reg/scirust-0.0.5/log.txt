@@ -1,0 +1,434 @@
+[INFO] fetching crate scirust 0.0.5...
+[INFO] extracting crate scirust 0.0.5 into work\ex\default\sources\nightly\reg\scirust\0.0.5
+[INFO] extracting crate scirust 0.0.5 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\scirust\0.0.5
+[INFO] validating manifest of scirust-0.0.5 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of scirust-0.0.5 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing scirust-0.0.5
+[INFO] finished frobbing scirust-0.0.5
+[INFO] frobbed toml for scirust-0.0.5 written to work\ex\default\sources\nightly\reg\scirust\0.0.5\Cargo.toml
+[INFO] started frobbing scirust-0.0.5
+[INFO] finished frobbing scirust-0.0.5
+[INFO] frobbed toml for scirust-0.0.5 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\scirust\0.0.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing scirust-0.0.5 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\scirust\\0.0.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 682f7c448e787452c9a4e4470d9bd62a4e07c54604ce9b09191623cc157d0af2
+[INFO] running `"docker" "start" "-a" "682f7c448e787452c9a4e4470d9bd62a4e07c54604ce9b09191623cc157d0af2"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling num-bigint v0.2.2
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling num-complex v0.2.3
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling num-rational v0.2.2
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling num v0.2.0
+[INFO] [stderr]    Compiling scirust v0.0.5 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `std::rt::heap`
+[INFO] [stderr]   --> src\matrix\matrix.rs:12:14
+[INFO] [stderr]    |
+[INFO] [stderr] 12 | use std::rt::heap::{allocate, deallocate};
+[INFO] [stderr]    |              ^^^^ could not find `heap` in `rt`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::raw::Slice`
+[INFO] [stderr]   --> src\matrix\matrix.rs:14:5
+[INFO] [stderr]    |
+[INFO] [stderr] 14 | use std::raw::Slice;
+[INFO] [stderr]    |     ^^^^^^^^^^^^^^^ no `Slice` in `raw`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rt::heap`
+[INFO] [stderr]  --> src\matrix\triangular_matrix.rs:9:14
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use std::rt::heap::allocate;
+[INFO] [stderr]   |              ^^^^ could not find `heap` in `rt`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rt::heap`
+[INFO] [stderr]  --> src\util\memory.rs:4:14
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use std::rt::heap::{deallocate};
+[INFO] [stderr]   |              ^^^^ could not find `heap` in `rt`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]   --> src\algebra\ops.rs:37:1
+[INFO] [stderr]    |
+[INFO] [stderr] 37 | / pub trait Division : Div
+[INFO] [stderr] 38 | | {
+[INFO] [stderr] 39 | | 
+[INFO] [stderr] 40 | | }
+[INFO] [stderr]    | |_^ doesn't have a size known at compile-time
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]    = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]    = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]    = note: required by `std::ops::Div`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\matrix.rs:531:9
+[INFO] [stderr]     |
+[INFO] [stderr] 531 | impl<T> Introspection for Matrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\matrix.rs:531:9
+[INFO] [stderr]     |
+[INFO] [stderr] 531 | impl<T> Introspection for Matrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: can't compare `T` with `T`
+[INFO] [stderr]    --> src\matrix\matrix.rs:531:9
+[INFO] [stderr]     |
+[INFO] [stderr] 531 | impl<T> Introspection for Matrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ no implementation for `T == T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::cmp::PartialEq` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::cmp::PartialEq` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\traits.rs:268:1
+[INFO] [stderr]     |
+[INFO] [stderr] 268 | / pub trait MinMaxAbs<T:Signed> : Shape<T> {
+[INFO] [stderr] 269 | | 
+[INFO] [stderr] 270 | |     // Returns the absolute minimum scalar value
+[INFO] [stderr] 271 | |     fn min_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr] ...   |
+[INFO] [stderr] 276 | | 
+[INFO] [stderr] 277 | | }
+[INFO] [stderr]     | |_^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\traits.rs:268:1
+[INFO] [stderr]     |
+[INFO] [stderr] 268 | / pub trait MinMaxAbs<T:Signed> : Shape<T> {
+[INFO] [stderr] 269 | | 
+[INFO] [stderr] 270 | |     // Returns the absolute minimum scalar value
+[INFO] [stderr] 271 | |     fn min_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr] ...   |
+[INFO] [stderr] 276 | | 
+[INFO] [stderr] 277 | | }
+[INFO] [stderr]     | |_^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:298:9
+[INFO] [stderr]     |
+[INFO] [stderr] 298 | impl<T> Introspection for TriangularMatrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:298:9
+[INFO] [stderr]     |
+[INFO] [stderr] 298 | impl<T> Introspection for TriangularMatrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: can't compare `T` with `T`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:298:9
+[INFO] [stderr]     |
+[INFO] [stderr] 298 | impl<T> Introspection for TriangularMatrix<T> {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^ no implementation for `T == T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::cmp::PartialEq` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::cmp::PartialEq` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\traits.rs:271:5
+[INFO] [stderr]     |
+[INFO] [stderr] 271 |     fn min_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\traits.rs:271:5
+[INFO] [stderr]     |
+[INFO] [stderr] 271 |     fn min_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\traits.rs:274:5
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |     fn max_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\traits.rs:274:5
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |     fn max_abs_scalar(&self) -> (T, usize, usize);
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::traits::Shape`
+[INFO] [stderr]    --> src\matrix\traits.rs:34:1
+[INFO] [stderr]     |
+[INFO] [stderr] 34  | pub trait Shape<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:159:5
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |     fn copy_sub_vec_from_cols(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:161:5
+[INFO] [stderr]     |
+[INFO] [stderr] 161 |     fn copy_sub_vec_from_rows(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:163:5
+[INFO] [stderr]     |
+[INFO] [stderr] 163 |     fn copy_add_vec_to_cols(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:165:5
+[INFO] [stderr]     |
+[INFO] [stderr] 165 |     fn copy_add_vec_to_rows(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:167:5
+[INFO] [stderr]     |
+[INFO] [stderr] 167 |     fn copy_mul_vec_to_cols(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the size for values of type `Self` cannot be known at compilation time
+[INFO] [stderr]    --> src\matrix\update\traits.rs:169:5
+[INFO] [stderr]     |
+[INFO] [stderr] 169 |     fn copy_mul_vec_to_rows(&self, vec: &Matrix<T>)->SRResult<Self>;
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::marker::Sized` is not implemented for `Self`
+[INFO] [stderr]     = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>
+[INFO] [stderr]     = help: consider adding a `where Self: std::marker::Sized` bound
+[INFO] [stderr]     = note: required by `std::result::Result`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\matrix.rs:533:5
+[INFO] [stderr]     |
+[INFO] [stderr] 533 | /     fn is_standard_matrix_type(&self) -> bool {
+[INFO] [stderr] 534 | |         true
+[INFO] [stderr] 535 | |     }
+[INFO] [stderr]     | |_____^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\matrix.rs:533:5
+[INFO] [stderr]     |
+[INFO] [stderr] 533 | /     fn is_standard_matrix_type(&self) -> bool {
+[INFO] [stderr] 534 | |         true
+[INFO] [stderr] 535 | |     }
+[INFO] [stderr]     | |_____^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: can't compare `T` with `T`
+[INFO] [stderr]    --> src\matrix\matrix.rs:533:5
+[INFO] [stderr]     |
+[INFO] [stderr] 533 | /     fn is_standard_matrix_type(&self) -> bool {
+[INFO] [stderr] 534 | |         true
+[INFO] [stderr] 535 | |     }
+[INFO] [stderr]     | |_____^ no implementation for `T == T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::cmp::PartialEq` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::cmp::PartialEq` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::matrix::Matrix`
+[INFO] [stderr]    --> src\matrix\matrix.rs:52:1
+[INFO] [stderr]     |
+[INFO] [stderr] 52  | pub struct Matrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `T` doesn't implement `std::fmt::Debug`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:300:5
+[INFO] [stderr]     |
+[INFO] [stderr] 300 | /     fn is_triangular_matrix_type(&self) -> bool {
+[INFO] [stderr] 301 | |         true
+[INFO] [stderr] 302 | |     }
+[INFO] [stderr]     | |_____^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::fmt::Debug` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::fmt::Debug` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:300:5
+[INFO] [stderr]     |
+[INFO] [stderr] 300 | /     fn is_triangular_matrix_type(&self) -> bool {
+[INFO] [stderr] 301 | |         true
+[INFO] [stderr] 302 | |     }
+[INFO] [stderr]     | |_____^ the trait `std::marker::Copy` is not implemented for `T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: consider adding a `where T: std::marker::Copy` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: can't compare `T` with `T`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:300:5
+[INFO] [stderr]     |
+[INFO] [stderr] 300 | /     fn is_triangular_matrix_type(&self) -> bool {
+[INFO] [stderr] 301 | |         true
+[INFO] [stderr] 302 | |     }
+[INFO] [stderr]     | |_____^ no implementation for `T == T`
+[INFO] [stderr]     |
+[INFO] [stderr]     = help: the trait `std::cmp::PartialEq` is not implemented for `T`
+[INFO] [stderr]     = help: consider adding a `where T: std::cmp::PartialEq` bound
+[INFO] [stderr]     = note: required because of the requirements on the impl of `algebra::structure::magma::MagmaBase` for `T`
+[INFO] [stderr] note: required by `matrix::triangular_matrix::TriangularMatrix`
+[INFO] [stderr]    --> src\matrix\triangular_matrix.rs:59:1
+[INFO] [stderr]     |
+[INFO] [stderr] 59  | pub struct TriangularMatrix<T:MagmaBase> {
+[INFO] [stderr]     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 29 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0277, E0432.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0277`.
+[INFO] [stderr] error: Could not compile `scirust`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "682f7c448e787452c9a4e4470d9bd62a4e07c54604ce9b09191623cc157d0af2"`
+[INFO] running `"docker" "rm" "-f" "682f7c448e787452c9a4e4470d9bd62a4e07c54604ce9b09191623cc157d0af2"`
+[INFO] [stdout] 682f7c448e787452c9a4e4470d9bd62a4e07c54604ce9b09191623cc157d0af2

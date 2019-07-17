@@ -1,0 +1,231 @@
+[INFO] fetching crate mio 0.6.19...
+[INFO] extracting crate mio 0.6.19 into work\ex\default\sources\stable\reg\mio\0.6.19
+[INFO] extracting crate mio 0.6.19 into work\ex\default\sources\beta\reg\mio\0.6.19
+[INFO] validating manifest of mio-0.6.19 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mio-0.6.19 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mio-0.6.19
+[INFO] removed 0 missing tests
+[INFO] finished frobbing mio-0.6.19
+[INFO] frobbed toml for mio-0.6.19 written to work\ex\default\sources\stable\reg\mio\0.6.19\Cargo.toml
+[INFO] started frobbing mio-0.6.19
+[INFO] removed 0 missing tests
+[INFO] finished frobbing mio-0.6.19
+[INFO] frobbed toml for mio-0.6.19 written to work\ex\default\sources\beta\reg\mio\0.6.19\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bytes v0.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mio-0.6.19 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mio\\0.6.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 19a3b35c4a89b41aa39008cb8956869a725be9507983e0906f0174277f1c8cd4
+[INFO] running `"docker" "start" "-a" "19a3b35c4a89b41aa39008cb8956869a725be9507983e0906f0174277f1c8cd4"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\event_imp.rs:157:22
+[INFO] [stderr]     |
+[INFO] [stderr] 157 | impl Evented for Box<Evented> {
+[INFO] [stderr]     |                      ^^^^^^^ help: use `dyn`: `dyn Evented`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:180:44
+[INFO] [stderr]     |
+[INFO] [stderr] 180 |                                   handle: &AsRawHandle,
+[INFO] [stderr]     |                                            ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:194:44
+[INFO] [stderr]     |
+[INFO] [stderr] 194 |                                   handle: &AsRawSocket,
+[INFO] [stderr]     |                                            ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:221:47
+[INFO] [stderr]     |
+[INFO] [stderr] 221 |                                     _handle: &AsRawHandle,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:229:47
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |                                     _socket: &AsRawSocket,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:249:47
+[INFO] [stderr]     |
+[INFO] [stderr] 249 |                                     _handle: &AsRawHandle,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:256:47
+[INFO] [stderr]     |
+[INFO] [stderr] 256 |                                     _socket: &AsRawSocket,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:352:37
+[INFO] [stderr]     |
+[INFO] [stderr] 352 |                            socket: &AsRawSocket,
+[INFO] [stderr]     |                                     ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:372:39
+[INFO] [stderr]     |
+[INFO] [stderr] 372 |                              socket: &AsRawSocket,
+[INFO] [stderr]     |                                       ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:394:32
+[INFO] [stderr]     |
+[INFO] [stderr] 394 |                       socket: &AsRawSocket,
+[INFO] [stderr]     |                                ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\mod.rs:163:27
+[INFO] [stderr]     |
+[INFO] [stderr] 163 | unsafe fn cancel(socket: &AsRawSocket,
+[INFO] [stderr]     |                           ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\deprecated\notify.rs:47:32
+[INFO] [stderr]    |
+[INFO] [stderr] 47 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 44.37s
+[INFO] running `"docker" "inspect" "19a3b35c4a89b41aa39008cb8956869a725be9507983e0906f0174277f1c8cd4"`
+[INFO] running `"docker" "rm" "-f" "19a3b35c4a89b41aa39008cb8956869a725be9507983e0906f0174277f1c8cd4"`
+[INFO] [stdout] 19a3b35c4a89b41aa39008cb8956869a725be9507983e0906f0174277f1c8cd4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mio\\0.6.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 81dd3e691482f7f216bbac0417d670d3844aa8fca657a9df96e99d1f98527391
+[INFO] running `"docker" "start" "-a" "81dd3e691482f7f216bbac0417d670d3844aa8fca657a9df96e99d1f98527391"`
+[INFO] [stderr]    Compiling bytes v0.3.0
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling env_logger v0.4.3
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling mio v0.6.19 (C:\crater\workdir)
+[INFO] [stderr] warning: unused import: `iovec::IoVec`
+[INFO] [stderr]  --> test\test_udp_socket.rs:8:5
+[INFO] [stderr]   |
+[INFO] [stderr] 8 | use iovec::IoVec;
+[INFO] [stderr]   |     ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: the item `Duration` is imported redundantly
+[INFO] [stderr]    --> test/mod.rs:184:9
+[INFO] [stderr]     |
+[INFO] [stderr] 72  | use std::time::Duration;
+[INFO] [stderr]     |     ------------------- the item `Duration` is already imported here
+[INFO] [stderr] ...
+[INFO] [stderr] 184 |     use std::time::Duration;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\event_imp.rs:157:22
+[INFO] [stderr]     |
+[INFO] [stderr] 157 | impl Evented for Box<Evented> {
+[INFO] [stderr]     |                      ^^^^^^^ help: use `dyn`: `dyn Evented`
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:6:24
+[INFO] [stderr]     |
+[INFO] [stderr] 6   | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:180:44
+[INFO] [stderr]     |
+[INFO] [stderr] 180 |                                   handle: &AsRawHandle,
+[INFO] [stderr]     |                                            ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:194:44
+[INFO] [stderr]     |
+[INFO] [stderr] 194 |                                   handle: &AsRawSocket,
+[INFO] [stderr]     |                                            ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:221:47
+[INFO] [stderr]     |
+[INFO] [stderr] 221 |                                     _handle: &AsRawHandle,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:229:47
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |                                     _socket: &AsRawSocket,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:249:47
+[INFO] [stderr]     |
+[INFO] [stderr] 249 |                                     _handle: &AsRawHandle,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawHandle`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:256:47
+[INFO] [stderr]     |
+[INFO] [stderr] 256 |                                     _socket: &AsRawSocket,
+[INFO] [stderr]     |                                               ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:352:37
+[INFO] [stderr]     |
+[INFO] [stderr] 352 |                            socket: &AsRawSocket,
+[INFO] [stderr]     |                                     ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:372:39
+[INFO] [stderr]     |
+[INFO] [stderr] 372 |                              socket: &AsRawSocket,
+[INFO] [stderr]     |                                       ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\selector.rs:394:32
+[INFO] [stderr]     |
+[INFO] [stderr] 394 |                       socket: &AsRawSocket,
+[INFO] [stderr]     |                                ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\sys\windows\mod.rs:163:27
+[INFO] [stderr]     |
+[INFO] [stderr] 163 | unsafe fn cancel(socket: &AsRawSocket,
+[INFO] [stderr]     |                           ^^^^^^^^^^^ help: use `dyn`: `dyn AsRawSocket`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\deprecated\notify.rs:47:32
+[INFO] [stderr]    |
+[INFO] [stderr] 47 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> test\test_tcp_shutdown.rs:45:9
+[INFO] [stderr]    |
+[INFO] [stderr] 45 |     let mut ready = Ready::readable() | Ready::writable();
+[INFO] [stderr]    |         ----^^^^^
+[INFO] [stderr]    |         |
+[INFO] [stderr]    |         help: remove this `mut`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 12 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `mio`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "81dd3e691482f7f216bbac0417d670d3844aa8fca657a9df96e99d1f98527391"`
+[INFO] running `"docker" "rm" "-f" "81dd3e691482f7f216bbac0417d670d3844aa8fca657a9df96e99d1f98527391"`
+[INFO] [stdout] 81dd3e691482f7f216bbac0417d670d3844aa8fca657a9df96e99d1f98527391

@@ -1,0 +1,34 @@
+[INFO] fetching crate error-chain 0.12.1...
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\stable\reg\error-chain\0.12.1
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\beta\reg\error-chain\0.12.1
+[INFO] validating manifest of error-chain-0.12.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of error-chain-0.12.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\stable\reg\error-chain\0.12.1\Cargo.toml
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\beta\reg\error-chain\0.12.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building error-chain-0.12.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 408eb620b0819cabf19fd77eed1a18c0f8291f388f63c6ff4564fc972c0647c4
+[INFO] running `"docker" "start" "-a" "408eb620b0819cabf19fd77eed1a18c0f8291f388f63c6ff4564fc972c0647c4"`
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.39s
+[INFO] running `"docker" "inspect" "408eb620b0819cabf19fd77eed1a18c0f8291f388f63c6ff4564fc972c0647c4"`
+[INFO] running `"docker" "rm" "-f" "408eb620b0819cabf19fd77eed1a18c0f8291f388f63c6ff4564fc972c0647c4"`
+[INFO] [stdout] 408eb620b0819cabf19fd77eed1a18c0f8291f388f63c6ff4564fc972c0647c4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e0421a3e3bf21393361c97c53b09ff03fd8fa46af9560bc4b1c26fd95a05e196
+[INFO] running `"docker" "start" "-a" "e0421a3e3bf21393361c97c53b09ff03fd8fa46af9560bc4b1c26fd95a05e196"`
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 13.56s
+[INFO] running `"docker" "inspect" "e0421a3e3bf21393361c97c53b09ff03fd8fa46af9560bc4b1c26fd95a05e196"`
+[INFO] running `"docker" "rm" "-f" "e0421a3e3bf21393361c97c53b09ff03fd8fa46af9560bc4b1c26fd95a05e196"`
+[INFO] [stdout] e0421a3e3bf21393361c97c53b09ff03fd8fa46af9560bc4b1c26fd95a05e196

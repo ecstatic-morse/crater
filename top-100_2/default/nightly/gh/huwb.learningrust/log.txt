@@ -1,0 +1,142 @@
+[INFO] cloning repository huwb/learningrust
+[INFO] running `"git" "clone" "--bare" "git://github.com/huwb/learningrust.git" "work\\cache\\sources\\gh\\huwb\\learningrust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\huwb\learningrust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\huwb\\learningrust" "work\\ex\\default\\sources\\nightly\\gh\\huwb\\learningrust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\huwb\learningrust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\huwb\\learningrust" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\huwb\\learningrust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\huwb\learningrust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 419b6eacb02bba0520897cba8888fb5184f3a1b8
+[INFO] sha for GitHub repo huwb/learningrust: 419b6eacb02bba0520897cba8888fb5184f3a1b8
+[INFO] validating manifest of huwb/learningrust on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of huwb/learningrust on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing huwb/learningrust
+[INFO] finished frobbing huwb/learningrust
+[INFO] frobbed toml for huwb/learningrust written to work\ex\default\sources\nightly\gh\huwb\learningrust\Cargo.toml
+[INFO] started frobbing huwb/learningrust
+[INFO] finished frobbing huwb/learningrust
+[INFO] frobbed toml for huwb/learningrust written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\huwb\learningrust\Cargo.toml
+[INFO] crate huwb/learningrust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded simple-stopwatch v0.1.4
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing huwb/learningrust against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\huwb\\learningrust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4ea7b0356d37f6c479212d5bd2bd55e43abe93ba4e7e843052f27e0a3980242a
+[INFO] running `"docker" "start" "-a" "4ea7b0356d37f6c479212d5bd2bd55e43abe93ba4e7e843052f27e0a3980242a"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling libc v0.2.34
+[INFO] [stderr]    Compiling rand v0.3.19
+[INFO] [stderr]    Compiling time v0.1.39
+[INFO] [stderr]    Compiling simple-stopwatch v0.1.4
+[INFO] [stderr]    Compiling learningrust v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.35s
+[INFO] running `"docker" "inspect" "4ea7b0356d37f6c479212d5bd2bd55e43abe93ba4e7e843052f27e0a3980242a"`
+[INFO] running `"docker" "rm" "-f" "4ea7b0356d37f6c479212d5bd2bd55e43abe93ba4e7e843052f27e0a3980242a"`
+[INFO] [stdout] 4ea7b0356d37f6c479212d5bd2bd55e43abe93ba4e7e843052f27e0a3980242a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\huwb\\learningrust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3e255462d5cdd4879938cbbc5d398a1a25f64aa54f98b4728ed4660c9bc76795
+[INFO] running `"docker" "start" "-a" "3e255462d5cdd4879938cbbc5d398a1a25f64aa54f98b4728ed4660c9bc76795"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling learningrust v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.55s
+[INFO] running `"docker" "inspect" "3e255462d5cdd4879938cbbc5d398a1a25f64aa54f98b4728ed4660c9bc76795"`
+[INFO] running `"docker" "rm" "-f" "3e255462d5cdd4879938cbbc5d398a1a25f64aa54f98b4728ed4660c9bc76795"`
+[INFO] [stdout] 3e255462d5cdd4879938cbbc5d398a1a25f64aa54f98b4728ed4660c9bc76795
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\huwb\\learningrust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 5066e54f871f263a844629c212dc7529ca113ce3194c526cf3e7b99ce68b085e
+[INFO] running `"docker" "start" "-a" "5066e54f871f263a844629c212dc7529ca113ce3194c526cf3e7b99ce68b085e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\learningrust-6e8caf36fa4eb7ec.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 57 tests
+[INFO] [stdout] test adv_traits::tests::dist_multiple_first_shortest ... ok
+[INFO] [stdout] test adv_traits::tests::dist_multiple_second_shortest ... ok
+[INFO] [stdout] test adv_traits::tests::dist_no_edges ... ok
+[INFO] [stdout] test adv_traits::tests::dist_one_edge ... ok
+[INFO] [stdout] test adv_traits::tests::dist_one_edge_bad_node ... ok
+[INFO] [stdout] test adv_traits::tests::dist_one_edge_switched_nodes ... ok
+[INFO] [stdout] test adv_traits::tests::dist_two_edges ... ok
+[INFO] [stdout] test closures::tests::cacher_first_call_populates ... ok
+[INFO] [stdout] test closures::tests::cacher_second_call_uses_cache ... ok
+[INFO] [stdout] test closures::tests::cacher_starts_empty ... ok
+[INFO] [stdout] test generic_fn::tests::largest_in_list_returns_largest_value ... ok
+[INFO] [stdout] test generic_fn::tests::largest_in_empty_list_panics ... ok
+[INFO] [stdout] test iterators::tests::counter_calling_next ... ok
+[INFO] [stdout] test iterators::tests::counter_other_iterator_traits ... ok
+[INFO] [stdout] test iterators::tests::iterator_adaptor_filter ... ok
+[INFO] [stdout] test iterators::tests::iterator_adaptor_map ... ok
+[INFO] [stdout] test iterators::tests::iterator_sum ... ok
+[INFO] [stdout] test limit_tracker::tests::less_than_100pc ... ok
+[INFO] [stdout] test limit_tracker::tests::less_than_70pc ... ok
+[INFO] [stdout] test limit_tracker::tests::decreasing_value_panics ... ok
+[INFO] [stdout] test limit_tracker::tests::more_than_100pc ... ok
+[INFO] [stdout] test longest_string::tests::longest_empty_strings ... ok
+[INFO] [stdout] test new_type_pattern::tests::empty_vector ... ok
+[INFO] [stdout] test new_type_pattern::tests::int_vector_1 ... ok
+[INFO] [stdout] test new_type_pattern::tests::int_vector_2 ... ok
+[INFO] [stdout] test new_type_pattern::tests::string_vector_3 ... ok
+[INFO] [stdout] test points::tests::add_points ... ok
+[INFO] [stdout] test points::tests::copy_constructor ... ok
+[INFO] [stdout] test prime::tests::factors_of_one_is_one ... ok
+[INFO] [stdout] test prime::tests::factors_of_two_is_one_and_two ... ok
+[INFO] [stdout] test prime::tests::factors_of_zero_are_none ... ok
+[INFO] [stdout] test prime::tests::factors_three_to_six ... ok
+[INFO] [stdout] test prime::tests::nonprime_examples ... ok
+[INFO] [stdout] test prime::tests::compute_primes_st_vs_mt ... ok
+[INFO] [stdout] test prime::tests::one_not_prime ... ok
+[INFO] [stdout] test prime::tests::prime_examples ... ok
+[INFO] [stdout] test prime::tests::zero_not_prime ... ok
+[INFO] [stdout] test rc_refcell::tests::runtime_mutable_borrow ... ok
+[INFO] [stdout] test ref_cycles::tests::check_weak_and_strong_counts ... ok
+[INFO] [stdout] test smart_pointers::tests::mylist_add ... ok
+[INFO] [stdout] test smart_pointers::tests::mylist_constructors ... ok
+[INFO] [stdout] test smart_pointers::tests::mylist_push ... ok
+[INFO] [stdout] test rc_refcell::tests::runtime_two_mutable_borrows_panics ... ok
+[INFO] [stdout] test smart_pointers::tests::ref_count ... ok
+[INFO] [stdout] test spring::tests::default_values ... ok
+[INFO] [stdout] test spring::tests::nonpositive_timestep_doesnt_change ... ok
+[INFO] [stdout] test spring::tests::update_default_vals ... ok
+[INFO] [stdout] test spring::tests::update_stiff ... ok
+[INFO] [stdout] test state_pattern::tests::approve_publishes_text ... ok
+[INFO] [stdout] test state_pattern::tests::draft_text_not_published ... ok
+[INFO] [stdout] test state_pattern::tests::multiple_add_texts_append ... ok
+[INFO] [stdout] test state_pattern::tests::new_post_empty ... ok
+[INFO] [stdout] test state_pattern::tests::requested_review_text_not_published ... ok
+[INFO] [stdout] test state_pattern_rust::tests::post_workflow ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\learningrust-aa037bb38e985b91.exe
+[INFO] [stdout] test threadpool::tests::zero_thread_count_panics ... ok
+[INFO] [stdout] test threadpool::tests::create_then_join ... ok
+[INFO] [stdout] test threadpool::tests::run_trivial_job ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 57 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\integration_test-f47ff5336714aaf6.exe
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test longest_string_works ... ok
+[INFO] [stdout] test check_thread_pool ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests learningrust
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\longest_string.rs - longest_string::longest (line 23) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5066e54f871f263a844629c212dc7529ca113ce3194c526cf3e7b99ce68b085e"`
+[INFO] running `"docker" "rm" "-f" "5066e54f871f263a844629c212dc7529ca113ce3194c526cf3e7b99ce68b085e"`
+[INFO] [stdout] 5066e54f871f263a844629c212dc7529ca113ce3194c526cf3e7b99ce68b085e

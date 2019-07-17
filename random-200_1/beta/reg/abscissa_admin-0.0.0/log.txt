@@ -1,0 +1,54 @@
+[INFO] fetching crate abscissa_admin 0.0.0...
+[INFO] extracting crate abscissa_admin 0.0.0 into work\ex\default\sources\stable\reg\abscissa_admin\0.0.0
+[INFO] extracting crate abscissa_admin 0.0.0 into work\ex\default\sources\beta\reg\abscissa_admin\0.0.0
+[INFO] validating manifest of abscissa_admin-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of abscissa_admin-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing abscissa_admin-0.0.0
+[INFO] finished frobbing abscissa_admin-0.0.0
+[INFO] frobbed toml for abscissa_admin-0.0.0 written to work\ex\default\sources\stable\reg\abscissa_admin\0.0.0\Cargo.toml
+[INFO] started frobbing abscissa_admin-0.0.0
+[INFO] finished frobbing abscissa_admin-0.0.0
+[INFO] frobbed toml for abscissa_admin-0.0.0 written to work\ex\default\sources\beta\reg\abscissa_admin\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing abscissa_admin-0.0.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\abscissa_admin\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 4e06c078f20835a795d9fd64600f7540f499689c51d173611f5d9ac7a6f1901b
+[INFO] running `"docker" "start" "-a" "4e06c078f20835a795d9fd64600f7540f499689c51d173611f5d9ac7a6f1901b"`
+[INFO] [stderr]    Compiling abscissa_admin v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.87s
+[INFO] running `"docker" "inspect" "4e06c078f20835a795d9fd64600f7540f499689c51d173611f5d9ac7a6f1901b"`
+[INFO] running `"docker" "rm" "-f" "4e06c078f20835a795d9fd64600f7540f499689c51d173611f5d9ac7a6f1901b"`
+[INFO] [stdout] 4e06c078f20835a795d9fd64600f7540f499689c51d173611f5d9ac7a6f1901b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\abscissa_admin\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5b01642394ef7f17847cab77e6b2bb2ee477edd11bba845e58a58d8974b757ac
+[INFO] running `"docker" "start" "-a" "5b01642394ef7f17847cab77e6b2bb2ee477edd11bba845e58a58d8974b757ac"`
+[INFO] [stderr]    Compiling abscissa_admin v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.49s
+[INFO] running `"docker" "inspect" "5b01642394ef7f17847cab77e6b2bb2ee477edd11bba845e58a58d8974b757ac"`
+[INFO] running `"docker" "rm" "-f" "5b01642394ef7f17847cab77e6b2bb2ee477edd11bba845e58a58d8974b757ac"`
+[INFO] [stdout] 5b01642394ef7f17847cab77e6b2bb2ee477edd11bba845e58a58d8974b757ac
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\abscissa_admin\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 0d0300d8bbf2af23ec706891b208606363c9e266ebe15c31bd667fa261169d56
+[INFO] running `"docker" "start" "-a" "0d0300d8bbf2af23ec706891b208606363c9e266ebe15c31bd667fa261169d56"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\abscissa_admin-48a0d8aa8be64c7d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests abscissa_admin
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0d0300d8bbf2af23ec706891b208606363c9e266ebe15c31bd667fa261169d56"`
+[INFO] running `"docker" "rm" "-f" "0d0300d8bbf2af23ec706891b208606363c9e266ebe15c31bd667fa261169d56"`
+[INFO] [stdout] 0d0300d8bbf2af23ec706891b208606363c9e266ebe15c31bd667fa261169d56

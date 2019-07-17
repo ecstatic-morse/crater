@@ -1,0 +1,185 @@
+[INFO] crate url 1.7.2 is already in cache
+[INFO] extracting crate url 1.7.2 into work\ex\default\sources\nightly\reg\url\1.7.2
+[INFO] extracting crate url 1.7.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\url\1.7.2
+[INFO] validating manifest of url-1.7.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of url-1.7.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing url-1.7.2
+[INFO] removed 2 missing tests
+[INFO] finished frobbing url-1.7.2
+[INFO] frobbed toml for url-1.7.2 written to work\ex\default\sources\nightly\reg\url\1.7.2\Cargo.toml
+[INFO] started frobbing url-1.7.2
+[INFO] removed 2 missing tests
+[INFO] finished frobbing url-1.7.2
+[INFO] frobbed toml for url-1.7.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\url\1.7.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing url-1.7.2 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\url\\1.7.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 234e8c962f1467020a5ccea528f8ed2ab2db0ce975ca0371bf74cd04fbea22db
+[INFO] running `"docker" "start" "-a" "234e8c962f1467020a5ccea528f8ed2ab2db0ce975ca0371bf74cd04fbea22db"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\data.rs
+[INFO] [stderr] * C:\crater\workdir\tests\unit.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling url v1.7.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 27.75s
+[INFO] running `"docker" "inspect" "234e8c962f1467020a5ccea528f8ed2ab2db0ce975ca0371bf74cd04fbea22db"`
+[INFO] running `"docker" "rm" "-f" "234e8c962f1467020a5ccea528f8ed2ab2db0ce975ca0371bf74cd04fbea22db"`
+[INFO] [stdout] 234e8c962f1467020a5ccea528f8ed2ab2db0ce975ca0371bf74cd04fbea22db
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\url\\1.7.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9315eac69b4c276ffcc9b23c52b9d00d199d118050ad67b81a5b530d87bb5fb6
+[INFO] running `"docker" "start" "-a" "9315eac69b4c276ffcc9b23c52b9d00d199d118050ad67b81a5b530d87bb5fb6"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\data.rs
+[INFO] [stderr] * C:\crater\workdir\tests\unit.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling semver-parser v0.7.0
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling winapi-build v0.1.1
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling winapi v0.2.8
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling serde v0.8.23
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling dtoa v0.2.2
+[INFO] [stderr]    Compiling itoa v0.1.1
+[INFO] [stderr]    Compiling bencher v0.1.5
+[INFO] [stderr]    Compiling kernel32-sys v0.2.2
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling semver v0.9.0
+[INFO] [stderr]    Compiling getopts v0.2.19
+[INFO] [stderr]    Compiling rustc_version v0.2.3
+[INFO] [stderr]    Compiling rustc-test v0.3.0
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling serde_json v0.8.6
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling term v0.4.6
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 53s
+[INFO] running `"docker" "inspect" "9315eac69b4c276ffcc9b23c52b9d00d199d118050ad67b81a5b530d87bb5fb6"`
+[INFO] running `"docker" "rm" "-f" "9315eac69b4c276ffcc9b23c52b9d00d199d118050ad67b81a5b530d87bb5fb6"`
+[INFO] [stdout] 9315eac69b4c276ffcc9b23c52b9d00d199d118050ad67b81a5b530d87bb5fb6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\url\\1.7.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2780b4d1ee1fd3ca94467637fc299211a9a50240379e878f2c8ccb5821968287
+[INFO] running `"docker" "start" "-a" "2780b4d1ee1fd3ca94467637fc299211a9a50240379e878f2c8ccb5821968287"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\data.rs
+[INFO] [stderr] * C:\crater\workdir\tests\unit.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.43s
+[INFO] [stderr]    Doc-tests url
+[INFO] [stdout] 
+[INFO] [stdout] running 61 tests
+[INFO] [stdout] test src\lib.rs -  (line 17) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 25) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 55) ... ok
+[INFO] [stdout] test src\form_urlencoded.rs - form_urlencoded::Serializer<T>::finish (line 369) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 92) ... ok
+[INFO] [stdout] test src\lib.rs - Url::as_str (line 416) ... ok
+[INFO] [stdout] test src\lib.rs - ParseOptions::syntax_violation_callback (line 233) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 84) ... ok
+[INFO] [stdout] test src\lib.rs - Url::fragment (line 1177) ... ok
+[INFO] [stdout] test src\lib.rs - Url::cannot_be_a_base (line 699) ... ok
+[INFO] [stdout] test src\lib.rs - Url::from_file_path (line 1960) ... ok
+[INFO] [stdout] test src\lib.rs - Url::domain (line 894) ... ok
+[INFO] [stdout] test src\lib.rs - Url::has_authority (line 668) ... ok
+[INFO] [stdout] test src\lib.rs - Url::has_host (line 790) ... ok
+[INFO] [stdout] test src\lib.rs - Url::host (line 861) ... ok
+[INFO] [stdout] test src\lib.rs - Url::host_str (line 823) ... ok
+[INFO] [stdout] test src\lib.rs - Url::into_string (line 439) ... ok
+[INFO] [stdout] test src\lib.rs - Url::join (line 355) ... ok
+[INFO] [stdout] test src\lib.rs - Url::options (line 389) ... ok
+[INFO] [stdout] test src\lib.rs - Url::origin (line 573) ... ok
+[INFO] [stdout] test src\lib.rs - Url::origin (line 624) ... ok
+[INFO] [stdout] test src\lib.rs - Url::origin (line 590) ... ok
+[INFO] [stdout] test src\lib.rs - Url::origin (line 607) ... ok
+[INFO] [stdout] test src\lib.rs - Url::parse (line 285) ... ok
+[INFO] [stdout] test src\lib.rs - Url::path (line 1021) ... ok
+[INFO] [stdout] test src\lib.rs - Url::parse_with_params (line 313) ... ok
+[INFO] [stdout] test src\lib.rs - Url::password (line 755) ... ok
+[INFO] [stdout] test src\lib.rs - Url::port (line 922) ... ok
+[INFO] [stdout] test src\lib.rs - Url::path_segments (line 1058) ... ok
+[INFO] [stdout] test src\lib.rs - Url::port_or_known_default (line 951) ... ok
+[INFO] [stdout] test src\lib.rs - Url::query (line 1098) ... ok
+[INFO] [stdout] test src\lib.rs - Url::query_pairs (line 1137) ... ok
+[INFO] [stdout] test src\lib.rs - Url::query_pairs_mut (line 1307) ... ok
+[INFO] [stdout] test src\lib.rs - Url::scheme (line 644) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_fragment (line 1211) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_host (line 1536) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_host (line 1552) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_host (line 1520) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_host (line 1568) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_ip_host (line 1670) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_password (line 1718) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_ip_host (line 1685) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_path (line 1366) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_port (line 1453) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_port (line 1434) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_query (line 1268) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_scheme (line 1878) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_scheme (line 1895) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_scheme (line 1911) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_username (line 1792) ... ok
+[INFO] [stdout] test src\lib.rs - Url::set_username (line 1807) ... ok
+[INFO] [stdout] test src\lib.rs - Url::to_file_path (line 2084) ... ok
+[INFO] [stdout] test src\lib.rs - Url::username (line 726) ... ok
+[INFO] [stdout] test src\lib.rs - Url::with_default_port (line 983) ... ok
+[INFO] [stdout] test src\lib.rs - define_encode_set (line 2451) ... ok
+[INFO] [stdout] test src\path_segments.rs - path_segments::PathSegmentsMut (line 20) ... ok
+[INFO] [stdout] test src\path_segments.rs - path_segments::PathSegmentsMut::clear (line 70) ... ok
+[INFO] [stdout] test src\path_segments.rs - path_segments::PathSegmentsMut::extend (line 163) ... ok
+[INFO] [stdout] test src\path_segments.rs - path_segments::PathSegmentsMut::extend (line 183) ... ok
+[INFO] [stdout] test src\path_segments.rs - path_segments::PathSegmentsMut::pop_if_empty (line 98) ... ok
+[INFO] [stdout] test src\slicing.rs - slicing::Position (line 44) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 61 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2780b4d1ee1fd3ca94467637fc299211a9a50240379e878f2c8ccb5821968287"`
+[INFO] running `"docker" "rm" "-f" "2780b4d1ee1fd3ca94467637fc299211a9a50240379e878f2c8ccb5821968287"`
+[INFO] [stdout] 2780b4d1ee1fd3ca94467637fc299211a9a50240379e878f2c8ccb5821968287

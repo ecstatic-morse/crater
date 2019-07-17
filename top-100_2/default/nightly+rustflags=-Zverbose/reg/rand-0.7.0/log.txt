@@ -1,0 +1,193 @@
+[INFO] crate rand 0.7.0 is already in cache
+[INFO] extracting crate rand 0.7.0 into work\ex\default\sources\nightly\reg\rand\0.7.0
+[INFO] extracting crate rand 0.7.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rand\0.7.0
+[INFO] validating manifest of rand-0.7.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rand-0.7.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rand-0.7.0
+[INFO] finished frobbing rand-0.7.0
+[INFO] frobbed toml for rand-0.7.0 written to work\ex\default\sources\nightly\reg\rand\0.7.0\Cargo.toml
+[INFO] started frobbing rand-0.7.0
+[INFO] finished frobbing rand-0.7.0
+[INFO] frobbed toml for rand-0.7.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rand\0.7.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rand-0.7.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rand\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 14497345425ba31486f7be8fe2c736304d5789a5e169e2ca2c9a1e2dbe838603
+[INFO] running `"docker" "start" "-a" "14497345425ba31486f7be8fe2c736304d5789a5e169e2ca2c9a1e2dbe838603"`
+[INFO] [stderr]    Compiling getrandom v0.1.6
+[INFO] [stderr]    Compiling ppv-lite86 v0.2.5
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling rand_core v0.5.0
+[INFO] [stderr]    Compiling c2-chacha v0.2.2
+[INFO] [stderr]    Compiling rand v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 27.43s
+[INFO] running `"docker" "inspect" "14497345425ba31486f7be8fe2c736304d5789a5e169e2ca2c9a1e2dbe838603"`
+[INFO] running `"docker" "rm" "-f" "14497345425ba31486f7be8fe2c736304d5789a5e169e2ca2c9a1e2dbe838603"`
+[INFO] [stdout] 14497345425ba31486f7be8fe2c736304d5789a5e169e2ca2c9a1e2dbe838603
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rand\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c0b9755426dfac41851a65ade213c4f88135ad7371ee50e8e35ac41f473ec90a
+[INFO] running `"docker" "start" "-a" "c0b9755426dfac41851a65ade213c4f88135ad7371ee50e8e35ac41f473ec90a"`
+[INFO] [stderr]    Compiling rand_xorshift v0.2.0
+[INFO] [stderr]    Compiling rand_pcg v0.2.0
+[INFO] [stderr]    Compiling rand_isaac v0.2.0
+[INFO] [stderr]    Compiling rand_hc v0.2.0
+[INFO] [stderr]    Compiling rand_xoshiro v0.3.0
+[INFO] [stderr]    Compiling rand v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 21.34s
+[INFO] running `"docker" "inspect" "c0b9755426dfac41851a65ade213c4f88135ad7371ee50e8e35ac41f473ec90a"`
+[INFO] running `"docker" "rm" "-f" "c0b9755426dfac41851a65ade213c4f88135ad7371ee50e8e35ac41f473ec90a"`
+[INFO] [stdout] c0b9755426dfac41851a65ade213c4f88135ad7371ee50e8e35ac41f473ec90a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rand\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] e4e8c89776f9574012b193e5400e76882d8665f696f2d6b8eeb9b4588703687e
+[INFO] running `"docker" "start" "-a" "e4e8c89776f9574012b193e5400e76882d8665f696f2d6b8eeb9b4588703687e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.42s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rand-30123978528c4a04.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 94 tests
+[INFO] [stdout] test distributions::bernoulli::test::test_trivial ... ok
+[INFO] [stdout] test distributions::bernoulli::test::test_average ... ok
+[INFO] [stdout] test distributions::binomial::test::test_binomial ... ok
+[INFO] [stdout] test distributions::binomial::test::test_binomial_end_points ... ok
+[INFO] [stdout] test distributions::cauchy::test::test_cauchy_averages ... ok
+[INFO] [stdout] test distributions::binomial::test::test_binomial_invalid_lambda_neg ... ok
+[INFO] [stdout] test distributions::dirichlet::test::test_dirichlet ... ok
+[INFO] [stdout] test distributions::cauchy::test::test_cauchy_invalid_scale_neg ... ok
+[INFO] [stdout] test distributions::dirichlet::test::test_dirichlet_with_param ... ok
+[INFO] [stdout] test distributions::cauchy::test::test_cauchy_invalid_scale_zero ... ok
+[INFO] [stdout] test distributions::exponential::test::test_exp ... ok
+[INFO] [stdout] test distributions::dirichlet::test::test_dirichlet_invalid_alpha ... ok
+[INFO] [stdout] test distributions::dirichlet::test::test_dirichlet_invalid_length ... ok
+[INFO] [stdout] test distributions::float::tests::f32_edge_cases ... ok
+[INFO] [stdout] test distributions::float::tests::f64_edge_cases ... ok
+[INFO] [stdout] test distributions::exponential::test::test_exp_invalid_lambda_neg ... ok
+[INFO] [stdout] test distributions::gamma::test::test_beta ... ok
+[INFO] [stdout] test distributions::exponential::test::test_exp_invalid_lambda_zero ... ok
+[INFO] [stdout] test distributions::gamma::test::test_chi_squared_large ... ok
+[INFO] [stdout] test distributions::gamma::test::test_beta_invalid_dof ... ok
+[INFO] [stdout] test distributions::gamma::test::test_chi_squared_one ... ok
+[INFO] [stdout] test distributions::gamma::test::test_chi_squared_small ... ok
+[INFO] [stdout] test distributions::gamma::test::test_chi_squared_invalid_dof ... ok
+[INFO] [stdout] test distributions::gamma::test::test_f ... ok
+[INFO] [stdout] test distributions::gamma::test::test_t ... ok
+[INFO] [stdout] test distributions::integer::tests::test_integers ... ok
+[INFO] [stdout] test distributions::normal::tests::test_log_normal ... ok
+[INFO] [stdout] test distributions::normal::tests::test_normal ... ok
+[INFO] [stdout] test distributions::normal::tests::test_log_normal_invalid_sd ... ok
+[INFO] [stdout] test distributions::other::tests::test_alphanumeric ... ok
+[INFO] [stdout] test distributions::other::tests::test_chars ... ok
+[INFO] [stdout] test distributions::normal::tests::test_normal_invalid_sd ... ok
+[INFO] [stdout] test distributions::other::tests::test_misc ... ok
+[INFO] [stdout] test distributions::pareto::tests::sample ... ok
+[INFO] [stdout] test distributions::pareto::tests::invalid ... ok
+[INFO] [stdout] test distributions::poisson::test::test_poisson_10 ... ok
+[INFO] [stdout] test distributions::poisson::test::test_poisson_15 ... ok
+[INFO] [stdout] test distributions::tests::test_distributions_iter ... ok
+[INFO] [stdout] test distributions::tests::test_make_an_iter ... ok
+[INFO] [stdout] test distributions::triangular::test::test_new ... ok
+[INFO] [stdout] test distributions::triangular::test::test_sample ... ok
+[INFO] [stdout] test distributions::poisson::test::test_poisson_invalid_lambda_neg ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_custom_uniform ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_durations ... ok
+[INFO] [stdout] test distributions::poisson::test::test_poisson_invalid_lambda_zero ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_floats ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_integers ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_uniform_from_std_range ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_uniform_bad_limits_equal_int ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_uniform_from_std_range_inclusive ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_uniform_good_limits_equal_int ... ok
+[INFO] [stdout] test distributions::unit_circle::tests::value_stability ... ok
+[INFO] [stdout] test distributions::unit_circle::tests::norm ... ok
+[INFO] [stdout] test distributions::unit_sphere::tests::value_stability ... ok
+[INFO] [stdout] test distributions::unit_sphere::tests::norm ... ok
+[INFO] [stdout] test distributions::weibull::tests::sample ... ok
+[INFO] [stdout] test distributions::weighted::alias_method::test::test_weighted_index_f32 ... ok
+[INFO] [stdout] test distributions::weighted::alias_method::test::test_weighted_index_i8 ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_uniform_bad_limits_flipped_int ... ok
+[INFO] [stdout] test distributions::weighted::alias_method::test::test_weighted_index_u8 ... ok
+[INFO] [stdout] test distributions::weighted::alias_method::test::test_weighted_index_u128 ... ok
+[INFO] [stdout] test distributions::weighted::test::test_weightedindex ... ok
+[INFO] [stdout] test rngs::adapter::read::test::test_reader_rng_fill_bytes ... ok
+[INFO] [stdout] test rngs::adapter::read::test::test_reader_rng_insufficient_bytes ... ok
+[INFO] [stdout] test rngs::adapter::read::test::test_reader_rng_u32 ... ok
+[INFO] [stdout] test distributions::weibull::tests::invalid ... ok
+[INFO] [stdout] test rngs::adapter::read::test::test_reader_rng_u64 ... ok
+[INFO] [stdout] test rngs::adapter::reseeding::test::test_clone_reseeding ... ok
+[INFO] [stdout] test rngs::adapter::reseeding::test::test_reseeding ... ok
+[INFO] [stdout] test rngs::entropy::test::test_entropy ... ok
+[INFO] [stdout] test rngs::os::test_construction ... ok
+[INFO] [stdout] test rngs::os::test_os_rng ... ok
+[INFO] [stdout] test rngs::std::test::test_stdrng_construction ... ok
+[INFO] [stdout] test rngs::thread::test::test_thread_rng ... ok
+[INFO] [stdout] test seq::index::test::test_sample_alg ... ok
+[INFO] [stdout] test seq::index::test::test_sample_boundaries ... ok
+[INFO] [stdout] test seq::test::test_iterator_choose ... ok
+[INFO] [stdout] test seq::test::test_partial_shuffle ... ok
+[INFO] [stdout] test seq::test::test_sample_iter ... ok
+[INFO] [stdout] test seq::test::test_slice_choose ... ok
+[INFO] [stdout] test seq::test::test_shuffle ... ok
+[INFO] [stdout] test seq::test::test_weighted ... ok
+[INFO] [stdout] test test::test_fill ... ok
+[INFO] [stdout] test test::test_fill_bytes_default ... ok
+[INFO] [stdout] test test::test_fill_empty ... ok
+[INFO] [stdout] test test::test_gen_bool ... ok
+[INFO] [stdout] test test::test_gen_range ... ok
+[INFO] [stdout] test test::test_gen_ratio_average ... ok
+[INFO] [stdout] test test::test_gen_range_panic_int ... ok
+[INFO] [stdout] test test::test_random ... ok
+[INFO] [stdout] test test::test_rng_boxed_trait ... ok
+[INFO] [stdout] test test::test_rng_trait_object ... ok
+[INFO] [stdout] test test::test_gen_range_panic_usize ... ok
+[INFO] [stdout] test distributions::uniform::tests::test_float_assertions ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 94 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rand
+[INFO] [stdout] 
+[INFO] [stdout] running 36 tests
+[INFO] [stdout] test src\distributions\float.rs - distributions::float::Open01 (line 57) ... ok
+[INFO] [stdout] test src\distributions\float.rs - distributions::float::OpenClosed01 (line 31) ... ok
+[INFO] [stdout] test src\distributions\mod.rs - distributions::Distribution::sample_iter (line 192) ... ok
+[INFO] [stdout] test src\distributions\bernoulli.rs - distributions::bernoulli::Bernoulli (line 20) ... ok
+[INFO] [stdout] test src\distributions\mod.rs - distributions::Standard (line 321) ... ok
+[INFO] [stdout] test src\distributions\uniform.rs - distributions::uniform (line 29) ... ok
+[INFO] [stdout] test src\distributions\mod.rs - distributions::Standard (line 304) ... ok
+[INFO] [stdout] test src\distributions\other.rs - distributions::other::Alphanumeric (line 24) ... ok
+[INFO] [stdout] test src\distributions\uniform.rs - distributions::uniform (line 61) ... ok
+[INFO] [stdout] test src\distributions\weighted\mod.rs - distributions::weighted::WeightedIndex (line 61) ... ok
+[INFO] [stdout] test src\distributions\uniform.rs - distributions::uniform::Uniform (line 152) ... ok
+[INFO] [stdout] test src\distributions\weighted\alias_method.rs - distributions::weighted::alias_method::WeightedIndex (line 38) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 23) ... ok
+[INFO] [stdout] test src\lib.rs - Rng (line 138) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::fill (line 290) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::gen (line 153) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::gen (line 171) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::gen_bool (line 344) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::gen_ratio (line 377) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::gen_range (line 202) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::sample (line 225) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::try_fill (line 316) ... ok
+[INFO] [stdout] test src\lib.rs - random (line 511) ... ok
+[INFO] [stdout] test src\lib.rs - Rng::sample_iter (line 249) ... ok
+[INFO] [stdout] test src\lib.rs - random (line 526) ... ok
+[INFO] [stdout] test src\rngs\adapter\read.rs - rngs::adapter::read::ReadRng (line 35) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 15) ... ok
+[INFO] [stdout] test src\rngs\adapter\reseeding.rs - rngs::adapter::reseeding::ReseedingRng (line 59) ... ok
+[INFO] [stdout] test src\rngs\mock.rs - rngs::mock::StepRng (line 19) ... ok
+[INFO] [stdout] test src\rngs\os.rs - rngs::os::OsRng (line 35) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::IteratorRandom (line 227) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::SliceRandom (line 43) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::SliceRandom::choose (line 69) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::SliceRandom::choose_multiple (line 97) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::SliceRandom::choose_weighted (line 128) ... ok
+[INFO] [stdout] test src\seq\mod.rs - seq::SliceRandom::shuffle (line 186) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 36 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e4e8c89776f9574012b193e5400e76882d8665f696f2d6b8eeb9b4588703687e"`
+[INFO] running `"docker" "rm" "-f" "e4e8c89776f9574012b193e5400e76882d8665f696f2d6b8eeb9b4588703687e"`
+[INFO] [stdout] e4e8c89776f9574012b193e5400e76882d8665f696f2d6b8eeb9b4588703687e

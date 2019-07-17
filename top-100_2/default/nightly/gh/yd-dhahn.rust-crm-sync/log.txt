@@ -1,0 +1,217 @@
+[INFO] cloning repository yd-dhahn/rust-crm-sync
+[INFO] running `"git" "clone" "--bare" "git://github.com/yd-dhahn/rust-crm-sync.git" "work\\cache\\sources\\gh\\yd-dhahn\\rust-crm-sync"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\yd-dhahn\rust-crm-sync'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\yd-dhahn\\rust-crm-sync" "work\\ex\\default\\sources\\nightly\\gh\\yd-dhahn\\rust-crm-sync"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\yd-dhahn\rust-crm-sync'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\yd-dhahn\\rust-crm-sync" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\yd-dhahn\\rust-crm-sync"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\yd-dhahn\rust-crm-sync'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] dedcf26162a4c2c7567d2b5b5b401d1898a89739
+[INFO] sha for GitHub repo yd-dhahn/rust-crm-sync: dedcf26162a4c2c7567d2b5b5b401d1898a89739
+[INFO] validating manifest of yd-dhahn/rust-crm-sync on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of yd-dhahn/rust-crm-sync on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing yd-dhahn/rust-crm-sync
+[INFO] finished frobbing yd-dhahn/rust-crm-sync
+[INFO] frobbed toml for yd-dhahn/rust-crm-sync written to work\ex\default\sources\nightly\gh\yd-dhahn\rust-crm-sync\Cargo.toml
+[INFO] started frobbing yd-dhahn/rust-crm-sync
+[INFO] finished frobbing yd-dhahn/rust-crm-sync
+[INFO] frobbed toml for yd-dhahn/rust-crm-sync written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\yd-dhahn\rust-crm-sync\Cargo.toml
+[INFO] crate yd-dhahn/rust-crm-sync already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded openssl-sys v0.9.25
+[INFO] [stderr]   Downloaded r2d2 v0.7.4
+[INFO] [stderr]   Downloaded scheduled-thread-pool v0.1.0
+[INFO] [stderr]   Downloaded postgres-shared v0.4.1
+[INFO] [stderr]   Downloaded sha2 v0.7.0
+[INFO] [stderr]   Downloaded digest v0.7.2
+[INFO] [stderr]   Downloaded typenum v1.9.0
+[INFO] [stderr]   Downloaded arrayref v0.3.4
+[INFO] [stderr]   Downloaded md5 v0.3.7
+[INFO] [stderr]   Downloaded fallible-iterator v0.1.4
+[INFO] [stderr]   Downloaded chrono v0.4.0
+[INFO] [stderr]   Downloaded socket2 v0.3.1
+[INFO] [stderr]   Downloaded r2d2_postgres v0.13.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing yd-dhahn/rust-crm-sync against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\yd-dhahn\\rust-crm-sync,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1262b7172d1ea8b2076404f996bb2033af0d0a14bad5a3859db9a7f36bb09de9
+[INFO] running `"docker" "start" "-a" "1262b7172d1ea8b2076404f996bb2033af0d0a14bad5a3859db9a7f36bb09de9"`
+[INFO] [stderr]    Compiling winapi-build v0.1.1
+[INFO] [stderr]    Compiling version_check v0.1.3
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling typenum v1.9.0
+[INFO] [stderr]    Compiling winapi v0.2.8
+[INFO] [stderr]    Compiling cfg-if v0.1.2
+[INFO] [stderr]    Compiling byteorder v1.2.1
+[INFO] [stderr]    Compiling num-traits v0.2.0
+[INFO] [stderr]    Compiling libc v0.2.36
+[INFO] [stderr]    Compiling siphasher v0.2.2
+[INFO] [stderr]    Compiling matches v0.1.6
+[INFO] [stderr]    Compiling byte-tools v0.2.0
+[INFO] [stderr]    Compiling constant_time_eq v0.1.3
+[INFO] [stderr]    Compiling arrayref v0.3.4
+[INFO] [stderr]    Compiling lazycell v0.6.0
+[INFO] [stderr]    Compiling futures v0.1.18
+[INFO] [stderr]    Compiling slab v0.3.0
+[INFO] [stderr]    Compiling build_const v0.2.0
+[INFO] [stderr]    Compiling scoped-tls v0.1.0
+[INFO] [stderr]    Compiling safemem v0.2.0
+[INFO] [stderr]    Compiling slab v0.4.0
+[INFO] [stderr]    Compiling unicode-normalization v0.1.5
+[INFO] [stderr]    Compiling fake-simd v0.1.2
+[INFO] [stderr]    Compiling lazy_static v1.0.0
+[INFO] [stderr]    Compiling fallible-iterator v0.1.4
+[INFO] [stderr]    Compiling smallvec v0.2.1
+[INFO] [stderr]    Compiling md5 v0.3.7
+[INFO] [stderr]    Compiling take v0.1.0
+[INFO] [stderr]    Compiling lazy_static v0.2.11
+[INFO] [stderr]    Compiling unicode-xid v0.0.4
+[INFO] [stderr]    Compiling quote v0.3.15
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling httparse v1.2.4
+[INFO] [stderr]    Compiling language-tags v0.2.2
+[INFO] [stderr]    Compiling hex v0.2.0
+[INFO] [stderr]    Compiling antidote v1.0.0
+[INFO] [stderr]    Compiling dtoa v0.4.2
+[INFO] [stderr]    Compiling adler32 v1.0.2
+[INFO] [stderr]    Compiling itoa v0.3.4
+[INFO] [stderr]    Compiling serde v1.0.27
+[INFO] [stderr]    Compiling kernel32-sys v0.2.2
+[INFO] [stderr]    Compiling ws2_32-sys v0.2.1
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling unicase v2.1.0
+[INFO] [stderr]    Compiling log v0.4.1
+[INFO] [stderr]    Compiling memchr v1.0.2
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling block-buffer v0.3.3
+[INFO] [stderr]    Compiling num-integer v0.1.36
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling crc v1.7.0
+[INFO] [stderr]    Compiling base64 v0.6.0
+[INFO] [stderr]    Compiling base64 v0.9.0
+[INFO] [stderr]    Compiling tokio-service v0.1.0
+[INFO] [stderr]    Compiling relay v0.1.1
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling scheduled-thread-pool v0.1.0
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling num-iter v0.1.35
+[INFO] [stderr]    Compiling stringprep v0.1.2
+[INFO] [stderr]    Compiling idna v0.1.4
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling generic-array v0.9.0
+[INFO] [stderr]    Compiling r2d2 v0.7.4
+[INFO] [stderr]    Compiling serde_json v1.0.9
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling schannel v0.1.10
+[INFO] [stderr]    Compiling time v0.1.39
+[INFO] [stderr]    Compiling socket2 v0.3.1
+[INFO] [stderr]    Compiling url v1.6.0
+[INFO] [stderr]    Compiling phf_shared v0.7.21
+[INFO] [stderr]    Compiling digest v0.7.2
+[INFO] [stderr]    Compiling crypto-mac v0.5.2
+[INFO] [stderr]    Compiling mime v0.3.5
+[INFO] [stderr]    Compiling libflate v0.1.14
+[INFO] [stderr] warning[E0713]: borrow may still be in use when destructor runs
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\url-1.6.0\src\form_urlencoded.rs:261:40
+[INFO] [stderr]     |
+[INFO] [stderr] 259 | impl<'a> Target for ::UrlQuery<'a> {
+[INFO] [stderr]     |      -- lifetime `'a` defined here
+[INFO] [stderr] 260 |     fn as_mut_string(&mut self) -> &mut String { &mut self.url.serialization }
+[INFO] [stderr] 261 |     fn finish(self) -> &'a mut ::Url { self.url }
+[INFO] [stderr]     |                                        ^^^^^^^^ - here, drop of `self` needs exclusive access to `*self.url`, because the type `UrlQuery<'_>` implements the `Drop` trait
+[INFO] [stderr]     |                                        |
+[INFO] [stderr]     |                                        returning this value requires that `*self.url` is borrowed for `'a`
+[INFO] [stderr]     |
+[INFO] [stderr]     = warning: this error has been downgraded to a warning for backwards compatibility with previous releases
+[INFO] [stderr]     = warning: this represents potential undefined behavior in your code and this warning will become a hard error in the future
+[INFO] [stderr]     = note: for more information, try `rustc --explain E0729`
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling serde_derive_internals v0.19.0
+[INFO] [stderr]    Compiling rand v0.3.22
+[INFO] [stderr]    Compiling chrono v0.4.0
+[INFO] [stderr]    Compiling phf v0.7.21
+[INFO] [stderr]    Compiling sha2 v0.7.0
+[INFO] [stderr]    Compiling native-tls v0.1.5
+[INFO] [stderr]    Compiling hmac v0.5.0
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.1
+[INFO] [stderr]    Compiling phf_generator v0.7.21
+[INFO] [stderr]    Compiling uuid v0.5.1
+[INFO] [stderr]    Compiling serde_derive v1.0.27
+[INFO] [stderr]    Compiling iovec v0.1.2
+[INFO] [stderr]    Compiling phf_codegen v0.7.21
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.3
+[INFO] [stderr]    Compiling net2 v0.2.31
+[INFO] [stderr]    Compiling bytes v0.4.6
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling tokio-io v0.1.5
+[INFO] [stderr]    Compiling postgres-protocol v0.3.2
+[INFO] [stderr] error: failed to run custom build command for `mime_guess v2.0.0-alpha.3`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\mime_guess-eedc2854862783d9\build-script-gen_mime_types` (exit code: 101)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 5, kind: PermissionDenied, message: "Access is denied." }', src\libcore\result.rs:1051:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff6b755d72c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff6b755d72c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff6b75608be - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff6b75608be - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff6b7560542 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff6b7561030 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff6b7560b64 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff6b7560a49 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stderr]    8:     0x7ff6b756bb8c - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stderr]    9:     0x7ff6b756bc8f - core::result::unwrap_failed
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stderr]   10:     0x7ff6b75261fc - core::result::Result<std::fs::File, std::io::error::Error>::unwrap<std::fs::File,std::io::error::Error>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:852
+[INFO] [stderr]   11:     0x7ff6b7527e1e - build_script_gen_mime_types::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\mime_guess-2.0.0-alpha.3\src\gen_mime_types.rs:22
+[INFO] [stderr]   12:     0x7ff6b7538d30 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   13:     0x7ff6b7560a37 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   14:     0x7ff6b7560a37 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   15:     0x7ff6b7563b62 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   16:     0x7ff6b7561252 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   17:     0x7ff6b7561252 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff6b7561252 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   19:     0x7ff6b7538d0b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   20:     0x7ff6b75292b0 - main
+[INFO] [stderr]   21:     0x7ff6b7570bd4 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   22:     0x7ff6b7570bd4 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   23:     0x7ff999947974 - BaseThreadInitThunk
+[INFO] [stderr]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "1262b7172d1ea8b2076404f996bb2033af0d0a14bad5a3859db9a7f36bb09de9"`
+[INFO] running `"docker" "rm" "-f" "1262b7172d1ea8b2076404f996bb2033af0d0a14bad5a3859db9a7f36bb09de9"`
+[INFO] [stdout] 1262b7172d1ea8b2076404f996bb2033af0d0a14bad5a3859db9a7f36bb09de9

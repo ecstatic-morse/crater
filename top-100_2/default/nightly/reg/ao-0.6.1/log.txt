@@ -1,0 +1,83 @@
+[INFO] fetching crate ao 0.6.1...
+[INFO] extracting crate ao 0.6.1 into work\ex\default\sources\nightly\reg\ao\0.6.1
+[INFO] extracting crate ao 0.6.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ao\0.6.1
+[INFO] validating manifest of ao-0.6.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ao-0.6.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ao-0.6.1
+[INFO] finished frobbing ao-0.6.1
+[INFO] frobbed toml for ao-0.6.1 written to work\ex\default\sources\nightly\reg\ao\0.6.1\Cargo.toml
+[INFO] started frobbing ao-0.6.1
+[INFO] finished frobbing ao-0.6.1
+[INFO] frobbed toml for ao-0.6.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ao\0.6.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ao-0.6.1 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ao\\0.6.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 528eaee3bce79ce80010279edbb596d5d7299550ccb84f03cf4f22a770c5fb68
+[INFO] running `"docker" "start" "-a" "528eaee3bce79ce80010279edbb596d5d7299550ccb84f03cf4f22a770c5fb68"`
+[INFO] [stderr]    Compiling ao v0.6.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0518]: attribute should be applied to function or closure
+[INFO] [stderr]    --> src/lib.rs:143:9
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |           #[inline]
+[INFO] [stderr]     |           ^^^^^^^^^
+[INFO] [stderr] 144 | /         impl Sample for $t {
+[INFO] [stderr] 145 | |             fn channels(&self) -> usize { 1 }
+[INFO] [stderr] 146 | |         }
+[INFO] [stderr]     | |_________- not a function or closure
+[INFO] [stderr] ...
+[INFO] [stderr] 155 |   sample_impl!(i8);
+[INFO] [stderr]     |   ----------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] error[E0518]: attribute should be applied to function or closure
+[INFO] [stderr]    --> src/lib.rs:143:9
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |           #[inline]
+[INFO] [stderr]     |           ^^^^^^^^^
+[INFO] [stderr] 144 | /         impl Sample for $t {
+[INFO] [stderr] 145 | |             fn channels(&self) -> usize { 1 }
+[INFO] [stderr] 146 | |         }
+[INFO] [stderr]     | |_________- not a function or closure
+[INFO] [stderr] ...
+[INFO] [stderr] 156 |   sample_impl!(i16);
+[INFO] [stderr]     |   ------------------ in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] error[E0518]: attribute should be applied to function or closure
+[INFO] [stderr]    --> src/lib.rs:143:9
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |           #[inline]
+[INFO] [stderr]     |           ^^^^^^^^^
+[INFO] [stderr] 144 | /         impl Sample for $t {
+[INFO] [stderr] 145 | |             fn channels(&self) -> usize { 1 }
+[INFO] [stderr] 146 | |         }
+[INFO] [stderr]     | |_________- not a function or closure
+[INFO] [stderr] ...
+[INFO] [stderr] 157 |   sample_impl!(i32);
+[INFO] [stderr]     |   ------------------ in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] error[E0518]: attribute should be applied to function or closure
+[INFO] [stderr]    --> src/lib.rs:149:9
+[INFO] [stderr]     |
+[INFO] [stderr] 149 |           #[inline]
+[INFO] [stderr]     |           ^^^^^^^^^
+[INFO] [stderr] 150 | /         impl<S: Sample> Sample for [S; $w] {
+[INFO] [stderr] 151 | |             fn channels(&self) -> usize { $w }
+[INFO] [stderr] 152 | |         }
+[INFO] [stderr]     | |_________- not a function or closure
+[INFO] [stderr] ...
+[INFO] [stderr] 158 |   sample_impl!(channels 2);
+[INFO] [stderr]     |   ------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0518`.
+[INFO] [stderr] error: Could not compile `ao`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "528eaee3bce79ce80010279edbb596d5d7299550ccb84f03cf4f22a770c5fb68"`
+[INFO] running `"docker" "rm" "-f" "528eaee3bce79ce80010279edbb596d5d7299550ccb84f03cf4f22a770c5fb68"`
+[INFO] [stdout] 528eaee3bce79ce80010279edbb596d5d7299550ccb84f03cf4f22a770c5fb68

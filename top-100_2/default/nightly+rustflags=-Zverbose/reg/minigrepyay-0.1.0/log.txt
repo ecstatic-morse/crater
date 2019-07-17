@@ -1,0 +1,61 @@
+[INFO] fetching crate minigrepyay 0.1.0...
+[INFO] extracting crate minigrepyay 0.1.0 into work\ex\default\sources\nightly\reg\minigrepyay\0.1.0
+[INFO] extracting crate minigrepyay 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\minigrepyay\0.1.0
+[INFO] validating manifest of minigrepyay-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of minigrepyay-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing minigrepyay-0.1.0
+[INFO] finished frobbing minigrepyay-0.1.0
+[INFO] frobbed toml for minigrepyay-0.1.0 written to work\ex\default\sources\nightly\reg\minigrepyay\0.1.0\Cargo.toml
+[INFO] started frobbing minigrepyay-0.1.0
+[INFO] finished frobbing minigrepyay-0.1.0
+[INFO] frobbed toml for minigrepyay-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\minigrepyay\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing minigrepyay-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\minigrepyay\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ed7217219c666167fd054593a86f00f74867c3f01dc7e5e88fa1509e475882dc
+[INFO] running `"docker" "start" "-a" "ed7217219c666167fd054593a86f00f74867c3f01dc7e5e88fa1509e475882dc"`
+[INFO] [stderr]    Compiling minigrepyay v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.89s
+[INFO] running `"docker" "inspect" "ed7217219c666167fd054593a86f00f74867c3f01dc7e5e88fa1509e475882dc"`
+[INFO] running `"docker" "rm" "-f" "ed7217219c666167fd054593a86f00f74867c3f01dc7e5e88fa1509e475882dc"`
+[INFO] [stdout] ed7217219c666167fd054593a86f00f74867c3f01dc7e5e88fa1509e475882dc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\minigrepyay\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f8f67df2aadb512b5d1af6a961dcd636b471170a42c3bfe41b9bd7f346345c77
+[INFO] running `"docker" "start" "-a" "f8f67df2aadb512b5d1af6a961dcd636b471170a42c3bfe41b9bd7f346345c77"`
+[INFO] [stderr]    Compiling minigrepyay v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.00s
+[INFO] running `"docker" "inspect" "f8f67df2aadb512b5d1af6a961dcd636b471170a42c3bfe41b9bd7f346345c77"`
+[INFO] running `"docker" "rm" "-f" "f8f67df2aadb512b5d1af6a961dcd636b471170a42c3bfe41b9bd7f346345c77"`
+[INFO] [stdout] f8f67df2aadb512b5d1af6a961dcd636b471170a42c3bfe41b9bd7f346345c77
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\minigrepyay\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 5ac61d81b91a0b04b72f85290aff7af0c286c0eb894fe35340b89693b08e29ed
+[INFO] running `"docker" "start" "-a" "5ac61d81b91a0b04b72f85290aff7af0c286c0eb894fe35340b89693b08e29ed"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\minigrepyay-6290880ac70e080f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test tests::search_case_insensitive ... ok
+[INFO] [stdout] test tests::search_case_sensitive ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\minigrepyay-4b63377e1332be79.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests minigrepyay
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5ac61d81b91a0b04b72f85290aff7af0c286c0eb894fe35340b89693b08e29ed"`
+[INFO] running `"docker" "rm" "-f" "5ac61d81b91a0b04b72f85290aff7af0c286c0eb894fe35340b89693b08e29ed"`
+[INFO] [stdout] 5ac61d81b91a0b04b72f85290aff7af0c286c0eb894fe35340b89693b08e29ed

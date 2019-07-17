@@ -1,0 +1,76 @@
+[INFO] fetching crate libarchive 0.1.1...
+[INFO] extracting crate libarchive 0.1.1 into work\ex\default\sources\stable\reg\libarchive\0.1.1
+[INFO] extracting crate libarchive 0.1.1 into work\ex\default\sources\beta\reg\libarchive\0.1.1
+[INFO] validating manifest of libarchive-0.1.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libarchive-0.1.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libarchive-0.1.1
+[INFO] finished frobbing libarchive-0.1.1
+[INFO] frobbed toml for libarchive-0.1.1 written to work\ex\default\sources\stable\reg\libarchive\0.1.1\Cargo.toml
+[INFO] started frobbing libarchive-0.1.1
+[INFO] finished frobbing libarchive-0.1.1
+[INFO] frobbed toml for libarchive-0.1.1 written to work\ex\default\sources\beta\reg\libarchive\0.1.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libarchive3-sys v0.1.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libarchive-0.1.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\libarchive\\0.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] ecb7290dbde8e5fd5e8a6efe4566c8e58b054e0c12e5ae76033d2ccdbc2cbfa8
+[INFO] running `"docker" "start" "-a" "ecb7290dbde8e5fd5e8a6efe4566c8e58b054e0c12e5ae76033d2ccdbc2cbfa8"`
+[INFO] [stderr]    Compiling libarchive3-sys v0.1.2
+[INFO] [stderr] error: failed to run custom build command for `libarchive3-sys v0.1.2`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\libarchive3-sys-6c26fceb20266e66\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'Unable to locate libarchive, err="Failed to run `\"pkg-config\" \"--libs\" \"--cflags\" \"libarchive\"`: The system cannot find the file specified. (os error 2)"', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libarchive3-sys-0.1.2\build.rs:32:25
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff6f8b0ad7c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff6f8b0ad7c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff6f8b0dffe - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff6f8b0dffe - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff6f8b0dc83 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff6f8b0e770 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff6f8b0e2a4 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff6f8b0e1f2 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff6f8ac19b9 - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libarchive3-sys-0.1.2\build.rs:32
+[INFO] [stderr]    9:     0x7ff6f8ac1110 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   10:     0x7ff6f8b0e177 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stderr]   11:     0x7ff6f8b0e177 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff6f8b176b2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff6f8b0e992 - std::panicking::try
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff6f8b0e992 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff6f8b0e992 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stderr]   16:     0x7ff6f8ac10eb - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   17:     0x7ff6f8ac1cc0 - main
+[INFO] [stderr]   18:     0x7ff6f8b24d08 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   19:     0x7ff6f8b24d08 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   20:     0x7ff9a0a07974 - BaseThreadInitThunk
+[INFO] [stderr]   21:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] running `"docker" "inspect" "ecb7290dbde8e5fd5e8a6efe4566c8e58b054e0c12e5ae76033d2ccdbc2cbfa8"`
+[INFO] running `"docker" "rm" "-f" "ecb7290dbde8e5fd5e8a6efe4566c8e58b054e0c12e5ae76033d2ccdbc2cbfa8"`
+[INFO] [stdout] ecb7290dbde8e5fd5e8a6efe4566c8e58b054e0c12e5ae76033d2ccdbc2cbfa8

@@ -1,0 +1,140 @@
+[INFO] fetching crate ssh2 0.3.3...
+[INFO] extracting crate ssh2 0.3.3 into work\ex\default\sources\stable\reg\ssh2\0.3.3
+[INFO] extracting crate ssh2 0.3.3 into work\ex\default\sources\beta\reg\ssh2\0.3.3
+[INFO] validating manifest of ssh2-0.3.3 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ssh2-0.3.3 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ssh2-0.3.3
+[INFO] removed 1 missing tests
+[INFO] finished frobbing ssh2-0.3.3
+[INFO] frobbed toml for ssh2-0.3.3 written to work\ex\default\sources\stable\reg\ssh2\0.3.3\Cargo.toml
+[INFO] started frobbing ssh2-0.3.3
+[INFO] removed 1 missing tests
+[INFO] finished frobbing ssh2-0.3.3
+[INFO] frobbed toml for ssh2-0.3.3 written to work\ex\default\sources\beta\reg\ssh2\0.3.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bitflags v0.7.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ssh2-0.3.3 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ssh2\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 5f158def78aade4c23b32a6838d323bd99986a0a6366eb194a88c07d06e6c5de
+[INFO] running `"docker" "start" "-a" "5f158def78aade4c23b32a6838d323bd99986a0a6366eb194a88c07d06e6c5de"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\agent.rs
+[INFO] [stderr] * C:\crater\workdir\tests\all.rs
+[INFO] [stderr] * C:\crater\workdir\tests\channel.rs
+[INFO] [stderr] * C:\crater\workdir\tests\knownhosts.rs
+[INFO] [stderr] * C:\crater\workdir\tests\session.rs
+[INFO] [stderr] * C:\crater\workdir\tests\sftp.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11
+[INFO] [stderr]    Compiling ssh2 v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 12s
+[INFO] running `"docker" "inspect" "5f158def78aade4c23b32a6838d323bd99986a0a6366eb194a88c07d06e6c5de"`
+[INFO] running `"docker" "rm" "-f" "5f158def78aade4c23b32a6838d323bd99986a0a6366eb194a88c07d06e6c5de"`
+[INFO] [stdout] 5f158def78aade4c23b32a6838d323bd99986a0a6366eb194a88c07d06e6c5de
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ssh2\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2bef9f4f8755c1d1177ae67d60f0cbe9758f477829d72ad4a1f1f216482a4b73
+[INFO] running `"docker" "start" "-a" "2bef9f4f8755c1d1177ae67d60f0cbe9758f477829d72ad4a1f1f216482a4b73"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\agent.rs
+[INFO] [stderr] * C:\crater\workdir\tests\all.rs
+[INFO] [stderr] * C:\crater\workdir\tests\channel.rs
+[INFO] [stderr] * C:\crater\workdir\tests\knownhosts.rs
+[INFO] [stderr] * C:\crater\workdir\tests\session.rs
+[INFO] [stderr] * C:\crater\workdir\tests\sftp.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling ssh2 v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 29.41s
+[INFO] running `"docker" "inspect" "2bef9f4f8755c1d1177ae67d60f0cbe9758f477829d72ad4a1f1f216482a4b73"`
+[INFO] running `"docker" "rm" "-f" "2bef9f4f8755c1d1177ae67d60f0cbe9758f477829d72ad4a1f1f216482a4b73"`
+[INFO] [stdout] 2bef9f4f8755c1d1177ae67d60f0cbe9758f477829d72ad4a1f1f216482a4b73
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ssh2\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] b545a7409b5e2b34d4452dc698939f53968f31d50b9538650e6a55cebc7bdb8e
+[INFO] running `"docker" "start" "-a" "b545a7409b5e2b34d4452dc698939f53968f31d50b9538650e6a55cebc7bdb8e"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\agent.rs
+[INFO] [stderr] * C:\crater\workdir\tests\all.rs
+[INFO] [stderr] * C:\crater\workdir\tests\channel.rs
+[INFO] [stderr] * C:\crater\workdir\tests\knownhosts.rs
+[INFO] [stderr] * C:\crater\workdir\tests\session.rs
+[INFO] [stderr] * C:\crater\workdir\tests\sftp.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ssh2-8c9ba5d9ed3289f4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests ssh2
+[INFO] [stdout] 
+[INFO] [stdout] running 8 tests
+[INFO] [stdout] test src\channel.rs - channel::Channel::exec (line 130) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 14) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 108) ... ok
+[INFO] [stdout] test src\knownhosts.rs - knownhosts::KnownHosts (line 15) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 34) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 52) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 67) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 89) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b545a7409b5e2b34d4452dc698939f53968f31d50b9538650e6a55cebc7bdb8e"`
+[INFO] running `"docker" "rm" "-f" "b545a7409b5e2b34d4452dc698939f53968f31d50b9538650e6a55cebc7bdb8e"`
+[INFO] [stdout] b545a7409b5e2b34d4452dc698939f53968f31d50b9538650e6a55cebc7bdb8e

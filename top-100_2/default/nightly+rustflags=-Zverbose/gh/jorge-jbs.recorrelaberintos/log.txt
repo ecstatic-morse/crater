@@ -1,0 +1,112 @@
+[INFO] cloning repository jorge-jbs/recorrelaberintos
+[INFO] running `"git" "clone" "--bare" "git://github.com/jorge-jbs/recorrelaberintos.git" "work\\cache\\sources\\gh\\jorge-jbs\\recorrelaberintos"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jorge-jbs\recorrelaberintos'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jorge-jbs\\recorrelaberintos" "work\\ex\\default\\sources\\nightly\\gh\\jorge-jbs\\recorrelaberintos"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\jorge-jbs\recorrelaberintos'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jorge-jbs\\recorrelaberintos" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jorge-jbs\\recorrelaberintos"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jorge-jbs\recorrelaberintos'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 6c4ffae0f6dc8a3c93155bfae04c51af3d582f96
+[INFO] sha for GitHub repo jorge-jbs/recorrelaberintos: 6c4ffae0f6dc8a3c93155bfae04c51af3d582f96
+[INFO] validating manifest of jorge-jbs/recorrelaberintos on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jorge-jbs/recorrelaberintos on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jorge-jbs/recorrelaberintos
+[INFO] finished frobbing jorge-jbs/recorrelaberintos
+[INFO] frobbed toml for jorge-jbs/recorrelaberintos written to work\ex\default\sources\nightly\gh\jorge-jbs\recorrelaberintos\Cargo.toml
+[INFO] started frobbing jorge-jbs/recorrelaberintos
+[INFO] finished frobbing jorge-jbs/recorrelaberintos
+[INFO] frobbed toml for jorge-jbs/recorrelaberintos written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jorge-jbs\recorrelaberintos\Cargo.toml
+[INFO] crate jorge-jbs/recorrelaberintos already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rayon v1.0.0
+[INFO] [stderr]   Downloaded crossbeam-epoch v0.3.0
+[INFO] [stderr]   Downloaded either v1.4.0
+[INFO] [stderr]   Downloaded image v0.18.0
+[INFO] [stderr]   Downloaded png v0.11.0
+[INFO] [stderr]   Downloaded inflate v0.3.4
+[INFO] [stderr]   Downloaded deflate v0.7.17
+[INFO] [stderr]   Downloaded jpeg-decoder v0.1.14
+[INFO] [stderr]   Downloaded cons-list v0.0.3
+[INFO] [stderr]   Downloaded rayon-core v1.4.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing jorge-jbs/recorrelaberintos against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jorge-jbs\\recorrelaberintos,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 0a311822972e09aba70c22b8b5b51eb754dd1bc6183aed92d523b303bd00f1c1
+[INFO] running `"docker" "start" "-a" "0a311822972e09aba70c22b8b5b51eb754dd1bc6183aed92d523b303bd00f1c1"`
+[INFO] [stderr]    Compiling nodrop v0.1.12
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling memoffset v0.2.1
+[INFO] [stderr]    Compiling rayon-core v1.4.0
+[INFO] [stderr]    Compiling libc v0.2.39
+[INFO] [stderr]    Compiling num-traits v0.2.1
+[INFO] [stderr]    Compiling adler32 v1.0.2
+[INFO] [stderr]    Compiling either v1.4.0
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling color_quant v1.0.0
+[INFO] [stderr]    Compiling scoped_threadpool v0.1.9
+[INFO] [stderr]    Compiling cons-list v0.0.3
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling arrayvec v0.4.7
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling inflate v0.3.4
+[INFO] [stderr]    Compiling deflate v0.7.17
+[INFO] [stderr]    Compiling num-integer v0.1.36
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling gif v0.9.2
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.0
+[INFO] [stderr]    Compiling enum_primitive v0.1.1
+[INFO] [stderr]    Compiling num-iter v0.1.35
+[INFO] [stderr]    Compiling num-rational v0.1.42
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling png v0.11.0
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling rayon v1.0.0
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.14
+[INFO] [stderr]    Compiling image v0.18.0
+[INFO] [stderr]    Compiling recorrelaberintos v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 48s
+[INFO] running `"docker" "inspect" "0a311822972e09aba70c22b8b5b51eb754dd1bc6183aed92d523b303bd00f1c1"`
+[INFO] running `"docker" "rm" "-f" "0a311822972e09aba70c22b8b5b51eb754dd1bc6183aed92d523b303bd00f1c1"`
+[INFO] [stdout] 0a311822972e09aba70c22b8b5b51eb754dd1bc6183aed92d523b303bd00f1c1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jorge-jbs\\recorrelaberintos,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] df95ed2ce96b369ad03922ed8198905dfc5474f950c5d92671f2ce32353d3556
+[INFO] running `"docker" "start" "-a" "df95ed2ce96b369ad03922ed8198905dfc5474f950c5d92671f2ce32353d3556"`
+[INFO] [stderr]    Compiling recorrelaberintos v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `test`
+[INFO] [stderr]    --> src\async_cons_list.rs:443:9
+[INFO] [stderr]     |
+[INFO] [stderr] 443 |     use test::Bencher;
+[INFO] [stderr]     |         ^^^^ help: a similar path exists: `super::test`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `test`
+[INFO] [stderr]    --> src\async_cons_list.rs:444:9
+[INFO] [stderr]     |
+[INFO] [stderr] 444 |     use test;
+[INFO] [stderr]     |         ^^^^ no `test` in the root
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: use of unstable library feature 'test'
+[INFO] [stderr]   --> src\async_cons_list.rs:31:1
+[INFO] [stderr]    |
+[INFO] [stderr] 31 | extern crate test;
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: for more information, see https://github.com/rust-lang/rust/issues/27812
+[INFO] [stderr]    = help: add `#![feature(test)]` to the crate attributes to enable
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 3 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0658.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `recorrelaberintos`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "df95ed2ce96b369ad03922ed8198905dfc5474f950c5d92671f2ce32353d3556"`
+[INFO] running `"docker" "rm" "-f" "df95ed2ce96b369ad03922ed8198905dfc5474f950c5d92671f2ce32353d3556"`
+[INFO] [stdout] df95ed2ce96b369ad03922ed8198905dfc5474f950c5d92671f2ce32353d3556

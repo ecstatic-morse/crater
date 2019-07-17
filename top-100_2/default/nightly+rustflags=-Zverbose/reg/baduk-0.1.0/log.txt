@@ -1,0 +1,45 @@
+[INFO] fetching crate baduk 0.1.0...
+[INFO] extracting crate baduk 0.1.0 into work\ex\default\sources\nightly\reg\baduk\0.1.0
+[INFO] extracting crate baduk 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\baduk\0.1.0
+[INFO] validating manifest of baduk-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of baduk-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing baduk-0.1.0
+[INFO] finished frobbing baduk-0.1.0
+[INFO] frobbed toml for baduk-0.1.0 written to work\ex\default\sources\nightly\reg\baduk\0.1.0\Cargo.toml
+[INFO] started frobbing baduk-0.1.0
+[INFO] finished frobbing baduk-0.1.0
+[INFO] frobbed toml for baduk-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\baduk\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing baduk-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\baduk\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 40b51146ccb907d64b9ea799a53106e670ad331983df92941991ad8c81ab1afa
+[INFO] running `"docker" "start" "-a" "40b51146ccb907d64b9ea799a53106e670ad331983df92941991ad8c81ab1afa"`
+[INFO] [stderr]    Compiling nom v2.2.1
+[INFO] [stderr]    Compiling baduk v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0557]: feature has been removed
+[INFO] [stderr]  --> src\main.rs:1:12
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(advanced_slice_patterns, slice_patterns)]
+[INFO] [stderr]   |            ^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr] note: merged into `#![feature(slice_patterns)]`
+[INFO] [stderr]  --> src\main.rs:1:12
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(advanced_slice_patterns, slice_patterns)]
+[INFO] [stderr]   |            ^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0557`.
+[INFO] [stderr] error: Could not compile `baduk`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "40b51146ccb907d64b9ea799a53106e670ad331983df92941991ad8c81ab1afa"`
+[INFO] running `"docker" "rm" "-f" "40b51146ccb907d64b9ea799a53106e670ad331983df92941991ad8c81ab1afa"`
+[INFO] [stdout] 40b51146ccb907d64b9ea799a53106e670ad331983df92941991ad8c81ab1afa

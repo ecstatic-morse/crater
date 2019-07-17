@@ -1,0 +1,56 @@
+[INFO] cloning repository talklittle/ff13-2-clock-puzzle-rs
+[INFO] running `"git" "clone" "--bare" "git://github.com/talklittle/ff13-2-clock-puzzle-rs.git" "work\\cache\\sources\\gh\\talklittle\\ff13-2-clock-puzzle-rs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\talklittle\ff13-2-clock-puzzle-rs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\talklittle\\ff13-2-clock-puzzle-rs" "work\\ex\\default\\sources\\nightly\\gh\\talklittle\\ff13-2-clock-puzzle-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\talklittle\ff13-2-clock-puzzle-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\talklittle\\ff13-2-clock-puzzle-rs" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\talklittle\\ff13-2-clock-puzzle-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\talklittle\ff13-2-clock-puzzle-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 68cd93a587d4c98c65cb94b964b3a42cec33db24
+[INFO] sha for GitHub repo talklittle/ff13-2-clock-puzzle-rs: 68cd93a587d4c98c65cb94b964b3a42cec33db24
+[INFO] validating manifest of talklittle/ff13-2-clock-puzzle-rs on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of talklittle/ff13-2-clock-puzzle-rs on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing talklittle/ff13-2-clock-puzzle-rs
+[INFO] finished frobbing talklittle/ff13-2-clock-puzzle-rs
+[INFO] frobbed toml for talklittle/ff13-2-clock-puzzle-rs written to work\ex\default\sources\nightly\gh\talklittle\ff13-2-clock-puzzle-rs\Cargo.toml
+[INFO] started frobbing talklittle/ff13-2-clock-puzzle-rs
+[INFO] finished frobbing talklittle/ff13-2-clock-puzzle-rs
+[INFO] frobbed toml for talklittle/ff13-2-clock-puzzle-rs written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\talklittle\ff13-2-clock-puzzle-rs\Cargo.toml
+[INFO] crate talklittle/ff13-2-clock-puzzle-rs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing talklittle/ff13-2-clock-puzzle-rs against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\talklittle\\ff13-2-clock-puzzle-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 9be5e87e857a706ecc3fa1b9cb9e373f3eaba94b4c7d4fa137cd50e2c18e7deb
+[INFO] running `"docker" "start" "-a" "9be5e87e857a706ecc3fa1b9cb9e373f3eaba94b4c7d4fa137cd50e2c18e7deb"`
+[INFO] [stderr]    Compiling ff13-2-clock-puzzle-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.97s
+[INFO] running `"docker" "inspect" "9be5e87e857a706ecc3fa1b9cb9e373f3eaba94b4c7d4fa137cd50e2c18e7deb"`
+[INFO] running `"docker" "rm" "-f" "9be5e87e857a706ecc3fa1b9cb9e373f3eaba94b4c7d4fa137cd50e2c18e7deb"`
+[INFO] [stdout] 9be5e87e857a706ecc3fa1b9cb9e373f3eaba94b4c7d4fa137cd50e2c18e7deb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\talklittle\\ff13-2-clock-puzzle-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6b82c29ec27e5084c46280ced46c7323ef4683fbe52a87ad74aadcc31983372d
+[INFO] running `"docker" "start" "-a" "6b82c29ec27e5084c46280ced46c7323ef4683fbe52a87ad74aadcc31983372d"`
+[INFO] [stderr]    Compiling ff13-2-clock-puzzle-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.29s
+[INFO] running `"docker" "inspect" "6b82c29ec27e5084c46280ced46c7323ef4683fbe52a87ad74aadcc31983372d"`
+[INFO] running `"docker" "rm" "-f" "6b82c29ec27e5084c46280ced46c7323ef4683fbe52a87ad74aadcc31983372d"`
+[INFO] [stdout] 6b82c29ec27e5084c46280ced46c7323ef4683fbe52a87ad74aadcc31983372d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\talklittle\\ff13-2-clock-puzzle-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c2ea9e5e3de01590df0f651cc45bae7ba47f523b33ae08ed917376933175132f
+[INFO] running `"docker" "start" "-a" "c2ea9e5e3de01590df0f651cc45bae7ba47f523b33ae08ed917376933175132f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ff13_2_clock_puzzle_rs-9c96867c8c6a9d02.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test solve_12_hour_example_1 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c2ea9e5e3de01590df0f651cc45bae7ba47f523b33ae08ed917376933175132f"`
+[INFO] running `"docker" "rm" "-f" "c2ea9e5e3de01590df0f651cc45bae7ba47f523b33ae08ed917376933175132f"`
+[INFO] [stdout] c2ea9e5e3de01590df0f651cc45bae7ba47f523b33ae08ed917376933175132f

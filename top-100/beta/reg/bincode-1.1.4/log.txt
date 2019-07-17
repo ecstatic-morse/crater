@@ -1,0 +1,71 @@
+[INFO] fetching crate bincode 1.1.4...
+[INFO] extracting crate bincode 1.1.4 into work\ex\default\sources\stable\reg\bincode\1.1.4
+[INFO] extracting crate bincode 1.1.4 into work\ex\default\sources\beta\reg\bincode\1.1.4
+[INFO] validating manifest of bincode-1.1.4 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bincode-1.1.4 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bincode-1.1.4
+[INFO] finished frobbing bincode-1.1.4
+[INFO] frobbed toml for bincode-1.1.4 written to work\ex\default\sources\stable\reg\bincode\1.1.4\Cargo.toml
+[INFO] started frobbing bincode-1.1.4
+[INFO] finished frobbing bincode-1.1.4
+[INFO] frobbed toml for bincode-1.1.4 written to work\ex\default\sources\beta\reg\bincode\1.1.4\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bincode-1.1.4 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\bincode\\1.1.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] ba579f98bc22183e9f8e0d55be882f5a9117eccc8550a1d913c90ac69d502bad
+[INFO] running `"docker" "start" "-a" "ba579f98bc22183e9f8e0d55be882f5a9117eccc8550a1d913c90ac69d502bad"`
+[INFO] [stderr]    Compiling bincode v1.1.4 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error.rs:61:32
+[INFO] [stderr]    |
+[INFO] [stderr] 61 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.61s
+[INFO] running `"docker" "inspect" "ba579f98bc22183e9f8e0d55be882f5a9117eccc8550a1d913c90ac69d502bad"`
+[INFO] running `"docker" "rm" "-f" "ba579f98bc22183e9f8e0d55be882f5a9117eccc8550a1d913c90ac69d502bad"`
+[INFO] [stdout] ba579f98bc22183e9f8e0d55be882f5a9117eccc8550a1d913c90ac69d502bad
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\bincode\\1.1.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3b56d295f4f75273864b6a4c9a8690f7a7ea9e19f958f55c71be6c96586440e3
+[INFO] running `"docker" "start" "-a" "3b56d295f4f75273864b6a4c9a8690f7a7ea9e19f958f55c71be6c96586440e3"`
+[INFO] [stderr]    Compiling serde_bytes v0.11.1
+[INFO] [stderr]    Compiling bincode v1.1.4 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error.rs:61:32
+[INFO] [stderr]    |
+[INFO] [stderr] 61 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.65s
+[INFO] running `"docker" "inspect" "3b56d295f4f75273864b6a4c9a8690f7a7ea9e19f958f55c71be6c96586440e3"`
+[INFO] running `"docker" "rm" "-f" "3b56d295f4f75273864b6a4c9a8690f7a7ea9e19f958f55c71be6c96586440e3"`
+[INFO] [stdout] 3b56d295f4f75273864b6a4c9a8690f7a7ea9e19f958f55c71be6c96586440e3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\bincode\\1.1.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 0c23e7b46a99bf3a97216faaa54370de310fb73087cf496ce3e0c7def3afbcb4
+[INFO] running `"docker" "start" "-a" "0c23e7b46a99bf3a97216faaa54370de310fb73087cf496ce3e0c7def3afbcb4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bincode-6f45b8a92383c4e8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests bincode
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\de\mod.rs - de::Deserializer (line 22) ... ignored
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0c23e7b46a99bf3a97216faaa54370de310fb73087cf496ce3e0c7def3afbcb4"`
+[INFO] running `"docker" "rm" "-f" "0c23e7b46a99bf3a97216faaa54370de310fb73087cf496ce3e0c7def3afbcb4"`
+[INFO] [stdout] 0c23e7b46a99bf3a97216faaa54370de310fb73087cf496ce3e0c7def3afbcb4

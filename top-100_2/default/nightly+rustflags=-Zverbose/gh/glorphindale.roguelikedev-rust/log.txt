@@ -1,0 +1,70 @@
+[INFO] cloning repository glorphindale/roguelikedev-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/glorphindale/roguelikedev-rust.git" "work\\cache\\sources\\gh\\glorphindale\\roguelikedev-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\glorphindale\roguelikedev-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\glorphindale\\roguelikedev-rust" "work\\ex\\default\\sources\\nightly\\gh\\glorphindale\\roguelikedev-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\glorphindale\roguelikedev-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\glorphindale\\roguelikedev-rust" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\glorphindale\\roguelikedev-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\glorphindale\roguelikedev-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 5fb74d0d0b31a295e5e2242cf3940475885d80d2
+[INFO] sha for GitHub repo glorphindale/roguelikedev-rust: 5fb74d0d0b31a295e5e2242cf3940475885d80d2
+[INFO] validating manifest of glorphindale/roguelikedev-rust on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of glorphindale/roguelikedev-rust on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing glorphindale/roguelikedev-rust
+[INFO] finished frobbing glorphindale/roguelikedev-rust
+[INFO] frobbed toml for glorphindale/roguelikedev-rust written to work\ex\default\sources\nightly\gh\glorphindale\roguelikedev-rust\Cargo.toml
+[INFO] started frobbing glorphindale/roguelikedev-rust
+[INFO] finished frobbing glorphindale/roguelikedev-rust
+[INFO] frobbed toml for glorphindale/roguelikedev-rust written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\glorphindale\roguelikedev-rust\Cargo.toml
+[INFO] crate glorphindale/roguelikedev-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tcod v0.15.0
+[INFO] [stderr]   Downloaded tcod-sys v5.0.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing glorphindale/roguelikedev-rust against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\glorphindale\\roguelikedev-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8228f8d5599f43fcb3ef1640bf8efd3169be5554f7b045c126431dd1501b6eb6
+[INFO] running `"docker" "start" "-a" "8228f8d5599f43fcb3ef1640bf8efd3169be5554f7b045c126431dd1501b6eb6"`
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libc v0.2.58
+[INFO] [stderr]    Compiling lazy_static v0.1.16
+[INFO] [stderr]    Compiling bitflags v0.1.1
+[INFO] [stderr]    Compiling tcod-sys v5.0.1
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling tcod v0.15.0
+[INFO] [stderr]    Compiling roguelike_tut v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 54.13s
+[INFO] running `"docker" "inspect" "8228f8d5599f43fcb3ef1640bf8efd3169be5554f7b045c126431dd1501b6eb6"`
+[INFO] running `"docker" "rm" "-f" "8228f8d5599f43fcb3ef1640bf8efd3169be5554f7b045c126431dd1501b6eb6"`
+[INFO] [stdout] 8228f8d5599f43fcb3ef1640bf8efd3169be5554f7b045c126431dd1501b6eb6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\glorphindale\\roguelikedev-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 622ab78c136386521c03d73245f9e756d5466093bc7788e79e81a51343faa381
+[INFO] running `"docker" "start" "-a" "622ab78c136386521c03d73245f9e756d5466093bc7788e79e81a51343faa381"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling roguelike_tut v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.97s
+[INFO] running `"docker" "inspect" "622ab78c136386521c03d73245f9e756d5466093bc7788e79e81a51343faa381"`
+[INFO] running `"docker" "rm" "-f" "622ab78c136386521c03d73245f9e756d5466093bc7788e79e81a51343faa381"`
+[INFO] [stdout] 622ab78c136386521c03d73245f9e756d5466093bc7788e79e81a51343faa381
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\glorphindale\\roguelikedev-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] f2f6d2a9bc1e1a01437275befa10561de7b63b25e797a3b4233aba3fb75cf7c8
+[INFO] running `"docker" "start" "-a" "f2f6d2a9bc1e1a01437275befa10561de7b63b25e797a3b4233aba3fb75cf7c8"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.67s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\roguelike_tut-1370dd7318691165.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f2f6d2a9bc1e1a01437275befa10561de7b63b25e797a3b4233aba3fb75cf7c8"`
+[INFO] running `"docker" "rm" "-f" "f2f6d2a9bc1e1a01437275befa10561de7b63b25e797a3b4233aba3fb75cf7c8"`
+[INFO] [stdout] f2f6d2a9bc1e1a01437275befa10561de7b63b25e797a3b4233aba3fb75cf7c8

@@ -1,0 +1,45 @@
+[INFO] fetching crate csv 1.1.1...
+[INFO] extracting crate csv 1.1.1 into work\ex\default\sources\stable\reg\csv\1.1.1
+[INFO] extracting crate csv 1.1.1 into work\ex\default\sources\beta\reg\csv\1.1.1
+[INFO] validating manifest of csv-1.1.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of csv-1.1.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing csv-1.1.1
+[INFO] finished frobbing csv-1.1.1
+[INFO] frobbed toml for csv-1.1.1 written to work\ex\default\sources\stable\reg\csv\1.1.1\Cargo.toml
+[INFO] started frobbing csv-1.1.1
+[INFO] finished frobbing csv-1.1.1
+[INFO] frobbed toml for csv-1.1.1 written to work\ex\default\sources\beta\reg\csv\1.1.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building csv-1.1.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\csv\\1.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 137a085f7f940f5d5545ba59dae54efe907d9be00d7ebeb01f8ec1bc2fdcc478
+[INFO] running `"docker" "start" "-a" "137a085f7f940f5d5545ba59dae54efe907d9be00d7ebeb01f8ec1bc2fdcc478"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling serde v1.0.95
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling ryu v1.0.0
+[INFO] [stderr]    Compiling regex-automata v0.1.7
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling csv-core v0.1.6
+[INFO] [stderr]    Compiling serde_derive v1.0.95
+[INFO] [stderr]    Compiling bstr v0.2.2
+[INFO] [stderr]    Compiling csv v1.1.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 48s
+[INFO] running `"docker" "inspect" "137a085f7f940f5d5545ba59dae54efe907d9be00d7ebeb01f8ec1bc2fdcc478"`
+[INFO] running `"docker" "rm" "-f" "137a085f7f940f5d5545ba59dae54efe907d9be00d7ebeb01f8ec1bc2fdcc478"`
+[INFO] [stdout] 137a085f7f940f5d5545ba59dae54efe907d9be00d7ebeb01f8ec1bc2fdcc478
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\csv\\1.1.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 51eefd0aa70057dedb2b6c6b90c2693141ec3188bfa800cd5f4aea72022de271
+[INFO] running `"docker" "start" "-a" "51eefd0aa70057dedb2b6c6b90c2693141ec3188bfa800cd5f4aea72022de271"`
+[INFO] [stderr]    Compiling csv v1.1.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 22s
+[INFO] running `"docker" "inspect" "51eefd0aa70057dedb2b6c6b90c2693141ec3188bfa800cd5f4aea72022de271"`
+[INFO] running `"docker" "rm" "-f" "51eefd0aa70057dedb2b6c6b90c2693141ec3188bfa800cd5f4aea72022de271"`
+[INFO] [stdout] 51eefd0aa70057dedb2b6c6b90c2693141ec3188bfa800cd5f4aea72022de271

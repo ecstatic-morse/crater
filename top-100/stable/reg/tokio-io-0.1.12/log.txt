@@ -1,0 +1,138 @@
+[INFO] fetching crate tokio-io 0.1.12...
+[INFO] extracting crate tokio-io 0.1.12 into work\ex\default\sources\stable\reg\tokio-io\0.1.12
+[INFO] extracting crate tokio-io 0.1.12 into work\ex\default\sources\beta\reg\tokio-io\0.1.12
+[INFO] validating manifest of tokio-io-0.1.12 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tokio-io-0.1.12 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tokio-io-0.1.12
+[INFO] finished frobbing tokio-io-0.1.12
+[INFO] frobbed toml for tokio-io-0.1.12 written to work\ex\default\sources\stable\reg\tokio-io\0.1.12\Cargo.toml
+[INFO] started frobbing tokio-io-0.1.12
+[INFO] finished frobbing tokio-io-0.1.12
+[INFO] frobbed toml for tokio-io-0.1.12 written to work\ex\default\sources\beta\reg\tokio-io\0.1.12\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tokio-io-0.1.12 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\tokio-io\\0.1.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 03de765931759cdcedaf042999a8a2507ab66322c2a8480cf9427f77f6a0a916
+[INFO] running `"docker" "start" "-a" "03de765931759cdcedaf042999a8a2507ab66322c2a8480cf9427f77f6a0a916"`
+[INFO] [stderr]    Compiling winapi v0.2.8
+[INFO] [stderr]    Compiling futures v0.1.28
+[INFO] [stderr]    Compiling iovec v0.1.2
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling tokio-io v0.1.12 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 47s
+[INFO] running `"docker" "inspect" "03de765931759cdcedaf042999a8a2507ab66322c2a8480cf9427f77f6a0a916"`
+[INFO] running `"docker" "rm" "-f" "03de765931759cdcedaf042999a8a2507ab66322c2a8480cf9427f77f6a0a916"`
+[INFO] [stdout] 03de765931759cdcedaf042999a8a2507ab66322c2a8480cf9427f77f6a0a916
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\tokio-io\\0.1.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] cbbe62a1e33b442a1af713ad4d45a59e25d750ccff91e72099aa413ef03e94b4
+[INFO] running `"docker" "start" "-a" "cbbe62a1e33b442a1af713ad4d45a59e25d750ccff91e72099aa413ef03e94b4"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-io v0.1.12 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.04s
+[INFO] running `"docker" "inspect" "cbbe62a1e33b442a1af713ad4d45a59e25d750ccff91e72099aa413ef03e94b4"`
+[INFO] running `"docker" "rm" "-f" "cbbe62a1e33b442a1af713ad4d45a59e25d750ccff91e72099aa413ef03e94b4"`
+[INFO] [stdout] cbbe62a1e33b442a1af713ad4d45a59e25d750ccff91e72099aa413ef03e94b4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\tokio-io\\0.1.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 4a722065dbfe2638c7591790ddf37792bf996f91221b880d76ed33400a5ccc65
+[INFO] running `"docker" "start" "-a" "4a722065dbfe2638c7591790ddf37792bf996f91221b880d76ed33400a5ccc65"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.42s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tokio_io-c6011f1053409ad9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test split::tests::split_readhalf_translate_wouldblock_to_not_ready ... ok
+[INFO] [stdout] test split::tests::split_writehalf_translate_wouldblock_to_not_ready ... ok
+[INFO] [stdout] test split::tests::unsplit_err1 ... ok
+[INFO] [stdout] test split::tests::unsplit_err2 ... ok
+[INFO] [stdout] test split::tests::unsplit_ok ... ok
+[INFO] [stdout] test split::tests::unsplit_err3 ... ok
+[INFO] [stdout] test split::tests::unsplit_err4 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\async_read-c99eace12bb7764f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test read_buf_error ... ok
+[INFO] [stdout] test read_buf_no_capacity ... ok
+[INFO] [stdout] test read_buf_no_uninitialized ... ok
+[INFO] [stdout] test read_buf_success ... ok
+[INFO] [stdout] test read_buf_translate_wouldblock_to_not_ready ... ok
+[INFO] [stdout] test read_buf_uninitialized_ok ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\length_delimited-1f22789b4d5ba885.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 31 tests
+[INFO] [stdout] test read_empty_io_yields_nothing ... ok
+[INFO] [stdout] test read_header_offset ... ok
+[INFO] [stdout] test read_incomplete_head ... ok
+[INFO] [stdout] test read_incomplete_head_multi ... ok
+[INFO] [stdout] test read_incomplete_payload ... ok
+[INFO] [stdout] test read_max_frame_len ... ok
+[INFO] [stdout] test read_multi_frame_multi_packet ... ok
+[INFO] [stdout] test read_multi_frame_multi_packet_wait ... ok
+[INFO] [stdout] test read_one_byte_length_field ... ok
+[INFO] [stdout] test read_single_frame_multi_packet ... ok
+[INFO] [stdout] test read_single_frame_one_packet ... ok
+[INFO] [stdout] test read_single_frame_multi_packet_wait ... ok
+[INFO] [stdout] test read_single_frame_one_packet_little_endian ... ok
+[INFO] [stdout] test read_single_frame_one_packet_native_endian ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet_length_includes_head ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet_skip_none_adjusted ... ok
+[INFO] [stdout] test read_update_max_frame_len_at_rest ... ok
+[INFO] [stdout] test read_update_max_frame_len_in_flight ... ok
+[INFO] [stdout] test write_max_frame_len ... ok
+[INFO] [stdout] test write_nothing_yields_nothing ... ok
+[INFO] [stdout] test write_single_frame_length_adjusted ... ok
+[INFO] [stdout] test write_single_frame_little_endian ... ok
+[INFO] [stdout] test write_single_frame_one_packet ... ok
+[INFO] [stdout] test write_single_frame_with_short_length_field ... ok
+[INFO] [stdout] test write_single_frame_would_block ... ok
+[INFO] [stdout] test write_single_multi_frame_one_packet ... ok
+[INFO] [stdout] test write_single_multi_frame_multi_packet ... ok
+[INFO] [stdout] test write_update_max_frame_len_at_rest ... ok
+[INFO] [stdout] test write_update_max_frame_len_in_flight ... ok
+[INFO] [stdout] test write_zero ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests tokio-io
+[INFO] [stdout] 
+[INFO] [stdout] running 21 tests
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 117) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 150) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 214) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 181) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 302) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 53) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 257) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 347) ... ok
+[INFO] [stdout] test src\codec\mod.rs - codec::length_delimited (line 76) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::big_endian (line 643) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::length_field_length (line 745) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::length_adjustment (line 787) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::length_field_offset (line 767) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::little_endian (line 666) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::max_frame_length (line 722) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::native_endian (line 689) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::new (line 600) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::new_framed (line 891) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::new_read (line 829) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::new_write (line 861) ... ok
+[INFO] [stdout] test src\length_delimited.rs - length_delimited::Builder::num_skip (line 810) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4a722065dbfe2638c7591790ddf37792bf996f91221b880d76ed33400a5ccc65"`
+[INFO] running `"docker" "rm" "-f" "4a722065dbfe2638c7591790ddf37792bf996f91221b880d76ed33400a5ccc65"`
+[INFO] [stdout] 4a722065dbfe2638c7591790ddf37792bf996f91221b880d76ed33400a5ccc65

@@ -1,0 +1,63 @@
+[INFO] cloning repository BurntSushi/rust-error-handling-case-study
+[INFO] running `"git" "clone" "--bare" "git://github.com/BurntSushi/rust-error-handling-case-study.git" "work\\cache\\sources\\gh\\BurntSushi\\rust-error-handling-case-study"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\BurntSushi\rust-error-handling-case-study'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\BurntSushi\\rust-error-handling-case-study" "work\\ex\\default\\sources\\nightly\\gh\\BurntSushi\\rust-error-handling-case-study"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\BurntSushi\rust-error-handling-case-study'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\BurntSushi\\rust-error-handling-case-study" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\BurntSushi\\rust-error-handling-case-study"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\BurntSushi\rust-error-handling-case-study'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 8e2af66c6aa41387c578303253e6fac30b679d1d
+[INFO] sha for GitHub repo BurntSushi/rust-error-handling-case-study: 8e2af66c6aa41387c578303253e6fac30b679d1d
+[INFO] validating manifest of BurntSushi/rust-error-handling-case-study on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of BurntSushi/rust-error-handling-case-study on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing BurntSushi/rust-error-handling-case-study
+[INFO] finished frobbing BurntSushi/rust-error-handling-case-study
+[INFO] frobbed toml for BurntSushi/rust-error-handling-case-study written to work\ex\default\sources\nightly\gh\BurntSushi\rust-error-handling-case-study\Cargo.toml
+[INFO] started frobbing BurntSushi/rust-error-handling-case-study
+[INFO] finished frobbing BurntSushi/rust-error-handling-case-study
+[INFO] frobbed toml for BurntSushi/rust-error-handling-case-study written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\BurntSushi\rust-error-handling-case-study\Cargo.toml
+[INFO] crate BurntSushi/rust-error-handling-case-study already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing BurntSushi/rust-error-handling-case-study against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\BurntSushi\\rust-error-handling-case-study,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4e35c30cde56ca90eef7fb330ebb18702f847b1008cbc254c33a51e282029c38
+[INFO] running `"docker" "start" "-a" "4e35c30cde56ca90eef7fb330ebb18702f847b1008cbc254c33a51e282029c38"`
+[INFO] [stderr]    Compiling strsim v0.5.2
+[INFO] [stderr]    Compiling memchr v0.1.11
+[INFO] [stderr]    Compiling csv v0.14.7
+[INFO] [stderr]    Compiling thread-id v2.0.0
+[INFO] [stderr]    Compiling thread_local v0.2.7
+[INFO] [stderr]    Compiling aho-corasick v0.5.3
+[INFO] [stderr]    Compiling regex v0.1.80
+[INFO] [stderr]    Compiling docopt v0.6.86
+[INFO] [stderr]    Compiling city-pop v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 33.53s
+[INFO] running `"docker" "inspect" "4e35c30cde56ca90eef7fb330ebb18702f847b1008cbc254c33a51e282029c38"`
+[INFO] running `"docker" "rm" "-f" "4e35c30cde56ca90eef7fb330ebb18702f847b1008cbc254c33a51e282029c38"`
+[INFO] [stdout] 4e35c30cde56ca90eef7fb330ebb18702f847b1008cbc254c33a51e282029c38
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\BurntSushi\\rust-error-handling-case-study,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] aa6a7c3df4d9ff6896db6c62928221a07fa5b270929df0a4c3a801635aef8bfb
+[INFO] running `"docker" "start" "-a" "aa6a7c3df4d9ff6896db6c62928221a07fa5b270929df0a4c3a801635aef8bfb"`
+[INFO] [stderr]    Compiling city-pop v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.94s
+[INFO] running `"docker" "inspect" "aa6a7c3df4d9ff6896db6c62928221a07fa5b270929df0a4c3a801635aef8bfb"`
+[INFO] running `"docker" "rm" "-f" "aa6a7c3df4d9ff6896db6c62928221a07fa5b270929df0a4c3a801635aef8bfb"`
+[INFO] [stdout] aa6a7c3df4d9ff6896db6c62928221a07fa5b270929df0a4c3a801635aef8bfb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\BurntSushi\\rust-error-handling-case-study,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 244e165176213b9cbfb4020ed209f92e6a81e15268057f815d73f66ce185480c
+[INFO] running `"docker" "start" "-a" "244e165176213b9cbfb4020ed209f92e6a81e15268057f815d73f66ce185480c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.38s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\city_pop-269819b40b9874ec.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "244e165176213b9cbfb4020ed209f92e6a81e15268057f815d73f66ce185480c"`
+[INFO] running `"docker" "rm" "-f" "244e165176213b9cbfb4020ed209f92e6a81e15268057f815d73f66ce185480c"`
+[INFO] [stdout] 244e165176213b9cbfb4020ed209f92e6a81e15268057f815d73f66ce185480c

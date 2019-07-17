@@ -1,0 +1,46 @@
+[INFO] fetching crate ensi 0.0.1-beta.1...
+[INFO] extracting crate ensi 0.0.1-beta.1 into work\ex\default\sources\stable\reg\ensi\0.0.1-beta.1
+[INFO] extracting crate ensi 0.0.1-beta.1 into work\ex\default\sources\beta\reg\ensi\0.0.1-beta.1
+[INFO] validating manifest of ensi-0.0.1-beta.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ensi-0.0.1-beta.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ensi-0.0.1-beta.1
+[INFO] finished frobbing ensi-0.0.1-beta.1
+[INFO] frobbed toml for ensi-0.0.1-beta.1 written to work\ex\default\sources\stable\reg\ensi\0.0.1-beta.1\Cargo.toml
+[INFO] started frobbing ensi-0.0.1-beta.1
+[INFO] finished frobbing ensi-0.0.1-beta.1
+[INFO] frobbed toml for ensi-0.0.1-beta.1 written to work\ex\default\sources\beta\reg\ensi\0.0.1-beta.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ensi-0.0.1-beta.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ensi\\0.0.1-beta.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 60072dfe2b8dfffa57471446ff05bf55abbb836aed48d98e10230ab9f78c60f4
+[INFO] running `"docker" "start" "-a" "60072dfe2b8dfffa57471446ff05bf55abbb836aed48d98e10230ab9f78c60f4"`
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling ensi v0.0.1-beta.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 29.56s
+[INFO] running `"docker" "inspect" "60072dfe2b8dfffa57471446ff05bf55abbb836aed48d98e10230ab9f78c60f4"`
+[INFO] running `"docker" "rm" "-f" "60072dfe2b8dfffa57471446ff05bf55abbb836aed48d98e10230ab9f78c60f4"`
+[INFO] [stdout] 60072dfe2b8dfffa57471446ff05bf55abbb836aed48d98e10230ab9f78c60f4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ensi\\0.0.1-beta.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3c1b139047e9361000d7119f37b3e3bb47ea02f918500197f239542945fc1610
+[INFO] running `"docker" "start" "-a" "3c1b139047e9361000d7119f37b3e3bb47ea02f918500197f239542945fc1610"`
+[INFO] [stderr]    Compiling ensi v0.0.1-beta.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.18s
+[INFO] running `"docker" "inspect" "3c1b139047e9361000d7119f37b3e3bb47ea02f918500197f239542945fc1610"`
+[INFO] running `"docker" "rm" "-f" "3c1b139047e9361000d7119f37b3e3bb47ea02f918500197f239542945fc1610"`
+[INFO] [stdout] 3c1b139047e9361000d7119f37b3e3bb47ea02f918500197f239542945fc1610
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ensi\\0.0.1-beta.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] a135a3301ff0327f652bc1d9c9dfcea4e5a0d9a7775e1f8f8090eca856cacb04
+[INFO] running `"docker" "start" "-a" "a135a3301ff0327f652bc1d9c9dfcea4e5a0d9a7775e1f8f8090eca856cacb04"`
+[INFO] [stderr] Error response from daemon: i/o timeout
+[INFO] running `"docker" "inspect" "a135a3301ff0327f652bc1d9c9dfcea4e5a0d9a7775e1f8f8090eca856cacb04"`
+[INFO] running `"docker" "rm" "-f" "a135a3301ff0327f652bc1d9c9dfcea4e5a0d9a7775e1f8f8090eca856cacb04"`
+[INFO] [stdout] a135a3301ff0327f652bc1d9c9dfcea4e5a0d9a7775e1f8f8090eca856cacb04

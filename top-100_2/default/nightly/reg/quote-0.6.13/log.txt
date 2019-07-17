@@ -1,0 +1,94 @@
+[INFO] crate quote 0.6.13 is already in cache
+[INFO] extracting crate quote 0.6.13 into work\ex\default\sources\nightly\reg\quote\0.6.13
+[INFO] extracting crate quote 0.6.13 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quote\0.6.13
+[INFO] validating manifest of quote-0.6.13 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quote-0.6.13 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quote-0.6.13
+[INFO] finished frobbing quote-0.6.13
+[INFO] frobbed toml for quote-0.6.13 written to work\ex\default\sources\nightly\reg\quote\0.6.13\Cargo.toml
+[INFO] started frobbing quote-0.6.13
+[INFO] finished frobbing quote-0.6.13
+[INFO] frobbed toml for quote-0.6.13 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quote\0.6.13\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quote-0.6.13 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4fe52bec1c96d4f145247efbb5eede6be387ca682b37a5f3459886972ceacd33
+[INFO] running `"docker" "start" "-a" "4fe52bec1c96d4f145247efbb5eede6be387ca682b37a5f3459886972ceacd33"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling quote v0.6.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.20s
+[INFO] running `"docker" "inspect" "4fe52bec1c96d4f145247efbb5eede6be387ca682b37a5f3459886972ceacd33"`
+[INFO] running `"docker" "rm" "-f" "4fe52bec1c96d4f145247efbb5eede6be387ca682b37a5f3459886972ceacd33"`
+[INFO] [stdout] 4fe52bec1c96d4f145247efbb5eede6be387ca682b37a5f3459886972ceacd33
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 62c08f2014342b4949f64d814470c52876f4099feb0a55b28b00e8ae2f189cdd
+[INFO] running `"docker" "start" "-a" "62c08f2014342b4949f64d814470c52876f4099feb0a55b28b00e8ae2f189cdd"`
+[INFO] [stderr]    Compiling quote v0.6.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.19s
+[INFO] running `"docker" "inspect" "62c08f2014342b4949f64d814470c52876f4099feb0a55b28b00e8ae2f189cdd"`
+[INFO] running `"docker" "rm" "-f" "62c08f2014342b4949f64d814470c52876f4099feb0a55b28b00e8ae2f189cdd"`
+[INFO] [stdout] 62c08f2014342b4949f64d814470c52876f4099feb0a55b28b00e8ae2f189cdd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 02dbeca5ecea5da16bfd706eba3a4cc324d840d629c40819397249a3c3a111a6
+[INFO] running `"docker" "start" "-a" "02dbeca5ecea5da16bfd706eba3a4cc324d840d629c40819397249a3c3a111a6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quote-4ba52266d06d7121.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-289f49afc65ed54b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 20 tests
+[INFO] [stdout] test test_advanced ... ok
+[INFO] [stdout] test test_append_tokens ... ok
+[INFO] [stdout] test test_box_str ... ok
+[INFO] [stdout] test test_char ... ok
+[INFO] [stdout] test test_closure ... ok
+[INFO] [stdout] test test_cow ... ok
+[INFO] [stdout] test test_duplicate ... ok
+[INFO] [stdout] test test_empty_quote ... ok
+[INFO] [stdout] test test_empty_repetition ... ok
+[INFO] [stdout] test test_fancy_repetition ... ok
+[INFO] [stdout] test test_floating ... ok
+[INFO] [stdout] test test_ident ... ok
+[INFO] [stdout] test test_integer ... ok
+[INFO] [stdout] test test_iter ... ok
+[INFO] [stdout] test test_nested_fancy_repetition ... ok
+[INFO] [stdout] test test_quote_impl ... ok
+[INFO] [stdout] test test_str ... ok
+[INFO] [stdout] test test_string ... ok
+[INFO] [stdout] test test_substitution ... ok
+[INFO] [stdout] test test_variable_name_conflict ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quote
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test src\ext.rs - ext::TokenStreamExt::append_all (line 20) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 191) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 233) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 44) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 255) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 309) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 291) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 271) ... ok
+[INFO] [stdout] test src\lib.rs - quote_spanned (line 352) ... ok
+[INFO] [stdout] test src\to_tokens.rs - to_tokens::ToTokens::to_tokens (line 25) ... ok
+[INFO] [stdout] test src\lib.rs - quote (line 324) ... ok
+[INFO] [stdout] test src\lib.rs - quote_spanned (line 391) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "02dbeca5ecea5da16bfd706eba3a4cc324d840d629c40819397249a3c3a111a6"`
+[INFO] running `"docker" "rm" "-f" "02dbeca5ecea5da16bfd706eba3a4cc324d840d629c40819397249a3c3a111a6"`
+[INFO] [stdout] 02dbeca5ecea5da16bfd706eba3a4cc324d840d629c40819397249a3c3a111a6

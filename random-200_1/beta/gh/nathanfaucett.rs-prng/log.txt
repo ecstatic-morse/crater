@@ -1,0 +1,58 @@
+[INFO] cloning repository nathanfaucett/rs-prng
+[INFO] running `"git" "clone" "--bare" "git://github.com/nathanfaucett/rs-prng.git" "work\\cache\\sources\\gh\\nathanfaucett\\rs-prng"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\nathanfaucett\rs-prng'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\nathanfaucett\\rs-prng" "work\\ex\\default\\sources\\stable\\gh\\nathanfaucett\\rs-prng"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\nathanfaucett\rs-prng'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\nathanfaucett\\rs-prng" "work\\ex\\default\\sources\\beta\\gh\\nathanfaucett\\rs-prng"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\nathanfaucett\rs-prng'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ce17641082164b5b1567de0560576a2af3e28485
+[INFO] sha for GitHub repo nathanfaucett/rs-prng: ce17641082164b5b1567de0560576a2af3e28485
+[INFO] validating manifest of nathanfaucett/rs-prng on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nathanfaucett/rs-prng on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nathanfaucett/rs-prng
+[INFO] finished frobbing nathanfaucett/rs-prng
+[INFO] frobbed toml for nathanfaucett/rs-prng written to work\ex\default\sources\stable\gh\nathanfaucett\rs-prng\Cargo.toml
+[INFO] started frobbing nathanfaucett/rs-prng
+[INFO] finished frobbing nathanfaucett/rs-prng
+[INFO] frobbed toml for nathanfaucett/rs-prng written to work\ex\default\sources\beta\gh\nathanfaucett\rs-prng\Cargo.toml
+[INFO] crate nathanfaucett/rs-prng already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/nathanfaucett/rs-rng.git`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libc v0.2.23
+[INFO] [stderr]   Downloaded num_cpus v1.5.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nathanfaucett/rs-prng against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\nathanfaucett\\rs-prng,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] f21ef62ddc23ede42fa63a19ce8b63077fb3530f18872a9789eab7e0fd4244cd
+[INFO] running `"docker" "start" "-a" "f21ef62ddc23ede42fa63a19ce8b63077fb3530f18872a9789eab7e0fd4244cd"`
+[INFO] [stderr]    Compiling rng v0.1.0 (https://github.com/nathanfaucett/rs-rng.git#356735ea)
+[INFO] [stderr]    Compiling prng v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `alloc::arc`
+[INFO] [stderr]  --> src\atomic_prng.rs:1:12
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use alloc::arc::Arc;
+[INFO] [stderr]   |            ^^^ could not find `arc` in `alloc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> src\lib.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(alloc)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0554.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `prng`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "f21ef62ddc23ede42fa63a19ce8b63077fb3530f18872a9789eab7e0fd4244cd"`
+[INFO] running `"docker" "rm" "-f" "f21ef62ddc23ede42fa63a19ce8b63077fb3530f18872a9789eab7e0fd4244cd"`
+[INFO] [stdout] f21ef62ddc23ede42fa63a19ce8b63077fb3530f18872a9789eab7e0fd4244cd

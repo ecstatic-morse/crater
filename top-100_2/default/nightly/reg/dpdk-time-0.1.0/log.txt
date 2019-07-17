@@ -1,0 +1,66 @@
+[INFO] fetching crate dpdk-time 0.1.0...
+[INFO] extracting crate dpdk-time 0.1.0 into work\ex\default\sources\nightly\reg\dpdk-time\0.1.0
+[INFO] extracting crate dpdk-time 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\dpdk-time\0.1.0
+[INFO] validating manifest of dpdk-time-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dpdk-time-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dpdk-time-0.1.0
+[INFO] finished frobbing dpdk-time-0.1.0
+[INFO] frobbed toml for dpdk-time-0.1.0 written to work\ex\default\sources\nightly\reg\dpdk-time\0.1.0\Cargo.toml
+[INFO] started frobbing dpdk-time-0.1.0
+[INFO] finished frobbing dpdk-time-0.1.0
+[INFO] frobbed toml for dpdk-time-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\dpdk-time\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded dpdk-unix v0.1.1
+[INFO] [stderr]   Downloaded rust-extra v0.0.13
+[INFO] [stderr]   Downloaded likely v0.1.0
+[INFO] [stderr]   Downloaded libc-extra v0.3.2
+[INFO] [stderr]   Downloaded const-cstr-fork v0.2.2
+[INFO] [stderr]   Downloaded errno v0.1.8
+[INFO] [stderr]   Downloaded dpdk-sys v0.1.5
+[INFO] [stderr]   Downloaded rdma-core-sys v0.1.10
+[INFO] [stderr]   Downloaded libnuma-sys v0.0.9
+[INFO] [stderr]   Downloaded dpdk-core v0.1.5
+[INFO] [stderr]   Downloaded network-packet v0.1.1
+[INFO] [stderr]   Downloaded syscall-alt v0.0.14
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dpdk-time-0.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\dpdk-time\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 959ffa18ab9be28e8084b9236d538f3af9ec2fc0e5456a2d1ae259757f2006a0
+[INFO] running `"docker" "start" "-a" "959ffa18ab9be28e8084b9236d538f3af9ec2fc0e5456a2d1ae259757f2006a0"`
+[INFO] [stderr]    Compiling dpdk-time v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.01s
+[INFO] running `"docker" "inspect" "959ffa18ab9be28e8084b9236d538f3af9ec2fc0e5456a2d1ae259757f2006a0"`
+[INFO] running `"docker" "rm" "-f" "959ffa18ab9be28e8084b9236d538f3af9ec2fc0e5456a2d1ae259757f2006a0"`
+[INFO] [stdout] 959ffa18ab9be28e8084b9236d538f3af9ec2fc0e5456a2d1ae259757f2006a0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\dpdk-time\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6020056f0e45df036943f781109b6c1b8e8bd19d049492137eb87aea7d8d57c8
+[INFO] running `"docker" "start" "-a" "6020056f0e45df036943f781109b6c1b8e8bd19d049492137eb87aea7d8d57c8"`
+[INFO] [stderr]    Compiling dpdk-time v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.77s
+[INFO] running `"docker" "inspect" "6020056f0e45df036943f781109b6c1b8e8bd19d049492137eb87aea7d8d57c8"`
+[INFO] running `"docker" "rm" "-f" "6020056f0e45df036943f781109b6c1b8e8bd19d049492137eb87aea7d8d57c8"`
+[INFO] [stdout] 6020056f0e45df036943f781109b6c1b8e8bd19d049492137eb87aea7d8d57c8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\dpdk-time\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] f191a5b18ec7b7287b208ec57f0708437cebec62ad365c3fc69231b790995ec9
+[INFO] running `"docker" "start" "-a" "f191a5b18ec7b7287b208ec57f0708437cebec62ad365c3fc69231b790995ec9"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dpdk_time-ffa739457fc38c38.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests dpdk-time
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f191a5b18ec7b7287b208ec57f0708437cebec62ad365c3fc69231b790995ec9"`
+[INFO] running `"docker" "rm" "-f" "f191a5b18ec7b7287b208ec57f0708437cebec62ad365c3fc69231b790995ec9"`
+[INFO] [stdout] f191a5b18ec7b7287b208ec57f0708437cebec62ad365c3fc69231b790995ec9

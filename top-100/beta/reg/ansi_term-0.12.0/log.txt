@@ -1,0 +1,107 @@
+[INFO] fetching crate ansi_term 0.12.0...
+[INFO] extracting crate ansi_term 0.12.0 into work\ex\default\sources\stable\reg\ansi_term\0.12.0
+[INFO] extracting crate ansi_term 0.12.0 into work\ex\default\sources\beta\reg\ansi_term\0.12.0
+[INFO] validating manifest of ansi_term-0.12.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ansi_term-0.12.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ansi_term-0.12.0
+[INFO] finished frobbing ansi_term-0.12.0
+[INFO] frobbed toml for ansi_term-0.12.0 written to work\ex\default\sources\stable\reg\ansi_term\0.12.0\Cargo.toml
+[INFO] started frobbing ansi_term-0.12.0
+[INFO] finished frobbing ansi_term-0.12.0
+[INFO] frobbed toml for ansi_term-0.12.0 written to work\ex\default\sources\beta\reg\ansi_term\0.12.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ansi_term-0.12.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ansi_term\\0.12.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 12d264f96e9a90d54daa552945346d51ab240d408d4b7a095203fde0025f9249
+[INFO] running `"docker" "start" "-a" "12d264f96e9a90d54daa552945346d51ab240d408d4b7a095203fde0025f9249"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ansi_term v0.12.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `winapi::um::fileapi`
+[INFO] [stderr]   --> src\windows.rs:19:21
+[INFO] [stderr]    |
+[INFO] [stderr] 19 |     use winapi::um::fileapi::CreateFile2;
+[INFO] [stderr]    |                     ^^^^^^^ could not find `fileapi` in `um`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `fileapi` in `um`
+[INFO] [stderr]   --> src\windows.rs:32:25
+[INFO] [stderr]    |
+[INFO] [stderr] 32 |             winapi::um::fileapi::OPEN_EXISTING,
+[INFO] [stderr]    |                         ^^^^^^^ could not find `fileapi` in `um`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\ansi.rs:279:21
+[INFO] [stderr]     |
+[INFO] [stderr] 279 |         let f: &mut fmt::Write = f;
+[INFO] [stderr]     |                     ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\ansi.rs:291:29
+[INFO] [stderr]     |
+[INFO] [stderr] 291 |                 let f: &mut fmt::Write = f;
+[INFO] [stderr]     |                             ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\ansi.rs:295:29
+[INFO] [stderr]     |
+[INFO] [stderr] 295 |                 let f: &mut fmt::Write = f;
+[INFO] [stderr]     |                             ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\ansi.rs:308:21
+[INFO] [stderr]     |
+[INFO] [stderr] 308 |         let f: &mut fmt::Write = f;
+[INFO] [stderr]     |                     ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\display.rs:201:21
+[INFO] [stderr]     |
+[INFO] [stderr] 201 |         let w: &mut fmt::Write = f;
+[INFO] [stderr]     |                     ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\display.rs:210:21
+[INFO] [stderr]     |
+[INFO] [stderr] 210 |         let w: &mut io::Write = w;
+[INFO] [stderr]     |                     ^^^^^^^^^ help: use `dyn`: `dyn io::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\display.rs:229:21
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |         let f: &mut fmt::Write = f;
+[INFO] [stderr]     |                     ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\display.rs:239:21
+[INFO] [stderr]     |
+[INFO] [stderr] 239 |         let w: &mut io::Write = w;
+[INFO] [stderr]     |                     ^^^^^^^^^ help: use `dyn`: `dyn io::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\write.rs:15:23
+[INFO] [stderr]    |
+[INFO] [stderr] 15 | impl<'a> AnyWrite for fmt::Write + 'a {
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\write.rs:29:23
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | impl<'a> AnyWrite for io::Write + 'a {
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^ help: use `dyn`: `dyn io::Write + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `ansi_term`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "12d264f96e9a90d54daa552945346d51ab240d408d4b7a095203fde0025f9249"`
+[INFO] running `"docker" "rm" "-f" "12d264f96e9a90d54daa552945346d51ab240d408d4b7a095203fde0025f9249"`
+[INFO] [stdout] 12d264f96e9a90d54daa552945346d51ab240d408d4b7a095203fde0025f9249

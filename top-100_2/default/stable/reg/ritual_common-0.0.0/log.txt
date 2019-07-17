@@ -1,0 +1,78 @@
+[INFO] fetching crate ritual_common 0.0.0...
+[INFO] extracting crate ritual_common 0.0.0 into work\ex\default\sources\stable\reg\ritual_common\0.0.0
+[INFO] extracting crate ritual_common 0.0.0 into work\ex\default\sources\beta\reg\ritual_common\0.0.0
+[INFO] validating manifest of ritual_common-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ritual_common-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ritual_common-0.0.0
+[INFO] finished frobbing ritual_common-0.0.0
+[INFO] frobbed toml for ritual_common-0.0.0 written to work\ex\default\sources\stable\reg\ritual_common\0.0.0\Cargo.toml
+[INFO] started frobbing ritual_common-0.0.0
+[INFO] finished frobbing ritual_common-0.0.0
+[INFO] frobbed toml for ritual_common-0.0.0 written to work\ex\default\sources\beta\reg\ritual_common\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded term-painter v0.2.4
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ritual_common-0.0.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ritual_common\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0caa29a2ba47b1fc5e2124d5fb987e1f02f2eb35507b6cbfbac489206ff3de22
+[INFO] running `"docker" "start" "-a" "0caa29a2ba47b1fc5e2124d5fb987e1f02f2eb35507b6cbfbac489206ff3de22"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling backtrace-sys v0.1.31
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling itertools v0.8.0
+[INFO] [stderr]    Compiling toml v0.4.10
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling term-painter v0.2.4
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling ritual_common v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 57s
+[INFO] running `"docker" "inspect" "0caa29a2ba47b1fc5e2124d5fb987e1f02f2eb35507b6cbfbac489206ff3de22"`
+[INFO] running `"docker" "rm" "-f" "0caa29a2ba47b1fc5e2124d5fb987e1f02f2eb35507b6cbfbac489206ff3de22"`
+[INFO] [stdout] 0caa29a2ba47b1fc5e2124d5fb987e1f02f2eb35507b6cbfbac489206ff3de22
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ritual_common\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2ee6f603658c40ff38c914a3227805d4a9cf15afd08c22f1b29fb37ef57db929
+[INFO] running `"docker" "start" "-a" "2ee6f603658c40ff38c914a3227805d4a9cf15afd08c22f1b29fb37ef57db929"`
+[INFO] [stderr]    Compiling ritual_common v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.58s
+[INFO] running `"docker" "inspect" "2ee6f603658c40ff38c914a3227805d4a9cf15afd08c22f1b29fb37ef57db929"`
+[INFO] running `"docker" "rm" "-f" "2ee6f603658c40ff38c914a3227805d4a9cf15afd08c22f1b29fb37ef57db929"`
+[INFO] [stdout] 2ee6f603658c40ff38c914a3227805d4a9cf15afd08c22f1b29fb37ef57db929
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ritual_common\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] a577597d7ef3604d2bbfd93a39d08e8554f3162b69370a9432b5186250a60fad
+[INFO] running `"docker" "start" "-a" "a577597d7ef3604d2bbfd93a39d08e8554f3162b69370a9432b5186250a60fad"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.80s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ritual_common-a46913771ad55d71.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test tests::utils::case_operations ... ok
+[INFO] [stdout] test tests::utils::join ... ok
+[INFO] [stdout] test tests::utils::word_iterator ... ok
+[INFO] [stdout] test tests::utils::path_buf_with_added ... ok
+[INFO] [stdout] test tests::utils::word_iterator2 ... ok
+[INFO] [stdout] test tests::utils::word_iterator3 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests ritual_common
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a577597d7ef3604d2bbfd93a39d08e8554f3162b69370a9432b5186250a60fad"`
+[INFO] running `"docker" "rm" "-f" "a577597d7ef3604d2bbfd93a39d08e8554f3162b69370a9432b5186250a60fad"`
+[INFO] [stdout] a577597d7ef3604d2bbfd93a39d08e8554f3162b69370a9432b5186250a60fad

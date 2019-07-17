@@ -1,0 +1,55 @@
+[INFO] fetching crate ntapi 0.3.3...
+[INFO] extracting crate ntapi 0.3.3 into work\ex\default\sources\nightly\reg\ntapi\0.3.3
+[INFO] extracting crate ntapi 0.3.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ntapi\0.3.3
+[INFO] validating manifest of ntapi-0.3.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ntapi-0.3.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ntapi-0.3.3
+[INFO] finished frobbing ntapi-0.3.3
+[INFO] frobbed toml for ntapi-0.3.3 written to work\ex\default\sources\nightly\reg\ntapi\0.3.3\Cargo.toml
+[INFO] started frobbing ntapi-0.3.3
+[INFO] finished frobbing ntapi-0.3.3
+[INFO] frobbed toml for ntapi-0.3.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ntapi\0.3.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ntapi-0.3.3 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ntapi\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] b05f96ee5d33f98bb8c1e99e508c9360656d86c20cbb6a7a490e393f4617be04
+[INFO] running `"docker" "start" "-a" "b05f96ee5d33f98bb8c1e99e508c9360656d86c20cbb6a7a490e393f4617be04"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ntapi v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 29.10s
+[INFO] running `"docker" "inspect" "b05f96ee5d33f98bb8c1e99e508c9360656d86c20cbb6a7a490e393f4617be04"`
+[INFO] running `"docker" "rm" "-f" "b05f96ee5d33f98bb8c1e99e508c9360656d86c20cbb6a7a490e393f4617be04"`
+[INFO] [stdout] b05f96ee5d33f98bb8c1e99e508c9360656d86c20cbb6a7a490e393f4617be04
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ntapi\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c8a24d186a62679eeed5d1f63482742bcce245441da25ab215f13bfc9c2f079f
+[INFO] running `"docker" "start" "-a" "c8a24d186a62679eeed5d1f63482742bcce245441da25ab215f13bfc9c2f079f"`
+[INFO] [stderr]    Compiling ntapi v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.71s
+[INFO] running `"docker" "inspect" "c8a24d186a62679eeed5d1f63482742bcce245441da25ab215f13bfc9c2f079f"`
+[INFO] running `"docker" "rm" "-f" "c8a24d186a62679eeed5d1f63482742bcce245441da25ab215f13bfc9c2f079f"`
+[INFO] [stdout] c8a24d186a62679eeed5d1f63482742bcce245441da25ab215f13bfc9c2f079f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ntapi\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] b941b2fc76222d203f17120e8eaf234474f77a79a1e7b55616c30fc1360c7e79
+[INFO] running `"docker" "start" "-a" "b941b2fc76222d203f17120e8eaf234474f77a79a1e7b55616c30fc1360c7e79"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ntapi-64db13953a8641d3.exe
+[INFO] [stderr]    Doc-tests ntapi
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b941b2fc76222d203f17120e8eaf234474f77a79a1e7b55616c30fc1360c7e79"`
+[INFO] running `"docker" "rm" "-f" "b941b2fc76222d203f17120e8eaf234474f77a79a1e7b55616c30fc1360c7e79"`
+[INFO] [stdout] b941b2fc76222d203f17120e8eaf234474f77a79a1e7b55616c30fc1360c7e79

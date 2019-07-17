@@ -1,0 +1,70 @@
+[INFO] fetching crate rustie 0.1.18...
+[INFO] extracting crate rustie 0.1.18 into work\ex\default\sources\stable\reg\rustie\0.1.18
+[INFO] extracting crate rustie 0.1.18 into work\ex\default\sources\beta\reg\rustie\0.1.18
+[INFO] validating manifest of rustie-0.1.18 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rustie-0.1.18 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rustie-0.1.18
+[INFO] finished frobbing rustie-0.1.18
+[INFO] frobbed toml for rustie-0.1.18 written to work\ex\default\sources\stable\reg\rustie\0.1.18\Cargo.toml
+[INFO] started frobbing rustie-0.1.18
+[INFO] finished frobbing rustie-0.1.18
+[INFO] frobbed toml for rustie-0.1.18 written to work\ex\default\sources\beta\reg\rustie\0.1.18\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded evalexpr v4.1.0
+[INFO] [stderr]   Downloaded crossterm_utils v0.2.3
+[INFO] [stderr]   Downloaded crossterm_winapi v0.1.4
+[INFO] [stderr]   Downloaded crossterm_terminal v0.2.4
+[INFO] [stderr]   Downloaded crossterm_cursor v0.2.4
+[INFO] [stderr]   Downloaded crossterm_style v0.3.3
+[INFO] [stderr]   Downloaded crossterm_screen v0.2.3
+[INFO] [stderr]   Downloaded crossterm_input v0.3.6
+[INFO] [stderr]   Downloaded crossterm v0.9.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rustie-0.1.18 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rustie\\0.1.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] cc613ff41f979d4aacb7c1980660f16733d9a16ec009016aea1c03a6082d2826
+[INFO] running `"docker" "start" "-a" "cc613ff41f979d4aacb7c1980660f16733d9a16ec009016aea1c03a6082d2826"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling evalexpr v4.1.0
+[INFO] [stderr]    Compiling crossterm_winapi v0.1.4
+[INFO] [stderr]    Compiling dirs-sys v0.3.3
+[INFO] [stderr]    Compiling ctrlc v3.1.3
+[INFO] [stderr]    Compiling dirs v2.0.1
+[INFO] [stderr]    Compiling crossterm_utils v0.2.3
+[INFO] [stderr]    Compiling crossterm_screen v0.2.3
+[INFO] [stderr]    Compiling crossterm_cursor v0.2.4
+[INFO] [stderr]    Compiling crossterm_style v0.3.3
+[INFO] [stderr]    Compiling crossterm_input v0.3.6
+[INFO] [stderr]    Compiling crossterm_terminal v0.2.4
+[INFO] [stderr]    Compiling crossterm v0.9.6
+[INFO] [stderr]    Compiling rustie v0.1.18 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 53.64s
+[INFO] running `"docker" "inspect" "cc613ff41f979d4aacb7c1980660f16733d9a16ec009016aea1c03a6082d2826"`
+[INFO] running `"docker" "rm" "-f" "cc613ff41f979d4aacb7c1980660f16733d9a16ec009016aea1c03a6082d2826"`
+[INFO] [stdout] cc613ff41f979d4aacb7c1980660f16733d9a16ec009016aea1c03a6082d2826
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rustie\\0.1.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] fcdc7793872cf635cc2ffb7f192fc0bd93567776bac0fd1fd75d4a0615c1c3aa
+[INFO] running `"docker" "start" "-a" "fcdc7793872cf635cc2ffb7f192fc0bd93567776bac0fd1fd75d4a0615c1c3aa"`
+[INFO] [stderr]    Compiling rustie v0.1.18 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.58s
+[INFO] running `"docker" "inspect" "fcdc7793872cf635cc2ffb7f192fc0bd93567776bac0fd1fd75d4a0615c1c3aa"`
+[INFO] running `"docker" "rm" "-f" "fcdc7793872cf635cc2ffb7f192fc0bd93567776bac0fd1fd75d4a0615c1c3aa"`
+[INFO] [stdout] fcdc7793872cf635cc2ffb7f192fc0bd93567776bac0fd1fd75d4a0615c1c3aa
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rustie\\0.1.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 12755af193070d7d4992d9b0ba9dfad05242c3664c82fe528cc2969880e7bd2f
+[INFO] running `"docker" "start" "-a" "12755af193070d7d4992d9b0ba9dfad05242c3664c82fe528cc2969880e7bd2f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.36s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rustie-bd54ca7579f26d1f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "12755af193070d7d4992d9b0ba9dfad05242c3664c82fe528cc2969880e7bd2f"`
+[INFO] running `"docker" "rm" "-f" "12755af193070d7d4992d9b0ba9dfad05242c3664c82fe528cc2969880e7bd2f"`
+[INFO] [stdout] 12755af193070d7d4992d9b0ba9dfad05242c3664c82fe528cc2969880e7bd2f

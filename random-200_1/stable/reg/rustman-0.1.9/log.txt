@@ -1,0 +1,61 @@
+[INFO] fetching crate rustman 0.1.9...
+[INFO] extracting crate rustman 0.1.9 into work\ex\default\sources\stable\reg\rustman\0.1.9
+[INFO] extracting crate rustman 0.1.9 into work\ex\default\sources\beta\reg\rustman\0.1.9
+[INFO] validating manifest of rustman-0.1.9 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rustman-0.1.9 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rustman-0.1.9
+[INFO] finished frobbing rustman-0.1.9
+[INFO] frobbed toml for rustman-0.1.9 written to work\ex\default\sources\stable\reg\rustman\0.1.9\Cargo.toml
+[INFO] started frobbing rustman-0.1.9
+[INFO] finished frobbing rustman-0.1.9
+[INFO] frobbed toml for rustman-0.1.9 written to work\ex\default\sources\beta\reg\rustman\0.1.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded http_req v0.5.1
+[INFO] [stderr]   Downloaded openssl v0.10.24
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rustman-0.1.9 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rustman\\0.1.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 738103077d998ac94ecfaafe3a5c16932b3566700084d66641477f59b16905d8
+[INFO] running `"docker" "start" "-a" "738103077d998ac94ecfaafe3a5c16932b3566700084d66641477f59b16905d8"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling native-tls v0.2.3
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr]    Compiling dirs-sys v0.3.3
+[INFO] [stderr]    Compiling dirs v2.0.1
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling http_req v0.5.1
+[INFO] [stderr]    Compiling rustman v0.1.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 16s
+[INFO] running `"docker" "inspect" "738103077d998ac94ecfaafe3a5c16932b3566700084d66641477f59b16905d8"`
+[INFO] running `"docker" "rm" "-f" "738103077d998ac94ecfaafe3a5c16932b3566700084d66641477f59b16905d8"`
+[INFO] [stdout] 738103077d998ac94ecfaafe3a5c16932b3566700084d66641477f59b16905d8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rustman\\0.1.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f6e0fab37c2feca15f8c51e68f846bfd39d5442a01c2507011e7bc7e888a1c8d
+[INFO] running `"docker" "start" "-a" "f6e0fab37c2feca15f8c51e68f846bfd39d5442a01c2507011e7bc7e888a1c8d"`
+[INFO] [stderr]    Compiling rustman v0.1.9 (C:\crater\workdir)
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\main.rs:49:22
+[INFO] [stderr]    |
+[INFO] [stderr] 49 |     let res = search(&packages)
+[INFO] [stderr]    |                      ^^^^^^^^^ expected str, found struct `std::vec::Vec`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `&str`
+[INFO] [stderr]               found type `&std::vec::Vec<std::string::String>`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `rustman`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "f6e0fab37c2feca15f8c51e68f846bfd39d5442a01c2507011e7bc7e888a1c8d"`
+[INFO] running `"docker" "rm" "-f" "f6e0fab37c2feca15f8c51e68f846bfd39d5442a01c2507011e7bc7e888a1c8d"`
+[INFO] [stdout] f6e0fab37c2feca15f8c51e68f846bfd39d5442a01c2507011e7bc7e888a1c8d

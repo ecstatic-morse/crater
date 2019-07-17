@@ -1,0 +1,57 @@
+[INFO] fetching crate dyplugin 0.2.0...
+[INFO] extracting crate dyplugin 0.2.0 into work\ex\default\sources\stable\reg\dyplugin\0.2.0
+[INFO] extracting crate dyplugin 0.2.0 into work\ex\default\sources\beta\reg\dyplugin\0.2.0
+[INFO] validating manifest of dyplugin-0.2.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dyplugin-0.2.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dyplugin-0.2.0
+[INFO] finished frobbing dyplugin-0.2.0
+[INFO] frobbed toml for dyplugin-0.2.0 written to work\ex\default\sources\stable\reg\dyplugin\0.2.0\Cargo.toml
+[INFO] started frobbing dyplugin-0.2.0
+[INFO] finished frobbing dyplugin-0.2.0
+[INFO] frobbed toml for dyplugin-0.2.0 written to work\ex\default\sources\beta\reg\dyplugin\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing dyplugin-0.2.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dyplugin\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0d6899babe77759e3665589824b807823f03a8c11b01a5634c26806c22cab37a
+[INFO] running `"docker" "start" "-a" "0d6899babe77759e3665589824b807823f03a8c11b01a5634c26806c22cab37a"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libloading v0.5.2
+[INFO] [stderr]    Compiling dyplugin v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.65s
+[INFO] running `"docker" "inspect" "0d6899babe77759e3665589824b807823f03a8c11b01a5634c26806c22cab37a"`
+[INFO] running `"docker" "rm" "-f" "0d6899babe77759e3665589824b807823f03a8c11b01a5634c26806c22cab37a"`
+[INFO] [stdout] 0d6899babe77759e3665589824b807823f03a8c11b01a5634c26806c22cab37a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dyplugin\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f133f6c1b2f1cec3dba30b4aef3b6804c16762a8c4b3797eee25282ebb4be753
+[INFO] running `"docker" "start" "-a" "f133f6c1b2f1cec3dba30b4aef3b6804c16762a8c4b3797eee25282ebb4be753"`
+[INFO] [stderr]    Compiling dyplugin v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.17s
+[INFO] running `"docker" "inspect" "f133f6c1b2f1cec3dba30b4aef3b6804c16762a8c4b3797eee25282ebb4be753"`
+[INFO] running `"docker" "rm" "-f" "f133f6c1b2f1cec3dba30b4aef3b6804c16762a8c4b3797eee25282ebb4be753"`
+[INFO] [stdout] f133f6c1b2f1cec3dba30b4aef3b6804c16762a8c4b3797eee25282ebb4be753
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dyplugin\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 6b48427839aec9068a9a46dfd7289b68db98a5689e277942511ddf348ab89a31
+[INFO] running `"docker" "start" "-a" "6b48427839aec9068a9a46dfd7289b68db98a5689e277942511ddf348ab89a31"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.26s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dyplugin-ecebb029f8be1976.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test::types ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests dyplugin
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6b48427839aec9068a9a46dfd7289b68db98a5689e277942511ddf348ab89a31"`
+[INFO] running `"docker" "rm" "-f" "6b48427839aec9068a9a46dfd7289b68db98a5689e277942511ddf348ab89a31"`
+[INFO] [stdout] 6b48427839aec9068a9a46dfd7289b68db98a5689e277942511ddf348ab89a31

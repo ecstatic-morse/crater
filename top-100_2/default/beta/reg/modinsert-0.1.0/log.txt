@@ -1,0 +1,48 @@
+[INFO] fetching crate modinsert 0.1.0...
+[INFO] extracting crate modinsert 0.1.0 into work\ex\default\sources\stable\reg\modinsert\0.1.0
+[INFO] extracting crate modinsert 0.1.0 into work\ex\default\sources\beta\reg\modinsert\0.1.0
+[INFO] validating manifest of modinsert-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of modinsert-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing modinsert-0.1.0
+[INFO] finished frobbing modinsert-0.1.0
+[INFO] frobbed toml for modinsert-0.1.0 written to work\ex\default\sources\stable\reg\modinsert\0.1.0\Cargo.toml
+[INFO] started frobbing modinsert-0.1.0
+[INFO] finished frobbing modinsert-0.1.0
+[INFO] frobbed toml for modinsert-0.1.0 written to work\ex\default\sources\beta\reg\modinsert\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded nix v0.9.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing modinsert-0.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\modinsert\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] ffc12d57cf078ad54976b2d60b225bcbf459cb38175cdfa11f68edfbae0e2f2f
+[INFO] running `"docker" "start" "-a" "ffc12d57cf078ad54976b2d60b225bcbf459cb38175cdfa11f68edfbae0e2f2f"`
+[INFO] [stderr]    Compiling bitflags v0.9.1
+[INFO] [stderr]    Compiling nix v0.9.0
+[INFO] [stderr]    Compiling modinsert v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `net` in `nix`
+[INFO] [stderr]   --> src\lib.rs:26:10
+[INFO] [stderr]    |
+[INFO] [stderr] 26 | use nix::net::if_::if_nametoindex;
+[INFO] [stderr]    |          ^^^ could not find `net` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `if_nametoindex` in this scope
+[INFO] [stderr]   --> src\lib.rs:35:13
+[INFO] [stderr]    |
+[INFO] [stderr] 35 |     let _ = if_nametoindex(module);
+[INFO] [stderr]    |             ^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `modinsert`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "ffc12d57cf078ad54976b2d60b225bcbf459cb38175cdfa11f68edfbae0e2f2f"`
+[INFO] running `"docker" "rm" "-f" "ffc12d57cf078ad54976b2d60b225bcbf459cb38175cdfa11f68edfbae0e2f2f"`
+[INFO] [stdout] ffc12d57cf078ad54976b2d60b225bcbf459cb38175cdfa11f68edfbae0e2f2f

@@ -1,0 +1,54 @@
+[INFO] fetching crate try_opt 0.2.0...
+[INFO] extracting crate try_opt 0.2.0 into work\ex\default\sources\stable\reg\try_opt\0.2.0
+[INFO] extracting crate try_opt 0.2.0 into work\ex\default\sources\beta\reg\try_opt\0.2.0
+[INFO] validating manifest of try_opt-0.2.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of try_opt-0.2.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing try_opt-0.2.0
+[INFO] finished frobbing try_opt-0.2.0
+[INFO] frobbed toml for try_opt-0.2.0 written to work\ex\default\sources\stable\reg\try_opt\0.2.0\Cargo.toml
+[INFO] started frobbing try_opt-0.2.0
+[INFO] finished frobbing try_opt-0.2.0
+[INFO] frobbed toml for try_opt-0.2.0 written to work\ex\default\sources\beta\reg\try_opt\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing try_opt-0.2.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\try_opt\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] b1d39b1ed9aa55ebd80b572cf5f3b905508f6aacfbce71efb698ea8e895e510c
+[INFO] running `"docker" "start" "-a" "b1d39b1ed9aa55ebd80b572cf5f3b905508f6aacfbce71efb698ea8e895e510c"`
+[INFO] [stderr]    Compiling try_opt v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.70s
+[INFO] running `"docker" "inspect" "b1d39b1ed9aa55ebd80b572cf5f3b905508f6aacfbce71efb698ea8e895e510c"`
+[INFO] running `"docker" "rm" "-f" "b1d39b1ed9aa55ebd80b572cf5f3b905508f6aacfbce71efb698ea8e895e510c"`
+[INFO] [stdout] b1d39b1ed9aa55ebd80b572cf5f3b905508f6aacfbce71efb698ea8e895e510c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\try_opt\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a4e37a2c0a38d3110614814c35d8e81f805dbccbfbaf6ba24fa7a84552bafdcb
+[INFO] running `"docker" "start" "-a" "a4e37a2c0a38d3110614814c35d8e81f805dbccbfbaf6ba24fa7a84552bafdcb"`
+[INFO] [stderr]    Compiling try_opt v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.24s
+[INFO] running `"docker" "inspect" "a4e37a2c0a38d3110614814c35d8e81f805dbccbfbaf6ba24fa7a84552bafdcb"`
+[INFO] running `"docker" "rm" "-f" "a4e37a2c0a38d3110614814c35d8e81f805dbccbfbaf6ba24fa7a84552bafdcb"`
+[INFO] [stdout] a4e37a2c0a38d3110614814c35d8e81f805dbccbfbaf6ba24fa7a84552bafdcb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\try_opt\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] b8e97a7165e7cbf7128b3a7ee49416d01db60afe336924ae2c5c8e6452108071
+[INFO] running `"docker" "start" "-a" "b8e97a7165e7cbf7128b3a7ee49416d01db60afe336924ae2c5c8e6452108071"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\try_opt-a8a6728973d8ac00.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests try_opt
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs - try_opt (line 9) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b8e97a7165e7cbf7128b3a7ee49416d01db60afe336924ae2c5c8e6452108071"`
+[INFO] running `"docker" "rm" "-f" "b8e97a7165e7cbf7128b3a7ee49416d01db60afe336924ae2c5c8e6452108071"`
+[INFO] [stdout] b8e97a7165e7cbf7128b3a7ee49416d01db60afe336924ae2c5c8e6452108071

@@ -1,0 +1,66 @@
+[INFO] cloning repository Realtin/show_me_the_sparkle
+[INFO] running `"git" "clone" "--bare" "git://github.com/Realtin/show_me_the_sparkle.git" "work\\cache\\sources\\gh\\Realtin\\show_me_the_sparkle"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Realtin\show_me_the_sparkle'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Realtin\\show_me_the_sparkle" "work\\ex\\default\\sources\\stable\\gh\\Realtin\\show_me_the_sparkle"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Realtin\show_me_the_sparkle'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Realtin\\show_me_the_sparkle" "work\\ex\\default\\sources\\beta\\gh\\Realtin\\show_me_the_sparkle"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Realtin\show_me_the_sparkle'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c7a43778d549018c9e85c8000daa28e818b1615b
+[INFO] sha for GitHub repo Realtin/show_me_the_sparkle: c7a43778d549018c9e85c8000daa28e818b1615b
+[INFO] validating manifest of Realtin/show_me_the_sparkle on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Realtin/show_me_the_sparkle on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Realtin/show_me_the_sparkle
+[INFO] finished frobbing Realtin/show_me_the_sparkle
+[INFO] frobbed toml for Realtin/show_me_the_sparkle written to work\ex\default\sources\stable\gh\Realtin\show_me_the_sparkle\Cargo.toml
+[INFO] started frobbing Realtin/show_me_the_sparkle
+[INFO] finished frobbing Realtin/show_me_the_sparkle
+[INFO] frobbed toml for Realtin/show_me_the_sparkle written to work\ex\default\sources\beta\gh\Realtin\show_me_the_sparkle\Cargo.toml
+[INFO] crate Realtin/show_me_the_sparkle already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing Realtin/show_me_the_sparkle against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Realtin\\show_me_the_sparkle,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] e746c59387c70ebcd487355d96d78c0a91448e2b54c35e20c3d11982e881846b
+[INFO] running `"docker" "start" "-a" "e746c59387c70ebcd487355d96d78c0a91448e2b54c35e20c3d11982e881846b"`
+[INFO] [stderr]    Compiling show_me_the_sparkle v0.0.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `std::old_io`
+[INFO] [stderr]  --> src\main.rs:1:10
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use std::old_io::File;
+[INFO] [stderr]   |          ^^^^^^ could not find `old_io` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rand`
+[INFO] [stderr]  --> src\main.rs:2:10
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use std::rand::random;
+[INFO] [stderr]   |          ^^^^ could not find `rand` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rand`
+[INFO] [stderr]  --> src\main.rs:3:10
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | use std::rand::{thread_rng, Rng};
+[INFO] [stderr]   |          ^^^^ could not find `rand` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `Path`
+[INFO] [stderr]  --> src\main.rs:9:16
+[INFO] [stderr]   |
+[INFO] [stderr] 9 |     let path = Path::new("list.txt");
+[INFO] [stderr]   |                ^^^^ use of undeclared type or module `Path`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `show_me_the_sparkle`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "e746c59387c70ebcd487355d96d78c0a91448e2b54c35e20c3d11982e881846b"`
+[INFO] running `"docker" "rm" "-f" "e746c59387c70ebcd487355d96d78c0a91448e2b54c35e20c3d11982e881846b"`
+[INFO] [stdout] e746c59387c70ebcd487355d96d78c0a91448e2b54c35e20c3d11982e881846b

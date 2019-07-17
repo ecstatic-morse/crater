@@ -1,0 +1,83 @@
+[INFO] crate quick-error 1.2.2 is already in cache
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\nightly\reg\quick-error\1.2.2
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quick-error\1.2.2
+[INFO] validating manifest of quick-error-1.2.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quick-error-1.2.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\nightly\reg\quick-error\1.2.2\Cargo.toml
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quick-error\1.2.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quick-error-1.2.2 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2eb2593bffacd7eb210194c603e66e07f79459ece7e1bb7b5b46cb5f9dd25b58
+[INFO] running `"docker" "start" "-a" "2eb2593bffacd7eb210194c603e66e07f79459ece7e1bb7b5b46cb5f9dd25b58"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.08s
+[INFO] running `"docker" "inspect" "2eb2593bffacd7eb210194c603e66e07f79459ece7e1bb7b5b46cb5f9dd25b58"`
+[INFO] running `"docker" "rm" "-f" "2eb2593bffacd7eb210194c603e66e07f79459ece7e1bb7b5b46cb5f9dd25b58"`
+[INFO] [stdout] 2eb2593bffacd7eb210194c603e66e07f79459ece7e1bb7b5b46cb5f9dd25b58
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 284fd11328d33ae0daeb9fa3dd4c852fdf900211f5e6f82e4b16663e32de5b7a
+[INFO] running `"docker" "start" "-a" "284fd11328d33ae0daeb9fa3dd4c852fdf900211f5e6f82e4b16663e32de5b7a"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.38s
+[INFO] running `"docker" "inspect" "284fd11328d33ae0daeb9fa3dd4c852fdf900211f5e6f82e4b16663e32de5b7a"`
+[INFO] running `"docker" "rm" "-f" "284fd11328d33ae0daeb9fa3dd4c852fdf900211f5e6f82e4b16663e32de5b7a"`
+[INFO] [stdout] 284fd11328d33ae0daeb9fa3dd4c852fdf900211f5e6f82e4b16663e32de5b7a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] d4d48fdd5e6afc1e6f2e43ed3ac4d1cd76e1a88191a0fe405b1a70d3c490150d
+[INFO] running `"docker" "start" "-a" "d4d48fdd5e6afc1e6f2e43ed3ac4d1cd76e1a88191a0fe405b1a70d3c490150d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.20s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quick_error-9f9d2ffec50d5217.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 18 tests
+[INFO] [stdout] test test::bare_item_direct ... ok
+[INFO] [stdout] test test::bare_item_trait ... ok
+[INFO] [stdout] test test::conditional_compilation ... ok
+[INFO] [stdout] test test::debug_context ... ok
+[INFO] [stdout] test test::parse_float_error ... ok
+[INFO] [stdout] test test::parse_int_error ... ok
+[INFO] [stdout] test test::path_context ... ok
+[INFO] [stdout] test test::struct_wrapper_err ... ok
+[INFO] [stdout] test test::struct_wrapper_excess_comma ... ok
+[INFO] [stdout] test test::struct_wrapper_struct_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_custom_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_discard ... ok
+[INFO] [stdout] test test::tuple_wrapper_err ... ok
+[INFO] [stdout] test test::tuple_wrapper_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_singleton ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_str ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_two_fields ... ok
+[INFO] [stdout] test test::wrapper ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quick-error
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test src\lib.rs -  (line 106) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 150) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 126) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 169) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 270) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 212) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 27) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 187) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 284) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 55) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 6) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 78) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d4d48fdd5e6afc1e6f2e43ed3ac4d1cd76e1a88191a0fe405b1a70d3c490150d"`
+[INFO] running `"docker" "rm" "-f" "d4d48fdd5e6afc1e6f2e43ed3ac4d1cd76e1a88191a0fe405b1a70d3c490150d"`
+[INFO] [stdout] d4d48fdd5e6afc1e6f2e43ed3ac4d1cd76e1a88191a0fe405b1a70d3c490150d

@@ -1,0 +1,73 @@
+[INFO] fetching crate nestor 0.1.0...
+[INFO] extracting crate nestor 0.1.0 into work\ex\default\sources\nightly\reg\nestor\0.1.0
+[INFO] extracting crate nestor 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\nestor\0.1.0
+[INFO] validating manifest of nestor-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nestor-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nestor-0.1.0
+[INFO] finished frobbing nestor-0.1.0
+[INFO] frobbed toml for nestor-0.1.0 written to work\ex\default\sources\nightly\reg\nestor\0.1.0\Cargo.toml
+[INFO] started frobbing nestor-0.1.0
+[INFO] finished frobbing nestor-0.1.0
+[INFO] frobbed toml for nestor-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\nestor\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tokio-async-await v0.1.7
+[INFO] [stderr]   Downloaded tokio-mockstream v1.1.0
+[INFO] [stderr]   Downloaded tokio-tls v0.2.1
+[INFO] [stderr]   Downloaded tokio-timer v0.1.2
+[INFO] [stderr]   Downloaded nestor_codegen v0.1.0
+[INFO] [stderr]   Downloaded irc v0.13.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nestor-0.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\nestor\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 383f188be5ae805d39a259d3b94309065272f9e6f6371eedc4d6cb4aaaf6c290
+[INFO] running `"docker" "start" "-a" "383f188be5ae805d39a259d3b94309065272f9e6f6371eedc4d6cb4aaaf6c290"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling futures v0.1.28
+[INFO] [stderr]    Compiling futures-core-preview v0.3.0-alpha.17
+[INFO] [stderr]    Compiling native-tls v0.2.3
+[INFO] [stderr]    Compiling futures-io-preview v0.3.0-alpha.17
+[INFO] [stderr]    Compiling pin-utils v0.1.0-alpha.4
+[INFO] [stderr]    Compiling bufstream v0.1.4
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling backtrace-sys v0.1.31
+[INFO] [stderr]    Compiling futures-sink-preview v0.3.0-alpha.17
+[INFO] [stderr]    Compiling unreachable v0.1.1
+[INFO] [stderr]    Compiling tokio-trace-core v0.1.0
+[INFO] [stderr]    Compiling futures-channel-preview v0.3.0-alpha.17
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling tokio-sync v0.1.6
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling tokio-timer v0.1.2
+[INFO] [stderr]    Compiling futures-util-preview v0.3.0-alpha.17
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling tokio-async-await v0.1.7
+[INFO] [stderr] error[E0432]: unresolved import `std::await`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-async-await-0.1.7\src\lib.rs:35:9
+[INFO] [stderr]    |
+[INFO] [stderr] 35 | pub use std::await as std_await;
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^^^^^^^ no `await` in the root
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling tokio-mockstream v1.1.0
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0432`.
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr] error: Could not compile `tokio-async-await`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "383f188be5ae805d39a259d3b94309065272f9e6f6371eedc4d6cb4aaaf6c290"`
+[INFO] running `"docker" "rm" "-f" "383f188be5ae805d39a259d3b94309065272f9e6f6371eedc4d6cb4aaaf6c290"`
+[INFO] [stdout] 383f188be5ae805d39a259d3b94309065272f9e6f6371eedc4d6cb4aaaf6c290

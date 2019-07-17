@@ -1,0 +1,125 @@
+[INFO] crate quickcheck 0.8.5 is already in cache
+[INFO] extracting crate quickcheck 0.8.5 into work\ex\default\sources\nightly\reg\quickcheck\0.8.5
+[INFO] extracting crate quickcheck 0.8.5 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quickcheck\0.8.5
+[INFO] validating manifest of quickcheck-0.8.5 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quickcheck-0.8.5 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quickcheck-0.8.5
+[INFO] finished frobbing quickcheck-0.8.5
+[INFO] frobbed toml for quickcheck-0.8.5 written to work\ex\default\sources\nightly\reg\quickcheck\0.8.5\Cargo.toml
+[INFO] started frobbing quickcheck-0.8.5
+[INFO] finished frobbing quickcheck-0.8.5
+[INFO] frobbed toml for quickcheck-0.8.5 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\quickcheck\0.8.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quickcheck-0.8.5 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quickcheck\\0.8.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 888ea88d5f291594c315199d2f7983cb902568a7fad114435278873ba749bcde
+[INFO] running `"docker" "start" "-a" "888ea88d5f291594c315199d2f7983cb902568a7fad114435278873ba749bcde"`
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling env_logger v0.6.2
+[INFO] [stderr]    Compiling quickcheck v0.8.5 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.61s
+[INFO] running `"docker" "inspect" "888ea88d5f291594c315199d2f7983cb902568a7fad114435278873ba749bcde"`
+[INFO] running `"docker" "rm" "-f" "888ea88d5f291594c315199d2f7983cb902568a7fad114435278873ba749bcde"`
+[INFO] [stdout] 888ea88d5f291594c315199d2f7983cb902568a7fad114435278873ba749bcde
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quickcheck\\0.8.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9ccdb0a5fe053072885cef72f3a59cd8a587ba1ce30b1c1550b3d6a3a11af5db
+[INFO] running `"docker" "start" "-a" "9ccdb0a5fe053072885cef72f3a59cd8a587ba1ce30b1c1550b3d6a3a11af5db"`
+[INFO] [stderr]    Compiling quickcheck v0.8.5 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 34.69s
+[INFO] running `"docker" "inspect" "9ccdb0a5fe053072885cef72f3a59cd8a587ba1ce30b1c1550b3d6a3a11af5db"`
+[INFO] running `"docker" "rm" "-f" "9ccdb0a5fe053072885cef72f3a59cd8a587ba1ce30b1c1550b3d6a3a11af5db"`
+[INFO] [stdout] 9ccdb0a5fe053072885cef72f3a59cd8a587ba1ce30b1c1550b3d6a3a11af5db
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\quickcheck\\0.8.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] e48e260b1abc6dbe15487b8ff4aa0f39662527013f840011096cfeea9c403b36
+[INFO] running `"docker" "start" "-a" "e48e260b1abc6dbe15487b8ff4aa0f39662527013f840011096cfeea9c403b36"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.69s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quickcheck-dde308bebb85237a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 67 tests
+[INFO] [stdout] test arbitrary::test::arby_int ... ok
+[INFO] [stdout] test arbitrary::test::arby_uint ... ok
+[INFO] [stdout] test arbitrary::test::arby_unit ... ok
+[INFO] [stdout] test arbitrary::test::binaryheaps ... ok
+[INFO] [stdout] test arbitrary::test::bools ... ok
+[INFO] [stdout] test arbitrary::test::bounds ... ok
+[INFO] [stdout] test arbitrary::test::btreemap ... ok
+[INFO] [stdout] test arbitrary::test::btreesets ... ok
+[INFO] [stdout] test arbitrary::test::chars ... ok
+[INFO] [stdout] test arbitrary::test::floats64 ... ok
+[INFO] [stdout] test arbitrary::test::floats32 ... ok
+[INFO] [stdout] test arbitrary::test::hashmap ... ok
+[INFO] [stdout] test arbitrary::test::hashsets ... ok
+[INFO] [stdout] test arbitrary::test::ints ... ok
+[INFO] [stdout] test arbitrary::test::ints128 ... ok
+[INFO] [stdout] test arbitrary::test::ints16 ... ok
+[INFO] [stdout] test arbitrary::test::ints32 ... ok
+[INFO] [stdout] test arbitrary::test::ints64 ... ok
+[INFO] [stdout] test arbitrary::test::ints8 ... ok
+[INFO] [stdout] test arbitrary::test::linkedlists ... ok
+[INFO] [stdout] test arbitrary::test::options ... ok
+[INFO] [stdout] test arbitrary::test::pathbuf ... ok
+[INFO] [stdout] test arbitrary::test::quads ... ok
+[INFO] [stdout] test arbitrary::test::ranges ... ok
+[INFO] [stdout] test arbitrary::test::results ... ok
+[INFO] [stdout] test arbitrary::test::triples ... ok
+[INFO] [stdout] test arbitrary::test::tuples ... ok
+[INFO] [stdout] test arbitrary::test::uints ... ok
+[INFO] [stdout] test arbitrary::test::uints128 ... ok
+[INFO] [stdout] test arbitrary::test::uints16 ... ok
+[INFO] [stdout] test arbitrary::test::uints32 ... ok
+[INFO] [stdout] test arbitrary::test::uints64 ... ok
+[INFO] [stdout] test arbitrary::test::uints8 ... ok
+[INFO] [stdout] test arbitrary::test::unit ... ok
+[INFO] [stdout] test arbitrary::test::vecdeques ... ok
+[INFO] [stdout] test arbitrary::test::vecs ... ok
+[INFO] [stdout] test arbitrary::test::wrapping_ints32 ... ok
+[INFO] [stdout] test tester::test::shrinking_regression_issue_126 ... ok
+[INFO] [stdout] test tester::test::size_for_small_types_issue_143 ... ok
+[INFO] [stdout] test tester::test::different_generator ... ok
+[INFO] [stdout] test tests::all_tests_discarded_min_tests_passed_missing ... ok
+[INFO] [stdout] test tests::basic_hashmap ... ok
+[INFO] [stdout] test tests::basic_hashset ... ok
+[INFO] [stdout] test tests::max ... ok
+[INFO] [stdout] test tests::all_tests_discarded_min_tests_passed_set ... ok
+[INFO] [stdout] test tests::panic_msg_1 ... ok
+[INFO] [stdout] test tests::pathbuf ... ok
+[INFO] [stdout] test tests::panic_msg_2 ... ok
+[INFO] [stdout] test tests::prop_reverse_reverse ... ok
+[INFO] [stdout] test tests::prop_reverse_reverse_macro ... ok
+[INFO] [stdout] test tests::panic_msg_3 ... ok
+[INFO] [stdout] test tests::regression_issue_83 ... ok
+[INFO] [stdout] test tests::regression_issue_83_signed ... ok
+[INFO] [stdout] test tests::reverse_app ... ok
+[INFO] [stdout] test tests::prop_oob ... ok
+[INFO] [stdout] test tests::regression_issue_107_hang ... ok
+[INFO] [stdout] test tests::sieve_not_all_primes ... ok
+[INFO] [stdout] test tests::sort ... ok
+[INFO] [stdout] test tests::substitute_hashmap ... ok
+[INFO] [stdout] test tests::substitute_hashset ... ok
+[INFO] [stdout] test tests::sieve_not_prime ... ok
+[INFO] [stdout] test tests::testable_result ... ok
+[INFO] [stdout] test tests::testable_unit ... ok
+[INFO] [stdout] test tests::prop_macro_panic ... ok
+[INFO] [stdout] test tests::testable_result_err ... ok
+[INFO] [stdout] test tests::reverse_single ... ok
+[INFO] [stdout] test tests::testable_unit_panic ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 67 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quickcheck
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\lib.rs - quickcheck (line 35) ... ok
+[INFO] [stdout] test src\tester.rs - tester::QuickCheck<G>::quickcheck (line 158) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e48e260b1abc6dbe15487b8ff4aa0f39662527013f840011096cfeea9c403b36"`
+[INFO] running `"docker" "rm" "-f" "e48e260b1abc6dbe15487b8ff4aa0f39662527013f840011096cfeea9c403b36"`
+[INFO] [stdout] e48e260b1abc6dbe15487b8ff4aa0f39662527013f840011096cfeea9c403b36

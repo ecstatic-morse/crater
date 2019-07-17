@@ -1,0 +1,125 @@
+[INFO] fetching crate mn 0.2.1...
+[INFO] extracting crate mn 0.2.1 into work\ex\default\sources\stable\reg\mn\0.2.1
+[INFO] extracting crate mn 0.2.1 into work\ex\default\sources\beta\reg\mn\0.2.1
+[INFO] validating manifest of mn-0.2.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mn-0.2.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mn-0.2.1
+[INFO] finished frobbing mn-0.2.1
+[INFO] frobbed toml for mn-0.2.1 written to work\ex\default\sources\stable\reg\mn\0.2.1\Cargo.toml
+[INFO] started frobbing mn-0.2.1
+[INFO] finished frobbing mn-0.2.1
+[INFO] frobbed toml for mn-0.2.1 written to work\ex\default\sources\beta\reg\mn\0.2.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded prettyprint v0.3.0
+[INFO] [stderr]   Downloaded console v0.6.2
+[INFO] [stderr]   Downloaded line-wrap v0.1.1
+[INFO] [stderr]   Downloaded onig v4.3.2
+[INFO] [stderr]   Downloaded shell-words v0.1.0
+[INFO] [stderr]   Downloaded derive_builder v0.7.2
+[INFO] [stderr]   Downloaded darling v0.9.0
+[INFO] [stderr]   Downloaded darling_core v0.9.0
+[INFO] [stderr]   Downloaded content_inspector v0.2.4
+[INFO] [stderr]   Downloaded parking_lot v0.9.0
+[INFO] [stderr]   Downloaded lock_api v0.3.1
+[INFO] [stderr]   Downloaded ansi_colours v1.0.1
+[INFO] [stderr]   Downloaded open v1.2.3
+[INFO] [stderr]   Downloaded parking_lot_core v0.6.1
+[INFO] [stderr]   Downloaded termios v0.3.1
+[INFO] [stderr]   Downloaded ident_case v1.0.1
+[INFO] [stderr]   Downloaded darling_macro v0.9.0
+[INFO] [stderr]   Downloaded derive_builder_core v0.5.0
+[INFO] [stderr]   Downloaded clicolors-control v0.2.0
+[INFO] [stderr]   Downloaded man v0.3.0
+[INFO] [stderr]   Downloaded directories v1.0.2
+[INFO] [stderr]   Downloaded onig_sys v69.1.0
+[INFO] [stderr]   Downloaded roff v0.1.0
+[INFO] [stderr]   Downloaded plist v0.4.2
+[INFO] [stderr]   Downloaded syntect v3.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mn-0.2.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mn\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 82bafd6e04caa5db188a2eaaf935f54b10f2a4bda8cdc8ea7c925da5be08545f
+[INFO] running `"docker" "start" "-a" "82bafd6e04caa5db188a2eaaf935f54b10f2a4bda8cdc8ea7c925da5be08545f"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ident_case v1.0.1
+[INFO] [stderr]    Compiling derive_builder v0.7.2
+[INFO] [stderr]    Compiling shell-words v0.1.0
+[INFO] [stderr]    Compiling roff v0.1.0
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11
+[INFO] [stderr]    Compiling onig_sys v69.1.0
+[INFO] [stderr]    Compiling curl-sys v0.4.20
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling libgit2-sys v0.7.11
+[INFO] [stderr]    Compiling ansi_colours v1.0.1
+[INFO] [stderr]    Compiling lock_api v0.3.1
+[INFO] [stderr]    Compiling line-wrap v0.1.1
+[INFO] [stderr]    Compiling yaml-rust v0.4.3
+[INFO] [stderr]    Compiling man v0.3.0
+[INFO] [stderr]    Compiling parking_lot_core v0.6.1
+[INFO] [stderr]    Compiling parking_lot v0.9.0
+[INFO] [stderr]    Compiling miniz-sys v0.1.12
+[INFO] [stderr]    Compiling content_inspector v0.2.4
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling flate2 v1.0.9
+[INFO] [stderr]    Compiling plist v0.4.2
+[INFO] [stderr]    Compiling darling_core v0.9.0
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling clicolors-control v0.2.0
+[INFO] [stderr]    Compiling ansi_term v0.11.0
+[INFO] [stderr]    Compiling directories v1.0.2
+[INFO] [stderr]    Compiling open v1.2.3
+[INFO] [stderr]    Compiling same-file v1.0.5
+[INFO] [stderr]    Compiling cgmath v0.16.1
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling darling_macro v0.9.0
+[INFO] [stderr]    Compiling onig v4.3.2
+[INFO] [stderr]    Compiling walkdir v2.2.9
+[INFO] [stderr]    Compiling console v0.6.2
+[INFO] [stderr]    Compiling darling v0.9.0
+[INFO] [stderr]    Compiling winconsole v0.10.0
+[INFO] [stderr]    Compiling syntect v3.2.0
+[INFO] [stderr]    Compiling derive_builder_core v0.5.0
+[INFO] [stderr]    Compiling colored v1.8.0
+[INFO] [stderr]    Compiling git2 v0.7.5
+[INFO] [stderr]    Compiling prettyprint v0.3.0
+[INFO] [stderr]    Compiling mn v0.2.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6m 20s
+[INFO] running `"docker" "inspect" "82bafd6e04caa5db188a2eaaf935f54b10f2a4bda8cdc8ea7c925da5be08545f"`
+[INFO] running `"docker" "rm" "-f" "82bafd6e04caa5db188a2eaaf935f54b10f2a4bda8cdc8ea7c925da5be08545f"`
+[INFO] [stdout] 82bafd6e04caa5db188a2eaaf935f54b10f2a4bda8cdc8ea7c925da5be08545f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mn\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a2e371d70a75582210deb757bd70b021830baee7f50bc119d7e6e2367ed819ce
+[INFO] running `"docker" "start" "-a" "a2e371d70a75582210deb757bd70b021830baee7f50bc119d7e6e2367ed819ce"`
+[INFO] [stderr]    Compiling mn v0.2.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.49s
+[INFO] running `"docker" "inspect" "a2e371d70a75582210deb757bd70b021830baee7f50bc119d7e6e2367ed819ce"`
+[INFO] running `"docker" "rm" "-f" "a2e371d70a75582210deb757bd70b021830baee7f50bc119d7e6e2367ed819ce"`
+[INFO] [stdout] a2e371d70a75582210deb757bd70b021830baee7f50bc119d7e6e2367ed819ce
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\mn\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] fb1d8f4fa7cd47268600f7f1a8b519ba5326324f47f70e48cf76dc0c600f5495
+[INFO] running `"docker" "start" "-a" "fb1d8f4fa7cd47268600f7f1a8b519ba5326324f47f70e48cf76dc0c600f5495"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\generate_docs-ab7e2c3a1c0bbf25.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mn-314b55850b73f3ee.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fb1d8f4fa7cd47268600f7f1a8b519ba5326324f47f70e48cf76dc0c600f5495"`
+[INFO] running `"docker" "rm" "-f" "fb1d8f4fa7cd47268600f7f1a8b519ba5326324f47f70e48cf76dc0c600f5495"`
+[INFO] [stdout] fb1d8f4fa7cd47268600f7f1a8b519ba5326324f47f70e48cf76dc0c600f5495

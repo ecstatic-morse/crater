@@ -1,0 +1,80 @@
+[INFO] fetching crate almanac 0.2.3...
+[INFO] extracting crate almanac 0.2.3 into work\ex\default\sources\nightly\reg\almanac\0.2.3
+[INFO] extracting crate almanac 0.2.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\almanac\0.2.3
+[INFO] validating manifest of almanac-0.2.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of almanac-0.2.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing almanac-0.2.3
+[INFO] finished frobbing almanac-0.2.3
+[INFO] frobbed toml for almanac-0.2.3 written to work\ex\default\sources\nightly\reg\almanac\0.2.3\Cargo.toml
+[INFO] started frobbing almanac-0.2.3
+[INFO] finished frobbing almanac-0.2.3
+[INFO] frobbed toml for almanac-0.2.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\almanac\0.2.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded ical v0.5.0
+[INFO] [stderr]   Downloaded parse-zoneinfo v0.2.0
+[INFO] [stderr]   Downloaded chrono-tz v0.5.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing almanac-0.2.3 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\almanac\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c4404f0ad03bb6b25ac1c0ac6aad6baa9480cf07b0f92e567680d362b124d4b5
+[INFO] running `"docker" "start" "-a" "c4404f0ad03bb6b25ac1c0ac6aad6baa9480cf07b0f92e567680d362b124d4b5"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rgb v0.8.13
+[INFO] [stderr]    Compiling itertools v0.7.11
+[INFO] [stderr]    Compiling toml v0.4.10
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling parse-zoneinfo v0.2.0
+[INFO] [stderr]    Compiling error-chain v0.10.0
+[INFO] [stderr]    Compiling ical v0.5.0
+[INFO] [stderr]    Compiling chrono-tz v0.5.1
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling dirs v1.0.5
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling cgmath v0.16.1
+[INFO] [stderr]    Compiling winconsole v0.10.0
+[INFO] [stderr]    Compiling colored v1.8.0
+[INFO] [stderr]    Compiling almanac v0.2.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 21s
+[INFO] running `"docker" "inspect" "c4404f0ad03bb6b25ac1c0ac6aad6baa9480cf07b0f92e567680d362b124d4b5"`
+[INFO] running `"docker" "rm" "-f" "c4404f0ad03bb6b25ac1c0ac6aad6baa9480cf07b0f92e567680d362b124d4b5"`
+[INFO] [stdout] c4404f0ad03bb6b25ac1c0ac6aad6baa9480cf07b0f92e567680d362b124d4b5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\almanac\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ac1d5ff6a4dde63661153d3e380847c2e0eb389eb48a20cf96ad1905a11c2ae7
+[INFO] running `"docker" "start" "-a" "ac1d5ff6a4dde63661153d3e380847c2e0eb389eb48a20cf96ad1905a11c2ae7"`
+[INFO] [stderr]    Compiling almanac v0.2.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.98s
+[INFO] running `"docker" "inspect" "ac1d5ff6a4dde63661153d3e380847c2e0eb389eb48a20cf96ad1905a11c2ae7"`
+[INFO] running `"docker" "rm" "-f" "ac1d5ff6a4dde63661153d3e380847c2e0eb389eb48a20cf96ad1905a11c2ae7"`
+[INFO] [stdout] ac1d5ff6a4dde63661153d3e380847c2e0eb389eb48a20cf96ad1905a11c2ae7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\almanac\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2172009111c586797dd0f08c5050f8d71ae00572cc0b4333afde86f44626f449
+[INFO] running `"docker" "start" "-a" "2172009111c586797dd0f08c5050f8d71ae00572cc0b4333afde86f44626f449"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.58s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\almanac-66a24ca3eb714998.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test date::tests::date_parse_time ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\almanac-dcece5bc9046e9e0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests almanac
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2172009111c586797dd0f08c5050f8d71ae00572cc0b4333afde86f44626f449"`
+[INFO] running `"docker" "rm" "-f" "2172009111c586797dd0f08c5050f8d71ae00572cc0b4333afde86f44626f449"`
+[INFO] [stdout] 2172009111c586797dd0f08c5050f8d71ae00572cc0b4333afde86f44626f449

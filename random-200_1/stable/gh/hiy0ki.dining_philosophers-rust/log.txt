@@ -1,0 +1,55 @@
+[INFO] cloning repository hiy0ki/dining_philosophers-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/hiy0ki/dining_philosophers-rust.git" "work\\cache\\sources\\gh\\hiy0ki\\dining_philosophers-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\hiy0ki\dining_philosophers-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hiy0ki\\dining_philosophers-rust" "work\\ex\\default\\sources\\stable\\gh\\hiy0ki\\dining_philosophers-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\hiy0ki\dining_philosophers-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hiy0ki\\dining_philosophers-rust" "work\\ex\\default\\sources\\beta\\gh\\hiy0ki\\dining_philosophers-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\hiy0ki\dining_philosophers-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 906905e99d552537097ee3fb654fba5160d4b7f4
+[INFO] sha for GitHub repo hiy0ki/dining_philosophers-rust: 906905e99d552537097ee3fb654fba5160d4b7f4
+[INFO] validating manifest of hiy0ki/dining_philosophers-rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hiy0ki/dining_philosophers-rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hiy0ki/dining_philosophers-rust
+[INFO] finished frobbing hiy0ki/dining_philosophers-rust
+[INFO] frobbed toml for hiy0ki/dining_philosophers-rust written to work\ex\default\sources\stable\gh\hiy0ki\dining_philosophers-rust\Cargo.toml
+[INFO] started frobbing hiy0ki/dining_philosophers-rust
+[INFO] finished frobbing hiy0ki/dining_philosophers-rust
+[INFO] frobbed toml for hiy0ki/dining_philosophers-rust written to work\ex\default\sources\beta\gh\hiy0ki\dining_philosophers-rust\Cargo.toml
+[INFO] crate hiy0ki/dining_philosophers-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hiy0ki/dining_philosophers-rust against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\hiy0ki\\dining_philosophers-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 77ada98f28255d724cef96e66ad3375cf99eafb6f4bbe9eaffbf8689b50fbb84
+[INFO] running `"docker" "start" "-a" "77ada98f28255d724cef96e66ad3375cf99eafb6f4bbe9eaffbf8689b50fbb84"`
+[INFO] [stderr]    Compiling dining_philosophers v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.88s
+[INFO] running `"docker" "inspect" "77ada98f28255d724cef96e66ad3375cf99eafb6f4bbe9eaffbf8689b50fbb84"`
+[INFO] running `"docker" "rm" "-f" "77ada98f28255d724cef96e66ad3375cf99eafb6f4bbe9eaffbf8689b50fbb84"`
+[INFO] [stdout] 77ada98f28255d724cef96e66ad3375cf99eafb6f4bbe9eaffbf8689b50fbb84
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\hiy0ki\\dining_philosophers-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] b0bd98b822194447b5eb5459fb76cc0d8d37e430295af06cfc806e241969715f
+[INFO] running `"docker" "start" "-a" "b0bd98b822194447b5eb5459fb76cc0d8d37e430295af06cfc806e241969715f"`
+[INFO] [stderr]    Compiling dining_philosophers v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.44s
+[INFO] running `"docker" "inspect" "b0bd98b822194447b5eb5459fb76cc0d8d37e430295af06cfc806e241969715f"`
+[INFO] running `"docker" "rm" "-f" "b0bd98b822194447b5eb5459fb76cc0d8d37e430295af06cfc806e241969715f"`
+[INFO] [stdout] b0bd98b822194447b5eb5459fb76cc0d8d37e430295af06cfc806e241969715f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\hiy0ki\\dining_philosophers-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 05b028026978ea35d493a19a9d7d0a0b424073335f02e1087d9d8de49e5013ce
+[INFO] running `"docker" "start" "-a" "05b028026978ea35d493a19a9d7d0a0b424073335f02e1087d9d8de49e5013ce"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dining_philosophers-adb108705f07763b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "05b028026978ea35d493a19a9d7d0a0b424073335f02e1087d9d8de49e5013ce"`
+[INFO] running `"docker" "rm" "-f" "05b028026978ea35d493a19a9d7d0a0b424073335f02e1087d9d8de49e5013ce"`
+[INFO] [stdout] 05b028026978ea35d493a19a9d7d0a0b424073335f02e1087d9d8de49e5013ce

@@ -1,0 +1,572 @@
+[INFO] crate nalgebra 0.18.0 is already in cache
+[INFO] extracting crate nalgebra 0.18.0 into work\ex\default\sources\nightly\reg\nalgebra\0.18.0
+[INFO] extracting crate nalgebra 0.18.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\nalgebra\0.18.0
+[INFO] validating manifest of nalgebra-0.18.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nalgebra-0.18.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nalgebra-0.18.0
+[INFO] finished frobbing nalgebra-0.18.0
+[INFO] frobbed toml for nalgebra-0.18.0 written to work\ex\default\sources\nightly\reg\nalgebra\0.18.0\Cargo.toml
+[INFO] started frobbing nalgebra-0.18.0
+[INFO] finished frobbing nalgebra-0.18.0
+[INFO] frobbed toml for nalgebra-0.18.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\nalgebra\0.18.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nalgebra-0.18.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\nalgebra\\0.18.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2b34cfe841c8fd13c0c77e88193baa77484b3faa8e83a15900e7704084aa81ec
+[INFO] running `"docker" "start" "-a" "2b34cfe841c8fd13c0c77e88193baa77484b3faa8e83a15900e7704084aa81ec"`
+[INFO] [stderr]    Compiling libm v0.1.4
+[INFO] [stderr]    Compiling typenum v1.10.0
+[INFO] [stderr]    Compiling rawpointer v0.1.0
+[INFO] [stderr]    Compiling num-complex v0.2.3
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling matrixmultiply v0.2.2
+[INFO] [stderr]    Compiling approx v0.3.2
+[INFO] [stderr]    Compiling alga v0.9.1
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling nalgebra v0.18.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 01s
+[INFO] running `"docker" "inspect" "2b34cfe841c8fd13c0c77e88193baa77484b3faa8e83a15900e7704084aa81ec"`
+[INFO] running `"docker" "rm" "-f" "2b34cfe841c8fd13c0c77e88193baa77484b3faa8e83a15900e7704084aa81ec"`
+[INFO] [stdout] 2b34cfe841c8fd13c0c77e88193baa77484b3faa8e83a15900e7704084aa81ec
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\nalgebra\\0.18.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 48c1cb993680e4ff15194d6a7892089ea4ce1f60124e72bf1c581c223834f099
+[INFO] running `"docker" "start" "-a" "48c1cb993680e4ff15194d6a7892089ea4ce1f60124e72bf1c581c223834f099"`
+[INFO] [stderr]    Compiling nalgebra v0.18.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 42s
+[INFO] running `"docker" "inspect" "48c1cb993680e4ff15194d6a7892089ea4ce1f60124e72bf1c581c223834f099"`
+[INFO] running `"docker" "rm" "-f" "48c1cb993680e4ff15194d6a7892089ea4ce1f60124e72bf1c581c223834f099"`
+[INFO] [stdout] 48c1cb993680e4ff15194d6a7892089ea4ce1f60124e72bf1c581c223834f099
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\nalgebra\\0.18.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3126a652e108b6e6dc4a02231ddc65f04a95f988e9757f6f9dfb45cd8857d2df
+[INFO] running `"docker" "start" "-a" "3126a652e108b6e6dc4a02231ddc65f04a95f988e9757f6f9dfb45cd8857d2df"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.61s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\nalgebra-2e736b3f4853c8e3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 17 tests
+[INFO] [stdout] test base::indexing::dimrange_range_usize ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangefrom_dimname ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangefrom_usize ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangefull ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangeinclusive_usize ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangeto_usize ... ok
+[INFO] [stdout] test base::indexing::dimrange_rangetoinclusive_usize ... ok
+[INFO] [stdout] test base::indexing::dimrange_usize ... ok
+[INFO] [stdout] test geometry::quaternion_construction::tests::random_unit_quats_are_unit ... ok
+[INFO] [stdout] test geometry::transform::tests::checks_homogeneous_invariants_of_square_identity_matrix ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_random ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero_det ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero_diag_diff_and_zero_off_diagonal ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero_diagonal ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero_off_diagonal ... ok
+[INFO] [stdout] test linalg::symmetric_eigen::test::wilkinson_shift_zero_trace ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-28e2ec15d26452e4.exe
+[INFO] [stdout] running 111 tests
+[INFO] [stdout] test core::edition::insert_columns ... ok
+[INFO] [stdout] test core::edition::insert_rows_to_empty_matrix ... ok
+[INFO] [stdout] test core::edition::insert_rows ... ok
+[INFO] [stdout] test core::edition::insert_columns_to_empty_matrix ... ok
+[INFO] [stdout] test core::edition::remove_columns ... ok
+[INFO] [stdout] test core::edition::remove_rows ... ok
+[INFO] [stdout] test core::edition::resize ... ok
+[INFO] [stdout] test core::edition::resize_empty_matrix ... ok
+[INFO] [stdout] test core::edition::swap_columns ... ok
+[INFO] [stdout] test core::edition::swap_rows ... ok
+[INFO] [stdout] test core::edition::upper_lower_triangular ... ok
+[INFO] [stdout] test core::matrix::apply ... ok
+[INFO] [stdout] test core::matrix::components_mut ... ok
+[INFO] [stdout] test core::matrix::coordinates ... ok
+[INFO] [stdout] test core::matrix::copy_from_slice ... ok
+[INFO] [stdout] test core::matrix::cross_product_vector_and_row_vector ... ok
+[INFO] [stdout] test core::matrix::debug_output_corresponds_to_data_container ... ok
+[INFO] [stdout] test core::matrix::from_columns ... ok
+[INFO] [stdout] test core::matrix::from_columns_dynamic ... ok
+[INFO] [stdout] test core::matrix::copy_from_slice_too_large ... ok
+[INFO] [stdout] test core::matrix::from_diagonal ... ok
+[INFO] [stdout] test core::matrix::from_rows ... ok
+[INFO] [stdout] test core::matrix::copy_from_slice_too_small ... ok
+[INFO] [stdout] test core::matrix::identity ... ok
+[INFO] [stdout] test core::matrix::is_column_major ... ok
+[INFO] [stdout] test core::matrix::iter ... ok
+[INFO] [stdout] test core::matrix::kronecker ... ok
+[INFO] [stdout] test core::matrix::from_not_enough_columns ... ok
+[INFO] [stdout] test core::matrix::linear_index ... ok
+[INFO] [stdout] test core::matrix::map ... ok
+[INFO] [stdout] test core::matrix::map_with_location ... ok
+[INFO] [stdout] test core::matrix::from_rows_with_different_dimensions ... ok
+[INFO] [stdout] test core::matrix::partial_clamp ... ok
+[INFO] [stdout] test core::matrix::partial_cmp ... ok
+[INFO] [stdout] test core::matrix::push ... ok
+[INFO] [stdout] test core::matrix::set_row_column ... ok
+[INFO] [stdout] test core::matrix::simple_add ... ok
+[INFO] [stdout] test core::matrix::simple_mul ... ok
+[INFO] [stdout] test core::matrix::simple_product ... ok
+[INFO] [stdout] test core::matrix::simple_scalar_conversion ... ok
+[INFO] [stdout] test core::matrix::from_too_many_rows ... ok
+[INFO] [stdout] test core::matrix::simple_scalar_mul ... ok
+[INFO] [stdout] test core::matrix::simple_sum ... ok
+[INFO] [stdout] test core::matrix::simple_transpose ... ok
+[INFO] [stdout] test core::matrix::swizzle ... ok
+[INFO] [stdout] test core::matrix::simple_transpose_mut ... ok
+[INFO] [stdout] test core::matrix::trace ... ok
+[INFO] [stdout] test core::matrix::to_homogeneous ... ok
+[INFO] [stdout] test core::matrix::vector_index_mut ... ok
+[INFO] [stdout] test core::matrix::zip_map ... ok
+[INFO] [stdout] test core::matrix_slice::col_slice_mut ... ok
+[INFO] [stdout] test core::matrix_slice::columns_range_pair ... ok
+[INFO] [stdout] test core::matrix::trace_panic ... ok
+[INFO] [stdout] test core::matrix_slice::nested_col_slices ... ok
+[INFO] [stdout] test core::matrix_slice::nested_fixed_slices ... ok
+[INFO] [stdout] test core::matrix_slice::nested_row_slices ... ok
+[INFO] [stdout] test core::matrix_slice::column_out_of_bounds ... ok
+[INFO] [stdout] test core::matrix_slice::nested_slices ... ok
+[INFO] [stdout] test core::matrix_slice::new_slice ... ok
+[INFO] [stdout] test core::matrix_slice::new_slice_mut ... ok
+[INFO] [stdout] test core::matrix_slice::row_slice_mut ... ok
+[INFO] [stdout] test core::matrix_slice::columns_out_of_bounds ... ok
+[INFO] [stdout] test core::matrix_slice::rows_range_pair ... ok
+[INFO] [stdout] test core::matrix_slice::columns_with_step_out_of_bounds ... ok
+[INFO] [stdout] test core::matrix_slice::slice_mut ... ok
+[INFO] [stdout] test core::matrix_slice::row_out_of_bounds ... ok
+[INFO] [stdout] test core::matrix_slice::rows_out_of_bounds ... ok
+[INFO] [stdout] test geometry::point::point_clone ... ok
+[INFO] [stdout] test geometry::point::point_coordinates ... ok
+[INFO] [stdout] test geometry::point::point_ops ... ok
+[INFO] [stdout] test core::matrix_slice::rows_with_step_out_of_bounds ... ok
+[INFO] [stdout] test geometry::point::point_scale ... ok
+[INFO] [stdout] test geometry::point::point_vector_sum ... ok
+[INFO] [stdout] test geometry::point::to_homogeneous ... ok
+[INFO] [stdout] test geometry::projection::orthographic_inverse ... ok
+[INFO] [stdout] test geometry::projection::perspective_inverse ... ok
+[INFO] [stdout] test geometry::rotation::angle_2 ... ok
+[INFO] [stdout] test geometry::rotation::angle_3 ... ok
+[INFO] [stdout] test core::matrix_slice::slice_out_of_bounds ... ok
+[INFO] [stdout] test geometry::rotation::quaternion_euler_angles_issue_494 ... ok
+[INFO] [stdout] test core::matrix_slice::slice_with_steps_out_of_bounds ... ok
+[INFO] [stdout] test linalg::eigen::symmetric_eigen_singular_24x24 ... ok
+[INFO] [stdout] test linalg::full_piv_lu::full_piv_lu_simple ... ok
+[INFO] [stdout] test linalg::full_piv_lu::full_piv_lu_simple_with_pivot ... ok
+[INFO] [stdout] test linalg::inverse::matrix1_try_inverse ... ok
+[INFO] [stdout] test linalg::inverse::matrix1_try_inverse_scaled_identity ... ok
+[INFO] [stdout] test linalg::inverse::matrix2_try_inverse ... ok
+[INFO] [stdout] test linalg::inverse::matrix2_try_inverse_scaled_identity ... ok
+[INFO] [stdout] test linalg::inverse::matrix3_try_inverse ... ok
+[INFO] [stdout] test linalg::inverse::matrix3_try_inverse_scaled_identity ... ok
+[INFO] [stdout] test linalg::inverse::matrix4_try_inverse_issue_214 ... ok
+[INFO] [stdout] test linalg::inverse::matrix5_try_inverse ... ok
+[INFO] [stdout] test linalg::inverse::matrix5_try_inverse_scaled_identity ... ok
+[INFO] [stdout] test linalg::lu::lu_simple ... ok
+[INFO] [stdout] test linalg::lu::lu_simple_with_pivot ... ok
+[INFO] [stdout] test linalg::schur::schur_simpl_mat3 ... ok
+[INFO] [stdout] test linalg::schur::schur_singular ... ok
+[INFO] [stdout] test linalg::schur::schur_static_mat3_fail ... ok
+[INFO] [stdout] test linalg::schur::schur_static_mat4_fail ... ok
+[INFO] [stdout] test linalg::schur::schur_static_mat4_fail2 ... ok
+[INFO] [stdout] test linalg::svd::svd_err ... ok
+[INFO] [stdout] test linalg::svd::svd_fail ... ok
+[INFO] [stdout] test linalg::svd::svd_identity ... ok
+[INFO] [stdout] test linalg::svd::svd_singular ... ok
+[INFO] [stdout] test linalg::svd::svd_singular_horizontal ... ok
+[INFO] [stdout] test linalg::convolution::convolve_full_check ... ok
+[INFO] [stdout] test linalg::svd::svd_singular_vertical ... ok
+[INFO] [stdout] test linalg::svd::svd_zeros ... ok
+[INFO] [stdout] test linalg::svd::svd_with_delimited_subproblem ... ok
+[INFO] [stdout] test linalg::convolution::convolve_same_check ... ok
+[INFO] [stdout] test linalg::convolution::convolve_valid_check ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 111 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests nalgebra
+[INFO] [stdout] 
+[INFO] [stdout] running 375 tests
+[INFO] [stdout] test src/lib.rs -  (line 15) ... ignored
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R, C, S>::dotc (line 410) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R, C, S>::iamax_full (line 238) ... ok
+[INFO] [stdout] test src/lib.rs -  (line 26) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R, C, S>::dot (line 379) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R, C, S>::tr_dot (line 434) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::gemm_ad (line 1151) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R, C, S>::icamax_full (line 201) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::gemm (line 961) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::ger_symm (line 1249) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::gerc (line 927) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::gemm_tr (line 1093) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::ger (line 895) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::SquareMatrix<N, D1, S>::quadform (line 1502) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::syger (line 1286) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Matrix<N, R1, C1, S>::hegerc (line 1321) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::SquareMatrix<N, D1, S>::quadform_tr (line 1412) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::argmax (line 56) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::argmin (line 127) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::SquareMatrix<N, D1, S>::quadform_tr_with_workspace (line 1358) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::SquareMatrix<N, D1, S>::quadform_with_workspace (line 1448) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::axpy (line 501) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::gemv (line 536) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::gemv_ad (line 828) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::gemv_tr (line 793) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::iamax (line 98) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::hegemv (line 707) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::icamax (line 23) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::iamin (line 169) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::imax (line 84) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::imin (line 155) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R, C, S>::abs (line 22) ... ok
+[INFO] [stdout] test src\base\blas.rs - base::blas::Vector<N, D, S>::sygemv (line 664) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::cdpy (line 79) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::cmpy (line 79) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_div (line 54) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_div_assign (line 114) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_mul (line 54) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_div_mut (line 134) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_mul_assign (line 114) ... ok
+[INFO] [stdout] test src\base\componentwise.rs - base::componentwise::Matrix<N, R1, C1, SA>::component_mul_mut (line 134) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_diagonal_element (line 503) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_column_slice (line 640) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_element (line 343) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_fn (line 451) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_partial_diagonal (line 528) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_vec (line 668) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_row_slice (line 613) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::from_iterator (line 423) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::zeros (line 395) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::repeat (line 370) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, C>::identity (line 480) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_column_slice (line 640) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_diagonal_element (line 503) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_fn (line 451) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_iterator (line 423) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_element (line 343) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_partial_diagonal (line 528) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_row_slice (line 613) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::from_vec (line 668) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::identity (line 480) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::repeat (line 370) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_column_slice (line 640) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_columns (line 207) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, Dynamic, Dynamic>::zeros (line 395) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_diagonal_element (line 503) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_fn (line 451) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_iterator (line 423) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_element (line 343) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_row_slice (line 613) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_partial_diagonal (line 528) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_rows (line 167) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_vec (line 668) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::from_vec_generic (line 266) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::identity (line 480) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::zeros (line 395) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, C>::repeat (line 370) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_diagonal_element (line 503) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_column_slice (line 640) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_element (line 343) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_fn (line 451) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_partial_diagonal (line 528) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_iterator (line 423) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_row_slice (line 613) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::from_vec (line 668) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::repeat (line 370) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::identity (line 480) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixMN<N, R, Dynamic>::zeros (line 395) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, Dynamic, U1, S>::extend (line 918) ... ok
+[INFO] [stdout] test src\base\construction.rs - base::construction::MatrixN<N, D>::from_diagonal (line 293) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, R, Dynamic, S>::extend (line 871) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, R, Dynamic, S>::extend (line 891) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, R, Dynamic, S>::extend (line 943) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, R, Dynamic, S>::extend (line 965) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 339) ... ok
+[INFO] [stdout] test src\base\edition.rs - base::edition::Matrix<N, R, Dynamic, S>::extend (line 977) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 364) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 351) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 386) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 374) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::column_iter (line 267) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 424) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 413) ... ok
+[INFO] [stdout] test src\base\indexing.rs - base::indexing::Matrix<N, R, C, S> (line 397) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::len (line 162) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::column_iter_mut (line 665) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::iter (line 232) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::ncols (line 203) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::nrows (line 190) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::row_iter (line 252) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::shape (line 176) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::row_iter_mut (line 645) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Vector<N, D, S>::lerp (line 1581) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Unit<Vector<N, D, S>>::slerp (line 1600) ... ok
+[INFO] [stdout] test src\base\matrix.rs - base::matrix::Matrix<N, R, C, S>::strides (line 216) ... ok
+[INFO] [stdout] test src\base\norm.rs - base::norm::Matrix<N, R, C, S>::apply_metric_distance (line 151) ... ok
+[INFO] [stdout] test src\base\ops.rs - base::ops::MatrixMN<N, Dynamic, C>::sum (line 393) ... ok
+[INFO] [stdout] test src\base\norm.rs - base::norm::Matrix<N, R, C, S>::apply_norm (line 134) ... ok
+[INFO] [stdout] test src\base\ops.rs - base::ops::MatrixMN<N, Dynamic, C>::sum (line 403) ... ok
+[INFO] [stdout] test src\base\ops.rs - base::ops::MatrixMN<N, Dynamic, C>::sum (line 433) ... ok
+[INFO] [stdout] test src\base\ops.rs - base::ops::MatrixMN<N, Dynamic, C>::sum (line 443) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::column_mean (line 294) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::column_sum (line 119) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::column_variance (line 202) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::mean (line 238) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_mean (line 260) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_mean_tr (line 277) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_sum (line 85) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_sum_tr (line 102) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_variance (line 168) ... ok
+[INFO] [stdout] test src\base\storage.rs - base::storage::Storage::linear_index (line 61) ... ignored
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::row_variance_tr (line 185) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::sum (line 67) ... ok
+[INFO] [stdout] test src\base\statistics.rs - base::statistics::Matrix<N, R, C, S>::variance (line 144) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::append_rotation_mut (line 197) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::append_translation_mut (line 178) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::append_rotation_wrt_point_mut (line 219) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::append_rotation_wrt_center_mut (line 242) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::from_parts (line 114) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::inverse_mut (line 157) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::inverse (line 137) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::inverse_transform_point (line 309) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::inverse_transform_vector (line 333) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::transform_vector (line 287) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::to_homogeneous (line 361) ... ok
+[INFO] [stdout] test src\geometry\isometry.rs - geometry::isometry::Isometry<N, D, R>::transform_point (line 264) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, D, R>::identity (line 29) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, D, R>::rotation_wrt_point (line 50) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U2, Rotation2<N>>::new (line 118) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U2, UnitComplex<N>>::new (line 153) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, Rotation3<N>>::face_towards (line 241) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, Rotation3<N>>::look_at_rh (line 292) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, Rotation3<N>>::look_at_lh (line 335) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, Rotation3<N>>::new (line 189) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, UnitQuaternion<N>>::face_towards (line 241) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, UnitQuaternion<N>>::look_at_lh (line 335) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, UnitQuaternion<N>>::new (line 189) ... ok
+[INFO] [stdout] test src\geometry\isometry_construction.rs - geometry::isometry_construction::Isometry<N, U3, UnitQuaternion<N>>::look_at_rh (line 292) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::as_matrix (line 225) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::from_matrix_unchecked (line 125) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::bottom (line 329) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::as_projective (line 244) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::into_inner (line 270) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::left (line 297) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::new (line 70) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::inverse (line 170) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::project_point (line 395) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::project_vector (line 468) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_bottom (line 531) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::right (line 313) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_bottom_and_top (line 632) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_left (line 493) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_right (line 512) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_left_and_right (line 607) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_top (line 550) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_zfar (line 588) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_znear (line 569) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::set_znear_and_zfar (line 657) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::to_homogeneous (line 206) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::top (line 345) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::to_projective (line 257) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::zfar (line 377) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::unproject_point (line 430) ... ok
+[INFO] [stdout] test src\geometry\point.rs - geometry::point::Point<N, D>::iter (line 161) ... ok
+[INFO] [stdout] test src\geometry\orthographic.rs - geometry::orthographic::Orthographic3<N>::znear (line 361) ... ok
+[INFO] [stdout] test src\geometry\point.rs - geometry::point::Point<N, D>::iter_mut (line 184) ... ok
+[INFO] [stdout] test src\geometry\point.rs - geometry::point::Point<N, D>::len (line 136) ... ok
+[INFO] [stdout] test src\geometry\point.rs - geometry::point::Point<N, D>::to_homogeneous (line 103) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, D>::origin (line 28) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, D>::from_slice (line 49) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, D>::from_homogeneous (line 71) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U1>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U3>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U2>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U4>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U5>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\point_construction.rs - geometry::point_construction::Point<N, U6>::new (line 163) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::acos (line 663) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::acosh (line 806) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::as_vector (line 224) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::as_vector_mut (line 493) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::asinh (line 773) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::asin (line 701) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::atan (line 737) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::atanh (line 839) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::conjugate (line 136) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::conjugate_mut (line 528) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::cos (line 645) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::cosh (line 790) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::dot (line 299) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::exp (line 435) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::exp_eps (line 450) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::inner (line 315) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::ln (line 417) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::lerp (line 181) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::magnitude (line 256) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::norm (line 239) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::norm_squared (line 270) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::magnitude_squared (line 286) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::normalize (line 115) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::normalize_mut (line 573) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::outer (line 333) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::polar_decomposition (line 391) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::powf (line 479) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::project (line 352) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::right_div (line 628) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::reject (line 371) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::scalar (line 211) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::sin (line 683) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::tan (line 721) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::sinh (line 757) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::tanh (line 823) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::try_inverse (line 150) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::try_inverse_mut (line 544) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::vector (line 196) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::Quaternion<N>::vector_mut (line 507) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::angle (line 939) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::axis_angle (line 1174) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::axis (line 1128) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::angle_to (line 1000) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::conjugate (line 969) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::euler_angles (line 1307) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::inverse_mut (line 1111) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::inverse (line 984) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::inverse_transform_point (line 1388) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::lerp (line 1036) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::inverse_transform_vector (line 1410) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::ln (line 1205) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::nlerp (line 1052) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::quaternion (line 956) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::rotation_to (line 1018) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::powf (line 1227) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::scaled_axis (line 1153) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::to_rotation_matrix (line 1250) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::to_homogeneous (line 1325) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::transform_point (line 1348) ... ok
+[INFO] [stdout] test src\geometry\quaternion.rs - geometry::quaternion::UnitQuaternion<N>::transform_vector (line 1368) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::Quaternion<N>::new (line 36) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::Quaternion<N>::identity (line 94) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::Quaternion<N>::from_parts (line 59) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::face_towards (line 475) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::from_euler_angles (line 217) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::from_axis_angle (line 176) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::from_rotation_matrix (line 245) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::from_scaled_axis (line 630) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::identity (line 155) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::from_scaled_axis_eps (line 658) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::look_at_lh (line 547) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::look_at_rh (line 516) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::new_eps (line 600) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::rotation_between (line 335) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::new (line 571) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::rotation_between_axis (line 392) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::from_matrix_unchecked (line 227) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::scaled_rotation_between_axis (line 417) ... ok
+[INFO] [stdout] test src\geometry\quaternion_construction.rs - geometry::quaternion_construction::UnitQuaternion<N>::scaled_rotation_between (line 357) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::into_inner (line 154) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::inverse (line 282) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::inverse_transform_point (line 401) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::inverse_mut (line 332) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::inverse_transform_vector (line 420) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::to_homogeneous (line 189) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::matrix (line 114) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::transform_point (line 363) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::transform_vector (line 382) ... ok
+[INFO] [stdout] test src\geometry\rotation_construction.rs - geometry::rotation_construction::Rotation<N, D>::identity (line 19) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::transpose (line 259) ... ok
+[INFO] [stdout] test src\geometry\rotation.rs - geometry::rotation::Rotation<N, D>::transpose_mut (line 305) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::angle (line 149) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::angle_to (line 163) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::new (line 28) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::powf (line 211) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::rotation_between (line 101) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::rotation_to (line 180) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::angle (line 673) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation2<N>::scaled_rotation_between (line 123) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::angle_to (line 763) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::axis (line 690) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::euler_angles (line 456) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::axis_angle (line 737) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::face_towards (line 505) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::from_euler_angles (line 416) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::from_axis_angle (line 364) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::from_scaled_axis (line 341) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::look_at_lh (line 583) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::powf (line 797) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::look_at_rh (line 552) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::new (line 266) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::rotation_between (line 607) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::rotation_to (line 780) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::scaled_axis (line 716) ... ok
+[INFO] [stdout] test src\geometry\rotation_specialization.rs - geometry::rotation_specialization::Rotation3<N>::scaled_rotation_between (line 629) ... ok
+[INFO] [stdout] test src\geometry\similarity.rs - geometry::similarity::Similarity<N, D, R>::inverse_transform_point (line 288) ... ok
+[INFO] [stdout] test src\geometry\similarity.rs - geometry::similarity::Similarity<N, D, R>::inverse_transform_vector (line 308) ... ok
+[INFO] [stdout] test src\geometry\similarity.rs - geometry::similarity::Similarity<N, D, R>::transform_vector (line 268) ... ok
+[INFO] [stdout] test src\geometry\similarity.rs - geometry::similarity::Similarity<N, D, R>::transform_point (line 247) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, D, R>::identity (line 31) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, D, R>::rotation_wrt_point (line 87) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U2, Rotation2<N>>::new (line 135) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U2, UnitComplex<N>>::new (line 158) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, Rotation3<N>>::look_at_lh (line 312) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, Rotation3<N>>::face_towards (line 224) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, Rotation3<N>>::look_at_rh (line 274) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, Rotation3<N>>::new (line 185) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, UnitQuaternion<N>>::face_towards (line 224) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, UnitQuaternion<N>>::look_at_rh (line 274) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, UnitQuaternion<N>>::look_at_lh (line 312) ... ok
+[INFO] [stdout] test src\geometry\similarity_construction.rs - geometry::similarity_construction::Similarity<N, U3, UnitQuaternion<N>>::new (line 185) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::into_inner (line 246) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::inverse (line 385) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::inverse_mut (line 437) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::matrix (line 271) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::matrix_mut_unchecked (line 291) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::to_homogeneous (line 335) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::try_inverse_mut (line 408) ... ok
+[INFO] [stdout] test src\geometry\transform.rs - geometry::transform::Transform<N, D, C>::try_inverse (line 353) ... ok
+[INFO] [stdout] test src\geometry\translation.rs - geometry::translation::Translation<N, D>::inverse (line 121) ... ok
+[INFO] [stdout] test src\geometry\transform_construction.rs - geometry::transform_construction::Transform<N, D, C>::identity (line 18) ... ok
+[INFO] [stdout] test src\geometry\translation.rs - geometry::translation::Translation<N, D>::inverse_transform_point (line 220) ... ok
+[INFO] [stdout] test src\geometry\translation.rs - geometry::translation::Translation<N, D>::inverse_mut (line 173) ... ok
+[INFO] [stdout] test src\geometry\translation.rs - geometry::translation::Translation<N, D>::to_homogeneous (line 141) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, D>::identity (line 24) ... ok
+[INFO] [stdout] test src\geometry\translation.rs - geometry::translation::Translation<N, D>::transform_point (line 203) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U1>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U2>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U5>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U4>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U3>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::angle (line 16) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::complex (line 86) ... ok
+[INFO] [stdout] test src\geometry\translation_construction.rs - geometry::translation_construction::Translation<N, U6>::new (line 85) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::angle_to (line 133) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::conjugate_mut (line 169) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::conjugate (line 102) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::cos_angle (line 43) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::inverse (line 117) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::inverse_mut (line 188) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::inverse_transform_vector (line 312) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::powf (line 208) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::inverse_transform_point (line 294) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::rotation_to (line 151) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::sin_angle (line 29) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::to_homogeneous (line 241) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::to_rotation_matrix (line 223) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::transform_point (line 260) ... ok
+[INFO] [stdout] test src\geometry\unit_complex.rs - geometry::unit_complex::UnitComplex<N>::transform_vector (line 278) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::from_cos_sin_unchecked (line 77) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::from_angle (line 56) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::from_rotation_matrix (line 120) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::identity (line 19) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::new (line 36) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::rotation_between (line 162) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::rotation_between_axis (line 219) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::scaled_rotation_between (line 184) ... ok
+[INFO] [stdout] test src\geometry\unit_complex_construction.rs - geometry::unit_complex_construction::UnitComplex<N>::scaled_rotation_between_axis (line 244) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 373 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3126a652e108b6e6dc4a02231ddc65f04a95f988e9757f6f9dfb45cd8857d2df"`
+[INFO] running `"docker" "rm" "-f" "3126a652e108b6e6dc4a02231ddc65f04a95f988e9757f6f9dfb45cd8857d2df"`
+[INFO] [stdout] 3126a652e108b6e6dc4a02231ddc65f04a95f988e9757f6f9dfb45cd8857d2df

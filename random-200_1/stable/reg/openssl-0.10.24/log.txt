@@ -1,0 +1,486 @@
+[INFO] crate openssl 0.10.24 is already in cache
+[INFO] crate source directory work\ex\default\sources\stable\reg\openssl\0.10.24 already exists, cleaning it up
+[INFO] extracting crate openssl 0.10.24 into work\ex\default\sources\stable\reg\openssl\0.10.24
+[INFO] crate source directory work\ex\default\sources\beta\reg\openssl\0.10.24 already exists, cleaning it up
+[INFO] extracting crate openssl 0.10.24 into work\ex\default\sources\beta\reg\openssl\0.10.24
+[INFO] validating manifest of openssl-0.10.24 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of openssl-0.10.24 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing openssl-0.10.24
+[INFO] finished frobbing openssl-0.10.24
+[INFO] frobbed toml for openssl-0.10.24 written to work\ex\default\sources\stable\reg\openssl\0.10.24\Cargo.toml
+[INFO] started frobbing openssl-0.10.24
+[INFO] finished frobbing openssl-0.10.24
+[INFO] frobbed toml for openssl-0.10.24 written to work\ex\default\sources\beta\reg\openssl\0.10.24\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing openssl-0.10.24 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl\\0.10.24,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] dc99dc70a4b97fb087310a88ccd2bb4d52aa1e2617302f73028fa38e0117e041
+[INFO] running `"docker" "start" "-a" "dc99dc70a4b97fb087310a88ccd2bb4d52aa1e2617302f73028fa38e0117e041"`
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling openssl v0.10.24 (C:\crater\workdir)
+[INFO] [stderr]    Compiling foreign-types-shared v0.1.1
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling foreign-types v0.3.2
+[INFO] [stderr]    Compiling openssl-sys v0.9.48
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 47.47s
+[INFO] running `"docker" "inspect" "dc99dc70a4b97fb087310a88ccd2bb4d52aa1e2617302f73028fa38e0117e041"`
+[INFO] running `"docker" "rm" "-f" "dc99dc70a4b97fb087310a88ccd2bb4d52aa1e2617302f73028fa38e0117e041"`
+[INFO] [stdout] dc99dc70a4b97fb087310a88ccd2bb4d52aa1e2617302f73028fa38e0117e041
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl\\0.10.24,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 1245cd51080c11faba0a51089b70eb271dd0961ba4fcd9c8734ee460c0b1f140
+[INFO] running `"docker" "start" "-a" "1245cd51080c11faba0a51089b70eb271dd0961ba4fcd9c8734ee460c0b1f140"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling hex v0.3.2
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling openssl v0.10.24 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 55.83s
+[INFO] running `"docker" "inspect" "1245cd51080c11faba0a51089b70eb271dd0961ba4fcd9c8734ee460c0b1f140"`
+[INFO] running `"docker" "rm" "-f" "1245cd51080c11faba0a51089b70eb271dd0961ba4fcd9c8734ee460c0b1f140"`
+[INFO] [stdout] 1245cd51080c11faba0a51089b70eb271dd0961ba4fcd9c8734ee460c0b1f140
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl\\0.10.24,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] a12a8b23bec7d8913047c62a1e9ba1866501fe24f0c553495c9644be42ad4406
+[INFO] running `"docker" "start" "-a" "a12a8b23bec7d8913047c62a1e9ba1866501fe24f0c553495c9644be42ad4406"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.58s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\openssl-c9e1ff71b4a467ba.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 214 tests
+[INFO] [stdout] test aes::test::test_wrap_unwrap ... ok
+[INFO] [stdout] test aes::test::ige_vector_1 ... ok
+[INFO] [stdout] test asn1::tests::time_from_str ... ok
+[INFO] [stdout] test bn::tests::test_negation ... ok
+[INFO] [stdout] test asn1::tests::bn_cvt ... ok
+[INFO] [stdout] test bn::tests::test_shift ... ok
+[INFO] [stdout] test bn::tests::test_to_from_slice ... ok
+[INFO] [stdout] test bn::tests::test_pseudo_rand_range ... ok
+[INFO] [stdout] test bn::tests::test_rand_range ... ok
+[INFO] [stdout] test cms::test::cms_encrypt_decrypt ... ok
+[INFO] [stdout] test dh::tests::test_dh ... ok
+[INFO] [stdout] test dh::tests::test_dh_from_der ... ok
+[INFO] [stdout] test derive::test::test_ec_key_derive ... ok
+[INFO] [stdout] test derive::test::derive_without_peer ... ok
+[INFO] [stdout] test dh::tests::test_dh_from_pem ... ok
+[INFO] [stdout] test dh::tests::test_dh_rfc5114 ... ok
+[INFO] [stdout] test bn::tests::test_prime_numbers ... ok
+[INFO] [stdout] test dsa::test::test_priv_key_from_parts ... ok
+[INFO] [stdout] test dsa::test::test_pub_key_from_parts ... ok
+[INFO] [stdout] test dsa::test::test_generate ... ok
+[INFO] [stdout] test dsa::test::test_pubkey_generation ... ok
+[INFO] [stdout] test ec::test::cofactor ... ok
+[INFO] [stdout] test ec::test::dup ... ok
+[INFO] [stdout] test ec::test::generate ... ok
+[INFO] [stdout] test ec::test::generator ... ok
+[INFO] [stdout] test ec::test::get_affine_coordinates ... ok
+[INFO] [stdout] test ec::test::key_from_affine_coordinates ... ok
+[INFO] [stdout] test ec::test::key_from_private_components ... ok
+[INFO] [stdout] test ec::test::key_from_public_key ... ok
+[INFO] [stdout] test ec::test::key_new_by_curve_name ... ok
+[INFO] [stdout] test ec::test::mul_generator ... ok
+[INFO] [stdout] test ec::test::point_bytes ... ok
+[INFO] [stdout] test ec::test::point_new ... ok
+[INFO] [stdout] test ec::test::point_owned ... ok
+[INFO] [stdout] test ecdsa::test::check_private_components ... ok
+[INFO] [stdout] test dsa::test::test_signature ... ok
+[INFO] [stdout] test ecdsa::test::serialize_deserialize ... ok
+[INFO] [stdout] test envelope::test::public_encrypt_private_decrypt ... ok
+[INFO] [stdout] test hash::tests::from_nid ... ok
+[INFO] [stdout] test ecdsa::test::sign_and_verify ... ok
+[INFO] [stdout] test hash::tests::test_clone ... ok
+[INFO] [stdout] test hash::tests::test_finish_twice ... ok
+[INFO] [stdout] test hash::tests::test_md5 ... ok
+[INFO] [stdout] test hash::tests::test_md5_recycle ... ok
+[INFO] [stdout] test hash::tests::test_ripemd160 ... ok
+[INFO] [stdout] test hash::tests::test_sha1 ... ok
+[INFO] [stdout] test hash::tests::test_sha256 ... ok
+[INFO] [stdout] test memcmp::tests::test_eq ... ok
+[INFO] [stdout] test nid::test::signature_digest ... ok
+[INFO] [stdout] test nid::test::test_long_name_conversion ... ok
+[INFO] [stdout] test nid::test::test_short_name_conversion ... ok
+[INFO] [stdout] test pkcs12::test::parse ... ok
+[INFO] [stdout] test pkcs12::test::parse_empty_chain ... ok
+[INFO] [stdout] test pkcs5::tests::bytes_to_key ... ok
+[INFO] [stdout] test pkcs12::test::create ... ok
+[INFO] [stdout] test pkcs5::tests::pbkdf2_hmac_sha512 ... ok
+[INFO] [stdout] test pkcs7::tests::encrypt_decrypt_test ... ok
+[INFO] [stdout] test pkcs7::tests::invalid_from_smime ... ok
+[INFO] [stdout] test memcmp::tests::test_diff_lens ... ok
+[INFO] [stdout] test pkcs7::tests::sign_verify_test_detached ... ok
+[INFO] [stdout] test pkcs7::tests::sign_verify_test_normal ... ok
+[INFO] [stdout] test pkey::tests::test_dh_accessor ... ok
+[INFO] [stdout] test pkey::tests::test_ec_key_accessor ... ok
+[INFO] [stdout] test pkcs5::tests::pbkdf2_hmac_sha256 ... ok
+[INFO] [stdout] test pkey::tests::test_encrypted_pkcs8_callback ... ok
+[INFO] [stdout] test pkey::tests::test_encrypted_pkcs8_passphrase ... ok
+[INFO] [stdout] test pkey::tests::test_pem ... ok
+[INFO] [stdout] test pkey::tests::test_private_key_from_der ... ok
+[INFO] [stdout] test pkey::tests::test_private_key_from_pem ... ok
+[INFO] [stdout] test pkey::tests::test_public_key_from_der ... ok
+[INFO] [stdout] test pkey::tests::test_public_key_from_pem ... ok
+[INFO] [stdout] test pkey::tests::test_rsa_accessor ... ok
+[INFO] [stdout] test rand::tests::test_rand_bytes ... ok
+[INFO] [stdout] test dsa::test::clone ... ok
+[INFO] [stdout] test pkey::tests::test_to_password ... ok
+[INFO] [stdout] test rsa::test::test_from_password ... ok
+[INFO] [stdout] test rsa::test::test_from_password_callback ... ok
+[INFO] [stdout] test rsa::test::clone ... ok
+[INFO] [stdout] test rsa::test::test_pem_pkcs1_encrypt ... ok
+[INFO] [stdout] test rsa::test::test_private_encrypt ... ok
+[INFO] [stdout] test rsa::test::test_public_encrypt ... ok
+[INFO] [stdout] test rsa::test::test_public_encrypt_private_decrypt_with_padding ... ok
+[INFO] [stdout] test rsa::test::test_public_key_from_pem_pkcs1 ... ok
+[INFO] [stdout] test rsa::test::generate_with_e ... ok
+[INFO] [stdout] test rsa::test::test_pem_pkcs1_padding ... ok
+[INFO] [stdout] test rsa::test::test_public_key_to_pem_pkcs1 ... ok
+[INFO] [stdout] test rsa::test::test_public_key_from_pem_pkcs1_file_panic ... ok
+[INFO] [stdout] test rsa::test::test_to_password ... ok
+[INFO] [stdout] test sha::test::standalone_1 ... ok
+[INFO] [stdout] test sha::test::standalone_224 ... ok
+[INFO] [stdout] test sha::test::standalone_256 ... ok
+[INFO] [stdout] test sha::test::standalone_384 ... ok
+[INFO] [stdout] test sha::test::standalone_512 ... ok
+[INFO] [stdout] test sha::test::struct_1 ... ok
+[INFO] [stdout] test sha::test::struct_224 ... ok
+[INFO] [stdout] test sha::test::struct_256 ... ok
+[INFO] [stdout] test sha::test::struct_384 ... ok
+[INFO] [stdout] test sha::test::struct_512 ... ok
+[INFO] [stdout] test sign::test::ec ... ok
+[INFO] [stdout] test sign::test::hmac_md5 ... ok
+[INFO] [stdout] test sign::test::hmac_sha1 ... ok
+[INFO] [stdout] test sign::test::rsa_sign ... ok
+[INFO] [stdout] test sign::test::rsa_sign_verify ... ok
+[INFO] [stdout] test sign::test::rsa_verify_invalid ... ok
+[INFO] [stdout] test sign::test::rsa_verify_ok ... ok
+[INFO] [stdout] test ssl::test::add_extra_chain_cert ... ok
+[INFO] [stdout] test ssl::test::active_session ... ok
+[INFO] [stdout] test ssl::test::cert_store ... ok
+[INFO] [stdout] test ssl::test::clear_ctx_options ... ok
+[INFO] [stdout] test ssl::test::client_ca_list ... ok
+[INFO] [stdout] test ssl::test::connector_client_server_mozilla_intermediate ... ok
+[INFO] [stdout] test ssl::test::connector_client_server_mozilla_intermediate_v5 ... ok
+[INFO] [stdout] test ssl::test::connector_client_server_mozilla_modern ... ok
+[INFO] [stdout] test ssl::test::connector_invalid_hostname ... ok
+[INFO] [stdout] test ssl::test::connector_invalid_no_hostname_verification ... ok
+[INFO] [stdout] test ssl::test::connector_no_hostname_can_disable_verify ... ok
+[INFO] [stdout] test ssl::test::connector_no_hostname_still_verifies ... ok
+[INFO] [stdout] test ssl::test::connector_valid_hostname ... ok
+[INFO] [stderr] thread '<unnamed>' panicked at 'called `Result::unwrap_err()` on an `Ok` value: SslStream { stream: TcpStream { addr: V4(127.0.0.1:49176), peer: V4(127.0.0.1:49177), socket: 408 }, ssl: Ssl { state: "SSL negotiation finished successfully", verify_result: X509VerifyResult { code: 0, error: "ok" } } }', src\libcore\result.rs:999:5
+[INFO] [stdout] test rsa::test::test_public_key_from_pem_pkcs1_generate_panic ... ok
+[INFO] [stdout] test ssl::test::get_ctx_options ... ok
+[INFO] [stdout] test ssl::test::idle_session ... ok
+[INFO] [stdout] test ssl::test::keying_export ... ok
+[INFO] [stdout] test ssl::test::new_session_callback ... ok
+[INFO] [stdout] test ssl::test::new_session_callback_swapped_ctx ... ok
+[INFO] [stdout] test ssl::test::peer_certificate ... ok
+[INFO] [stdout] test ssl::test::pending ... ok
+[INFO] [stdout] test ssl::test::psk_ciphers ... ok
+[INFO] [stdout] test ssl::test::default_verify_paths ... FAILED
+[INFO] [stdout] test ssl::test::refcount_ssl_context ... ok
+[INFO] [stdout] test ssl::test::session_cache_size ... ok
+[INFO] [stdout] test ssl::test::set_ctx_options ... ok
+[INFO] [stdout] test ssl::test::shutdown ... ok
+[INFO] [stdout] test ssl::test::sni_callback_swapped_ctx ... ok
+[INFO] [stdout] test ssl::test::ssl_verify_callback ... ok
+[INFO] [stdout] test ssl::test::state ... ok
+[INFO] [stdout] test ssl::test::status_callbacks ... ok
+[INFO] [stdout] test ssl::test::test_alpn_server_advertise_multiple ... ok
+[INFO] [stdout] test pkey::tests::test_dsa_accessor ... ok
+[INFO] [stdout] test ssl::test::test_alpn_server_select_none ... ok
+[INFO] [stdout] test ssl::test::test_alpn_server_unilateral ... ok
+[INFO] [stdout] test ssl::test::test_connect_with_srtp_ctx ... ok
+[INFO] [stdout] test ssl::test::test_connect_with_srtp_ssl ... ok
+[INFO] [stdout] test ssl::test::tmp_dh_callback ... ok
+[INFO] [stdout] test ssl::test::tmp_dh_callback_ssl ... ok
+[INFO] [stdout] test ssl::test::tmp_ecdh_callback ... ok
+[INFO] [stdout] test ssl::test::tmp_ecdh_callback_ssl ... ok
+[INFO] [stdout] test ssl::test::verify_callback ... ok
+[INFO] [stdout] test ssl::test::verify_callback_load_certs ... ok
+[INFO] [stdout] test ssl::test::verify_invalid_hostname ... ok
+[INFO] [stdout] test ssl::test::verify_trusted ... ok
+[INFO] [stdout] test ssl::test::verify_trusted_callback_override_bad ... ok
+[INFO] [stdout] test ssl::test::flush_panic ... ok
+[INFO] [stdout] test ssl::test::verify_trusted_callback_override_ok ... ok
+[INFO] [stdout] test ssl::test::verify_trusted_get_error_err ... ok
+[INFO] [stdout] test ssl::test::verify_trusted_get_error_ok ... ok
+[INFO] [stdout] test ssl::test::verify_trusted_with_set_cert ... ok
+[INFO] [stdout] test ssl::test::verify_untrusted ... ok
+[INFO] [stdout] test ssl::test::verify_untrusted_callback_override_bad ... ok
+[INFO] [stdout] test ssl::test::verify_untrusted_callback_override_ok ... ok
+[INFO] [stdout] test ssl::test::verify_valid_hostname ... ok
+[INFO] [stdout] test symm::tests::test_aes128_ccm ... ok
+[INFO] [stdout] test symm::tests::test_aes128_ccm_verify_fail ... ok
+[INFO] [stdout] test ssl::test::zero_length_buffers ... ok
+[INFO] [stdout] test symm::tests::test_aes128_cfb128 ... ok
+[INFO] [stdout] test symm::tests::test_aes128_cfb1 ... ok
+[INFO] [stdout] test symm::tests::test_aes128_cfb8 ... ok
+[INFO] [stdout] test symm::tests::test_aes128_ctr ... ok
+[INFO] [stdout] test symm::tests::test_aes128_gcm ... ok
+[INFO] [stdout] test symm::tests::test_aes128_ofb ... ok
+[INFO] [stdout] test symm::tests::test_aes192_cfb1 ... ok
+[INFO] [stdout] test symm::tests::test_aes192_cfb128 ... ok
+[INFO] [stdout] test symm::tests::test_aes192_cfb8 ... ok
+[INFO] [stdout] test symm::tests::test_aes192_ctr ... ok
+[INFO] [stdout] test symm::tests::test_aes192_ofb ... ok
+[INFO] [stdout] test symm::tests::test_aes256_ccm ... ok
+[INFO] [stdout] test symm::tests::test_aes256_ccm_verify_fail ... ok
+[INFO] [stdout] test symm::tests::test_aes256_cfb1 ... ok
+[INFO] [stdout] test symm::tests::test_aes256_cfb128 ... ok
+[INFO] [stdout] test symm::tests::test_aes256_cfb8 ... ok
+[INFO] [stdout] test symm::tests::test_aes256_ofb ... ok
+[INFO] [stdout] test symm::tests::test_aes256_xts ... ok
+[INFO] [stdout] test symm::tests::test_aes_256_cbc_decrypt ... ok
+[INFO] [stdout] test symm::tests::test_aes_256_ecb ... ok
+[INFO] [stdout] test symm::tests::test_bf_cbc ... ok
+[INFO] [stdout] test symm::tests::test_bf_cfb64 ... ok
+[INFO] [stdout] test symm::tests::test_bf_ecb ... ok
+[INFO] [stdout] test symm::tests::test_bf_ofb ... ok
+[INFO] [stdout] test symm::tests::test_des_cbc ... ok
+[INFO] [stdout] test symm::tests::test_des_ecb ... ok
+[INFO] [stdout] test symm::tests::test_des_ede3 ... ok
+[INFO] [stdout] test symm::tests::test_des_ede3_cbc ... ok
+[INFO] [stdout] test symm::tests::test_rc4 ... ok
+[INFO] [stdout] test symm::tests::test_des_ede3_cfb64 ... ok
+[INFO] [stdout] test symm::tests::test_stream_cipher_output ... ok
+[INFO] [stdout] test x509::tests::clone_x509 ... ok
+[INFO] [stdout] test x509::tests::issued ... ok
+[INFO] [stdout] test x509::tests::signature ... ok
+[INFO] [stdout] test x509::tests::test_cert_issue_validity ... ok
+[INFO] [stdout] test x509::tests::test_cert_loading ... ok
+[INFO] [stdout] test x509::tests::test_nameref_iterator ... ok
+[INFO] [stdout] test x509::tests::test_nid_uid_value ... ok
+[INFO] [stdout] test x509::tests::test_nid_values ... ok
+[INFO] [stdout] test x509::tests::test_save_der ... ok
+[INFO] [stdout] test x509::tests::test_stack_from_pem ... ok
+[INFO] [stdout] test x509::tests::test_subject_alt_name ... ok
+[INFO] [stdout] test x509::tests::test_subject_alt_name_iter ... ok
+[INFO] [stdout] test x509::tests::test_subject_read_cn ... ok
+[INFO] [stdout] test x509::tests::test_verify_cert ... ok
+[INFO] [stdout] test x509::tests::test_verify_fails ... ok
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff6ee005e3d - std::sys::windows::backtrace::set_frames
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stderr]    1:     0x7ff6ee005e3d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stderr]    2:     0x7ff6ee005e3d - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stderr]    3:     0x7ff6ee008ebd - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stderr]    4:     0x7ff6ee008ebd - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stderr]    5:     0x7ff6ee008bba - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:211
+[INFO] [stderr]    6:     0x7ff6ee00974f - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stderr]    7:     0x7ff6ee009283 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stderr]    8:     0x7ff6ee009168 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stderr]    9:     0x7ff6ee01201b - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stderr]   10:     0x7ff6edeb1d28 - core::result::unwrap_failed<openssl::ssl::SslStream<std::net::tcp::TcpStream>>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:18
+[INFO] [stderr]   11:     0x7ff6edeb2343 - core::result::Result<openssl::ssl::SslStream<std::net::tcp::TcpStream>, openssl::ssl::error::HandshakeError<std::net::tcp::TcpStream>>::unwrap_err<openssl::ssl::SslStream<std::net::tcp::TcpStream>,openssl::ssl::error::HandshakeError<std::net::tcp::TcpStream>>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\result.rs:859
+[INFO] [stderr]   12:     0x7ff6edee930a - openssl::ssl::test::server::{{impl}}::build::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\ssl\test\server.rs:91
+[INFO] [stderr]   13:     0x7ff6edede942 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stderr]   14:     0x7ff6edf44d52 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   15:     0x7ff6edf209c2 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stderr]   16:     0x7ff6edef8b8b - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stderr]   17:     0x7ff6ee00e501 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stderr]   18:     0x7ff6edef6f9e - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stderr]   19:     0x7ff6edf20d12 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout] test x509::tests::x509_builder ... ok
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stderr]   20:     0x7ff6edf44b20 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   21:     0x7ff6edf45942 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stderr]   22:     0x7ff6edff6ad6 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stderr]   23:     0x7ff6ee00d1c6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stderr]   24:     0x7ff6ee00d1c6 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   25:     0x7ff6ee00d1c6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   26:     0x7ff99a797973 - BaseThreadInitThunk
+[INFO] [stderr]   27:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] test x509::tests::x509_req_builder ... ok
+[INFO] [stdout] test ssl::test::read_panic ... ok
+[INFO] [stdout] test ssl::test::write_panic ... ok
+[INFO] [stdout] test version::test_versions ... FAILED
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- ssl::test::default_verify_paths stdout ----
+[INFO] [stdout] thread 'ssl::test::default_verify_paths' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 11001, kind: Other, message: "No such host is known." }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6ee005e3d - std::sys::windows::backtrace::set_frames
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stdout]    1:     0x7ff6ee005e3d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stdout]    2:     0x7ff6ee005e3d - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stdout]    3:     0x7ff6ee008ebd - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stdout]    4:     0x7ff6ee008ebd - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stdout]    5:     0x7ff6ee008b3d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:208
+[INFO] [stdout]    6:     0x7ff6ee00974f - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stdout]    7:     0x7ff6ee009283 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stdout]    8:     0x7ff6ee009168 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stdout]    9:     0x7ff6ee01201b - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stdout]   10:     0x7ff6edeb1e40 - core::result::unwrap_failed<std::io::error::Error>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:18
+[INFO] [stdout]   11:     0x7ff6edec6494 - core::result::Result<std::net::tcp::TcpStream, std::io::error::Error>::unwrap<std::net::tcp::TcpStream,std::io::error::Error>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\result.rs:800
+[INFO] [stdout]   12:     0x7ff6edf6ebda - openssl::ssl::test::default_verify_paths
+[INFO] [stdout]                                at C:\crater\workdir\src\ssl\test\mod.rs:604
+[INFO] [stdout]   13:     0x7ff6edf6eafd - openssl::ssl::test::default_verify_paths::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\ssl\test\mod.rs:599
+[INFO] [stdout]   14:     0x7ff6edf47afa - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   15:     0x7ff6edfa8c46 - alloc::boxed::{{impl}}::call_once<(),FnBox<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   16:     0x7ff6ee00e501 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   17:     0x7ff6edfc802a - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   18:     0x7ff6edfc802a - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   19:     0x7ff6edfc802a - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libtest\lib.rs:1468
+[INFO] [stdout]   20:     0x7ff6edf9a9ed - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stdout]   21:     0x7ff6edfa06fd - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   22:     0x7ff6edfa06fd - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stdout]   23:     0x7ff6edfa06fd - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stdout]   24:     0x7ff6ee00e501 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   25:     0x7ff6edfa0e2f - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   26:     0x7ff6edfa0e2f - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   27:     0x7ff6edfa0e2f - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   28:     0x7ff6edfa0e2f - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   29:     0x7ff6edff6ad6 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   30:     0x7ff6ee00d1c6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   31:     0x7ff6ee00d1c6 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   32:     0x7ff6ee00d1c6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   33:     0x7ff99a797973 - BaseThreadInitThunk
+[INFO] [stdout]   34:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- version::test_versions stdout ----
+[INFO] [stdout] Number: '268443967'
+[INFO] [stdout] Version: 'OpenSSL 1.0.2s  28 May 2019'
+[INFO] [stdout] C flags: '"compiler: cl -utf-8 -FS  /MD /Ox -DOPENSSL_THREADS  -DDSO_WIN32 -utf-8 -FS -W3 -Gs0 -Gy -nologo -DOPENSSL_SYSNAME_WIN32 -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DUNICODE -D_UNICODE -D_CRT_SECURE_NO_DEPRECATE -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DOPENSSL_USE_APPLINK -I. -DOPENSSL_NO_RC5 -DOPENSSL_NO_MD2 -DOPENSSL_NO_SSL2 -DOPENSSL_NO_KRB5 -DOPENSSL_NO_JPAKE -DOPENSSL_NO_WEAK_SSL_CIPHERS -DOPENSSL_NO_DYNAMIC_ENGINE    "'
+[INFO] [stdout] Built on: 'built on: reproducible build, date unspecified'
+[INFO] [stdout] Platform: 'VC-WIN64A'
+[INFO] [stdout] Dir: 'OPENSSLDIR: "C:/vcpkg-master/packages/openssl-windows_x64-windows"'
+[INFO] [stdout] thread 'version::test_versions' panicked at 'assertion failed: c_flags().starts_with("compiler:")', src\version.rs:128:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6ee005e3d - std::sys::windows::backtrace::set_frames
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stdout]    1:     0x7ff6ee005e3d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stdout]    2:     0x7ff6ee005e3d - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stdout]    3:     0x7ff6ee008ebd - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout]    4:     0x7ff6ee008ebd - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stdout]    5:     0x7ff6ee008b3d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:208
+[INFO] [stdout]    6:     0x7ff6ee00974f - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stdout]    7:     0x7ff6edfe85d0 - std::panicking::begin_panic<str*>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:408
+[INFO] [stdout]    8:     0x7ff6edef5deb - openssl::version::test_versions
+[INFO] [stdout]                                at C:\crater\workdir\src\version.rs:128
+[INFO] [stdout]    9:     0x7ff6edef582d - openssl::version::test_versions::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\version.rs:109
+[INFO] [stdout]   10:     0x7ff6edf489ca - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff6edfa8c46 - alloc::boxed::{{impl}}::call_once<(),FnBox<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   12:     0x7ff6ee00e501 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   13:     0x7ff6edfc802a - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   14:     0x7ff6edfc802a - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff6edfc802a - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libtest\lib.rs:1468
+[INFO] [stdout]   16:     0x7ff6edf9a9ed - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stdout]   17:     0x7ff6edfa06fd - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff6edfa06fd - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff6edfa06fd - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stdout]   20:     0x7ff6ee00e501 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   21:     0x7ff6edfa0e2f - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   22:     0x7ff6edfa0e2f - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff6edfa0e2f - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff6edfa0e2f - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff6edff6ad6 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   26:     0x7ff6ee00d1c6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   27:     0x7ff6ee00d1c6 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff6ee00d1c6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ff99a797973 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     ssl::test::default_verify_paths
+[INFO] [stdout]     version::test_versions
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 212 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a12a8b23bec7d8913047c62a1e9ba1866501fe24f0c553495c9644be42ad4406"`
+[INFO] running `"docker" "rm" "-f" "a12a8b23bec7d8913047c62a1e9ba1866501fe24f0c553495c9644be42ad4406"`
+[INFO] [stdout] a12a8b23bec7d8913047c62a1e9ba1866501fe24f0c553495c9644be42ad4406

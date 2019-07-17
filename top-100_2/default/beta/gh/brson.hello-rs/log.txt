@@ -1,0 +1,59 @@
+[INFO] cloning repository brson/hello-rs
+[INFO] running `"git" "clone" "--bare" "git://github.com/brson/hello-rs.git" "work\\cache\\sources\\gh\\brson\\hello-rs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\brson\hello-rs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brson\\hello-rs" "work\\ex\\default\\sources\\stable\\gh\\brson\\hello-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\brson\hello-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\brson\\hello-rs" "work\\ex\\default\\sources\\beta\\gh\\brson\\hello-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\brson\hello-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 9da3b03b25c2dfa8a8b8a69db503c48dbd08610e
+[INFO] sha for GitHub repo brson/hello-rs: 9da3b03b25c2dfa8a8b8a69db503c48dbd08610e
+[INFO] validating manifest of brson/hello-rs on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of brson/hello-rs on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing brson/hello-rs
+[INFO] finished frobbing brson/hello-rs
+[INFO] frobbed toml for brson/hello-rs written to work\ex\default\sources\stable\gh\brson\hello-rs\Cargo.toml
+[INFO] started frobbing brson/hello-rs
+[INFO] finished frobbing brson/hello-rs
+[INFO] frobbed toml for brson/hello-rs written to work\ex\default\sources\beta\gh\brson\hello-rs\Cargo.toml
+[INFO] crate brson/hello-rs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing brson/hello-rs against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brson\\hello-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 26ac9628a89413cf22ff6144635b286f591a90048f0414c551fe67a312bebc7e
+[INFO] running `"docker" "start" "-a" "26ac9628a89413cf22ff6144635b286f591a90048f0414c551fe67a312bebc7e"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling hello-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 20.75s
+[INFO] running `"docker" "inspect" "26ac9628a89413cf22ff6144635b286f591a90048f0414c551fe67a312bebc7e"`
+[INFO] running `"docker" "rm" "-f" "26ac9628a89413cf22ff6144635b286f591a90048f0414c551fe67a312bebc7e"`
+[INFO] [stdout] 26ac9628a89413cf22ff6144635b286f591a90048f0414c551fe67a312bebc7e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brson\\hello-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7e61bad25214a908a898b9fb1e8c2a566bfe8541f7166fa26196c1cafe0e3362
+[INFO] running `"docker" "start" "-a" "7e61bad25214a908a898b9fb1e8c2a566bfe8541f7166fa26196c1cafe0e3362"`
+[INFO] [stderr]    Compiling hello-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.11s
+[INFO] running `"docker" "inspect" "7e61bad25214a908a898b9fb1e8c2a566bfe8541f7166fa26196c1cafe0e3362"`
+[INFO] running `"docker" "rm" "-f" "7e61bad25214a908a898b9fb1e8c2a566bfe8541f7166fa26196c1cafe0e3362"`
+[INFO] [stdout] 7e61bad25214a908a898b9fb1e8c2a566bfe8541f7166fa26196c1cafe0e3362
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\brson\\hello-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] a8e591c27c4a862be8bdf1870ca9ddfefdb7f06afa2b5342c90f8b181f4fb0b1
+[INFO] running `"docker" "start" "-a" "a8e591c27c4a862be8bdf1870ca9ddfefdb7f06afa2b5342c90f8b181f4fb0b1"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hello_rs-7ee3b0366e4e6599.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a8e591c27c4a862be8bdf1870ca9ddfefdb7f06afa2b5342c90f8b181f4fb0b1"`
+[INFO] running `"docker" "rm" "-f" "a8e591c27c4a862be8bdf1870ca9ddfefdb7f06afa2b5342c90f8b181f4fb0b1"`
+[INFO] [stdout] a8e591c27c4a862be8bdf1870ca9ddfefdb7f06afa2b5342c90f8b181f4fb0b1

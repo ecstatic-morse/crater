@@ -1,0 +1,280 @@
+[INFO] fetching crate failure 0.1.5...
+[INFO] extracting crate failure 0.1.5 into work\ex\default\sources\stable\reg\failure\0.1.5
+[INFO] extracting crate failure 0.1.5 into work\ex\default\sources\beta\reg\failure\0.1.5
+[INFO] validating manifest of failure-0.1.5 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of failure-0.1.5 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing failure-0.1.5
+[INFO] finished frobbing failure-0.1.5
+[INFO] frobbed toml for failure-0.1.5 written to work\ex\default\sources\stable\reg\failure\0.1.5\Cargo.toml
+[INFO] started frobbing failure-0.1.5
+[INFO] finished frobbing failure-0.1.5
+[INFO] frobbed toml for failure-0.1.5 written to work\ex\default\sources\beta\reg\failure\0.1.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building failure-0.1.5 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\failure\\0.1.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 65779eb42ba9ddec6a97bdeb388ef6a178ad2540f3b34673e7d53684ee5d2d21
+[INFO] running `"docker" "start" "-a" "65779eb42ba9ddec6a97bdeb388ef6a178ad2540f3b34673e7d53684ee5d2d21"`
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling backtrace v0.3.32
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling failure v0.1.5 (C:\crater\workdir)
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\as_fail.rs:11:27
+[INFO] [stderr]    |
+[INFO] [stderr] 11 |     fn as_fail(&self) -> &Fail;
+[INFO] [stderr]    |                           ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:25:9
+[INFO] [stderr]    |
+[INFO] [stderr] 25 | #![deny(warnings)]
+[INFO] [stderr]    |         ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\as_fail.rs:18:27
+[INFO] [stderr]    |
+[INFO] [stderr] 18 |     fn as_fail(&self) -> &Fail {
+[INFO] [stderr]    |                           ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\as_fail.rs:23:17
+[INFO] [stderr]    |
+[INFO] [stderr] 23 | impl AsFail for Fail {
+[INFO] [stderr]    |                 ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\as_fail.rs:24:27
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |     fn as_fail(&self) -> &Fail {
+[INFO] [stderr]    |                           ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\as_fail.rs:33:31
+[INFO] [stderr]    |
+[INFO] [stderr] 33 |         fn as_fail(&self) -> &Fail {
+[INFO] [stderr]    |                               ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]  --> src\box_std.rs:5:27
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | pub struct BoxStd(pub Box<Error + Send + Sync + 'static>);
+[INFO] [stderr]   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Error + Send + Sync + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\compat.rs:42:30
+[INFO] [stderr]    |
+[INFO] [stderr] 42 |     impl From<Error> for Box<StdError> {
+[INFO] [stderr]    |                              ^^^^^^^^ help: use `dyn`: `dyn StdError`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\compat.rs:43:38
+[INFO] [stderr]    |
+[INFO] [stderr] 43 |         fn from(error: Error) -> Box<StdError> {
+[INFO] [stderr]    |                                      ^^^^^^^^ help: use `dyn`: `dyn StdError`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\compat.rs:48:30
+[INFO] [stderr]    |
+[INFO] [stderr] 48 |     impl From<Error> for Box<StdError + Send + Sync> {
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn StdError + Send + Sync`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\compat.rs:49:38
+[INFO] [stderr]    |
+[INFO] [stderr] 49 |         fn from(error: Error) -> Box<StdError + Send + Sync> {
+[INFO] [stderr]    |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn StdError + Send + Sync`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\context.rs:115:36
+[INFO] [stderr]     |
+[INFO] [stderr] 115 |         fn cause(&self) -> Option<&Fail> {
+[INFO] [stderr]     |                                    ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\context.rs:149:39
+[INFO] [stderr]     |
+[INFO] [stderr] 149 |         fn as_cause(&self) -> Option<&Fail> {
+[INFO] [stderr]     |                                       ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]  --> src\error\error_impl.rs:7:22
+[INFO] [stderr]   |
+[INFO] [stderr] 7 |     inner: Box<Inner<Fail>>,
+[INFO] [stderr]   |                      ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error\error_impl.rs:28:38
+[INFO] [stderr]    |
+[INFO] [stderr] 28 |     pub(crate) fn failure(&self) -> &Fail {
+[INFO] [stderr]    |                                      ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error\error_impl.rs:32:50
+[INFO] [stderr]    |
+[INFO] [stderr] 32 |     pub(crate) fn failure_mut(&mut self) -> &mut Fail {
+[INFO] [stderr]    |                                                  ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error\mod.rs:63:39
+[INFO] [stderr]    |
+[INFO] [stderr] 63 |     pub fn from_boxed_compat(err: Box<StdError + Sync + Send + 'static>) -> Error {
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn StdError + Sync + Send + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error\mod.rs:69:31
+[INFO] [stderr]    |
+[INFO] [stderr] 69 |     pub fn as_fail(&self) -> &Fail {
+[INFO] [stderr]    |                               ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error\mod.rs:85:29
+[INFO] [stderr]    |
+[INFO] [stderr] 85 |     pub fn cause(&self) -> &Fail {
+[INFO] [stderr]    |                             ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error\mod.rs:136:39
+[INFO] [stderr]     |
+[INFO] [stderr] 136 |     pub fn find_root_cause(&self) -> &Fail {
+[INFO] [stderr]     |                                       ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error\mod.rs:176:34
+[INFO] [stderr]     |
+[INFO] [stderr] 176 |     pub fn root_cause(&self) -> &Fail {
+[INFO] [stderr]     |                                  ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error\mod.rs:204:12
+[INFO] [stderr]     |
+[INFO] [stderr] 204 | impl AsRef<Fail> for Error {
+[INFO] [stderr]     |            ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error\mod.rs:205:26
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     fn as_ref(&self) -> &Fail {
+[INFO] [stderr]     |                          ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:129:32
+[INFO] [stderr]     |
+[INFO] [stderr] 129 |     fn cause(&self) -> Option<&Fail> {
+[INFO] [stderr]     |                                ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:189:30
+[INFO] [stderr]     |
+[INFO] [stderr] 189 |     fn root_cause(&self) -> &Fail
+[INFO] [stderr]     |                              ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:202:6
+[INFO] [stderr]     |
+[INFO] [stderr] 202 | impl Fail {
+[INFO] [stderr]     |      ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:208:45
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             unsafe { Some(&*(self as *const Fail as *const T)) }
+[INFO] [stderr]     |                                             ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:220:47
+[INFO] [stderr]     |
+[INFO] [stderr] 220 |             unsafe { Some(&mut *(self as *mut Fail as *mut T)) }
+[INFO] [stderr]     |                                               ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:234:39
+[INFO] [stderr]     |
+[INFO] [stderr] 234 |     pub fn find_root_cause(&self) -> &Fail {
+[INFO] [stderr]     |                                       ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:261:34
+[INFO] [stderr]     |
+[INFO] [stderr] 261 |     pub fn root_cause(&self) -> &Fail {
+[INFO] [stderr]     |                                  ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:276:19
+[INFO] [stderr]     |
+[INFO] [stderr] 276 | impl Fail for Box<Fail> {
+[INFO] [stderr]     |                   ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:277:32
+[INFO] [stderr]     |
+[INFO] [stderr] 277 |     fn cause(&self) -> Option<&Fail> {
+[INFO] [stderr]     |                                ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:288:22
+[INFO] [stderr]     |
+[INFO] [stderr] 288 |     fail: Option<&'f Fail>,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:292:21
+[INFO] [stderr]     |
+[INFO] [stderr] 292 |     type Item = &'f Fail;
+[INFO] [stderr]     |                     ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:293:38
+[INFO] [stderr]     |
+[INFO] [stderr] 293 |     fn next(&mut self) -> Option<&'f Fail> {
+[INFO] [stderr]     |                                      ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:301:31
+[INFO] [stderr]     |
+[INFO] [stderr] 301 | fn find_root_cause(mut fail: &Fail) -> &Fail {
+[INFO] [stderr]     |                               ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:301:41
+[INFO] [stderr]     |
+[INFO] [stderr] 301 | fn find_root_cause(mut fail: &Fail) -> &Fail {
+[INFO] [stderr]     |                                         ^^^^ help: use `dyn`: `dyn Fail`
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'std::sync::atomic::ATOMIC_USIZE_INIT': the `new` function is now preferred
+[INFO] [stderr]  --> src\backtrace\internal.rs:5:38
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use std::sync::atomic::{AtomicUsize, ATOMIC_USIZE_INIT, Ordering};
+[INFO] [stderr]   |                                      ^^^^^^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]  --> src\lib.rs:25:9
+[INFO] [stderr]   |
+[INFO] [stderr] 25| #![deny(warnings)]
+[INFO] [stderr]   |         ^^^^^^^^
+[INFO] [stderr]   = note: #[deny(deprecated)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'std::sync::atomic::ATOMIC_USIZE_INIT': the `new` function is now preferred
+[INFO] [stderr]   --> src\backtrace\internal.rs:27:39
+[INFO] [stderr]    |
+[INFO] [stderr] 27 |         static ENABLED: AtomicUsize = ATOMIC_USIZE_INIT;
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `AtomicUsize::new(0)`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 38 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `failure`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "65779eb42ba9ddec6a97bdeb388ef6a178ad2540f3b34673e7d53684ee5d2d21"`
+[INFO] running `"docker" "rm" "-f" "65779eb42ba9ddec6a97bdeb388ef6a178ad2540f3b34673e7d53684ee5d2d21"`
+[INFO] [stdout] 65779eb42ba9ddec6a97bdeb388ef6a178ad2540f3b34673e7d53684ee5d2d21

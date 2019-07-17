@@ -1,0 +1,109 @@
+[INFO] cloning repository sebasmagri/rusty-sounds
+[INFO] running `"git" "clone" "--bare" "git://github.com/sebasmagri/rusty-sounds.git" "work\\cache\\sources\\gh\\sebasmagri\\rusty-sounds"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\sebasmagri\rusty-sounds'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sebasmagri\\rusty-sounds" "work\\ex\\default\\sources\\nightly\\gh\\sebasmagri\\rusty-sounds"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\sebasmagri\rusty-sounds'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sebasmagri\\rusty-sounds" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sebasmagri\\rusty-sounds"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sebasmagri\rusty-sounds'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a986bff9cf7913790b05611b6dece8647b580c14
+[INFO] sha for GitHub repo sebasmagri/rusty-sounds: a986bff9cf7913790b05611b6dece8647b580c14
+[INFO] validating manifest of sebasmagri/rusty-sounds on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sebasmagri/rusty-sounds on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sebasmagri/rusty-sounds
+[INFO] finished frobbing sebasmagri/rusty-sounds
+[INFO] frobbed toml for sebasmagri/rusty-sounds written to work\ex\default\sources\nightly\gh\sebasmagri\rusty-sounds\Cargo.toml
+[INFO] started frobbing sebasmagri/rusty-sounds
+[INFO] finished frobbing sebasmagri/rusty-sounds
+[INFO] frobbed toml for sebasmagri/rusty-sounds written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sebasmagri\rusty-sounds\Cargo.toml
+[INFO] crate sebasmagri/rusty-sounds already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/brson/dbus-rs.git`
+[INFO] [stderr]     Updating git repository `https://github.com/antoyo/relm.git`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tokio-core v0.1.6
+[INFO] [stderr]   Downloaded gobject-sys v0.3.3
+[INFO] [stderr]   Downloaded cairo-sys-rs v0.3.3
+[INFO] [stderr]   Downloaded gtk-sys v0.3.3
+[INFO] [stderr]   Downloaded bytes v0.4.1
+[INFO] [stderr]   Downloaded iovec v0.1.0
+[INFO] [stderr]   Downloaded mio v0.6.6
+[INFO] [stderr]   Downloaded net2 v0.2.27
+[INFO] [stderr]   Downloaded libc v0.2.21
+[INFO] [stderr]   Downloaded lazycell v0.4.0
+[INFO] [stderr]   Downloaded cfg-if v0.1.0
+[INFO] [stderr]   Downloaded syn v0.11.9
+[INFO] [stderr]   Downloaded lazy_static v0.2.5
+[INFO] [stderr]   Downloaded gtk v0.1.2
+[INFO] [stderr]   Downloaded pango v0.1.2
+[INFO] [stderr]   Downloaded relm-core v0.1.1
+[INFO] [stderr]   Downloaded pango-sys v0.3.3
+[INFO] [stderr]   Downloaded glib-sys v0.3.3
+[INFO] [stderr]   Downloaded glib v0.1.2
+[INFO] [stderr]   Downloaded gdk-sys v0.3.3
+[INFO] [stderr]   Downloaded bitflags v0.5.0
+[INFO] [stderr]   Downloaded gio-sys v0.3.3
+[INFO] [stderr]   Downloaded gdk-pixbuf-sys v0.3.3
+[INFO] [stderr]   Downloaded gio v0.1.2
+[INFO] [stderr]   Downloaded gdk v0.5.2
+[INFO] [stderr]   Downloaded gdk-pixbuf v0.1.2
+[INFO] [stderr]   Downloaded c_vec v1.2.0
+[INFO] [stderr]   Downloaded cairo-rs v0.1.2
+[INFO] [stderr]   Downloaded glib-itc v0.1.2
+[INFO] [stderr]   Downloaded metadeps v1.1.1
+[INFO] [stderr]   Downloaded toml v0.2.1
+[INFO] [stderr]   Downloaded tokio-timer v0.1.0
+[INFO] [stderr]   Downloaded error-chain v0.7.2
+[INFO] [stderr]   Downloaded tokio-io v0.1.1
+[INFO] [stderr]   Downloaded atk-sys v0.3.3
+[INFO] [stderr]   Downloaded futures v0.1.11
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sebasmagri/rusty-sounds against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sebasmagri\\rusty-sounds,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 0792a46b7f423fe2ee81172b730ba13056ac979f0b07c9ec0c96dbacc2f95dde
+[INFO] running `"docker" "start" "-a" "0792a46b7f423fe2ee81172b730ba13056ac979f0b07c9ec0c96dbacc2f95dde"`
+[INFO] [stderr]    Compiling pkg-config v0.3.9
+[INFO] [stderr]    Compiling bitflags v0.4.0
+[INFO] [stderr]    Compiling libc v0.2.21
+[INFO] [stderr]    Compiling gdk-pixbuf v0.1.2
+[INFO] [stderr]    Compiling cfg-if v0.1.0
+[INFO] [stderr]    Compiling gio v0.1.2
+[INFO] [stderr]    Compiling cairo-rs v0.1.2
+[INFO] [stderr]    Compiling bitflags v0.5.0
+[INFO] [stderr]    Compiling gdk v0.5.2
+[INFO] [stderr]    Compiling byteorder v1.0.0
+[INFO] [stderr]    Compiling c_vec v1.2.0
+[INFO] [stderr]    Compiling log v0.3.7
+[INFO] [stderr]    Compiling lazycell v0.4.0
+[INFO] [stderr]    Compiling error-chain v0.7.2
+[INFO] [stderr]    Compiling toml v0.2.1
+[INFO] [stderr]    Compiling futures v0.1.11
+[INFO] [stderr]    Compiling gtk v0.1.2
+[INFO] [stderr]    Compiling lazy_static v0.2.5
+[INFO] [stderr]    Compiling iovec v0.1.0
+[INFO] [stderr]    Compiling glib-sys v0.3.3
+[INFO] [stderr]    Compiling gobject-sys v0.3.3
+[INFO] [stderr]    Compiling gio-sys v0.3.3
+[INFO] [stderr]    Compiling gdk-pixbuf-sys v0.3.3
+[INFO] [stderr]    Compiling pango-sys v0.3.3
+[INFO] [stderr]    Compiling cairo-sys-rs v0.3.3
+[INFO] [stderr]    Compiling atk-sys v0.3.3
+[INFO] [stderr]    Compiling gdk-sys v0.3.3
+[INFO] [stderr]    Compiling gtk-sys v0.3.3
+[INFO] [stderr]    Compiling bytes v0.4.1
+[INFO] [stderr] error: failed to run custom build command for `glib-sys v0.3.3`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\glib-sys-a215f24e14bb5639\build-script-build` (exit code: 1)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] MSVC target detected. If you are using the MSVC ABI rust build, please use the GNU ABI build instead.
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "0792a46b7f423fe2ee81172b730ba13056ac979f0b07c9ec0c96dbacc2f95dde"`
+[INFO] running `"docker" "rm" "-f" "0792a46b7f423fe2ee81172b730ba13056ac979f0b07c9ec0c96dbacc2f95dde"`
+[INFO] [stdout] 0792a46b7f423fe2ee81172b730ba13056ac979f0b07c9ec0c96dbacc2f95dde

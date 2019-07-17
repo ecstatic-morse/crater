@@ -1,0 +1,350 @@
+[INFO] fetching crate git2 0.9.1...
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\stable\reg\git2\0.9.1
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\beta\reg\git2\0.9.1
+[INFO] validating manifest of git2-0.9.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of git2-0.9.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\stable\reg\git2\0.9.1\Cargo.toml
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\beta\reg\git2\0.9.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded redox_syscall v0.1.56
+[INFO] [stderr]   Downloaded syn v0.15.40
+[INFO] [stderr]   Downloaded libgit2-sys v0.8.1
+[INFO] [stderr]   Downloaded openssl-probe v0.1.2
+[INFO] [stderr]   Downloaded docopt v1.1.0
+[INFO] [stderr]   Downloaded strsim v0.9.2
+[INFO] [stderr]   Downloaded thread-id v3.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing git2-0.9.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 042062100b76c58849c746031477d5a7ad2e0d91a17738d32769a57086421d70
+[INFO] running `"docker" "start" "-a" "042062100b76c58849c746031477d5a7ad2e0d91a17738d32769a57086421d70"`
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling libgit2-sys v0.8.1
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling git2 v0.9.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5m 15s
+[INFO] running `"docker" "inspect" "042062100b76c58849c746031477d5a7ad2e0d91a17738d32769a57086421d70"`
+[INFO] running `"docker" "rm" "-f" "042062100b76c58849c746031477d5a7ad2e0d91a17738d32769a57086421d70"`
+[INFO] [stdout] 042062100b76c58849c746031477d5a7ad2e0d91a17738d32769a57086421d70
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ad0e44ea3625a25fbff7b8eb3060d92d03fa72896d1ae6b4cf7b0b3d4e1e7212
+[INFO] running `"docker" "start" "-a" "ad0e44ea3625a25fbff7b8eb3060d92d03fa72896d1ae6b4cf7b0b3d4e1e7212"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling utf8-ranges v1.0.3
+[INFO] [stderr]    Compiling strsim v0.9.2
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling regex-syntax v0.6.8
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling thread-id v3.3.0
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling docopt v1.1.0
+[INFO] [stderr]    Compiling git2 v0.9.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3m 17s
+[INFO] running `"docker" "inspect" "ad0e44ea3625a25fbff7b8eb3060d92d03fa72896d1ae6b4cf7b0b3d4e1e7212"`
+[INFO] running `"docker" "rm" "-f" "ad0e44ea3625a25fbff7b8eb3060d92d03fa72896d1ae6b4cf7b0b3d4e1e7212"`
+[INFO] [stdout] ad0e44ea3625a25fbff7b8eb3060d92d03fa72896d1ae6b4cf7b0b3d4e1e7212
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 21cc2f03ad97cf12b9b6e79df1041bcb6b5a02cd90c511a910676cb35323af3b
+[INFO] running `"docker" "start" "-a" "21cc2f03ad97cf12b9b6e79df1041bcb6b5a02cd90c511a910676cb35323af3b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.80s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\git2-661ccc1b1bc8c9be.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 108 tests
+[INFO] [stdout] test blob::tests::buffer ... ok
+[INFO] [stdout] test blob::tests::stream ... ok
+[INFO] [stdout] test blob::tests::path ... ok
+[INFO] [stdout] test build::tests::smoke ... ok
+[INFO] [stdout] test build::tests::notify_callback ... ok
+[INFO] [stdout] test blame::tests::smoke ... ok
+[INFO] [stdout] test branch::tests::smoke ... ok
+[INFO] [stdout] test config::tests::multivar ... ok
+[INFO] [stdout] test config::tests::parse ... ok
+[INFO] [stdout] test config::tests::smoke ... ok
+[INFO] [stdout] test build::tests::smoke2 ... ok
+[INFO] [stdout] test commit::tests::smoke ... ok
+[INFO] [stdout] test config::tests::persisted ... ok
+[INFO] [stdout] test cred::test::credential_helper2 ... ok
+[INFO] [stdout] test cred::test::credential_helper4 ... ok
+[INFO] [stdout] test cred::test::credential_helper5 ... ok
+[INFO] [stdout] test cred::test::credential_helper7 ... ok
+[INFO] [stdout] test cred::test::smoke ... ok
+[INFO] [stdout] test cred::test::credential_helper6 ... ok
+[INFO] [stdout] test cred::test::ssh_key_from_memory ... ok
+[INFO] [stdout] test cred::test::credential_helper1 ... FAILED
+[INFO] [stdout] test cred::test::credential_helper3 ... FAILED
+[INFO] [stdout] test describe::tests::smoke ... ok
+[INFO] [stdout] test diff::tests::foreach_all_callbacks ... ok
+[INFO] [stdout] test diff::tests::foreach_file_and_hunk ... ok
+[INFO] [stdout] test diff::tests::foreach_file_only ... ok
+[INFO] [stdout] test diff::tests::foreach_smoke ... ok
+[INFO] [stdout] test error::tests::smoke ... ok
+[INFO] [stdout] test index::tests::add_then_read ... ok
+[INFO] [stdout] test diff::tests::smoke ... ok
+[INFO] [stdout] test index::tests::smoke ... ok
+[INFO] [stdout] test index::tests::add_frombuffer_then_read ... ok
+[INFO] [stdout] test index::tests::add_all ... ok
+[INFO] [stdout] test message::tests::prettify ... ok
+[INFO] [stdout] test index::tests::smoke_from_repo ... ok
+[INFO] [stdout] test odb::tests::exists ... ok
+[INFO] [stdout] test odb::tests::exists_prefix ... ok
+[INFO] [stdout] test note::tests::smoke ... ok
+[INFO] [stdout] test odb::tests::read ... ok
+[INFO] [stdout] test odb::tests::write ... ok
+[INFO] [stdout] test oid::tests::comparisons ... ok
+[INFO] [stdout] test odb::tests::read_header ... ok
+[INFO] [stdout] test odb::tests::writer ... ok
+[INFO] [stdout] test oid::tests::conversions ... ok
+[INFO] [stdout] test oid::tests::hash_object ... ok
+[INFO] [stdout] test oid::tests::zero_is_zero ... ok
+[INFO] [stdout] test oid::tests::hash_file ... ok
+[INFO] [stdout] test index::tests::smoke_add ... ok
+[INFO] [stdout] test packbuilder::tests::insert_commit_write_buf ... ok
+[INFO] [stdout] test packbuilder::tests::insert_tree_write_buf ... ok
+[INFO] [stdout] test packbuilder::tests::clear_progress_callback ... ok
+[INFO] [stdout] test packbuilder::tests::insert_write_buf ... ok
+[INFO] [stdout] test packbuilder::tests::smoke ... ok
+[INFO] [stdout] test packbuilder::tests::progress_callback ... ok
+[INFO] [stdout] test packbuilder::tests::smoke_foreach ... ok
+[INFO] [stdout] test packbuilder::tests::smoke_write_buf ... ok
+[INFO] [stdout] test reference::tests::smoke ... ok
+[INFO] [stdout] test pathspec::tests::smoke ... ok
+[INFO] [stdout] test rebase::tests::smoke ... ok
+[INFO] [stdout] test reference::tests::smoke2 ... ok
+[INFO] [stdout] test reflog::tests::smoke ... ok
+[INFO] [stdout] test remote::tests::create_remote_anonymous ... ok
+[INFO] [stdout] test remote::tests::is_valid ... ok
+[INFO] [stdout] test remote::tests::connect_list ... ok
+[INFO] [stdout] test rebase::tests::keeping_original_author_msg ... ok
+[INFO] [stdout] test remote::tests::create_remote ... ok
+[INFO] [stdout] test remote::tests::smoke ... ok
+[INFO] [stdout] test remote::tests::rename_remote ... ok
+[INFO] [stdout] test repo::tests::makes_dirs ... ok
+[INFO] [stdout] test remote::tests::push ... ok
+[INFO] [stdout] test repo::tests::smoke_discover ... ok
+[INFO] [stdout] test repo::tests::smoke_checkout ... ok
+[INFO] [stdout] test remote::tests::transfer_cb ... ok
+[INFO] [stdout] test repo::tests::smoke_init_bare ... ok
+[INFO] [stdout] test repo::tests::smoke_init ... ok
+[INFO] [stdout] test repo::tests::smoke_graph_ahead_behind ... ok
+[INFO] [stdout] test repo::tests::smoke_graph_descendant_of ... ok
+[INFO] [stdout] test repo::tests::smoke_open ... ok
+[INFO] [stdout] test repo::tests::smoke_open_bare ... ok
+[INFO] [stdout] test repo::tests::smoke_is_path_ignored ... ok
+[INFO] [stdout] test repo::tests::smoke_open_ext ... ok
+[INFO] [stdout] test repo::tests::smoke_reference_has_log_ensure_log ... ok
+[INFO] [stdout] test repo::tests::smoke_revparse ... ok
+[INFO] [stdout] test repo::tests::smoke_set_head ... ok
+[INFO] [stdout] test repo::tests::smoke_revparse_ext ... ok
+[INFO] [stdout] test signature::tests::smoke ... ok
+[INFO] [stdout] test repo::tests::smoke_merge_bases ... ok
+[INFO] [stdout] test repo::tests::smoke_set_head_detached ... ok
+[INFO] [stdout] test revwalk::tests::smoke ... ok
+[INFO] [stdout] test stash::tests::smoke_stash_save_drop ... ok
+[INFO] [stdout] test stash::tests::smoke_stash_save_apply ... ok
+[INFO] [stdout] test status::tests::filter ... ok
+[INFO] [stdout] test stash::tests::smoke_stash_save_pop ... ok
+[INFO] [stdout] test status::tests::smoke ... ok
+[INFO] [stdout] test status::tests::gitignore ... ok
+[INFO] [stdout] test status::tests::status_file ... ok
+[INFO] [stdout] test tag::tests::lite ... ok
+[INFO] [stdout] test tag::tests::smoke ... ok
+[INFO] [stdout] test tests::convert ... ok
+[INFO] [stdout] test submodule::tests::smoke ... ok
+[INFO] [stdout] test tree::tests::smoke ... ok
+[INFO] [stdout] test submodule::tests::add_a_submodule ... ok
+[INFO] [stdout] test tree::tests::smoke_tree_iter ... ok
+[INFO] [stdout] test treebuilder::tests::smoke ... ok
+[INFO] [stdout] test submodule::tests::update_submodule ... ok
+[INFO] [stdout] test treebuilder::tests::filter ... ok
+[INFO] [stdout] test tree::tests::tree_walk ... ok
+[INFO] [stdout] test treebuilder::tests::write ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- cred::test::credential_helper1 stdout ----
+[INFO] [stdout] thread 'cred::test::credential_helper1' panicked at 'called `Option::unwrap()` on a `None` value', src\libcore\option.rs:347:21
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6eb64f54d - std::sys::windows::backtrace::set_frames
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stdout]    1:     0x7ff6eb64f54d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stdout]    2:     0x7ff6eb64f54d - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stdout]    3:     0x7ff6eb65278d - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stdout]    4:     0x7ff6eb65278d - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stdout]    5:     0x7ff6eb65240d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:208
+[INFO] [stdout]    6:     0x7ff6eb65301f - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stdout]    7:     0x7ff6eb652b53 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stdout]    8:     0x7ff6eb652a38 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stdout]    9:     0x7ff6eb661dcb - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stdout]   10:     0x7ff6eb661d0d - core::panicking::panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:49
+[INFO] [stdout]   11:     0x7ff6eb41b0e7 - core::option::Option<(alloc::string::String, alloc::string::String)>::unwrap<(alloc::string::String, alloc::string::String)>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:12
+[INFO] [stdout]   12:     0x7ff6eb4f0643 - git2::cred::test::credential_helper1
+[INFO] [stdout]                                at C:\crater\workdir\src\cred.rs:463
+[INFO] [stdout]   13:     0x7ff6eb4f046d - git2::cred::test::credential_helper1::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\cred.rs:459
+[INFO] [stdout]   14:     0x7ff6eb459eaa - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   15:     0x7ff6eb50f896 - alloc::boxed::{{impl}}::call_once<(),FnBox<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   16:     0x7ff6eb65e141 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   17:     0x7ff6eb52ec7a - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   18:     0x7ff6eb52ec7a - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   19:     0x7ff6eb52ec7a - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libtest\lib.rs:1468
+[INFO] [stdout]   20:     0x7ff6eb50163d - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stdout]   21:     0x7ff6eb50734d - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   22:     0x7ff6eb50734d - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stdout]   23:     0x7ff6eb50734d - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stdout]   24:     0x7ff6eb65e141 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   25:     0x7ff6eb507a7f - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   26:     0x7ff6eb507a7f - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   27:     0x7ff6eb507a7f - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   28:     0x7ff6eb507a7f - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   29:     0x7ff6eb63f626 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   30:     0x7ff6eb65ce36 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   31:     0x7ff6eb65ce36 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   32:     0x7ff6eb65ce36 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   33:     0x7ff99a147973 - BaseThreadInitThunk
+[INFO] [stdout]   34:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- cred::test::credential_helper3 stdout ----
+[INFO] [stdout] thread 'cred::test::credential_helper3' panicked at 'called `Option::unwrap()` on a `None` value', src\libcore\option.rs:347:21
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6eb64f54d - std::sys::windows::backtrace::set_frames
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stdout]    1:     0x7ff6eb64f54d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stdout]    2:     0x7ff6eb64f54d - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stdout]    3:     0x7ff6eb65278d - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stdout]    4:     0x7ff6eb65278d - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stdout]    5:     0x7ff6eb65240d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:208
+[INFO] [stdout]    6:     0x7ff6eb65301f - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stdout]    7:     0x7ff6eb652b53 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stdout]    8:     0x7ff6eb652a38 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stdout]    9:     0x7ff6eb661dcb - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout]   10:     0x7ff6eb661d0d - core::panicking::panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:49
+[INFO] [stdout]   11:     0x7ff6eb41b0e7 - core::option::Option<(alloc::string::String, alloc::string::String)>::unwrap<(alloc::string::String, alloc::string::String)>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:12
+[INFO] [stdout]   12:     0x7ff6eb4f1059 - git2::cred::test::credential_helper3
+[INFO] [stdout]                                at C:\crater\workdir\src\cred.rs:487
+[INFO] [stdout]   13:     0x7ff6eb4f0e3d - git2::cred::test::credential_helper3::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\cred.rs:481
+[INFO] [stdout]   14:     0x7ff6eb4593aa - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   15:     0x7ff6eb50f896 - alloc::boxed::{{impl}}::call_once<(),FnBox<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   16:     0x7ff6eb65e141 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   17:     0x7ff6eb52ec7a - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   18:     0x7ff6eb52ec7a - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   19:     0x7ff6eb52ec7a - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libtest\lib.rs:1468
+[INFO] [stdout]   20:     0x7ff6eb50163d - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stdout]   21:     0x7ff6eb50734d - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   22:     0x7ff6eb50734d - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stdout]   23:     0x7ff6eb50734d - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stdout]   24:     0x7ff6eb65e141 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   25:     0x7ff6eb507a7f - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   26:     0x7ff6eb507a7f - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   27:     0x7ff6eb507a7f - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   28:     0x7ff6eb507a7f - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   29:     0x7ff6eb63f626 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   30:     0x7ff6eb65ce36 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   31:     0x7ff6eb65ce36 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   32:     0x7ff6eb65ce36 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   33:     0x7ff99a147973 - BaseThreadInitThunk
+[INFO] [stdout]   34:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     cred::test::credential_helper1
+[INFO] [stdout]     cred::test::credential_helper3
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 106 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "21cc2f03ad97cf12b9b6e79df1041bcb6b5a02cd90c511a910676cb35323af3b"`
+[INFO] running `"docker" "rm" "-f" "21cc2f03ad97cf12b9b6e79df1041bcb6b5a02cd90c511a910676cb35323af3b"`
+[INFO] [stdout] 21cc2f03ad97cf12b9b6e79df1041bcb6b5a02cd90c511a910676cb35323af3b

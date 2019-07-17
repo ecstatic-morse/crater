@@ -1,0 +1,34 @@
+[INFO] crate gcc 0.3.55 is already in cache
+[INFO] extracting crate gcc 0.3.55 into work\ex\default\sources\nightly\reg\gcc\0.3.55
+[INFO] extracting crate gcc 0.3.55 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\gcc\0.3.55
+[INFO] validating manifest of gcc-0.3.55 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of gcc-0.3.55 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing gcc-0.3.55
+[INFO] finished frobbing gcc-0.3.55
+[INFO] frobbed toml for gcc-0.3.55 written to work\ex\default\sources\nightly\reg\gcc\0.3.55\Cargo.toml
+[INFO] started frobbing gcc-0.3.55
+[INFO] finished frobbing gcc-0.3.55
+[INFO] frobbed toml for gcc-0.3.55 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\gcc\0.3.55\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building gcc-0.3.55 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\gcc\\0.3.55,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ae2411f62d842e15432203d10635243336c53efa294a8fa71a04b73f03ea0ee4
+[INFO] running `"docker" "start" "-a" "ae2411f62d842e15432203d10635243336c53efa294a8fa71a04b73f03ea0ee4"`
+[INFO] [stderr]    Compiling gcc v0.3.55 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.30s
+[INFO] running `"docker" "inspect" "ae2411f62d842e15432203d10635243336c53efa294a8fa71a04b73f03ea0ee4"`
+[INFO] running `"docker" "rm" "-f" "ae2411f62d842e15432203d10635243336c53efa294a8fa71a04b73f03ea0ee4"`
+[INFO] [stdout] ae2411f62d842e15432203d10635243336c53efa294a8fa71a04b73f03ea0ee4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\gcc\\0.3.55,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 360a54c85e6bd532789fcac3d6ea48f83ee268e5d5e398514e5d8abac180a36b
+[INFO] running `"docker" "start" "-a" "360a54c85e6bd532789fcac3d6ea48f83ee268e5d5e398514e5d8abac180a36b"`
+[INFO] [stderr]    Compiling gcc v0.3.55 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.36s
+[INFO] running `"docker" "inspect" "360a54c85e6bd532789fcac3d6ea48f83ee268e5d5e398514e5d8abac180a36b"`
+[INFO] running `"docker" "rm" "-f" "360a54c85e6bd532789fcac3d6ea48f83ee268e5d5e398514e5d8abac180a36b"`
+[INFO] [stdout] 360a54c85e6bd532789fcac3d6ea48f83ee268e5d5e398514e5d8abac180a36b

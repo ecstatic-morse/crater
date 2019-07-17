@@ -1,0 +1,59 @@
+[INFO] fetching crate ql2 1.1.2...
+[INFO] extracting crate ql2 1.1.2 into work\ex\default\sources\stable\reg\ql2\1.1.2
+[INFO] extracting crate ql2 1.1.2 into work\ex\default\sources\beta\reg\ql2\1.1.2
+[INFO] validating manifest of ql2-1.1.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ql2-1.1.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ql2-1.1.2
+[INFO] finished frobbing ql2-1.1.2
+[INFO] frobbed toml for ql2-1.1.2 written to work\ex\default\sources\stable\reg\ql2\1.1.2\Cargo.toml
+[INFO] started frobbing ql2-1.1.2
+[INFO] finished frobbing ql2-1.1.2
+[INFO] frobbed toml for ql2-1.1.2 written to work\ex\default\sources\beta\reg\ql2\1.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded protobuf v1.5.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ql2-1.1.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ql2\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f498ca12265a5cd431e1d42f11ed091f4640bdc59f6050e75d2333f6e08a08be
+[INFO] running `"docker" "start" "-a" "f498ca12265a5cd431e1d42f11ed091f4640bdc59f6050e75d2333f6e08a08be"`
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling protobuf v1.5.1
+[INFO] [stderr]    Compiling uuid v0.6.5
+[INFO] [stderr]    Compiling ql2 v1.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 33s
+[INFO] running `"docker" "inspect" "f498ca12265a5cd431e1d42f11ed091f4640bdc59f6050e75d2333f6e08a08be"`
+[INFO] running `"docker" "rm" "-f" "f498ca12265a5cd431e1d42f11ed091f4640bdc59f6050e75d2333f6e08a08be"`
+[INFO] [stdout] f498ca12265a5cd431e1d42f11ed091f4640bdc59f6050e75d2333f6e08a08be
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ql2\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7c3826d57fae4980650e6a13cb828c82480e0b8a17f70d82309a8a5a974d78ca
+[INFO] running `"docker" "start" "-a" "7c3826d57fae4980650e6a13cb828c82480e0b8a17f70d82309a8a5a974d78ca"`
+[INFO] [stderr]    Compiling ql2 v1.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.86s
+[INFO] running `"docker" "inspect" "7c3826d57fae4980650e6a13cb828c82480e0b8a17f70d82309a8a5a974d78ca"`
+[INFO] running `"docker" "rm" "-f" "7c3826d57fae4980650e6a13cb828c82480e0b8a17f70d82309a8a5a974d78ca"`
+[INFO] [stdout] 7c3826d57fae4980650e6a13cb828c82480e0b8a17f70d82309a8a5a974d78ca
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ql2\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] bae488bf96c9a8f3ed2354745be0ef491e5a64b78574a11b8295b94156eaf2c2
+[INFO] running `"docker" "start" "-a" "bae488bf96c9a8f3ed2354745be0ef491e5a64b78574a11b8295b94156eaf2c2"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.61s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ql2-807e5431954918f9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests ql2
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "bae488bf96c9a8f3ed2354745be0ef491e5a64b78574a11b8295b94156eaf2c2"`
+[INFO] running `"docker" "rm" "-f" "bae488bf96c9a8f3ed2354745be0ef491e5a64b78574a11b8295b94156eaf2c2"`
+[INFO] [stdout] bae488bf96c9a8f3ed2354745be0ef491e5a64b78574a11b8295b94156eaf2c2

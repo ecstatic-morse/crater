@@ -1,0 +1,56 @@
+[INFO] crate fnv 1.0.6 is already in cache
+[INFO] extracting crate fnv 1.0.6 into work\ex\default\sources\nightly\reg\fnv\1.0.6
+[INFO] extracting crate fnv 1.0.6 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\fnv\1.0.6
+[INFO] validating manifest of fnv-1.0.6 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of fnv-1.0.6 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing fnv-1.0.6
+[INFO] finished frobbing fnv-1.0.6
+[INFO] frobbed toml for fnv-1.0.6 written to work\ex\default\sources\nightly\reg\fnv\1.0.6\Cargo.toml
+[INFO] started frobbing fnv-1.0.6
+[INFO] finished frobbing fnv-1.0.6
+[INFO] frobbed toml for fnv-1.0.6 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\fnv\1.0.6\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing fnv-1.0.6 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\fnv\\1.0.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] de86da02a94dce4e93329722d6a377b54e8ff28f78410cedd53d804dac586aa7
+[INFO] running `"docker" "start" "-a" "de86da02a94dce4e93329722d6a377b54e8ff28f78410cedd53d804dac586aa7"`
+[INFO] [stderr]    Compiling fnv v1.0.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.09s
+[INFO] running `"docker" "inspect" "de86da02a94dce4e93329722d6a377b54e8ff28f78410cedd53d804dac586aa7"`
+[INFO] running `"docker" "rm" "-f" "de86da02a94dce4e93329722d6a377b54e8ff28f78410cedd53d804dac586aa7"`
+[INFO] [stdout] de86da02a94dce4e93329722d6a377b54e8ff28f78410cedd53d804dac586aa7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\fnv\\1.0.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 45e081d8a898cbe7372370c666797cfead3a576bf131a649008494cdca1d7a08
+[INFO] running `"docker" "start" "-a" "45e081d8a898cbe7372370c666797cfead3a576bf131a649008494cdca1d7a08"`
+[INFO] [stderr]    Compiling fnv v1.0.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.68s
+[INFO] running `"docker" "inspect" "45e081d8a898cbe7372370c666797cfead3a576bf131a649008494cdca1d7a08"`
+[INFO] running `"docker" "rm" "-f" "45e081d8a898cbe7372370c666797cfead3a576bf131a649008494cdca1d7a08"`
+[INFO] [stdout] 45e081d8a898cbe7372370c666797cfead3a576bf131a649008494cdca1d7a08
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\fnv\\1.0.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 85ff5bdf029a9fbfc0c6661ecb394804603d932189e1f768917446fc8698d662
+[INFO] running `"docker" "start" "-a" "85ff5bdf029a9fbfc0c6661ecb394804603d932189e1f768917446fc8698d662"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\fnv-149c503ad80e1160.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test::basic_tests ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests fnv
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test lib.rs -  (line 30) ... ok
+[INFO] [stdout] test lib.rs -  (line 51) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "85ff5bdf029a9fbfc0c6661ecb394804603d932189e1f768917446fc8698d662"`
+[INFO] running `"docker" "rm" "-f" "85ff5bdf029a9fbfc0c6661ecb394804603d932189e1f768917446fc8698d662"`
+[INFO] [stdout] 85ff5bdf029a9fbfc0c6661ecb394804603d932189e1f768917446fc8698d662

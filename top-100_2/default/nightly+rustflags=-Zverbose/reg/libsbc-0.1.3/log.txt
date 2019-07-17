@@ -1,0 +1,191 @@
+[INFO] fetching crate libsbc 0.1.3...
+[INFO] extracting crate libsbc 0.1.3 into work\ex\default\sources\nightly\reg\libsbc\0.1.3
+[INFO] extracting crate libsbc 0.1.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\libsbc\0.1.3
+[INFO] validating manifest of libsbc-0.1.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libsbc-0.1.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libsbc-0.1.3
+[INFO] finished frobbing libsbc-0.1.3
+[INFO] frobbed toml for libsbc-0.1.3 written to work\ex\default\sources\nightly\reg\libsbc\0.1.3\Cargo.toml
+[INFO] started frobbing libsbc-0.1.3
+[INFO] finished frobbing libsbc-0.1.3
+[INFO] frobbed toml for libsbc-0.1.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\libsbc\0.1.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded slice-deque v0.1.16
+[INFO] [stderr]   Downloaded alsa v0.2.2
+[INFO] [stderr]   Downloaded libsbc-sys v0.1.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libsbc-0.1.3 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\libsbc\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 842d7a82d50e1fe6d91a97b6900a230cf1c8e12a3664c69956984de7d99d023c
+[INFO] running `"docker" "start" "-a" "842d7a82d50e1fe6d91a97b6900a230cf1c8e12a3664c69956984de7d99d023c"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libsbc-sys v0.1.2
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling backtrace-sys v0.1.31
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr] error: failed to run custom build command for `libsbc-sys v0.1.2`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\libsbc-sys-dffad81d0ac3884d\build-script-build` (exit code: 1)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] CRATE_CC_NO_DEFAULTS = None
+[INFO] [stderr] CARGO_CFG_TARGET_FEATURE = Some("fxsr,mmx,sse,sse2")
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/I" "sbc/sbc" "/W4" "/FoC:\\crater\\target\\debug\\build\\libsbc-sys-7f157302a11a8758\\out\\sbc/sbc\\sbc.o" "/c" "sbc/sbc/sbc.c"
+[INFO] [stderr] sbc.c
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_math.h(42): error C2061: syntax error: identifier 'sbc_fixed_t'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_math.h(42): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(51): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(51): error C2061: syntax error: identifier 'sbc_proto_4_40m0'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(51): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(51): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(59): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(59): error C2061: syntax error: identifier 'sbc_proto_4_40m1'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(59): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(59): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(67): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(67): error C2061: syntax error: identifier 'sbc_proto_8_80m0'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(67): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(67): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(80): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(80): error C2061: syntax error: identifier 'sbc_proto_8_80m1'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(80): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(80): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(93): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(93): error C2061: syntax error: identifier 'synmatrix4'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(93): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(93): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(104): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(104): error C2061: syntax error: identifier 'synmatrix8'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(104): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(104): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(162): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(162): error C2061: syntax error: identifier '_sbc_proto_fixed4'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(162): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(162): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(212): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(212): error C2061: syntax error: identifier 'cos_table_fixed_4'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(212): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(212): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(240): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(240): error C2061: syntax error: identifier '_sbc_proto_fixed8'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(240): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(240): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(309): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(309): error C2061: syntax error: identifier 'cos_table_fixed_8'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(309): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(309): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(376): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(376): error C2061: syntax error: identifier 'analysis_consts_fixed4_simd_even'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(376): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(376): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(421): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(421): error C2061: syntax error: identifier 'analysis_consts_fixed4_simd_odd'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(421): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(421): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(466): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(466): error C2061: syntax error: identifier 'analysis_consts_fixed8_simd_even'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(466): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(466): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(563): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(563): error C2061: syntax error: identifier 'analysis_consts_fixed8_simd_odd'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(563): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc_tables.h(563): error C2059: syntax error: '['
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(93): error C2061: syntax error: identifier 'sbc_parse'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(93): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(93): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(96): error C2061: syntax error: identifier 'sbc_decode'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(96): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(96): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(100): error C2061: syntax error: identifier 'sbc_encode'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(100): error C2059: syntax error: ';'
+[INFO] [stderr] c:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\libsbc-sys-0.1.2\sbc\sbc\sbc.h(100): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] sbc/sbc/sbc.c(76): warning C4214: nonstandard extension used: bit field types other than int
+[INFO] [stderr] sbc/sbc/sbc.c(77): warning C4214: nonstandard extension used: bit field types other than int
+[INFO] [stderr] sbc/sbc/sbc.c(78): warning C4214: nonstandard extension used: bit field types other than int
+[INFO] [stderr] sbc/sbc/sbc.c(79): warning C4214: nonstandard extension used: bit field types other than int
+[INFO] [stderr] sbc/sbc/sbc.c(80): warning C4214: nonstandard extension used: bit field types other than int
+[INFO] [stderr] sbc/sbc/sbc.c(83): error C2143: syntax error: missing ')' before '('
+[INFO] [stderr] sbc/sbc/sbc.c(83): error C2059: syntax error: ')'
+[INFO] [stderr] sbc/sbc/sbc.c(83): error C2143: syntax error: missing ')' before ';'
+[INFO] [stderr] sbc/sbc/sbc.c(83): error C2091: function returns function
+[INFO] [stderr] sbc/sbc/sbc.c(83): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
+[INFO] [stderr] sbc/sbc/sbc.c(643): warning C4244: 'return': conversion from 'int32_t' to 'int16_t', possible loss of data
+[INFO] [stderr] sbc/sbc/sbc.c(666): error C2065: 'synmatrix4': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(666): error C2109: subscript requires array or pointer type
+[INFO] [stderr] sbc/sbc/sbc.c(684): error C2065: 'sbc_proto_4_40m0': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(684): error C2109: subscript requires array or pointer type
+[INFO] [stderr] sbc/sbc/sbc.c(684): error C2065: 'sbc_proto_4_40m1': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(684): error C2198: 'sbc_clip16': too few arguments for call
+[INFO] [stderr] sbc/sbc/sbc.c(712): error C2065: 'synmatrix8': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(712): error C2109: subscript requires array or pointer type
+[INFO] [stderr] sbc/sbc/sbc.c(730): error C2065: 'sbc_proto_8_80m0': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(730): error C2109: subscript requires array or pointer type
+[INFO] [stderr] sbc/sbc/sbc.c(730): error C2065: 'sbc_proto_8_80m1': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(730): error C2198: 'sbc_clip16': too few arguments for call
+[INFO] [stderr] sbc/sbc/sbc.c(776): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+[INFO] [stderr] sbc/sbc/sbc.c(792): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+[INFO] [stderr] sbc/sbc/sbc.c(846): error C2061: syntax error: identifier 'sbc_pack_frame_internal'
+[INFO] [stderr] sbc/sbc/sbc.c(846): error C2059: syntax error: ';'
+[INFO] [stderr] sbc/sbc/sbc.c(846): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] sbc/sbc/sbc.c(931): error C2061: syntax error: identifier 'sbc_pack_frame'
+[INFO] [stderr] sbc/sbc/sbc.c(931): error C2059: syntax error: ';'
+[INFO] [stderr] sbc/sbc/sbc.c(931): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] sbc/sbc/sbc.c(974): error C2061: syntax error: identifier 'msbc_pack_frame'
+[INFO] [stderr] sbc/sbc/sbc.c(974): error C2059: syntax error: ';'
+[INFO] [stderr] sbc/sbc/sbc.c(974): error C2059: syntax error: '<parameter-list>'
+[INFO] [stderr] sbc/sbc/sbc.c(1005): error C2061: syntax error: identifier 'ssize_t'
+[INFO] [stderr] sbc/sbc/sbc.c(1007): error C2059: syntax error: '}'
+[INFO] [stderr] sbc/sbc/sbc.c(1013): error C2037: left of 'msbc' specifies undefined struct/union 'sbc_priv'
+[INFO] [stderr] sbc/sbc/sbc.c(1014): error C2037: left of 'pack_frame' specifies undefined struct/union 'sbc_priv'
+[INFO] [stderr] sbc/sbc/sbc.c(1014): error C2065: 'msbc_pack_frame': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(1015): error C2037: left of 'unpack_frame' specifies undefined struct/union 'sbc_priv'
+[INFO] [stderr] sbc/sbc/sbc.c(1017): error C2037: left of 'pack_frame' specifies undefined struct/union 'sbc_priv'
+[INFO] [stderr] sbc/sbc/sbc.c(1017): error C2065: 'sbc_pack_frame': undeclared identifier
+[INFO] [stderr] sbc/sbc/sbc.c(1018): error C2037: left of 'unpack_frame' specifies undefined struct/union 'sbc_priv'
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2143: syntax error: missing ')' before '('
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2091: function returns function
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2143: syntax error: missing ')' before 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2143: syntax error: missing '{' before 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2059: syntax error: 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1036): error C2059: syntax error: ')'
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2143: syntax error: missing ')' before '('
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2091: function returns function
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2143: syntax error: missing ')' before 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2143: syntax error: missing '{' before 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2059: syntax error: 'string'
+[INFO] [stderr] sbc/sbc/sbc.c(1057): error C2059: syntax error: ')'
+[INFO] [stderr] sbc/sbc/sbc.c(1176): error C2143: syntax error: missing ')' before '('
+[INFO] [stderr] sbc/sbc/sbc.c(1176): error C2091: function returns function
+[INFO] [stderr] sbc/sbc/sbc.c(1176): fatal error C1003: error count exceeds 100; stopping compilation
+[INFO] [stderr] exit code: 2
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] 
+[INFO] [stderr] 
+[INFO] [stderr] error occurred: Command "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/I" "sbc/sbc" "/W4" "/FoC:\\crater\\target\\debug\\build\\libsbc-sys-7f157302a11a8758\\out\\sbc/sbc\\sbc.o" "/c" "sbc/sbc/sbc.c" with args "cl.exe" did not execute successfully (status code exit code: 2).
+[INFO] [stderr] 
+[INFO] [stderr] 
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "842d7a82d50e1fe6d91a97b6900a230cf1c8e12a3664c69956984de7d99d023c"`
+[INFO] running `"docker" "rm" "-f" "842d7a82d50e1fe6d91a97b6900a230cf1c8e12a3664c69956984de7d99d023c"`
+[INFO] [stdout] 842d7a82d50e1fe6d91a97b6900a230cf1c8e12a3664c69956984de7d99d023c

@@ -1,0 +1,73 @@
+[INFO] cloning repository nzsc-org/nzsc_single_player_web
+[INFO] running `"git" "clone" "--bare" "git://github.com/nzsc-org/nzsc_single_player_web.git" "work\\cache\\sources\\gh\\nzsc-org\\nzsc_single_player_web"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\nzsc-org\nzsc_single_player_web'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\nzsc-org\\nzsc_single_player_web" "work\\ex\\default\\sources\\stable\\gh\\nzsc-org\\nzsc_single_player_web"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\nzsc-org\nzsc_single_player_web'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\nzsc-org\\nzsc_single_player_web" "work\\ex\\default\\sources\\beta\\gh\\nzsc-org\\nzsc_single_player_web"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\nzsc-org\nzsc_single_player_web'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f2d337c984ffd6f791dde8319f833e1c14570fbf
+[INFO] sha for GitHub repo nzsc-org/nzsc_single_player_web: f2d337c984ffd6f791dde8319f833e1c14570fbf
+[INFO] validating manifest of nzsc-org/nzsc_single_player_web on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nzsc-org/nzsc_single_player_web on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nzsc-org/nzsc_single_player_web
+[INFO] finished frobbing nzsc-org/nzsc_single_player_web
+[INFO] frobbed toml for nzsc-org/nzsc_single_player_web written to work\ex\default\sources\stable\gh\nzsc-org\nzsc_single_player_web\Cargo.toml
+[INFO] started frobbing nzsc-org/nzsc_single_player_web
+[INFO] finished frobbing nzsc-org/nzsc_single_player_web
+[INFO] frobbed toml for nzsc-org/nzsc_single_player_web written to work\ex\default\sources\beta\gh\nzsc-org\nzsc_single_player_web\Cargo.toml
+[INFO] crate nzsc-org/nzsc_single_player_web already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded wasm-bindgen v0.2.10
+[INFO] [stderr]   Downloaded wasm-bindgen-shared v0.2.10
+[INFO] [stderr]   Downloaded serde_derive v1.0.59
+[INFO] [stderr]   Downloaded syn v0.14.0
+[INFO] [stderr]   Downloaded quote v0.6.2
+[INFO] [stderr]   Downloaded proc-macro2 v0.4.3
+[INFO] [stderr]   Downloaded serde v1.0.59
+[INFO] [stderr]   Downloaded wasm-bindgen-backend v0.2.10
+[INFO] [stderr]   Downloaded serde_json v1.0.17
+[INFO] [stderr]   Downloaded itoa v0.4.1
+[INFO] [stderr]   Downloaded nzsc_single_player_text_interface v0.2.2
+[INFO] [stderr]   Downloaded nzsc_single_player v0.5.1
+[INFO] [stderr]   Downloaded wasm-bindgen-macro v0.2.10
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nzsc-org/nzsc_single_player_web against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\nzsc-org\\nzsc_single_player_web,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 5760af804e2bc68887e32a227ac1bb1bd64df6aa3f044fae3dc34349cbfa6728
+[INFO] running `"docker" "start" "-a" "5760af804e2bc68887e32a227ac1bb1bd64df6aa3f044fae3dc34349cbfa6728"`
+[INFO] [stderr]    Compiling serde v1.0.59
+[INFO] [stderr]    Compiling wasm-bindgen-shared v0.2.10
+[INFO] [stderr]    Compiling itoa v0.4.1
+[INFO] [stderr]    Compiling nzsc_single_player v0.5.1
+[INFO] [stderr]    Compiling proc-macro2 v0.4.3
+[INFO] [stderr]    Compiling proc-macro2 v0.3.8
+[INFO] [stderr]    Compiling nzsc_single_player_text_interface v0.2.2
+[INFO] [stderr]    Compiling quote v0.6.2
+[INFO] [stderr]    Compiling quote v0.5.2
+[INFO] [stderr]    Compiling syn v0.14.0
+[INFO] [stderr]    Compiling syn v0.13.11
+[INFO] [stderr]    Compiling serde_derive v1.0.59
+[INFO] [stderr]    Compiling serde_json v1.0.17
+[INFO] [stderr]    Compiling wasm-bindgen-backend v0.2.10
+[INFO] [stderr]    Compiling wasm-bindgen-macro v0.2.10
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\wasm-bindgen-macro-0.2.10\src\lib.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(proc_macro)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0554`.
+[INFO] [stderr] error: Could not compile `wasm-bindgen-macro`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "5760af804e2bc68887e32a227ac1bb1bd64df6aa3f044fae3dc34349cbfa6728"`
+[INFO] running `"docker" "rm" "-f" "5760af804e2bc68887e32a227ac1bb1bd64df6aa3f044fae3dc34349cbfa6728"`
+[INFO] [stdout] 5760af804e2bc68887e32a227ac1bb1bd64df6aa3f044fae3dc34349cbfa6728

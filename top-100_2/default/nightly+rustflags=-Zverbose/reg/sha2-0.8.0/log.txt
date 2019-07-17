@@ -1,0 +1,90 @@
+[INFO] crate sha2 0.8.0 is already in cache
+[INFO] extracting crate sha2 0.8.0 into work\ex\default\sources\nightly\reg\sha2\0.8.0
+[INFO] extracting crate sha2 0.8.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\sha2\0.8.0
+[INFO] validating manifest of sha2-0.8.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sha2-0.8.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sha2-0.8.0
+[INFO] finished frobbing sha2-0.8.0
+[INFO] frobbed toml for sha2-0.8.0 written to work\ex\default\sources\nightly\reg\sha2\0.8.0\Cargo.toml
+[INFO] started frobbing sha2-0.8.0
+[INFO] finished frobbing sha2-0.8.0
+[INFO] frobbed toml for sha2-0.8.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\sha2\0.8.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sha2-0.8.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\sha2\\0.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 71d5c926c0225d0649835e41f87f14e315b49308477bf60bd7bb7c0ceb2768db
+[INFO] running `"docker" "start" "-a" "71d5c926c0225d0649835e41f87f14e315b49308477bf60bd7bb7c0ceb2768db"`
+[INFO] [stderr]    Compiling typenum v1.10.0
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling byte-tools v0.3.1
+[INFO] [stderr]    Compiling opaque-debug v0.2.2
+[INFO] [stderr]    Compiling fake-simd v0.1.2
+[INFO] [stderr]    Compiling block-padding v0.1.4
+[INFO] [stderr]    Compiling blobby v0.1.2
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling digest v0.8.1
+[INFO] [stderr]    Compiling block-buffer v0.7.3
+[INFO] [stderr]    Compiling sha2 v0.8.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 16.60s
+[INFO] running `"docker" "inspect" "71d5c926c0225d0649835e41f87f14e315b49308477bf60bd7bb7c0ceb2768db"`
+[INFO] running `"docker" "rm" "-f" "71d5c926c0225d0649835e41f87f14e315b49308477bf60bd7bb7c0ceb2768db"`
+[INFO] [stdout] 71d5c926c0225d0649835e41f87f14e315b49308477bf60bd7bb7c0ceb2768db
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\sha2\\0.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 61bdd50c33006edbfee1c65292a7c3d3d0b5a12163595ac0297380d4f0a2ee98
+[INFO] running `"docker" "start" "-a" "61bdd50c33006edbfee1c65292a7c3d3d0b5a12163595ac0297380d4f0a2ee98"`
+[INFO] [stderr]    Compiling proc-macro-hack-impl v0.4.2
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.2
+[INFO] [stderr]    Compiling hex-literal-impl v0.1.2
+[INFO] [stderr]    Compiling hex-literal v0.1.4
+[INFO] [stderr]    Compiling sha2 v0.8.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.13s
+[INFO] running `"docker" "inspect" "61bdd50c33006edbfee1c65292a7c3d3d0b5a12163595ac0297380d4f0a2ee98"`
+[INFO] running `"docker" "rm" "-f" "61bdd50c33006edbfee1c65292a7c3d3d0b5a12163595ac0297380d4f0a2ee98"`
+[INFO] [stdout] 61bdd50c33006edbfee1c65292a7c3d3d0b5a12163595ac0297380d4f0a2ee98
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\sha2\\0.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2d6ca5334da671cddad5e1fb55cbacc330fa45f7ae840b6d96620386a02d9e50
+[INFO] running `"docker" "start" "-a" "2d6ca5334da671cddad5e1fb55cbacc330fa45f7ae840b6d96620386a02d9e50"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.37s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\sha2-85ab4e1ef144bb19.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-0a57560a15f4c848.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 8 tests
+[INFO] [stdout] test sha224_main ... ok
+[INFO] [stdout] test sha256_main ... ok
+[INFO] [stdout] test sha384_main ... ok
+[INFO] [stdout] test sha512_224_main ... ok
+[INFO] [stdout] test sha512_256_main ... ok
+[INFO] [stdout] test sha512_main ... ok
+[INFO] [stdout] test sha512_1million_a ... ok
+[INFO] [stdout] test sha256_1million_a ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests sha2
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test src\sha256_utils.rs - sha256_utils::compress256 (line 185) ... ignored
+[INFO] [stdout] test src\sha256_utils.rs - sha256_utils::compress256 (line 213) ... ignored
+[INFO] [stdout] test src\sha256_utils.rs - sha256_utils::compress256 (line 221) ... ignored
+[INFO] [stdout] test src\sha256_utils.rs - sha256_utils::compress256 (line 247) ... ignored
+[INFO] [stdout] test src\sha512_utils.rs - sha512_utils::compress512 (line 203) ... ignored
+[INFO] [stdout] test src\sha512_utils.rs - sha512_utils::compress512 (line 235) ... ignored
+[INFO] [stdout] test src\sha512_utils.rs - sha512_utils::compress512 (line 243) ... ignored
+[INFO] [stdout] test src\sha512_utils.rs - sha512_utils::compress512 (line 271) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 22) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 8 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2d6ca5334da671cddad5e1fb55cbacc330fa45f7ae840b6d96620386a02d9e50"`
+[INFO] running `"docker" "rm" "-f" "2d6ca5334da671cddad5e1fb55cbacc330fa45f7ae840b6d96620386a02d9e50"`
+[INFO] [stdout] 2d6ca5334da671cddad5e1fb55cbacc330fa45f7ae840b6d96620386a02d9e50

@@ -1,0 +1,55 @@
+[INFO] cloning repository vksmgr/Learn_Rust_Programming
+[INFO] running `"git" "clone" "--bare" "git://github.com/vksmgr/Learn_Rust_Programming.git" "work\\cache\\sources\\gh\\vksmgr\\Learn_Rust_Programming"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\vksmgr\Learn_Rust_Programming'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\vksmgr\\Learn_Rust_Programming" "work\\ex\\default\\sources\\nightly\\gh\\vksmgr\\Learn_Rust_Programming"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\vksmgr\Learn_Rust_Programming'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\vksmgr\\Learn_Rust_Programming" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\vksmgr\\Learn_Rust_Programming"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\vksmgr\Learn_Rust_Programming'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 04d108e88a5217d3c603f557fb411b91f3036bb5
+[INFO] sha for GitHub repo vksmgr/Learn_Rust_Programming: 04d108e88a5217d3c603f557fb411b91f3036bb5
+[INFO] validating manifest of vksmgr/Learn_Rust_Programming on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of vksmgr/Learn_Rust_Programming on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing vksmgr/Learn_Rust_Programming
+[INFO] finished frobbing vksmgr/Learn_Rust_Programming
+[INFO] frobbed toml for vksmgr/Learn_Rust_Programming written to work\ex\default\sources\nightly\gh\vksmgr\Learn_Rust_Programming\Cargo.toml
+[INFO] started frobbing vksmgr/Learn_Rust_Programming
+[INFO] finished frobbing vksmgr/Learn_Rust_Programming
+[INFO] frobbed toml for vksmgr/Learn_Rust_Programming written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\vksmgr\Learn_Rust_Programming\Cargo.toml
+[INFO] crate vksmgr/Learn_Rust_Programming already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing vksmgr/Learn_Rust_Programming against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\vksmgr\\Learn_Rust_Programming,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d29d0a6d038360368c42cdfcd0e373e1b09b4a6d0d2f33a1cd105044692a87d7
+[INFO] running `"docker" "start" "-a" "d29d0a6d038360368c42cdfcd0e373e1b09b4a6d0d2f33a1cd105044692a87d7"`
+[INFO] [stderr]    Compiling algorithms v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.77s
+[INFO] running `"docker" "inspect" "d29d0a6d038360368c42cdfcd0e373e1b09b4a6d0d2f33a1cd105044692a87d7"`
+[INFO] running `"docker" "rm" "-f" "d29d0a6d038360368c42cdfcd0e373e1b09b4a6d0d2f33a1cd105044692a87d7"`
+[INFO] [stdout] d29d0a6d038360368c42cdfcd0e373e1b09b4a6d0d2f33a1cd105044692a87d7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\vksmgr\\Learn_Rust_Programming,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 410557de74f62fd9aa8b16e975241f031a298ff12a41ca1f13fdba7af1ce2f07
+[INFO] running `"docker" "start" "-a" "410557de74f62fd9aa8b16e975241f031a298ff12a41ca1f13fdba7af1ce2f07"`
+[INFO] [stderr]    Compiling algorithms v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.32s
+[INFO] running `"docker" "inspect" "410557de74f62fd9aa8b16e975241f031a298ff12a41ca1f13fdba7af1ce2f07"`
+[INFO] running `"docker" "rm" "-f" "410557de74f62fd9aa8b16e975241f031a298ff12a41ca1f13fdba7af1ce2f07"`
+[INFO] [stdout] 410557de74f62fd9aa8b16e975241f031a298ff12a41ca1f13fdba7af1ce2f07
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\vksmgr\\Learn_Rust_Programming,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3d713ec4fc03e9594ba0874d580b3d70aaf82b9ad7456634fde757e4a539142b
+[INFO] running `"docker" "start" "-a" "3d713ec4fc03e9594ba0874d580b3d70aaf82b9ad7456634fde757e4a539142b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\algorithms-8d1949fc5554dce0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3d713ec4fc03e9594ba0874d580b3d70aaf82b9ad7456634fde757e4a539142b"`
+[INFO] running `"docker" "rm" "-f" "3d713ec4fc03e9594ba0874d580b3d70aaf82b9ad7456634fde757e4a539142b"`
+[INFO] [stdout] 3d713ec4fc03e9594ba0874d580b3d70aaf82b9ad7456634fde757e4a539142b

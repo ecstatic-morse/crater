@@ -1,0 +1,58 @@
+[INFO] fetching crate vietnam 0.0.0...
+[INFO] extracting crate vietnam 0.0.0 into work\ex\default\sources\stable\reg\vietnam\0.0.0
+[INFO] extracting crate vietnam 0.0.0 into work\ex\default\sources\beta\reg\vietnam\0.0.0
+[INFO] validating manifest of vietnam-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of vietnam-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing vietnam-0.0.0
+[INFO] finished frobbing vietnam-0.0.0
+[INFO] frobbed toml for vietnam-0.0.0 written to work\ex\default\sources\stable\reg\vietnam\0.0.0\Cargo.toml
+[INFO] started frobbing vietnam-0.0.0
+[INFO] finished frobbing vietnam-0.0.0
+[INFO] frobbed toml for vietnam-0.0.0 written to work\ex\default\sources\beta\reg\vietnam\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing vietnam-0.0.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\vietnam\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] a32a592ec3d694c5b0c8596b26ee64806a6d96cebe5e539f496237b8b5708770
+[INFO] running `"docker" "start" "-a" "a32a592ec3d694c5b0c8596b26ee64806a6d96cebe5e539f496237b8b5708770"`
+[INFO] [stderr]    Compiling vietnam v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.91s
+[INFO] running `"docker" "inspect" "a32a592ec3d694c5b0c8596b26ee64806a6d96cebe5e539f496237b8b5708770"`
+[INFO] running `"docker" "rm" "-f" "a32a592ec3d694c5b0c8596b26ee64806a6d96cebe5e539f496237b8b5708770"`
+[INFO] [stdout] a32a592ec3d694c5b0c8596b26ee64806a6d96cebe5e539f496237b8b5708770
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\vietnam\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 682150ee8a1c39bb41493ecabd56b9ae12174bb3b65008439c80f302330464f9
+[INFO] running `"docker" "start" "-a" "682150ee8a1c39bb41493ecabd56b9ae12174bb3b65008439c80f302330464f9"`
+[INFO] [stderr]    Compiling vietnam v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.51s
+[INFO] running `"docker" "inspect" "682150ee8a1c39bb41493ecabd56b9ae12174bb3b65008439c80f302330464f9"`
+[INFO] running `"docker" "rm" "-f" "682150ee8a1c39bb41493ecabd56b9ae12174bb3b65008439c80f302330464f9"`
+[INFO] [stdout] 682150ee8a1c39bb41493ecabd56b9ae12174bb3b65008439c80f302330464f9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\vietnam\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] df02132c360bef7f8d2d2dc0f126741104660e91b1994cee6363dd901c7700d4
+[INFO] running `"docker" "start" "-a" "df02132c360bef7f8d2d2dc0f126741104660e91b1994cee6363dd901c7700d4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\vietnam-52ab24d87d95c5f1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stderr]    Doc-tests vietnam
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "df02132c360bef7f8d2d2dc0f126741104660e91b1994cee6363dd901c7700d4"`
+[INFO] running `"docker" "rm" "-f" "df02132c360bef7f8d2d2dc0f126741104660e91b1994cee6363dd901c7700d4"`
+[INFO] [stdout] df02132c360bef7f8d2d2dc0f126741104660e91b1994cee6363dd901c7700d4

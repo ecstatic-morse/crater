@@ -1,0 +1,35 @@
+[INFO] fetching crate optee-teec 0.0.1...
+[INFO] extracting crate optee-teec 0.0.1 into work\ex\default\sources\nightly\reg\optee-teec\0.0.1
+[INFO] extracting crate optee-teec 0.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\optee-teec\0.0.1
+[INFO] validating manifest of optee-teec-0.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of optee-teec-0.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing optee-teec-0.0.1
+[INFO] finished frobbing optee-teec-0.0.1
+[INFO] frobbed toml for optee-teec-0.0.1 written to work\ex\default\sources\nightly\reg\optee-teec\0.0.1\Cargo.toml
+[INFO] started frobbing optee-teec-0.0.1
+[INFO] finished frobbing optee-teec-0.0.1
+[INFO] frobbed toml for optee-teec-0.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\optee-teec\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded optee-teec-sys v0.0.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing optee-teec-0.0.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\optee-teec\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5250d440955b08443cf1fdbf74206d2f97acdec5f2ca24734b929b0170d2de52
+[INFO] running `"docker" "start" "-a" "5250d440955b08443cf1fdbf74206d2f97acdec5f2ca24734b929b0170d2de52"`
+[INFO] [stderr]    Compiling optee-teec-sys v0.0.1
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr] error: could not find native static library `teec`, perhaps an -L flag is missing?
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `optee-teec-sys`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "5250d440955b08443cf1fdbf74206d2f97acdec5f2ca24734b929b0170d2de52"`
+[INFO] running `"docker" "rm" "-f" "5250d440955b08443cf1fdbf74206d2f97acdec5f2ca24734b929b0170d2de52"`
+[INFO] [stdout] 5250d440955b08443cf1fdbf74206d2f97acdec5f2ca24734b929b0170d2de52

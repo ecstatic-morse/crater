@@ -1,0 +1,94 @@
+[INFO] fetching crate ionosphere 0.3.0...
+[INFO] extracting crate ionosphere 0.3.0 into work\ex\default\sources\stable\reg\ionosphere\0.3.0
+[INFO] extracting crate ionosphere 0.3.0 into work\ex\default\sources\beta\reg\ionosphere\0.3.0
+[INFO] validating manifest of ionosphere-0.3.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ionosphere-0.3.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ionosphere-0.3.0
+[INFO] finished frobbing ionosphere-0.3.0
+[INFO] frobbed toml for ionosphere-0.3.0 written to work\ex\default\sources\stable\reg\ionosphere\0.3.0\Cargo.toml
+[INFO] started frobbing ionosphere-0.3.0
+[INFO] finished frobbing ionosphere-0.3.0
+[INFO] frobbed toml for ionosphere-0.3.0 written to work\ex\default\sources\beta\reg\ionosphere\0.3.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded cc v1.0.26
+[INFO] [stderr]   Downloaded secp256k1 v0.11.6
+[INFO] [stderr]   Downloaded bitcoin_hashes v0.1.0
+[INFO] [stderr]   Downloaded bech32 v0.5.0
+[INFO] [stderr]   Downloaded clightningrpc v0.1.0
+[INFO] [stderr]   Downloaded strason v0.4.0
+[INFO] [stderr]   Downloaded lightning-invoice v0.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ionosphere-0.3.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ionosphere\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 268f75aaf7a8622baf657b6917ac95d3ce71dfc33d45a9f6efb78a61f7711df0
+[INFO] running `"docker" "start" "-a" "268f75aaf7a8622baf657b6917ac95d3ce71dfc33d45a9f6efb78a61f7711df0"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling cc v1.0.26
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling encoding_rs v0.8.17
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling bech32 v0.5.0
+[INFO] [stderr]    Compiling error-chain v0.12.1
+[INFO] [stderr]    Compiling try_from v0.3.2
+[INFO] [stderr]    Compiling miniz_oxide v0.2.2
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling bitcoin_hashes v0.1.0
+[INFO] [stderr]    Compiling base64 v0.10.1
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling miniz_oxide_c_api v0.2.2
+[INFO] [stderr]    Compiling secp256k1 v0.11.6
+[INFO] [stderr]    Compiling phf_shared v0.7.24
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling phf v0.7.24
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr]    Compiling winreg v0.6.1
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling cookie v0.12.0
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr]    Compiling flate2 v1.0.9
+[INFO] [stderr]    Compiling native-tls v0.2.3
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling phf_generator v0.7.24
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.15
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling lightning-invoice v0.1.0
+[INFO] [stderr]    Compiling phf_codegen v0.7.24
+[INFO] [stderr] error[E0512]: cannot transmute between types of different sizes, or dependently-sized types
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\lightning-invoice-0.1.0\src\lib.rs:59:11
+[INFO] [stderr]    |
+[INFO] [stderr] 59 |     unsafe { std::mem::transmute::<SystemTime, [u8; 16]>(UNIX_EPOCH); }
+[INFO] [stderr]    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: source type: `std::time::SystemTime` (64 bits)
+[INFO] [stderr]    = note: target type: `[u8; 16]` (128 bits)
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0512`.
+[INFO] [stderr] error: Could not compile `lightning-invoice`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "268f75aaf7a8622baf657b6917ac95d3ce71dfc33d45a9f6efb78a61f7711df0"`
+[INFO] running `"docker" "rm" "-f" "268f75aaf7a8622baf657b6917ac95d3ce71dfc33d45a9f6efb78a61f7711df0"`
+[INFO] [stdout] 268f75aaf7a8622baf657b6917ac95d3ce71dfc33d45a9f6efb78a61f7711df0

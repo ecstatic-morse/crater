@@ -1,0 +1,290 @@
+[INFO] fetching crate ring 0.15.0-alpha6...
+[INFO] extracting crate ring 0.15.0-alpha6 into work\ex\default\sources\stable\reg\ring\0.15.0-alpha6
+[INFO] extracting crate ring 0.15.0-alpha6 into work\ex\default\sources\beta\reg\ring\0.15.0-alpha6
+[INFO] validating manifest of ring-0.15.0-alpha6 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ring-0.15.0-alpha6 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ring-0.15.0-alpha6
+[INFO] finished frobbing ring-0.15.0-alpha6
+[INFO] frobbed toml for ring-0.15.0-alpha6 written to work\ex\default\sources\stable\reg\ring\0.15.0-alpha6\Cargo.toml
+[INFO] started frobbing ring-0.15.0-alpha6
+[INFO] finished frobbing ring-0.15.0-alpha6
+[INFO] frobbed toml for ring-0.15.0-alpha6 written to work\ex\default\sources\beta\reg\ring\0.15.0-alpha6\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded web-sys v0.3.25
+[INFO] [stderr]   Downloaded js-sys v0.3.25
+[INFO] [stderr]   Downloaded nom v4.2.3
+[INFO] [stderr]   Downloaded sourcefile v0.1.4
+[INFO] [stderr]   Downloaded scoped-tls v1.0.0
+[INFO] [stderr]   Downloaded untrusted v0.7.0
+[INFO] [stderr]   Downloaded wasm-bindgen-test v0.2.48
+[INFO] [stderr]   Downloaded wasm-bindgen-test-macro v0.2.48
+[INFO] [stderr]   Downloaded weedle v0.10.0
+[INFO] [stderr]   Downloaded wasm-bindgen-webidl v0.2.48
+[INFO] [stderr]   Downloaded wasm-bindgen-futures v0.3.25
+[INFO] [stderr]   Downloaded console_error_panic_hook v0.1.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ring-0.15.0-alpha6 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ring\\0.15.0-alpha6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 691a05c46af5a5f2e538cfb3139c70a739de8f618ae47960e6183e1bcf9e7174
+[INFO] running `"docker" "start" "-a" "691a05c46af5a5f2e538cfb3139c70a739de8f618ae47960e6183e1bcf9e7174"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling spin v0.5.0
+[INFO] [stderr]    Compiling untrusted v0.7.0
+[INFO] [stderr]    Compiling ring v0.15.0-alpha6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 11s
+[INFO] running `"docker" "inspect" "691a05c46af5a5f2e538cfb3139c70a739de8f618ae47960e6183e1bcf9e7174"`
+[INFO] running `"docker" "rm" "-f" "691a05c46af5a5f2e538cfb3139c70a739de8f618ae47960e6183e1bcf9e7174"`
+[INFO] [stdout] 691a05c46af5a5f2e538cfb3139c70a739de8f618ae47960e6183e1bcf9e7174
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ring\\0.15.0-alpha6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] dc3a4447680956c0bcb4d64c87e2a28e9b14b6c9a246c6d4c927d03921745961
+[INFO] running `"docker" "start" "-a" "dc3a4447680956c0bcb4d64c87e2a28e9b14b6c9a246c6d4c927d03921745961"`
+[INFO] [stderr]    Compiling ring v0.15.0-alpha6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 37.21s
+[INFO] running `"docker" "inspect" "dc3a4447680956c0bcb4d64c87e2a28e9b14b6c9a246c6d4c927d03921745961"`
+[INFO] running `"docker" "rm" "-f" "dc3a4447680956c0bcb4d64c87e2a28e9b14b6c9a246c6d4c927d03921745961"`
+[INFO] [stdout] dc3a4447680956c0bcb4d64c87e2a28e9b14b6c9a246c6d4c927d03921745961
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\ring\\0.15.0-alpha6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 53375c6197f4ba685fd11f84f23cc360197db1c5e0c3ee35e9b82498e9c69b69
+[INFO] running `"docker" "start" "-a" "53375c6197f4ba685fd11f84f23cc360197db1c5e0c3ee35e9b82498e9c69b69"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.92s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ring-d5d2802daac8c0f4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 87 tests
+[INFO] [stdout] test aead::aes::tests::test_aes ... ok
+[INFO] [stdout] test aead::aes_gcm::tests::max_input_len_test ... ok
+[INFO] [stdout] test aead::block::tests::test_bitxor_assign ... ok
+[INFO] [stdout] test aead::chacha20_poly1305::tests::max_input_len_test ... ok
+[INFO] [stdout] test aead::poly1305::tests::test_poly1305 ... ok
+[INFO] [stdout] test aead::poly1305::tests::test_state_layout ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_exp_consttime ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_mul ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_mul ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_reduced ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_reduced_once ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_elem_squared ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_modulus_debug ... ok
+[INFO] [stdout] test arithmetic::bigint::tests::test_public_exponent_debug ... ok
+[INFO] [stdout] test bssl::tests::result::semantics ... ok
+[INFO] [stdout] test bssl::tests::result::size_and_alignment ... ok
+[INFO] [stdout] test constant_time::tests::test_constant_time ... ok
+[INFO] [stdout] test cpu::intel::x86_64_tests::test_avx_movbe_mask ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA1_FOR_LEGACY_USE_ONLY::max_input_test ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA256::max_input_test ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA1_FOR_LEGACY_USE_ONLY::too_long_input_test_block ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA1_FOR_LEGACY_USE_ONLY::too_long_input_test_byte ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA256::too_long_input_test_block ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA384::max_input_test ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA256::too_long_input_test_byte ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA384::too_long_input_test_block ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA512::max_input_test ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA384::too_long_input_test_byte ... ok
+[INFO] [stdout] test ec::suite_b::ecdh::tests::test_agreement_suite_b_ecdh_generate ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA512::too_long_input_test_block ... ok
+[INFO] [stdout] test ec::suite_b::ecdsa::digest_scalar::tests::test ... ok
+[INFO] [stdout] test ec::suite_b::ecdsa::signing::tests::signature_ecdsa_sign_asn1_test ... ok
+[INFO] [stdout] test digest::tests::max_input::SHA512::too_long_input_test_byte ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_elem_add_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_elem_mul_test ... ok
+[INFO] [stdout] test ec::suite_b::ecdsa::signing::tests::signature_ecdsa_sign_fixed_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_elem_neg_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_double_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_mul_serialized_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_mul_base_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_sum_mixed_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_sum_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_point_mul_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_q_minus_n_plus_n_equals_0_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_scalar_mul_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_scalar_inv_to_mont_zero_panic_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p256_scalar_square_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_elem_div_by_2_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_elem_add_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_elem_mul_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_elem_neg_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_point_double_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_elem_sub_test ... ok
+[INFO] [stdout] test ec::suite_b::ecdsa::verification::tests::test_digest_based_test_vectors ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_point_sum_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_q_minus_n_plus_n_equals_0_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_scalar_inv_to_mont_zero_panic_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_scalar_mul_test ... ok
+[INFO] [stdout] test ec::suite_b::public_key::tests::parse_uncompressed_point_test ... ok
+[INFO] [stdout] test endian::tests::test_big_endian ... ok
+[INFO] [stdout] test hmac::tests::hmac_signing_key_coverage ... ok
+[INFO] [stdout] test io::der::tests::test_positive_integer ... ok
+[INFO] [stdout] test io::der::tests::test_small_nonnegative_integer ... ok
+[INFO] [stdout] test limb::tests::test_big_endian_from_limbs_fewer_limbs ... ok
+[INFO] [stdout] test limb::tests::test_big_endian_from_limbs_same_length ... ok
+[INFO] [stdout] test limb::tests::test_limbs_are_even ... ok
+[INFO] [stdout] test limb::tests::test_limbs_are_zero ... ok
+[INFO] [stdout] test limb::tests::test_limbs_equal_limb ... ok
+[INFO] [stdout] test limb::tests::test_limbs_less_than_limb_constant_time ... ok
+[INFO] [stdout] test limb::tests::test_limbs_minimal_bits ... ok
+[INFO] [stdout] test limb::tests::test_parse_big_endian_and_pad_consttime ... ok
+[INFO] [stdout] test rsa::padding::test::test_pss_padding_encode ... ok
+[INFO] [stdout] test rsa::padding::test::test_pss_padding_verify ... ok
+[INFO] [stdout] test rsa::signing::tests::test_signature_rsa_pkcs1_sign_output_buffer_len ... ok
+[INFO] [stdout] test test::tests::first_err ... ok
+[INFO] [stdout] test test::tests::first_panic ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_point_mul_base_test ... ok
+[INFO] [stdout] test ec::suite_b::ops::tests::p384_point_mul_test ... ok
+[INFO] [stdout] test test::tests::last_err ... ok
+[INFO] [stdout] test test::tests::middle_err ... ok
+[INFO] [stdout] test test::tests::last_panic ... ok
+[INFO] [stdout] test test::tests::one_ok ... ok
+[INFO] [stdout] test test::tests::one_err ... ok
+[INFO] [stdout] test test::tests::syntax_error ... ok
+[INFO] [stdout] test test::tests::middle_panic ... ok
+[INFO] [stdout] test test::tests::one_panics ... ok
+[INFO] [stdout] test aead::chacha::tests::chacha20_tests ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 87 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\aead_tests-209c64304f3821a4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test aead_chacha20_poly1305_openssh ... ok
+[INFO] [stdout] test test_aead_key_debug ... ok
+[INFO] [stdout] test test_aead_nonce_sizes ... ok
+[INFO] [stdout] test aead_chacha20_poly1305 ... ok
+[INFO] [stdout] test aead_aes_gcm_128 ... ok
+[INFO] [stdout] test aead_aes_gcm_256 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\agreement_tests-36a890d644b48b22.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test agreement_agree_ephemeral ... ok
+[INFO] [stdout] test test_agreement_ecdh_x25519_rfc_iterated ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\digest_tests-61ea71ac8cd925d2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test digest_shavs::SHA1_FOR_LEGACY_USE_ONLY::short_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA1_FOR_LEGACY_USE_ONLY::long_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA256::long_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA256::short_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA384::long_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA256::monte_carlo_test ... ok
+[INFO] [stdout] test digest_shavs::SHA384::short_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_shavs::SHA512::long_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_misc ... ok
+[INFO] [stdout] test digest_shavs::SHA384::monte_carlo_test ... ok
+[INFO] [stdout] test digest_shavs::SHA512::short_msg_known_answer_test ... ok
+[INFO] [stdout] test digest_test_fmt ... ok
+[INFO] [stdout] test test_fmt_algorithm ... ok
+[INFO] [stdout] test digest_shavs::SHA512::monte_carlo_test ... ok
+[INFO] [stdout] test digest_shavs::SHA1_FOR_LEGACY_USE_ONLY::monte_carlo_test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ecdsa_tests-1577233e6cd8f3b8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test ecdsa_from_pkcs8_test ... ok
+[INFO] [stdout] test ecdsa_test_public_key_coverage ... ok
+[INFO] [stdout] test ecdsa_generate_pkcs8_test ... ok
+[INFO] [stdout] test signature_ecdsa_verify_fixed_test ... ok
+[INFO] [stdout] test signature_ecdsa_verify_asn1_test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ed25519_tests-c0565312d73a34e1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test ed25519_test_public_key_coverage ... ok
+[INFO] [stdout] test test_ed25519_from_pkcs8 ... ok
+[INFO] [stdout] test test_ed25519_from_pkcs8_unchecked ... ok
+[INFO] [stdout] test test_ed25519_from_seed_and_public_key_misuse ... ok
+[INFO] [stdout] test test_signature_ed25519 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hkdf_tests-dafe63e26ddbd180.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test hkdf_tests ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hmac_tests-c202db5f27468787.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test hmac_debug ... ok
+[INFO] [stdout] test hmac_tests ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\pbkdf2_tests-a08d72dac1cfccbe.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test pbkdf2_tests ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quic_tests-4807a1e9bf5f1255.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test quic_aes_128 ... ok
+[INFO] [stdout] test quic_aes_256 ... ok
+[INFO] [stdout] test quic_chacha20 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rand_tests-d1e37dad1dd7e00c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_system_random_lengths ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rsa_tests-8f2310bd72f50ddb.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test rsa_test_public_key_coverage ... ok
+[INFO] [stdout] test rsa_from_pkcs8_test ... ok
+[INFO] [stdout] test test_signature_rsa_primitive_verification ... ok
+[INFO] [stdout] test test_signature_rsa_pss_verify ... ok
+[INFO] [stdout] test test_signature_rsa_pss_sign ... ok
+[INFO] [stdout] test test_signature_rsa_pkcs1_verify ... ok
+[INFO] [stdout] test test_signature_rsa_pkcs1_sign ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\signature_tests-39d9eacf0cf8bf20.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test signature_impl_test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests ring
+[INFO] [stdout] 
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test src\error.rs - error::Unspecified (line 33) ... ok
+[INFO] [stdout] test src\digest.rs - digest::Context (line 120) ... ok
+[INFO] [stdout] test src\digest.rs - digest::digest (line 209) ... ok
+[INFO] [stdout] test src\agreement.rs - agreement (line 23) ... ok
+[INFO] [stdout] test src\hmac.rs - hmac (line 31) ... ok
+[INFO] [stdout] test src\hmac.rs - hmac (line 51) ... ok
+[INFO] [stdout] test src\hmac.rs - hmac (line 75) ... ok
+[INFO] [stdout] test src\test.rs - test (line 53) ... ignored
+[INFO] [stdout] test src\signature.rs - signature (line 129) ... ok
+[INFO] [stdout] test src\signature.rs - signature (line 195) ... ok
+[INFO] [stdout] test src\pbkdf2.rs - pbkdf2 (line 32) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "53375c6197f4ba685fd11f84f23cc360197db1c5e0c3ee35e9b82498e9c69b69"`
+[INFO] running `"docker" "rm" "-f" "53375c6197f4ba685fd11f84f23cc360197db1c5e0c3ee35e9b82498e9c69b69"`
+[INFO] [stdout] 53375c6197f4ba685fd11f84f23cc360197db1c5e0c3ee35e9b82498e9c69b69

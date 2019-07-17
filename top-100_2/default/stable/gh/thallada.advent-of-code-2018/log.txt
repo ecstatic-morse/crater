@@ -1,0 +1,122 @@
+[INFO] cloning repository thallada/advent-of-code-2018
+[INFO] running `"git" "clone" "--bare" "git://github.com/thallada/advent-of-code-2018.git" "work\\cache\\sources\\gh\\thallada\\advent-of-code-2018"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\thallada\advent-of-code-2018'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\thallada\\advent-of-code-2018" "work\\ex\\default\\sources\\stable\\gh\\thallada\\advent-of-code-2018"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\thallada\advent-of-code-2018'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\thallada\\advent-of-code-2018" "work\\ex\\default\\sources\\beta\\gh\\thallada\\advent-of-code-2018"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\thallada\advent-of-code-2018'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 21a0815fd72021a5b81cf7ec01121d838d3c7892
+[INFO] sha for GitHub repo thallada/advent-of-code-2018: 21a0815fd72021a5b81cf7ec01121d838d3c7892
+[INFO] validating manifest of thallada/advent-of-code-2018 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of thallada/advent-of-code-2018 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing thallada/advent-of-code-2018
+[INFO] finished frobbing thallada/advent-of-code-2018
+[INFO] frobbed toml for thallada/advent-of-code-2018 written to work\ex\default\sources\stable\gh\thallada\advent-of-code-2018\Cargo.toml
+[INFO] started frobbing thallada/advent-of-code-2018
+[INFO] finished frobbing thallada/advent-of-code-2018
+[INFO] frobbed toml for thallada/advent-of-code-2018 written to work\ex\default\sources\beta\gh\thallada\advent-of-code-2018\Cargo.toml
+[INFO] crate thallada/advent-of-code-2018 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing thallada/advent-of-code-2018 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\thallada\\advent-of-code-2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 2c1e7596f6c53b3dce14c5166b490ae101c60bd469ac8c1f64018290785159c9
+[INFO] running `"docker" "start" "-a" "2c1e7596f6c53b3dce14c5166b490ae101c60bd469ac8c1f64018290785159c9"`
+[INFO] [stderr]    Compiling libc v0.2.45
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling memchr v2.1.2
+[INFO] [stderr]    Compiling regex-syntax v0.6.4
+[INFO] [stderr]    Compiling aho-corasick v0.6.9
+[INFO] [stderr]    Compiling time v0.1.41
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling regex v1.1.0
+[INFO] [stderr]    Compiling advent-of-code-2018 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 50.64s
+[INFO] running `"docker" "inspect" "2c1e7596f6c53b3dce14c5166b490ae101c60bd469ac8c1f64018290785159c9"`
+[INFO] running `"docker" "rm" "-f" "2c1e7596f6c53b3dce14c5166b490ae101c60bd469ac8c1f64018290785159c9"`
+[INFO] [stdout] 2c1e7596f6c53b3dce14c5166b490ae101c60bd469ac8c1f64018290785159c9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\thallada\\advent-of-code-2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 01fc5dfd9eb4a98539c445ecf4946e05bb7dd6351d257eb69c0741c7456237ca
+[INFO] running `"docker" "start" "-a" "01fc5dfd9eb4a98539c445ecf4946e05bb7dd6351d257eb69c0741c7456237ca"`
+[INFO] [stderr]    Compiling advent-of-code-2018 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.59s
+[INFO] running `"docker" "inspect" "01fc5dfd9eb4a98539c445ecf4946e05bb7dd6351d257eb69c0741c7456237ca"`
+[INFO] running `"docker" "rm" "-f" "01fc5dfd9eb4a98539c445ecf4946e05bb7dd6351d257eb69c0741c7456237ca"`
+[INFO] [stdout] 01fc5dfd9eb4a98539c445ecf4946e05bb7dd6351d257eb69c0741c7456237ca
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\thallada\\advent-of-code-2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] ffe4bd5e90c8cdd0a287de728855076d05d3045cc530096006215e9dad417663
+[INFO] running `"docker" "start" "-a" "ffe4bd5e90c8cdd0a287de728855076d05d3045cc530096006215e9dad417663"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\advent_of_code_2018-268e592d0043c273.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 53 tests
+[INFO] [stdout] test day1::tests::finds_repeating_frequency ... ok
+[INFO] [stdout] test day1::tests::finds_repeating_frequency_2 ... ok
+[INFO] [stdout] test day1::tests::finds_repeating_frequency_3 ... ok
+[INFO] [stdout] test day1::tests::finds_resulting_frequency ... ok
+[INFO] [stdout] test day1::tests::reads_frequencies_file ... ok
+[INFO] [stdout] test day2::tests::calculates_correct_checksum ... ok
+[INFO] [stdout] test day2::tests::finds_most_common_id_overlap ... ok
+[INFO] [stdout] test day2::tests::ids_are_diff_by_1 ... ok
+[INFO] [stdout] test day2::tests::ids_are_diff_by_1_too_many_diffs ... ok
+[INFO] [stdout] test day2::tests::ids_are_diff_by_2 ... ok
+[INFO] [stdout] test day2::tests::ids_are_diff_by_n_len_unequal_false ... ok
+[INFO] [stdout] test day3::tests::counts_overlapping_claimed_points ... ok
+[INFO] [stdout] test day3::tests::finds_non_overlapping_claim ... ok
+[INFO] [stdout] test day3::tests::lists_points_in_claim ... ok
+[INFO] [stdout] test day3::tests::errors_on_malformed_claims_file ... ok
+[INFO] [stdout] test day3::tests::reads_claims_file ... ok
+[INFO] [stdout] test day4::tests::gets_minutes_asleep_per_guard ... ok
+[INFO] [stdout] test day4::tests::errors_on_malformed_records_file ... ok
+[INFO] [stdout] test day4::tests::reads_records_file ... ok
+[INFO] [stdout] test day4::tests::solves_part1 ... ok
+[INFO] [stdout] test day4::tests::solves_part2 ... ok
+[INFO] [stdout] test day5::tests::reads_polymer ... ok
+[INFO] [stdout] test day5::tests::finds_shortest_unit_eliminated_polymer ... ok
+[INFO] [stdout] test day5::tests::reduces_polymer ... ok
+[INFO] [stdout] test day6::tests::calculates_manhattan_dist ... ok
+[INFO] [stdout] test day6::tests::creates_grid ... ok
+[INFO] [stdout] test day5::tests::reduces_polymer_completely ... ok
+[INFO] [stdout] test day6::tests::fills_grid_with_one_coord ... ok
+[INFO] [stdout] test day6::tests::fills_grid_with_two_coords ... ok
+[INFO] [stdout] test day6::tests::finds_largest_coord_area ... ok
+[INFO] [stdout] test day6::tests::gets_boundary_coordinate ... ok
+[INFO] [stdout] test day7::tests::assign_step_to_worker_in_pool ... ok
+[INFO] [stdout] test day7::tests::gets_seconds_for_step ... ok
+[INFO] [stdout] test day6::tests::read_coordinates_file ... ok
+[INFO] [stdout] test day7::tests::available_workers_in_pool ... ok
+[INFO] [stdout] test day7::tests::new_worker_pool ... ok
+[INFO] [stdout] test day7::tests::gets_step_sequence ... ok
+[INFO] [stdout] test day7::tests::gets_sequence_with_workers ... ok
+[INFO] [stdout] test day7::tests::run_workers_one_second ... ok
+[INFO] [stdout] test day7::tests::run_workers_one_second_and_complete_step ... ok
+[INFO] [stdout] test day7::tests::worker_pool_all_idle ... ok
+[INFO] [stdout] test day7::tests::worker_pool_not_all_idle ... ok
+[INFO] [stdout] test day7::tests::reads_instructions_file ... ok
+[INFO] [stdout] test day8::tests::reads_license_file ... ok
+[INFO] [stdout] test day8::tests::sums_license_metadata ... ok
+[INFO] [stdout] test day8::tests::sums_license_metadata_with_indices ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game1 ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game2 ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game3 ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game4 ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game6 ... ok
+[INFO] [stdout] test day9::tests::gets_highest_score_for_game5 ... ok
+[INFO] [stdout] test day9::tests::reads_game_parameters_file ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ffe4bd5e90c8cdd0a287de728855076d05d3045cc530096006215e9dad417663"`
+[INFO] running `"docker" "rm" "-f" "ffe4bd5e90c8cdd0a287de728855076d05d3045cc530096006215e9dad417663"`
+[INFO] [stdout] ffe4bd5e90c8cdd0a287de728855076d05d3045cc530096006215e9dad417663

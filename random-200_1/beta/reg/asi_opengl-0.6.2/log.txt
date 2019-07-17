@@ -1,0 +1,57 @@
+[INFO] fetching crate asi_opengl 0.6.2...
+[INFO] extracting crate asi_opengl 0.6.2 into work\ex\default\sources\stable\reg\asi_opengl\0.6.2
+[INFO] extracting crate asi_opengl 0.6.2 into work\ex\default\sources\beta\reg\asi_opengl\0.6.2
+[INFO] validating manifest of asi_opengl-0.6.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of asi_opengl-0.6.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing asi_opengl-0.6.2
+[INFO] finished frobbing asi_opengl-0.6.2
+[INFO] frobbed toml for asi_opengl-0.6.2 written to work\ex\default\sources\stable\reg\asi_opengl\0.6.2\Cargo.toml
+[INFO] started frobbing asi_opengl-0.6.2
+[INFO] finished frobbing asi_opengl-0.6.2
+[INFO] frobbed toml for asi_opengl-0.6.2 written to work\ex\default\sources\beta\reg\asi_opengl\0.6.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded dl_api v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing asi_opengl-0.6.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\asi_opengl\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 82dc0809a7448256dafb43a5cbb0d10888c4f5fdf5dee24c088530c4d54c25a5
+[INFO] running `"docker" "start" "-a" "82dc0809a7448256dafb43a5cbb0d10888c4f5fdf5dee24c088530c4d54c25a5"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling dl_api v0.2.0
+[INFO] [stderr]    Compiling asi_opengl v0.6.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.43s
+[INFO] running `"docker" "inspect" "82dc0809a7448256dafb43a5cbb0d10888c4f5fdf5dee24c088530c4d54c25a5"`
+[INFO] running `"docker" "rm" "-f" "82dc0809a7448256dafb43a5cbb0d10888c4f5fdf5dee24c088530c4d54c25a5"`
+[INFO] [stdout] 82dc0809a7448256dafb43a5cbb0d10888c4f5fdf5dee24c088530c4d54c25a5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\asi_opengl\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 03c4167bb05637225b0df127af67bc95ea6a0d7c5775c8668c9c3959863a8ef3
+[INFO] running `"docker" "start" "-a" "03c4167bb05637225b0df127af67bc95ea6a0d7c5775c8668c9c3959863a8ef3"`
+[INFO] [stderr]    Compiling asi_opengl v0.6.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.25s
+[INFO] running `"docker" "inspect" "03c4167bb05637225b0df127af67bc95ea6a0d7c5775c8668c9c3959863a8ef3"`
+[INFO] running `"docker" "rm" "-f" "03c4167bb05637225b0df127af67bc95ea6a0d7c5775c8668c9c3959863a8ef3"`
+[INFO] [stdout] 03c4167bb05637225b0df127af67bc95ea6a0d7c5775c8668c9c3959863a8ef3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\asi_opengl\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 8f505fb55ab611216dca2c72f2640e513f07b10dcb77b6bb908fe3f41e9c8fec
+[INFO] running `"docker" "start" "-a" "8f505fb55ab611216dca2c72f2640e513f07b10dcb77b6bb908fe3f41e9c8fec"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\asi_opengl-2c944505c4b9c561.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests asi_opengl
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8f505fb55ab611216dca2c72f2640e513f07b10dcb77b6bb908fe3f41e9c8fec"`
+[INFO] running `"docker" "rm" "-f" "8f505fb55ab611216dca2c72f2640e513f07b10dcb77b6bb908fe3f41e9c8fec"`
+[INFO] [stdout] 8f505fb55ab611216dca2c72f2640e513f07b10dcb77b6bb908fe3f41e9c8fec

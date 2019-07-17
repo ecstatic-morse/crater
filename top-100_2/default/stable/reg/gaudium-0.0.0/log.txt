@@ -1,0 +1,54 @@
+[INFO] fetching crate gaudium 0.0.0...
+[INFO] extracting crate gaudium 0.0.0 into work\ex\default\sources\stable\reg\gaudium\0.0.0
+[INFO] extracting crate gaudium 0.0.0 into work\ex\default\sources\beta\reg\gaudium\0.0.0
+[INFO] validating manifest of gaudium-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of gaudium-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing gaudium-0.0.0
+[INFO] finished frobbing gaudium-0.0.0
+[INFO] frobbed toml for gaudium-0.0.0 written to work\ex\default\sources\stable\reg\gaudium\0.0.0\Cargo.toml
+[INFO] started frobbing gaudium-0.0.0
+[INFO] finished frobbing gaudium-0.0.0
+[INFO] frobbed toml for gaudium-0.0.0 written to work\ex\default\sources\beta\reg\gaudium\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing gaudium-0.0.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\gaudium\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] dcd571597ef8c1b44d4235cedd017a6f5ad0929c51dc5ef81d026f935cbf0f69
+[INFO] running `"docker" "start" "-a" "dcd571597ef8c1b44d4235cedd017a6f5ad0929c51dc5ef81d026f935cbf0f69"`
+[INFO] [stderr]    Compiling arrayvec v0.4.11
+[INFO] [stderr]    Compiling gaudium v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.76s
+[INFO] running `"docker" "inspect" "dcd571597ef8c1b44d4235cedd017a6f5ad0929c51dc5ef81d026f935cbf0f69"`
+[INFO] running `"docker" "rm" "-f" "dcd571597ef8c1b44d4235cedd017a6f5ad0929c51dc5ef81d026f935cbf0f69"`
+[INFO] [stdout] dcd571597ef8c1b44d4235cedd017a6f5ad0929c51dc5ef81d026f935cbf0f69
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\gaudium\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3e789204809866f7a7aa8781a15ed59f313bd40ee386da60f143026e8ff40d08
+[INFO] running `"docker" "start" "-a" "3e789204809866f7a7aa8781a15ed59f313bd40ee386da60f143026e8ff40d08"`
+[INFO] [stderr]    Compiling gaudium v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.45s
+[INFO] running `"docker" "inspect" "3e789204809866f7a7aa8781a15ed59f313bd40ee386da60f143026e8ff40d08"`
+[INFO] running `"docker" "rm" "-f" "3e789204809866f7a7aa8781a15ed59f313bd40ee386da60f143026e8ff40d08"`
+[INFO] [stdout] 3e789204809866f7a7aa8781a15ed59f313bd40ee386da60f143026e8ff40d08
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\gaudium\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] f7f4dfc3f4b9b94d0b809ec01b0ced2b6c1d4e13da9d24bebd5b5f74b003deea
+[INFO] running `"docker" "start" "-a" "f7f4dfc3f4b9b94d0b809ec01b0ced2b6c1d4e13da9d24bebd5b5f74b003deea"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\gaudium-d966c2b933f2dc8d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests gaudium
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f7f4dfc3f4b9b94d0b809ec01b0ced2b6c1d4e13da9d24bebd5b5f74b003deea"`
+[INFO] running `"docker" "rm" "-f" "f7f4dfc3f4b9b94d0b809ec01b0ced2b6c1d4e13da9d24bebd5b5f74b003deea"`
+[INFO] [stdout] f7f4dfc3f4b9b94d0b809ec01b0ced2b6c1d4e13da9d24bebd5b5f74b003deea

@@ -1,0 +1,64 @@
+[INFO] fetching crate efm32 0.0.1...
+[INFO] extracting crate efm32 0.0.1 into work\ex\default\sources\nightly\reg\efm32\0.0.1
+[INFO] extracting crate efm32 0.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\efm32\0.0.1
+[INFO] validating manifest of efm32-0.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of efm32-0.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing efm32-0.0.1
+[INFO] finished frobbing efm32-0.0.1
+[INFO] frobbed toml for efm32-0.0.1 written to work\ex\default\sources\nightly\reg\efm32\0.0.1\Cargo.toml
+[INFO] started frobbing efm32-0.0.1
+[INFO] finished frobbing efm32-0.0.1
+[INFO] frobbed toml for efm32-0.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\efm32\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing efm32-0.0.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\efm32\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c000c828cdc6b412fd6704ebc403b8c5c39f887eb98391b6bc057ed04a3ec4da
+[INFO] running `"docker" "start" "-a" "c000c828cdc6b412fd6704ebc403b8c5c39f887eb98391b6bc057ed04a3ec4da"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling efm32 v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr] error: unknown character escape: C
+[INFO] [stderr]  --> C:\crater\target\debug\build\efm32-9a8ab3b6d0f86cb0\out/svd_bits.rs:2:77
+[INFO] [stderr]   |
+[INFO] [stderr] 2 |                 const EFM32HG_TMPL_SVD: &'static [u8] = include_bytes!("\\?\C:\crater\workdir\svd\EFM32HG.tmpl.svd");
+[INFO] [stderr]   |                                                                             ^ unknown character escape
+[INFO] [stderr] 
+[INFO] [stderr] error: unknown character escape: c
+[INFO] [stderr]  --> C:\crater\target\debug\build\efm32-9a8ab3b6d0f86cb0\out/svd_bits.rs:2:80
+[INFO] [stderr]   |
+[INFO] [stderr] 2 |                 const EFM32HG_TMPL_SVD: &'static [u8] = include_bytes!("\\?\C:\crater\workdir\svd\EFM32HG.tmpl.svd");
+[INFO] [stderr]   |                                                                                ^ unknown character escape
+[INFO] [stderr] 
+[INFO] [stderr] error: unknown character escape: w
+[INFO] [stderr]  --> C:\crater\target\debug\build\efm32-9a8ab3b6d0f86cb0\out/svd_bits.rs:2:87
+[INFO] [stderr]   |
+[INFO] [stderr] 2 |                 const EFM32HG_TMPL_SVD: &'static [u8] = include_bytes!("\\?\C:\crater\workdir\svd\EFM32HG.tmpl.svd");
+[INFO] [stderr]   |                                                                                       ^ unknown character escape
+[INFO] [stderr] 
+[INFO] [stderr] error: unknown character escape: s
+[INFO] [stderr]  --> C:\crater\target\debug\build\efm32-9a8ab3b6d0f86cb0\out/svd_bits.rs:2:95
+[INFO] [stderr]   |
+[INFO] [stderr] 2 |                 const EFM32HG_TMPL_SVD: &'static [u8] = include_bytes!("\\?\C:\crater\workdir\svd\EFM32HG.tmpl.svd");
+[INFO] [stderr]   |                                                                                               ^ unknown character escape
+[INFO] [stderr] 
+[INFO] [stderr] error: unknown character escape: E
+[INFO] [stderr]  --> C:\crater\target\debug\build\efm32-9a8ab3b6d0f86cb0\out/svd_bits.rs:2:99
+[INFO] [stderr]   |
+[INFO] [stderr] 2 |                 const EFM32HG_TMPL_SVD: &'static [u8] = include_bytes!("\\?\C:\crater\workdir\svd\EFM32HG.tmpl.svd");
+[INFO] [stderr]   |                                                                                                   ^ unknown character escape
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 5 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `efm32`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "c000c828cdc6b412fd6704ebc403b8c5c39f887eb98391b6bc057ed04a3ec4da"`
+[INFO] running `"docker" "rm" "-f" "c000c828cdc6b412fd6704ebc403b8c5c39f887eb98391b6bc057ed04a3ec4da"`
+[INFO] [stdout] c000c828cdc6b412fd6704ebc403b8c5c39f887eb98391b6bc057ed04a3ec4da

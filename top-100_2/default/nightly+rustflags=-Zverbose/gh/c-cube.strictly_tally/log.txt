@@ -1,0 +1,67 @@
+[INFO] cloning repository c-cube/strictly_tally
+[INFO] running `"git" "clone" "--bare" "git://github.com/c-cube/strictly_tally.git" "work\\cache\\sources\\gh\\c-cube\\strictly_tally"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\c-cube\strictly_tally'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\c-cube\\strictly_tally" "work\\ex\\default\\sources\\nightly\\gh\\c-cube\\strictly_tally"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\c-cube\strictly_tally'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\c-cube\\strictly_tally" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\c-cube\\strictly_tally"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\c-cube\strictly_tally'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 355075a84f98b9192d3fcb4916ebfd5751c1c3e7
+[INFO] sha for GitHub repo c-cube/strictly_tally: 355075a84f98b9192d3fcb4916ebfd5751c1c3e7
+[INFO] validating manifest of c-cube/strictly_tally on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of c-cube/strictly_tally on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing c-cube/strictly_tally
+[INFO] finished frobbing c-cube/strictly_tally
+[INFO] frobbed toml for c-cube/strictly_tally written to work\ex\default\sources\nightly\gh\c-cube\strictly_tally\Cargo.toml
+[INFO] started frobbing c-cube/strictly_tally
+[INFO] finished frobbing c-cube/strictly_tally
+[INFO] frobbed toml for c-cube/strictly_tally written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\c-cube\strictly_tally\Cargo.toml
+[INFO] crate c-cube/strictly_tally already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded csv v1.0.5
+[INFO] [stderr]   Downloaded csv-core v0.1.5
+[INFO] [stderr]   Downloaded serde v1.0.85
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing c-cube/strictly_tally against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\c-cube\\strictly_tally,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 68e7447daef30edf00277d04cdfd406cccb9c3c9ec9365c5f79504a426e84cbe
+[INFO] running `"docker" "start" "-a" "68e7447daef30edf00277d04cdfd406cccb9c3c9ec9365c5f79504a426e84cbe"`
+[INFO] [stderr]    Compiling libc v0.2.47
+[INFO] [stderr]    Compiling memchr v2.1.3
+[INFO] [stderr]    Compiling serde v1.0.85
+[INFO] [stderr]    Compiling csv-core v0.1.5
+[INFO] [stderr]    Compiling csv v1.0.5
+[INFO] [stderr]    Compiling strictly_tally v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 08s
+[INFO] running `"docker" "inspect" "68e7447daef30edf00277d04cdfd406cccb9c3c9ec9365c5f79504a426e84cbe"`
+[INFO] running `"docker" "rm" "-f" "68e7447daef30edf00277d04cdfd406cccb9c3c9ec9365c5f79504a426e84cbe"`
+[INFO] [stdout] 68e7447daef30edf00277d04cdfd406cccb9c3c9ec9365c5f79504a426e84cbe
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\c-cube\\strictly_tally,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 12f4d7b3c9357f4d5dd140089e9488c4a9e16bc8f04bafdbf79664e417230353
+[INFO] running `"docker" "start" "-a" "12f4d7b3c9357f4d5dd140089e9488c4a9e16bc8f04bafdbf79664e417230353"`
+[INFO] [stderr]    Compiling strictly_tally v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.95s
+[INFO] running `"docker" "inspect" "12f4d7b3c9357f4d5dd140089e9488c4a9e16bc8f04bafdbf79664e417230353"`
+[INFO] running `"docker" "rm" "-f" "12f4d7b3c9357f4d5dd140089e9488c4a9e16bc8f04bafdbf79664e417230353"`
+[INFO] [stdout] 12f4d7b3c9357f4d5dd140089e9488c4a9e16bc8f04bafdbf79664e417230353
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\c-cube\\strictly_tally,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 5643e6e35a9c3422bce1d603c91f1298860186640b5a6b484babf64dd4b869a0
+[INFO] running `"docker" "start" "-a" "5643e6e35a9c3422bce1d603c91f1298860186640b5a6b484babf64dd4b869a0"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\strictly_tally-a9869135210dbd02.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test test::test_sheet1 ... ok
+[INFO] [stdout] test test::test_sheet2 ... ok
+[INFO] [stdout] test test::test_sheet3 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5643e6e35a9c3422bce1d603c91f1298860186640b5a6b484babf64dd4b869a0"`
+[INFO] running `"docker" "rm" "-f" "5643e6e35a9c3422bce1d603c91f1298860186640b5a6b484babf64dd4b869a0"`
+[INFO] [stdout] 5643e6e35a9c3422bce1d603c91f1298860186640b5a6b484babf64dd4b869a0

@@ -1,0 +1,45 @@
+[INFO] crate ansi_term 0.12.0 is already in cache
+[INFO] extracting crate ansi_term 0.12.0 into work\ex\default\sources\nightly\reg\ansi_term\0.12.0
+[INFO] extracting crate ansi_term 0.12.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ansi_term\0.12.0
+[INFO] validating manifest of ansi_term-0.12.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ansi_term-0.12.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ansi_term-0.12.0
+[INFO] finished frobbing ansi_term-0.12.0
+[INFO] frobbed toml for ansi_term-0.12.0 written to work\ex\default\sources\nightly\reg\ansi_term\0.12.0\Cargo.toml
+[INFO] started frobbing ansi_term-0.12.0
+[INFO] finished frobbing ansi_term-0.12.0
+[INFO] frobbed toml for ansi_term-0.12.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ansi_term\0.12.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ansi_term-0.12.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ansi_term\\0.12.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 63eb5243e80ae0c98abc673e05e9a2288b2516427425d2d03b37f49296cc7acb
+[INFO] running `"docker" "start" "-a" "63eb5243e80ae0c98abc673e05e9a2288b2516427425d2d03b37f49296cc7acb"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ansi_term v0.12.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `winapi::um::fileapi`
+[INFO] [stderr]   --> src\windows.rs:19:21
+[INFO] [stderr]    |
+[INFO] [stderr] 19 |     use winapi::um::fileapi::CreateFile2;
+[INFO] [stderr]    |                     ^^^^^^^ could not find `fileapi` in `um`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `fileapi` in `um`
+[INFO] [stderr]   --> src\windows.rs:32:25
+[INFO] [stderr]    |
+[INFO] [stderr] 32 |             winapi::um::fileapi::OPEN_EXISTING,
+[INFO] [stderr]    |                         ^^^^^^^ could not find `fileapi` in `um`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `ansi_term`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "63eb5243e80ae0c98abc673e05e9a2288b2516427425d2d03b37f49296cc7acb"`
+[INFO] running `"docker" "rm" "-f" "63eb5243e80ae0c98abc673e05e9a2288b2516427425d2d03b37f49296cc7acb"`
+[INFO] [stdout] 63eb5243e80ae0c98abc673e05e9a2288b2516427425d2d03b37f49296cc7acb

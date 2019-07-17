@@ -1,0 +1,131 @@
+[INFO] crate log 0.4.7 is already in cache
+[INFO] extracting crate log 0.4.7 into work\ex\default\sources\nightly\reg\log\0.4.7
+[INFO] extracting crate log 0.4.7 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\log\0.4.7
+[INFO] validating manifest of log-0.4.7 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of log-0.4.7 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing log-0.4.7
+[INFO] removed 1 missing tests
+[INFO] finished frobbing log-0.4.7
+[INFO] frobbed toml for log-0.4.7 written to work\ex\default\sources\nightly\reg\log\0.4.7\Cargo.toml
+[INFO] started frobbing log-0.4.7
+[INFO] removed 1 missing tests
+[INFO] finished frobbing log-0.4.7
+[INFO] frobbed toml for log-0.4.7 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\log\0.4.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing log-0.4.7 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e0543cd0ac4b148485eac0cb0e92fe5f69939548848cd553ca2b461f5d8b05e0
+[INFO] running `"docker" "start" "-a" "e0543cd0ac4b148485eac0cb0e92fe5f69939548848cd553ca2b461f5d8b05e0"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling log v0.4.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.71s
+[INFO] running `"docker" "inspect" "e0543cd0ac4b148485eac0cb0e92fe5f69939548848cd553ca2b461f5d8b05e0"`
+[INFO] running `"docker" "rm" "-f" "e0543cd0ac4b148485eac0cb0e92fe5f69939548848cd553ca2b461f5d8b05e0"`
+[INFO] [stdout] e0543cd0ac4b148485eac0cb0e92fe5f69939548848cd553ca2b461f5d8b05e0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e95defed24bf4bbd9f24614b88553f66c512e9007b50970bb182439a47101c93
+[INFO] running `"docker" "start" "-a" "e95defed24bf4bbd9f24614b88553f66c512e9007b50970bb182439a47101c93"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling serde_test v1.0.97
+[INFO] [stderr]    Compiling log v0.4.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.48s
+[INFO] running `"docker" "inspect" "e95defed24bf4bbd9f24614b88553f66c512e9007b50970bb182439a47101c93"`
+[INFO] running `"docker" "rm" "-f" "e95defed24bf4bbd9f24614b88553f66c512e9007b50970bb182439a47101c93"`
+[INFO] [stdout] e95defed24bf4bbd9f24614b88553f66c512e9007b50970bb182439a47101c93
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 00bb8e8d575a66761a596cf3131667fe3001d942ce75fbaef337fc970f9c1688
+[INFO] running `"docker" "start" "-a" "00bb8e8d575a66761a596cf3131667fe3001d942ce75fbaef337fc970f9c1688"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\log-99336e5a5885e823.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test tests::test_cross_cmp ... ok
+[INFO] [stdout] test tests::test_cross_eq ... ok
+[INFO] [stdout] test tests::test_level_from_str ... ok
+[INFO] [stdout] test tests::test_level_show ... ok
+[INFO] [stdout] test tests::test_levelfilter_from_str ... ok
+[INFO] [stdout] test tests::test_levelfilter_show ... ok
+[INFO] [stdout] test tests::test_metadata_convenience_builder ... ok
+[INFO] [stdout] test tests::test_metadata_builder ... ok
+[INFO] [stdout] test tests::test_record_builder ... ok
+[INFO] [stdout] test tests::test_record_complete_builder ... ok
+[INFO] [stdout] test tests::test_record_convenience_builder ... ok
+[INFO] [stdout] test tests::test_to_level ... ok
+[INFO] [stdout] test tests::test_to_level_filter ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests log
+[INFO] [stdout] 
+[INFO] [stdout] running 17 tests
+[INFO] [stdout] test src\lib.rs -  (line 179) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 149) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 51) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 116) ... ok
+[INFO] [stdout] test src\lib.rs - Record (line 690) ... ok
+[INFO] [stdout] test src\lib.rs - RecordBuilder (line 845) ... ok
+[INFO] [stdout] test src\lib.rs - MetadataBuilder (line 1056) ... ok
+[INFO] [stdout] test src\lib.rs - Metadata (line 1002) ... ok
+[INFO] [stdout] test src\lib.rs - RecordBuilder (line 860) ... ok
+[INFO] [stdout] test src\lib.rs - set_logger (line 1206) ... ok
+[INFO] [stdout] test src\macros.rs - error (line 49) ... ok
+[INFO] [stdout] test src\macros.rs - debug (line 123) ... ok
+[INFO] [stdout] test src\macros.rs - trace (line 148) ... ok
+[INFO] [stdout] test src\macros.rs - log (line 18) ... ok
+[INFO] [stdout] test src\macros.rs - log_enabled (line 179) ... ok
+[INFO] [stdout] test src\macros.rs - info (line 97) ... ok
+[INFO] [stdout] test src\macros.rs - warn (line 73) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "00bb8e8d575a66761a596cf3131667fe3001d942ce75fbaef337fc970f9c1688"`
+[INFO] running `"docker" "rm" "-f" "00bb8e8d575a66761a596cf3131667fe3001d942ce75fbaef337fc970f9c1688"`
+[INFO] [stdout] 00bb8e8d575a66761a596cf3131667fe3001d942ce75fbaef337fc970f9c1688

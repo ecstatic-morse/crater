@@ -1,0 +1,69 @@
+[INFO] cloning repository Cleidiano/minigrep
+[INFO] running `"git" "clone" "--bare" "git://github.com/Cleidiano/minigrep.git" "work\\cache\\sources\\gh\\Cleidiano\\minigrep"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Cleidiano\minigrep'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Cleidiano\\minigrep" "work\\ex\\default\\sources\\nightly\\gh\\Cleidiano\\minigrep"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\Cleidiano\minigrep'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Cleidiano\\minigrep" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\Cleidiano\\minigrep"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\Cleidiano\minigrep'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 1929af5afa1800f23639fdf33563d72c537402b3
+[INFO] sha for GitHub repo Cleidiano/minigrep: 1929af5afa1800f23639fdf33563d72c537402b3
+[INFO] validating manifest of Cleidiano/minigrep on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Cleidiano/minigrep on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Cleidiano/minigrep
+[INFO] finished frobbing Cleidiano/minigrep
+[INFO] frobbed toml for Cleidiano/minigrep written to work\ex\default\sources\nightly\gh\Cleidiano\minigrep\Cargo.toml
+[INFO] started frobbing Cleidiano/minigrep
+[INFO] finished frobbing Cleidiano/minigrep
+[INFO] frobbed toml for Cleidiano/minigrep written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\Cleidiano\minigrep\Cargo.toml
+[INFO] crate Cleidiano/minigrep already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Cleidiano/minigrep against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\Cleidiano\\minigrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4b01cd920e818261f3ac68a85ec3ce84727ed9e403f2125aca0499a469f846c3
+[INFO] running `"docker" "start" "-a" "4b01cd920e818261f3ac68a85ec3ce84727ed9e403f2125aca0499a469f846c3"`
+[INFO] [stderr]    Compiling minigrep v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.95s
+[INFO] running `"docker" "inspect" "4b01cd920e818261f3ac68a85ec3ce84727ed9e403f2125aca0499a469f846c3"`
+[INFO] running `"docker" "rm" "-f" "4b01cd920e818261f3ac68a85ec3ce84727ed9e403f2125aca0499a469f846c3"`
+[INFO] [stdout] 4b01cd920e818261f3ac68a85ec3ce84727ed9e403f2125aca0499a469f846c3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\Cleidiano\\minigrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d888d7419d9e542fbd45d1e30d8fdcd3430162d3d2966d10d2335d430dea4d20
+[INFO] running `"docker" "start" "-a" "d888d7419d9e542fbd45d1e30d8fdcd3430162d3d2966d10d2335d430dea4d20"`
+[INFO] [stderr]    Compiling minigrep v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.23s
+[INFO] running `"docker" "inspect" "d888d7419d9e542fbd45d1e30d8fdcd3430162d3d2966d10d2335d430dea4d20"`
+[INFO] running `"docker" "rm" "-f" "d888d7419d9e542fbd45d1e30d8fdcd3430162d3d2966d10d2335d430dea4d20"`
+[INFO] [stdout] d888d7419d9e542fbd45d1e30d8fdcd3430162d3d2966d10d2335d430dea4d20
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\Cleidiano\\minigrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 41a9faf0c77d58e75a7c216f5169204cd2ddf292fff539f9b096696e167525c8
+[INFO] running `"docker" "start" "-a" "41a9faf0c77d58e75a7c216f5169204cd2ddf292fff539f9b096696e167525c8"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.29s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\minigrep-e53783dd72140682.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test test::case_insensitive ... ok
+[INFO] [stdout] test test::case_sensitive ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\minigrep-77ac34fc745549bf.exe
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests minigrep
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "41a9faf0c77d58e75a7c216f5169204cd2ddf292fff539f9b096696e167525c8"`
+[INFO] running `"docker" "rm" "-f" "41a9faf0c77d58e75a7c216f5169204cd2ddf292fff539f9b096696e167525c8"`
+[INFO] [stdout] 41a9faf0c77d58e75a7c216f5169204cd2ddf292fff539f9b096696e167525c8

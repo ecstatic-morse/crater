@@ -1,0 +1,74 @@
+[INFO] fetching crate proc-macro-hack 0.4.2...
+[INFO] extracting crate proc-macro-hack 0.4.2 into work\ex\default\sources\stable\reg\proc-macro-hack\0.4.2
+[INFO] extracting crate proc-macro-hack 0.4.2 into work\ex\default\sources\beta\reg\proc-macro-hack\0.4.2
+[INFO] validating manifest of proc-macro-hack-0.4.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of proc-macro-hack-0.4.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing proc-macro-hack-0.4.2
+[INFO] finished frobbing proc-macro-hack-0.4.2
+[INFO] frobbed toml for proc-macro-hack-0.4.2 written to work\ex\default\sources\stable\reg\proc-macro-hack\0.4.2\Cargo.toml
+[INFO] started frobbing proc-macro-hack-0.4.2
+[INFO] finished frobbing proc-macro-hack-0.4.2
+[INFO] frobbed toml for proc-macro-hack-0.4.2 written to work\ex\default\sources\beta\reg\proc-macro-hack\0.4.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded demo-hack-impl v0.0.4
+[INFO] [stderr]   Downloaded demo-hack v0.0.4
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing proc-macro-hack-0.4.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro-hack\\0.4.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] bc9fec0fff20af06a164deaa6676c2017e5104f3af4721c40eeea771621693c0
+[INFO] running `"docker" "start" "-a" "bc9fec0fff20af06a164deaa6676c2017e5104f3af4721c40eeea771621693c0"`
+[INFO] [stderr]    Compiling proc-macro-hack-impl v0.4.2
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.51s
+[INFO] running `"docker" "inspect" "bc9fec0fff20af06a164deaa6676c2017e5104f3af4721c40eeea771621693c0"`
+[INFO] running `"docker" "rm" "-f" "bc9fec0fff20af06a164deaa6676c2017e5104f3af4721c40eeea771621693c0"`
+[INFO] [stdout] bc9fec0fff20af06a164deaa6676c2017e5104f3af4721c40eeea771621693c0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro-hack\\0.4.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 382fc21399aa813115fa0524df36ae23c2e85da339d8b4fd7cfb9a90a741d060
+[INFO] running `"docker" "start" "-a" "382fc21399aa813115fa0524df36ae23c2e85da339d8b4fd7cfb9a90a741d060"`
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.2
+[INFO] [stderr]    Compiling demo-hack-impl v0.0.4
+[INFO] [stderr]    Compiling demo-hack v0.0.4
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.22s
+[INFO] running `"docker" "inspect" "382fc21399aa813115fa0524df36ae23c2e85da339d8b4fd7cfb9a90a741d060"`
+[INFO] running `"docker" "rm" "-f" "382fc21399aa813115fa0524df36ae23c2e85da339d8b4fd7cfb9a90a741d060"`
+[INFO] [stdout] 382fc21399aa813115fa0524df36ae23c2e85da339d8b4fd7cfb9a90a741d060
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro-hack\\0.4.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 023e335f9e39b3423ff43741b2c68e81be491a6070f2385da48d56649c1876b6
+[INFO] running `"docker" "start" "-a" "023e335f9e39b3423ff43741b2c68e81be491a6070f2385da48d56649c1876b6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\proc_macro_hack-cfdf9d2667748d42.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests proc-macro-hack
+[INFO] [stdout] 
+[INFO] [stdout] running 14 tests
+[INFO] [stdout] test src\lib.rs -  (line 101) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 107) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 120) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 131) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 139) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 145) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 155) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 43) ... ignored
+[INFO] [stdout] test src\lib.rs - proc_macro_expr_impl (line 253) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 12) ... ok
+[INFO] [stdout] test src\lib.rs - proc_macro_item_impl (line 321) ... ignored
+[INFO] [stdout] test src\lib.rs - proc_macro_expr_decl (line 173) ... ok
+[INFO] [stdout] test src\lib.rs - proc_macro_item_decl (line 213) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 85) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "023e335f9e39b3423ff43741b2c68e81be491a6070f2385da48d56649c1876b6"`
+[INFO] running `"docker" "rm" "-f" "023e335f9e39b3423ff43741b2c68e81be491a6070f2385da48d56649c1876b6"`
+[INFO] [stdout] 023e335f9e39b3423ff43741b2c68e81be491a6070f2385da48d56649c1876b6

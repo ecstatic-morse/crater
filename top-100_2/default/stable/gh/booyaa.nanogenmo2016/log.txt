@@ -1,0 +1,66 @@
+[INFO] cloning repository booyaa/nanogenmo2016
+[INFO] running `"git" "clone" "--bare" "git://github.com/booyaa/nanogenmo2016.git" "work\\cache\\sources\\gh\\booyaa\\nanogenmo2016"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\booyaa\nanogenmo2016'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\booyaa\\nanogenmo2016" "work\\ex\\default\\sources\\stable\\gh\\booyaa\\nanogenmo2016"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\booyaa\nanogenmo2016'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\booyaa\\nanogenmo2016" "work\\ex\\default\\sources\\beta\\gh\\booyaa\\nanogenmo2016"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\booyaa\nanogenmo2016'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 1686d8cd20bc9ca124966b4acf5b85d351641229
+[INFO] sha for GitHub repo booyaa/nanogenmo2016: 1686d8cd20bc9ca124966b4acf5b85d351641229
+[INFO] validating manifest of booyaa/nanogenmo2016 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of booyaa/nanogenmo2016 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing booyaa/nanogenmo2016
+[INFO] finished frobbing booyaa/nanogenmo2016
+[INFO] frobbed toml for booyaa/nanogenmo2016 written to work\ex\default\sources\stable\gh\booyaa\nanogenmo2016\Cargo.toml
+[INFO] started frobbing booyaa/nanogenmo2016
+[INFO] finished frobbing booyaa/nanogenmo2016
+[INFO] frobbed toml for booyaa/nanogenmo2016 written to work\ex\default\sources\beta\gh\booyaa\nanogenmo2016\Cargo.toml
+[INFO] crate booyaa/nanogenmo2016 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\booyaa\nanogenmo2016\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded numeral v0.1.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing booyaa/nanogenmo2016 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\booyaa\\nanogenmo2016,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f9dbe969489ac81827f87a199073f492194f4ca370aebf94d5a0128888cae746
+[INFO] running `"docker" "start" "-a" "f9dbe969489ac81827f87a199073f492194f4ca370aebf94d5a0128888cae746"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling numeral v0.1.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling nanogenmo2016 v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.01s
+[INFO] running `"docker" "inspect" "f9dbe969489ac81827f87a199073f492194f4ca370aebf94d5a0128888cae746"`
+[INFO] running `"docker" "rm" "-f" "f9dbe969489ac81827f87a199073f492194f4ca370aebf94d5a0128888cae746"`
+[INFO] [stdout] f9dbe969489ac81827f87a199073f492194f4ca370aebf94d5a0128888cae746
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\booyaa\\nanogenmo2016,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ecce0b4dc56dfc84d83501e498e006871757f2bc20a1c987b25bbe18f10e0aee
+[INFO] running `"docker" "start" "-a" "ecce0b4dc56dfc84d83501e498e006871757f2bc20a1c987b25bbe18f10e0aee"`
+[INFO] [stderr]    Compiling nanogenmo2016 v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.38s
+[INFO] running `"docker" "inspect" "ecce0b4dc56dfc84d83501e498e006871757f2bc20a1c987b25bbe18f10e0aee"`
+[INFO] running `"docker" "rm" "-f" "ecce0b4dc56dfc84d83501e498e006871757f2bc20a1c987b25bbe18f10e0aee"`
+[INFO] [stdout] ecce0b4dc56dfc84d83501e498e006871757f2bc20a1c987b25bbe18f10e0aee
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\booyaa\\nanogenmo2016,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] ac6afd086fc8830ecb539cd3b6e10143afe8fb0dbc157a9232999dcab9a7b2bf
+[INFO] running `"docker" "start" "-a" "ac6afd086fc8830ecb539cd3b6e10143afe8fb0dbc157a9232999dcab9a7b2bf"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.39s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\nanogenmo2016-c7a50e947167be49.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ac6afd086fc8830ecb539cd3b6e10143afe8fb0dbc157a9232999dcab9a7b2bf"`
+[INFO] running `"docker" "rm" "-f" "ac6afd086fc8830ecb539cd3b6e10143afe8fb0dbc157a9232999dcab9a7b2bf"`
+[INFO] [stdout] ac6afd086fc8830ecb539cd3b6e10143afe8fb0dbc157a9232999dcab9a7b2bf

@@ -1,0 +1,56 @@
+[INFO] fetching crate serde_derive 1.0.95...
+[INFO] extracting crate serde_derive 1.0.95 into work\ex\default\sources\stable\reg\serde_derive\1.0.95
+[INFO] extracting crate serde_derive 1.0.95 into work\ex\default\sources\beta\reg\serde_derive\1.0.95
+[INFO] validating manifest of serde_derive-1.0.95 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of serde_derive-1.0.95 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing serde_derive-1.0.95
+[INFO] finished frobbing serde_derive-1.0.95
+[INFO] frobbed toml for serde_derive-1.0.95 written to work\ex\default\sources\stable\reg\serde_derive\1.0.95\Cargo.toml
+[INFO] started frobbing serde_derive-1.0.95
+[INFO] finished frobbing serde_derive-1.0.95
+[INFO] frobbed toml for serde_derive-1.0.95 written to work\ex\default\sources\beta\reg\serde_derive\1.0.95\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing serde_derive-1.0.95 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_derive\\1.0.95,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 6505b10a32d25ad1ce711cb4e1ebc6a0fe704048dbc0c0d1f63946572f369cd6
+[INFO] running `"docker" "start" "-a" "6505b10a32d25ad1ce711cb4e1ebc6a0fe704048dbc0c0d1f63946572f369cd6"`
+[INFO] [stderr]    Compiling serde_derive v1.0.95 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 30.87s
+[INFO] running `"docker" "inspect" "6505b10a32d25ad1ce711cb4e1ebc6a0fe704048dbc0c0d1f63946572f369cd6"`
+[INFO] running `"docker" "rm" "-f" "6505b10a32d25ad1ce711cb4e1ebc6a0fe704048dbc0c0d1f63946572f369cd6"`
+[INFO] [stdout] 6505b10a32d25ad1ce711cb4e1ebc6a0fe704048dbc0c0d1f63946572f369cd6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_derive\\1.0.95,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 727f5a47030708289076d5dea0cf3ec186de9e1ca77e6f11523ef8814b80b6d2
+[INFO] running `"docker" "start" "-a" "727f5a47030708289076d5dea0cf3ec186de9e1ca77e6f11523ef8814b80b6d2"`
+[INFO] [stderr]    Compiling serde_derive v1.0.95 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.82s
+[INFO] running `"docker" "inspect" "727f5a47030708289076d5dea0cf3ec186de9e1ca77e6f11523ef8814b80b6d2"`
+[INFO] running `"docker" "rm" "-f" "727f5a47030708289076d5dea0cf3ec186de9e1ca77e6f11523ef8814b80b6d2"`
+[INFO] [stdout] 727f5a47030708289076d5dea0cf3ec186de9e1ca77e6f11523ef8814b80b6d2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_derive\\1.0.95,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 092e9807a6d61e8cc01ed99dd528dc66d63e2f3f945ff8fa97dd3a7fba59c8a7
+[INFO] running `"docker" "start" "-a" "092e9807a6d61e8cc01ed99dd528dc66d63e2f3f945ff8fa97dd3a7fba59c8a7"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.34s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde_derive-3a4198c7c98a9bd4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test internals::case::rename_fields ... ok
+[INFO] [stdout] test internals::case::rename_variants ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests serde_derive
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "092e9807a6d61e8cc01ed99dd528dc66d63e2f3f945ff8fa97dd3a7fba59c8a7"`
+[INFO] running `"docker" "rm" "-f" "092e9807a6d61e8cc01ed99dd528dc66d63e2f3f945ff8fa97dd3a7fba59c8a7"`
+[INFO] [stdout] 092e9807a6d61e8cc01ed99dd528dc66d63e2f3f945ff8fa97dd3a7fba59c8a7

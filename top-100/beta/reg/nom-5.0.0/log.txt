@@ -1,0 +1,51 @@
+[INFO] fetching crate nom 5.0.0...
+[INFO] extracting crate nom 5.0.0 into work\ex\default\sources\stable\reg\nom\5.0.0
+[INFO] extracting crate nom 5.0.0 into work\ex\default\sources\beta\reg\nom\5.0.0
+[INFO] validating manifest of nom-5.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nom-5.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nom-5.0.0
+[INFO] removed 2 missing examples
+[INFO] removed 17 missing tests
+[INFO] finished frobbing nom-5.0.0
+[INFO] frobbed toml for nom-5.0.0 written to work\ex\default\sources\stable\reg\nom\5.0.0\Cargo.toml
+[INFO] started frobbing nom-5.0.0
+[INFO] removed 2 missing examples
+[INFO] removed 17 missing tests
+[INFO] finished frobbing nom-5.0.0
+[INFO] frobbed toml for nom-5.0.0 written to work\ex\default\sources\beta\reg\nom\5.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded lexical-core v0.4.2
+[INFO] [stderr]   Downloaded tinytemplate v1.0.2
+[INFO] [stderr]   Downloaded criterion v0.2.11
+[INFO] [stderr]   Downloaded csv v1.1.1
+[INFO] [stderr]   Downloaded bstr v0.2.2
+[INFO] [stderr]   Downloaded rand_xoshiro v0.1.0
+[INFO] [stderr]   Downloaded unreachable v1.0.0
+[INFO] [stderr]   Downloaded ryu v0.2.8
+[INFO] [stderr]   Downloaded jemallocator v0.1.9
+[INFO] [stderr]   Downloaded fs_extra v1.1.0
+[INFO] [stderr]   Downloaded void v1.0.2
+[INFO] [stderr]   Downloaded csv-core v0.1.6
+[INFO] [stderr]   Downloaded jemalloc-sys v0.1.8
+[INFO] [stderr]   Downloaded cast v0.2.2
+[INFO] [stderr]   Downloaded regex-automata v0.1.7
+[INFO] [stderr]   Downloaded criterion-plot v0.3.1
+[INFO] [stderr]   Downloaded static_assertions v0.2.5
+[INFO] [stderr]   Downloaded stackvector v1.0.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nom-5.0.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\nom\\5.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 64fe214323780d750719660f954d68f0918d0c08191aa82463123b76b60273db
+[INFO] running `"docker" "start" "-a" "64fe214323780d750719660f954d68f0918d0c08191aa82463123b76b60273db"`
+[INFO] [stderr] error: failed to parse manifest at `C:\crater\workdir\Cargo.toml`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   can't find `arithmetic` bench, specify bench.path
+[INFO] running `"docker" "inspect" "64fe214323780d750719660f954d68f0918d0c08191aa82463123b76b60273db"`
+[INFO] running `"docker" "rm" "-f" "64fe214323780d750719660f954d68f0918d0c08191aa82463123b76b60273db"`
+[INFO] [stdout] 64fe214323780d750719660f954d68f0918d0c08191aa82463123b76b60273db

@@ -1,0 +1,207 @@
+[INFO] cloning repository cdouglass/samara
+[INFO] running `"git" "clone" "--bare" "git://github.com/cdouglass/samara.git" "work\\cache\\sources\\gh\\cdouglass\\samara"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\cdouglass\samara'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cdouglass\\samara" "work\\ex\\default\\sources\\nightly\\gh\\cdouglass\\samara"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\cdouglass\samara'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cdouglass\\samara" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\cdouglass\\samara"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\cdouglass\samara'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 892b95e8db28cb5e51b578700822422092b2909f
+[INFO] sha for GitHub repo cdouglass/samara: 892b95e8db28cb5e51b578700822422092b2909f
+[INFO] validating manifest of cdouglass/samara on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cdouglass/samara on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cdouglass/samara
+[INFO] finished frobbing cdouglass/samara
+[INFO] frobbed toml for cdouglass/samara written to work\ex\default\sources\nightly\gh\cdouglass\samara\Cargo.toml
+[INFO] started frobbing cdouglass/samara
+[INFO] finished frobbing cdouglass/samara
+[INFO] frobbed toml for cdouglass/samara written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\cdouglass\samara\Cargo.toml
+[INFO] crate cdouglass/samara already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded skeptic v0.13.0
+[INFO] [stderr]   Downloaded libc v0.2.31
+[INFO] [stderr]   Downloaded serde_derive v1.0.15
+[INFO] [stderr]   Downloaded pulldown-cmark v0.1.0
+[INFO] [stderr]   Downloaded getopts v0.2.15
+[INFO] [stderr]   Downloaded bytecount v0.2.0
+[INFO] [stderr]   Downloaded rand v0.3.16
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing cdouglass/samara against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\cdouglass\\samara,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c8fef02d265fb0bc137fbdaf9ac5f7feddd4c73fdcedf50e042e20b0a1569fd8
+[INFO] running `"docker" "start" "-a" "c8fef02d265fb0bc137fbdaf9ac5f7feddd4c73fdcedf50e042e20b0a1569fd8"`
+[INFO] [stderr]    Compiling libc v0.2.31
+[INFO] [stderr]    Compiling pulldown-cmark v0.1.0
+[INFO] [stderr]    Compiling getopts v0.2.15
+[INFO] [stderr]    Compiling serde v1.0.15
+[INFO] [stderr]    Compiling num-traits v0.1.40
+[INFO] [stderr] warning[E0503]: cannot use `state` because it was mutably borrowed
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\getopts-0.2.15\src\lib.rs:1033:33
+[INFO] [stderr]      |
+[INFO] [stderr] 978  |     let mut machine = |cont: &mut bool, (i, c): (usize, char)| {
+[INFO] [stderr]      |                       ---------------------------------------- borrow of `state` occurs here
+[INFO] [stderr] ...
+[INFO] [stderr] 982  |         state = match (state, whitespace, limit) {
+[INFO] [stderr]      |                        ----- borrow occurs due to use of `state` in closure
+[INFO] [stderr] ...
+[INFO] [stderr] 1033 |     while cont && match state { B | C => true, A => false } {
+[INFO] [stderr]      |                                 ^ use of borrowed `state`
+[INFO] [stderr] 1034 |         machine(&mut cont, (fake_i, ' '));
+[INFO] [stderr]      |         ------- borrow later used here
+[INFO] [stderr]      |
+[INFO] [stderr]      = warning: this error has been downgraded to a warning for backwards compatibility with previous releases
+[INFO] [stderr]      = warning: this represents potential undefined behavior in your code and this warning will become a hard error in the future
+[INFO] [stderr]      = note: for more information, try `rustc --explain E0729`
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling bytecount v0.2.0
+[INFO] [stderr]    Compiling error-chain v0.11.0
+[INFO] [stderr]    Compiling rand v0.3.16
+[INFO] [stderr]    Compiling serde_derive_internals v0.16.0
+[INFO] [stderr]    Compiling same-file v0.1.3
+[INFO] [stderr]    Compiling tempdir v0.3.5
+[INFO] [stderr]    Compiling serde_derive v1.0.15
+[INFO] [stderr]    Compiling walkdir v1.0.7
+[INFO] [stderr]    Compiling serde_json v1.0.3
+[INFO] [stderr]    Compiling toml v0.4.5
+[INFO] [stderr]    Compiling skeptic v0.13.0
+[INFO] [stderr]    Compiling samara v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 11s
+[INFO] running `"docker" "inspect" "c8fef02d265fb0bc137fbdaf9ac5f7feddd4c73fdcedf50e042e20b0a1569fd8"`
+[INFO] running `"docker" "rm" "-f" "c8fef02d265fb0bc137fbdaf9ac5f7feddd4c73fdcedf50e042e20b0a1569fd8"`
+[INFO] [stdout] c8fef02d265fb0bc137fbdaf9ac5f7feddd4c73fdcedf50e042e20b0a1569fd8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\cdouglass\\samara,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2ca2ff6b368d94273513ba0cc1581a316e579a641a136383991db676cc31a0b9
+[INFO] running `"docker" "start" "-a" "2ca2ff6b368d94273513ba0cc1581a316e579a641a136383991db676cc31a0b9"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling samara v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.04s
+[INFO] running `"docker" "inspect" "2ca2ff6b368d94273513ba0cc1581a316e579a641a136383991db676cc31a0b9"`
+[INFO] running `"docker" "rm" "-f" "2ca2ff6b368d94273513ba0cc1581a316e579a641a136383991db676cc31a0b9"`
+[INFO] [stdout] 2ca2ff6b368d94273513ba0cc1581a316e579a641a136383991db676cc31a0b9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\cdouglass\\samara,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 64d546f230c64b8fbaf0d2b7ef40c42d8b5c03fa773b0b05813e3f29c2394a3b
+[INFO] running `"docker" "start" "-a" "64d546f230c64b8fbaf0d2b7ef40c42d8b5c03fa773b0b05813e3f29c2394a3b"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.78s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\samara-fdb427df871e8e04.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 79 tests
+[INFO] [stdout] test infer::tests::test_application_of_builtins ... ok
+[INFO] [stdout] test infer::tests::test_application_of_non_function ... ok
+[INFO] [stdout] test infer::tests::test_conditional_with_invalid_predicate ... ok
+[INFO] [stdout] test infer::tests::test_conditional_with_mismatched_arms ... ok
+[INFO] [stdout] test infer::tests::test_identity ... ok
+[INFO] [stdout] test infer::tests::test_infer_base_types ... ok
+[INFO] [stdout] test infer::tests::test_instantiate ... ok
+[INFO] [stdout] test infer::tests::test_ill_typed_let_value_not_used_in_body ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_case_with_no_patterns ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_atom_pattern ... ok
+[INFO] [stdout] test infer::tests::test_polymorphic_let ... ok
+[INFO] [stdout] test infer::tests::test_no_recursive_function_types ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_infer_case_arg_type_from_nested_patterns ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_infer_case_arg_type_from_patterns ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_match_arm_using_bound_variable ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_mismatched_argument ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_mismatched_arms ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_mismatched_patterns ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_nested_patterns ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_pattern_with_wrong_number_of_args ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_sum_from_binary_constructor ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_sum_from_nullary_constructor ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_sum_from_unary_constructor ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_unary_constructor ... ok
+[INFO] [stdout] test infer::tests::test_sum_types::test_valid_case_expression ... ok
+[INFO] [stdout] test infer::tests::test_type_mismatch ... ok
+[INFO] [stdout] test infer::tests::test_type_vars_free_in ... ok
+[INFO] [stdout] test infer::tests::test_universalize_type ... ok
+[INFO] [stdout] test infer::tests::test_valid_conditional ... ok
+[INFO] [stdout] test lex::decl::tests::test_individual_tokens ... ok
+[INFO] [stdout] test lex::expr::tests::test_constructors ... ok
+[INFO] [stdout] test lex::expr::tests::test_lex ... ok
+[INFO] [stdout] test parse::decl::tests::test_extra_close_paren ... ok
+[INFO] [stdout] test parse::decl::tests::test_invalid_left_side ... ok
+[INFO] [stdout] test parse::decl::tests::test_extra_close_paren_in_variant ... ok
+[INFO] [stdout] test parse::decl::tests::test_missing_type_name ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_base_types ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_function_type ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_nullary_sum_type ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_nested_type ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_constructor_name ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_type_var ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_type_vars ... ok
+[INFO] [stdout] test parse::decl::tests::test_rejects_extra_eq ... ok
+[INFO] [stdout] test parse::decl::tests::test_parses_type_name ... ok
+[INFO] [stdout] test parse::expr::tests::test_empty_input ... ok
+[INFO] [stdout] test parse::decl::tests::test_unknown_sum_type ... ok
+[INFO] [stdout] test parse::expr::tests::test_lambda_without_parens ... ok
+[INFO] [stdout] test parse::expr::tests::test_parses_constructor ... ok
+[INFO] [stdout] test parse::expr::tests::test_invalid_constructor ... ok
+[INFO] [stdout] test parse::expr::tests::test_parses_case ... ok
+[INFO] [stdout] test parse::expr::tests::test_parses_lambda_application ... ok
+[INFO] [stdout] test parse::expr::tests::test_parses_unit ... ok
+[INFO] [stdout] test parse::expr::tests::test_unbalanced_delimiters ... ok
+[INFO] [stdout] test parse::expr::tests::test_unit_as_argument ... ok
+[INFO] [stdout] test structures::patterns::tests::test_atom_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_irrefutable_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_nested_atom_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_nested_irrefutable_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_nested_wildcard_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_sum_pattern ... ok
+[INFO] [stdout] test structures::patterns::tests::test_wildcard_pattern ... ok
+[INFO] [stdout] test structures::sums::tests::test_constructor_names_must_be_unique ... ok
+[INFO] [stdout] test structures::sums::tests::test_insert_valid_type ... ok
+[INFO] [stdout] test tests::test_binding_in_case_expression ... ok
+[INFO] [stdout] test tests::test_evaluate_case_expression ... ok
+[INFO] [stdout] test tests::test_evaluate_int ... ok
+[INFO] [stdout] test tests::test_evaluate_op ... ok
+[INFO] [stdout] test tests::test_factorial_with_let ... ok
+[INFO] [stdout] test tests::test_fully_apply_op ... ok
+[INFO] [stdout] test tests::test_missing_outer_parens ... ok
+[INFO] [stdout] test tests::test_pair_type ... ok
+[INFO] [stdout] test tests::test_partially_apply_op ... ok
+[INFO] [stdout] test tests::test_polymorphic_let ... ok
+[INFO] [stdout] test tests::test_polymorphic_session_let ... ok
+[INFO] [stdout] test tests::test_recursive_session_bindings ... ok
+[INFO] [stdout] test tests::test_save_session_bindings ... ok
+[INFO] [stdout] test tests::test_too_many_arguments ... ok
+[INFO] [stdout] test tests::test_type_of_using_session_bindings ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 79 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\samara-d09e4fa26557b5ae.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\skeptic-6ca9ca7afcea4704.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test readme_sect_examples_line_28 ... ok
+[INFO] [stdout] test readme_sect_examples_line_124 ... ok
+[INFO] [stdout] test readme_sect_examples_line_104 ... ok
+[INFO] [stdout] test readme_sect_examples_line_37 ... ok
+[INFO] [stdout] test readme_sect_examples_line_46 ... ok
+[INFO] [stdout] test readme_sect_examples_line_77 ... ok
+[INFO] [stdout] test readme_sect_examples_line_57 ... ok
+[INFO] [stdout] test readme_sect_examples_line_70 ... ok
+[INFO] [stdout] test readme_sect_examples_line_84 ... ok
+[INFO] [stdout] test readme_sect_examples_line_91 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests samara
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "64d546f230c64b8fbaf0d2b7ef40c42d8b5c03fa773b0b05813e3f29c2394a3b"`
+[INFO] running `"docker" "rm" "-f" "64d546f230c64b8fbaf0d2b7ef40c42d8b5c03fa773b0b05813e3f29c2394a3b"`
+[INFO] [stdout] 64d546f230c64b8fbaf0d2b7ef40c42d8b5c03fa773b0b05813e3f29c2394a3b

@@ -1,0 +1,113 @@
+[INFO] crate walkdir 2.2.9 is already in cache
+[INFO] extracting crate walkdir 2.2.9 into work\ex\default\sources\nightly\reg\walkdir\2.2.9
+[INFO] extracting crate walkdir 2.2.9 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\walkdir\2.2.9
+[INFO] validating manifest of walkdir-2.2.9 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of walkdir-2.2.9 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing walkdir-2.2.9
+[INFO] finished frobbing walkdir-2.2.9
+[INFO] frobbed toml for walkdir-2.2.9 written to work\ex\default\sources\nightly\reg\walkdir\2.2.9\Cargo.toml
+[INFO] started frobbing walkdir-2.2.9
+[INFO] finished frobbing walkdir-2.2.9
+[INFO] frobbed toml for walkdir-2.2.9 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\walkdir\2.2.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing walkdir-2.2.9 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\walkdir\\2.2.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 87a144ef33cee667be54777d38ae50163baa5ad139ff3f46728ca9b1e9d46c5b
+[INFO] running `"docker" "start" "-a" "87a144ef33cee667be54777d38ae50163baa5ad139ff3f46728ca9b1e9d46c5b"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling same-file v1.0.5
+[INFO] [stderr]    Compiling walkdir v2.2.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 27.24s
+[INFO] running `"docker" "inspect" "87a144ef33cee667be54777d38ae50163baa5ad139ff3f46728ca9b1e9d46c5b"`
+[INFO] running `"docker" "rm" "-f" "87a144ef33cee667be54777d38ae50163baa5ad139ff3f46728ca9b1e9d46c5b"`
+[INFO] [stdout] 87a144ef33cee667be54777d38ae50163baa5ad139ff3f46728ca9b1e9d46c5b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\walkdir\\2.2.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f66e8d4d9b43c1f8742828546f1528a20bfb1cb724aac3d135c0bee1607fb9c8
+[INFO] running `"docker" "start" "-a" "f66e8d4d9b43c1f8742828546f1528a20bfb1cb724aac3d135c0bee1607fb9c8"`
+[INFO] [stderr]    Compiling doc-comment v0.3.1
+[INFO] [stderr]    Compiling walkdir v2.2.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.71s
+[INFO] running `"docker" "inspect" "f66e8d4d9b43c1f8742828546f1528a20bfb1cb724aac3d135c0bee1607fb9c8"`
+[INFO] running `"docker" "rm" "-f" "f66e8d4d9b43c1f8742828546f1528a20bfb1cb724aac3d135c0bee1607fb9c8"`
+[INFO] [stdout] f66e8d4d9b43c1f8742828546f1528a20bfb1cb724aac3d135c0bee1607fb9c8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\walkdir\\2.2.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 8ad5d85fc9b72cda6bd0bc49e82efd83ee37aae236980d9ae1724cbb6528a94a
+[INFO] running `"docker" "start" "-a" "8ad5d85fc9b72cda6bd0bc49e82efd83ee37aae236980d9ae1724cbb6528a94a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\walkdir-195bb2ca594bda92.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 41 tests
+[INFO] [stdout] test tests::recursive::contents_first ... ok
+[INFO] [stdout] test tests::recursive::empty ... ok
+[INFO] [stdout] test tests::recursive::empty_file ... ok
+[INFO] [stdout] test tests::recursive::empty_file_follow ... ok
+[INFO] [stdout] test tests::recursive::empty_follow ... ok
+[INFO] [stdout] test tests::recursive::filter_entry ... ok
+[INFO] [stdout] test tests::recursive::many_dirs ... ok
+[INFO] [stdout] test tests::recursive::many_files ... ok
+[INFO] [stdout] test tests::recursive::many_mixed ... ok
+[INFO] [stdout] test tests::recursive::max_depth_0 ... ok
+[INFO] [stdout] test tests::recursive::max_depth_1 ... ok
+[INFO] [stdout] test tests::recursive::max_depth_2 ... ok
+[INFO] [stdout] test tests::recursive::min_depth_1 ... ok
+[INFO] [stdout] test tests::recursive::min_depth_2 ... ok
+[INFO] [stdout] test tests::recursive::min_max_depth_diff_0 ... ok
+[INFO] [stdout] test tests::recursive::min_max_depth_diff_1 ... ok
+[INFO] [stdout] test tests::recursive::min_max_depth_diff_nada ... ok
+[INFO] [stdout] test tests::recursive::nested ... ok
+[INFO] [stdout] test tests::recursive::nested_small_max_open ... ok
+[INFO] [stderr]    Doc-tests walkdir
+[INFO] [stdout] test tests::recursive::one_dir ... ok
+[INFO] [stdout] test tests::recursive::one_dir_one_file ... ok
+[INFO] [stdout] test tests::recursive::one_file ... ok
+[INFO] [stdout] test tests::recursive::regression_skip_current_dir ... ok
+[INFO] [stdout] test tests::recursive::send_sync_traits ... ok
+[INFO] [stdout] test tests::recursive::siblings ... ok
+[INFO] [stdout] test tests::recursive::skip_current_dir ... ok
+[INFO] [stdout] test tests::recursive::sort ... ok
+[INFO] [stdout] test tests::recursive::sort_max_open ... ok
+[INFO] [stdout] test tests::recursive::sym_dir_follow ... ok
+[INFO] [stdout] test tests::recursive::sym_dir_nofollow ... ok
+[INFO] [stdout] test tests::recursive::sym_dir_self_loop_io_error ... ok
+[INFO] [stdout] test tests::recursive::sym_file_follow ... ok
+[INFO] [stdout] test tests::recursive::sym_file_nofollow ... ok
+[INFO] [stdout] test tests::recursive::sym_file_self_loop_io_error ... ok
+[INFO] [stdout] test tests::recursive::sym_loop_detect ... ok
+[INFO] [stdout] test tests::recursive::sym_noloop ... ok
+[INFO] [stdout] test tests::recursive::sym_root_dir_follow ... ok
+[INFO] [stdout] test tests::recursive::sym_root_dir_nofollow ... ok
+[INFO] [stdout] test tests::recursive::sym_root_file_follow ... ok
+[INFO] [stdout] test tests::recursive::sym_root_file_nofollow ... ok
+[INFO] [stdout] test tests::recursive::sym_self_loop_no_error ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 41 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 14 tests
+[INFO] [stdout] test src\lib.rs -  (line 49) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 63) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 32) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 82) ... ok
+[INFO] [stdout] test src\lib.rs - FilterEntry<IntoIter, P>::filter_entry (line 1041) ... ok
+[INFO] [stdout] test src\lib.rs - FilterEntry<IntoIter, P>::skip_current_dir (line 1091) ... ok
+[INFO] [stdout] test src\lib.rs - IntoIter::filter_entry (line 742) ... ok
+[INFO] [stdout] test src\lib.rs - IntoIter::skip_current_dir (line 693) ... ok
+[INFO] [stdout] test src\lib.rs - WalkDir (line 196) ... ok
+[INFO] [stdout] test src\lib.rs - WalkDir (line 216) ... ok
+[INFO] [stdout] test src\lib.rs - WalkDir::contents_first (line 428) ... ok
+[INFO] [stdout] test src\lib.rs - WalkDir::contents_first (line 445) ... ok
+[INFO] [stdout] test src\error.rs - error::Error::io_error (line 101) ... ok
+[INFO] [stdout] test src\lib.rs - WalkDir::sort_by (line 388) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8ad5d85fc9b72cda6bd0bc49e82efd83ee37aae236980d9ae1724cbb6528a94a"`
+[INFO] running `"docker" "rm" "-f" "8ad5d85fc9b72cda6bd0bc49e82efd83ee37aae236980d9ae1724cbb6528a94a"`
+[INFO] [stdout] 8ad5d85fc9b72cda6bd0bc49e82efd83ee37aae236980d9ae1724cbb6528a94a

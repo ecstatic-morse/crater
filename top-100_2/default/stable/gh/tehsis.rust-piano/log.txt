@@ -1,0 +1,80 @@
+[INFO] cloning repository tehsis/rust-piano
+[INFO] running `"git" "clone" "--bare" "git://github.com/tehsis/rust-piano.git" "work\\cache\\sources\\gh\\tehsis\\rust-piano"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\tehsis\rust-piano'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tehsis\\rust-piano" "work\\ex\\default\\sources\\stable\\gh\\tehsis\\rust-piano"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\tehsis\rust-piano'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tehsis\\rust-piano" "work\\ex\\default\\sources\\beta\\gh\\tehsis\\rust-piano"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\tehsis\rust-piano'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c3756d0d06fa81253501295e9dfa8ee302f69808
+[INFO] sha for GitHub repo tehsis/rust-piano: c3756d0d06fa81253501295e9dfa8ee302f69808
+[INFO] validating manifest of tehsis/rust-piano on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tehsis/rust-piano on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tehsis/rust-piano
+[INFO] finished frobbing tehsis/rust-piano
+[INFO] frobbed toml for tehsis/rust-piano written to work\ex\default\sources\stable\gh\tehsis\rust-piano\Cargo.toml
+[INFO] started frobbing tehsis/rust-piano
+[INFO] finished frobbing tehsis/rust-piano
+[INFO] frobbed toml for tehsis/rust-piano written to work\ex\default\sources\beta\gh\tehsis\rust-piano\Cargo.toml
+[INFO] crate tehsis/rust-piano already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/nicklan/rimd.git`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\tehsis\rust-piano\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Updating git repository `https://github.com/nicklan/rimd.git`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Updating git repository `https://github.com/nicklan/rimd.git`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serial v0.3.4
+[INFO] [stderr]   Downloaded ioctl-rs v0.1.6
+[INFO] [stderr]   Downloaded num-bigint v0.1.44
+[INFO] [stderr]   Downloaded num-complex v0.1.43
+[INFO] [stderr]   Downloaded enum_primitive v0.1.1
+[INFO] [stderr]   Downloaded byteorder v0.4.2
+[INFO] [stderr]   Downloaded portmidi v0.2.4
+[INFO] [stderr]   Downloaded termios v0.2.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing tehsis/rust-piano against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\tehsis\\rust-piano,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a48ef0d086ed7a836e4c7b52d3556155806ecea9a1e70aaa6fa2b24ebcb7c3aa
+[INFO] running `"docker" "start" "-a" "a48ef0d086ed7a836e4c7b52d3556155806ecea9a1e70aaa6fa2b24ebcb7c3aa"`
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling byteorder v0.4.2
+[INFO] [stderr]    Compiling portmidi v0.2.4
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling serial v0.3.4
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling num-complex v0.1.43
+[INFO] [stderr]    Compiling enum_primitive v0.1.1
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling num-bigint v0.1.44
+[INFO] [stderr]    Compiling num-rational v0.1.42
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling rimd v0.0.1 (https://github.com/nicklan/rimd.git#ff1bddeb)
+[INFO] [stderr]    Compiling rust-piano v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1181
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.rust_piano.b2hu5701-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.exe" "C:\\crater\\target\\debug\\deps\\rust_piano-d69ba8efe8729bc3.4w2hio2v2luki00s.rcgu.o" "/OPT:REF,NOICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\libportmidi-156b44ffee3d0955.rlib" "C:\\crater\\target\\debug\\deps\\libserial-221e4cc2e8e841da.rlib" "C:\\crater\\target\\debug\\deps\\liblibc-042b06e2a47d07d5.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libstd-c418a1c7c96bdbae.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libpanic_unwind-740e55ec30ec9b42.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_demangle-4e3d4b2c73be2130.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libhashbrown-e03c95365300773b.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_alloc-9b63ec27f8df7123.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libunwind-cc811f306714ba24.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liblibc-dee84a63f4b90027.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liballoc-7d070a58cfb70fe0.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_core-10ec18f1dfe36e70.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcore-e0e69d50f48d4667.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcompiler_builtins-45eb0e961cc324b2.rlib" "portmidi.lib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib"
+[INFO] [stderr]   = note: LINK : fatal error LNK1181: cannot open input file 'portmidi.lib'
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `rust-piano`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "a48ef0d086ed7a836e4c7b52d3556155806ecea9a1e70aaa6fa2b24ebcb7c3aa"`
+[INFO] running `"docker" "rm" "-f" "a48ef0d086ed7a836e4c7b52d3556155806ecea9a1e70aaa6fa2b24ebcb7c3aa"`
+[INFO] [stdout] a48ef0d086ed7a836e4c7b52d3556155806ecea9a1e70aaa6fa2b24ebcb7c3aa

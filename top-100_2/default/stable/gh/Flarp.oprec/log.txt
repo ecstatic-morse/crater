@@ -1,0 +1,122 @@
+[INFO] cloning repository Flarp/oprec
+[INFO] running `"git" "clone" "--bare" "git://github.com/Flarp/oprec.git" "work\\cache\\sources\\gh\\Flarp\\oprec"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Flarp\oprec'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Flarp\\oprec" "work\\ex\\default\\sources\\stable\\gh\\Flarp\\oprec"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Flarp\oprec'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Flarp\\oprec" "work\\ex\\default\\sources\\beta\\gh\\Flarp\\oprec"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Flarp\oprec'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] fd80235928114b2f6ca8715b52200dbb22a2e901
+[INFO] sha for GitHub repo Flarp/oprec: fd80235928114b2f6ca8715b52200dbb22a2e901
+[INFO] validating manifest of Flarp/oprec on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Flarp/oprec on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Flarp/oprec
+[INFO] finished frobbing Flarp/oprec
+[INFO] frobbed toml for Flarp/oprec written to work\ex\default\sources\stable\gh\Flarp\oprec\Cargo.toml
+[INFO] started frobbing Flarp/oprec
+[INFO] finished frobbing Flarp/oprec
+[INFO] frobbed toml for Flarp/oprec written to work\ex\default\sources\beta\gh\Flarp\oprec\Cargo.toml
+[INFO] crate Flarp/oprec already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded petgraph v0.4.12
+[INFO] [stderr]   Downloaded fixedbitset v0.1.9
+[INFO] [stderr]   Downloaded ordermap v0.3.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Flarp/oprec against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Flarp\\oprec,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] d64e57f3680f5ff01a52408fec4ecd9072ec8c04b53fead5fa3a0efe94eb06c6
+[INFO] running `"docker" "start" "-a" "d64e57f3680f5ff01a52408fec4ecd9072ec8c04b53fead5fa3a0efe94eb06c6"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling fixedbitset v0.1.9
+[INFO] [stderr]    Compiling ordermap v0.3.5
+[INFO] [stderr]    Compiling petgraph v0.4.12
+[INFO] [stderr] error[E0034]: multiple applicable items in scope
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\graph_impl\stable_graph\mod.rs:1171:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1171 |         self.iter.find_map(|(i, node)| {
+[INFO] [stderr]      |                   ^^^^^^^^ multiple `find_map` found
+[INFO] [stderr]      |
+[INFO] [stderr] note: candidate #1 is defined in an impl of the trait `iter_utils::IterUtilsExt` for the type `_`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\iter_utils.rs:5:5
+[INFO] [stderr]      |
+[INFO] [stderr] 5    | /     fn find_map<F, R>(&mut self, mut f: F) -> Option<R>
+[INFO] [stderr] 6    | |         where F: FnMut(Self::Item) -> Option<R>
+[INFO] [stderr] 7    | |     {
+[INFO] [stderr] 8    | |         while let Some(elt) = self.next() {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 13   | |         None
+[INFO] [stderr] 14   | |     }
+[INFO] [stderr]      | |_____^
+[INFO] [stderr]      = note: candidate #2 is defined in an impl of the trait `std::iter::Iterator` for the type `std::iter::Enumerate<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0034]: multiple applicable items in scope
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\graph_impl\stable_graph\mod.rs:1363:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1363 |         self.iter.find_map(|(i, edge)|
+[INFO] [stderr]      |                   ^^^^^^^^ multiple `find_map` found
+[INFO] [stderr]      |
+[INFO] [stderr] note: candidate #1 is defined in an impl of the trait `iter_utils::IterUtilsExt` for the type `_`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\iter_utils.rs:5:5
+[INFO] [stderr]      |
+[INFO] [stderr] 5    | /     fn find_map<F, R>(&mut self, mut f: F) -> Option<R>
+[INFO] [stderr] 6    | |         where F: FnMut(Self::Item) -> Option<R>
+[INFO] [stderr] 7    | |     {
+[INFO] [stderr] 8    | |         while let Some(elt) = self.next() {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 13   | |         None
+[INFO] [stderr] 14   | |     }
+[INFO] [stderr]      | |_____^
+[INFO] [stderr]      = note: candidate #2 is defined in an impl of the trait `std::iter::Iterator` for the type `std::iter::Enumerate<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0034]: multiple applicable items in scope
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\graph_impl\stable_graph\mod.rs:1527:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1527 |         self.iter.find_map(|(i, node)| {
+[INFO] [stderr]      |                   ^^^^^^^^ multiple `find_map` found
+[INFO] [stderr]      |
+[INFO] [stderr] note: candidate #1 is defined in an impl of the trait `iter_utils::IterUtilsExt` for the type `_`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\iter_utils.rs:5:5
+[INFO] [stderr]      |
+[INFO] [stderr] 5    | /     fn find_map<F, R>(&mut self, mut f: F) -> Option<R>
+[INFO] [stderr] 6    | |         where F: FnMut(Self::Item) -> Option<R>
+[INFO] [stderr] 7    | |     {
+[INFO] [stderr] 8    | |         while let Some(elt) = self.next() {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 13   | |         None
+[INFO] [stderr] 14   | |     }
+[INFO] [stderr]      | |_____^
+[INFO] [stderr]      = note: candidate #2 is defined in an impl of the trait `std::iter::Iterator` for the type `std::iter::Enumerate<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0034]: multiple applicable items in scope
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\graph_impl\stable_graph\mod.rs:1573:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1573 |         self.iter.find_map(|(i, node)| {
+[INFO] [stderr]      |                   ^^^^^^^^ multiple `find_map` found
+[INFO] [stderr]      |
+[INFO] [stderr] note: candidate #1 is defined in an impl of the trait `iter_utils::IterUtilsExt` for the type `_`
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\petgraph-0.4.12\src\iter_utils.rs:5:5
+[INFO] [stderr]      |
+[INFO] [stderr] 5    | /     fn find_map<F, R>(&mut self, mut f: F) -> Option<R>
+[INFO] [stderr] 6    | |         where F: FnMut(Self::Item) -> Option<R>
+[INFO] [stderr] 7    | |     {
+[INFO] [stderr] 8    | |         while let Some(elt) = self.next() {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 13   | |         None
+[INFO] [stderr] 14   | |     }
+[INFO] [stderr]      | |_____^
+[INFO] [stderr]      = note: candidate #2 is defined in an impl of the trait `std::iter::Iterator` for the type `std::iter::Enumerate<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0034`.
+[INFO] [stderr] error: Could not compile `petgraph`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "d64e57f3680f5ff01a52408fec4ecd9072ec8c04b53fead5fa3a0efe94eb06c6"`
+[INFO] running `"docker" "rm" "-f" "d64e57f3680f5ff01a52408fec4ecd9072ec8c04b53fead5fa3a0efe94eb06c6"`
+[INFO] [stdout] d64e57f3680f5ff01a52408fec4ecd9072ec8c04b53fead5fa3a0efe94eb06c6

@@ -1,0 +1,333 @@
+[INFO] fetching crate native-tls 0.2.3...
+[INFO] extracting crate native-tls 0.2.3 into work\ex\default\sources\stable\reg\native-tls\0.2.3
+[INFO] extracting crate native-tls 0.2.3 into work\ex\default\sources\beta\reg\native-tls\0.2.3
+[INFO] validating manifest of native-tls-0.2.3 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of native-tls-0.2.3 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing native-tls-0.2.3
+[INFO] finished frobbing native-tls-0.2.3
+[INFO] frobbed toml for native-tls-0.2.3 written to work\ex\default\sources\stable\reg\native-tls\0.2.3\Cargo.toml
+[INFO] started frobbing native-tls-0.2.3
+[INFO] finished frobbing native-tls-0.2.3
+[INFO] frobbed toml for native-tls-0.2.3 written to work\ex\default\sources\beta\reg\native-tls\0.2.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing native-tls-0.2.3 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\native-tls\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] cee80f5574227f0fd27690e64a478456cf17e69567efb03751ee13f77910b3d0
+[INFO] running `"docker" "start" "-a" "cee80f5574227f0fd27690e64a478456cf17e69567efb03751ee13f77910b3d0"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling native-tls v0.2.3 (C:\crater\workdir)
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\imp\schannel.rs:41:32
+[INFO] [stderr]    |
+[INFO] [stderr] 41 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:139:32
+[INFO] [stderr]     |
+[INFO] [stderr] 139 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:275:32
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]    --> src\lib.rs:140:9
+[INFO] [stderr]     |
+[INFO] [stderr] 140 |         error::Error::cause(&self.0)
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]   --> src\imp\schannel.rs:42:9
+[INFO] [stderr]    |
+[INFO] [stderr] 42 |         error::Error::cause(&self.0)
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 34.03s
+[INFO] running `"docker" "inspect" "cee80f5574227f0fd27690e64a478456cf17e69567efb03751ee13f77910b3d0"`
+[INFO] running `"docker" "rm" "-f" "cee80f5574227f0fd27690e64a478456cf17e69567efb03751ee13f77910b3d0"`
+[INFO] [stdout] cee80f5574227f0fd27690e64a478456cf17e69567efb03751ee13f77910b3d0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\native-tls\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c04b8586b24bb140b98587583759010f1d39832a95ba5c3c6c6e57ddfe2bb5b0
+[INFO] running `"docker" "start" "-a" "c04b8586b24bb140b98587583759010f1d39832a95ba5c3c6c6e57ddfe2bb5b0"`
+[INFO] [stderr]    Compiling native-tls v0.2.3 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\imp\schannel.rs:41:32
+[INFO] [stderr]    |
+[INFO] [stderr] 41 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:139:32
+[INFO] [stderr]     |
+[INFO] [stderr] 139 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:275:32
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]    --> src\lib.rs:140:9
+[INFO] [stderr]     |
+[INFO] [stderr] 140 |         error::Error::cause(&self.0)
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]   --> src\imp\schannel.rs:42:9
+[INFO] [stderr]    |
+[INFO] [stderr] 42 |         error::Error::cause(&self.0)
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.97s
+[INFO] running `"docker" "inspect" "c04b8586b24bb140b98587583759010f1d39832a95ba5c3c6c6e57ddfe2bb5b0"`
+[INFO] running `"docker" "rm" "-f" "c04b8586b24bb140b98587583759010f1d39832a95ba5c3c6c6e57ddfe2bb5b0"`
+[INFO] [stdout] c04b8586b24bb140b98587583759010f1d39832a95ba5c3c6c6e57ddfe2bb5b0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\native-tls\\0.2.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] eead512934654e56ec549f9693a376d11dd9c7adaf5eb8dd33370a3c406cdd9d
+[INFO] running `"docker" "start" "-a" "eead512934654e56ec549f9693a376d11dd9c7adaf5eb8dd33370a3c406cdd9d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.61s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\native_tls-f78a5076dae44d3a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test test::tests::connect_bad_hostname_ignored ... FAILED
+[INFO] [stdout] test test::tests::connect_google ... FAILED
+[INFO] [stdout] test test::tests::import_same_identity_multiple_times ... ok
+[INFO] [stdout] test test::tests::connect_bad_hostname ... FAILED
+[INFO] [stdout] test test::tests::peer_certificate ... ok
+[INFO] [stdout] test test::tests::server_pem ... ok
+[INFO] [stdout] test test::tests::server_no_shared_protocol ... ok
+[INFO] [stdout] test test::tests::server ... ok
+[INFO] [stdout] test test::tests::server_tls11_only ... ok
+[INFO] [stdout] test test::tests::server_untrusted ... ok
+[INFO] [stdout] test test::tests::shutdown ... ok
+[INFO] [stdout] test test::tests::server_untrusted_unverified ... ok
+[INFO] [stdout] test test::tests::tls_server_end_point ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- test::tests::connect_bad_hostname_ignored stdout ----
+[INFO] [stdout] thread 'test::tests::connect_bad_hostname_ignored' panicked at 'Os { code: 11001, kind: Other, message: "No such host is known." }', src\test.rs:49:17
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6b268c26c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff6b268c26c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6b268f71e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6b268f71e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff6b268f32b - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff6b268ffb0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff6b268fae4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff6b268fa32 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stdout]    8:     0x7ff6b25e2220 - native_tls::test::tests::connect_bad_hostname_ignored
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:49
+[INFO] [stdout]    9:     0x7ff6b25e1f8e - native_tls::test::tests::connect_bad_hostname_ignored::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:45
+[INFO] [stdout]   10:     0x7ff6b2611b8b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff6b2627807 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   12:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   13:     0x7ff6b264680b - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   14:     0x7ff6b264680b - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff6b264680b - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stdout]   16:     0x7ff6b261968e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   17:     0x7ff6b261f51e - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff6b261f51e - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff6b261f51e - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   20:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   21:     0x7ff6b261fb20 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   22:     0x7ff6b261fb20 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff6b261fb20 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff6b261fb20 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff6b267eda7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   26:     0x7ff6b2693567 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   27:     0x7ff6b2693567 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff6b2693567 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ffa295d7974 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- test::tests::connect_google stdout ----
+[INFO] [stdout] thread 'test::tests::connect_google' panicked at 'Os { code: 11001, kind: Other, message: "No such host is known." }', src\test.rs:25:17
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6b268c26c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff6b268c26c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6b268f71e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6b268f71e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff6b268f32b - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff6b268ffb0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff6b268fae4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff6b268fa32 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stdout]    8:     0x7ff6b25e12bc - native_tls::test::tests::connect_google
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:25
+[INFO] [stdout]    9:     0x7ff6b25e100e - native_tls::test::tests::connect_google::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:23
+[INFO] [stdout]   10:     0x7ff6b2611dbb - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff6b2627807 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   12:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   13:     0x7ff6b264680b - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout]   14:     0x7ff6b264680b - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff6b264680b - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stdout]   16:     0x7ff6b261968e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   17:     0x7ff6b261f51e - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff6b261f51e - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff6b261f51e - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   20:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   21:     0x7ff6b261fb20 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   22:     0x7ff6b261fb20 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff6b261fb20 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff6b261fb20 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff6b267eda7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   26:     0x7ff6b2693567 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   27:     0x7ff6b2693567 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff6b2693567 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ffa295d7974 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] ---- test::tests::connect_bad_hostname stdout ----
+[INFO] [stdout] thread 'test::tests::connect_bad_hostname' panicked at 'Os { code: 11001, kind: Other, message: "No such host is known." }', src\test.rs:40:17
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6b268c26c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff6b268c26c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6b268f71e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6b268f71e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff6b268f32b - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff6b268ffb0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff6b268fae4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff6b268fa32 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stdout]    8:     0x7ff6b25e1da6 - native_tls::test::tests::connect_bad_hostname
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:40
+[INFO] [stdout]    9:     0x7ff6b25e1b6e - native_tls::test::tests::connect_bad_hostname::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\test.rs:38
+[INFO] [stdout]   10:     0x7ff6b2611aeb - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff6b2627807 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   12:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   13:     0x7ff6b264680b - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   14:     0x7ff6b264680b - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff6b264680b - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stdout]   16:     0x7ff6b261968e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   17:     0x7ff6b261f51e - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff6b261f51e - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff6b261f51e - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   20:     0x7ff6b2694892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   21:     0x7ff6b261fb20 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   22:     0x7ff6b261fb20 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff6b261fb20 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff6b261fb20 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff6b267eda7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   26:     0x7ff6b2693567 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   27:     0x7ff6b2693567 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff6b2693567 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ffa295d7974 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     test::tests::connect_bad_hostname
+[INFO] [stdout]     test::tests::connect_bad_hostname_ignored
+[INFO] [stdout]     test::tests::connect_google
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 10 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "eead512934654e56ec549f9693a376d11dd9c7adaf5eb8dd33370a3c406cdd9d"`
+[INFO] running `"docker" "rm" "-f" "eead512934654e56ec549f9693a376d11dd9c7adaf5eb8dd33370a3c406cdd9d"`
+[INFO] [stdout] eead512934654e56ec549f9693a376d11dd9c7adaf5eb8dd33370a3c406cdd9d

@@ -1,0 +1,41 @@
+[INFO] cloning repository Frozander/Rust-OS
+[INFO] running `"git" "clone" "--bare" "git://github.com/Frozander/Rust-OS.git" "work\\cache\\sources\\gh\\Frozander\\Rust-OS"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Frozander\Rust-OS'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Frozander\\Rust-OS" "work\\ex\\default\\sources\\stable\\gh\\Frozander\\Rust-OS"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Frozander\Rust-OS'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Frozander\\Rust-OS" "work\\ex\\default\\sources\\beta\\gh\\Frozander\\Rust-OS"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Frozander\Rust-OS'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f62023f84708cfbc3ed658ec0b292eec609448e0
+[INFO] sha for GitHub repo Frozander/Rust-OS: f62023f84708cfbc3ed658ec0b292eec609448e0
+[INFO] validating manifest of Frozander/Rust-OS on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Frozander/Rust-OS on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Frozander/Rust-OS
+[INFO] finished frobbing Frozander/Rust-OS
+[INFO] frobbed toml for Frozander/Rust-OS written to work\ex\default\sources\stable\gh\Frozander\Rust-OS\Cargo.toml
+[INFO] started frobbing Frozander/Rust-OS
+[INFO] finished frobbing Frozander/Rust-OS
+[INFO] frobbed toml for Frozander/Rust-OS written to work\ex\default\sources\beta\gh\Frozander\Rust-OS\Cargo.toml
+[INFO] crate Frozander/Rust-OS already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Frozander/Rust-OS against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Frozander\\Rust-OS,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 7b7685db92f31365755ca5699684ae5e01c70aed9e42d8b60bba2f33c0e8ae8f
+[INFO] running `"docker" "start" "-a" "7b7685db92f31365755ca5699684ae5e01c70aed9e42d8b60bba2f33c0e8ae8f"`
+[INFO] [stderr]    Compiling rust-os v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0463]: can't find crate for `core`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0463`.
+[INFO] [stderr] error: Could not compile `rust-os`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "7b7685db92f31365755ca5699684ae5e01c70aed9e42d8b60bba2f33c0e8ae8f"`
+[INFO] running `"docker" "rm" "-f" "7b7685db92f31365755ca5699684ae5e01c70aed9e42d8b60bba2f33c0e8ae8f"`
+[INFO] [stdout] 7b7685db92f31365755ca5699684ae5e01c70aed9e42d8b60bba2f33c0e8ae8f

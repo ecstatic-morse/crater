@@ -1,0 +1,65 @@
+[INFO] crate cc 1.0.37 is already in cache
+[INFO] extracting crate cc 1.0.37 into work\ex\default\sources\stable\reg\cc\1.0.37
+[INFO] extracting crate cc 1.0.37 into work\ex\default\sources\beta\reg\cc\1.0.37
+[INFO] validating manifest of cc-1.0.37 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cc-1.0.37 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cc-1.0.37
+[INFO] finished frobbing cc-1.0.37
+[INFO] frobbed toml for cc-1.0.37 written to work\ex\default\sources\stable\reg\cc\1.0.37\Cargo.toml
+[INFO] started frobbing cc-1.0.37
+[INFO] finished frobbing cc-1.0.37
+[INFO] frobbed toml for cc-1.0.37 written to work\ex\default\sources\beta\reg\cc\1.0.37\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] building cc-1.0.37 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\cc\\1.0.37,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] fe2d92ff512200b050f8992b67ac36e66be96c37fbf7d79d359670ecab1fbd82
+[INFO] running `"docker" "start" "-a" "fe2d92ff512200b050f8992b67ac36e66be96c37fbf7d79d359670ecab1fbd82"`
+[INFO] [stderr]    Compiling cc v1.0.37 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\windows_registry.rs:221:32
+[INFO] [stderr]     |
+[INFO] [stderr] 221 |     fn vs16_instances() -> Box<Iterator<Item=PathBuf>> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item=PathBuf>`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.91s
+[INFO] running `"docker" "inspect" "fe2d92ff512200b050f8992b67ac36e66be96c37fbf7d79d359670ecab1fbd82"`
+[INFO] running `"docker" "rm" "-f" "fe2d92ff512200b050f8992b67ac36e66be96c37fbf7d79d359670ecab1fbd82"`
+[INFO] [stdout] fe2d92ff512200b050f8992b67ac36e66be96c37fbf7d79d359670ecab1fbd82
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\cc\\1.0.37,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4b3043defc9e30919ca42b54668ccf6f67f2eea97d350a324c633f290a9e0ec7
+[INFO] running `"docker" "start" "-a" "4b3043defc9e30919ca42b54668ccf6f67f2eea97d350a324c633f290a9e0ec7"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling cc v1.0.37 (C:\crater\workdir)
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\windows_registry.rs:221:32
+[INFO] [stderr]     |
+[INFO] [stderr] 221 |     fn vs16_instances() -> Box<Iterator<Item=PathBuf>> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item=PathBuf>`
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:57:24
+[INFO] [stderr]     |
+[INFO] [stderr] 57  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `cc`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "4b3043defc9e30919ca42b54668ccf6f67f2eea97d350a324c633f290a9e0ec7"`
+[INFO] running `"docker" "rm" "-f" "4b3043defc9e30919ca42b54668ccf6f67f2eea97d350a324c633f290a9e0ec7"`
+[INFO] [stdout] 4b3043defc9e30919ca42b54668ccf6f67f2eea97d350a324c633f290a9e0ec7

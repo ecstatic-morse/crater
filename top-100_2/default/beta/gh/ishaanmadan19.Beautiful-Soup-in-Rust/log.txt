@@ -1,0 +1,45 @@
+[INFO] cloning repository ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/ishaanmadan19/Beautiful-Soup-in-Rust.git" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust" "work\\ex\\default\\sources\\stable\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust" "work\\ex\\default\\sources\\beta\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ec9d6547481ae7a56cb0da4a8dbe8cf67da45c9e
+[INFO] sha for GitHub repo ishaanmadan19/Beautiful-Soup-in-Rust: ec9d6547481ae7a56cb0da4a8dbe8cf67da45c9e
+[INFO] validating manifest of ishaanmadan19/Beautiful-Soup-in-Rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ishaanmadan19/Beautiful-Soup-in-Rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] finished frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] frobbed toml for ishaanmadan19/Beautiful-Soup-in-Rust written to work\ex\default\sources\stable\gh\ishaanmadan19\Beautiful-Soup-in-Rust\Cargo.toml
+[INFO] started frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] finished frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] frobbed toml for ishaanmadan19/Beautiful-Soup-in-Rust written to work\ex\default\sources\beta\gh\ishaanmadan19\Beautiful-Soup-in-Rust\Cargo.toml
+[INFO] crate ishaanmadan19/Beautiful-Soup-in-Rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ishaanmadan19/Beautiful-Soup-in-Rust against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] ca433034bc5e667619000c2ba0b143148d2935e7e16c8898f91c677059b40574
+[INFO] running `"docker" "start" "-a" "ca433034bc5e667619000c2ba0b143148d2935e7e16c8898f91c677059b40574"`
+[INFO] [stderr]    Compiling bsr v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.12s
+[INFO] running `"docker" "inspect" "ca433034bc5e667619000c2ba0b143148d2935e7e16c8898f91c677059b40574"`
+[INFO] running `"docker" "rm" "-f" "ca433034bc5e667619000c2ba0b143148d2935e7e16c8898f91c677059b40574"`
+[INFO] [stdout] ca433034bc5e667619000c2ba0b143148d2935e7e16c8898f91c677059b40574
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 518832dde5ad48a0c52e66f6c978cf0590e3992ba80709bb7d3f29bfa1707865
+[INFO] running `"docker" "start" "-a" "518832dde5ad48a0c52e66f6c978cf0590e3992ba80709bb7d3f29bfa1707865"`
+[INFO] [stderr] time="2019-07-21T09:35:43Z" level=error msg="error waiting for container: Error response from daemon: i/o timeout"
+[INFO] [stderr]    Compiling bsr v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.85s
+[INFO] running `"docker" "inspect" "518832dde5ad48a0c52e66f6c978cf0590e3992ba80709bb7d3f29bfa1707865"`
+[INFO] running `"docker" "rm" "-f" "518832dde5ad48a0c52e66f6c978cf0590e3992ba80709bb7d3f29bfa1707865"`
+[INFO] [stdout] 518832dde5ad48a0c52e66f6c978cf0590e3992ba80709bb7d3f29bfa1707865

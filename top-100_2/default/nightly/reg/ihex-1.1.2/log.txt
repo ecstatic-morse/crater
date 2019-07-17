@@ -1,0 +1,109 @@
+[INFO] fetching crate ihex 1.1.2...
+[INFO] extracting crate ihex 1.1.2 into work\ex\default\sources\nightly\reg\ihex\1.1.2
+[INFO] extracting crate ihex 1.1.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ihex\1.1.2
+[INFO] validating manifest of ihex-1.1.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ihex-1.1.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ihex-1.1.2
+[INFO] finished frobbing ihex-1.1.2
+[INFO] frobbed toml for ihex-1.1.2 written to work\ex\default\sources\nightly\reg\ihex\1.1.2\Cargo.toml
+[INFO] started frobbing ihex-1.1.2
+[INFO] finished frobbing ihex-1.1.2
+[INFO] frobbed toml for ihex-1.1.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\ihex\1.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ihex-1.1.2 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ihex\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] cc04f59ccc05e97893459a34bfdff3a2acc3cc0edb2b49955b2150399b73da63
+[INFO] running `"docker" "start" "-a" "cc04f59ccc05e97893459a34bfdff3a2acc3cc0edb2b49955b2150399b73da63"`
+[INFO] [stderr]    Compiling ihex v1.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.20s
+[INFO] running `"docker" "inspect" "cc04f59ccc05e97893459a34bfdff3a2acc3cc0edb2b49955b2150399b73da63"`
+[INFO] running `"docker" "rm" "-f" "cc04f59ccc05e97893459a34bfdff3a2acc3cc0edb2b49955b2150399b73da63"`
+[INFO] [stdout] cc04f59ccc05e97893459a34bfdff3a2acc3cc0edb2b49955b2150399b73da63
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ihex\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 55472f012a8f5486a7ee5387329a944e63b5b8fe6123f1560fff3004e48059ce
+[INFO] running `"docker" "start" "-a" "55472f012a8f5486a7ee5387329a944e63b5b8fe6123f1560fff3004e48059ce"`
+[INFO] [stderr]    Compiling ihex v1.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.86s
+[INFO] running `"docker" "inspect" "55472f012a8f5486a7ee5387329a944e63b5b8fe6123f1560fff3004e48059ce"`
+[INFO] running `"docker" "rm" "-f" "55472f012a8f5486a7ee5387329a944e63b5b8fe6123f1560fff3004e48059ce"`
+[INFO] [stdout] 55472f012a8f5486a7ee5387329a944e63b5b8fe6123f1560fff3004e48059ce
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\ihex\\1.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 193115b0c0bf1d631beb25cacb327e8996c30a460715fdba32bf1b5fdd3b180e
+[INFO] running `"docker" "start" "-a" "193115b0c0bf1d631beb25cacb327e8996c30a460715fdba32bf1b5fdd3b180e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ihex-4cd83166ac2549a0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test checksum::tests::test_checksum_ela_record ... ok
+[INFO] [stdout] test checksum::tests::test_checksum_empty ... ok
+[INFO] [stdout] test checksum::tests::test_checksum_eof_record ... ok
+[INFO] [stdout] test checksum::tests::test_checksum_sla_record ... ok
+[INFO] [stdout] test record::tests::test_record_type ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_reader-18822f912c30a2d5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 24 tests
+[INFO] [stdout] test test_reader_allow_no_trailing_newlines ... ok
+[INFO] [stdout] test test_reader_allow_no_trailing_newlines_on_one_record ... ok
+[INFO] [stdout] test test_reader_processes_well_formed_ihex_object ... ok
+[INFO] [stdout] test test_reader_respects_all_newline_formats ... ok
+[INFO] [stdout] test test_reader_respects_ignores_extra_newlines ... ok
+[INFO] [stdout] test test_reader_respects_stop_after_first_eof_false ... ok
+[INFO] [stdout] test test_reader_respects_stop_after_first_eof_true ... ok
+[INFO] [stdout] test test_reader_respects_stop_after_first_error_false ... ok
+[INFO] [stdout] test test_reader_respects_stop_after_first_error_true ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_data_records ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_eof_record ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_extended_linear_address ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_extended_segment_address ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_start_linear_address ... ok
+[INFO] [stdout] test test_record_from_record_string_parses_valid_start_segment_address ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_invalid_checksums ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_invalid_lengths_for_types ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_long_records ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_missing_start_code ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_non_hex_characters ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_odd_length_records ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_payload_length_mismatches ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_short_records ... ok
+[INFO] [stdout] test test_record_from_record_string_rejects_unsupported_record_types ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_writer-032d701374d0e371.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test test_create_object_file_representation_all_types ... ok
+[INFO] [stdout] test test_create_object_file_representation_eof_only ... ok
+[INFO] [stdout] test test_create_object_file_representation_with_multiple_eof_records ... ok
+[INFO] [stdout] test test_create_object_file_representation_incorrect_termination ... ok
+[INFO] [stdout] test test_record_to_string_for_data_record ... ok
+[INFO] [stdout] test test_record_to_string_for_data_record_with_invalid_data ... ok
+[INFO] [stdout] test test_record_to_string_for_ela_record ... ok
+[INFO] [stdout] test test_record_to_string_for_eof_record ... ok
+[INFO] [stdout] test test_record_to_string_for_esa_record ... ok
+[INFO] [stdout] test test_record_to_string_for_ssa_record ... ok
+[INFO] [stderr]    Doc-tests ihex
+[INFO] [stdout] test test_record_to_string_for_sla_record ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\reader.rs - reader::Record::from_record_string (line 102) ... ok
+[INFO] [stdout] test src\writer.rs - writer::create_object_file_representation (line 156) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "193115b0c0bf1d631beb25cacb327e8996c30a460715fdba32bf1b5fdd3b180e"`
+[INFO] running `"docker" "rm" "-f" "193115b0c0bf1d631beb25cacb327e8996c30a460715fdba32bf1b5fdd3b180e"`
+[INFO] [stdout] 193115b0c0bf1d631beb25cacb327e8996c30a460715fdba32bf1b5fdd3b180e

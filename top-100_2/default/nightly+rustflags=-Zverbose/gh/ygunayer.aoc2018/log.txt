@@ -1,0 +1,63 @@
+[INFO] cloning repository ygunayer/aoc2018
+[INFO] running `"git" "clone" "--bare" "git://github.com/ygunayer/aoc2018.git" "work\\cache\\sources\\gh\\ygunayer\\aoc2018"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ygunayer\aoc2018'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ygunayer\\aoc2018" "work\\ex\\default\\sources\\nightly\\gh\\ygunayer\\aoc2018"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\ygunayer\aoc2018'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ygunayer\\aoc2018" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ygunayer\\aoc2018"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ygunayer\aoc2018'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c78d93b170860b59ee92be1d56222e03c6086e99
+[INFO] sha for GitHub repo ygunayer/aoc2018: c78d93b170860b59ee92be1d56222e03c6086e99
+[INFO] validating manifest of ygunayer/aoc2018 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ygunayer/aoc2018 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ygunayer/aoc2018
+[INFO] finished frobbing ygunayer/aoc2018
+[INFO] frobbed toml for ygunayer/aoc2018 written to work\ex\default\sources\nightly\gh\ygunayer\aoc2018\Cargo.toml
+[INFO] started frobbing ygunayer/aoc2018
+[INFO] finished frobbing ygunayer/aoc2018
+[INFO] frobbed toml for ygunayer/aoc2018 written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ygunayer\aoc2018\Cargo.toml
+[INFO] crate ygunayer/aoc2018 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded levenshtein v1.0.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ygunayer/aoc2018 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ygunayer\\aoc2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] fb5d48ba1df4c22c2c98d66eb227619c71e4086bd03116c72cd1064b84c89c43
+[INFO] running `"docker" "start" "-a" "fb5d48ba1df4c22c2c98d66eb227619c71e4086bd03116c72cd1064b84c89c43"`
+[INFO] [stderr]    Compiling either v1.5.0
+[INFO] [stderr]    Compiling levenshtein v1.0.3
+[INFO] [stderr]    Compiling futures v0.1.25
+[INFO] [stderr]    Compiling itertools v0.7.11
+[INFO] [stderr]    Compiling aoc2018 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 16.32s
+[INFO] running `"docker" "inspect" "fb5d48ba1df4c22c2c98d66eb227619c71e4086bd03116c72cd1064b84c89c43"`
+[INFO] running `"docker" "rm" "-f" "fb5d48ba1df4c22c2c98d66eb227619c71e4086bd03116c72cd1064b84c89c43"`
+[INFO] [stdout] fb5d48ba1df4c22c2c98d66eb227619c71e4086bd03116c72cd1064b84c89c43
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ygunayer\\aoc2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c660d58ccb20731c33ee0168b8a4601e3a935e7ccdbbaf6e9c34316b2ba2fbdd
+[INFO] running `"docker" "start" "-a" "c660d58ccb20731c33ee0168b8a4601e3a935e7ccdbbaf6e9c34316b2ba2fbdd"`
+[INFO] [stderr]    Compiling aoc2018 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.96s
+[INFO] running `"docker" "inspect" "c660d58ccb20731c33ee0168b8a4601e3a935e7ccdbbaf6e9c34316b2ba2fbdd"`
+[INFO] running `"docker" "rm" "-f" "c660d58ccb20731c33ee0168b8a4601e3a935e7ccdbbaf6e9c34316b2ba2fbdd"`
+[INFO] [stdout] c660d58ccb20731c33ee0168b8a4601e3a935e7ccdbbaf6e9c34316b2ba2fbdd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ygunayer\\aoc2018,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] bfc62bd36677bd060cb56764090429b172351ccd6d0b281dbbd1073f275fe747
+[INFO] running `"docker" "start" "-a" "bfc62bd36677bd060cb56764090429b172351ccd6d0b281dbbd1073f275fe747"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\aoc2018-b7de3f5d24dd01de.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "bfc62bd36677bd060cb56764090429b172351ccd6d0b281dbbd1073f275fe747"`
+[INFO] running `"docker" "rm" "-f" "bfc62bd36677bd060cb56764090429b172351ccd6d0b281dbbd1073f275fe747"`
+[INFO] [stdout] bfc62bd36677bd060cb56764090429b172351ccd6d0b281dbbd1073f275fe747

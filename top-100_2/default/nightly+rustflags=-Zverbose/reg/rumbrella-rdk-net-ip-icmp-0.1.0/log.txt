@@ -1,0 +1,57 @@
+[INFO] fetching crate rumbrella-rdk-net-ip-icmp 0.1.0...
+[INFO] extracting crate rumbrella-rdk-net-ip-icmp 0.1.0 into work\ex\default\sources\nightly\reg\rumbrella-rdk-net-ip-icmp\0.1.0
+[INFO] extracting crate rumbrella-rdk-net-ip-icmp 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rumbrella-rdk-net-ip-icmp\0.1.0
+[INFO] validating manifest of rumbrella-rdk-net-ip-icmp-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rumbrella-rdk-net-ip-icmp-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rumbrella-rdk-net-ip-icmp-0.1.0
+[INFO] finished frobbing rumbrella-rdk-net-ip-icmp-0.1.0
+[INFO] frobbed toml for rumbrella-rdk-net-ip-icmp-0.1.0 written to work\ex\default\sources\nightly\reg\rumbrella-rdk-net-ip-icmp\0.1.0\Cargo.toml
+[INFO] started frobbing rumbrella-rdk-net-ip-icmp-0.1.0
+[INFO] finished frobbing rumbrella-rdk-net-ip-icmp-0.1.0
+[INFO] frobbed toml for rumbrella-rdk-net-ip-icmp-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rumbrella-rdk-net-ip-icmp\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rumbrella-rdk-net-ip-icmp-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rumbrella-rdk-net-ip-icmp\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13
+[INFO] running `"docker" "start" "-a" "aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13"`
+[INFO] [stderr]    Compiling rumbrella-rdk-net-ip-icmp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.37s
+[INFO] running `"docker" "inspect" "aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13"`
+[INFO] running `"docker" "rm" "-f" "aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13"`
+[INFO] [stderr] Error response from daemon: i/o timeout
+[ERROR] failed to delete container aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13
+[ERROR] caused by: command `"docker" "rm" "-f" "aa81eca0280b1688beece4fd93782cd346359dcb49c4742d9a0cffd7c6e00d13"` failed
+[ERROR] 
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rumbrella-rdk-net-ip-icmp\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ab0bfb4084e7e1af2a5e84df823bb2005bb34ebbbd8392b94493b2e406d8a19a
+[INFO] running `"docker" "start" "-a" "ab0bfb4084e7e1af2a5e84df823bb2005bb34ebbbd8392b94493b2e406d8a19a"`
+[INFO] [stderr]    Compiling rumbrella-rdk-net-ip-icmp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.13s
+[INFO] running `"docker" "inspect" "ab0bfb4084e7e1af2a5e84df823bb2005bb34ebbbd8392b94493b2e406d8a19a"`
+[INFO] running `"docker" "rm" "-f" "ab0bfb4084e7e1af2a5e84df823bb2005bb34ebbbd8392b94493b2e406d8a19a"`
+[INFO] [stdout] ab0bfb4084e7e1af2a5e84df823bb2005bb34ebbbd8392b94493b2e406d8a19a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\rumbrella-rdk-net-ip-icmp\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] fb718f3f7fd2b5bb9d4c9766f7141005c7ea1d3e92e7d6938b13285b0ce417e0
+[INFO] running `"docker" "start" "-a" "fb718f3f7fd2b5bb9d4c9766f7141005c7ea1d3e92e7d6938b13285b0ce417e0"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rumbrella_rdk_net_ip_icmp-e5b61a3ef74df6d3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rumbrella-rdk-net-ip-icmp
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fb718f3f7fd2b5bb9d4c9766f7141005c7ea1d3e92e7d6938b13285b0ce417e0"`
+[INFO] running `"docker" "rm" "-f" "fb718f3f7fd2b5bb9d4c9766f7141005c7ea1d3e92e7d6938b13285b0ce417e0"`
+[INFO] [stdout] fb718f3f7fd2b5bb9d4c9766f7141005c7ea1d3e92e7d6938b13285b0ce417e0

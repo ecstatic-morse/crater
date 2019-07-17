@@ -1,0 +1,134 @@
+[INFO] cloning repository stallmanifold/fontgen
+[INFO] running `"git" "clone" "--bare" "git://github.com/stallmanifold/fontgen.git" "work\\cache\\sources\\gh\\stallmanifold\\fontgen"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\stallmanifold\fontgen'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\stallmanifold\\fontgen" "work\\ex\\default\\sources\\nightly\\gh\\stallmanifold\\fontgen"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\stallmanifold\fontgen'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\stallmanifold\\fontgen" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\stallmanifold\\fontgen"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\stallmanifold\fontgen'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a4c5acc9ea23caf3c0ba3da6e6783369796358e8
+[INFO] sha for GitHub repo stallmanifold/fontgen: a4c5acc9ea23caf3c0ba3da6e6783369796358e8
+[INFO] validating manifest of stallmanifold/fontgen on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of stallmanifold/fontgen on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing stallmanifold/fontgen
+[INFO] finished frobbing stallmanifold/fontgen
+[INFO] frobbed toml for stallmanifold/fontgen written to work\ex\default\sources\nightly\gh\stallmanifold\fontgen\Cargo.toml
+[INFO] started frobbing stallmanifold/fontgen
+[INFO] finished frobbing stallmanifold/fontgen
+[INFO] frobbed toml for stallmanifold/fontgen written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\stallmanifold\fontgen\Cargo.toml
+[INFO] crate stallmanifold/fontgen already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/stallmanifold/bmfa`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded predicates-tree v1.0.0
+[INFO] [stderr]   Downloaded treeline v0.1.0
+[INFO] [stderr]   Downloaded proc-macro2 v0.4.25
+[INFO] [stderr]   Downloaded predicates-core v1.0.0
+[INFO] [stderr]   Downloaded normalize-line-endings v0.2.2
+[INFO] [stderr]   Downloaded predicates v1.0.0
+[INFO] [stderr]   Downloaded difference v2.0.0
+[INFO] [stderr]   Downloaded num-derive v0.2.3
+[INFO] [stderr]   Downloaded tiff v0.2.1
+[INFO] [stderr]   Downloaded png v0.14.0
+[INFO] [stderr]   Downloaded inflate v0.4.4
+[INFO] [stderr]   Downloaded freetype-rs v0.20.0
+[INFO] [stderr]   Downloaded freetype-sys v0.7.1
+[INFO] [stderr]   Downloaded zip v0.5.0
+[INFO] [stderr]   Downloaded serde v1.0.84
+[INFO] [stderr]   Downloaded serde_derive v1.0.84
+[INFO] [stderr]   Downloaded serde_json v1.0.36
+[INFO] [stderr]   Downloaded assert_cmd v0.11.1
+[INFO] [stderr]   Downloaded escargot v0.4.0
+[INFO] [stderr]   Downloaded float-cmp v0.4.0
+[INFO] [stderr]   Downloaded redox_syscall v0.1.50
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing stallmanifold/fontgen against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\stallmanifold\\fontgen,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6cc2afd9854e883982288c2abd692a5919e9a490265b3370f94850c6b5dc3784
+[INFO] running `"docker" "start" "-a" "6cc2afd9854e883982288c2abd692a5919e9a490265b3370f94850c6b5dc3784"`
+[INFO] [stderr]    Compiling arrayvec v0.4.10
+[INFO] [stderr]    Compiling proc-macro2 v0.4.25
+[INFO] [stderr]    Compiling libc v0.2.47
+[INFO] [stderr]    Compiling nodrop v0.1.13
+[INFO] [stderr]    Compiling cfg-if v0.1.6
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling memoffset v0.2.1
+[INFO] [stderr]    Compiling lazy_static v1.2.0
+[INFO] [stderr]    Compiling cc v1.0.28
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling crc32fast v1.1.2
+[INFO] [stderr]    Compiling num-derive v0.2.3
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling vcpkg v0.2.6
+[INFO] [stderr]    Compiling rayon v1.0.3
+[INFO] [stderr]    Compiling num-rational v0.2.1
+[INFO] [stderr]    Compiling either v1.5.0
+[INFO] [stderr]    Compiling byteorder v1.2.7
+[INFO] [stderr]    Compiling ryu v0.2.7
+[INFO] [stderr]    Compiling adler32 v1.0.3
+[INFO] [stderr]    Compiling serde v1.0.84
+[INFO] [stderr]    Compiling unicode-segmentation v1.2.1
+[INFO] [stderr]    Compiling color_quant v1.0.1
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling bitflags v1.0.4
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling scoped_threadpool v0.1.9
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling strsim v0.7.0
+[INFO] [stderr]    Compiling itoa v0.4.3
+[INFO] [stderr]    Compiling podio v0.1.6
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling freetype-sys v0.7.1
+[INFO] [stderr]    Compiling bzip2-sys v0.1.7
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling deflate v0.7.19
+[INFO] [stderr]    Compiling inflate v0.4.4
+[INFO] [stderr]    Compiling heck v0.3.1
+[INFO] [stderr]    Compiling textwrap v0.10.0
+[INFO] [stderr]    Compiling gif v0.10.1
+[INFO] [stderr]    Compiling num_cpus v1.9.0
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling libflate v0.1.19
+[INFO] [stderr]    Compiling quote v0.6.10
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling syn v0.15.26
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling bzip2 v0.3.3
+[INFO] [stderr]    Compiling png v0.14.0
+[INFO] [stderr]    Compiling freetype-rs v0.20.0
+[INFO] [stderr]    Compiling zip v0.5.0
+[INFO] [stderr]    Compiling serde_derive v1.0.84
+[INFO] [stderr]    Compiling structopt-derive v0.2.18
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling tiff v0.2.1
+[INFO] [stderr]    Compiling structopt v0.2.18
+[INFO] [stderr]    Compiling image v0.21.2
+[INFO] [stderr]    Compiling serde_json v1.0.36
+[INFO] [stderr]    Compiling bmfa v0.3.2 (https://github.com/stallmanifold/bmfa#95977bd3)
+[INFO] [stderr]    Compiling fontgen v0.5.4 (C:\crater\workdir)
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\main.rs:217:25
+[INFO] [stderr]     |
+[INFO] [stderr] 217 |         glyph_ymin[i] = bbox.yMin;
+[INFO] [stderr]     |                         ^^^^^^^^^
+[INFO] [stderr]     |                         |
+[INFO] [stderr]     |                         expected i64, found i32
+[INFO] [stderr]     |                         help: you can convert an `i32` to `i64`: `bbox.yMin.into()`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `fontgen`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "6cc2afd9854e883982288c2abd692a5919e9a490265b3370f94850c6b5dc3784"`
+[INFO] running `"docker" "rm" "-f" "6cc2afd9854e883982288c2abd692a5919e9a490265b3370f94850c6b5dc3784"`
+[INFO] [stdout] 6cc2afd9854e883982288c2abd692a5919e9a490265b3370f94850c6b5dc3784

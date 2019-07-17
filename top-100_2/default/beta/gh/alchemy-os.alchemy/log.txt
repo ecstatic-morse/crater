@@ -1,0 +1,64 @@
+[INFO] cloning repository alchemy-os/alchemy
+[INFO] running `"git" "clone" "--bare" "git://github.com/alchemy-os/alchemy.git" "work\\cache\\sources\\gh\\alchemy-os\\alchemy"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\alchemy-os\alchemy'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\alchemy-os\\alchemy" "work\\ex\\default\\sources\\stable\\gh\\alchemy-os\\alchemy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\alchemy-os\alchemy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\alchemy-os\\alchemy" "work\\ex\\default\\sources\\beta\\gh\\alchemy-os\\alchemy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\alchemy-os\alchemy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3e4b40123b0edb7635221bff92122f9d89fa0f12
+[INFO] sha for GitHub repo alchemy-os/alchemy: 3e4b40123b0edb7635221bff92122f9d89fa0f12
+[INFO] validating manifest of alchemy-os/alchemy on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of alchemy-os/alchemy on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing alchemy-os/alchemy
+[INFO] finished frobbing alchemy-os/alchemy
+[INFO] frobbed toml for alchemy-os/alchemy written to work\ex\default\sources\stable\gh\alchemy-os\alchemy\Cargo.toml
+[INFO] started frobbing alchemy-os/alchemy
+[INFO] finished frobbing alchemy-os/alchemy
+[INFO] frobbed toml for alchemy-os/alchemy written to work\ex\default\sources\beta\gh\alchemy-os\alchemy\Cargo.toml
+[INFO] crate alchemy-os/alchemy already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded spin v0.4.3
+[INFO] [stderr]   Downloaded rlibc v1.0.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing alchemy-os/alchemy against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\alchemy-os\\alchemy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 5b49a5697efbafe7f7f3693861000317be47784289facd64dac5357d7dbd51f3
+[INFO] running `"docker" "start" "-a" "5b49a5697efbafe7f7f3693861000317be47784289facd64dac5357d7dbd51f3"`
+[INFO] [stderr] warning: path `C:\crater\workdir\src\alchemy.rs` was erroneously implicitly accepted for library `alchemy`,
+[INFO] [stderr] please rename the file to `src/lib.rs` or set lib.path in Cargo.toml
+[INFO] [stderr]    Compiling alchemy v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]    Compiling spin v0.4.3
+[INFO] [stderr]    Compiling rlibc v1.0.0
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\spin-0.4.3\src\lib.rs:6:30
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | #![cfg_attr(feature = "asm", feature(asm))]
+[INFO] [stderr]   |                              ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\spin-0.4.3\src\lib.rs:7:42
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | #![cfg_attr(feature = "core_intrinsics", feature(core_intrinsics))]
+[INFO] [stderr]   |                                          ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\spin-0.4.3\src\lib.rs:8:35
+[INFO] [stderr]   |
+[INFO] [stderr] 8 | #![cfg_attr(feature = "const_fn", feature(const_fn))]
+[INFO] [stderr]   |                                   ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 3 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0554`.
+[INFO] [stderr] error: Could not compile `spin`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "5b49a5697efbafe7f7f3693861000317be47784289facd64dac5357d7dbd51f3"`
+[INFO] running `"docker" "rm" "-f" "5b49a5697efbafe7f7f3693861000317be47784289facd64dac5357d7dbd51f3"`
+[INFO] [stdout] 5b49a5697efbafe7f7f3693861000317be47784289facd64dac5357d7dbd51f3

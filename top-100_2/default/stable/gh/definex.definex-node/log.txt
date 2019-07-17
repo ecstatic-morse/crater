@@ -1,0 +1,31 @@
+[INFO] cloning repository definex/definex-node
+[INFO] running `"git" "clone" "--bare" "git://github.com/definex/definex-node.git" "work\\cache\\sources\\gh\\definex\\definex-node"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\definex\definex-node'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\definex\\definex-node" "work\\ex\\default\\sources\\stable\\gh\\definex\\definex-node"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\definex\definex-node'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\definex\\definex-node" "work\\ex\\default\\sources\\beta\\gh\\definex\\definex-node"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\definex\definex-node'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c3f9f997bfc759026eb198b220fb231000b63933
+[INFO] sha for GitHub repo definex/definex-node: c3f9f997bfc759026eb198b220fb231000b63933
+[INFO] validating manifest of definex/definex-node on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of definex/definex-node on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing definex/definex-node
+[INFO] removed path dependency definex-runtime from definex/definex-node
+[INFO] finished frobbing definex/definex-node
+[INFO] frobbed toml for definex/definex-node written to work\ex\default\sources\stable\gh\definex\definex-node\Cargo.toml
+[INFO] started frobbing definex/definex-node
+[INFO] removed path dependency definex-runtime from definex/definex-node
+[INFO] finished frobbing definex/definex-node
+[INFO] frobbed toml for definex/definex-node written to work\ex\default\sources\beta\gh\definex\definex-node\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Updating git repository `https://github.com/paritytech/substrate.git`
+[INFO] [stderr] error: no matching package named `definex-runtime` found
+[INFO] [stderr] location searched: registry `https://github.com/rust-lang/crates.io-index`
+[INFO] [stderr] required by package `definex v0.0.1 (C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\definex\definex-node)`
+[ERROR] this task or one of its parent failed!
+[ERROR] command `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"` failed

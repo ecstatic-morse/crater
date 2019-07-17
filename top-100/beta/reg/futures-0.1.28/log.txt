@@ -1,0 +1,1203 @@
+[INFO] fetching crate futures 0.1.28...
+[INFO] extracting crate futures 0.1.28 into work\ex\default\sources\stable\reg\futures\0.1.28
+[INFO] extracting crate futures 0.1.28 into work\ex\default\sources\beta\reg\futures\0.1.28
+[INFO] validating manifest of futures-0.1.28 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of futures-0.1.28 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing futures-0.1.28
+[INFO] finished frobbing futures-0.1.28
+[INFO] frobbed toml for futures-0.1.28 written to work\ex\default\sources\stable\reg\futures\0.1.28\Cargo.toml
+[INFO] started frobbing futures-0.1.28
+[INFO] finished frobbing futures-0.1.28
+[INFO] frobbed toml for futures-0.1.28 written to work\ex\default\sources\beta\reg\futures\0.1.28\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing futures-0.1.28 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 08dafd7ba376a6c1b3c913dab308dad988b43889d0f14a2201c79751fa3008d3
+[INFO] running `"docker" "start" "-a" "08dafd7ba376a6c1b3c913dab308dad988b43889d0f14a2201c79751fa3008d3"`
+[INFO] [stderr]    Compiling futures v0.1.28 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\future\catch_unwind.rs:28:22
+[INFO] [stderr]    |
+[INFO] [stderr] 28 |     type Error = Box<Any + Send>;
+[INFO] [stderr]    |                      ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\future\shared.rs:310:32
+[INFO] [stderr]     |
+[INFO] [stderr] 310 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\future\mod.rs:106:50
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |     pub type BoxFuture<T, E> = ::std::boxed::Box<Future<Item = T, Error = E> + Send>;
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = T, Error = E> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:37:40
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |             (&mut self.stream2 as &mut Stream<Item=_, Error=_>,
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:38:40
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |              &mut self.stream1 as &mut Stream<Item=_, Error=_>)
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:40:40
+[INFO] [stderr]    |
+[INFO] [stderr] 40 |             (&mut self.stream1 as &mut Stream<Item=_, Error=_>,
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:41:40
+[INFO] [stderr]    |
+[INFO] [stderr] 41 |              &mut self.stream2 as &mut Stream<Item=_, Error=_>)
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\catch_unwind.rs:37:22
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |     type Error = Box<Any + Send>;
+[INFO] [stderr]    |                      ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\futures_unordered.rs:602:50
+[INFO] [stderr]     |
+[INFO] [stderr] 602 | unsafe fn hide_lt<T>(p: *mut ArcNode<T>) -> *mut UnsafeNotify {
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\futures_unordered.rs:603:30
+[INFO] [stderr]     |
+[INFO] [stderr] 603 |     mem::transmute(p as *mut UnsafeNotify)
+[INFO] [stderr]     |                              ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\mod.rs:132:50
+[INFO] [stderr]     |
+[INFO] [stderr] 132 |     pub type BoxStream<T, E> = ::std::boxed::Box<Stream<Item = T, Error = E> + Send>;
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item = T, Error = E> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\sink\mod.rs:55:48
+[INFO] [stderr]    |
+[INFO] [stderr] 55 |       pub type BoxSink<T, E> = ::std::boxed::Box<Sink<SinkItem = T, SinkError = E> +
+[INFO] [stderr]    |  ________________________________________________^
+[INFO] [stderr] 56 | |                                                ::core::marker::Send>;
+[INFO] [stderr]    | |___________________________________________________________________^
+[INFO] [stderr] help: use `dyn`
+[INFO] [stderr]    |
+[INFO] [stderr] 55 |     pub type BoxSink<T, E> = ::std::boxed::Box<dyn Sink<SinkItem = T, SinkError = E> +
+[INFO] [stderr] 56 |                                                ::core::marker::Send>;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\core.rs:21:12
+[INFO] [stderr]    |
+[INFO] [stderr] 21 |     f: &'a Fn() -> NotifyHandle,
+[INFO] [stderr]    |            ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\core.rs:45:23
+[INFO] [stderr]    |
+[INFO] [stderr] 45 |     pub fn new(f: &'a Fn() -> NotifyHandle, id: usize) -> BorrowedUnpark<'a> {
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\std\data.rs:35:41
+[INFO] [stderr]    |
+[INFO] [stderr] 35 |                                     Box<Opaque>,
+[INFO] [stderr]    |                                         ^^^^^^ help: use `dyn`: `dyn Opaque`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\data.rs:124:36
+[INFO] [stderr]     |
+[INFO] [stderr] 124 |                 &**entry as *const Opaque as *const T
+[INFO] [stderr]     |                                    ^^^^^^ help: use `dyn`: `dyn Opaque`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\std\mod.rs:93:17
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     Old(&'a Arc<Unpark>),
+[INFO] [stderr]    |                 ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:107:13
+[INFO] [stderr]     |
+[INFO] [stderr] 107 |     Old(Arc<Unpark>),
+[INFO] [stderr]     |             ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:121:23
+[INFO] [stderr]     |
+[INFO] [stderr] 121 |     pub fn new(f: &'a Fn() -> NotifyHandle, id: usize) -> BorrowedUnpark<'a> {
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:208:35
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |                 &**old1 as *const Unpark == &**old2 as *const Unpark
+[INFO] [stderr]     |                                   ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:208:63
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |                 &**old1 as *const Unpark == &**old2 as *const Unpark
+[INFO] [stderr]     |                                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:222:47
+[INFO] [stderr]     |
+[INFO] [stderr] 222 |     pub fn poll_future(&mut self, unpark: Arc<Unpark>) -> Poll<F::Item, F::Error> {
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:248:36
+[INFO] [stderr]     |
+[INFO] [stderr] 248 |     pub fn execute(self, exec: Arc<Executor>)
+[INFO] [stderr]     |                                    ^^^^^^^^ help: use `dyn`: `dyn Executor`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:269:47
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |     pub fn poll_stream(&mut self, unpark: Arc<Unpark>)
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:295:67
+[INFO] [stderr]     |
+[INFO] [stderr] 295 |     pub fn start_send(&mut self, value: S::SinkItem, unpark: &Arc<Unpark>)
+[INFO] [stderr]     |                                                                   ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:303:47
+[INFO] [stderr]     |
+[INFO] [stderr] 303 |     pub fn poll_flush(&mut self, unpark: &Arc<Unpark>)
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:402:22
+[INFO] [stderr]     |
+[INFO] [stderr] 402 |     spawn: Spawn<Box<Future<Item = (), Error = ()> + Send>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:409:15
+[INFO] [stderr]     |
+[INFO] [stderr] 409 |     exec: Arc<Executor>,
+[INFO] [stderr]     |               ^^^^^^^^ help: use `dyn`: `dyn Executor`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:598:14
+[INFO] [stderr]     |
+[INFO] [stderr] 598 |     set: Arc<EventSet>,
+[INFO] [stderr]     |              ^^^^^^^^ help: use `dyn`: `dyn EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:607:25
+[INFO] [stderr]     |
+[INFO] [stderr] 607 |     pub fn new(set: Arc<EventSet>, id: usize) -> UnparkEvent {
+[INFO] [stderr]     |                         ^^^^^^^^ help: use `dyn`: `dyn EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\mod.rs:634:17
+[INFO] [stderr]     |
+[INFO] [stderr] 634 |     inner: *mut UnsafeNotify,
+[INFO] [stderr]     |                 ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\mod.rs:651:35
+[INFO] [stderr]     |
+[INFO] [stderr] 651 |     pub unsafe fn new(inner: *mut UnsafeNotify) -> NotifyHandle {
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.42s
+[INFO] running `"docker" "inspect" "08dafd7ba376a6c1b3c913dab308dad988b43889d0f14a2201c79751fa3008d3"`
+[INFO] running `"docker" "rm" "-f" "08dafd7ba376a6c1b3c913dab308dad988b43889d0f14a2201c79751fa3008d3"`
+[INFO] [stdout] 08dafd7ba376a6c1b3c913dab308dad988b43889d0f14a2201c79751fa3008d3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] fbc66c2502a2f19ccec2d35a9d02fec0485588d8bce0d9a34dac8e530cbf7340
+[INFO] running `"docker" "start" "-a" "fbc66c2502a2f19ccec2d35a9d02fec0485588d8bce0d9a34dac8e530cbf7340"`
+[INFO] [stderr]    Compiling futures v0.1.28 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\unsync.rs:214:23
+[INFO] [stderr]     |
+[INFO] [stderr] 214 |     type FUTURE = Box<futures::Future<Item=u8, Error=()>>;
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn futures::Future<Item=u8, Error=()>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\unsync.rs:237:45
+[INFO] [stderr]     |
+[INFO] [stderr] 237 |     let make_test_future = |reverse| -> Box<Future<Item=Vec<u8>, Error=()>> {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=Vec<u8>, Error=()>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\channel.rs:28:20
+[INFO] [stderr]    |
+[INFO] [stderr] 28 |             -> Box<Future<Item=(), Error=()> + Send> {
+[INFO] [stderr]    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=(), Error=()> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\future\catch_unwind.rs:28:22
+[INFO] [stderr]    |
+[INFO] [stderr] 28 |     type Error = Box<Any + Send>;
+[INFO] [stderr]    |                      ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\future\shared.rs:310:32
+[INFO] [stderr]     |
+[INFO] [stderr] 310 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\future\mod.rs:106:50
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |     pub type BoxFuture<T, E> = ::std::boxed::Box<Future<Item = T, Error = E> + Send>;
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = T, Error = E> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:37:40
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |             (&mut self.stream2 as &mut Stream<Item=_, Error=_>,
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:38:40
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |              &mut self.stream1 as &mut Stream<Item=_, Error=_>)
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:40:40
+[INFO] [stderr]    |
+[INFO] [stderr] 40 |             (&mut self.stream1 as &mut Stream<Item=_, Error=_>,
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\select.rs:41:40
+[INFO] [stderr]    |
+[INFO] [stderr] 41 |              &mut self.stream2 as &mut Stream<Item=_, Error=_>)
+[INFO] [stderr]    |                                        ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\stream\catch_unwind.rs:37:22
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |     type Error = Box<Any + Send>;
+[INFO] [stderr]    |                      ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\futures_unordered.rs:602:50
+[INFO] [stderr]     |
+[INFO] [stderr] 602 | unsafe fn hide_lt<T>(p: *mut ArcNode<T>) -> *mut UnsafeNotify {
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\futures_unordered.rs:603:30
+[INFO] [stderr]     |
+[INFO] [stderr] 603 |     mem::transmute(p as *mut UnsafeNotify)
+[INFO] [stderr]     |                              ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\stream\mod.rs:132:50
+[INFO] [stderr]     |
+[INFO] [stderr] 132 |     pub type BoxStream<T, E> = ::std::boxed::Box<Stream<Item = T, Error = E> + Send>;
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item = T, Error = E> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\sink\mod.rs:55:48
+[INFO] [stderr]    |
+[INFO] [stderr] 55 |       pub type BoxSink<T, E> = ::std::boxed::Box<Sink<SinkItem = T, SinkError = E> +
+[INFO] [stderr]    |  ________________________________________________^
+[INFO] [stderr] 56 | |                                                ::core::marker::Send>;
+[INFO] [stderr]    | |___________________________________________________________________^
+[INFO] [stderr] help: use `dyn`
+[INFO] [stderr]    |
+[INFO] [stderr] 55 |     pub type BoxSink<T, E> = ::std::boxed::Box<dyn Sink<SinkItem = T, SinkError = E> +
+[INFO] [stderr] 56 |                                                ::core::marker::Send>;
+[INFO] [stderr]    |
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\core.rs:21:12
+[INFO] [stderr]    |
+[INFO] [stderr] 21 |     f: &'a Fn() -> NotifyHandle,
+[INFO] [stderr]    |            ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\core.rs:45:23
+[INFO] [stderr]    |
+[INFO] [stderr] 45 |     pub fn new(f: &'a Fn() -> NotifyHandle, id: usize) -> BorrowedUnpark<'a> {
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\std\data.rs:35:41
+[INFO] [stderr]    |
+[INFO] [stderr] 35 |                                     Box<Opaque>,
+[INFO] [stderr]    |                                         ^^^^^^ help: use `dyn`: `dyn Opaque`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\data.rs:124:36
+[INFO] [stderr]     |
+[INFO] [stderr] 124 |                 &**entry as *const Opaque as *const T
+[INFO] [stderr]     |                                    ^^^^^^ help: use `dyn`: `dyn Opaque`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\task_impl\std\mod.rs:93:17
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     Old(&'a Arc<Unpark>),
+[INFO] [stderr]    |                 ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:107:13
+[INFO] [stderr]     |
+[INFO] [stderr] 107 |     Old(Arc<Unpark>),
+[INFO] [stderr]     |             ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:121:23
+[INFO] [stderr]     |
+[INFO] [stderr] 121 |     pub fn new(f: &'a Fn() -> NotifyHandle, id: usize) -> BorrowedUnpark<'a> {
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn() -> NotifyHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:208:35
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |                 &**old1 as *const Unpark == &**old2 as *const Unpark
+[INFO] [stderr]     |                                   ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:208:63
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |                 &**old1 as *const Unpark == &**old2 as *const Unpark
+[INFO] [stderr]     |                                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:222:47
+[INFO] [stderr]     |
+[INFO] [stderr] 222 |     pub fn poll_future(&mut self, unpark: Arc<Unpark>) -> Poll<F::Item, F::Error> {
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:248:36
+[INFO] [stderr]     |
+[INFO] [stderr] 248 |     pub fn execute(self, exec: Arc<Executor>)
+[INFO] [stderr]     |                                    ^^^^^^^^ help: use `dyn`: `dyn Executor`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:269:47
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |     pub fn poll_stream(&mut self, unpark: Arc<Unpark>)
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:295:67
+[INFO] [stderr]     |
+[INFO] [stderr] 295 |     pub fn start_send(&mut self, value: S::SinkItem, unpark: &Arc<Unpark>)
+[INFO] [stderr]     |                                                                   ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:303:47
+[INFO] [stderr]     |
+[INFO] [stderr] 303 |     pub fn poll_flush(&mut self, unpark: &Arc<Unpark>)
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn Unpark`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:402:22
+[INFO] [stderr]     |
+[INFO] [stderr] 402 |     spawn: Spawn<Box<Future<Item = (), Error = ()> + Send>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:409:15
+[INFO] [stderr]     |
+[INFO] [stderr] 409 |     exec: Arc<Executor>,
+[INFO] [stderr]     |               ^^^^^^^^ help: use `dyn`: `dyn Executor`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:598:14
+[INFO] [stderr]     |
+[INFO] [stderr] 598 |     set: Arc<EventSet>,
+[INFO] [stderr]     |              ^^^^^^^^ help: use `dyn`: `dyn EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\std\mod.rs:607:25
+[INFO] [stderr]     |
+[INFO] [stderr] 607 |     pub fn new(set: Arc<EventSet>, id: usize) -> UnparkEvent {
+[INFO] [stderr]     |                         ^^^^^^^^ help: use `dyn`: `dyn EventSet`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\mod.rs:634:17
+[INFO] [stderr]     |
+[INFO] [stderr] 634 |     inner: *mut UnsafeNotify,
+[INFO] [stderr]     |                 ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\task_impl\mod.rs:651:35
+[INFO] [stderr]     |
+[INFO] [stderr] 651 |     pub unsafe fn new(inner: *mut UnsafeNotify) -> NotifyHandle {
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^ help: use `dyn`: `dyn UnsafeNotify`
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `futures::stream::IterOk` in tuple element 0 that must be used
+[INFO] [stderr]   --> tests\unsync.rs:91:5
+[INFO] [stderr]    |
+[INFO] [stderr] 91 | /     lazy(move || {
+[INFO] [stderr] 92 | |         iter_ok(vec![1, 2, 3])
+[INFO] [stderr] 93 | |             .forward(tx)
+[INFO] [stderr] 94 | |             .map_err(|e: SendError<i32>| panic!("{}", e))
+[INFO] [stderr] ...  |
+[INFO] [stderr] 97 | |             }))
+[INFO] [stderr] 98 | |     }).wait().unwrap();
+[INFO] [stderr]    | |_______________________^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_must_use)] on by default
+[INFO] [stderr]    = note: streams do nothing unless polled
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `futures::stream::IterOk` in tuple element 0 that must be used
+[INFO] [stderr]    --> tests\unsync.rs:104:5
+[INFO] [stderr]     |
+[INFO] [stderr] 104 | /     lazy(move || {
+[INFO] [stderr] 105 | |         iter_ok(vec![1, 2, 3])
+[INFO] [stderr] 106 | |             .forward(tx)
+[INFO] [stderr] 107 | |             .map_err(|e: SendError<i32>| panic!("{}", e))
+[INFO] [stderr] ...   |
+[INFO] [stderr] 110 | |             }))
+[INFO] [stderr] 111 | |     }).wait().unwrap();
+[INFO] [stderr]     | |_______________________^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: streams do nothing unless polled
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:37:31
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |         Box::new(a_rx) as Box<Future<Item = _, Error = _>>,
+[INFO] [stderr]    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:65:48
+[INFO] [stderr]    |
+[INFO] [stderr] 65 |     let (_a_tx, a_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                                ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:66:47
+[INFO] [stderr]    |
+[INFO] [stderr] 66 |     let (b_tx, b_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                               ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:67:47
+[INFO] [stderr]    |
+[INFO] [stderr] 67 |     let (c_tx, c_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                               ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:70:31
+[INFO] [stderr]    |
+[INFO] [stderr] 70 |         Box::new(a_rx) as Box<Future<Item = _, Error = _>>,
+[INFO] [stderr]    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_unordered.rs:71:71
+[INFO] [stderr]    |
+[INFO] [stderr] 71 |         Box::new(b_rx.select(c_rx).then(|res| Ok(Box::new(res) as Box<Any+Send>))),
+[INFO] [stderr]    |                                                                       ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\shared.rs:80:51
+[INFO] [stderr]    |
+[INFO] [stderr] 80 |     let future2 = Box::new(future.clone()) as Box<Future<Item=_, Error=_>>;
+[INFO] [stderr]    |                                                   ^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=_, Error=_>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\shared.rs:150:44
+[INFO] [stderr]     |
+[INFO] [stderr] 150 |     let (tx0, rx0) = mpsc::unbounded::<Box<Future<Item=(),Error=()>>>();
+[INFO] [stderr]     |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=(),Error=()>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\shared.rs:180:44
+[INFO] [stderr]     |
+[INFO] [stderr] 180 |     let (tx0, rx0) = mpsc::unbounded::<Box<Future<Item=(),Error=()>>>();
+[INFO] [stderr]     |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=(),Error=()>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unnecessary parentheses around function argument
+[INFO] [stderr]   --> tests\bilock.rs:62:38
+[INFO] [stderr]    |
+[INFO] [stderr] 62 |     let b = stream::iter_ok::<_, ()>((0..N)).fold(b, |b, _n| {
+[INFO] [stderr]    |                                      ^^^^^^ help: remove these parentheses
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_parens)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:38:31
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |         Box::new(a_rx) as Box<Future<Item = _, Error = _>>,
+[INFO] [stderr]    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:67:48
+[INFO] [stderr]    |
+[INFO] [stderr] 67 |     let (_a_tx, a_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                                ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:68:47
+[INFO] [stderr]    |
+[INFO] [stderr] 68 |     let (b_tx, b_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                               ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:69:47
+[INFO] [stderr]    |
+[INFO] [stderr] 69 |     let (c_tx, c_rx) = oneshot::channel::<Box<Any+Send>>();
+[INFO] [stderr]    |                                               ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:72:31
+[INFO] [stderr]    |
+[INFO] [stderr] 72 |         Box::new(a_rx) as Box<Future<Item = _, Error = _>>,
+[INFO] [stderr]    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\futures_ordered.rs:73:71
+[INFO] [stderr]    |
+[INFO] [stderr] 73 |         Box::new(b_rx.select(c_rx).then(|res| Ok(Box::new(res) as Box<Any+Send>))),
+[INFO] [stderr]    |                                                                       ^^^^^^^^ help: use `dyn`: `dyn Any+Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\sink.rs:136:41
+[INFO] [stderr]     |
+[INFO] [stderr] 136 |     let mut block = Box::new(rx) as Box<Future<Item = _, Error = _>>;
+[INFO] [stderr]     |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\recurse.rs:10:30
+[INFO] [stderr]    |
+[INFO] [stderr] 10 |     fn doit(n: usize) -> Box<Future<Item=(), Error=()> + Send> {
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item=(), Error=()> + Send`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\all.rs:373:44
+[INFO] [stderr]     |
+[INFO] [stderr] 373 |     let mut spawn_box: Box<executor::Spawn<Future<Item = (), Error = ()>>> = Box::new(spawn);
+[INFO] [stderr]     |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\mpsc.rs:361:22
+[INFO] [stderr]     |
+[INFO] [stderr] 361 |     fn list() -> Box<Stream<Item=i32, Error=u32>> {
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=i32, Error=u32>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `futures::sink::SinkMapErr` in tuple element 1 that must be used
+[INFO] [stderr]    --> tests\mpsc.rs:103:9
+[INFO] [stderr]     |
+[INFO] [stderr] 103 |         a.send(2).join(b.send(())).wait().unwrap();
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_must_use)] on by default
+[INFO] [stderr]     = note: sinks do nothing unless polled
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\stream.rs:41:18
+[INFO] [stderr]    |
+[INFO] [stderr] 41 | fn list() -> Box<Stream<Item=i32, Error=u32> + Send> {
+[INFO] [stderr]    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=i32, Error=u32> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\stream.rs:50:22
+[INFO] [stderr]    |
+[INFO] [stderr] 50 | fn err_list() -> Box<Stream<Item=i32, Error=u32> + Send> {
+[INFO] [stderr]    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item=i32, Error=u32> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\stream.rs:202:48
+[INFO] [stderr]     |
+[INFO] [stderr] 202 |     tx.send(Box::new(b.map_err(|_| ())) as Box<Future<Item = _, Error = _> + Send>)
+[INFO] [stderr]     |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\stream.rs:220:48
+[INFO] [stderr]     |
+[INFO] [stderr] 220 |     tx.send(Box::new(b.map_err(|_| ())) as Box<Future<Item = _, Error = _> + Send>)
+[INFO] [stderr]     |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\stream.rs:241:48
+[INFO] [stderr]     |
+[INFO] [stderr] 241 |     tx.send(Box::new(b.map_err(|_| ())) as Box<Future<Item = _, Error = _> + Send>)
+[INFO] [stderr]     |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\stream.rs:258:48
+[INFO] [stderr]     |
+[INFO] [stderr] 258 |     tx.send(Box::new(b.map_err(|_| ())) as Box<Future<Item = _, Error = _> + Send>)
+[INFO] [stderr]     |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = _, Error = _> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\stream.rs:290:29
+[INFO] [stderr]     |
+[INFO] [stderr] 290 |         inner: Peekable<Box<Stream<Item = i32, Error =u32> + Send>>
+[INFO] [stderr]     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Stream<Item = i32, Error =u32> + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> tests\support\local_executor.rs:29:30
+[INFO] [stderr]    |
+[INFO] [stderr] 29 |     Running(Option<Spawn<Box<Future<Item = (), Error = ()>>>>),
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Future<Item = (), Error = ()>`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 21s
+[INFO] running `"docker" "inspect" "fbc66c2502a2f19ccec2d35a9d02fec0485588d8bce0d9a34dac8e530cbf7340"`
+[INFO] running `"docker" "rm" "-f" "fbc66c2502a2f19ccec2d35a9d02fec0485588d8bce0d9a34dac8e530cbf7340"`
+[INFO] [stdout] fbc66c2502a2f19ccec2d35a9d02fec0485588d8bce0d9a34dac8e530cbf7340
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 07b2358866cc35f8e397f94bcbfa3c5f4a764f6e7cb085ce73e3ff972dadee5d
+[INFO] running `"docker" "start" "-a" "07b2358866cc35f8e397f94bcbfa3c5f4a764f6e7cb085ce73e3ff972dadee5d"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.91s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures-49e08a2bdc590c81.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test lock::tests::smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\all-6373a8f1878bc4d5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test collect_collects ... ok
+[INFO] [stdout] test flatten ... ok
+[INFO] [stdout] test join_incomplete ... ok
+[INFO] [stdout] test option ... ok
+[INFO] [stdout] test join_cancels ... ok
+[INFO] [stdout] test result_smoke ... ok
+[INFO] [stdout] test select_cancels ... ok
+[INFO] [stdout] test spawn_does_unsize ... ok
+[INFO] [stdout] test smoke_oneshot ... ok
+[INFO] [stdout] test test_empty ... ok
+[INFO] [stdout] test test_ok ... ok
+[INFO] [stdout] test select2 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bilock-b7c27e404e631482.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test concurrent ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\buffer_unordered-6211c6f680dff4f5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\channel-6f4d398224ea7c6e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test drop_order ... ok
+[INFO] [stdout] test drop_rx ... ok
+[INFO] [stdout] test drop_sender ... ok
+[INFO] [stdout] test sequence ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\eager_drop-4627e1945af10827.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test and_then_drops_eagerly ... ok
+[INFO] [stdout] test map ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\eventual-96b673d6ffde9210.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 23 tests
+[INFO] [stdout] test cancel1 ... ok
+[INFO] [stdout] test and_then1 ... ok
+[INFO] [stdout] test and_then2 ... ok
+[INFO] [stdout] test join1 ... ok
+[INFO] [stdout] test join2 ... ok
+[INFO] [stdout] test map_err1 ... ok
+[INFO] [stdout] test join3 ... ok
+[INFO] [stdout] test join4 ... ok
+[INFO] [stdout] test join5 ... ok
+[INFO] [stdout] test map_err3 ... ok
+[INFO] [stdout] test map_err2 ... ok
+[INFO] [stdout] test oneshot1 ... ok
+[INFO] [stdout] test oneshot4 ... ok
+[INFO] [stdout] test oneshot3 ... ok
+[INFO] [stdout] test oneshot2 ... ok
+[INFO] [stdout] test oneshot6 ... ok
+[INFO] [stdout] test oneshot5 ... ok
+[INFO] [stdout] test or_else1 ... ok
+[INFO] [stdout] test or_else2 ... ok
+[INFO] [stdout] test select1 ... ok
+[INFO] [stdout] test select2 ... ok
+[INFO] [stdout] test select3 ... ok
+[INFO] [stdout] test select4 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\fuse-4b5cdaacb309c578.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test fuse_is_done ... ok
+[INFO] [stdout] test fuse ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\future_flatten_stream-79f5d94f58539180.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test successful_future ... ok
+[INFO] [stdout] test failed_future ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures_ordered-6398d3edc3d94339.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test queue_never_unblocked ... ok
+[INFO] [stdout] test works_1 ... ok
+[INFO] [stdout] test works_2 ... ok
+[INFO] [stdout] test from_iterator ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures_unordered-430b77224c0e91c0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test from_iterator ... ok
+[INFO] [stdout] test iter_mut_cancel ... ok
+[INFO] [stdout] test finished_future_ok ... ok
+[INFO] [stdout] test iter_mut_len ... ok
+[INFO] [stdout] test works_2 ... ok
+[INFO] [stdout] test works_1 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\inspect-1a294a6f5a60a3ed.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mpsc-a23ed47e41517cf9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 19 tests
+[INFO] [stdout] test recv_close_gets_none ... ok
+[INFO] [stdout] test send_recv ... ok
+[INFO] [stdout] test bounded_is_really_bounded ... ok
+[INFO] [stdout] test send_recv_no_buffer ... ok
+[INFO] [stdout] test send_shared_recv ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test send_recv_threads ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test send_recv_threads_no_capacity ... ok
+[INFO] [stdout] test stress_receiver_multi_task_bounded_hard ... ok
+[INFO] [stdout] test stress_poll_ready ... ok
+[INFO] [stdout] test stress_shared_unbounded ... ok
+[INFO] [stdout] test try_send_1 ... ok
+[INFO] [stdout] test try_send_2 ... ok
+[INFO] [stdout] test try_send_fail ... ok
+[INFO] [stdout] test tx_close_gets_none ... ok
+[INFO] [stdout] test stress_shared_bounded_hard ... ok
+[INFO] [stdout] test stress_drop_sender ... ok
+[INFO] [stdout] test stress_close_receiver ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mpsc_close-648f1d368a25cc7b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test stress_try_send_as_receiver_closes ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\oneshot-97fc4099d58a4772.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test close ... ok
+[INFO] [stdout] test cancel_notifies ... ok
+[INFO] [stdout] test is_canceled ... ok
+[INFO] [stdout] test cancel_sends ... ok
+[INFO] [stdout] test smoke_poll ... ok
+[INFO] [stdout] test close_wakes ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test spawn_dont_kill_forgot_dead_stream ... ok
+[INFO] [stdout] test cancel_lots ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ready_queue-e0bec07afa90b2fb.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test dropping_ready_queue ... ok
+[INFO] [stdout] test basic_usage ... ok
+[INFO] [stdout] test resolving_errors ... ok
+[INFO] [stdout] test panicking_future_dropped ... ok
+[INFO] [stdout] test stress ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\recurse-e77987585b00567c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test lots ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\select_all-4e99f54a9d507aa1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\select_ok-e2d0e5320013df06.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test ignore_err ... ok
+[INFO] [stdout] test last_err ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\shared-4415c2890e2269dc.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test drop_in_poll ... ok
+[INFO] [stdout] test peek ... ok
+[INFO] [stdout] test polled_then_ignored ... ok
+[INFO] [stdout] test one_thread ... ok
+[INFO] [stdout] test recursive_poll ... ok
+[INFO] [stdout] test drop_on_one_task_ok ... ok
+[INFO] [stdout] test recursive_poll_with_unpark ... ok
+[INFO] [stdout] test many_threads ... ok
+[INFO] [stdout] test two_threads ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\sink-ab19ae5d15d7e926.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 14 tests
+[INFO] [stdout] test buffer ... ok
+[INFO] [stdout] test buffer_noop ... ok
+[INFO] [stdout] test fanout_backpressure ... ok
+[INFO] [stdout] test fanout_smoke ... ok
+[INFO] [stdout] test from_err ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] test mpsc_blocking_start_send ... ok
+[INFO] [stdout] test send ... ok
+[INFO] [stdout] test send_all ... ok
+[INFO] [stdout] test vec_sink ... ok
+[INFO] [stdout] test with_as_map ... ok
+[INFO] [stdout] test with_flat_map ... ok
+[INFO] [stdout] test with_flush ... ok
+[INFO] [stdout] test with_flush_propagate ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\split-95696d8f77508573.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_split ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\stream-338eb19f9df10bec.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 32 tests
+[INFO] [stdout] test and_then ... ok
+[INFO] [stdout] test buffered ... ok
+[INFO] [stdout] test concat ... ok
+[INFO] [stdout] test concat2 ... ok
+[INFO] [stdout] test chunks ... ok
+[INFO] [stdout] test filter ... ok
+[INFO] [stdout] test filter_map ... ok
+[INFO] [stdout] test forward ... ok
+[INFO] [stdout] test fold ... ok
+[INFO] [stdout] test from_err ... ok
+[INFO] [stdout] test flatten ... ok
+[INFO] [stdout] test fuse ... ok
+[INFO] [stdout] test inspect ... ok
+[INFO] [stdout] test inspect_err ... ok
+[INFO] [stdout] test map ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] test or_else ... ok
+[INFO] [stdout] test peek ... ok
+[INFO] [stdout] test peekable ... ok
+[INFO] [stdout] test select ... ok
+[INFO] [stdout] test skip_passes_errors_through ... ok
+[INFO] [stdout] test chunks_panic_on_cap_zero ... ok
+[INFO] [stdout] test skip ... ok
+[INFO] [stdout] test stream_poll_fn ... ok
+[INFO] [stdout] test take_passes_errors_through ... ok
+[INFO] [stdout] test skip_while ... ok
+[INFO] [stdout] test take ... ok
+[INFO] [stdout] test then ... ok
+[INFO] [stdout] test take_while ... ok
+[INFO] [stdout] test wait ... ok
+[INFO] [stdout] test unordered ... ok
+[INFO] [stdout] test zip ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\stream_catch_unwind-2084f5e8e5f82255.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test no_panic ... ok
+[INFO] [stdout] test panic_in_the_middle_of_the_stream ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unfold-5796d520cc7b2a73.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test unfold1 ... ok
+[INFO] [stdout] test unfold_err1 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unsync-2ba835431395ff4b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test mpsc_backpressure ... ok
+[INFO] [stdout] test mpsc_recv_unpark ... ok
+[INFO] [stdout] test dropped_sender_of_unused_channel_notifies_receiver ... ok
+[INFO] [stdout] test mpsc_rx_end ... ok
+[INFO] [stdout] test mpsc_rx_notready ... ok
+[INFO] [stdout] test mpsc_send_recv ... ok
+[INFO] [stdout] test mpsc_send_unpark ... ok
+[INFO] [stdout] test mpsc_tx_clone_weak_rc ... ok
+[INFO] [stdout] test mpsc_tx_err ... ok
+[INFO] [stdout] test mpsc_tx_notready ... ok
+[INFO] [stdout] test mpsc_unbounded ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unsync_oneshot-f85560fb56881c32.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test canceled ... ok
+[INFO] [stdout] test is_canceled ... ok
+[INFO] [stdout] test poll_cancel ... ok
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test tx_complete_rx_unparked ... ok
+[INFO] [stdout] test tx_dropped_rx_unparked ... ok
+[INFO] [stdout] test spawn_dont_kill_forgot_dead_stream ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests futures
+[INFO] [stdout] 
+[INFO] [stdout] running 58 tests
+[INFO] [stdout] test src\future\lazy.rs - future::lazy::lazy (line 34) ... ok
+[INFO] [stdout] test src\future\loop_fn.rs - future::loop_fn::loop_fn (line 39) ... ok
+[INFO] [stdout] test src\future\join_all.rs - future::join_all::join_all (line 54) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::and_then (line 511) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::boxed (line 316) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::catch_unwind (line 947) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten (line 799) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten (line 811) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten_stream (line 843) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::from_err (line 433) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::fuse (line 884) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::inspect (line 914) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::into_stream (line 763) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::join (line 691) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::join (line 705) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map (line 351) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map (line 362) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select (line 586) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map_err (line 393) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::or_else (line 552) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map_err (line 403) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select (line 609) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select2 (line 649) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::shared (line 984) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::shared (line 995) ... ok
+[INFO] [stdout] test src\future\poll_fn.rs - future::poll_fn::poll_fn (line 20) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::then (line 467) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::err (line 59) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::result (line 25) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::ok (line 43) ... ok
+[INFO] [stdout] test src\future\shared.rs - future::shared (line 6) ... ok
+[INFO] [stdout] test src\lib.rs - prelude (line 253) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 35) ... ok
+[INFO] [stdout] test src\sink\mod.rs - sink::Sink::with_flat_map (line 339) ... ok
+[INFO] [stdout] test src\stream\iter.rs - stream::iter::iter (line 20) ... ok
+[INFO] [stdout] test src\stream\iter_ok.rs - stream::iter_ok::iter_ok (line 22) ... ok
+[INFO] [stdout] test src\stream\iter_result.rs - stream::iter_result::iter_result (line 19) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::boxed (line 263) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::and_then (line 480) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::by_ref (line 843) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::catch_unwind (line 883) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::chain (line 976) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::collect (line 544) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::concat (line 614) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::filter (line 365) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::concat2 (line 581) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::filter_map (line 395) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::flatten (line 684) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::map (line 309) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::fold (line 659) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::map_err (line 335) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::then (line 434) ... ok
+[INFO] [stdout] test src\stream\once.rs - stream::once::once (line 13) ... ok
+[INFO] [stdout] test src\stream\poll_fn.rs - stream::poll_fn::poll_fn (line 20) ... ok
+[INFO] [stdout] test src\task_impl\mod.rs - task_impl::UnsafeNotify::drop_raw (line 589) ... ignored
+[INFO] [stdout] test src\stream\repeat.rs - stream::repeat::repeat (line 27) ... ok
+[INFO] [stdout] test src\stream\unfold.rs - stream::unfold::unfold (line 31) ... ok
+[INFO] [stdout] test src\sync\oneshot.rs - sync::oneshot::channel (line 82) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 57 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "07b2358866cc35f8e397f94bcbfa3c5f4a764f6e7cb085ce73e3ff972dadee5d"`
+[INFO] running `"docker" "rm" "-f" "07b2358866cc35f8e397f94bcbfa3c5f4a764f6e7cb085ce73e3ff972dadee5d"`
+[INFO] [stdout] 07b2358866cc35f8e397f94bcbfa3c5f4a764f6e7cb085ce73e3ff972dadee5d

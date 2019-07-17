@@ -1,0 +1,60 @@
+[INFO] crate winapi 0.3.7 is already in cache
+[INFO] crate source directory work\ex\default\sources\nightly\reg\winapi\0.3.7 already exists, cleaning it up
+[INFO] extracting crate winapi 0.3.7 into work\ex\default\sources\nightly\reg\winapi\0.3.7
+[INFO] crate source directory work\ex\default\sources\nightly+rustflags=-Zverbose\reg\winapi\0.3.7 already exists, cleaning it up
+[INFO] extracting crate winapi 0.3.7 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\winapi\0.3.7
+[INFO] validating manifest of winapi-0.3.7 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of winapi-0.3.7 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing winapi-0.3.7
+[INFO] finished frobbing winapi-0.3.7
+[INFO] frobbed toml for winapi-0.3.7 written to work\ex\default\sources\nightly\reg\winapi\0.3.7\Cargo.toml
+[INFO] started frobbing winapi-0.3.7
+[INFO] finished frobbing winapi-0.3.7
+[INFO] frobbed toml for winapi-0.3.7 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\winapi\0.3.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing winapi-0.3.7 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\winapi\\0.3.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1e1184acd8a6f4f50644d2b63ab30daaaaba5e481faf2303ab423374139d033a
+[INFO] running `"docker" "start" "-a" "1e1184acd8a6f4f50644d2b63ab30daaaaba5e481faf2303ab423374139d033a"`
+[INFO] [stderr]    Compiling winapi v0.3.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.08s
+[INFO] running `"docker" "inspect" "1e1184acd8a6f4f50644d2b63ab30daaaaba5e481faf2303ab423374139d033a"`
+[INFO] running `"docker" "rm" "-f" "1e1184acd8a6f4f50644d2b63ab30daaaaba5e481faf2303ab423374139d033a"`
+[INFO] [stdout] 1e1184acd8a6f4f50644d2b63ab30daaaaba5e481faf2303ab423374139d033a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\winapi\\0.3.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2bab16fb531ec91fa8f504ae79809cda8d26e18731193016985097deab0093a7
+[INFO] running `"docker" "start" "-a" "2bab16fb531ec91fa8f504ae79809cda8d26e18731193016985097deab0093a7"`
+[INFO] [stderr]    Compiling winapi v0.3.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.07s
+[INFO] running `"docker" "inspect" "2bab16fb531ec91fa8f504ae79809cda8d26e18731193016985097deab0093a7"`
+[INFO] running `"docker" "rm" "-f" "2bab16fb531ec91fa8f504ae79809cda8d26e18731193016985097deab0093a7"`
+[INFO] [stdout] 2bab16fb531ec91fa8f504ae79809cda8d26e18731193016985097deab0093a7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\winapi\\0.3.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2e1e310d4dd02ca5af8e64e406ee787098d197ae909a4debb403d22f0aa75104
+[INFO] running `"docker" "start" "-a" "2e1e310d4dd02ca5af8e64e406ee787098d197ae909a4debb403d22f0aa75104"`
+[INFO] [stderr] time="2019-07-22T22:47:01Z" level=error msg="error waiting for container: Error response from daemon: i/o timeout"
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\winapi-10133e3c34789292.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests winapi
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2e1e310d4dd02ca5af8e64e406ee787098d197ae909a4debb403d22f0aa75104"`
+[INFO] running `"docker" "rm" "-f" "2e1e310d4dd02ca5af8e64e406ee787098d197ae909a4debb403d22f0aa75104"`
+[INFO] [stdout] 2e1e310d4dd02ca5af8e64e406ee787098d197ae909a4debb403d22f0aa75104

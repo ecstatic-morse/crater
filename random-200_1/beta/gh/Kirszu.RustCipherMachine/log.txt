@@ -1,0 +1,55 @@
+[INFO] cloning repository Kirszu/RustCipherMachine
+[INFO] running `"git" "clone" "--bare" "git://github.com/Kirszu/RustCipherMachine.git" "work\\cache\\sources\\gh\\Kirszu\\RustCipherMachine"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Kirszu\RustCipherMachine'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Kirszu\\RustCipherMachine" "work\\ex\\default\\sources\\stable\\gh\\Kirszu\\RustCipherMachine"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Kirszu\RustCipherMachine'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Kirszu\\RustCipherMachine" "work\\ex\\default\\sources\\beta\\gh\\Kirszu\\RustCipherMachine"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Kirszu\RustCipherMachine'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 1d786736dd1f9bc9874a04ccc86235553ac6a2b7
+[INFO] sha for GitHub repo Kirszu/RustCipherMachine: 1d786736dd1f9bc9874a04ccc86235553ac6a2b7
+[INFO] validating manifest of Kirszu/RustCipherMachine on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Kirszu/RustCipherMachine on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Kirszu/RustCipherMachine
+[INFO] finished frobbing Kirszu/RustCipherMachine
+[INFO] frobbed toml for Kirszu/RustCipherMachine written to work\ex\default\sources\stable\gh\Kirszu\RustCipherMachine\Cargo.toml
+[INFO] started frobbing Kirszu/RustCipherMachine
+[INFO] finished frobbing Kirszu/RustCipherMachine
+[INFO] frobbed toml for Kirszu/RustCipherMachine written to work\ex\default\sources\beta\gh\Kirszu\RustCipherMachine\Cargo.toml
+[INFO] crate Kirszu/RustCipherMachine already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Kirszu/RustCipherMachine against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Kirszu\\RustCipherMachine,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6c6937a51fcbf4d7673383e9ca6c38e850fb7b068d7a1bb2ec3c12fa17b37373
+[INFO] running `"docker" "start" "-a" "6c6937a51fcbf4d7673383e9ca6c38e850fb7b068d7a1bb2ec3c12fa17b37373"`
+[INFO] [stderr]    Compiling cypher_machine v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.49s
+[INFO] running `"docker" "inspect" "6c6937a51fcbf4d7673383e9ca6c38e850fb7b068d7a1bb2ec3c12fa17b37373"`
+[INFO] running `"docker" "rm" "-f" "6c6937a51fcbf4d7673383e9ca6c38e850fb7b068d7a1bb2ec3c12fa17b37373"`
+[INFO] [stdout] 6c6937a51fcbf4d7673383e9ca6c38e850fb7b068d7a1bb2ec3c12fa17b37373
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Kirszu\\RustCipherMachine,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c0b7f49db7474106e65115710332a2f9bd611ca63e246349a3215ee05ce374e3
+[INFO] running `"docker" "start" "-a" "c0b7f49db7474106e65115710332a2f9bd611ca63e246349a3215ee05ce374e3"`
+[INFO] [stderr]    Compiling cypher_machine v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.47s
+[INFO] running `"docker" "inspect" "c0b7f49db7474106e65115710332a2f9bd611ca63e246349a3215ee05ce374e3"`
+[INFO] running `"docker" "rm" "-f" "c0b7f49db7474106e65115710332a2f9bd611ca63e246349a3215ee05ce374e3"`
+[INFO] [stdout] c0b7f49db7474106e65115710332a2f9bd611ca63e246349a3215ee05ce374e3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Kirszu\\RustCipherMachine,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] e0f6b7b7b6518b95a435f31eeeba0204735efb24f532cc793271a3641028690a
+[INFO] running `"docker" "start" "-a" "e0f6b7b7b6518b95a435f31eeeba0204735efb24f532cc793271a3641028690a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\cypher_machine-e10d503413c7ceaa.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e0f6b7b7b6518b95a435f31eeeba0204735efb24f532cc793271a3641028690a"`
+[INFO] running `"docker" "rm" "-f" "e0f6b7b7b6518b95a435f31eeeba0204735efb24f532cc793271a3641028690a"`
+[INFO] [stdout] e0f6b7b7b6518b95a435f31eeeba0204735efb24f532cc793271a3641028690a

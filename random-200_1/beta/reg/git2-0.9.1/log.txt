@@ -1,0 +1,169 @@
+[INFO] fetching crate git2 0.9.1...
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\stable\reg\git2\0.9.1
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\beta\reg\git2\0.9.1
+[INFO] validating manifest of git2-0.9.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of git2-0.9.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\stable\reg\git2\0.9.1\Cargo.toml
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\beta\reg\git2\0.9.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded redox_syscall v0.1.56
+[INFO] [stderr]   Downloaded syn v0.15.40
+[INFO] [stderr]   Downloaded libgit2-sys v0.8.1
+[INFO] [stderr]   Downloaded openssl-probe v0.1.2
+[INFO] [stderr]   Downloaded docopt v1.1.0
+[INFO] [stderr]   Downloaded strsim v0.9.2
+[INFO] [stderr]   Downloaded thread-id v3.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing git2-0.9.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] fc4ff050671b9c0b7e0e916edf6c219261c90815d3f344a9c637c1a3e3ffb0d7
+[INFO] running `"docker" "start" "-a" "fc4ff050671b9c0b7e0e916edf6c219261c90815d3f344a9c637c1a3e3ffb0d7"`
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling libgit2-sys v0.8.1
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling git2 v0.9.1 (C:\crater\workdir)
+[INFO] [stderr] warning: outlives requirements can be inferred
+[INFO] [stderr]   --> src\commit.rs:22:34
+[INFO] [stderr]    |
+[INFO] [stderr] 22 | pub struct Parents<'commit, 'repo: 'commit> {
+[INFO] [stderr]    |                                  ^^^^^^^^^ help: remove this bound
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:69:9
+[INFO] [stderr]    |
+[INFO] [stderr] 69 | #![warn(rust_2018_idioms)]
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr]    = note: #[warn(explicit_outlives_requirements)] implied by #[warn(rust_2018_idioms)]
+[INFO] [stderr] 
+[INFO] [stderr] warning: outlives requirements can be inferred
+[INFO] [stderr]    --> src\diff.rs:112:31
+[INFO] [stderr]     |
+[INFO] [stderr] 112 | struct ForeachCallbacks<'a, 'b: 'a, 'c, 'd: 'c, 'e, 'f: 'e, 'g, 'h: 'g> {
+[INFO] [stderr]     |                               ^^^^        ^^^^        ^^^^        ^^^^
+[INFO] [stderr] help: remove these bounds
+[INFO] [stderr]     |
+[INFO] [stderr] 112 | struct ForeachCallbacks<'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h> {
+[INFO] [stderr]     |                              --      --      --      --
+[INFO] [stderr] 
+[INFO] [stderr] warning: outlives requirements can be inferred
+[INFO] [stderr]   --> src\reference.rs:31:32
+[INFO] [stderr]    |
+[INFO] [stderr] 31 | pub struct ReferenceNames<'repo: 'references, 'references> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr] warning: outlives requirements can be inferred
+[INFO] [stderr]   --> src\remote.rs:56:53
+[INFO] [stderr]    |
+[INFO] [stderr] 56 |   pub struct RemoteConnection<'repo, 'connection, 'cb>
+[INFO] [stderr]    |  _____________________________________________________^
+[INFO] [stderr] 57 | | where
+[INFO] [stderr] 58 | |     'repo: 'connection,
+[INFO] [stderr]    | |_______________________^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr] warning: outlives requirements can be inferred
+[INFO] [stderr]    --> src\repo.rs:749:27
+[INFO] [stderr]     |
+[INFO] [stderr] 749 |         struct Data<'a, 'b: 'a> {
+[INFO] [stderr]     |                           ^^^^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5m 18s
+[INFO] running `"docker" "inspect" "fc4ff050671b9c0b7e0e916edf6c219261c90815d3f344a9c637c1a3e3ffb0d7"`
+[INFO] running `"docker" "rm" "-f" "fc4ff050671b9c0b7e0e916edf6c219261c90815d3f344a9c637c1a3e3ffb0d7"`
+[INFO] [stdout] fc4ff050671b9c0b7e0e916edf6c219261c90815d3f344a9c637c1a3e3ffb0d7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 81ad6f55eba4c2c46a879aaa30a87df0658271ae46b0684dd11fd72ffb4d53fc
+[INFO] running `"docker" "start" "-a" "81ad6f55eba4c2c46a879aaa30a87df0658271ae46b0684dd11fd72ffb4d53fc"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling utf8-ranges v1.0.3
+[INFO] [stderr]    Compiling strsim v0.9.2
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling regex-syntax v0.6.8
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling thread-id v3.3.0
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling docopt v1.1.0
+[INFO] [stderr]    Compiling git2 v0.9.1 (C:\crater\workdir)
+[INFO] [stderr] error: outlives requirements can be inferred
+[INFO] [stderr]   --> src\commit.rs:22:34
+[INFO] [stderr]    |
+[INFO] [stderr] 22 | pub struct Parents<'commit, 'repo: 'commit> {
+[INFO] [stderr]    |                                  ^^^^^^^^^ help: remove this bound
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:70:24
+[INFO] [stderr]    |
+[INFO] [stderr] 70 | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]    |                        ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(explicit_outlives_requirements)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: outlives requirements can be inferred
+[INFO] [stderr]    --> src\diff.rs:112:31
+[INFO] [stderr]     |
+[INFO] [stderr] 112 | struct ForeachCallbacks<'a, 'b: 'a, 'c, 'd: 'c, 'e, 'f: 'e, 'g, 'h: 'g> {
+[INFO] [stderr]     |                               ^^^^        ^^^^        ^^^^        ^^^^
+[INFO] [stderr] help: remove these bounds
+[INFO] [stderr]     |
+[INFO] [stderr] 112 | struct ForeachCallbacks<'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h> {
+[INFO] [stderr]     |                              --      --      --      --
+[INFO] [stderr] 
+[INFO] [stderr] error: outlives requirements can be inferred
+[INFO] [stderr]   --> src\reference.rs:31:32
+[INFO] [stderr]    |
+[INFO] [stderr] 31 | pub struct ReferenceNames<'repo: 'references, 'references> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr] error: outlives requirements can be inferred
+[INFO] [stderr]   --> src\remote.rs:56:53
+[INFO] [stderr]    |
+[INFO] [stderr] 56 |   pub struct RemoteConnection<'repo, 'connection, 'cb>
+[INFO] [stderr]    |  _____________________________________________________^
+[INFO] [stderr] 57 | | where
+[INFO] [stderr] 58 | |     'repo: 'connection,
+[INFO] [stderr]    | |_______________________^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr] error: outlives requirements can be inferred
+[INFO] [stderr]    --> src\repo.rs:749:27
+[INFO] [stderr]     |
+[INFO] [stderr] 749 |         struct Data<'a, 'b: 'a> {
+[INFO] [stderr]     |                           ^^^^ help: remove this bound
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 5 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `git2`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "81ad6f55eba4c2c46a879aaa30a87df0658271ae46b0684dd11fd72ffb4d53fc"`
+[INFO] running `"docker" "rm" "-f" "81ad6f55eba4c2c46a879aaa30a87df0658271ae46b0684dd11fd72ffb4d53fc"`
+[INFO] [stdout] 81ad6f55eba4c2c46a879aaa30a87df0658271ae46b0684dd11fd72ffb4d53fc

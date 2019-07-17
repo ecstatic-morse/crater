@@ -1,0 +1,86 @@
+[INFO] cloning repository badboy/red
+[INFO] running `"git" "clone" "--bare" "git://github.com/badboy/red.git" "work\\cache\\sources\\gh\\badboy\\red"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\badboy\red'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\badboy\\red" "work\\ex\\default\\sources\\stable\\gh\\badboy\\red"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\badboy\red'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\badboy\\red" "work\\ex\\default\\sources\\beta\\gh\\badboy\\red"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\badboy\red'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 2711f9677a5074e33802ad0a0c88e590706d95df
+[INFO] sha for GitHub repo badboy/red: 2711f9677a5074e33802ad0a0c88e590706d95df
+[INFO] validating manifest of badboy/red on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of badboy/red on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing badboy/red
+[INFO] finished frobbing badboy/red
+[INFO] frobbed toml for badboy/red written to work\ex\default\sources\stable\gh\badboy\red\Cargo.toml
+[INFO] started frobbing badboy/red
+[INFO] finished frobbing badboy/red
+[INFO] frobbed toml for badboy/red written to work\ex\default\sources\beta\gh\badboy\red\Cargo.toml
+[INFO] crate badboy/red already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded structopt v0.2.10
+[INFO] [stderr]   Downloaded proc-macro2 v0.4.18
+[INFO] [stderr]   Downloaded rustyline v2.0.1
+[INFO] [stderr]   Downloaded cc v1.0.24
+[INFO] [stderr]   Downloaded regex v1.0.5
+[INFO] [stderr]   Downloaded utf8-ranges v1.0.1
+[INFO] [stderr]   Downloaded regex-syntax v0.6.2
+[INFO] [stderr]   Downloaded ucd-util v0.1.1
+[INFO] [stderr]   Downloaded aho-corasick v0.6.8
+[INFO] [stderr]   Downloaded exitfailure v0.5.1
+[INFO] [stderr]   Downloaded env_logger v0.5.13
+[INFO] [stderr]   Downloaded termcolor v1.0.3
+[INFO] [stderr]   Downloaded humantime v1.1.1
+[INFO] [stderr]   Downloaded structopt-derive v0.2.10
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing badboy/red against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\badboy\\red,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 26df9bf2d9d8af5b41d79a2b1f5de5df9c3c813b91671ad44a4629417de7921a
+[INFO] running `"docker" "start" "-a" "26df9bf2d9d8af5b41d79a2b1f5de5df9c3c813b91671ad44a4629417de7921a"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.18
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling version_check v0.1.4
+[INFO] [stderr]    Compiling libc v0.2.43
+[INFO] [stderr]    Compiling failure_derive v0.1.2
+[INFO] [stderr]    Compiling ucd-util v0.1.1
+[INFO] [stderr]    Compiling regex v1.0.5
+[INFO] [stderr]    Compiling rustc-demangle v0.1.9
+[INFO] [stderr]    Compiling cfg-if v0.1.5
+[INFO] [stderr]    Compiling utf8-ranges v1.0.1
+[INFO] [stderr]    Compiling unicode-segmentation v1.2.1
+[INFO] [stderr]    Compiling memchr v2.0.2
+[INFO] [stderr]    Compiling lazy_static v1.1.0
+[INFO] [stderr]    Compiling log v0.4.5
+[INFO] [stderr]    Compiling regex-syntax v0.6.2
+[INFO] [stderr]    Compiling humantime v1.1.1
+[INFO] [stderr]    Compiling aho-corasick v0.6.8
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling quote v0.6.8
+[INFO] [stderr]    Compiling syn v0.14.9
+[INFO] [stderr]    Compiling winapi-util v0.1.1
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling backtrace v0.3.9
+[INFO] [stderr]    Compiling dirs v1.0.3
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling rustyline v2.0.1
+[INFO] [stderr] error[E0283]: type annotations required: cannot resolve `std::string::String: std::convert::AsRef<_>`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustyline-2.0.1\src\lib.rs:637:43
+[INFO] [stderr]     |
+[INFO] [stderr] 637 |             editor.add_history_entry(line.as_ref());
+[INFO] [stderr]     |                                           ^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0283`.
+[INFO] [stderr] error: Could not compile `rustyline`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "26df9bf2d9d8af5b41d79a2b1f5de5df9c3c813b91671ad44a4629417de7921a"`
+[INFO] running `"docker" "rm" "-f" "26df9bf2d9d8af5b41d79a2b1f5de5df9c3c813b91671ad44a4629417de7921a"`
+[INFO] [stdout] 26df9bf2d9d8af5b41d79a2b1f5de5df9c3c813b91671ad44a4629417de7921a

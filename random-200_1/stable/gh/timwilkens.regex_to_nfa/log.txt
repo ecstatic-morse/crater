@@ -1,0 +1,56 @@
+[INFO] cloning repository timwilkens/regex_to_nfa
+[INFO] running `"git" "clone" "--bare" "git://github.com/timwilkens/regex_to_nfa.git" "work\\cache\\sources\\gh\\timwilkens\\regex_to_nfa"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\timwilkens\regex_to_nfa'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\timwilkens\\regex_to_nfa" "work\\ex\\default\\sources\\stable\\gh\\timwilkens\\regex_to_nfa"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\timwilkens\regex_to_nfa'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\timwilkens\\regex_to_nfa" "work\\ex\\default\\sources\\beta\\gh\\timwilkens\\regex_to_nfa"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\timwilkens\regex_to_nfa'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 9f0370be61eb0a5828cf7d90036539e151b8d9a3
+[INFO] sha for GitHub repo timwilkens/regex_to_nfa: 9f0370be61eb0a5828cf7d90036539e151b8d9a3
+[INFO] validating manifest of timwilkens/regex_to_nfa on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of timwilkens/regex_to_nfa on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing timwilkens/regex_to_nfa
+[INFO] finished frobbing timwilkens/regex_to_nfa
+[INFO] frobbed toml for timwilkens/regex_to_nfa written to work\ex\default\sources\stable\gh\timwilkens\regex_to_nfa\Cargo.toml
+[INFO] started frobbing timwilkens/regex_to_nfa
+[INFO] finished frobbing timwilkens/regex_to_nfa
+[INFO] frobbed toml for timwilkens/regex_to_nfa written to work\ex\default\sources\beta\gh\timwilkens\regex_to_nfa\Cargo.toml
+[INFO] crate timwilkens/regex_to_nfa already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing timwilkens/regex_to_nfa against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\timwilkens\\regex_to_nfa,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a494bc632784871fd91afa1f375abd5427b1ebfc2a0ade0ca5debc1230f1e3d4
+[INFO] running `"docker" "start" "-a" "a494bc632784871fd91afa1f375abd5427b1ebfc2a0ade0ca5debc1230f1e3d4"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling regex_to_nfa v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.60s
+[INFO] running `"docker" "inspect" "a494bc632784871fd91afa1f375abd5427b1ebfc2a0ade0ca5debc1230f1e3d4"`
+[INFO] running `"docker" "rm" "-f" "a494bc632784871fd91afa1f375abd5427b1ebfc2a0ade0ca5debc1230f1e3d4"`
+[INFO] [stdout] a494bc632784871fd91afa1f375abd5427b1ebfc2a0ade0ca5debc1230f1e3d4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\timwilkens\\regex_to_nfa,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c70326ba324534fd6a5a70d09a506a8dfbf6c40113a48e2d98f0214a97a223ea
+[INFO] running `"docker" "start" "-a" "c70326ba324534fd6a5a70d09a506a8dfbf6c40113a48e2d98f0214a97a223ea"`
+[INFO] [stderr]    Compiling regex_to_nfa v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.33s
+[INFO] running `"docker" "inspect" "c70326ba324534fd6a5a70d09a506a8dfbf6c40113a48e2d98f0214a97a223ea"`
+[INFO] running `"docker" "rm" "-f" "c70326ba324534fd6a5a70d09a506a8dfbf6c40113a48e2d98f0214a97a223ea"`
+[INFO] [stdout] c70326ba324534fd6a5a70d09a506a8dfbf6c40113a48e2d98f0214a97a223ea
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\timwilkens\\regex_to_nfa,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 17ed65f3884bd6abfd60e0e319a90a82eb9e0cf7348dd9afd0712a95a1c047a4
+[INFO] running `"docker" "start" "-a" "17ed65f3884bd6abfd60e0e319a90a82eb9e0cf7348dd9afd0712a95a1c047a4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\regex_to_nfa-f2a8f17a193906b4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "17ed65f3884bd6abfd60e0e319a90a82eb9e0cf7348dd9afd0712a95a1c047a4"`
+[INFO] running `"docker" "rm" "-f" "17ed65f3884bd6abfd60e0e319a90a82eb9e0cf7348dd9afd0712a95a1c047a4"`
+[INFO] [stdout] 17ed65f3884bd6abfd60e0e319a90a82eb9e0cf7348dd9afd0712a95a1c047a4

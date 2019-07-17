@@ -1,0 +1,73 @@
+[INFO] fetching crate odbc-safe 0.4.1...
+[INFO] extracting crate odbc-safe 0.4.1 into work\ex\default\sources\nightly\reg\odbc-safe\0.4.1
+[INFO] extracting crate odbc-safe 0.4.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\odbc-safe\0.4.1
+[INFO] validating manifest of odbc-safe-0.4.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of odbc-safe-0.4.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing odbc-safe-0.4.1
+[INFO] finished frobbing odbc-safe-0.4.1
+[INFO] frobbed toml for odbc-safe-0.4.1 written to work\ex\default\sources\nightly\reg\odbc-safe\0.4.1\Cargo.toml
+[INFO] started frobbing odbc-safe-0.4.1
+[INFO] finished frobbing odbc-safe-0.4.1
+[INFO] frobbed toml for odbc-safe-0.4.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\odbc-safe\0.4.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded odbc-sys v0.6.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing odbc-safe-0.4.1 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\odbc-safe\\0.4.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] babb14d1251fa491c3b8650bad62b20f3323eb5fdbbc931abffd8751c5e3a97c
+[INFO] running `"docker" "start" "-a" "babb14d1251fa491c3b8650bad62b20f3323eb5fdbbc931abffd8751c5e3a97c"`
+[INFO] [stderr]    Compiling odbc-sys v0.6.3
+[INFO] [stderr]    Compiling odbc-safe v0.4.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.19s
+[INFO] running `"docker" "inspect" "babb14d1251fa491c3b8650bad62b20f3323eb5fdbbc931abffd8751c5e3a97c"`
+[INFO] running `"docker" "rm" "-f" "babb14d1251fa491c3b8650bad62b20f3323eb5fdbbc931abffd8751c5e3a97c"`
+[INFO] [stdout] babb14d1251fa491c3b8650bad62b20f3323eb5fdbbc931abffd8751c5e3a97c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\odbc-safe\\0.4.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 550bbb27707dfd5f5e0dc7e6143c982f7752b679d6fc3cf54ea4691cd5396f47
+[INFO] running `"docker" "start" "-a" "550bbb27707dfd5f5e0dc7e6143c982f7752b679d6fc3cf54ea4691cd5396f47"`
+[INFO] [stderr]    Compiling odbc-safe v0.4.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.01s
+[INFO] running `"docker" "inspect" "550bbb27707dfd5f5e0dc7e6143c982f7752b679d6fc3cf54ea4691cd5396f47"`
+[INFO] running `"docker" "rm" "-f" "550bbb27707dfd5f5e0dc7e6143c982f7752b679d6fc3cf54ea4691cd5396f47"`
+[INFO] [stdout] 550bbb27707dfd5f5e0dc7e6143c982f7752b679d6fc3cf54ea4691cd5396f47
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\odbc-safe\\0.4.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 94a1f5ac0aa0915b0090c87e991c57e5656780dd41cd8f524aab0e43854943ca
+[INFO] running `"docker" "start" "-a" "94a1f5ac0aa0915b0090c87e991c57e5656780dd41cd8f524aab0e43854943ca"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\odbc_safe-11f8593815a239c0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-e4b060ef055cffff.exe
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test auto_disconnect ... ignored
+[INFO] [stdout] test connect_to_postgres ... ignored
+[INFO] [stdout] test connect_to_postgres_with_connection_string ... ignored
+[INFO] [stdout] test describe_result ... ignored
+[INFO] [stdout] test allocate_connection ... ok
+[INFO] [stderr]    Doc-tests odbc-safe
+[INFO] [stdout] test not_read_only ... ignored
+[INFO] [stdout] test allocate_environment ... ok
+[INFO] [stdout] test drivers_with_empty_buffer ... ok
+[INFO] [stdout] test diagnostics ... ok
+[INFO] [stdout] test query_result ... ignored
+[INFO] [stdout] test wrong_datasource ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 6 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "94a1f5ac0aa0915b0090c87e991c57e5656780dd41cd8f524aab0e43854943ca"`
+[INFO] running `"docker" "rm" "-f" "94a1f5ac0aa0915b0090c87e991c57e5656780dd41cd8f524aab0e43854943ca"`
+[INFO] [stdout] 94a1f5ac0aa0915b0090c87e991c57e5656780dd41cd8f524aab0e43854943ca

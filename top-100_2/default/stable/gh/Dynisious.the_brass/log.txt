@@ -1,0 +1,67 @@
+[INFO] cloning repository Dynisious/the_brass
+[INFO] running `"git" "clone" "--bare" "git://github.com/Dynisious/the_brass.git" "work\\cache\\sources\\gh\\Dynisious\\the_brass"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Dynisious\the_brass'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Dynisious\\the_brass" "work\\ex\\default\\sources\\stable\\gh\\Dynisious\\the_brass"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Dynisious\the_brass'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Dynisious\\the_brass" "work\\ex\\default\\sources\\beta\\gh\\Dynisious\\the_brass"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Dynisious\the_brass'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ff007fe968cb18722aac7a391fc22b1098ab699b
+[INFO] sha for GitHub repo Dynisious/the_brass: ff007fe968cb18722aac7a391fc22b1098ab699b
+[INFO] validating manifest of Dynisious/the_brass on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Dynisious/the_brass on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Dynisious/the_brass
+[INFO] finished frobbing Dynisious/the_brass
+[INFO] frobbed toml for Dynisious/the_brass written to work\ex\default\sources\stable\gh\Dynisious\the_brass\Cargo.toml
+[INFO] started frobbing Dynisious/the_brass
+[INFO] finished frobbing Dynisious/the_brass
+[INFO] frobbed toml for Dynisious/the_brass written to work\ex\default\sources\beta\gh\Dynisious\the_brass\Cargo.toml
+[INFO] crate Dynisious/the_brass already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded toml v0.4.5
+[INFO] [stderr]   Downloaded serde_derive v1.0.19
+[INFO] [stderr]   Downloaded serde_derive_internals v0.17.0
+[INFO] [stderr]   Downloaded serde v1.0.19
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Dynisious/the_brass against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Dynisious\\the_brass,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 85446d416c07e71c6c874e60a662c76cc49937ea6835878d9af1d65f7ed72ed8
+[INFO] running `"docker" "start" "-a" "85446d416c07e71c6c874e60a662c76cc49937ea6835878d9af1d65f7ed72ed8"`
+[INFO] [stderr]    Compiling serde v1.0.19
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling serde_derive_internals v0.17.0
+[INFO] [stderr]    Compiling serde_derive v1.0.19
+[INFO] [stderr]    Compiling toml v0.4.5
+[INFO] [stderr]    Compiling the_brass v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 39.06s
+[INFO] running `"docker" "inspect" "85446d416c07e71c6c874e60a662c76cc49937ea6835878d9af1d65f7ed72ed8"`
+[INFO] running `"docker" "rm" "-f" "85446d416c07e71c6c874e60a662c76cc49937ea6835878d9af1d65f7ed72ed8"`
+[INFO] [stdout] 85446d416c07e71c6c874e60a662c76cc49937ea6835878d9af1d65f7ed72ed8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Dynisious\\the_brass,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] fc6867230de442be1d787bfd179000f964c18a4e9626cdc57a2cd66d8de59c59
+[INFO] running `"docker" "start" "-a" "fc6867230de442be1d787bfd179000f964c18a4e9626cdc57a2cd66d8de59c59"`
+[INFO] [stderr]    Compiling the_brass v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.14s
+[INFO] running `"docker" "inspect" "fc6867230de442be1d787bfd179000f964c18a4e9626cdc57a2cd66d8de59c59"`
+[INFO] running `"docker" "rm" "-f" "fc6867230de442be1d787bfd179000f964c18a4e9626cdc57a2cd66d8de59c59"`
+[INFO] [stdout] fc6867230de442be1d787bfd179000f964c18a4e9626cdc57a2cd66d8de59c59
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Dynisious\\the_brass,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 7312e0cbd8be5e2006f0d3a6f7992674542b02cb657ae3b66f40ef17c12d2b58
+[INFO] running `"docker" "start" "-a" "7312e0cbd8be5e2006f0d3a6f7992674542b02cb657ae3b66f40ef17c12d2b58"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\the_brass-3ddd96229bc5be05.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test game::factions::tests::test_faction_pair ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7312e0cbd8be5e2006f0d3a6f7992674542b02cb657ae3b66f40ef17c12d2b58"`
+[INFO] running `"docker" "rm" "-f" "7312e0cbd8be5e2006f0d3a6f7992674542b02cb657ae3b66f40ef17c12d2b58"`
+[INFO] [stdout] 7312e0cbd8be5e2006f0d3a6f7992674542b02cb657ae3b66f40ef17c12d2b58

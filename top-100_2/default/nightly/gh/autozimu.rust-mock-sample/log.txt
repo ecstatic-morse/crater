@@ -1,0 +1,64 @@
+[INFO] cloning repository autozimu/rust-mock-sample
+[INFO] running `"git" "clone" "--bare" "git://github.com/autozimu/rust-mock-sample.git" "work\\cache\\sources\\gh\\autozimu\\rust-mock-sample"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\autozimu\rust-mock-sample'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\autozimu\\rust-mock-sample" "work\\ex\\default\\sources\\nightly\\gh\\autozimu\\rust-mock-sample"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\autozimu\rust-mock-sample'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\autozimu\\rust-mock-sample" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\autozimu\\rust-mock-sample"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\autozimu\rust-mock-sample'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a4a068b092bdaf3978aecbfcd7646c21b391ec50
+[INFO] sha for GitHub repo autozimu/rust-mock-sample: a4a068b092bdaf3978aecbfcd7646c21b391ec50
+[INFO] validating manifest of autozimu/rust-mock-sample on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of autozimu/rust-mock-sample on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing autozimu/rust-mock-sample
+[INFO] finished frobbing autozimu/rust-mock-sample
+[INFO] frobbed toml for autozimu/rust-mock-sample written to work\ex\default\sources\nightly\gh\autozimu\rust-mock-sample\Cargo.toml
+[INFO] started frobbing autozimu/rust-mock-sample
+[INFO] finished frobbing autozimu/rust-mock-sample
+[INFO] frobbed toml for autozimu/rust-mock-sample written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\autozimu\rust-mock-sample\Cargo.toml
+[INFO] crate autozimu/rust-mock-sample already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded mocktopus v0.7.0
+[INFO] [stderr]   Downloaded mocktopus_macros v0.7.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing autozimu/rust-mock-sample against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\autozimu\\rust-mock-sample,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e7e8e0d51ffa656a2b989c09d2c20b4bbc692872dbae68abb6f6fdce34fe1c10
+[INFO] running `"docker" "start" "-a" "e7e8e0d51ffa656a2b989c09d2c20b4bbc692872dbae68abb6f6fdce34fe1c10"`
+[INFO] [stderr]    Compiling sample v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.63s
+[INFO] running `"docker" "inspect" "e7e8e0d51ffa656a2b989c09d2c20b4bbc692872dbae68abb6f6fdce34fe1c10"`
+[INFO] running `"docker" "rm" "-f" "e7e8e0d51ffa656a2b989c09d2c20b4bbc692872dbae68abb6f6fdce34fe1c10"`
+[INFO] [stdout] e7e8e0d51ffa656a2b989c09d2c20b4bbc692872dbae68abb6f6fdce34fe1c10
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\autozimu\\rust-mock-sample,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f7b04922d16d67448c7df7e775e73fcaf29d7abba4f4b69b1efb7f6c2ddcf49d
+[INFO] running `"docker" "start" "-a" "f7b04922d16d67448c7df7e775e73fcaf29d7abba4f4b69b1efb7f6c2ddcf49d"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.28
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling syn v0.14.9
+[INFO] [stderr]    Compiling mocktopus_macros v0.7.0
+[INFO] [stderr]    Compiling mocktopus v0.7.0
+[INFO] [stderr]    Compiling sample v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 10s
+[INFO] running `"docker" "inspect" "f7b04922d16d67448c7df7e775e73fcaf29d7abba4f4b69b1efb7f6c2ddcf49d"`
+[INFO] running `"docker" "rm" "-f" "f7b04922d16d67448c7df7e775e73fcaf29d7abba4f4b69b1efb7f6c2ddcf49d"`
+[INFO] [stdout] f7b04922d16d67448c7df7e775e73fcaf29d7abba4f4b69b1efb7f6c2ddcf49d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\autozimu\\rust-mock-sample,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] eda6762ba5a1d0d6176533f083a663052cf4689816005a6f4a83283969011dc6
+[INFO] running `"docker" "start" "-a" "eda6762ba5a1d0d6176533f083a663052cf4689816005a6f4a83283969011dc6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\sample-93d4d9a3f9328d4c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test::mock_test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "eda6762ba5a1d0d6176533f083a663052cf4689816005a6f4a83283969011dc6"`
+[INFO] running `"docker" "rm" "-f" "eda6762ba5a1d0d6176533f083a663052cf4689816005a6f4a83283969011dc6"`
+[INFO] [stdout] eda6762ba5a1d0d6176533f083a663052cf4689816005a6f4a83283969011dc6

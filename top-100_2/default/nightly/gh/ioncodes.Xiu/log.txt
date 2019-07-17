@@ -1,0 +1,55 @@
+[INFO] cloning repository ioncodes/Xiu
+[INFO] running `"git" "clone" "--bare" "git://github.com/ioncodes/Xiu.git" "work\\cache\\sources\\gh\\ioncodes\\Xiu"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ioncodes\Xiu'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ioncodes\\Xiu" "work\\ex\\default\\sources\\nightly\\gh\\ioncodes\\Xiu"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\ioncodes\Xiu'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ioncodes\\Xiu" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ioncodes\\Xiu"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ioncodes\Xiu'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a645fadb116de275c2a9af8e76d6001a58d2156b
+[INFO] sha for GitHub repo ioncodes/Xiu: a645fadb116de275c2a9af8e76d6001a58d2156b
+[INFO] validating manifest of ioncodes/Xiu on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ioncodes/Xiu on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ioncodes/Xiu
+[INFO] finished frobbing ioncodes/Xiu
+[INFO] frobbed toml for ioncodes/Xiu written to work\ex\default\sources\nightly\gh\ioncodes\Xiu\Cargo.toml
+[INFO] started frobbing ioncodes/Xiu
+[INFO] finished frobbing ioncodes/Xiu
+[INFO] frobbed toml for ioncodes/Xiu written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ioncodes\Xiu\Cargo.toml
+[INFO] crate ioncodes/Xiu already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ioncodes/Xiu against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ioncodes\\Xiu,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5292396fe6f8a3162328105df9630266427260db469da2d0205553af597b0fe6
+[INFO] running `"docker" "start" "-a" "5292396fe6f8a3162328105df9630266427260db469da2d0205553af597b0fe6"`
+[INFO] [stderr]    Compiling xiu v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.78s
+[INFO] running `"docker" "inspect" "5292396fe6f8a3162328105df9630266427260db469da2d0205553af597b0fe6"`
+[INFO] running `"docker" "rm" "-f" "5292396fe6f8a3162328105df9630266427260db469da2d0205553af597b0fe6"`
+[INFO] [stdout] 5292396fe6f8a3162328105df9630266427260db469da2d0205553af597b0fe6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ioncodes\\Xiu,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8553facabe189ff51a3ca3d5aa5d5056427237ec1c2f5ab7ef06e8d082b34768
+[INFO] running `"docker" "start" "-a" "8553facabe189ff51a3ca3d5aa5d5056427237ec1c2f5ab7ef06e8d082b34768"`
+[INFO] [stderr]    Compiling xiu v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.69s
+[INFO] running `"docker" "inspect" "8553facabe189ff51a3ca3d5aa5d5056427237ec1c2f5ab7ef06e8d082b34768"`
+[INFO] running `"docker" "rm" "-f" "8553facabe189ff51a3ca3d5aa5d5056427237ec1c2f5ab7ef06e8d082b34768"`
+[INFO] [stdout] 8553facabe189ff51a3ca3d5aa5d5056427237ec1c2f5ab7ef06e8d082b34768
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ioncodes\\Xiu,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 0d0e352e0bf8c322bf98651965f4ab179e06892e1ced82f59832944e04cfa030
+[INFO] running `"docker" "start" "-a" "0d0e352e0bf8c322bf98651965f4ab179e06892e1ced82f59832944e04cfa030"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\xiu-4b15eb56af651375.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0d0e352e0bf8c322bf98651965f4ab179e06892e1ced82f59832944e04cfa030"`
+[INFO] running `"docker" "rm" "-f" "0d0e352e0bf8c322bf98651965f4ab179e06892e1ced82f59832944e04cfa030"`
+[INFO] [stdout] 0d0e352e0bf8c322bf98651965f4ab179e06892e1ced82f59832944e04cfa030

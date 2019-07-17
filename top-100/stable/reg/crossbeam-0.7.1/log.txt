@@ -1,0 +1,67 @@
+[INFO] fetching crate crossbeam 0.7.1...
+[INFO] extracting crate crossbeam 0.7.1 into work\ex\default\sources\stable\reg\crossbeam\0.7.1
+[INFO] extracting crate crossbeam 0.7.1 into work\ex\default\sources\beta\reg\crossbeam\0.7.1
+[INFO] validating manifest of crossbeam-0.7.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of crossbeam-0.7.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing crossbeam-0.7.1
+[INFO] finished frobbing crossbeam-0.7.1
+[INFO] frobbed toml for crossbeam-0.7.1 written to work\ex\default\sources\stable\reg\crossbeam\0.7.1\Cargo.toml
+[INFO] started frobbing crossbeam-0.7.1
+[INFO] finished frobbing crossbeam-0.7.1
+[INFO] frobbed toml for crossbeam-0.7.1 written to work\ex\default\sources\beta\reg\crossbeam\0.7.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded crossbeam-channel v0.3.8
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing crossbeam-0.7.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\crossbeam\\0.7.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f273b94efef269432b0874bbe51f00f9084f1b3aee8b01bf54c48735433250c9
+[INFO] running `"docker" "start" "-a" "f273b94efef269432b0874bbe51f00f9084f1b3aee8b01bf54c48735433250c9"`
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling crossbeam v0.7.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.85s
+[INFO] running `"docker" "inspect" "f273b94efef269432b0874bbe51f00f9084f1b3aee8b01bf54c48735433250c9"`
+[INFO] running `"docker" "rm" "-f" "f273b94efef269432b0874bbe51f00f9084f1b3aee8b01bf54c48735433250c9"`
+[INFO] [stdout] f273b94efef269432b0874bbe51f00f9084f1b3aee8b01bf54c48735433250c9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\crossbeam\\0.7.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a88003744d3e6fe4adfec47b15c1c4028593d817861fe5bc3a6b87d0cc15bbd9
+[INFO] running `"docker" "start" "-a" "a88003744d3e6fe4adfec47b15c1c4028593d817861fe5bc3a6b87d0cc15bbd9"`
+[INFO] [stderr]    Compiling crossbeam v0.7.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.74s
+[INFO] running `"docker" "inspect" "a88003744d3e6fe4adfec47b15c1c4028593d817861fe5bc3a6b87d0cc15bbd9"`
+[INFO] running `"docker" "rm" "-f" "a88003744d3e6fe4adfec47b15c1c4028593d817861fe5bc3a6b87d0cc15bbd9"`
+[INFO] [stdout] a88003744d3e6fe4adfec47b15c1c4028593d817861fe5bc3a6b87d0cc15bbd9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\crossbeam\\0.7.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 9bb1b16e485b41ba7e609f1f53689e51b75cc12539747cfbc5d0a417685c3f58
+[INFO] running `"docker" "start" "-a" "9bb1b16e485b41ba7e609f1f53689e51b75cc12539747cfbc5d0a417685c3f58"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.51s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\crossbeam-33db5580bc1cd3ef.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\subcrates-ea2ff99d76c20aa5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test channel ... ok
+[INFO] [stdout] test deque ... ok
+[INFO] [stdout] test epoch ... ok
+[INFO] [stdout] test queue ... ok
+[INFO] [stdout] test utils ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests crossbeam
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9bb1b16e485b41ba7e609f1f53689e51b75cc12539747cfbc5d0a417685c3f58"`
+[INFO] running `"docker" "rm" "-f" "9bb1b16e485b41ba7e609f1f53689e51b75cc12539747cfbc5d0a417685c3f58"`
+[INFO] [stdout] 9bb1b16e485b41ba7e609f1f53689e51b75cc12539747cfbc5d0a417685c3f58

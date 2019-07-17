@@ -1,0 +1,59 @@
+[INFO] cloning repository SkamDart/jim
+[INFO] running `"git" "clone" "--bare" "git://github.com/SkamDart/jim.git" "work\\cache\\sources\\gh\\SkamDart\\jim"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\SkamDart\jim'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\SkamDart\\jim" "work\\ex\\default\\sources\\nightly\\gh\\SkamDart\\jim"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\SkamDart\jim'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\SkamDart\\jim" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\SkamDart\\jim"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\SkamDart\jim'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] cc1bd3b77419859019bc4ec7ed982579a9113dac
+[INFO] sha for GitHub repo SkamDart/jim: cc1bd3b77419859019bc4ec7ed982579a9113dac
+[INFO] validating manifest of SkamDart/jim on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of SkamDart/jim on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing SkamDart/jim
+[INFO] finished frobbing SkamDart/jim
+[INFO] frobbed toml for SkamDart/jim written to work\ex\default\sources\nightly\gh\SkamDart\jim\Cargo.toml
+[INFO] started frobbing SkamDart/jim
+[INFO] finished frobbing SkamDart/jim
+[INFO] frobbed toml for SkamDart/jim written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\SkamDart\jim\Cargo.toml
+[INFO] crate SkamDart/jim already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing SkamDart/jim against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\SkamDart\\jim,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4fb492d1941609938cf0bf58f8b8320bf202376c8d98af721c0f4d3832065f40
+[INFO] running `"docker" "start" "-a" "4fb492d1941609938cf0bf58f8b8320bf202376c8d98af721c0f4d3832065f40"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling bitflags v1.0.4
+[INFO] [stderr]    Compiling textwrap v0.10.0
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling jim v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 42.01s
+[INFO] running `"docker" "inspect" "4fb492d1941609938cf0bf58f8b8320bf202376c8d98af721c0f4d3832065f40"`
+[INFO] running `"docker" "rm" "-f" "4fb492d1941609938cf0bf58f8b8320bf202376c8d98af721c0f4d3832065f40"`
+[INFO] [stdout] 4fb492d1941609938cf0bf58f8b8320bf202376c8d98af721c0f4d3832065f40
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\SkamDart\\jim,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4dd57621d30ab8c32c5d6095b233ba6efcda570a0989c5c1db14d1d17565dc80
+[INFO] running `"docker" "start" "-a" "4dd57621d30ab8c32c5d6095b233ba6efcda570a0989c5c1db14d1d17565dc80"`
+[INFO] [stderr]    Compiling jim v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.23s
+[INFO] running `"docker" "inspect" "4dd57621d30ab8c32c5d6095b233ba6efcda570a0989c5c1db14d1d17565dc80"`
+[INFO] running `"docker" "rm" "-f" "4dd57621d30ab8c32c5d6095b233ba6efcda570a0989c5c1db14d1d17565dc80"`
+[INFO] [stdout] 4dd57621d30ab8c32c5d6095b233ba6efcda570a0989c5c1db14d1d17565dc80
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\SkamDart\\jim,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 1f4cc40a799c261a808cb56dfb9fdcc28e531955a6a39a673f6df80d8970b0c1
+[INFO] running `"docker" "start" "-a" "1f4cc40a799c261a808cb56dfb9fdcc28e531955a6a39a673f6df80d8970b0c1"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\jim-cdf9e8061c255fc5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "1f4cc40a799c261a808cb56dfb9fdcc28e531955a6a39a673f6df80d8970b0c1"`
+[INFO] running `"docker" "rm" "-f" "1f4cc40a799c261a808cb56dfb9fdcc28e531955a6a39a673f6df80d8970b0c1"`
+[INFO] [stdout] 1f4cc40a799c261a808cb56dfb9fdcc28e531955a6a39a673f6df80d8970b0c1

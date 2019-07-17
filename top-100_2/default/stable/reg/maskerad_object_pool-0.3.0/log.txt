@@ -1,0 +1,89 @@
+[INFO] fetching crate maskerad_object_pool 0.3.0...
+[INFO] extracting crate maskerad_object_pool 0.3.0 into work\ex\default\sources\stable\reg\maskerad_object_pool\0.3.0
+[INFO] extracting crate maskerad_object_pool 0.3.0 into work\ex\default\sources\beta\reg\maskerad_object_pool\0.3.0
+[INFO] validating manifest of maskerad_object_pool-0.3.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of maskerad_object_pool-0.3.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing maskerad_object_pool-0.3.0
+[INFO] finished frobbing maskerad_object_pool-0.3.0
+[INFO] frobbed toml for maskerad_object_pool-0.3.0 written to work\ex\default\sources\stable\reg\maskerad_object_pool\0.3.0\Cargo.toml
+[INFO] started frobbing maskerad_object_pool-0.3.0
+[INFO] finished frobbing maskerad_object_pool-0.3.0
+[INFO] frobbed toml for maskerad_object_pool-0.3.0 written to work\ex\default\sources\beta\reg\maskerad_object_pool\0.3.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing maskerad_object_pool-0.3.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\maskerad_object_pool\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c732de674da3a73ece7efc4e4e360ce6f04446f7785d7e3e96b932bab42d15ae
+[INFO] running `"docker" "start" "-a" "c732de674da3a73ece7efc4e4e360ce6f04446f7785d7e3e96b932bab42d15ae"`
+[INFO] [stderr]    Compiling maskerad_object_pool v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.71s
+[INFO] running `"docker" "inspect" "c732de674da3a73ece7efc4e4e360ce6f04446f7785d7e3e96b932bab42d15ae"`
+[INFO] running `"docker" "rm" "-f" "c732de674da3a73ece7efc4e4e360ce6f04446f7785d7e3e96b932bab42d15ae"`
+[INFO] [stdout] c732de674da3a73ece7efc4e4e360ce6f04446f7785d7e3e96b932bab42d15ae
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\maskerad_object_pool\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c86cd602231d2f11fee5f46f645c1fd5681b5b52be2d0ab022c55cdf7a690961
+[INFO] running `"docker" "start" "-a" "c86cd602231d2f11fee5f46f645c1fd5681b5b52be2d0ab022c55cdf7a690961"`
+[INFO] [stderr]    Compiling maskerad_object_pool v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.40s
+[INFO] running `"docker" "inspect" "c86cd602231d2f11fee5f46f645c1fd5681b5b52be2d0ab022c55cdf7a690961"`
+[INFO] running `"docker" "rm" "-f" "c86cd602231d2f11fee5f46f645c1fd5681b5b52be2d0ab022c55cdf7a690961"`
+[INFO] [stdout] c86cd602231d2f11fee5f46f645c1fd5681b5b52be2d0ab022c55cdf7a690961
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\maskerad_object_pool\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 24d90fae7509c734c96614b192eefbce5a965b42c89fcaf3fe5b439e033c4515
+[INFO] running `"docker" "start" "-a" "24d90fae7509c734c96614b192eefbce5a965b42c89fcaf3fe5b439e033c4515"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\maskerad_object_pool-826104c1b2c3585b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_create_no_more_objects ... ok
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_create_strict ... ok
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_drop_wrapper_around_smart_pointer ... ok
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_is_used_at_initialization ... ok
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_len ... ok
+[INFO] [stdout] test concurrent_pool_allocator::refcounted_objectpool_tests::test_modify_inner_value ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_create_no_more_objects ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_create_strict ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_drop_wrapper_around_smart_pointer ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_is_used_at_initialization ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_len ... ok
+[INFO] [stdout] test refcounted_pool_allocator::refcounted_objectpool_tests::test_modify_inner_value ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests maskerad_object_pool
+[INFO] [stdout] 
+[INFO] [stdout] running 24 tests
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::create_strict (line 196) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::create (line 266) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::capacity (line 382) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool (line 18) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::pool_slice (line 141) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::with_capacity (line 89) ... ok
+[INFO] [stdout] test src\concurrent_pool_handler.rs - concurrent_pool_handler::ArcHandle<T>::read (line 56) ... ok
+[INFO] [stdout] test src\concurrent_pool_allocator.rs - concurrent_pool_allocator::ArcPool<T>::nb_unused (line 332) ... ok
+[INFO] [stdout] test src\concurrent_pool_handler.rs - concurrent_pool_handler::ArcHandle<T>::try_write (line 254) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 29) ... ok
+[INFO] [stdout] test src\concurrent_pool_handler.rs - concurrent_pool_handler::ArcHandle<T>::write (line 189) ... ok
+[INFO] [stdout] test src\concurrent_pool_handler.rs - concurrent_pool_handler::ArcHandle<T>::try_read (line 120) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::capacity (line 384) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::create_strict (line 197) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::create (line 267) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool (line 18) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::with_capacity (line 88) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::nb_unused (line 333) ... ok
+[INFO] [stdout] test src\refcounted_pool_allocator.rs - refcounted_pool_allocator::RcPool<T>::pool_slice (line 140) ... ok
+[INFO] [stdout] test src\refcounted_pool_handler.rs - refcounted_pool_handler::RcHandle<T>::as_ptr (line 293) ... ok
+[INFO] [stdout] test src\refcounted_pool_handler.rs - refcounted_pool_handler::RcHandle<T>::try_borrow_mut (line 233) ... ok
+[INFO] [stdout] test src\refcounted_pool_handler.rs - refcounted_pool_handler::RcHandle<T>::borrow (line 51) ... ok
+[INFO] [stdout] test src\refcounted_pool_handler.rs - refcounted_pool_handler::RcHandle<T>::try_borrow (line 109) ... ok
+[INFO] [stdout] test src\refcounted_pool_handler.rs - refcounted_pool_handler::RcHandle<T>::borrow_mut (line 174) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "24d90fae7509c734c96614b192eefbce5a965b42c89fcaf3fe5b439e033c4515"`
+[INFO] running `"docker" "rm" "-f" "24d90fae7509c734c96614b192eefbce5a965b42c89fcaf3fe5b439e033c4515"`
+[INFO] [stdout] 24d90fae7509c734c96614b192eefbce5a965b42c89fcaf3fe5b439e033c4515

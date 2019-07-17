@@ -1,0 +1,95 @@
+[INFO] cloning repository siddharthverma314/cryptopals
+[INFO] running `"git" "clone" "--bare" "git://github.com/siddharthverma314/cryptopals.git" "work\\cache\\sources\\gh\\siddharthverma314\\cryptopals"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\siddharthverma314\cryptopals'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\siddharthverma314\\cryptopals" "work\\ex\\default\\sources\\stable\\gh\\siddharthverma314\\cryptopals"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\siddharthverma314\cryptopals'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\siddharthverma314\\cryptopals" "work\\ex\\default\\sources\\beta\\gh\\siddharthverma314\\cryptopals"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\siddharthverma314\cryptopals'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 891f95df0e847bae84ce9621269bd1ba38cd3e31
+[INFO] sha for GitHub repo siddharthverma314/cryptopals: 891f95df0e847bae84ce9621269bd1ba38cd3e31
+[INFO] validating manifest of siddharthverma314/cryptopals on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of siddharthverma314/cryptopals on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing siddharthverma314/cryptopals
+[INFO] finished frobbing siddharthverma314/cryptopals
+[INFO] frobbed toml for siddharthverma314/cryptopals written to work\ex\default\sources\stable\gh\siddharthverma314\cryptopals\Cargo.toml
+[INFO] started frobbing siddharthverma314/cryptopals
+[INFO] finished frobbing siddharthverma314/cryptopals
+[INFO] frobbed toml for siddharthverma314/cryptopals written to work\ex\default\sources\beta\gh\siddharthverma314\cryptopals\Cargo.toml
+[INFO] crate siddharthverma314/cryptopals already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rayon v1.0.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing siddharthverma314/cryptopals against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\siddharthverma314\\cryptopals,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 50c133a61f0e3071dfbf4b4338ed324b61c47f41986650aaa5985d2d33f0157f
+[INFO] running `"docker" "start" "-a" "50c133a61f0e3071dfbf4b4338ed324b61c47f41986650aaa5985d2d33f0157f"`
+[INFO] [stderr]    Compiling semver-parser v0.7.0
+[INFO] [stderr]    Compiling arrayvec v0.4.10
+[INFO] [stderr]    Compiling libc v0.2.45
+[INFO] [stderr]    Compiling cfg-if v0.1.6
+[INFO] [stderr]    Compiling nodrop v0.1.13
+[INFO] [stderr]    Compiling scopeguard v0.3.3
+[INFO] [stderr]    Compiling memoffset v0.2.1
+[INFO] [stderr]    Compiling lazy_static v1.2.0
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling rayon v1.0.3
+[INFO] [stderr]    Compiling rand_core v0.3.0
+[INFO] [stderr]    Compiling either v1.5.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling semver v0.9.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.0
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rustc_version v0.2.3
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling num_cpus v1.9.0
+[INFO] [stderr]    Compiling rand_chacha v0.1.0
+[INFO] [stderr]    Compiling rand_pcg v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.1
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling cryptopal v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0423]: expected function, found macro `assert_eq`
+[INFO] [stderr]    --> src\aes.rs:117:9
+[INFO] [stderr]     |
+[INFO] [stderr] 117 |         assert_eq(mat.len(), 16);
+[INFO] [stderr]     |         ^^^^^^^^^ help: use `!` to invoke the macro: `assert_eq!`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\aes.rs:119:9
+[INFO] [stderr]     |
+[INFO] [stderr] 116 |       pub fn mix_columns(mut self, mat: &[u8]) -> AesBuf {
+[INFO] [stderr]     |                                                   ------ expected `aes::AesBuf` because of return type
+[INFO] [stderr] ...
+[INFO] [stderr] 119 | /         for c in 0..self.nb {
+[INFO] [stderr] 120 | |             for r in 0..4 {
+[INFO] [stderr] 121 | |                 let mut elem = 0;
+[INFO] [stderr] 122 | |                 for i in 0..4 {
+[INFO] [stderr] ...   |
+[INFO] [stderr] 125 | |             }
+[INFO] [stderr] 126 | |         }
+[INFO] [stderr]     | |_________^ expected struct `aes::AesBuf`, found ()
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `aes::AesBuf`
+[INFO] [stderr]                found type `()`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0308, E0423.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `cryptopal`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "50c133a61f0e3071dfbf4b4338ed324b61c47f41986650aaa5985d2d33f0157f"`
+[INFO] running `"docker" "rm" "-f" "50c133a61f0e3071dfbf4b4338ed324b61c47f41986650aaa5985d2d33f0157f"`
+[INFO] [stdout] 50c133a61f0e3071dfbf4b4338ed324b61c47f41986650aaa5985d2d33f0157f

@@ -1,0 +1,227 @@
+[INFO] fetching crate chrono 0.4.7...
+[INFO] extracting crate chrono 0.4.7 into work\ex\default\sources\stable\reg\chrono\0.4.7
+[INFO] extracting crate chrono 0.4.7 into work\ex\default\sources\beta\reg\chrono\0.4.7
+[INFO] validating manifest of chrono-0.4.7 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of chrono-0.4.7 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing chrono-0.4.7
+[INFO] finished frobbing chrono-0.4.7
+[INFO] frobbed toml for chrono-0.4.7 written to work\ex\default\sources\stable\reg\chrono\0.4.7\Cargo.toml
+[INFO] started frobbing chrono-0.4.7
+[INFO] finished frobbing chrono-0.4.7
+[INFO] frobbed toml for chrono-0.4.7 written to work\ex\default\sources\beta\reg\chrono\0.4.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bincode v0.8.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing chrono-0.4.7 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0842846a424d722b58cbf6c1f44c5758ea5cbb6fe1780b4acee6fc2871aae130
+[INFO] running `"docker" "start" "-a" "0842846a424d722b58cbf6c1f44c5758ea5cbb6fe1780b4acee6fc2871aae130"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.4.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 31.65s
+[INFO] running `"docker" "inspect" "0842846a424d722b58cbf6c1f44c5758ea5cbb6fe1780b4acee6fc2871aae130"`
+[INFO] running `"docker" "rm" "-f" "0842846a424d722b58cbf6c1f44c5758ea5cbb6fe1780b4acee6fc2871aae130"`
+[INFO] [stdout] 0842846a424d722b58cbf6c1f44c5758ea5cbb6fe1780b4acee6fc2871aae130
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5371e1747fdde5861247d7d0ef6d74ab046a44f40ebdb9b7ac2ac1eaac58a918
+[INFO] running `"docker" "start" "-a" "5371e1747fdde5861247d7d0ef6d74ab046a44f40ebdb9b7ac2ac1eaac58a918"`
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling bincode v0.8.0
+[INFO] [stderr]    Compiling chrono v0.4.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 32.70s
+[INFO] running `"docker" "inspect" "5371e1747fdde5861247d7d0ef6d74ab046a44f40ebdb9b7ac2ac1eaac58a918"`
+[INFO] running `"docker" "rm" "-f" "5371e1747fdde5861247d7d0ef6d74ab046a44f40ebdb9b7ac2ac1eaac58a918"`
+[INFO] [stdout] 5371e1747fdde5861247d7d0ef6d74ab046a44f40ebdb9b7ac2ac1eaac58a918
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 75fb0207a9c6badf28eb30a95c329e35ad7b3c8fe7b05374646160cdc78b4932
+[INFO] running `"docker" "start" "-a" "75fb0207a9c6badf28eb30a95c329e35ad7b3c8fe7b05374646160cdc78b4932"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\chrono-8630bf15fab25a36.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 97 tests
+[INFO] [stdout] test datetime::test_auto_conversion ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_date_and_time ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_format_with_local ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_from_str ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_is_copy ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_offset ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_parse_from_str ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_is_send ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_rfc2822_and_rfc3339 ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_with_timezone ... ok
+[INFO] [stdout] test datetime::tests::test_rfc3339_opts ... ok
+[INFO] [stdout] test datetime::tests::test_subsecond_part ... ok
+[INFO] [stdout] test div::tests::test_div_mod_floor ... ok
+[INFO] [stdout] test datetime::tests::test_from_system_time ... FAILED
+[INFO] [stdout] test div::tests::test_mod_floor ... ok
+[INFO] [stdout] test format::parse::parse_rfc850 ... ok
+[INFO] [stdout] test format::parse::test_parse ... ok
+[INFO] [stdout] test format::parse::test_rfc2822 ... ok
+[INFO] [stdout] test datetime::tests::test_rfc3339_opts_nonexhaustive ... ok
+[INFO] [stdout] test format::parse::test_rfc3339 ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_set_fields ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_datetime ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_datetime_with_timezone ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_date ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_datetime_with_offset ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_time ... ok
+[INFO] [stdout] test format::strftime::test_strftime_docs ... ok
+[INFO] [stdout] test format::strftime::test_strftime_items ... ok
+[INFO] [stdout] test naive::date::test_date_bounds ... ok
+[INFO] [stdout] test naive::date::tests::test_date_addassignment ... ok
+[INFO] [stdout] test naive::date::tests::test_date_add ... ok
+[INFO] [stdout] test naive::date::tests::test_date_fmt ... ok
+[INFO] [stdout] test naive::date::tests::test_date_fields ... ok
+[INFO] [stdout] test naive::date::tests::test_date_format ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_isoywd ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_num_days_from_ce ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_str ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_ymd ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_yo ... ok
+[INFO] [stdout] test naive::date::tests::test_date_num_days_from_ce ... ok
+[INFO] [stdout] test naive::date::tests::test_date_parse_from_str ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_isoywd_and_iso_week ... ok
+[INFO] [stdout] test naive::date::tests::test_date_pred ... ok
+[INFO] [stdout] test naive::date::tests::test_date_sub ... ok
+[INFO] [stdout] test naive::date::tests::test_date_subassignment ... ok
+[INFO] [stdout] test naive::date::tests::test_date_succ ... ok
+[INFO] [stdout] test naive::date::tests::test_date_weekday ... ok
+[INFO] [stdout] test naive::date::tests::test_date_with_fields ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_add ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_add_sub_invariant ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_addassignment ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_format ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_from_str ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_from_timestamp ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_parse_from_str ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_sub ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_subassignment ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_timestamp ... ok
+[INFO] [stdout] test naive::datetime::tests::test_nanosecond_range ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_to_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_to_of_to_mdf ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_valid ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_with_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_isoweekdate_raw ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_to_mdf ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_to_mdf_to_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_weekday ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_with_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_year_flags_ndays_from_year ... ok
+[INFO] [stdout] test naive::internals::tests::test_year_flags_nisoweeks ... ok
+[INFO] [stdout] test naive::isoweek::tests::test_iso_week_extremes ... ok
+[INFO] [stdout] test naive::time::tests::test_date_from_str ... ok
+[INFO] [stdout] test naive::time::tests::test_time_addassignment ... ok
+[INFO] [stdout] test naive::time::tests::test_time_add ... ok
+[INFO] [stdout] test naive::time::tests::test_time_fmt ... ok
+[INFO] [stdout] test naive::time::tests::test_time_format ... ok
+[INFO] [stdout] test naive::time::tests::test_time_from_hms_micro ... ok
+[INFO] [stdout] test naive::time::tests::test_time_from_hms_milli ... ok
+[INFO] [stdout] test naive::time::tests::test_time_hms ... ok
+[INFO] [stdout] test naive::time::tests::test_time_overflowing_add ... ok
+[INFO] [stdout] test naive::time::tests::test_time_parse_from_str ... ok
+[INFO] [stdout] test naive::time::tests::test_time_sub ... ok
+[INFO] [stdout] test naive::time::tests::test_time_subassignment ... ok
+[INFO] [stdout] test offset::fixed::tests::test_date_extreme_offset ... ok
+[INFO] [stdout] test offset::local::tests::test_leap_second ... ok
+[INFO] [stdout] test offset::local::tests::test_local_date_sanity_check ... ok
+[INFO] [stdout] test offset::tests::test_nanos_never_panics ... ok
+[INFO] [stdout] test offset::tests::test_negative_millis ... ok
+[INFO] [stdout] test offset::tests::test_negative_nanos ... ok
+[INFO] [stdout] test round::tests::test_round ... ok
+[INFO] [stdout] test round::tests::test_round_leap_nanos ... ok
+[INFO] [stdout] test round::tests::test_trunc ... ok
+[INFO] [stdout] test round::tests::test_trunc_leap_nanos ... ok
+[INFO] [stdout] test test_readme_doomsday ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- datetime::tests::test_from_system_time stdout ----
+[INFO] [stdout] thread 'datetime::tests::test_from_system_time' panicked at 'assertion failed: `(left == right)`
+[INFO] [stdout]   left: `2001-09-09T01:46:39.999999900Z`,
+[INFO] [stdout]  right: `2001-09-09T01:46:39.999999999Z`', src\datetime.rs:1705:9
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7f0d62a6d - std::sys::windows::backtrace::set_frames
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stdout]    1:     0x7ff7f0d62a6d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stdout]    2:     0x7ff7f0d62a6d - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stdout]    3:     0x7ff7f0d65aed - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stdout]    4:     0x7ff7f0d65aed - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stdout]    5:     0x7ff7f0d6576d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:208
+[INFO] [stdout]    6:     0x7ff7f0d6637f - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stdout]    7:     0x7ff7f0d65eb3 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stdout]    8:     0x7ff7f0d65e01 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:336
+[INFO] [stdout]    9:     0x7ff7f0ce84b9 - chrono::datetime::tests::test_from_system_time
+[INFO] [stdout]                                at C:\crater\workdir\src\datetime.rs:1705
+[INFO] [stdout]   10:     0x7ff7f0ce802d - chrono::datetime::tests::test_from_system_time::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\datetime.rs:1698
+[INFO] [stdout]   11:     0x7ff7f0c4a88a - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   12:     0x7ff7f0d0d976 - alloc::boxed::{{impl}}::call_once<(),FnBox<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   13:     0x7ff7f0d6a031 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   14:     0x7ff7f0d2cd5a - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   15:     0x7ff7f0d2cd5a - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   16:     0x7ff7f0d2cd5a - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libtest\lib.rs:1468
+[INFO] [stdout]   17:     0x7ff7f0cff71d - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\sys_common\backtrace.rs:136
+[INFO] [stdout]   18:     0x7ff7f0d0542d - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   19:     0x7ff7f0d0542d - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:315
+[INFO] [stdout]   20:     0x7ff7f0d0542d - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:293
+[INFO] [stdout]   21:     0x7ff7f0d6a031 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stdout]   22:     0x7ff7f0d05b5f - std::panicking::try
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panicking.rs:272
+[INFO] [stdout]   23:     0x7ff7f0d05b5f - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\panic.rs:394
+[INFO] [stdout]   24:     0x7ff7f0d05b5f - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   25:     0x7ff7f0d05b5f - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\ops\function.rs:231
+[INFO] [stdout]   26:     0x7ff7f0d55db6 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   27:     0x7ff7f0d68ce6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\liballoc\boxed.rs:704
+[INFO] [stdout]   28:     0x7ff7f0d68ce6 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   29:     0x7ff7f0d68ce6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   30:     0x7ffa19897973 - BaseThreadInitThunk
+[INFO] [stdout]   31:     0x7ffa4074a270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     datetime::tests::test_from_system_time
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 96 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] running `"docker" "inspect" "75fb0207a9c6badf28eb30a95c329e35ad7b3c8fe7b05374646160cdc78b4932"`
+[INFO] running `"docker" "rm" "-f" "75fb0207a9c6badf28eb30a95c329e35ad7b3c8fe7b05374646160cdc78b4932"`
+[INFO] [stdout] 75fb0207a9c6badf28eb30a95c329e35ad7b3c8fe7b05374646160cdc78b4932

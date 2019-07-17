@@ -1,0 +1,60 @@
+[INFO] fetching crate xiangyun 0.2.7...
+[INFO] extracting crate xiangyun 0.2.7 into work\ex\default\sources\nightly\reg\xiangyun\0.2.7
+[INFO] extracting crate xiangyun 0.2.7 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\xiangyun\0.2.7
+[INFO] validating manifest of xiangyun-0.2.7 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of xiangyun-0.2.7 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing xiangyun-0.2.7
+[INFO] finished frobbing xiangyun-0.2.7
+[INFO] frobbed toml for xiangyun-0.2.7 written to work\ex\default\sources\nightly\reg\xiangyun\0.2.7\Cargo.toml
+[INFO] started frobbing xiangyun-0.2.7
+[INFO] finished frobbing xiangyun-0.2.7
+[INFO] frobbed toml for xiangyun-0.2.7 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\xiangyun\0.2.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing xiangyun-0.2.7 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\xiangyun\\0.2.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e9f69f697398f6cc44a82ef8720edc7ad04372469c73d8c8d0925e06c975762e
+[INFO] running `"docker" "start" "-a" "e9f69f697398f6cc44a82ef8720edc7ad04372469c73d8c8d0925e06c975762e"`
+[INFO] [stderr]    Compiling xiangyun v0.2.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.91s
+[INFO] running `"docker" "inspect" "e9f69f697398f6cc44a82ef8720edc7ad04372469c73d8c8d0925e06c975762e"`
+[INFO] running `"docker" "rm" "-f" "e9f69f697398f6cc44a82ef8720edc7ad04372469c73d8c8d0925e06c975762e"`
+[INFO] [stdout] e9f69f697398f6cc44a82ef8720edc7ad04372469c73d8c8d0925e06c975762e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\xiangyun\\0.2.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8fea1d84e4cfdcd68af30c8234c8cb87118caf3f5cd65a79f041c6bb39169e4d
+[INFO] running `"docker" "start" "-a" "8fea1d84e4cfdcd68af30c8234c8cb87118caf3f5cd65a79f041c6bb39169e4d"`
+[INFO] [stderr]    Compiling xiangyun v0.2.7 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.58s
+[INFO] running `"docker" "inspect" "8fea1d84e4cfdcd68af30c8234c8cb87118caf3f5cd65a79f041c6bb39169e4d"`
+[INFO] running `"docker" "rm" "-f" "8fea1d84e4cfdcd68af30c8234c8cb87118caf3f5cd65a79f041c6bb39169e4d"`
+[INFO] [stdout] 8fea1d84e4cfdcd68af30c8234c8cb87118caf3f5cd65a79f041c6bb39169e4d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\xiangyun\\0.2.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 23a0afbb1a3d0f06229cc7e8cf0740f095c49ac29c2423eb1a9970e6fe900cbf
+[INFO] running `"docker" "start" "-a" "23a0afbb1a3d0f06229cc7e8cf0740f095c49ac29c2423eb1a9970e6fe900cbf"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\xiangyun-7f6c2612fc412b13.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\main-8b4df56a86ce9649.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests xiangyun
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "23a0afbb1a3d0f06229cc7e8cf0740f095c49ac29c2423eb1a9970e6fe900cbf"`
+[INFO] running `"docker" "rm" "-f" "23a0afbb1a3d0f06229cc7e8cf0740f095c49ac29c2423eb1a9970e6fe900cbf"`
+[INFO] [stdout] 23a0afbb1a3d0f06229cc7e8cf0740f095c49ac29c2423eb1a9970e6fe900cbf

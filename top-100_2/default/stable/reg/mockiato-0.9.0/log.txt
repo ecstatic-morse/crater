@@ -1,0 +1,57 @@
+[INFO] fetching crate mockiato 0.9.0...
+[INFO] extracting crate mockiato 0.9.0 into work\ex\default\sources\stable\reg\mockiato\0.9.0
+[INFO] extracting crate mockiato 0.9.0 into work\ex\default\sources\beta\reg\mockiato\0.9.0
+[INFO] validating manifest of mockiato-0.9.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mockiato-0.9.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mockiato-0.9.0
+[INFO] removed 1 missing examples
+[INFO] finished frobbing mockiato-0.9.0
+[INFO] frobbed toml for mockiato-0.9.0 written to work\ex\default\sources\stable\reg\mockiato\0.9.0\Cargo.toml
+[INFO] started frobbing mockiato-0.9.0
+[INFO] removed 1 missing examples
+[INFO] finished frobbing mockiato-0.9.0
+[INFO] frobbed toml for mockiato-0.9.0 written to work\ex\default\sources\beta\reg\mockiato\0.9.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded nearly_eq v0.2.4
+[INFO] [stderr]   Downloaded mockiato-codegen v0.9.0
+[INFO] [stderr]   Downloaded nameof v1.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mockiato-0.9.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mockiato\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 7d28cec917db33be622dd2a7d8a5d848ba7b59b1f3f94ed3f5f08f2eafae4be9
+[INFO] running `"docker" "start" "-a" "7d28cec917db33be622dd2a7d8a5d848ba7b59b1f3f94ed3f5f08f2eafae4be9"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling unicode-segmentation v1.3.0
+[INFO] [stderr]    Compiling nearly_eq v0.2.4
+[INFO] [stderr]    Compiling nameof v1.1.0
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling mockiato-codegen v0.9.0
+[INFO] [stderr]    Compiling mockiato v0.9.0 (C:\crater\workdir)
+[INFO] [stderr]    Compiling heck v0.3.1
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 03s
+[INFO] running `"docker" "inspect" "7d28cec917db33be622dd2a7d8a5d848ba7b59b1f3f94ed3f5f08f2eafae4be9"`
+[INFO] running `"docker" "rm" "-f" "7d28cec917db33be622dd2a7d8a5d848ba7b59b1f3f94ed3f5f08f2eafae4be9"`
+[INFO] [stdout] 7d28cec917db33be622dd2a7d8a5d848ba7b59b1f3f94ed3f5f08f2eafae4be9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mockiato\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f5164e9cdb43bb027123d2b149b1ac8410059d4250605092646af3772413898a
+[INFO] running `"docker" "start" "-a" "f5164e9cdb43bb027123d2b149b1ac8410059d4250605092646af3772413898a"`
+[INFO] [stderr]    Compiling mockiato v0.9.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0601]: `main` function not found in crate `downcasting`
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: consider adding a `main` function to `examples\downcasting.rs`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0601`.
+[INFO] [stderr] error: Could not compile `mockiato`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "f5164e9cdb43bb027123d2b149b1ac8410059d4250605092646af3772413898a"`
+[INFO] running `"docker" "rm" "-f" "f5164e9cdb43bb027123d2b149b1ac8410059d4250605092646af3772413898a"`
+[INFO] [stdout] f5164e9cdb43bb027123d2b149b1ac8410059d4250605092646af3772413898a

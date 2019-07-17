@@ -1,0 +1,85 @@
+[INFO] fetching crate sandstorm 0.0.9...
+[INFO] extracting crate sandstorm 0.0.9 into work\ex\default\sources\nightly\reg\sandstorm\0.0.9
+[INFO] extracting crate sandstorm 0.0.9 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\sandstorm\0.0.9
+[INFO] validating manifest of sandstorm-0.0.9 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sandstorm-0.0.9 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sandstorm-0.0.9
+[INFO] finished frobbing sandstorm-0.0.9
+[INFO] frobbed toml for sandstorm-0.0.9 written to work\ex\default\sources\nightly\reg\sandstorm\0.0.9\Cargo.toml
+[INFO] started frobbing sandstorm-0.0.9
+[INFO] finished frobbing sandstorm-0.0.9
+[INFO] frobbed toml for sandstorm-0.0.9 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\sandstorm\0.0.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded capnpc v0.10.1
+[INFO] [stderr]   Downloaded capnp v0.10.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sandstorm-0.0.9 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\sandstorm\\0.0.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2f9368501819def6cefad6449e4ab2d0d1833ca91648d7c680670be4ffbee752
+[INFO] running `"docker" "start" "-a" "2f9368501819def6cefad6449e4ab2d0d1833ca91648d7c680670be4ffbee752"`
+[INFO] [stderr]    Compiling capnp v0.10.0
+[INFO] [stderr]    Compiling capnpc v0.10.1
+[INFO] [stderr]    Compiling sandstorm v0.0.9 (C:\crater\workdir)
+[INFO] [stderr] error: failed to run custom build command for `sandstorm v0.0.9 (C:\crater\workdir)`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\sandstorm-5c670892bee0edf3\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'compiling: Error { kind: Failed, description: "Error while trying to execute `capnp compile`: Failed: The system cannot find the file specified. (os error 2).  Please verify that version 0.5.2 or higher of the capnp executable is installed on your system. See https://capnproto.org/install.html" }', src\libcore\result.rs:1051:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff75d065ccc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff75d065ccc - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff75d06901e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff75d06901e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff75d068ca2 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff75d069790 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff75d0692c4 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff75d0691a9 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stderr]    8:     0x7ff75d07d79c - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stderr]    9:     0x7ff75d07d89f - core::result::unwrap_failed
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stderr]   10:     0x7ff75cfb9568 - core::result::Result<(), capnp::Error>::expect<(),capnp::Error>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:879
+[INFO] [stderr]   11:     0x7ff75cf92a62 - build_script_build::main
+[INFO] [stderr]                                at C:\crater\workdir\build.rs:4
+[INFO] [stderr]   12:     0x7ff75cf92f50 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   13:     0x7ff75d069197 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   14:     0x7ff75d069197 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   15:     0x7ff75d071f82 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   16:     0x7ff75d0699b2 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   17:     0x7ff75d0699b2 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff75d0699b2 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   19:     0x7ff75cf92f2b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   20:     0x7ff75cf92ad0 - main
+[INFO] [stderr]   21:     0x7ff75d084be8 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   22:     0x7ff75d084be8 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   23:     0x7ff999a67974 - BaseThreadInitThunk
+[INFO] [stderr]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] running `"docker" "inspect" "2f9368501819def6cefad6449e4ab2d0d1833ca91648d7c680670be4ffbee752"`
+[INFO] running `"docker" "rm" "-f" "2f9368501819def6cefad6449e4ab2d0d1833ca91648d7c680670be4ffbee752"`
+[INFO] [stdout] 2f9368501819def6cefad6449e4ab2d0d1833ca91648d7c680670be4ffbee752

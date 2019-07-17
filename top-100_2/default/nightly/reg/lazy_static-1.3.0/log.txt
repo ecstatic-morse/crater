@@ -1,0 +1,79 @@
+[INFO] crate lazy_static 1.3.0 is already in cache
+[INFO] extracting crate lazy_static 1.3.0 into work\ex\default\sources\nightly\reg\lazy_static\1.3.0
+[INFO] extracting crate lazy_static 1.3.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\lazy_static\1.3.0
+[INFO] validating manifest of lazy_static-1.3.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of lazy_static-1.3.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing lazy_static-1.3.0
+[INFO] finished frobbing lazy_static-1.3.0
+[INFO] frobbed toml for lazy_static-1.3.0 written to work\ex\default\sources\nightly\reg\lazy_static\1.3.0\Cargo.toml
+[INFO] started frobbing lazy_static-1.3.0
+[INFO] finished frobbing lazy_static-1.3.0
+[INFO] frobbed toml for lazy_static-1.3.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\lazy_static\1.3.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing lazy_static-1.3.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\lazy_static\\1.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] db8a5db4122895cc5a99270f3a86d05a7796d2d8aad39d62f7eab58683a378c9
+[INFO] running `"docker" "start" "-a" "db8a5db4122895cc5a99270f3a86d05a7796d2d8aad39d62f7eab58683a378c9"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling lazy_static v1.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.79s
+[INFO] running `"docker" "inspect" "db8a5db4122895cc5a99270f3a86d05a7796d2d8aad39d62f7eab58683a378c9"`
+[INFO] running `"docker" "rm" "-f" "db8a5db4122895cc5a99270f3a86d05a7796d2d8aad39d62f7eab58683a378c9"`
+[INFO] [stdout] db8a5db4122895cc5a99270f3a86d05a7796d2d8aad39d62f7eab58683a378c9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\lazy_static\\1.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] da573864d72e0638adb980a7c7eb763c78804a066b046525f2e30da9c04099df
+[INFO] running `"docker" "start" "-a" "da573864d72e0638adb980a7c7eb763c78804a066b046525f2e30da9c04099df"`
+[INFO] [stderr]    Compiling lazy_static v1.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.87s
+[INFO] running `"docker" "inspect" "da573864d72e0638adb980a7c7eb763c78804a066b046525f2e30da9c04099df"`
+[INFO] running `"docker" "rm" "-f" "da573864d72e0638adb980a7c7eb763c78804a066b046525f2e30da9c04099df"`
+[INFO] [stdout] da573864d72e0638adb980a7c7eb763c78804a066b046525f2e30da9c04099df
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\lazy_static\\1.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] bf6a1293ef749d1bc438197eeff72701bbd5b4f2b40828180ef0d29ec2c2b65f
+[INFO] running `"docker" "start" "-a" "bf6a1293ef749d1bc438197eeff72701bbd5b4f2b40828180ef0d29ec2c2b65f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lazy_static-e77cc90c132df187.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\no_std-df01762a69c8be4f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-aae7b25c53d8f744.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test item_name_shadowing ... ok
+[INFO] [stdout] test pre_init ... ok
+[INFO] [stdout] test lifetime_name ... ok
+[INFO] [stdout] test s3 ... ok
+[INFO] [stdout] test test_basic ... ok
+[INFO] [stdout] test test_meta ... ok
+[INFO] [stdout] test test_repeat ... ok
+[INFO] [stdout] test test_visibility ... ok
+[INFO] [stdout] test visibility::sub_test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests lazy_static
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test src\lib.rs -  (line 17) ... ignored
+[INFO] [stdout] test src\lib.rs - initialize (line 193) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 59) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 28) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "bf6a1293ef749d1bc438197eeff72701bbd5b4f2b40828180ef0d29ec2c2b65f"`
+[INFO] running `"docker" "rm" "-f" "bf6a1293ef749d1bc438197eeff72701bbd5b4f2b40828180ef0d29ec2c2b65f"`
+[INFO] [stdout] bf6a1293ef749d1bc438197eeff72701bbd5b4f2b40828180ef0d29ec2c2b65f

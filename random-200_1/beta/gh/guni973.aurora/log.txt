@@ -1,0 +1,145 @@
+[INFO] cloning repository guni973/aurora
+[INFO] running `"git" "clone" "--bare" "git://github.com/guni973/aurora.git" "work\\cache\\sources\\gh\\guni973\\aurora"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\guni973\aurora'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guni973\\aurora" "work\\ex\\default\\sources\\stable\\gh\\guni973\\aurora"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\guni973\aurora'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\guni973\\aurora" "work\\ex\\default\\sources\\beta\\gh\\guni973\\aurora"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\guni973\aurora'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3c39a833b6afad0459b9b018efffd92d3947e183
+[INFO] sha for GitHub repo guni973/aurora: 3c39a833b6afad0459b9b018efffd92d3947e183
+[INFO] validating manifest of guni973/aurora on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of guni973/aurora on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing guni973/aurora
+[INFO] finished frobbing guni973/aurora
+[INFO] frobbed toml for guni973/aurora written to work\ex\default\sources\stable\gh\guni973\aurora\Cargo.toml
+[INFO] started frobbing guni973/aurora
+[INFO] finished frobbing guni973/aurora
+[INFO] frobbed toml for guni973/aurora written to work\ex\default\sources\beta\gh\guni973\aurora\Cargo.toml
+[INFO] crate guni973/aurora already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde v1.0.86
+[INFO] [stderr]   Downloaded reqwest v0.9.9
+[INFO] [stderr]   Downloaded fuchsia-cprng v0.1.0
+[INFO] [stderr]   Downloaded rand_jitter v0.1.2
+[INFO] [stderr]   Downloaded tokio-timer v0.2.9
+[INFO] [stderr]   Downloaded security-framework-sys v0.2.3
+[INFO] [stderr]   Downloaded MacTypes-sys v2.1.0
+[INFO] [stderr]   Downloaded security-framework v0.2.2
+[INFO] [stderr]   Downloaded openssl-sys v0.9.40
+[INFO] [stderr]   Downloaded openssl v0.10.16
+[INFO] [stderr]   Downloaded hyper v0.12.23
+[INFO] [stderr]   Downloaded encoding_rs v0.8.15
+[INFO] [stderr]   Downloaded serde_derive v1.0.86
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing guni973/aurora against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\guni973\\aurora,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] f9c4781346e4eb2a859cce2327bed64b539dbe316694b1a4a79595583e304a35
+[INFO] running `"docker" "start" "-a" "f9c4781346e4eb2a859cce2327bed64b539dbe316694b1a4a79595583e304a35"`
+[INFO] [stderr]    Compiling autocfg v0.1.2
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling rand_core v0.4.0
+[INFO] [stderr]    Compiling libc v0.2.48
+[INFO] [stderr]    Compiling byteorder v1.3.1
+[INFO] [stderr]    Compiling lazycell v1.2.1
+[INFO] [stderr]    Compiling slab v0.4.2
+[INFO] [stderr]    Compiling proc-macro2 v0.4.27
+[INFO] [stderr]    Compiling string v0.1.3
+[INFO] [stderr]    Compiling serde v1.0.86
+[INFO] [stderr]    Compiling crc32fast v1.1.2
+[INFO] [stderr]    Compiling encoding_rs v0.8.15
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling strsim v0.7.0
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling owning_ref v0.4.0
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling textwrap v0.10.0
+[INFO] [stderr]    Compiling smallvec v0.6.8
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling lock_api v0.1.5
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling tokio-executor v0.1.6
+[INFO] [stderr]    Compiling num_cpus v1.9.0
+[INFO] [stderr]    Compiling bytes v0.4.11
+[INFO] [stderr]    Compiling base64 v0.10.1
+[INFO] [stderr]    Compiling phf_shared v0.7.24
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling quote v0.6.11
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling rand_os v0.1.2
+[INFO] [stderr]    Compiling rand_jitter v0.1.2
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling schannel v0.1.14
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling tokio-timer v0.2.9
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.4
+[INFO] [stderr]    Compiling libflate v0.1.19
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling rand_pcg v0.1.1
+[INFO] [stderr]    Compiling phf v0.7.24
+[INFO] [stderr]    Compiling tokio-io v0.1.11
+[INFO] [stderr]    Compiling http v0.1.15
+[INFO] [stderr]    Compiling syn v0.15.26
+[INFO] [stderr]    Compiling serde_json v1.0.38
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling clap v2.32.0
+[INFO] [stderr]    Compiling native-tls v0.2.2
+[INFO] [stderr]    Compiling mio v0.6.16
+[INFO] [stderr]    Compiling h2 v0.1.16
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.4
+[INFO] [stderr]    Compiling serde_derive v1.0.86
+[INFO] [stderr]    Compiling phf_generator v0.7.24
+[INFO] [stderr]    Compiling uuid v0.7.2
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling phf_codegen v0.7.24
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.6
+[INFO] [stderr]    Compiling crossbeam v0.6.0
+[INFO] [stderr]    Compiling tokio-reactor v0.1.8
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.11
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio v0.1.15
+[INFO] [stderr]    Compiling hyper v0.12.23
+[INFO] [stderr]    Compiling hyper-tls v0.3.1
+[INFO] [stderr]    Compiling reqwest v0.9.9
+[INFO] [stderr]    Compiling aurora v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4m 25s
+[INFO] running `"docker" "inspect" "f9c4781346e4eb2a859cce2327bed64b539dbe316694b1a4a79595583e304a35"`
+[INFO] running `"docker" "rm" "-f" "f9c4781346e4eb2a859cce2327bed64b539dbe316694b1a4a79595583e304a35"`
+[INFO] [stdout] f9c4781346e4eb2a859cce2327bed64b539dbe316694b1a4a79595583e304a35
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\guni973\\aurora,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c9b0d81260ecf99c5a9341acaf278f2130e692afd15a6ab151a9d433058c0dba
+[INFO] running `"docker" "start" "-a" "c9b0d81260ecf99c5a9341acaf278f2130e692afd15a6ab151a9d433058c0dba"`
+[INFO] [stderr]    Compiling aurora v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.01s
+[INFO] running `"docker" "inspect" "c9b0d81260ecf99c5a9341acaf278f2130e692afd15a6ab151a9d433058c0dba"`
+[INFO] running `"docker" "rm" "-f" "c9b0d81260ecf99c5a9341acaf278f2130e692afd15a6ab151a9d433058c0dba"`
+[INFO] [stdout] c9b0d81260ecf99c5a9341acaf278f2130e692afd15a6ab151a9d433058c0dba
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\guni973\\aurora,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 0d838664277e64a6c6f8f65cfe52534a9191178997f6db1cc002cdee28d498be
+[INFO] running `"docker" "start" "-a" "0d838664277e64a6c6f8f65cfe52534a9191178997f6db1cc002cdee28d498be"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.55s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\aurora-f00867e0809ef848.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0d838664277e64a6c6f8f65cfe52534a9191178997f6db1cc002cdee28d498be"`
+[INFO] running `"docker" "rm" "-f" "0d838664277e64a6c6f8f65cfe52534a9191178997f6db1cc002cdee28d498be"`
+[INFO] [stdout] 0d838664277e64a6c6f8f65cfe52534a9191178997f6db1cc002cdee28d498be

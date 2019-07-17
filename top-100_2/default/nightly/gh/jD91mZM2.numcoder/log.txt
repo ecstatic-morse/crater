@@ -1,0 +1,72 @@
+[INFO] cloning repository jD91mZM2/numcoder
+[INFO] running `"git" "clone" "--bare" "git://github.com/jD91mZM2/numcoder.git" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jD91mZM2\numcoder'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder" "work\\ex\\default\\sources\\nightly\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\jD91mZM2\numcoder'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jD91mZM2\numcoder'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 205e135c9a3f4f1f8a19df86b337ba0638fd67dc
+[INFO] sha for GitHub repo jD91mZM2/numcoder: 205e135c9a3f4f1f8a19df86b337ba0638fd67dc
+[INFO] validating manifest of jD91mZM2/numcoder on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jD91mZM2/numcoder on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jD91mZM2/numcoder
+[INFO] finished frobbing jD91mZM2/numcoder
+[INFO] frobbed toml for jD91mZM2/numcoder written to work\ex\default\sources\nightly\gh\jD91mZM2\numcoder\Cargo.toml
+[INFO] started frobbing jD91mZM2/numcoder
+[INFO] finished frobbing jD91mZM2/numcoder
+[INFO] frobbed toml for jD91mZM2/numcoder written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jD91mZM2\numcoder\Cargo.toml
+[INFO] crate jD91mZM2/numcoder already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded num v0.1.37
+[INFO] [stderr]   Downloaded num-bigint v0.1.37
+[INFO] [stderr]   Downloaded num-complex v0.1.37
+[INFO] [stderr]   Downloaded num-rational v0.1.36
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing jD91mZM2/numcoder against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 88bd55beb812323887dcba47eb05aa726e762eb973ae03a89cc5610d3c458ea7
+[INFO] running `"docker" "start" "-a" "88bd55beb812323887dcba47eb05aa726e762eb973ae03a89cc5610d3c458ea7"`
+[INFO] [stderr]    Compiling num-traits v0.1.37
+[INFO] [stderr]    Compiling libc v0.2.23
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling rand v0.3.15
+[INFO] [stderr]    Compiling num-integer v0.1.34
+[INFO] [stderr]    Compiling num-iter v0.1.33
+[INFO] [stderr]    Compiling num-bigint v0.1.37
+[INFO] [stderr]    Compiling num-complex v0.1.37
+[INFO] [stderr]    Compiling num-rational v0.1.36
+[INFO] [stderr]    Compiling num v0.1.37
+[INFO] [stderr]    Compiling numcoder v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.71s
+[INFO] running `"docker" "inspect" "88bd55beb812323887dcba47eb05aa726e762eb973ae03a89cc5610d3c458ea7"`
+[INFO] running `"docker" "rm" "-f" "88bd55beb812323887dcba47eb05aa726e762eb973ae03a89cc5610d3c458ea7"`
+[INFO] [stdout] 88bd55beb812323887dcba47eb05aa726e762eb973ae03a89cc5610d3c458ea7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ba2d7a8470902c42ac64819c07ff199fcb42bf28d5f1efe023576629ee50f6b5
+[INFO] running `"docker" "start" "-a" "ba2d7a8470902c42ac64819c07ff199fcb42bf28d5f1efe023576629ee50f6b5"`
+[INFO] [stderr]    Compiling numcoder v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.16s
+[INFO] running `"docker" "inspect" "ba2d7a8470902c42ac64819c07ff199fcb42bf28d5f1efe023576629ee50f6b5"`
+[INFO] running `"docker" "rm" "-f" "ba2d7a8470902c42ac64819c07ff199fcb42bf28d5f1efe023576629ee50f6b5"`
+[INFO] [stdout] ba2d7a8470902c42ac64819c07ff199fcb42bf28d5f1efe023576629ee50f6b5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 33abd556c9ad43352eb1ef525a6c12163f41cf1031d2ade0c8261357e6c442ff
+[INFO] running `"docker" "start" "-a" "33abd556c9ad43352eb1ef525a6c12163f41cf1031d2ade0c8261357e6c442ff"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\numcoder-22230ad05c531b90.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "33abd556c9ad43352eb1ef525a6c12163f41cf1031d2ade0c8261357e6c442ff"`
+[INFO] running `"docker" "rm" "-f" "33abd556c9ad43352eb1ef525a6c12163f41cf1031d2ade0c8261357e6c442ff"`
+[INFO] [stdout] 33abd556c9ad43352eb1ef525a6c12163f41cf1031d2ade0c8261357e6c442ff

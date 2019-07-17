@@ -1,0 +1,71 @@
+[INFO] cloning repository jD91mZM2/numcoder
+[INFO] running `"git" "clone" "--bare" "git://github.com/jD91mZM2/numcoder.git" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jD91mZM2\numcoder'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder" "work\\ex\\default\\sources\\nightly\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\jD91mZM2\numcoder'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jD91mZM2\\numcoder" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jD91mZM2\\numcoder"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jD91mZM2\numcoder'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 205e135c9a3f4f1f8a19df86b337ba0638fd67dc
+[INFO] sha for GitHub repo jD91mZM2/numcoder: 205e135c9a3f4f1f8a19df86b337ba0638fd67dc
+[INFO] validating manifest of jD91mZM2/numcoder on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jD91mZM2/numcoder on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jD91mZM2/numcoder
+[INFO] finished frobbing jD91mZM2/numcoder
+[INFO] frobbed toml for jD91mZM2/numcoder written to work\ex\default\sources\nightly\gh\jD91mZM2\numcoder\Cargo.toml
+[INFO] started frobbing jD91mZM2/numcoder
+[INFO] finished frobbing jD91mZM2/numcoder
+[INFO] frobbed toml for jD91mZM2/numcoder written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jD91mZM2\numcoder\Cargo.toml
+[INFO] crate jD91mZM2/numcoder already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded num v0.1.37
+[INFO] [stderr]   Downloaded num-bigint v0.1.37
+[INFO] [stderr]   Downloaded num-complex v0.1.37
+[INFO] [stderr]   Downloaded num-rational v0.1.36
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing jD91mZM2/numcoder against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c91ccade2a8b1913489ebfd76a2a922908b1e373a38665c4430cf28275d814ee
+[INFO] running `"docker" "start" "-a" "c91ccade2a8b1913489ebfd76a2a922908b1e373a38665c4430cf28275d814ee"`
+[INFO] [stderr]    Compiling libc v0.2.23
+[INFO] [stderr]    Compiling num-traits v0.1.37
+[INFO] [stderr]    Compiling rand v0.3.15
+[INFO] [stderr]    Compiling num-integer v0.1.34
+[INFO] [stderr]    Compiling num-complex v0.1.37
+[INFO] [stderr]    Compiling num-iter v0.1.33
+[INFO] [stderr]    Compiling num-bigint v0.1.37
+[INFO] [stderr]    Compiling num-rational v0.1.36
+[INFO] [stderr]    Compiling num v0.1.37
+[INFO] [stderr]    Compiling numcoder v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.37s
+[INFO] running `"docker" "inspect" "c91ccade2a8b1913489ebfd76a2a922908b1e373a38665c4430cf28275d814ee"`
+[INFO] running `"docker" "rm" "-f" "c91ccade2a8b1913489ebfd76a2a922908b1e373a38665c4430cf28275d814ee"`
+[INFO] [stdout] c91ccade2a8b1913489ebfd76a2a922908b1e373a38665c4430cf28275d814ee
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 55498ce39fed3648f8126be956e4d8b428fe85aafb2675757b58540229a03477
+[INFO] running `"docker" "start" "-a" "55498ce39fed3648f8126be956e4d8b428fe85aafb2675757b58540229a03477"`
+[INFO] [stderr]    Compiling numcoder v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.09s
+[INFO] running `"docker" "inspect" "55498ce39fed3648f8126be956e4d8b428fe85aafb2675757b58540229a03477"`
+[INFO] running `"docker" "rm" "-f" "55498ce39fed3648f8126be956e4d8b428fe85aafb2675757b58540229a03477"`
+[INFO] [stdout] 55498ce39fed3648f8126be956e4d8b428fe85aafb2675757b58540229a03477
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jD91mZM2\\numcoder,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 9bc89d3b9e56d8db93271c32cb559dc35c4475a9378ce8eaf68357f1f997b37a
+[INFO] running `"docker" "start" "-a" "9bc89d3b9e56d8db93271c32cb559dc35c4475a9378ce8eaf68357f1f997b37a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\numcoder-d9b2833e6dfb0123.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9bc89d3b9e56d8db93271c32cb559dc35c4475a9378ce8eaf68357f1f997b37a"`
+[INFO] running `"docker" "rm" "-f" "9bc89d3b9e56d8db93271c32cb559dc35c4475a9378ce8eaf68357f1f997b37a"`
+[INFO] [stdout] 9bc89d3b9e56d8db93271c32cb559dc35c4475a9378ce8eaf68357f1f997b37a

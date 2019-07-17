@@ -1,0 +1,55 @@
+[INFO] cloning repository makoki13/satrapia_rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/makoki13/satrapia_rust.git" "work\\cache\\sources\\gh\\makoki13\\satrapia_rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\makoki13\satrapia_rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\makoki13\\satrapia_rust" "work\\ex\\default\\sources\\nightly\\gh\\makoki13\\satrapia_rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\makoki13\satrapia_rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\makoki13\\satrapia_rust" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\makoki13\\satrapia_rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\makoki13\satrapia_rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a5199d84f0380c9b1173627909deec14dd0efccd
+[INFO] sha for GitHub repo makoki13/satrapia_rust: a5199d84f0380c9b1173627909deec14dd0efccd
+[INFO] validating manifest of makoki13/satrapia_rust on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of makoki13/satrapia_rust on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing makoki13/satrapia_rust
+[INFO] finished frobbing makoki13/satrapia_rust
+[INFO] frobbed toml for makoki13/satrapia_rust written to work\ex\default\sources\nightly\gh\makoki13\satrapia_rust\Cargo.toml
+[INFO] started frobbing makoki13/satrapia_rust
+[INFO] finished frobbing makoki13/satrapia_rust
+[INFO] frobbed toml for makoki13/satrapia_rust written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\makoki13\satrapia_rust\Cargo.toml
+[INFO] crate makoki13/satrapia_rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing makoki13/satrapia_rust against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\makoki13\\satrapia_rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5139efa6e82dc3df1e6f8390fd6a440140a1492b435d14ed4bbf2d10a09bab02
+[INFO] running `"docker" "start" "-a" "5139efa6e82dc3df1e6f8390fd6a440140a1492b435d14ed4bbf2d10a09bab02"`
+[INFO] [stderr]    Compiling satrapia v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.83s
+[INFO] running `"docker" "inspect" "5139efa6e82dc3df1e6f8390fd6a440140a1492b435d14ed4bbf2d10a09bab02"`
+[INFO] running `"docker" "rm" "-f" "5139efa6e82dc3df1e6f8390fd6a440140a1492b435d14ed4bbf2d10a09bab02"`
+[INFO] [stdout] 5139efa6e82dc3df1e6f8390fd6a440140a1492b435d14ed4bbf2d10a09bab02
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\makoki13\\satrapia_rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ed1162a72cd422e14e00fe8602b3b1be17bee5b772b02062a2113dc6372781e1
+[INFO] running `"docker" "start" "-a" "ed1162a72cd422e14e00fe8602b3b1be17bee5b772b02062a2113dc6372781e1"`
+[INFO] [stderr]    Compiling satrapia v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.32s
+[INFO] running `"docker" "inspect" "ed1162a72cd422e14e00fe8602b3b1be17bee5b772b02062a2113dc6372781e1"`
+[INFO] running `"docker" "rm" "-f" "ed1162a72cd422e14e00fe8602b3b1be17bee5b772b02062a2113dc6372781e1"`
+[INFO] [stdout] ed1162a72cd422e14e00fe8602b3b1be17bee5b772b02062a2113dc6372781e1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\makoki13\\satrapia_rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 824bd69be085b7cf9ee670e133b815f6d6b4efdf0851e0ce9e284d23f1d260b7
+[INFO] running `"docker" "start" "-a" "824bd69be085b7cf9ee670e133b815f6d6b4efdf0851e0ce9e284d23f1d260b7"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\satrapia-27e2dfb5ae18b421.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "824bd69be085b7cf9ee670e133b815f6d6b4efdf0851e0ce9e284d23f1d260b7"`
+[INFO] running `"docker" "rm" "-f" "824bd69be085b7cf9ee670e133b815f6d6b4efdf0851e0ce9e284d23f1d260b7"`
+[INFO] [stdout] 824bd69be085b7cf9ee670e133b815f6d6b4efdf0851e0ce9e284d23f1d260b7

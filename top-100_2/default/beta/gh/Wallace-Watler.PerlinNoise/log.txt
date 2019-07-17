@@ -1,0 +1,67 @@
+[INFO] cloning repository Wallace-Watler/PerlinNoise
+[INFO] running `"git" "clone" "--bare" "git://github.com/Wallace-Watler/PerlinNoise.git" "work\\cache\\sources\\gh\\Wallace-Watler\\PerlinNoise"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Wallace-Watler\PerlinNoise'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Wallace-Watler\\PerlinNoise" "work\\ex\\default\\sources\\stable\\gh\\Wallace-Watler\\PerlinNoise"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Wallace-Watler\PerlinNoise'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Wallace-Watler\\PerlinNoise" "work\\ex\\default\\sources\\beta\\gh\\Wallace-Watler\\PerlinNoise"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Wallace-Watler\PerlinNoise'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f6a3f2d8322ca20e96de4d4ff9ad799e758f9541
+[INFO] sha for GitHub repo Wallace-Watler/PerlinNoise: f6a3f2d8322ca20e96de4d4ff9ad799e758f9541
+[INFO] validating manifest of Wallace-Watler/PerlinNoise on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Wallace-Watler/PerlinNoise on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Wallace-Watler/PerlinNoise
+[INFO] finished frobbing Wallace-Watler/PerlinNoise
+[INFO] frobbed toml for Wallace-Watler/PerlinNoise written to work\ex\default\sources\stable\gh\Wallace-Watler\PerlinNoise\Cargo.toml
+[INFO] started frobbing Wallace-Watler/PerlinNoise
+[INFO] finished frobbing Wallace-Watler/PerlinNoise
+[INFO] frobbed toml for Wallace-Watler/PerlinNoise written to work\ex\default\sources\beta\gh\Wallace-Watler\PerlinNoise\Cargo.toml
+[INFO] crate Wallace-Watler/PerlinNoise already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rand v0.6.0-pre.0
+[INFO] [stderr]   Downloaded rand_hc128 v0.1.0
+[INFO] [stderr]   Downloaded rand_isaac v0.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing Wallace-Watler/PerlinNoise against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Wallace-Watler\\PerlinNoise,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 8e2dea54f70186279f4e7f241e73c6eb2b4a9f62eee1382175ee4bd7b5e53ca1
+[INFO] running `"docker" "start" "-a" "8e2dea54f70186279f4e7f241e73c6eb2b4a9f62eee1382175ee4bd7b5e53ca1"`
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling rand_isaac v0.1.0
+[INFO] [stderr]    Compiling rand_hc128 v0.1.0
+[INFO] [stderr]    Compiling rand v0.6.0-pre.0
+[INFO] [stderr]    Compiling perlin_noise v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\main.rs:51:85
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |             let mut range_sum: Vec<f64> = self.perlin_noise_1d_iter(&domain_abs, 0, &rng);
+[INFO] [stderr]    |                                                                                     ^^^^ types differ in mutability
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `&mut rand::prelude::StdRng`
+[INFO] [stderr]               found type `&rand::prelude::StdRng`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\main.rs:53:74
+[INFO] [stderr]    |
+[INFO] [stderr] 53 |                 let range = self.perlin_noise_1d_iter(&domain_abs, iter, &rng);
+[INFO] [stderr]    |                                                                          ^^^^ types differ in mutability
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `&mut rand::prelude::StdRng`
+[INFO] [stderr]               found type `&rand::prelude::StdRng`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `perlin_noise`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "8e2dea54f70186279f4e7f241e73c6eb2b4a9f62eee1382175ee4bd7b5e53ca1"`
+[INFO] running `"docker" "rm" "-f" "8e2dea54f70186279f4e7f241e73c6eb2b4a9f62eee1382175ee4bd7b5e53ca1"`
+[INFO] [stdout] 8e2dea54f70186279f4e7f241e73c6eb2b4a9f62eee1382175ee4bd7b5e53ca1

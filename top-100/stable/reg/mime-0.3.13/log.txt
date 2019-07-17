@@ -1,0 +1,74 @@
+[INFO] fetching crate mime 0.3.13...
+[INFO] extracting crate mime 0.3.13 into work\ex\default\sources\stable\reg\mime\0.3.13
+[INFO] extracting crate mime 0.3.13 into work\ex\default\sources\beta\reg\mime\0.3.13
+[INFO] validating manifest of mime-0.3.13 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mime-0.3.13 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mime-0.3.13
+[INFO] finished frobbing mime-0.3.13
+[INFO] frobbed toml for mime-0.3.13 written to work\ex\default\sources\stable\reg\mime\0.3.13\Cargo.toml
+[INFO] started frobbing mime-0.3.13
+[INFO] finished frobbing mime-0.3.13
+[INFO] frobbed toml for mime-0.3.13 written to work\ex\default\sources\beta\reg\mime\0.3.13\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mime-0.3.13 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mime\\0.3.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] d9b861e825a8a1efe03af047e361342e75a7cd913d3e42c05909c710c1c69faa
+[INFO] running `"docker" "start" "-a" "d9b861e825a8a1efe03af047e361342e75a7cd913d3e42c05909c710c1c69faa"`
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling mime v0.3.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 16.35s
+[INFO] running `"docker" "inspect" "d9b861e825a8a1efe03af047e361342e75a7cd913d3e42c05909c710c1c69faa"`
+[INFO] running `"docker" "rm" "-f" "d9b861e825a8a1efe03af047e361342e75a7cd913d3e42c05909c710c1c69faa"`
+[INFO] [stdout] d9b861e825a8a1efe03af047e361342e75a7cd913d3e42c05909c710c1c69faa
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mime\\0.3.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ea6f7c5aef71f592bede3409087fbc2372b292f9e7cad29804a6d7f7e2760c04
+[INFO] running `"docker" "start" "-a" "ea6f7c5aef71f592bede3409087fbc2372b292f9e7cad29804a6d7f7e2760c04"`
+[INFO] [stderr]    Compiling mime v0.3.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.75s
+[INFO] running `"docker" "inspect" "ea6f7c5aef71f592bede3409087fbc2372b292f9e7cad29804a6d7f7e2760c04"`
+[INFO] running `"docker" "rm" "-f" "ea6f7c5aef71f592bede3409087fbc2372b292f9e7cad29804a6d7f7e2760c04"`
+[INFO] [stdout] ea6f7c5aef71f592bede3409087fbc2372b292f9e7cad29804a6d7f7e2760c04
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mime\\0.3.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] d5b877519834ecf0acb40f80d975112b456946798f5a7e963e098a1aa9d72578
+[INFO] running `"docker" "start" "-a" "d5b877519834ecf0acb40f80d975112b456946798f5a7e963e098a1aa9d72578"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.36s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mime-5c48993c394bf01e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test parse::test_lookup_tables ... ok
+[INFO] [stdout] test test_mimes_macro_consts ... ok
+[INFO] [stdout] test test_names_macro_consts ... ok
+[INFO] [stdout] test tests::test_case_sensitive_values ... ok
+[INFO] [stdout] test tests::test_get_param ... ok
+[INFO] [stdout] test tests::test_matching ... ok
+[INFO] [stdout] test tests::test_mime_fmt ... ok
+[INFO] [stdout] test tests::test_mime_from_str ... ok
+[INFO] [stdout] test tests::test_mime_from_str_empty_parameter_list ... ok
+[INFO] [stdout] test tests::test_name_eq ... ok
+[INFO] [stdout] test tests::test_subtype ... ok
+[INFO] [stdout] test tests::test_suffix ... ok
+[INFO] [stdout] test tests::test_type_ ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests mime
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test src\lib.rs - Mime::get_param (line 178) ... ok
+[INFO] [stdout] test src\lib.rs - Mime::subtype (line 137) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 10) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 17) ... ok
+[INFO] [stdout] test src\lib.rs - Mime::type_ (line 120) ... ok
+[INFO] [stdout] test src\lib.rs - Mime::suffix (line 157) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d5b877519834ecf0acb40f80d975112b456946798f5a7e963e098a1aa9d72578"`
+[INFO] running `"docker" "rm" "-f" "d5b877519834ecf0acb40f80d975112b456946798f5a7e963e098a1aa9d72578"`
+[INFO] [stdout] d5b877519834ecf0acb40f80d975112b456946798f5a7e963e098a1aa9d72578

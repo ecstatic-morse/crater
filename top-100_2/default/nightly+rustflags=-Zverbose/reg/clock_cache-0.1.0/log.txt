@@ -1,0 +1,68 @@
+[INFO] fetching crate clock_cache 0.1.0...
+[INFO] extracting crate clock_cache 0.1.0 into work\ex\default\sources\nightly\reg\clock_cache\0.1.0
+[INFO] extracting crate clock_cache 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\clock_cache\0.1.0
+[INFO] validating manifest of clock_cache-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of clock_cache-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing clock_cache-0.1.0
+[INFO] finished frobbing clock_cache-0.1.0
+[INFO] frobbed toml for clock_cache-0.1.0 written to work\ex\default\sources\nightly\reg\clock_cache\0.1.0\Cargo.toml
+[INFO] started frobbing clock_cache-0.1.0
+[INFO] finished frobbing clock_cache-0.1.0
+[INFO] frobbed toml for clock_cache-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\clock_cache\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing clock_cache-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\clock_cache\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 3042f437dcd9ffb120c667becbf607209afde6a92dd98a680028d30d83b5d61f
+[INFO] running `"docker" "start" "-a" "3042f437dcd9ffb120c667becbf607209afde6a92dd98a680028d30d83b5d61f"`
+[INFO] [stderr]    Compiling bit-vec v0.4.4
+[INFO] [stderr]    Compiling clock_cache v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.15s
+[INFO] running `"docker" "inspect" "3042f437dcd9ffb120c667becbf607209afde6a92dd98a680028d30d83b5d61f"`
+[INFO] running `"docker" "rm" "-f" "3042f437dcd9ffb120c667becbf607209afde6a92dd98a680028d30d83b5d61f"`
+[INFO] [stdout] 3042f437dcd9ffb120c667becbf607209afde6a92dd98a680028d30d83b5d61f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\clock_cache\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] cbc1ce3fe6049dc2ff4011a247588ec75d89d6cc2f9d0d9523c123c903cf5242
+[INFO] running `"docker" "start" "-a" "cbc1ce3fe6049dc2ff4011a247588ec75d89d6cc2f9d0d9523c123c903cf5242"`
+[INFO] [stderr]    Compiling clock_cache v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.80s
+[INFO] running `"docker" "inspect" "cbc1ce3fe6049dc2ff4011a247588ec75d89d6cc2f9d0d9523c123c903cf5242"`
+[INFO] running `"docker" "rm" "-f" "cbc1ce3fe6049dc2ff4011a247588ec75d89d6cc2f9d0d9523c123c903cf5242"`
+[INFO] [stdout] cbc1ce3fe6049dc2ff4011a247588ec75d89d6cc2f9d0d9523c123c903cf5242
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\clock_cache\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2159e23c3dce0ed65eeedf6f766c3a577c1afcd4ed1da250a68e2abb8ab2b014
+[INFO] running `"docker" "start" "-a" "2159e23c3dce0ed65eeedf6f766c3a577c1afcd4ed1da250a68e2abb8ab2b014"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\clock_cache-fe199f6811a9b877.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test tests::test_contains ... ok
+[INFO] [stdout] test tests::test_peek ... ok
+[INFO] [stdout] test tests::test_pop ... ok
+[INFO] [stdout] test tests::test_put_and_get ... ok
+[INFO] [stdout] test tests::test_put_update ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests clock_cache
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test src\lib.rs -  (line 28) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::get (line 179) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::contains (line 231) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::len (line 276) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::cap (line 298) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::new (line 105) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::pop (line 253) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::put (line 123) ... ok
+[INFO] [stdout] test src\lib.rs - ClockCache<K, V>::peek (line 208) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2159e23c3dce0ed65eeedf6f766c3a577c1afcd4ed1da250a68e2abb8ab2b014"`
+[INFO] running `"docker" "rm" "-f" "2159e23c3dce0ed65eeedf6f766c3a577c1afcd4ed1da250a68e2abb8ab2b014"`
+[INFO] [stdout] 2159e23c3dce0ed65eeedf6f766c3a577c1afcd4ed1da250a68e2abb8ab2b014

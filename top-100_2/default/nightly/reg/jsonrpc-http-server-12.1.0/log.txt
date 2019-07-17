@@ -1,0 +1,131 @@
+[INFO] fetching crate jsonrpc-http-server 12.1.0...
+[INFO] extracting crate jsonrpc-http-server 12.1.0 into work\ex\default\sources\nightly\reg\jsonrpc-http-server\12.1.0
+[INFO] extracting crate jsonrpc-http-server 12.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\jsonrpc-http-server\12.1.0
+[INFO] validating manifest of jsonrpc-http-server-12.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jsonrpc-http-server-12.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jsonrpc-http-server-12.1.0
+[INFO] finished frobbing jsonrpc-http-server-12.1.0
+[INFO] frobbed toml for jsonrpc-http-server-12.1.0 written to work\ex\default\sources\nightly\reg\jsonrpc-http-server\12.1.0\Cargo.toml
+[INFO] started frobbing jsonrpc-http-server-12.1.0
+[INFO] finished frobbing jsonrpc-http-server-12.1.0
+[INFO] frobbed toml for jsonrpc-http-server-12.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\jsonrpc-http-server\12.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded jsonrpc-server-utils v12.1.0
+[INFO] [stderr]   Downloaded globset v0.4.4
+[INFO] [stderr]   Downloaded jsonrpc-core v12.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing jsonrpc-http-server-12.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\jsonrpc-http-server\\12.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8da7c06c3011f5f4509904b58ee21550abf51a2b9d16342c47956110415dae6f
+[INFO] running `"docker" "start" "-a" "8da7c06c3011f5f4509904b58ee21550abf51a2b9d16342c47956110415dae6f"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling want v0.2.0
+[INFO] [stderr]    Compiling bstr v0.2.4
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling jsonrpc-core v12.1.0
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling h2 v0.1.25
+[INFO] [stderr]    Compiling globset v0.4.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.15
+[INFO] [stderr]    Compiling parking_lot_core v0.5.0
+[INFO] [stderr]    Compiling parking_lot v0.8.0
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling tokio-fs v0.1.6
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio v0.1.22
+[INFO] [stderr]    Compiling jsonrpc-server-utils v12.1.0
+[INFO] [stderr]    Compiling hyper v0.12.33
+[INFO] [stderr]    Compiling jsonrpc-http-server v12.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 53s
+[INFO] running `"docker" "inspect" "8da7c06c3011f5f4509904b58ee21550abf51a2b9d16342c47956110415dae6f"`
+[INFO] running `"docker" "rm" "-f" "8da7c06c3011f5f4509904b58ee21550abf51a2b9d16342c47956110415dae6f"`
+[INFO] [stdout] 8da7c06c3011f5f4509904b58ee21550abf51a2b9d16342c47956110415dae6f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\jsonrpc-http-server\\12.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 628b8e73a6752ca1213f42fbe0ba0fa214715eddf52eeeebe109a9fe7695f76f
+[INFO] running `"docker" "start" "-a" "628b8e73a6752ca1213f42fbe0ba0fa214715eddf52eeeebe109a9fe7695f76f"`
+[INFO] [stderr]    Compiling jsonrpc-http-server v12.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 47.09s
+[INFO] running `"docker" "inspect" "628b8e73a6752ca1213f42fbe0ba0fa214715eddf52eeeebe109a9fe7695f76f"`
+[INFO] running `"docker" "rm" "-f" "628b8e73a6752ca1213f42fbe0ba0fa214715eddf52eeeebe109a9fe7695f76f"`
+[INFO] [stdout] 628b8e73a6752ca1213f42fbe0ba0fa214715eddf52eeeebe109a9fe7695f76f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\jsonrpc-http-server\\12.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 6fcbc72e85663e8b3418ad7c1c224ee4fc2152099eda21bc92ce21d86c32ce15
+[INFO] running `"docker" "start" "-a" "6fcbc72e85663e8b3418ad7c1c224ee4fc2152099eda21bc92ce21d86c32ce15"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\jsonrpc_http_server-5095c353c69379e4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 46 tests
+[INFO] [stdout] test handler::test::test_case_insensitive_content_type ... ok
+[INFO] [stdout] test tests::should_add_cors_allow_origin_for_null_origin_when_all ... ok
+[INFO] [stdout] test tests::should_add_cors_allow_origin_for_null_origin ... ok
+[INFO] [stdout] test tests::should_add_cors_allow_origins ... ok
+[INFO] [stdout] test tests::should_allow_application_json_utf8 ... ok
+[INFO] [stdout] test tests::should_add_cors_max_age_headers ... ok
+[INFO] [stdout] test tests::should_allow_if_host_is_valid ... ok
+[INFO] [stdout] test tests::should_by_default_respond_valid_to_any_request_headers ... ok
+[INFO] [stdout] test tests::should_always_allow_the_bind_address ... ok
+[INFO] [stdout] test tests::should_always_allow_the_bind_address_as_localhost ... ok
+[INFO] [stdout] test tests::should_close_connection_without_keep_alive ... ok
+[INFO] [stdout] test tests::should_forbid_invalid_request_headers ... ok
+[INFO] [stdout] test tests::should_handle_async_requests_correctly ... ok
+[INFO] [stdout] test tests::should_handle_async_requests_with_immediate_response_correctly ... ok
+[INFO] [stdout] test tests::should_handle_health_endpoint ... ok
+[INFO] [stdout] test tests::should_handle_health_endpoint_failure ... ok
+[INFO] [stdout] test tests::should_handle_rest_request_with_case_insensitive_content_type ... ok
+[INFO] [stdout] test tests::should_handle_rest_request_with_params ... ok
+[INFO] [stdout] test tests::should_handle_sync_batch_requests_correctly ... ok
+[INFO] [stdout] test tests::should_handle_sync_requests_correctly ... ok
+[INFO] [stdout] test tests::should_not_add_cors_allow_origins ... ok
+[INFO] [stdout] test tests::should_not_allow_request_larger_than_max ... ok
+[INFO] [stdout] test tests::should_not_process_the_request_in_case_of_invalid_allow_origin ... ok
+[INFO] [stdout] test tests::should_not_contain_default_cors_allow_headers ... ok
+[INFO] [stdout] test tests::should_reject_invalid_hosts ... ok
+[INFO] [stdout] test tests::should_respond_configured_allowed_hosts_to_options ... ok
+[INFO] [stdout] test tests::should_reject_missing_host ... ok
+[INFO] [stdout] test tests::should_respond_invalid_if_non_allowed_header_used ... ok
+[INFO] [stdout] test tests::should_respond_valid_if_allowed_header_used ... ok
+[INFO] [stdout] test tests::should_respond_valid_if_case_insensitive_allowed_header_used ... ok
+[INFO] [stdout] test tests::should_respond_valid_on_case_mismatches_in_allowed_headers ... ok
+[INFO] [stdout] test tests::should_respond_valid_to_configured_allow_headers ... ok
+[INFO] [stdout] test tests::should_respond_valid_to_any_requested_header ... ok
+[INFO] [stdout] test tests::should_respond_valid_to_default_allowed_headers ... ok
+[INFO] [stdout] test tests::should_respond_valid_to_wildcard_if_any_header_allowed ... ok
+[INFO] [stdout] test tests::should_respond_with_close_even_if_client_wants_to_keep_alive ... ok
+[INFO] [stdout] test tests::should_return_connection_header ... ok
+[INFO] [stdout] test tests::should_return_empty_response_for_notification ... ok
+[INFO] [stdout] test tests::should_return_error_for_malformed_request ... ok
+[INFO] [stdout] test tests::should_return_error_for_malformed_request2 ... ok
+[INFO] [stdout] test tests::should_return_error_in_case_of_unsecure_rest_and_no_method ... ok
+[INFO] [stdout] test tests::should_return_method_not_allowed_for_get ... ok
+[INFO] [stdout] test tests::should_return_proper_headers_on_options ... ok
+[INFO] [stdout] test tests::should_return_method_not_found ... ok
+[INFO] [stdout] test tests::should_return_unsupported_media_type_if_not_json ... ok
+[INFO] [stdout] test tests::close_handle_makes_wait_return ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 46 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests jsonrpc-http-server
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 3) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6fcbc72e85663e8b3418ad7c1c224ee4fc2152099eda21bc92ce21d86c32ce15"`
+[INFO] running `"docker" "rm" "-f" "6fcbc72e85663e8b3418ad7c1c224ee4fc2152099eda21bc92ce21d86c32ce15"`
+[INFO] [stdout] 6fcbc72e85663e8b3418ad7c1c224ee4fc2152099eda21bc92ce21d86c32ce15

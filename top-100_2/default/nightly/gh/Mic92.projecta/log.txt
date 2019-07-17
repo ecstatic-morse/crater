@@ -1,0 +1,68 @@
+[INFO] cloning repository Mic92/projecta
+[INFO] running `"git" "clone" "--bare" "git://github.com/Mic92/projecta.git" "work\\cache\\sources\\gh\\Mic92\\projecta"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Mic92\projecta'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Mic92\\projecta" "work\\ex\\default\\sources\\nightly\\gh\\Mic92\\projecta"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\Mic92\projecta'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Mic92\\projecta" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\Mic92\\projecta"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\Mic92\projecta'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] fabc452990d932127fc91e3b6c68d3b717076a8c
+[INFO] sha for GitHub repo Mic92/projecta: fabc452990d932127fc91e3b6c68d3b717076a8c
+[INFO] validating manifest of Mic92/projecta on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Mic92/projecta on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Mic92/projecta
+[INFO] finished frobbing Mic92/projecta
+[INFO] frobbed toml for Mic92/projecta written to work\ex\default\sources\nightly\gh\Mic92\projecta\Cargo.toml
+[INFO] started frobbing Mic92/projecta
+[INFO] finished frobbing Mic92/projecta
+[INFO] frobbed toml for Mic92/projecta written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\Mic92\projecta\Cargo.toml
+[INFO] crate Mic92/projecta already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/Mic92/libb`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libc v0.2.26
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing Mic92/projecta against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\Mic92\\projecta,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6b58b3564431875dca404c48b48872a69923f50c3c517a9f67f14ff4752d764d
+[INFO] running `"docker" "start" "-a" "6b58b3564431875dca404c48b48872a69923f50c3c517a9f67f14ff4752d764d"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling cfg-if v0.1.2
+[INFO] [stderr]    Compiling libc v0.2.26
+[INFO] [stderr]    Compiling libb v0.1.0 (https://github.com/Mic92/libb#9ef6dad3)
+[INFO] [stderr]    Compiling nix v0.8.1
+[INFO] [stderr]    Compiling projecta v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.88s
+[INFO] running `"docker" "inspect" "6b58b3564431875dca404c48b48872a69923f50c3c517a9f67f14ff4752d764d"`
+[INFO] running `"docker" "rm" "-f" "6b58b3564431875dca404c48b48872a69923f50c3c517a9f67f14ff4752d764d"`
+[INFO] [stdout] 6b58b3564431875dca404c48b48872a69923f50c3c517a9f67f14ff4752d764d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\Mic92\\projecta,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ce214392544a6fe8d4a33748bcabb32078ed8c12381e3b2e50958d46d4615367
+[INFO] running `"docker" "start" "-a" "ce214392544a6fe8d4a33748bcabb32078ed8c12381e3b2e50958d46d4615367"`
+[INFO] [stderr]    Compiling projecta v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.98s
+[INFO] running `"docker" "inspect" "ce214392544a6fe8d4a33748bcabb32078ed8c12381e3b2e50958d46d4615367"`
+[INFO] running `"docker" "rm" "-f" "ce214392544a6fe8d4a33748bcabb32078ed8c12381e3b2e50958d46d4615367"`
+[INFO] [stdout] ce214392544a6fe8d4a33748bcabb32078ed8c12381e3b2e50958d46d4615367
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\Mic92\\projecta,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 43cd3ac9f1813c5584898efedc20d7ec7bb2fa6ee07aa5133dec56536123baad
+[INFO] running `"docker" "start" "-a" "43cd3ac9f1813c5584898efedc20d7ec7bb2fa6ee07aa5133dec56536123baad"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\projecta-fee225f2dd793100.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "43cd3ac9f1813c5584898efedc20d7ec7bb2fa6ee07aa5133dec56536123baad"`
+[INFO] running `"docker" "rm" "-f" "43cd3ac9f1813c5584898efedc20d7ec7bb2fa6ee07aa5133dec56536123baad"`
+[INFO] [stdout] 43cd3ac9f1813c5584898efedc20d7ec7bb2fa6ee07aa5133dec56536123baad

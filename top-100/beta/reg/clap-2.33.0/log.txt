@@ -1,0 +1,1238 @@
+[INFO] fetching crate clap 2.33.0...
+[INFO] extracting crate clap 2.33.0 into work\ex\default\sources\stable\reg\clap\2.33.0
+[INFO] extracting crate clap 2.33.0 into work\ex\default\sources\beta\reg\clap\2.33.0
+[INFO] validating manifest of clap-2.33.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of clap-2.33.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing clap-2.33.0
+[INFO] finished frobbing clap-2.33.0
+[INFO] frobbed toml for clap-2.33.0 written to work\ex\default\sources\stable\reg\clap\2.33.0\Cargo.toml
+[INFO] started frobbing clap-2.33.0
+[INFO] finished frobbing clap-2.33.0
+[INFO] frobbed toml for clap-2.33.0 written to work\ex\default\sources\beta\reg\clap\2.33.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded version-sync v0.8.1
+[INFO] [stderr]   Downloaded pulldown-cmark v0.4.1
+[INFO] [stderr]   Downloaded semver-parser v0.9.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing clap-2.33.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\clap\\2.33.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] c1ba1daa5b6ebb99997030733b11cce9e8189832751c3dd2c0c1dbbde37d0999
+[INFO] running `"docker" "start" "-a" "c1ba1daa5b6ebb99997030733b11cce9e8189832751c3dd2c0c1dbbde37d0999"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling strsim v0.8.0
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling clap v2.33.0 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\parser.rs:922:39
+[INFO] [stderr]     |
+[INFO] [stderr] 922 |                         let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]     |                                       ------------------------------------------------- in this macro invocation
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\macros.rs:958:67
+[INFO] [stderr]      |
+[INFO] [stderr] 958  |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]      | 
+[INFO] [stderr]     ::: src\app\parser.rs:1065:39
+[INFO] [stderr]      |
+[INFO] [stderr] 1065 |                         let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]      |                                       ------------------------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\macros.rs:958:67
+[INFO] [stderr]      |
+[INFO] [stderr] 958  |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]      | 
+[INFO] [stderr]     ::: src\app\parser.rs:1192:27
+[INFO] [stderr]      |
+[INFO] [stderr] 1192 |             let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]      |                           ------------------------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\parser.rs:2098:55
+[INFO] [stderr]      |
+[INFO] [stderr] 2098 |     pub fn find_any_arg(&self, name: &str) -> Option<&AnyArg<'a, 'b>> {
+[INFO] [stderr]      |                                                       ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:47:27
+[INFO] [stderr]    |
+[INFO] [stderr] 47 |     fn as_base(&self) -> &ArgWithDisplay<'b, 'c>;
+[INFO] [stderr]    |                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:53:27
+[INFO] [stderr]    |
+[INFO] [stderr] 53 |     fn as_base(&self) -> &ArgWithDisplay<'b, 'c> {
+[INFO] [stderr]    |                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:58:61
+[INFO] [stderr]    |
+[INFO] [stderr] 58 | fn as_arg_trait<'a, 'b, T: ArgWithOrder<'a, 'b>>(x: &T) -> &ArgWithOrder<'a, 'b> {
+[INFO] [stderr]    |                                                             ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:89:21
+[INFO] [stderr]    |
+[INFO] [stderr] 89 |     writer: &'a mut Write,
+[INFO] [stderr]    |                     ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:105:20
+[INFO] [stderr]     |
+[INFO] [stderr] 105 |         w: &'a mut Write,
+[INFO] [stderr]     |                    ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:143:38
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |     pub fn write_app_help(w: &'a mut Write, app: &App, use_long: bool) -> ClapResult<()> {
+[INFO] [stderr]     |                                      ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:150:41
+[INFO] [stderr]     |
+[INFO] [stderr] 150 |     pub fn write_parser_help(w: &'a mut Write, parser: &Parser, use_long: bool) -> ClapResult<()> {
+[INFO] [stderr]     |                                         ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:158:51
+[INFO] [stderr]     |
+[INFO] [stderr] 158 |     pub fn write_parser_help_to_stderr(w: &'a mut Write, parser: &Parser) -> ClapResult<()> {
+[INFO] [stderr]     |                                                   ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:165:20
+[INFO] [stderr]     |
+[INFO] [stderr] 165 |         w: &'a mut Write,
+[INFO] [stderr]     |                    ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:209:32
+[INFO] [stderr]     |
+[INFO] [stderr] 209 |         I: Iterator<Item = &'d ArgWithOrder<'b, 'c>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:237:32
+[INFO] [stderr]     |
+[INFO] [stderr] 237 |         I: Iterator<Item = &'d ArgWithOrder<'b, 'c>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:274:43
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |     fn write_arg<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:284:39
+[INFO] [stderr]     |
+[INFO] [stderr] 284 |     fn short<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:297:38
+[INFO] [stderr]     |
+[INFO] [stderr] 297 |     fn long<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:326:37
+[INFO] [stderr]     |
+[INFO] [stderr] 326 |     fn val<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> Result<String, io::Error> {
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:453:38
+[INFO] [stderr]     |
+[INFO] [stderr] 453 |     fn help<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>, spec_vals: &str) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:509:29
+[INFO] [stderr]     |
+[INFO] [stderr] 509 |     fn spec_vals(&self, a: &ArgWithDisplay) -> String {
+[INFO] [stderr]     |                             ^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:577:42
+[INFO] [stderr]     |
+[INFO] [stderr] 577 | fn should_show_arg(use_long: bool, arg: &ArgWithOrder) -> bool {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:210:32
+[INFO] [stderr]     |
+[INFO] [stderr] 210 |             if let Some(arg) = find_any_by_name!(self.0, name) {
+[INFO] [stderr]     |                                ------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:223:39
+[INFO] [stderr]     |
+[INFO] [stderr] 223 |                     if let Some(bl) = find_any_by_name!(self.0, *arg).unwrap().blacklist() {
+[INFO] [stderr]     |                                       ------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:458:37
+[INFO] [stderr]     |
+[INFO] [stderr] 458 |             } else if let Some(a) = find_any_by_name!(self.0, *name) {
+[INFO] [stderr]     |                                     -------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:499:42
+[INFO] [stderr]     |
+[INFO] [stderr] 499 |     fn validate_arg_conflicts(&self, a: &AnyArg, matcher: &ArgMatcher) -> Option<bool> {
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:513:44
+[INFO] [stderr]     |
+[INFO] [stderr] 513 |     fn validate_required_unless(&self, a: &AnyArg, matcher: &ArgMatcher) -> Option<bool> {
+[INFO] [stderr]     |                                            ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:568:42
+[INFO] [stderr]     |
+[INFO] [stderr] 568 |     fn is_missing_required_ok(&self, a: &AnyArg, matcher: &ArgMatcher) -> bool {
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\mod.rs:1805:39
+[INFO] [stderr]      |
+[INFO] [stderr] 1805 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> { None }
+[INFO] [stderr]      |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\mod.rs:1806:42
+[INFO] [stderr]      |
+[INFO] [stderr] 1806 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> { None }
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:26:39
+[INFO] [stderr]    |
+[INFO] [stderr] 26 |     fn validator(&self) -> Option<&Rc<Fn(String) -> Result<(), String>>>;
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:27:42
+[INFO] [stderr]    |
+[INFO] [stderr] 27 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> Result<(), OsString>>>;
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:60:39
+[INFO] [stderr]    |
+[INFO] [stderr] 60 |     fn validator(&self) -> Option<&Rc<Fn(String) -> Result<(), String>>> { (*self).validator() }
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:61:42
+[INFO] [stderr]    |
+[INFO] [stderr] 61 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> Result<(), OsString>>> { (*self).validator_os() }
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_matcher.rs:24:60
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |     pub fn process_arg_overrides<'b>(&mut self, a: Option<&AnyArg<'a, 'b>>, overrides: &mut Vec<(&'b str, &'a str)>, required: &mut Vec<&'a str>, check_all: bool) {
+[INFO] [stderr]    |                                                            ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_matcher.rs:56:60
+[INFO] [stderr]    |
+[INFO] [stderr] 56 |     pub fn handle_self_overrides<'b>(&mut self, a: Option<&AnyArg<'a, 'b>>) {
+[INFO] [stderr]    |                                                            ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\flag.rs:79:39
+[INFO] [stderr]    |
+[INFO] [stderr] 79 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> { None }
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\flag.rs:80:42
+[INFO] [stderr]    |
+[INFO] [stderr] 80 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> { None }
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\positional.rs:150:39
+[INFO] [stderr]     |
+[INFO] [stderr] 150 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\positional.rs:153:42
+[INFO] [stderr]     |
+[INFO] [stderr] 153 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\option.rs:132:39
+[INFO] [stderr]     |
+[INFO] [stderr] 132 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\option.rs:135:42
+[INFO] [stderr]     |
+[INFO] [stderr] 135 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\valued.rs:19:30
+[INFO] [stderr]    |
+[INFO] [stderr] 19 |     pub validator: Option<Rc<Fn(String) -> Result<(), String>>>,
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\valued.rs:20:33
+[INFO] [stderr]    |
+[INFO] [stderr] 20 |     pub validator_os: Option<Rc<Fn(&OsStr) -> Result<(), OsString>>>,
+[INFO] [stderr]    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:410:15
+[INFO] [stderr]     |
+[INFO] [stderr] 410 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:448:33
+[INFO] [stderr]     |
+[INFO] [stderr] 448 |     pub fn empty_value<U>(arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                 ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:476:15
+[INFO] [stderr]     |
+[INFO] [stderr] 476 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:662:48
+[INFO] [stderr]     |
+[INFO] [stderr] 662 |     pub fn too_many_values<V, U>(val: V, arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                                ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:691:15
+[INFO] [stderr]     |
+[INFO] [stderr] 691 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:724:42
+[INFO] [stderr]     |
+[INFO] [stderr] 724 |     pub fn value_validation(arg: Option<&AnyArg>, err: String, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:748:24
+[INFO] [stderr]     |
+[INFO] [stderr] 748 |         let n: Option<&AnyArg> = None;
+[INFO] [stderr]     |                        ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:754:15
+[INFO] [stderr]     |
+[INFO] [stderr] 754 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:789:47
+[INFO] [stderr]     |
+[INFO] [stderr] 789 |     pub fn unexpected_multiple_usage<U>(arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]   --> src\app\parser.rs:90:19
+[INFO] [stderr]    |
+[INFO] [stderr] 90 |         let c = s.trim_left_matches(|c| c == '-')
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]   --> src\app\parser.rs:98:19
+[INFO] [stderr]    |
+[INFO] [stderr] 98 |         let c = s.trim_left_matches(|c| c == '-')
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\args\arg.rs:332:35
+[INFO] [stderr]     |
+[INFO] [stderr] 332 |         self.s.short = s.as_ref().trim_left_matches(|c| c == '-').chars().nth(0);
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\args\arg.rs:372:30
+[INFO] [stderr]     |
+[INFO] [stderr] 372 |         self.s.long = Some(l.trim_left_matches(|c| c == '-'));
+[INFO] [stderr]     |                              ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 55.52s
+[INFO] running `"docker" "inspect" "c1ba1daa5b6ebb99997030733b11cce9e8189832751c3dd2c0c1dbbde37d0999"`
+[INFO] running `"docker" "rm" "-f" "c1ba1daa5b6ebb99997030733b11cce9e8189832751c3dd2c0c1dbbde37d0999"`
+[INFO] [stdout] c1ba1daa5b6ebb99997030733b11cce9e8189832751c3dd2c0c1dbbde37d0999
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\clap\\2.33.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e093ac34ce21024f08330efc95c8b9bc9e1a0ac03e127d81a82c6d2097027004
+[INFO] running `"docker" "start" "-a" "e093ac34ce21024f08330efc95c8b9bc9e1a0ac03e127d81a82c6d2097027004"`
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling serde v1.0.95
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling pulldown-cmark v0.4.1
+[INFO] [stderr]    Compiling utf8-ranges v1.0.3
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling semver-parser v0.9.0
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling regex-syntax v0.6.8
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling itertools v0.8.0
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling toml v0.5.1
+[INFO] [stderr]    Compiling version-sync v0.8.1
+[INFO] [stderr]    Compiling clap v2.33.0 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\parser.rs:922:39
+[INFO] [stderr]     |
+[INFO] [stderr] 922 |                         let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]     |                                       ------------------------------------------------- in this macro invocation
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\macros.rs:958:67
+[INFO] [stderr]      |
+[INFO] [stderr] 958  |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]      | 
+[INFO] [stderr]     ::: src\app\parser.rs:1065:39
+[INFO] [stderr]      |
+[INFO] [stderr] 1065 |                         let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]      |                                       ------------------------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\macros.rs:958:67
+[INFO] [stderr]      |
+[INFO] [stderr] 958  |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]      | 
+[INFO] [stderr]     ::: src\app\parser.rs:1192:27
+[INFO] [stderr]      |
+[INFO] [stderr] 1192 |             let any_arg = find_any_by_name!(self, self.cache.unwrap_or(""));
+[INFO] [stderr]      |                           ------------------------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\parser.rs:2098:55
+[INFO] [stderr]      |
+[INFO] [stderr] 2098 |     pub fn find_any_arg(&self, name: &str) -> Option<&AnyArg<'a, 'b>> {
+[INFO] [stderr]      |                                                       ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:47:27
+[INFO] [stderr]    |
+[INFO] [stderr] 47 |     fn as_base(&self) -> &ArgWithDisplay<'b, 'c>;
+[INFO] [stderr]    |                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:53:27
+[INFO] [stderr]    |
+[INFO] [stderr] 53 |     fn as_base(&self) -> &ArgWithDisplay<'b, 'c> {
+[INFO] [stderr]    |                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:58:61
+[INFO] [stderr]    |
+[INFO] [stderr] 58 | fn as_arg_trait<'a, 'b, T: ArgWithOrder<'a, 'b>>(x: &T) -> &ArgWithOrder<'a, 'b> {
+[INFO] [stderr]    |                                                             ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\app\help.rs:89:21
+[INFO] [stderr]    |
+[INFO] [stderr] 89 |     writer: &'a mut Write,
+[INFO] [stderr]    |                     ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:105:20
+[INFO] [stderr]     |
+[INFO] [stderr] 105 |         w: &'a mut Write,
+[INFO] [stderr]     |                    ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:143:38
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |     pub fn write_app_help(w: &'a mut Write, app: &App, use_long: bool) -> ClapResult<()> {
+[INFO] [stderr]     |                                      ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:150:41
+[INFO] [stderr]     |
+[INFO] [stderr] 150 |     pub fn write_parser_help(w: &'a mut Write, parser: &Parser, use_long: bool) -> ClapResult<()> {
+[INFO] [stderr]     |                                         ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:158:51
+[INFO] [stderr]     |
+[INFO] [stderr] 158 |     pub fn write_parser_help_to_stderr(w: &'a mut Write, parser: &Parser) -> ClapResult<()> {
+[INFO] [stderr]     |                                                   ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:165:20
+[INFO] [stderr]     |
+[INFO] [stderr] 165 |         w: &'a mut Write,
+[INFO] [stderr]     |                    ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:209:32
+[INFO] [stderr]     |
+[INFO] [stderr] 209 |         I: Iterator<Item = &'d ArgWithOrder<'b, 'c>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:237:32
+[INFO] [stderr]     |
+[INFO] [stderr] 237 |         I: Iterator<Item = &'d ArgWithOrder<'b, 'c>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:274:43
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |     fn write_arg<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                           ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:284:39
+[INFO] [stderr]     |
+[INFO] [stderr] 284 |     fn short<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:297:38
+[INFO] [stderr]     |
+[INFO] [stderr] 297 |     fn long<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:326:37
+[INFO] [stderr]     |
+[INFO] [stderr] 326 |     fn val<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>) -> Result<String, io::Error> {
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:453:38
+[INFO] [stderr]     |
+[INFO] [stderr] 453 |     fn help<'b, 'c>(&mut self, arg: &ArgWithDisplay<'b, 'c>, spec_vals: &str) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay<'b, 'c>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:509:29
+[INFO] [stderr]     |
+[INFO] [stderr] 509 |     fn spec_vals(&self, a: &ArgWithDisplay) -> String {
+[INFO] [stderr]     |                             ^^^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithDisplay`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\help.rs:577:42
+[INFO] [stderr]     |
+[INFO] [stderr] 577 | fn should_show_arg(use_long: bool, arg: &ArgWithOrder) -> bool {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^ help: use `dyn`: `dyn ArgWithOrder`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:210:32
+[INFO] [stderr]     |
+[INFO] [stderr] 210 |             if let Some(arg) = find_any_by_name!(self.0, name) {
+[INFO] [stderr]     |                                ------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:223:39
+[INFO] [stderr]     |
+[INFO] [stderr] 223 |                     if let Some(bl) = find_any_by_name!(self.0, *arg).unwrap().blacklist() {
+[INFO] [stderr]     |                                       ------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\macros.rs:958:67
+[INFO] [stderr]     |
+[INFO] [stderr] 958 |             fn as_trait_obj<'a, 'b, T: AnyArg<'a, 'b>>(x: &T) -> &AnyArg<'a, 'b> { x }
+[INFO] [stderr]     |                                                                   ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\app\validator.rs:458:37
+[INFO] [stderr]     |
+[INFO] [stderr] 458 |             } else if let Some(a) = find_any_by_name!(self.0, *name) {
+[INFO] [stderr]     |                                     -------------------------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:499:42
+[INFO] [stderr]     |
+[INFO] [stderr] 499 |     fn validate_arg_conflicts(&self, a: &AnyArg, matcher: &ArgMatcher) -> Option<bool> {
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:513:44
+[INFO] [stderr]     |
+[INFO] [stderr] 513 |     fn validate_required_unless(&self, a: &AnyArg, matcher: &ArgMatcher) -> Option<bool> {
+[INFO] [stderr]     |                                            ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\app\validator.rs:568:42
+[INFO] [stderr]     |
+[INFO] [stderr] 568 |     fn is_missing_required_ok(&self, a: &AnyArg, matcher: &ArgMatcher) -> bool {
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\mod.rs:1805:39
+[INFO] [stderr]      |
+[INFO] [stderr] 1805 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> { None }
+[INFO] [stderr]      |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\app\mod.rs:1806:42
+[INFO] [stderr]      |
+[INFO] [stderr] 1806 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> { None }
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:26:39
+[INFO] [stderr]    |
+[INFO] [stderr] 26 |     fn validator(&self) -> Option<&Rc<Fn(String) -> Result<(), String>>>;
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:27:42
+[INFO] [stderr]    |
+[INFO] [stderr] 27 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> Result<(), OsString>>>;
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:60:39
+[INFO] [stderr]    |
+[INFO] [stderr] 60 |     fn validator(&self) -> Option<&Rc<Fn(String) -> Result<(), String>>> { (*self).validator() }
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\any_arg.rs:61:42
+[INFO] [stderr]    |
+[INFO] [stderr] 61 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> Result<(), OsString>>> { (*self).validator_os() }
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_matcher.rs:24:60
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |     pub fn process_arg_overrides<'b>(&mut self, a: Option<&AnyArg<'a, 'b>>, overrides: &mut Vec<(&'b str, &'a str)>, required: &mut Vec<&'a str>, check_all: bool) {
+[INFO] [stderr]    |                                                            ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_matcher.rs:56:60
+[INFO] [stderr]    |
+[INFO] [stderr] 56 |     pub fn handle_self_overrides<'b>(&mut self, a: Option<&AnyArg<'a, 'b>>) {
+[INFO] [stderr]    |                                                            ^^^^^^^^^^^^^^ help: use `dyn`: `dyn AnyArg<'a, 'b>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\flag.rs:79:39
+[INFO] [stderr]    |
+[INFO] [stderr] 79 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> { None }
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\flag.rs:80:42
+[INFO] [stderr]    |
+[INFO] [stderr] 80 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> { None }
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\positional.rs:150:39
+[INFO] [stderr]     |
+[INFO] [stderr] 150 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\positional.rs:153:42
+[INFO] [stderr]     |
+[INFO] [stderr] 153 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\option.rs:132:39
+[INFO] [stderr]     |
+[INFO] [stderr] 132 |     fn validator(&self) -> Option<&Rc<Fn(String) -> StdResult<(), String>>> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> StdResult<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\args\arg_builder\option.rs:135:42
+[INFO] [stderr]     |
+[INFO] [stderr] 135 |     fn validator_os(&self) -> Option<&Rc<Fn(&OsStr) -> StdResult<(), OsString>>> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> StdResult<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\valued.rs:19:30
+[INFO] [stderr]    |
+[INFO] [stderr] 19 |     pub validator: Option<Rc<Fn(String) -> Result<(), String>>>,
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(String) -> Result<(), String>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\args\arg_builder\valued.rs:20:33
+[INFO] [stderr]    |
+[INFO] [stderr] 20 |     pub validator_os: Option<Rc<Fn(&OsStr) -> Result<(), OsString>>>,
+[INFO] [stderr]    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(&OsStr) -> Result<(), OsString>`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:410:15
+[INFO] [stderr]     |
+[INFO] [stderr] 410 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:448:33
+[INFO] [stderr]     |
+[INFO] [stderr] 448 |     pub fn empty_value<U>(arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                 ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:476:15
+[INFO] [stderr]     |
+[INFO] [stderr] 476 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:662:48
+[INFO] [stderr]     |
+[INFO] [stderr] 662 |     pub fn too_many_values<V, U>(val: V, arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                                ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:691:15
+[INFO] [stderr]     |
+[INFO] [stderr] 691 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:724:42
+[INFO] [stderr]     |
+[INFO] [stderr] 724 |     pub fn value_validation(arg: Option<&AnyArg>, err: String, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                          ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:748:24
+[INFO] [stderr]     |
+[INFO] [stderr] 748 |         let n: Option<&AnyArg> = None;
+[INFO] [stderr]     |                        ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:754:15
+[INFO] [stderr]     |
+[INFO] [stderr] 754 |         arg: &AnyArg,
+[INFO] [stderr]     |               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\errors.rs:789:47
+[INFO] [stderr]     |
+[INFO] [stderr] 789 |     pub fn unexpected_multiple_usage<U>(arg: &AnyArg, usage: U, color: ColorWhen) -> Self
+[INFO] [stderr]     |                                               ^^^^^^ help: use `dyn`: `dyn AnyArg`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]   --> src\app\parser.rs:90:19
+[INFO] [stderr]    |
+[INFO] [stderr] 90 |         let c = s.trim_left_matches(|c| c == '-')
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]   --> src\app\parser.rs:98:19
+[INFO] [stderr]    |
+[INFO] [stderr] 98 |         let c = s.trim_left_matches(|c| c == '-')
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\args\arg.rs:332:35
+[INFO] [stderr]     |
+[INFO] [stderr] 332 |         self.s.short = s.as_ref().trim_left_matches(|c| c == '-').chars().nth(0);
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'bitflags::core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\args\arg.rs:372:30
+[INFO] [stderr]     |
+[INFO] [stderr] 372 |         self.s.long = Some(l.trim_left_matches(|c| c == '-'));
+[INFO] [stderr]     |                              ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 57s
+[INFO] running `"docker" "inspect" "e093ac34ce21024f08330efc95c8b9bc9e1a0ac03e127d81a82c6d2097027004"`
+[INFO] running `"docker" "rm" "-f" "e093ac34ce21024f08330efc95c8b9bc9e1a0ac03e127d81a82c6d2097027004"`
+[INFO] [stdout] e093ac34ce21024f08330efc95c8b9bc9e1a0ac03e127d81a82c6d2097027004
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\clap\\2.33.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 1858bf7e1bcbc65160df711c5f35e099963c04dbd04dc3d6273d8bdec61be81a
+[INFO] running `"docker" "start" "-a" "1858bf7e1bcbc65160df711c5f35e099963c04dbd04dc3d6273d8bdec61be81a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.14s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\clap-dd71ef4566051d41.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 87 tests
+[INFO] [stdout] test app::help::test::wrap_help_last_word ... ok
+[INFO] [stdout] test app::settings::test::app_settings_fromstr ... ok
+[INFO] [stdout] test args::arg_builder::flag::test::flagbuilder_display ... ok
+[INFO] [stdout] test args::arg_builder::flag::test::flagbuilder_display_multiple_aliases ... ok
+[INFO] [stdout] test args::arg_builder::flag::test::flagbuilder_display_single_alias ... ok
+[INFO] [stdout] test args::arg_builder::option::test::optbuilder_display1 ... ok
+[INFO] [stdout] test args::arg_builder::option::test::optbuilder_display2 ... ok
+[INFO] [stdout] test args::arg_builder::option::test::optbuilder_display3 ... ok
+[INFO] [stdout] test args::arg_builder::option::test::optbuilder_display_multiple_aliases ... ok
+[INFO] [stdout] test args::arg_builder::option::test::optbuilder_display_single_alias ... ok
+[INFO] [stdout] test args::arg_builder::positional::test::display_mult ... ok
+[INFO] [stdout] test args::arg_builder::positional::test::display_required ... ok
+[INFO] [stdout] test args::arg_builder::positional::test::display_val_names ... ok
+[INFO] [stdout] test args::arg_builder::positional::test::display_val_names_req ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_indices ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_indices_with_shorter_lifetime ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_osvalues ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_osvalues_with_shorter_lifetime ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_values ... ok
+[INFO] [stdout] test args::arg_matches::tests::test_default_values_with_shorter_lifetime ... ok
+[INFO] [stdout] test args::group::test::groups ... ok
+[INFO] [stdout] test args::group::test::test_debug ... ok
+[INFO] [stdout] test args::group::test::test_from ... ok
+[INFO] [stdout] test args::settings::test::arg_settings_fromstr ... ok
+[INFO] [stdout] test usage_parser::test::create_flag_usage ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage0 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage5 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage6 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage7 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage8 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage9 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both5 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both6 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both7 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both8 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals5 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals6 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals7 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_both_equals8 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long10 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long5 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long6 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long7 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long9 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long8 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals10 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals5 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals6 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals7 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals8 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_usage_long_equals9 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_with_vals1 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_with_vals2 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_with_vals3 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_with_vals4 ... ok
+[INFO] [stdout] test usage_parser::test::create_option_with_vals5 ... ok
+[INFO] [stdout] test usage_parser::test::create_positional_usage ... ok
+[INFO] [stdout] test usage_parser::test::create_positional_usage0 ... ok
+[INFO] [stdout] test usage_parser::test::nonascii ... ok
+[INFO] [stdout] test usage_parser::test::pos_help_double_lit_single_quote ... ok
+[INFO] [stdout] test usage_parser::test::pos_help_lit_single_quote ... ok
+[INFO] [stdout] test usage_parser::test::pos_help_newline ... ok
+[INFO] [stdout] test usage_parser::test::pos_help_newline_lit_sq ... ok
+[INFO] [stdout] test usage_parser::test::pos_mult ... ok
+[INFO] [stdout] test usage_parser::test::pos_mult_help ... ok
+[INFO] [stdout] test usage_parser::test::pos_req ... ok
+[INFO] [stdout] test usage_parser::test::pos_req_mult_help ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 87 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests clap
+[INFO] [stdout] 
+[INFO] [stdout] running 307 tests
+[INFO] [stdout] test src\app\mod.rs - app::App::about (line 217) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::after_help (line 288) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::alias (line 872) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App (line 43) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::arg_from_usage (line 818) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::arg (line 767) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::args (line 793) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::args_from_usage (line 840) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::author (line 170) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::before_help (line 305) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::bin_name (line 194) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::gen_completions (line 1337) ... ignored
+[INFO] [stdout] test src\app\mod.rs - app::App::gen_completions (line 1361) ... ignored
+[INFO] [stdout] test src\app\mod.rs - app::App::gen_completions_to (line 1404) ... ignored
+[INFO] [stdout] test src\app\mod.rs - app::App::get_matches (line 1444) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::get_matches_from (line 1492) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::get_matches_from_safe (line 1542) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::get_matches_from_safe_borrow (line 1578) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::get_matches_safe (line 1463) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::gen_completions (line 1315) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::global_setting (line 625) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::aliases (line 897) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::display_order (line 1100) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::global_settings (line 647) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::group (line 991) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::groups (line 1014) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::help (line 415) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::help_short (line 455) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::help_message (line 501) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::name (line 262) ... ignored
+[INFO] [stdout] test src\app\mod.rs - app::App::long_about (line 240) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::long_version (line 354) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::max_term_width (line 752) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::new (line 75) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::set_term_width (line 724) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::setting (line 581) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::settings (line 601) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::subcommand (line 1049) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::template (line 556) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::print_help (line 1150) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::unset_setting (line 670) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::unset_settings (line 689) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::print_long_help (line 1180) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::usage (line 390) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::version (line 328) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::version_message (line 520) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::version_short (line 481) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::with_defaults (line 97) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::visible_alias (line 926) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::visible_aliases (line 950) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::subcommands (line 1069) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::write_help (line 1207) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::write_long_help (line 1238) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowInvalidUtf8 (line 148) ... ignored
+[INFO] [stdout] test src\app\mod.rs - app::App::write_version (line 1266) ... ok
+[INFO] [stdout] test src\app\mod.rs - app::App::write_long_version (line 1287) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowLeadingHyphen (line 189) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowExternalSubcommands (line 345) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowMissingPositional (line 260) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowMissingPositional (line 278) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ArgRequiredElseHelp (line 402) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowMissingPositional (line 315) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowNegativeNumbers (line 211) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ColorAlways (line 460) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::AllowMissingPositional (line 296) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ArgsNegateSubcommands (line 382) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ColorAuto (line 442) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ColorNever (line 478) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::ColoredHelp (line 422) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DeriveDisplayOrder (line 607) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DisableHelpSubcommand (line 552) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DisableHelpFlags (line 533) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DisableVersion (line 574) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DisableHelpFlags (line 522) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DontCollapseArgsInUsage (line 490) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DontDelimitTrailingValues (line 507) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::GlobalVersion (line 624) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::NextLineHelp (line 707) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::InferSubcommands (line 669) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::Hidden (line 641) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::DisableVersion (line 586) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::StrictUtf8 (line 834) ... ignored
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::NoBinaryName (line 691) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::PropagateGlobalValuesDown (line 723) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::SubcommandRequiredElseHelp (line 811) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::PropagateGlobalValuesDown (line 739) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::SubcommandRequired (line 862) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::UnifiedHelpMessage (line 910) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::SubcommandsNegateReqs (line 766) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::TrailingVarArg (line 887) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::SubcommandsNegateReqs (line 783) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::VersionlessSubcommands (line 926) ... ok
+[INFO] [stdout] test src\app\settings.rs - app::settings::AppSettings::WaitOnError (line 954) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg (line 28) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::allow_hyphen_values (line 840) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::alias (line 383) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::aliases (line 413) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::allow_hyphen_values (line 847) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::allow_hyphen_values (line 864) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::case_insensitive (line 2479) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::case_insensitive (line 2497) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::conflicts_with (line 1114) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::conflicts_with_all (line 1160) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::conflicts_with (line 1123) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::conflicts_with_all (line 1170) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value (line 3202) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value (line 3219) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_if (line 3278) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_if (line 3295) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_if (line 3312) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_if (line 3331) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_ifs (line 3419) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_ifs (line 3396) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::default_value_ifs (line 3440) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::display_order (line 3680) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::empty_values (line 2267) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::empty_values (line 2277) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::env (line 3507) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::env (line 3526) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::env (line 3546) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::from_usage (line 278) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::env (line 3566) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::global (line 2216) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::group (line 2529) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::global (line 2228) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::groups (line 2568) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::group (line 2540) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::help (line 511) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::groups (line 2579) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden (line 2310) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::help (line 521) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_long_help (line 3836) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden (line 2318) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_long_help (line 3844) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_short_help (line 3759) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_long_help (line 3871) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_short_help (line 3767) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hide_default_value (line 1878) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hide_default_value (line 1885) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hidden_short_help (line 3794) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hide_possible_values (line 1843) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::hide_possible_values (line 1850) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::index (line 1925) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::last (line 645) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::index (line 1932) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::last (line 655) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::long (line 351) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::last (line 674) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::long_help (line 566) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::long (line 360) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::max_values (line 2742) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::long_help (line 580) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::max_values (line 2752) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::max_values (line 2771) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::min_values (line 2805) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::min_values (line 2815) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2012) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::min_values (line 2834) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2021) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2037) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2055) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2076) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2101) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::multiple (line 2125) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::next_line_help (line 3622) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::number_of_values (line 2617) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::number_of_values (line 2627) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1238) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1249) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1213) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1260) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1287) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with (line 1272) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::overrides_with_all (line 1316) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_value (line 2417) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_values (line 2359) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_value (line 2427) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_values (line 2367) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_value (line 2446) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::possible_values (line 2384) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_delimiter (line 2949) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_delimiter (line 2972) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_delimiter (line 2932) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_equals (line 769) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required (line 713) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_equals (line 781) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::require_equals (line 798) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_if (line 1557) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required (line 722) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required (line 738) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_if (line 1568) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_ifs (line 1631) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_if (line 1588) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless (line 895) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_ifs (line 1645) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_ifs (line 1671) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless (line 906) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_all (line 960) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless (line 924) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_all (line 972) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_one (line 1035) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_all (line 994) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_one (line 1047) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::required_unless_one (line 1069) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires (line 1352) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires (line 1363) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires (line 1381) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_all (line 1720) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_all (line 1731) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_if (line 1423) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_all (line 1752) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_if (line 1434) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_if (line 1452) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_ifs (line 1492) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::requires_ifs (line 1506) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::short (line 310) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::takes_value (line 1804) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::short (line 319) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::takes_value (line 1811) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::validator_os (line 2697) ... ignored
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::use_delimiter (line 2866) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::validator (line 2664) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::use_delimiter (line 2884) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_name (line 3126) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_delimiter (line 3008) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_names (line 3057) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_name (line 3134) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_terminator (line 2169) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_names (line 3065) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::value_terminator (line 2180) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches (line 19) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::with_name (line 65) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::visible_aliases (line 472) ... ok
+[INFO] [stdout] test src\args\arg.rs - args::arg::Arg::visible_alias (line 443) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::index_of (line 390) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::index_of (line 408) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::index_of (line 427) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::index_of (line 453) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::index_of (line 480) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::indices_of (line 519) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::indices_of (line 561) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::indices_of (line 538) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::subcommand (line 697) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::is_present (line 304) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::occurrences_of (line 348) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::occurrences_of (line 333) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::subcommand_name (line 670) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::usage (line 749) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::value_of_lossy (line 130) ... ignored
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::value_of_os (line 165) ... ignored
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::subcommand (line 717) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::values_of_lossy (line 228) ... ignored
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::values_of_os (line 266) ... ignored
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::subcommand_matches (line 596) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::OsValues (line 825) ... ignored
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::value_of (line 99) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::ArgMatches::values_of (line 196) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::Values (line 773) ... ok
+[INFO] [stdout] test src\args\arg_matches.rs - args::arg_matches::Indices (line 875) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup (line 39) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup (line 58) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::arg (line 132) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::args (line 164) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::conflicts_with_all (line 393) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::conflicts_with (line 357) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::multiple (line 194) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::multiple (line 211) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::required (line 247) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::requires (line 280) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::with_name (line 96) ... ok
+[INFO] [stdout] test src\args\group.rs - args::group::ArgGroup::requires_all (line 319) ... ok
+[INFO] [stdout] test src\args\subcommand.rs - args::subcommand::SubCommand (line 17) ... ok
+[INFO] [stdout] test src\args\subcommand.rs - args::subcommand::SubCommand::with_name (line 42) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::ArgumentConflict (line 209) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::InvalidUtf8 (line 304) ... ignored
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::EmptyValue (line 111) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::HelpDisplayed (line 331) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::InvalidSubcommand (line 62) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::InvalidValue (line 28) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::MissingArgumentOrSubcommand (line 263) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::MissingRequiredArgument (line 227) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::MissingSubcommand (line 243) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::TooManyValues (line 151) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::TooFewValues (line 169) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::UnexpectedMultipleUsage (line 283) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::UnknownArgument (line 45) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::UnrecognizedSubcommand (line 89) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::ValueValidation (line 128) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 187) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 114) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 208) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 288) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 42) ... ok
+[INFO] [stdout] test src\macros.rs - app_from_crate (line 550) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::VersionDisplayed (line 345) ... ok
+[INFO] [stdout] test src\errors.rs - errors::ErrorKind::WrongNumberOfValues (line 188) ... ok
+[INFO] [stdout] test src\macros.rs - _clap_count_exprs (line 246) ... ok
+[INFO] [stdout] test src\macros.rs - crate_description (line 495) ... ok
+[INFO] [stdout] test src\macros.rs - clap_app (line 581) ... ok
+[INFO] [stdout] test src\macros.rs - crate_authors (line 444) ... ok
+[INFO] [stdout] test src\macros.rs - crate_name (line 517) ... ok
+[INFO] [stdout] test src\macros.rs - crate_version (line 415) ... ok
+[INFO] [stdout] test src\macros.rs - value_t (line 42) ... ok
+[INFO] [stdout] test src\macros.rs - value_t_or_exit (line 87) ... ok
+[INFO] [stdout] test src\macros.rs - values_t_or_exit (line 190) ... ok
+[INFO] [stdout] test src\macros.rs - values_t (line 130) ... ok
+[INFO] [stdout] test src\macros.rs - arg_enum (line 274) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 293 passed; 0 failed; 14 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "1858bf7e1bcbc65160df711c5f35e099963c04dbd04dc3d6273d8bdec61be81a"`
+[INFO] running `"docker" "rm" "-f" "1858bf7e1bcbc65160df711c5f35e099963c04dbd04dc3d6273d8bdec61be81a"`
+[INFO] [stdout] 1858bf7e1bcbc65160df711c5f35e099963c04dbd04dc3d6273d8bdec61be81a

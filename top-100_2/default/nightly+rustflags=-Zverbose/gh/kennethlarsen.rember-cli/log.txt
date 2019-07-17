@@ -1,0 +1,145 @@
+[INFO] cloning repository kennethlarsen/rember-cli
+[INFO] running `"git" "clone" "--bare" "git://github.com/kennethlarsen/rember-cli.git" "work\\cache\\sources\\gh\\kennethlarsen\\rember-cli"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\kennethlarsen\rember-cli'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\kennethlarsen\\rember-cli" "work\\ex\\default\\sources\\nightly\\gh\\kennethlarsen\\rember-cli"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\kennethlarsen\rember-cli'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\kennethlarsen\\rember-cli" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\kennethlarsen\\rember-cli"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\kennethlarsen\rember-cli'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 12ddff44ef4da51d11f8587b30ae6ad15623f48c
+[INFO] sha for GitHub repo kennethlarsen/rember-cli: 12ddff44ef4da51d11f8587b30ae6ad15623f48c
+[INFO] validating manifest of kennethlarsen/rember-cli on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of kennethlarsen/rember-cli on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing kennethlarsen/rember-cli
+[INFO] finished frobbing kennethlarsen/rember-cli
+[INFO] frobbed toml for kennethlarsen/rember-cli written to work\ex\default\sources\nightly\gh\kennethlarsen\rember-cli\Cargo.toml
+[INFO] started frobbing kennethlarsen/rember-cli
+[INFO] finished frobbing kennethlarsen/rember-cli
+[INFO] frobbed toml for kennethlarsen/rember-cli written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\kennethlarsen\rember-cli\Cargo.toml
+[INFO] crate kennethlarsen/rember-cli already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded predicates v1.0.1
+[INFO] [stderr]   Downloaded console v0.7.5
+[INFO] [stderr]   Downloaded proc-macro-hack v0.4.1
+[INFO] [stderr]   Downloaded include_dir_impl v0.2.1
+[INFO] [stderr]   Downloaded proc-macro-hack-impl v0.4.1
+[INFO] [stderr]   Downloaded assert_fs v0.11.3
+[INFO] [stderr]   Downloaded ignore v0.4.7
+[INFO] [stderr]   Downloaded globset v0.4.3
+[INFO] [stderr]   Downloaded globwalk v0.5.0
+[INFO] [stderr]   Downloaded include_dir v0.2.1
+[INFO] [stderr]   Downloaded bstr v0.1.2
+[INFO] [stderr]   Downloaded number_prefix v0.2.8
+[INFO] [stderr]   Downloaded indicatif v0.11.0
+[INFO] [stderr]   Downloaded fs_extra v1.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing kennethlarsen/rember-cli against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\kennethlarsen\\rember-cli,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] fb49ffa1ee2e3b8016856aaf0645bc410beab0e8585fe0179339c2281fe769fa
+[INFO] running `"docker" "start" "-a" "fb49ffa1ee2e3b8016856aaf0645bc410beab0e8585fe0179339c2281fe769fa"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.28
+[INFO] [stderr]    Compiling autocfg v0.1.2
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memchr v2.2.0
+[INFO] [stderr]    Compiling semver-parser v0.7.0
+[INFO] [stderr]    Compiling syn v0.15.32
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling regex v1.1.6
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling ryu v0.2.7
+[INFO] [stderr]    Compiling serde v1.0.90
+[INFO] [stderr]    Compiling stable_deref_trait v1.1.1
+[INFO] [stderr]    Compiling utf8-ranges v1.0.2
+[INFO] [stderr]    Compiling num-traits v0.2.6
+[INFO] [stderr]    Compiling cfg-if v0.1.7
+[INFO] [stderr]    Compiling smallvec v0.6.9
+[INFO] [stderr]    Compiling scopeguard v0.3.3
+[INFO] [stderr]    Compiling rustc-demangle v0.1.14
+[INFO] [stderr]    Compiling itoa v0.4.3
+[INFO] [stderr]    Compiling proc-macro-hack-impl v0.4.1
+[INFO] [stderr]    Compiling escargot v0.4.0
+[INFO] [stderr]    Compiling fs_extra v1.1.0
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling predicates-core v1.0.0
+[INFO] [stderr]    Compiling treeline v0.1.0
+[INFO] [stderr]    Compiling normalize-line-endings v0.2.2
+[INFO] [stderr]    Compiling encode_unicode v0.3.5
+[INFO] [stderr]    Compiling difference v2.0.0
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling strsim v0.8.0
+[INFO] [stderr]    Compiling bitflags v1.0.4
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling backtrace v0.3.15
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling regex-syntax v0.6.6
+[INFO] [stderr]    Compiling semver v0.9.0
+[INFO] [stderr]    Compiling owning_ref v0.4.0
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.1
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling predicates-tree v1.0.0
+[INFO] [stderr]    Compiling lock_api v0.1.5
+[INFO] [stderr]    Compiling rustc_version v0.2.3
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling aho-corasick v0.7.3
+[INFO] [stderr]    Compiling bstr v0.1.2
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling float-cmp v0.4.0
+[INFO] [stderr]    Compiling number_prefix v0.2.8
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling rand_jitter v0.1.3
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling remove_dir_all v0.5.1
+[INFO] [stderr]    Compiling syn v0.14.9
+[INFO] [stderr]    Compiling same-file v1.0.4
+[INFO] [stderr]    Compiling clicolors-control v1.0.0
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling walkdir v2.2.7
+[INFO] [stderr]    Compiling tempfile v3.0.7
+[INFO] [stderr]    Compiling rember v0.1.7 (C:\crater\workdir)
+[INFO] [stderr]    Compiling serde_derive v1.0.90
+[INFO] [stderr]    Compiling synstructure v0.10.1
+[INFO] [stderr]    Compiling globset v0.4.3
+[INFO] [stderr]    Compiling predicates v1.0.1
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling ignore v0.4.7
+[INFO] [stderr]    Compiling console v0.7.5
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling indicatif v0.11.0
+[INFO] [stderr]    Compiling include_dir_impl v0.2.1
+[INFO] [stderr]    Compiling globwalk v0.5.0
+[INFO] [stderr]    Compiling assert_fs v0.11.3
+[INFO] [stderr]    Compiling include_dir v0.2.1
+[INFO] [stderr] error: proc-macro derive panicked
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\include_dir-0.2.1\src\lib.rs:63:1
+[INFO] [stderr]    |
+[INFO] [stderr] 63 | / proc_macro_expr_decl! {
+[INFO] [stderr] 64 | |     include_dir! => include_dir_impl
+[INFO] [stderr] 65 | | }
+[INFO] [stderr]    | |_^
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: message: assertion failed: `(left == right)`
+[INFO] [stderr]              left: `Some("#[allow(unused,")`,
+[INFO] [stderr]             right: `Some("#[allow(unused")`
+[INFO] [stderr]    = note: this warning originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `include_dir`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "fb49ffa1ee2e3b8016856aaf0645bc410beab0e8585fe0179339c2281fe769fa"`
+[INFO] running `"docker" "rm" "-f" "fb49ffa1ee2e3b8016856aaf0645bc410beab0e8585fe0179339c2281fe769fa"`
+[INFO] [stdout] fb49ffa1ee2e3b8016856aaf0645bc410beab0e8585fe0179339c2281fe769fa

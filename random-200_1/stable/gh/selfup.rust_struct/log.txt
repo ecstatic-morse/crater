@@ -1,0 +1,59 @@
+[INFO] cloning repository selfup/rust_struct
+[INFO] running `"git" "clone" "--bare" "git://github.com/selfup/rust_struct.git" "work\\cache\\sources\\gh\\selfup\\rust_struct"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\selfup\rust_struct'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\selfup\\rust_struct" "work\\ex\\default\\sources\\stable\\gh\\selfup\\rust_struct"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\selfup\rust_struct'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\selfup\\rust_struct" "work\\ex\\default\\sources\\beta\\gh\\selfup\\rust_struct"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\selfup\rust_struct'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 74bc84cda85bb020d3f6af4a61c734b61681b472
+[INFO] sha for GitHub repo selfup/rust_struct: 74bc84cda85bb020d3f6af4a61c734b61681b472
+[INFO] validating manifest of selfup/rust_struct on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of selfup/rust_struct on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing selfup/rust_struct
+[INFO] finished frobbing selfup/rust_struct
+[INFO] frobbed toml for selfup/rust_struct written to work\ex\default\sources\stable\gh\selfup\rust_struct\Cargo.toml
+[INFO] started frobbing selfup/rust_struct
+[INFO] finished frobbing selfup/rust_struct
+[INFO] frobbed toml for selfup/rust_struct written to work\ex\default\sources\beta\gh\selfup\rust_struct\Cargo.toml
+[INFO] crate selfup/rust_struct already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing selfup/rust_struct against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\selfup\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 6a921dd429c157b169260b1267a6b83aedd57dddb0a82b0559a8d50b42e11649
+[INFO] running `"docker" "start" "-a" "6a921dd429c157b169260b1267a6b83aedd57dddb0a82b0559a8d50b42e11649"`
+[INFO] [stderr]    Compiling rust_struct v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.21s
+[INFO] running `"docker" "inspect" "6a921dd429c157b169260b1267a6b83aedd57dddb0a82b0559a8d50b42e11649"`
+[INFO] running `"docker" "rm" "-f" "6a921dd429c157b169260b1267a6b83aedd57dddb0a82b0559a8d50b42e11649"`
+[INFO] [stdout] 6a921dd429c157b169260b1267a6b83aedd57dddb0a82b0559a8d50b42e11649
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\selfup\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e2bd0df11c31889cc2ee403af54c794cad9149bc316d0a5712a1adecd3d89cc3
+[INFO] running `"docker" "start" "-a" "e2bd0df11c31889cc2ee403af54c794cad9149bc316d0a5712a1adecd3d89cc3"`
+[INFO] [stderr]    Compiling rust_struct v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.66s
+[INFO] running `"docker" "inspect" "e2bd0df11c31889cc2ee403af54c794cad9149bc316d0a5712a1adecd3d89cc3"`
+[INFO] running `"docker" "rm" "-f" "e2bd0df11c31889cc2ee403af54c794cad9149bc316d0a5712a1adecd3d89cc3"`
+[INFO] [stdout] e2bd0df11c31889cc2ee403af54c794cad9149bc316d0a5712a1adecd3d89cc3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\selfup\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 9d0ce11b264e2e27d1e8399ad50e5d983cd0a9086d0319314dedc10746344041
+[INFO] running `"docker" "start" "-a" "9d0ce11b264e2e27d1e8399ad50e5d983cd0a9086d0319314dedc10746344041"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_struct-5ae5f85d79710298.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test collision::it_can_tell_if_a_bike_died ... ok
+[INFO] [stdout] test collision::it_can_tell_if_a_bike_is_alive ... ok
+[INFO] [stdout] test it_can_log_all_positions ... ok
+[INFO] [stdout] test it_can_move ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9d0ce11b264e2e27d1e8399ad50e5d983cd0a9086d0319314dedc10746344041"`
+[INFO] running `"docker" "rm" "-f" "9d0ce11b264e2e27d1e8399ad50e5d983cd0a9086d0319314dedc10746344041"`
+[INFO] [stdout] 9d0ce11b264e2e27d1e8399ad50e5d983cd0a9086d0319314dedc10746344041

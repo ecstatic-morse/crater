@@ -1,0 +1,85 @@
+[INFO] fetching crate specs-mirror 0.5.0...
+[INFO] extracting crate specs-mirror 0.5.0 into work\ex\default\sources\nightly\reg\specs-mirror\0.5.0
+[INFO] extracting crate specs-mirror 0.5.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\specs-mirror\0.5.0
+[INFO] validating manifest of specs-mirror-0.5.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of specs-mirror-0.5.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing specs-mirror-0.5.0
+[INFO] finished frobbing specs-mirror-0.5.0
+[INFO] frobbed toml for specs-mirror-0.5.0 written to work\ex\default\sources\nightly\reg\specs-mirror\0.5.0\Cargo.toml
+[INFO] started frobbing specs-mirror-0.5.0
+[INFO] finished frobbing specs-mirror-0.5.0
+[INFO] frobbed toml for specs-mirror-0.5.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\specs-mirror\0.5.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded specs v0.12.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing specs-mirror-0.5.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\specs-mirror\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c3a6bdf90d776d85b82eee8cfffc51c59bcd974d685df26ae72f0fc122168be2
+[INFO] running `"docker" "start" "-a" "c3a6bdf90d776d85b82eee8cfffc51c59bcd974d685df26ae72f0fc122168be2"`
+[INFO] [stderr]    Compiling arrayvec v0.4.11
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling atom v0.3.5
+[INFO] [stderr]    Compiling mopa v0.2.2
+[INFO] [stderr]    Compiling crossbeam v0.3.2
+[INFO] [stderr]    Compiling tuple_utils v0.2.0
+[INFO] [stderr]    Compiling shrev v1.1.1
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling fxhash v0.2.1
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling rayon-core v1.5.0
+[INFO] [stderr]    Compiling rayon v1.1.0
+[INFO] [stderr]    Compiling shred v0.7.2
+[INFO] [stderr]    Compiling hibitset v0.5.4
+[INFO] [stderr]    Compiling derivative v1.0.2
+[INFO] [stderr]    Compiling shred-derive v0.5.1
+[INFO] [stderr]    Compiling specs v0.12.3
+[INFO] [stderr]    Compiling specs-mirror v0.5.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 31s
+[INFO] running `"docker" "inspect" "c3a6bdf90d776d85b82eee8cfffc51c59bcd974d685df26ae72f0fc122168be2"`
+[INFO] running `"docker" "rm" "-f" "c3a6bdf90d776d85b82eee8cfffc51c59bcd974d685df26ae72f0fc122168be2"`
+[INFO] [stdout] c3a6bdf90d776d85b82eee8cfffc51c59bcd974d685df26ae72f0fc122168be2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\specs-mirror\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a8a1f75db82dec72503b094dd3a9884f4d89a2452961590d59062543a1cdd71c
+[INFO] running `"docker" "start" "-a" "a8a1f75db82dec72503b094dd3a9884f4d89a2452961590d59062543a1cdd71c"`
+[INFO] [stderr]    Compiling cassowary v0.3.0
+[INFO] [stderr]    Compiling specs-mirror v0.5.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.53s
+[INFO] running `"docker" "inspect" "a8a1f75db82dec72503b094dd3a9884f4d89a2452961590d59062543a1cdd71c"`
+[INFO] running `"docker" "rm" "-f" "a8a1f75db82dec72503b094dd3a9884f4d89a2452961590d59062543a1cdd71c"`
+[INFO] [stdout] a8a1f75db82dec72503b094dd3a9884f4d89a2452961590d59062543a1cdd71c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\specs-mirror\\0.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 5ce112756c90f8599cdc07cd73c6ccaab5bf9b4f9c9890ecabe74c6663acaada
+[INFO] running `"docker" "start" "-a" "5ce112756c90f8599cdc07cd73c6ccaab5bf9b4f9c9890ecabe74c6663acaada"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.82s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\specs_mirror-ddd7c807e958680a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mirror-f8ddd924e22b338d.exe
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests specs-mirror
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "5ce112756c90f8599cdc07cd73c6ccaab5bf9b4f9c9890ecabe74c6663acaada"`
+[INFO] running `"docker" "rm" "-f" "5ce112756c90f8599cdc07cd73c6ccaab5bf9b4f9c9890ecabe74c6663acaada"`
+[INFO] [stdout] 5ce112756c90f8599cdc07cd73c6ccaab5bf9b4f9c9890ecabe74c6663acaada

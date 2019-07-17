@@ -1,0 +1,119 @@
+[INFO] fetching crate oxygengine-network-backend-desktop 0.3.14...
+[INFO] extracting crate oxygengine-network-backend-desktop 0.3.14 into work\ex\default\sources\stable\reg\oxygengine-network-backend-desktop\0.3.14
+[INFO] extracting crate oxygengine-network-backend-desktop 0.3.14 into work\ex\default\sources\beta\reg\oxygengine-network-backend-desktop\0.3.14
+[INFO] validating manifest of oxygengine-network-backend-desktop-0.3.14 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of oxygengine-network-backend-desktop-0.3.14 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing oxygengine-network-backend-desktop-0.3.14
+[INFO] finished frobbing oxygengine-network-backend-desktop-0.3.14
+[INFO] frobbed toml for oxygengine-network-backend-desktop-0.3.14 written to work\ex\default\sources\stable\reg\oxygengine-network-backend-desktop\0.3.14\Cargo.toml
+[INFO] started frobbing oxygengine-network-backend-desktop-0.3.14
+[INFO] finished frobbing oxygengine-network-backend-desktop-0.3.14
+[INFO] frobbed toml for oxygengine-network-backend-desktop-0.3.14 written to work\ex\default\sources\beta\reg\oxygengine-network-backend-desktop\0.3.14\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded oxygengine-network v0.3.14
+[INFO] [stderr]   Downloaded oxygengine-core v0.3.14
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing oxygengine-network-backend-desktop-0.3.14 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\oxygengine-network-backend-desktop\\0.3.14,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 07ab1ef986cf58783515d75d0030276194c12d11ca814754548e9b71e1cafb0e
+[INFO] running `"docker" "start" "-a" "07ab1ef986cf58783515d75d0030276194c12d11ca814754548e9b71e1cafb0e"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand_core v0.4.0
+[INFO] [stderr]    Compiling arrayvec v0.4.11
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling nonzero_signed v1.0.3
+[INFO] [stderr]    Compiling mopa v0.2.2
+[INFO] [stderr]    Compiling atom v0.3.5
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling byte-tools v0.3.1
+[INFO] [stderr]    Compiling tuple_utils v0.2.0
+[INFO] [stderr]    Compiling shrev v1.1.1
+[INFO] [stderr]    Compiling slab v0.4.2
+[INFO] [stderr]    Compiling httparse v1.3.4
+[INFO] [stderr]    Compiling lazycell v1.2.1
+[INFO] [stderr]    Compiling opaque-debug v0.2.2
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling hibitset v0.5.4
+[INFO] [stderr]    Compiling block-padding v0.1.4
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling fxhash v0.2.1
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling crossbeam-epoch v0.6.1
+[INFO] [stderr]    Compiling crossbeam-epoch v0.5.2
+[INFO] [stderr]    Compiling shred v0.7.2
+[INFO] [stderr]    Compiling block-buffer v0.7.3
+[INFO] [stderr]    Compiling digest v0.8.1
+[INFO] [stderr]    Compiling crossbeam-deque v0.5.2
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling rand v0.5.6
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling sha-1 v0.8.1
+[INFO] [stderr]    Compiling parking_lot_core v0.3.1
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling parking_lot v0.6.4
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling crossbeam-channel v0.2.6
+[INFO] [stderr]    Compiling crossbeam v0.4.1
+[INFO] [stderr]    Compiling mio-extras v2.0.5
+[INFO] [stderr]    Compiling ws v0.8.1
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling shred-derive v0.5.1
+[INFO] [stderr]    Compiling derivative v1.0.2
+[INFO] [stderr]    Compiling specs v0.14.3
+[INFO] [stderr]    Compiling specs-hierarchy v0.3.1
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling oxygengine-core v0.3.14
+[INFO] [stderr]    Compiling oxygengine-network v0.3.14
+[INFO] [stderr]    Compiling oxygengine-network-backend-desktop v0.3.14 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4m 01s
+[INFO] running `"docker" "inspect" "07ab1ef986cf58783515d75d0030276194c12d11ca814754548e9b71e1cafb0e"`
+[INFO] running `"docker" "rm" "-f" "07ab1ef986cf58783515d75d0030276194c12d11ca814754548e9b71e1cafb0e"`
+[INFO] [stdout] 07ab1ef986cf58783515d75d0030276194c12d11ca814754548e9b71e1cafb0e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\oxygengine-network-backend-desktop\\0.3.14,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a50a938f6c3705ae903c8e85649efa71edaee502348cf2cbdcc822fec0cb20ce
+[INFO] running `"docker" "start" "-a" "a50a938f6c3705ae903c8e85649efa71edaee502348cf2cbdcc822fec0cb20ce"`
+[INFO] [stderr]    Compiling oxygengine-network-backend-desktop v0.3.14 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.57s
+[INFO] running `"docker" "inspect" "a50a938f6c3705ae903c8e85649efa71edaee502348cf2cbdcc822fec0cb20ce"`
+[INFO] running `"docker" "rm" "-f" "a50a938f6c3705ae903c8e85649efa71edaee502348cf2cbdcc822fec0cb20ce"`
+[INFO] [stdout] a50a938f6c3705ae903c8e85649efa71edaee502348cf2cbdcc822fec0cb20ce
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\oxygengine-network-backend-desktop\\0.3.14,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] c6e17acbd8a528890f0a8cb21efe2ba72e487a91e79918542c8bf0d69be26778
+[INFO] running `"docker" "start" "-a" "c6e17acbd8a528890f0a8cb21efe2ba72e487a91e79918542c8bf0d69be26778"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.88s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\oxygengine_network_backend_desktop-bd13e4a1d1795bf7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] Send message
+[INFO] [stdout] Client got message Binary([0, 0, 0, 42, 0, 0, 0, 1])
+[INFO] [stdout] test tests::test_general ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests oxygengine-network-backend-desktop
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c6e17acbd8a528890f0a8cb21efe2ba72e487a91e79918542c8bf0d69be26778"`
+[INFO] running `"docker" "rm" "-f" "c6e17acbd8a528890f0a8cb21efe2ba72e487a91e79918542c8bf0d69be26778"`
+[INFO] [stdout] c6e17acbd8a528890f0a8cb21efe2ba72e487a91e79918542c8bf0d69be26778

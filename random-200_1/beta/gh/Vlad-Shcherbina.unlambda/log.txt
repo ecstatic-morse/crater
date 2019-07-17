@@ -1,0 +1,35 @@
+[INFO] cloning repository Vlad-Shcherbina/unlambda
+[INFO] running `"git" "clone" "--bare" "git://github.com/Vlad-Shcherbina/unlambda.git" "work\\cache\\sources\\gh\\Vlad-Shcherbina\\unlambda"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Vlad-Shcherbina\unlambda'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Vlad-Shcherbina\\unlambda" "work\\ex\\default\\sources\\stable\\gh\\Vlad-Shcherbina\\unlambda"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Vlad-Shcherbina\unlambda'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Vlad-Shcherbina\\unlambda" "work\\ex\\default\\sources\\beta\\gh\\Vlad-Shcherbina\\unlambda"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Vlad-Shcherbina\unlambda'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 52631e1dc562794e9301d20707797ad8351ea4c5
+[INFO] sha for GitHub repo Vlad-Shcherbina/unlambda: 52631e1dc562794e9301d20707797ad8351ea4c5
+[INFO] validating manifest of Vlad-Shcherbina/unlambda on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Vlad-Shcherbina/unlambda on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Vlad-Shcherbina/unlambda
+[INFO] removed workspace from Vlad-Shcherbina/unlambda
+[INFO] removed path dependency rc_stack from Vlad-Shcherbina/unlambda
+[INFO] finished frobbing Vlad-Shcherbina/unlambda
+[INFO] frobbed toml for Vlad-Shcherbina/unlambda written to work\ex\default\sources\stable\gh\Vlad-Shcherbina\unlambda\Cargo.toml
+[INFO] started frobbing Vlad-Shcherbina/unlambda
+[INFO] removed workspace from Vlad-Shcherbina/unlambda
+[INFO] removed path dependency rc_stack from Vlad-Shcherbina/unlambda
+[INFO] finished frobbing Vlad-Shcherbina/unlambda
+[INFO] frobbed toml for Vlad-Shcherbina/unlambda written to work\ex\default\sources\beta\gh\Vlad-Shcherbina\unlambda\Cargo.toml
+[INFO] crate Vlad-Shcherbina/unlambda already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Updating crates.io index
+[INFO] [stderr] error: no matching package named `rc_stack` found
+[INFO] [stderr] location searched: registry `https://github.com/rust-lang/crates.io-index`
+[INFO] [stderr] required by package `unlambda v0.1.0 (C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\Vlad-Shcherbina\unlambda)`
+[ERROR] this task or one of its parent failed!
+[ERROR] command `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"` failed

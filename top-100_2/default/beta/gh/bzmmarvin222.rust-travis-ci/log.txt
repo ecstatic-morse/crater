@@ -1,0 +1,69 @@
+[INFO] cloning repository bzmmarvin222/rust-travis-ci
+[INFO] running `"git" "clone" "--bare" "git://github.com/bzmmarvin222/rust-travis-ci.git" "work\\cache\\sources\\gh\\bzmmarvin222\\rust-travis-ci"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\bzmmarvin222\rust-travis-ci'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\bzmmarvin222\\rust-travis-ci" "work\\ex\\default\\sources\\stable\\gh\\bzmmarvin222\\rust-travis-ci"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\bzmmarvin222\rust-travis-ci'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\bzmmarvin222\\rust-travis-ci" "work\\ex\\default\\sources\\beta\\gh\\bzmmarvin222\\rust-travis-ci"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\bzmmarvin222\rust-travis-ci'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3ceb6a00aaf3a230abf7300563c54b1ba0fc1e01
+[INFO] sha for GitHub repo bzmmarvin222/rust-travis-ci: 3ceb6a00aaf3a230abf7300563c54b1ba0fc1e01
+[INFO] validating manifest of bzmmarvin222/rust-travis-ci on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bzmmarvin222/rust-travis-ci on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bzmmarvin222/rust-travis-ci
+[INFO] finished frobbing bzmmarvin222/rust-travis-ci
+[INFO] frobbed toml for bzmmarvin222/rust-travis-ci written to work\ex\default\sources\stable\gh\bzmmarvin222\rust-travis-ci\Cargo.toml
+[INFO] started frobbing bzmmarvin222/rust-travis-ci
+[INFO] finished frobbing bzmmarvin222/rust-travis-ci
+[INFO] frobbed toml for bzmmarvin222/rust-travis-ci written to work\ex\default\sources\beta\gh\bzmmarvin222\rust-travis-ci\Cargo.toml
+[INFO] crate bzmmarvin222/rust-travis-ci already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded itertools v0.7.8
+[INFO] [stderr]   Downloaded derive_builder_core v0.2.0
+[INFO] [stderr]   Downloaded derive_builder v0.5.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bzmmarvin222/rust-travis-ci against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\bzmmarvin222\\rust-travis-ci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 59e0a8b07ca0b86de63fb3e35e069ab157f679b1cb47caff1e6a53a95ae51a2f
+[INFO] running `"docker" "start" "-a" "59e0a8b07ca0b86de63fb3e35e069ab157f679b1cb47caff1e6a53a95ae51a2f"`
+[INFO] [stderr]    Compiling derive_builder v0.5.1
+[INFO] [stderr]    Compiling either v1.5.0
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling itertools v0.7.8
+[INFO] [stderr]    Compiling derive_builder_core v0.2.0
+[INFO] [stderr]    Compiling rust-travis-ci v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 23.24s
+[INFO] running `"docker" "inspect" "59e0a8b07ca0b86de63fb3e35e069ab157f679b1cb47caff1e6a53a95ae51a2f"`
+[INFO] running `"docker" "rm" "-f" "59e0a8b07ca0b86de63fb3e35e069ab157f679b1cb47caff1e6a53a95ae51a2f"`
+[INFO] [stdout] 59e0a8b07ca0b86de63fb3e35e069ab157f679b1cb47caff1e6a53a95ae51a2f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\bzmmarvin222\\rust-travis-ci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e82686ecd32156eb76b96f3762a29ecb64ae08e05a8bcab7afd697e602612af9
+[INFO] running `"docker" "start" "-a" "e82686ecd32156eb76b96f3762a29ecb64ae08e05a8bcab7afd697e602612af9"`
+[INFO] [stderr]    Compiling rust-travis-ci v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.29s
+[INFO] running `"docker" "inspect" "e82686ecd32156eb76b96f3762a29ecb64ae08e05a8bcab7afd697e602612af9"`
+[INFO] running `"docker" "rm" "-f" "e82686ecd32156eb76b96f3762a29ecb64ae08e05a8bcab7afd697e602612af9"`
+[INFO] [stdout] e82686ecd32156eb76b96f3762a29ecb64ae08e05a8bcab7afd697e602612af9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\bzmmarvin222\\rust-travis-ci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] e77ed8047e9325af29cecec9eb75d8759853093f77c9328603d0527f7d5a65c2
+[INFO] running `"docker" "start" "-a" "e77ed8047e9325af29cecec9eb75d8759853093f77c9328603d0527f7d5a65c2"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_travis_ci-3624af23629bdf6c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test tests::demo_all_false_returns_false ... ok
+[INFO] [stdout] test tests::demo_any_true_returns_true ... ok
+[INFO] [stdout] test tests::demo_all_true_returns_true ... ok
+[INFO] [stdout] test tests::demo_any_false_returns_false ... ok
+[INFO] [stdout] test tests::get_four_returns_4 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e77ed8047e9325af29cecec9eb75d8759853093f77c9328603d0527f7d5a65c2"`
+[INFO] running `"docker" "rm" "-f" "e77ed8047e9325af29cecec9eb75d8759853093f77c9328603d0527f7d5a65c2"`
+[INFO] [stdout] e77ed8047e9325af29cecec9eb75d8759853093f77c9328603d0527f7d5a65c2

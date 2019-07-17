@@ -1,0 +1,55 @@
+[INFO] cloning repository tuyentv96/hello-world-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/tuyentv96/hello-world-rust.git" "work\\cache\\sources\\gh\\tuyentv96\\hello-world-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\tuyentv96\hello-world-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tuyentv96\\hello-world-rust" "work\\ex\\default\\sources\\nightly\\gh\\tuyentv96\\hello-world-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\tuyentv96\hello-world-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tuyentv96\\hello-world-rust" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\tuyentv96\\hello-world-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\tuyentv96\hello-world-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 70a3e50d8e41258ed6c3fc778c51b0d59c58cdbe
+[INFO] sha for GitHub repo tuyentv96/hello-world-rust: 70a3e50d8e41258ed6c3fc778c51b0d59c58cdbe
+[INFO] validating manifest of tuyentv96/hello-world-rust on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tuyentv96/hello-world-rust on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tuyentv96/hello-world-rust
+[INFO] finished frobbing tuyentv96/hello-world-rust
+[INFO] frobbed toml for tuyentv96/hello-world-rust written to work\ex\default\sources\nightly\gh\tuyentv96\hello-world-rust\Cargo.toml
+[INFO] started frobbing tuyentv96/hello-world-rust
+[INFO] finished frobbing tuyentv96/hello-world-rust
+[INFO] frobbed toml for tuyentv96/hello-world-rust written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\tuyentv96\hello-world-rust\Cargo.toml
+[INFO] crate tuyentv96/hello-world-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tuyentv96/hello-world-rust against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\tuyentv96\\hello-world-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 221dd7cd4080493cd5ba7e71b039a2950e9981179c0ccc789c5ceacca6d6b5b4
+[INFO] running `"docker" "start" "-a" "221dd7cd4080493cd5ba7e71b039a2950e9981179c0ccc789c5ceacca6d6b5b4"`
+[INFO] [stderr]    Compiling hello-world v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.27s
+[INFO] running `"docker" "inspect" "221dd7cd4080493cd5ba7e71b039a2950e9981179c0ccc789c5ceacca6d6b5b4"`
+[INFO] running `"docker" "rm" "-f" "221dd7cd4080493cd5ba7e71b039a2950e9981179c0ccc789c5ceacca6d6b5b4"`
+[INFO] [stdout] 221dd7cd4080493cd5ba7e71b039a2950e9981179c0ccc789c5ceacca6d6b5b4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\tuyentv96\\hello-world-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] b21f367f51fda8bb132871055a616e31fef9e833d3f038a4de62453e6b01fec4
+[INFO] running `"docker" "start" "-a" "b21f367f51fda8bb132871055a616e31fef9e833d3f038a4de62453e6b01fec4"`
+[INFO] [stderr]    Compiling hello-world v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.27s
+[INFO] running `"docker" "inspect" "b21f367f51fda8bb132871055a616e31fef9e833d3f038a4de62453e6b01fec4"`
+[INFO] running `"docker" "rm" "-f" "b21f367f51fda8bb132871055a616e31fef9e833d3f038a4de62453e6b01fec4"`
+[INFO] [stdout] b21f367f51fda8bb132871055a616e31fef9e833d3f038a4de62453e6b01fec4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\tuyentv96\\hello-world-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 63d84b767c48f66e8d978792d492332dc543aa942524a92d12f4ce7d7d1fe0af
+[INFO] running `"docker" "start" "-a" "63d84b767c48f66e8d978792d492332dc543aa942524a92d12f4ce7d7d1fe0af"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hello_world-af468a6192a8426d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "63d84b767c48f66e8d978792d492332dc543aa942524a92d12f4ce7d7d1fe0af"`
+[INFO] running `"docker" "rm" "-f" "63d84b767c48f66e8d978792d492332dc543aa942524a92d12f4ce7d7d1fe0af"`
+[INFO] [stdout] 63d84b767c48f66e8d978792d492332dc543aa942524a92d12f4ce7d7d1fe0af

@@ -1,0 +1,56 @@
+[INFO] cloning repository rikshot/testbed
+[INFO] running `"git" "clone" "--bare" "git://github.com/rikshot/testbed.git" "work\\cache\\sources\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rikshot\testbed'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rikshot\\testbed" "work\\ex\\default\\sources\\nightly\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\rikshot\testbed'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rikshot\\testbed" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rikshot\testbed'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4677de644f3313e5cc0d8c7bf85a6b7d02c06b72
+[INFO] sha for GitHub repo rikshot/testbed: 4677de644f3313e5cc0d8c7bf85a6b7d02c06b72
+[INFO] validating manifest of rikshot/testbed on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rikshot/testbed on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rikshot/testbed
+[INFO] finished frobbing rikshot/testbed
+[INFO] frobbed toml for rikshot/testbed written to work\ex\default\sources\nightly\gh\rikshot\testbed\Cargo.toml
+[INFO] started frobbing rikshot/testbed
+[INFO] finished frobbing rikshot/testbed
+[INFO] frobbed toml for rikshot/testbed written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rikshot\testbed\Cargo.toml
+[INFO] crate rikshot/testbed already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rikshot/testbed against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] a5911f0cb1f66eac7afe24f1dbbdf82e223d99b73280e18261d198c38cca4b26
+[INFO] running `"docker" "start" "-a" "a5911f0cb1f66eac7afe24f1dbbdf82e223d99b73280e18261d198c38cca4b26"`
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.71s
+[INFO] running `"docker" "inspect" "a5911f0cb1f66eac7afe24f1dbbdf82e223d99b73280e18261d198c38cca4b26"`
+[INFO] running `"docker" "rm" "-f" "a5911f0cb1f66eac7afe24f1dbbdf82e223d99b73280e18261d198c38cca4b26"`
+[INFO] [stdout] a5911f0cb1f66eac7afe24f1dbbdf82e223d99b73280e18261d198c38cca4b26
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4eaf15a8c7d7d59fffcd673fab0dd0432b41a0a4102d2c03126bb5959e438471
+[INFO] running `"docker" "start" "-a" "4eaf15a8c7d7d59fffcd673fab0dd0432b41a0a4102d2c03126bb5959e438471"`
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.65s
+[INFO] running `"docker" "inspect" "4eaf15a8c7d7d59fffcd673fab0dd0432b41a0a4102d2c03126bb5959e438471"`
+[INFO] running `"docker" "rm" "-f" "4eaf15a8c7d7d59fffcd673fab0dd0432b41a0a4102d2c03126bb5959e438471"`
+[INFO] [stdout] 4eaf15a8c7d7d59fffcd673fab0dd0432b41a0a4102d2c03126bb5959e438471
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 32d0c4089650b5664178ba4be40f8901cb5cbbcb266a88ea1ccb459cf6d4654b
+[INFO] running `"docker" "start" "-a" "32d0c4089650b5664178ba4be40f8901cb5cbbcb266a88ea1ccb459cf6d4654b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.32s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mandelbrot-ae6f90d46fe3531f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test parse ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "32d0c4089650b5664178ba4be40f8901cb5cbbcb266a88ea1ccb459cf6d4654b"`
+[INFO] running `"docker" "rm" "-f" "32d0c4089650b5664178ba4be40f8901cb5cbbcb266a88ea1ccb459cf6d4654b"`
+[INFO] [stdout] 32d0c4089650b5664178ba4be40f8901cb5cbbcb266a88ea1ccb459cf6d4654b

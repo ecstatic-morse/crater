@@ -1,0 +1,57 @@
+[INFO] cloning repository wasmup/euler11
+[INFO] running `"git" "clone" "--bare" "git://github.com/wasmup/euler11.git" "work\\cache\\sources\\gh\\wasmup\\euler11"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\wasmup\euler11'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\wasmup\\euler11" "work\\ex\\default\\sources\\nightly\\gh\\wasmup\\euler11"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\wasmup\euler11'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\wasmup\\euler11" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\wasmup\\euler11"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\wasmup\euler11'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4f209d15ccfe0047b0b9e76845c50ba36aa65916
+[INFO] sha for GitHub repo wasmup/euler11: 4f209d15ccfe0047b0b9e76845c50ba36aa65916
+[INFO] validating manifest of wasmup/euler11 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of wasmup/euler11 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing wasmup/euler11
+[INFO] finished frobbing wasmup/euler11
+[INFO] frobbed toml for wasmup/euler11 written to work\ex\default\sources\nightly\gh\wasmup\euler11\Cargo.toml
+[INFO] started frobbing wasmup/euler11
+[INFO] finished frobbing wasmup/euler11
+[INFO] frobbed toml for wasmup/euler11 written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\wasmup\euler11\Cargo.toml
+[INFO] crate wasmup/euler11 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing wasmup/euler11 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\wasmup\\euler11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 6fac5ca89d037b3ad022658c11046bc230cba4fac6a1e731e63585943097a281
+[INFO] running `"docker" "start" "-a" "6fac5ca89d037b3ad022658c11046bc230cba4fac6a1e731e63585943097a281"`
+[INFO] [stderr]    Compiling euler11 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.93s
+[INFO] running `"docker" "inspect" "6fac5ca89d037b3ad022658c11046bc230cba4fac6a1e731e63585943097a281"`
+[INFO] running `"docker" "rm" "-f" "6fac5ca89d037b3ad022658c11046bc230cba4fac6a1e731e63585943097a281"`
+[INFO] [stdout] 6fac5ca89d037b3ad022658c11046bc230cba4fac6a1e731e63585943097a281
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\wasmup\\euler11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 873c39a4ecca1be2c97815f7e5511eaf7fb95f7395bc8fdc44d0e6c868dc419c
+[INFO] running `"docker" "start" "-a" "873c39a4ecca1be2c97815f7e5511eaf7fb95f7395bc8fdc44d0e6c868dc419c"`
+[INFO] [stderr]    Compiling euler11 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.45s
+[INFO] running `"docker" "inspect" "873c39a4ecca1be2c97815f7e5511eaf7fb95f7395bc8fdc44d0e6c868dc419c"`
+[INFO] running `"docker" "rm" "-f" "873c39a4ecca1be2c97815f7e5511eaf7fb95f7395bc8fdc44d0e6c868dc419c"`
+[INFO] [stdout] 873c39a4ecca1be2c97815f7e5511eaf7fb95f7395bc8fdc44d0e6c868dc419c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\wasmup\\euler11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] b49b752602f0f1ff211f602168764f376f28e547279e57f82a1354c989a1d2ab
+[INFO] running `"docker" "start" "-a" "b49b752602f0f1ff211f602168764f376f28e547279e57f82a1354c989a1d2ab"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\euler11-5d316e409475b724.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b49b752602f0f1ff211f602168764f376f28e547279e57f82a1354c989a1d2ab"`
+[INFO] running `"docker" "rm" "-f" "b49b752602f0f1ff211f602168764f376f28e547279e57f82a1354c989a1d2ab"`
+[INFO] [stdout] b49b752602f0f1ff211f602168764f376f28e547279e57f82a1354c989a1d2ab

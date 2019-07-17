@@ -1,0 +1,54 @@
+[INFO] fetching crate swirl 0.0.1...
+[INFO] extracting crate swirl 0.0.1 into work\ex\default\sources\nightly\reg\swirl\0.0.1
+[INFO] extracting crate swirl 0.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\swirl\0.0.1
+[INFO] validating manifest of swirl-0.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of swirl-0.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing swirl-0.0.1
+[INFO] finished frobbing swirl-0.0.1
+[INFO] frobbed toml for swirl-0.0.1 written to work\ex\default\sources\nightly\reg\swirl\0.0.1\Cargo.toml
+[INFO] started frobbing swirl-0.0.1
+[INFO] finished frobbing swirl-0.0.1
+[INFO] frobbed toml for swirl-0.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\swirl\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing swirl-0.0.1 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\swirl\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5c73e2c48e19f5c8f534b548dc72a9e48d1ec6fa556e90eb36e8eee4c7f0d496
+[INFO] running `"docker" "start" "-a" "5c73e2c48e19f5c8f534b548dc72a9e48d1ec6fa556e90eb36e8eee4c7f0d496"`
+[INFO] [stderr]    Compiling swirl v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.79s
+[INFO] running `"docker" "inspect" "5c73e2c48e19f5c8f534b548dc72a9e48d1ec6fa556e90eb36e8eee4c7f0d496"`
+[INFO] running `"docker" "rm" "-f" "5c73e2c48e19f5c8f534b548dc72a9e48d1ec6fa556e90eb36e8eee4c7f0d496"`
+[INFO] [stdout] 5c73e2c48e19f5c8f534b548dc72a9e48d1ec6fa556e90eb36e8eee4c7f0d496
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\swirl\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2dca71bf728d985b23995d0fc431ed0176365c3a0203dec6ce7745c3c2bda320
+[INFO] running `"docker" "start" "-a" "2dca71bf728d985b23995d0fc431ed0176365c3a0203dec6ce7745c3c2bda320"`
+[INFO] [stderr]    Compiling swirl v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.79s
+[INFO] running `"docker" "inspect" "2dca71bf728d985b23995d0fc431ed0176365c3a0203dec6ce7745c3c2bda320"`
+[INFO] running `"docker" "rm" "-f" "2dca71bf728d985b23995d0fc431ed0176365c3a0203dec6ce7745c3c2bda320"`
+[INFO] [stdout] 2dca71bf728d985b23995d0fc431ed0176365c3a0203dec6ce7745c3c2bda320
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\swirl\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 86b4b258a7d58a9e7c5a45a45b84b28f19d325e2ea6e2d3e29dfb782970b5522
+[INFO] running `"docker" "start" "-a" "86b4b258a7d58a9e7c5a45a45b84b28f19d325e2ea6e2d3e29dfb782970b5522"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.16s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\swirl-c11dcea66cae55db.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests swirl
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "86b4b258a7d58a9e7c5a45a45b84b28f19d325e2ea6e2d3e29dfb782970b5522"`
+[INFO] running `"docker" "rm" "-f" "86b4b258a7d58a9e7c5a45a45b84b28f19d325e2ea6e2d3e29dfb782970b5522"`
+[INFO] [stdout] 86b4b258a7d58a9e7c5a45a45b84b28f19d325e2ea6e2d3e29dfb782970b5522

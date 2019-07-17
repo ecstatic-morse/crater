@@ -1,0 +1,58 @@
+[INFO] fetching crate bytehash 3.0.0...
+[INFO] extracting crate bytehash 3.0.0 into work\ex\default\sources\nightly\reg\bytehash\3.0.0
+[INFO] extracting crate bytehash 3.0.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytehash\3.0.0
+[INFO] validating manifest of bytehash-3.0.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bytehash-3.0.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bytehash-3.0.0
+[INFO] finished frobbing bytehash-3.0.0
+[INFO] frobbed toml for bytehash-3.0.0 written to work\ex\default\sources\nightly\reg\bytehash\3.0.0\Cargo.toml
+[INFO] started frobbing bytehash-3.0.0
+[INFO] finished frobbing bytehash-3.0.0
+[INFO] frobbed toml for bytehash-3.0.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytehash\3.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing bytehash-3.0.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\bytehash\\3.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ace64ce0840ea9f5ed98bfc4d9baf7a51582c9719dc1d23b9bfc8195625a1782
+[INFO] running `"docker" "start" "-a" "ace64ce0840ea9f5ed98bfc4d9baf7a51582c9719dc1d23b9bfc8195625a1782"`
+[INFO] [stderr]    Compiling constant_time_eq v0.1.3
+[INFO] [stderr]    Compiling blake2-rfc v0.2.18
+[INFO] [stderr]    Compiling bytehash v3.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.51s
+[INFO] running `"docker" "inspect" "ace64ce0840ea9f5ed98bfc4d9baf7a51582c9719dc1d23b9bfc8195625a1782"`
+[INFO] running `"docker" "rm" "-f" "ace64ce0840ea9f5ed98bfc4d9baf7a51582c9719dc1d23b9bfc8195625a1782"`
+[INFO] [stdout] ace64ce0840ea9f5ed98bfc4d9baf7a51582c9719dc1d23b9bfc8195625a1782
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\bytehash\\3.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d1bbcfdf7434f99ea7f1133c7045b33794e4a23c28c4b2f3355076e04d9fddd3
+[INFO] running `"docker" "start" "-a" "d1bbcfdf7434f99ea7f1133c7045b33794e4a23c28c4b2f3355076e04d9fddd3"`
+[INFO] [stderr]    Compiling bytehash v3.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.57s
+[INFO] running `"docker" "inspect" "d1bbcfdf7434f99ea7f1133c7045b33794e4a23c28c4b2f3355076e04d9fddd3"`
+[INFO] running `"docker" "rm" "-f" "d1bbcfdf7434f99ea7f1133c7045b33794e4a23c28c4b2f3355076e04d9fddd3"`
+[INFO] [stdout] d1bbcfdf7434f99ea7f1133c7045b33794e4a23c28c4b2f3355076e04d9fddd3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\bytehash\\3.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 4f92a6bcc18a57cb0b082a3ef290759cb31627201c011d6c1f916b3622a9b587
+[INFO] running `"docker" "start" "-a" "4f92a6bcc18a57cb0b082a3ef290759cb31627201c011d6c1f916b3622a9b587"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.20s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bytehash-d0b97638db584a61.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test tests::blake2b ... ok
+[INFO] [stdout] test tests::default ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests bytehash
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4f92a6bcc18a57cb0b082a3ef290759cb31627201c011d6c1f916b3622a9b587"`
+[INFO] running `"docker" "rm" "-f" "4f92a6bcc18a57cb0b082a3ef290759cb31627201c011d6c1f916b3622a9b587"`
+[INFO] [stdout] 4f92a6bcc18a57cb0b082a3ef290759cb31627201c011d6c1f916b3622a9b587

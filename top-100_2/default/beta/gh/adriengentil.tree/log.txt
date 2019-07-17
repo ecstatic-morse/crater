@@ -1,0 +1,50 @@
+[INFO] cloning repository adriengentil/tree
+[INFO] running `"git" "clone" "--bare" "git://github.com/adriengentil/tree.git" "work\\cache\\sources\\gh\\adriengentil\\tree"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\adriengentil\tree'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\adriengentil\\tree" "work\\ex\\default\\sources\\stable\\gh\\adriengentil\\tree"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\adriengentil\tree'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\adriengentil\\tree" "work\\ex\\default\\sources\\beta\\gh\\adriengentil\\tree"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\adriengentil\tree'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c464b4b0cc81564269fad314143a07141e40f944
+[INFO] sha for GitHub repo adriengentil/tree: c464b4b0cc81564269fad314143a07141e40f944
+[INFO] validating manifest of adriengentil/tree on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of adriengentil/tree on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing adriengentil/tree
+[INFO] finished frobbing adriengentil/tree
+[INFO] frobbed toml for adriengentil/tree written to work\ex\default\sources\stable\gh\adriengentil\tree\Cargo.toml
+[INFO] started frobbing adriengentil/tree
+[INFO] finished frobbing adriengentil/tree
+[INFO] frobbed toml for adriengentil/tree written to work\ex\default\sources\beta\gh\adriengentil\tree\Cargo.toml
+[INFO] crate adriengentil/tree already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing adriengentil/tree against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\adriengentil\\tree,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 5c685945a27d65d07b2e12886038d731fb01a6dceb76ccc66b7b9b80a3d3c3da
+[INFO] running `"docker" "start" "-a" "5c685945a27d65d07b2e12886038d731fb01a6dceb76ccc66b7b9b80a3d3c3da"`
+[INFO] [stderr]    Compiling tree v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]  --> src\main.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(test)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0601]: `main` function not found in crate `tree`
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: consider adding a `main` function to `src\main.rs`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0554, E0601.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0554`.
+[INFO] [stderr] error: Could not compile `tree`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "5c685945a27d65d07b2e12886038d731fb01a6dceb76ccc66b7b9b80a3d3c3da"`
+[INFO] running `"docker" "rm" "-f" "5c685945a27d65d07b2e12886038d731fb01a6dceb76ccc66b7b9b80a3d3c3da"`
+[INFO] [stdout] 5c685945a27d65d07b2e12886038d731fb01a6dceb76ccc66b7b9b80a3d3c3da

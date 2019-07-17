@@ -1,0 +1,68 @@
+[INFO] cloning repository eugene-eeo/emojify
+[INFO] running `"git" "clone" "--bare" "git://github.com/eugene-eeo/emojify.git" "work\\cache\\sources\\gh\\eugene-eeo\\emojify"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\eugene-eeo\emojify'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\eugene-eeo\\emojify" "work\\ex\\default\\sources\\nightly\\gh\\eugene-eeo\\emojify"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\eugene-eeo\emojify'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\eugene-eeo\\emojify" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\eugene-eeo\\emojify"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\eugene-eeo\emojify'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ba782b682b83708361902f12f16deb480d9ce0e9
+[INFO] sha for GitHub repo eugene-eeo/emojify: ba782b682b83708361902f12f16deb480d9ce0e9
+[INFO] validating manifest of eugene-eeo/emojify on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of eugene-eeo/emojify on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing eugene-eeo/emojify
+[INFO] finished frobbing eugene-eeo/emojify
+[INFO] frobbed toml for eugene-eeo/emojify written to work\ex\default\sources\nightly\gh\eugene-eeo\emojify\Cargo.toml
+[INFO] started frobbing eugene-eeo/emojify
+[INFO] finished frobbing eugene-eeo/emojify
+[INFO] frobbed toml for eugene-eeo/emojify written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\eugene-eeo\emojify\Cargo.toml
+[INFO] crate eugene-eeo/emojify already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\eugene-eeo\emojify\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing eugene-eeo/emojify against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\eugene-eeo\\emojify,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] a0f72a391c4d2f9ee31527148dce25505695d1eae6e1d2be4a1dd589f3dafb9b
+[INFO] running `"docker" "start" "-a" "a0f72a391c4d2f9ee31527148dce25505695d1eae6e1d2be4a1dd589f3dafb9b"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling utf8-ranges v0.1.3
+[INFO] [stderr]    Compiling regex-syntax v0.3.9
+[INFO] [stderr]    Compiling thread-id v2.0.0
+[INFO] [stderr]    Compiling memchr v0.1.11
+[INFO] [stderr]    Compiling thread_local v0.2.7
+[INFO] [stderr]    Compiling aho-corasick v0.5.3
+[INFO] [stderr]    Compiling regex v0.1.80
+[INFO] [stderr]    Compiling emojify v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 36.14s
+[INFO] running `"docker" "inspect" "a0f72a391c4d2f9ee31527148dce25505695d1eae6e1d2be4a1dd589f3dafb9b"`
+[INFO] running `"docker" "rm" "-f" "a0f72a391c4d2f9ee31527148dce25505695d1eae6e1d2be4a1dd589f3dafb9b"`
+[INFO] [stdout] a0f72a391c4d2f9ee31527148dce25505695d1eae6e1d2be4a1dd589f3dafb9b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\eugene-eeo\\emojify,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ee773c74a9c66ed9f2971d50a2d3364d68b55a96db75d4dbd17951ea9ef283ff
+[INFO] running `"docker" "start" "-a" "ee773c74a9c66ed9f2971d50a2d3364d68b55a96db75d4dbd17951ea9ef283ff"`
+[INFO] [stderr]    Compiling emojify v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.67s
+[INFO] running `"docker" "inspect" "ee773c74a9c66ed9f2971d50a2d3364d68b55a96db75d4dbd17951ea9ef283ff"`
+[INFO] running `"docker" "rm" "-f" "ee773c74a9c66ed9f2971d50a2d3364d68b55a96db75d4dbd17951ea9ef283ff"`
+[INFO] [stdout] ee773c74a9c66ed9f2971d50a2d3364d68b55a96db75d4dbd17951ea9ef283ff
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\eugene-eeo\\emojify,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 931baca3c2d32f91f398a0bf40354a026f884c5d6d917c20e8e2582699de78d5
+[INFO] running `"docker" "start" "-a" "931baca3c2d32f91f398a0bf40354a026f884c5d6d917c20e8e2582699de78d5"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.44s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\emojify-ae8d003f4f2dd271.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "931baca3c2d32f91f398a0bf40354a026f884c5d6d917c20e8e2582699de78d5"`
+[INFO] running `"docker" "rm" "-f" "931baca3c2d32f91f398a0bf40354a026f884c5d6d917c20e8e2582699de78d5"`
+[INFO] [stdout] 931baca3c2d32f91f398a0bf40354a026f884c5d6d917c20e8e2582699de78d5

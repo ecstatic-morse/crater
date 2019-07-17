@@ -1,0 +1,62 @@
+[INFO] fetching crate badge 0.2.0...
+[INFO] extracting crate badge 0.2.0 into work\ex\default\sources\nightly\reg\badge\0.2.0
+[INFO] extracting crate badge 0.2.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\badge\0.2.0
+[INFO] validating manifest of badge-0.2.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of badge-0.2.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing badge-0.2.0
+[INFO] finished frobbing badge-0.2.0
+[INFO] frobbed toml for badge-0.2.0 written to work\ex\default\sources\nightly\reg\badge\0.2.0\Cargo.toml
+[INFO] started frobbing badge-0.2.0
+[INFO] finished frobbing badge-0.2.0
+[INFO] frobbed toml for badge-0.2.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\badge\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded ordered-float v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing badge-0.2.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\badge\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e10f5ab3c829b2db021f1a93d4c18ea2953ea3213318f4e7aad4707ff7fb6391
+[INFO] running `"docker" "start" "-a" "e10f5ab3c829b2db021f1a93d4c18ea2953ea3213318f4e7aad4707ff7fb6391"`
+[INFO] [stderr]    Compiling arrayvec v0.4.11
+[INFO] [stderr]    Compiling stb_truetype v0.2.6
+[INFO] [stderr]    Compiling ordered-float v0.5.2
+[INFO] [stderr]    Compiling rusttype v0.4.3
+[INFO] [stderr]    Compiling badge v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.70s
+[INFO] running `"docker" "inspect" "e10f5ab3c829b2db021f1a93d4c18ea2953ea3213318f4e7aad4707ff7fb6391"`
+[INFO] running `"docker" "rm" "-f" "e10f5ab3c829b2db021f1a93d4c18ea2953ea3213318f4e7aad4707ff7fb6391"`
+[INFO] [stdout] e10f5ab3c829b2db021f1a93d4c18ea2953ea3213318f4e7aad4707ff7fb6391
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\badge\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7fde1d06ed2adb8d2b4992459f3c86e2538ee51743ef0fe6aaeb37cb270a5b72
+[INFO] running `"docker" "start" "-a" "7fde1d06ed2adb8d2b4992459f3c86e2538ee51743ef0fe6aaeb37cb270a5b72"`
+[INFO] [stderr]    Compiling badge v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.13s
+[INFO] running `"docker" "inspect" "7fde1d06ed2adb8d2b4992459f3c86e2538ee51743ef0fe6aaeb37cb270a5b72"`
+[INFO] running `"docker" "rm" "-f" "7fde1d06ed2adb8d2b4992459f3c86e2538ee51743ef0fe6aaeb37cb270a5b72"`
+[INFO] [stdout] 7fde1d06ed2adb8d2b4992459f3c86e2538ee51743ef0fe6aaeb37cb270a5b72
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\badge\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] fc1eb5ec00322c9c6f84f54dcdff0dae395870ab765107a190809bb6f29335d6
+[INFO] running `"docker" "start" "-a" "fc1eb5ec00322c9c6f84f54dcdff0dae395870ab765107a190809bb6f29335d6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.36s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\badge-b7e70d550ed36841.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test tests::test_to_svg ... ignored
+[INFO] [stdout] test tests::test_calculate_width ... ok
+[INFO] [stderr]    Doc-tests badge
+[INFO] [stdout] test tests::test_new ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fc1eb5ec00322c9c6f84f54dcdff0dae395870ab765107a190809bb6f29335d6"`
+[INFO] running `"docker" "rm" "-f" "fc1eb5ec00322c9c6f84f54dcdff0dae395870ab765107a190809bb6f29335d6"`
+[INFO] [stdout] fc1eb5ec00322c9c6f84f54dcdff0dae395870ab765107a190809bb6f29335d6

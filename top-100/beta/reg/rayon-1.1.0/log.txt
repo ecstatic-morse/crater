@@ -1,0 +1,1145 @@
+[INFO] fetching crate rayon 1.1.0...
+[INFO] extracting crate rayon 1.1.0 into work\ex\default\sources\stable\reg\rayon\1.1.0
+[INFO] extracting crate rayon 1.1.0 into work\ex\default\sources\beta\reg\rayon\1.1.0
+[INFO] validating manifest of rayon-1.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rayon-1.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rayon-1.1.0
+[INFO] finished frobbing rayon-1.1.0
+[INFO] frobbed toml for rayon-1.1.0 written to work\ex\default\sources\stable\reg\rayon\1.1.0\Cargo.toml
+[INFO] started frobbing rayon-1.1.0
+[INFO] finished frobbing rayon-1.1.0
+[INFO] frobbed toml for rayon-1.1.0 written to work\ex\default\sources\beta\reg\rayon\1.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rayon-1.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rayon\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] c4d06162243602be9ff840aa7663f8a875b23016331e4dee2cafb2284ddca38e
+[INFO] running `"docker" "start" "-a" "c4d06162243602be9ff840aa7663f8a875b23016331e4dee2cafb2284ddca38e"`
+[INFO] [stderr]    Compiling rayon v1.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.22s
+[INFO] running `"docker" "inspect" "c4d06162243602be9ff840aa7663f8a875b23016331e4dee2cafb2284ddca38e"`
+[INFO] running `"docker" "rm" "-f" "c4d06162243602be9ff840aa7663f8a875b23016331e4dee2cafb2284ddca38e"`
+[INFO] [stdout] c4d06162243602be9ff840aa7663f8a875b23016331e4dee2cafb2284ddca38e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rayon\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] aa70bb7568bf59ae3a83b84fa2e9735411f18711facfedd01acbea7894c2792c
+[INFO] running `"docker" "start" "-a" "aa70bb7568bf59ae3a83b84fa2e9735411f18711facfedd01acbea7894c2792c"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling rayon v1.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3m 17s
+[INFO] running `"docker" "inspect" "aa70bb7568bf59ae3a83b84fa2e9735411f18711facfedd01acbea7894c2792c"`
+[INFO] running `"docker" "rm" "-f" "aa70bb7568bf59ae3a83b84fa2e9735411f18711facfedd01acbea7894c2792c"`
+[INFO] [stdout] aa70bb7568bf59ae3a83b84fa2e9735411f18711facfedd01acbea7894c2792c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rayon\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] d1fceb32d29be192797118ea68b48ccfb471fc544fe4f101d0f47295270118d1
+[INFO] running `"docker" "start" "-a" "d1fceb32d29be192797118ea68b48ccfb471fc544fe4f101d0f47295270118d1"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.65s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rayon-ff3667f68787ec50.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 178 tests
+[INFO] [stderr] thread '<unnamed>' panicked at 'left consumer panic', src\iter\collect\test.rs:187:17
+[INFO] [stdout] test iter::collect::test::left_produces_fewer_items ... ok
+[INFO] [stdout] test iter::collect::test::left_produces_items_with_no_complete ... ok
+[INFO] [stderr] stack backtrace:
+[INFO] [stdout] test iter::collect::test::left_produces_too_many_items ... ok
+[INFO] [stderr]    0:     0x7ff6807d5fdc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff6807d5fdc - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff6807d949e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff6807d949e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff6807d9123 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff6807d9d30 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff680785ee1 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff6800bbf9f - rayon::iter::collect::test::left_panics::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\collect\test.rs:187
+[INFO] [stderr]    8:     0x7ff67ff3d0ef - rayon_core::join::join::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:101
+[INFO] [stderr]    9:     0x7ff67ff3a5fe - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   10:     0x7ff680606211 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff67fe2a98e - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff6807dd812 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff67fe024b0 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff680611461 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff680036f29 - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   16:     0x7ff67feef633 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   17:     0x7ff6800f9d8a - rayon_core::registry::{{impl}}::in_worker_cold::{{closure}}<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:495
+[INFO] [stderr]   18:     0x7ff68032fdd4 - rayon_core::job::{{impl}}::execute::{{closure}}<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   19:     0x7ff680607303 - std::panic::{{impl}}::call_once<((), ()),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   20:     0x7ff67fe30adc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   21:     0x7ff6807dd812 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   22:     0x7ff67fdb5faf - std::panicking::try<((), ()),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   23:     0x7ff680617b83 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   24:     0x7ff68002ce2a - rayon_core::unwind::halt_unwinding<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   25:     0x7ff6802aa232 - rayon_core::job::{{impl}}::execute<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   26:     0x7ff6807a8409 - rayon_core::job::JobRef::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:59
+[INFO] [stderr]   27:     0x7ff6807959dd - rayon_core::registry::WorkerThread::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:734
+[INFO] [stderr]   28:     0x7ff6807953f7 - rayon_core::registry::WorkerThread::wait_until_cold<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:718
+[INFO] [stderr]   29:     0x7ff680795274 - rayon_core::registry::WorkerThread::wait_until<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:692
+[INFO] [stderr]   30:     0x7ff68079620d - rayon_core::registry::main_loop
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:812
+[INFO] [stderr]   31:     0x7ff680792fba - rayon_core::registry::ThreadBuilder::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:58
+[INFO] [stderr]   32:     0x7ff680793546 - rayon_core::registry::{{impl}}::spawn::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:103
+[INFO] [stderr]   33:     0x7ff6807a7766 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]   34:     0x7ff680791786 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   35:     0x7ff680796cd6 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   36:     0x7ff680791e7c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   37:     0x7ff6807dd812 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout] test iter::collect::test::left_panics ... ok
+[INFO] [stderr]   38:     0x7ff6807918bf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   39:     0x7ff6807977b6 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   40:     0x7ff6807915a9 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   41:     0x7ff68078c3d3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stderr]   42:     0x7ff6807cace7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]   43:     0x7ff6807dc517 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]   44:     0x7ff6807dc517 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   45:     0x7ff6807dc517 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   46:     0x7ffa1e607974 - BaseThreadInitThunk
+[INFO] [stderr]   47:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stderr] thread '<unnamed>' panicked at 'right consumer panic', src\iter\collect\test.rs:218:17
+[INFO] [stdout] test iter::collect::test::produce_fewer_items ... ok
+[INFO] [stdout] test iter::collect::test::produce_too_many_items ... ok
+[INFO] [stderr] stack backtrace:
+[INFO] [stdout] test iter::collect::test::produces_items_with_no_complete ... ok
+[INFO] [stderr]    0:     0x7ff6807d5fdc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout] test iter::collect::test::right_panics ... ok
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout] test iter::find_first_last::test::find_first_folder_does_not_clobber_first_found ... ok
+[INFO] [stderr]    1:     0x7ff6807d5fdc - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff6807d949e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff6807d949e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff6807d9123 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff6807d9d30 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff680785ee1 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff6800bc3b2 - rayon::iter::collect::test::right_panics::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\collect\test.rs:218
+[INFO] [stderr]    8:     0x7ff67ff3dc2f - rayon_core::join::join::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:101
+[INFO] [stderr]    9:     0x7ff67ff25f84 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:127
+[INFO] [stderr]   10:     0x7ff6802326a4 - rayon_core::job::StackJob<rayon_core::latch::SpinLatch, closure, ()>::run_inline<rayon_core::latch::SpinLatch,closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:97
+[INFO] [stderr]   11:     0x7ff67fee0131 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:154
+[INFO] [stderr]   12:     0x7ff6800eb9da - rayon_core::registry::{{impl}}::in_worker_cold::{{closure}}<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:495
+[INFO] [stderr]   13:     0x7ff680335814 - rayon_core::job::{{impl}}::execute::{{closure}}<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   14:     0x7ff6805fea63 - std::panic::{{impl}}::call_once<((), ()),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   15:     0x7ff67fe2d1ac - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   16:     0x7ff6807dd812 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   17:     0x7ff67fdba95f - std::panicking::try<((), ()),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   18:     0x7ff6806164b3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   19:     0x7ff68003c00a - rayon_core::unwind::halt_unwinding<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   20:     0x7ff6802eab22 - rayon_core::job::{{impl}}::execute<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   21:     0x7ff6807a8409 - rayon_core::job::JobRef::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:59
+[INFO] [stderr]   22:     0x7ff6807959dd - rayon_core::registry::WorkerThread::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:734
+[INFO] [stderr]   23:     0x7ff6807953f7 - rayon_core::registry::WorkerThread::wait_until_cold<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:718
+[INFO] [stderr]   24:     0x7ff680795274 - rayon_core::registry::WorkerThread::wait_until<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:692
+[INFO] [stderr]   25:     0x7ff68079620d - rayon_core::registry::main_loop
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:812
+[INFO] [stderr]   26:     0x7ff680792fba - rayon_core::registry::ThreadBuilder::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:58
+[INFO] [stderr]   27:     0x7ff680793546 - rayon_core::registry::{{impl}}::spawn::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:103
+[INFO] [stderr]   28:     0x7ff6807a7766 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]   29:     0x7ff680791786 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   30:     0x7ff680796cd6 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   31:     0x7ff680791e7c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   32:     0x7ff6807dd812 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   33:     0x7ff6807918bf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   34:     0x7ff6807977b6 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   35:     0x7ff6807915a9 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stdout] test iter::find_first_last::test::find_last_folder_yields_last_match ... ok
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   36:     0x7ff68078c3d3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stderr]   37:     0x7ff6807cace7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]   38:     0x7ff6807dc517 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]   39:     0x7ff6807dc517 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   40:     0x7ff6807dc517 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   41:     0x7ffa1e607974 - BaseThreadInitThunk
+[INFO] [stderr]   42:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stdout] test iter::find_first_last::test::same_range_first_consumers_return_correct_answer ... ok
+[INFO] [stdout] test iter::find_first_last::test::same_range_last_consumers_return_correct_answer ... ok
+[INFO] [stdout] test iter::test::check_binary_heap ... ok
+[INFO] [stdout] test iter::test::check_btree_map ... ok
+[INFO] [stdout] test iter::collect::test::right_produces_fewer_items ... ok
+[INFO] [stdout] test iter::test::check_btree_set ... ok
+[INFO] [stdout] test iter::test::check_chain ... ok
+[INFO] [stdout] test iter::test::check_chunks_empty ... ok
+[INFO] [stdout] test iter::test::check_chunks ... ok
+[INFO] [stdout] test iter::test::check_chunks_len ... ok
+[INFO] [stdout] test iter::test::check_chunks_even_size ... ok
+[INFO] [stdout] test iter::test::check_chunks_mut ... ok
+[INFO] [stdout] test iter::test::check_chunks_uneven ... ok
+[INFO] [stdout] test iter::collect::test::right_produces_items_with_no_complete ... ok
+[INFO] [stdout] test iter::test::check_cmp_direct ... ok
+[INFO] [stdout] test iter::test::check_cmp_gt_direct ... ok
+[INFO] [stdout] test iter::test::check_cmp_gt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_cmp_lengths ... ok
+[INFO] [stdout] test iter::test::check_cmp_lt_direct ... ok
+[INFO] [stdout] test iter::test::check_cmp_lt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_cmp_short_circuit ... ok
+[INFO] [stdout] test iter::collect::test::right_produces_too_many_items ... ok
+[INFO] [stdout] test iter::test::check_cmp_to_seq ... ok
+[INFO] [stdout] test iter::test::check_count ... ok
+[INFO] [stdout] test iter::test::check_cmp_rng_to_seq ... ok
+[INFO] [stdout] test iter::test::check_drops ... ok
+[INFO] [stdout] test iter::test::check_either_extend ... ok
+[INFO] [stdout] test iter::test::check_empty ... ok
+[INFO] [stdout] test iter::test::check_empty_flat_map_sum ... ok
+[INFO] [stdout] test iter::test::check_enumerate ... ok
+[INFO] [stdout] test iter::test::check_either ... ok
+[INFO] [stdout] test iter::test::check_enumerate_rev ... ok
+[INFO] [stdout] test iter::test::check_eq_direct ... ok
+[INFO] [stdout] test iter::test::check_chunks_zero_size ... ok
+[INFO] [stdout] test iter::test::check_eq_to_seq ... ok
+[INFO] [stdout] test iter::test::check_extend_heap ... ok
+[INFO] [stdout] test iter::test::check_extend_items ... ok
+[INFO] [stdout] test iter::test::check_find_is_present ... ok
+[INFO] [stdout] test iter::test::check_extend_pairs ... ok
+[INFO] [stdout] test iter::test::check_find_not_present ... ok
+[INFO] [stdout] test iter::test::check_flat_map_nested_ranges ... ok
+[INFO] [stdout] test iter::test::check_flatten_vec ... ok
+[INFO] [stdout] test iter::test::check_flatten_vec_empty ... ok
+[INFO] [stdout] test iter::test::check_for_each_with ... ok
+[INFO] [stdout] test iter::test::check_fold_with ... ok
+[INFO] [stdout] test iter::test::check_ge_equal_direct ... ok
+[INFO] [stdout] test iter::test::check_ge_greater_direct ... ok
+[INFO] [stdout] test iter::test::check_ge_equal_to_seq ... ok
+[INFO] [stdout] test iter::test::check_ge_greater_to_seq ... ok
+[INFO] [stdout] test iter::test::check_gt_direct ... ok
+[INFO] [stdout] test iter::test::check_gt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_hash_set ... ok
+[INFO] [stdout] test iter::test::check_hash_map ... ok
+[INFO] [stdout] test iter::test::check_increment ... ok
+[INFO] [stdout] test iter::test::check_indices_after_enumerate_split ... ok
+[INFO] [stdout] test iter::test::check_inspect ... ok
+[INFO] [stdout] test iter::test::check_interleave_eq ... ok
+[INFO] [stdout] test iter::test::check_interleave_shortest ... ok
+[INFO] [stdout] test iter::test::check_le_equal_direct ... ok
+[INFO] [stdout] test iter::test::check_interleave_uneven ... ok
+[INFO] [stdout] test iter::test::check_le_equal_to_seq ... ok
+[INFO] [stdout] test iter::test::check_le_less_direct ... ok
+[INFO] [stdout] test iter::test::check_le_less_to_seq ... ok
+[INFO] [stdout] test iter::test::check_lt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_lt_direct ... ok
+[INFO] [stdout] test iter::test::check_linked_list ... ok
+[INFO] [stdout] test iter::test::check_map_indexed ... ok
+[INFO] [stdout] test iter::test::check_move ... ok
+[INFO] [stdout] test iter::test::check_ne_direct ... ok
+[INFO] [stdout] test iter::test::check_ne_lengths ... ok
+[INFO] [stdout] test iter::test::check_once ... ok
+[INFO] [stdout] test iter::test::check_ne_to_seq ... ok
+[INFO] [stdout] test iter::test::check_options ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_direct ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_gt_direct ... ok
+[INFO] [stdout] test iter::test::check_map_with ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_gt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_late_nan_direct ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_lt_direct ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_lt_to_seq ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_late_nane_to_seq ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_none_direct ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_nan_short_circuit ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_none_to_seq ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_short_circuit ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_to_seq ... ok
+[INFO] [stdout] test iter::test::check_partition_map ... ok
+[INFO] [stdout] test iter::test::check_partition ... ok
+[INFO] [stdout] test iter::test::check_range_indexed ... ok
+[INFO] [stdout] test iter::test::check_repeat_find_any ... ok
+[INFO] [stdout] test iter::test::check_repeat_unbounded ... ignored
+[INFO] [stdout] test iter::test::check_repeat_zip ... ok
+[INFO] [stdout] test iter::test::check_repeat_take ... ok
+[INFO] [stdout] test iter::test::check_repeatn_zip_left ... ok
+[INFO] [stdout] test iter::test::check_repeatn_zip_right ... ok
+[INFO] [stdout] test iter::test::check_rev ... ok
+[INFO] [stdout] test iter::test::check_results ... ok
+[INFO] [stdout] test iter::test::check_slice_indexed ... ok
+[INFO] [stdout] test iter::test::check_slice_mut_indexed ... ok
+[INFO] [stdout] test iter::test::check_skip ... ok
+[INFO] [stdout] test iter::test::check_partial_cmp_rng_to_seq ... ok
+[INFO] [stdout] test iter::test::check_split ... ok
+[INFO] [stdout] test iter::test::check_sum_filtered_ints ... ok
+[INFO] [stdout] test iter::test::check_sum_filtermap_ints ... ok
+[INFO] [stdout] test iter::test::check_take ... ok
+[INFO] [stdout] test iter::test::check_slice_split ... ok
+[INFO] [stdout] test iter::test::check_unzip_into_vecs ... ok
+[INFO] [stdout] test iter::test::check_unzip ... ok
+[INFO] [stdout] test iter::test::check_update ... ok
+[INFO] [stdout] test iter::test::check_slice_split_mut ... ok
+[INFO] [stdout] test iter::test::check_vec_indexed ... ok
+[INFO] [stdout] test iter::test::check_vec_deque ... ok
+[INFO] [stdout] test iter::test::check_windows ... ok
+[INFO] [stdout] test iter::test::check_while_some ... ok
+[INFO] [stdout] test iter::test::check_zip ... ok
+[INFO] [stdout] test iter::test::check_zip_eq ... ok
+[INFO] [stdout] test iter::test::check_zip_eq_into_mut_par_iter ... ok
+[INFO] [stdout] test iter::test::check_zip_eq_into_par_iter ... ok
+[INFO] [stdout] test iter::test::check_zip_eq_range ... ok
+[INFO] [stdout] test iter::test::check_zip_into_mut_par_iter ... ok
+[INFO] [stdout] test iter::test::check_zip_into_par_iter ... ok
+[INFO] [stdout] test iter::test::check_zip_range ... ok
+[INFO] [stdout] test iter::test::execute ... ok
+[INFO] [stdout] test iter::test::execute_cloned ... ok
+[INFO] [stdout] test iter::test::execute_pseudo_indexed_range ... ok
+[INFO] [stdout] test iter::test::execute_range ... ok
+[INFO] [stdout] test iter::test::execute_unindexed_range ... ok
+[INFO] [stdout] test iter::test::find_any ... ok
+[INFO] [stdout] test iter::test::fold_is_full ... ok
+[INFO] [stdout] test iter::test::find_map_first_or_last_or_any ... ok
+[INFO] [stdout] test iter::test::find_first_or_last ... ok
+[INFO] [stdout] test iter::test::fold_map_reduce ... ok
+[INFO] [stdout] test iter::test::map_reduce ... ok
+[INFO] [stdout] test iter::test::map_reduce_with ... ok
+[INFO] [stdout] test iter::test::map_sum ... ok
+[INFO] [stdout] test iter::test::min_max ... ok
+[INFO] [stdout] test iter::test::par_iter_collect ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_binaryheap ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_btreemap ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_btreeset ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_cows ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_hashmap ... ok
+[INFO] [stdout] test iter::test::min_max_by ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_linked_list ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_hashset ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_option ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_result ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_vecdeque ... ok
+[INFO] [stdout] test iter::test::par_iter_unindexed_flat_map ... ok
+[INFO] [stdout] test iter::test::scope_mix ... ok
+[INFO] [stdout] test math::tests::check_div_round_up ... ok
+[INFO] [stdout] test range::check_range_split_at_overflow ... ok
+[INFO] [stdout] test range::test_i128_len_doesnt_overflow ... ok
+[INFO] [stdout] test range::test_u128_opt_len ... ok
+[INFO] [stdout] test range::test_u64_opt_len ... ok
+[INFO] [stdout] test iter::test::par_iter_collect_linked_list_flat_map_filter ... ok
+[INFO] [stdout] test range_inclusive::test_u128_opt_len ... ok
+[INFO] [stdout] test iter::test::min_max_by_key ... ok
+[INFO] [stdout] test range_inclusive::test_u32_opt_len ... ok
+[INFO] [stdout] test range_inclusive::test_u64_opt_len ... ok
+[INFO] [stdout] test slice::mergesort::tests::test_split_for_merge ... ok
+[INFO] [stdout] test range_inclusive::test_usize_i64_overflow ... ok
+[INFO] [stdout] test range::test_usize_i64_overflow ... ok
+[INFO] [stdout] test slice::quicksort::tests::test_heapsort ... ok
+[INFO] [stdout] test iter::test::check_lengths ... ok
+[INFO] [stdout] test slice::test::test_par_sort ... ok
+[INFO] [stdout] test slice::test::test_par_sort_unstable ... ok
+[INFO] [stdout] test slice::test::test_par_sort_stability ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 177 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\clones-774a955893cd8ce9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 18 tests
+[INFO] [stdout] test clone_btree_map ... ok
+[INFO] [stdout] test clone_btree_set ... ok
+[INFO] [stdout] test clone_binary_heap ... ok
+[INFO] [stdout] test clone_empty ... ok
+[INFO] [stdout] test clone_hash_map ... ok
+[INFO] [stdout] test clone_hash_set ... ok
+[INFO] [stdout] test clone_linked_list ... ok
+[INFO] [stdout] test clone_once ... ok
+[INFO] [stdout] test clone_option ... ok
+[INFO] [stdout] test clone_range_inclusive ... ok
+[INFO] [stdout] test clone_result ... ok
+[INFO] [stdout] test clone_repeat ... ok
+[INFO] [stdout] test clone_range ... ok
+[INFO] [stdout] test clone_splitter ... ok
+[INFO] [stdout] test clone_vec ... ok
+[INFO] [stdout] test clone_vec_deque ... ok
+[INFO] [stdout] test clone_str ... ok
+[INFO] [stdout] test clone_adaptors ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\debug-e64473662d592a88.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 18 tests
+[INFO] [stdout] test debug_adaptors ... ok
+[INFO] [stdout] test debug_binary_heap ... ok
+[INFO] [stdout] test debug_btree_map ... ok
+[INFO] [stdout] test debug_btree_set ... ok
+[INFO] [stdout] test debug_empty ... ok
+[INFO] [stdout] test debug_hash_map ... ok
+[INFO] [stdout] test debug_hash_set ... ok
+[INFO] [stdout] test debug_linked_list ... ok
+[INFO] [stdout] test debug_once ... ok
+[INFO] [stdout] test debug_option ... ok
+[INFO] [stdout] test debug_range ... ok
+[INFO] [stdout] test debug_range_inclusive ... ok
+[INFO] [stdout] test debug_repeat ... ok
+[INFO] [stdout] test debug_result ... ok
+[INFO] [stdout] test debug_splitter ... ok
+[INFO] [stdout] test debug_str ... ok
+[INFO] [stdout] test debug_vec ... ok
+[INFO] [stdout] test debug_vec_deque ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\intersperse-ef17774a8a67afd4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test check_intersperse ... ok
+[INFO] [stdout] test check_intersperse_producer ... ok
+[INFO] [stdout] test check_intersperse_rev ... ok
+[INFO] [stdout] test check_intersperse_again ... ok
+[INFO] [stdout] test check_intersperse_unindexed ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\iter_panic-dbfa6f6a25ada96e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stderr] thread '<unnamed>' panicked at 'boom', tests\iter_panic.rs:13:9
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr] thread '<unnamed>' panicked at 'boom', tests\iter_panic.rs:13:9
+[INFO] [stderr]    0:     0x7ff70e74040c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff70e74040c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff70e7438ce - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff70e7438ce - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff70e743553 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff70e744160 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff70e72ce91 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff70e69914b - iter_panic::check
+[INFO] [stderr]                                at C:\crater\workdir\tests\iter_panic.rs:13
+[INFO] [stderr]    8:     0x7ff70e69a718 - core::ops::function::Fn::call<fn(i32*),(i32*)>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:69
+[INFO] [stderr]    9:     0x7ff70e699100 - core::ops::function::impls::{{impl}}::call_mut<(i32*),fn(i32*)>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:249
+[INFO] [stderr]   10:     0x7ff70e69863e - core::iter::adapters::{{impl}}::fold::{{closure}}<core::ops::range::Range<i32>,fn(i32*)*,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\adapters\mod.rs:2018
+[INFO] [stderr]   11:     0x7ff70e6ab783 - core::iter::traits::iterator::Iterator::fold::{{closure}}<core::ops::range::Range<i32>,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1685
+[INFO] [stderr]   12:     0x7ff70e69c496 - core::iter::traits::iterator::Iterator::try_fold<core::ops::range::Range<i32>,(),closure,core::result::Result<(), !>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1573
+[INFO] [stderr]   13:     0x7ff70e69bee1 - core::iter::traits::iterator::Iterator::fold<core::ops::range::Range<i32>,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1685
+[INFO] [stderr]   14:     0x7ff70e6984dc - core::iter::adapters::{{impl}}::fold<core::ops::range::Range<i32>,fn(i32*)*,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\adapters\mod.rs:2018
+[INFO] [stderr]   15:     0x7ff70e6ab122 - rayon::iter::for_each::{{impl}}::consume_iter<closure,i32,core::iter::adapters::Inspect<core::ops::range::Range<i32>, fn(i32*)*>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\for_each.rs:55
+[INFO] [stderr]   16:     0x7ff70e6ad870 - rayon::iter::inspect::{{impl}}::consume_iter<i32,rayon::iter::for_each::ForEachConsumer<closure>,fn(i32*),core::ops::range::Range<i32>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\inspect.rs:244
+[INFO] [stderr]   17:     0x7ff70e6ad07a - rayon::iter::plumbing::Producer::fold_with<rayon::range::IterProducer<i32>,rayon::iter::inspect::InspectFolder<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:110
+[INFO] [stderr]   18:     0x7ff70e698455 - rayon::iter::len::{{impl}}::fold_with<rayon::range::IterProducer<i32>,rayon::iter::inspect::InspectFolder<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\len.rs:269
+[INFO] [stderr]   19:     0x7ff70e69f5f3 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:438
+[INFO] [stderr]   20:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   21:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   22:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   23:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   24:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   25:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   26:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   27:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   28:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   29:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   30:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   31:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   32:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   33:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   34:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   35:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   36:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   37:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   38:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   39:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   40:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   41:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   42:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   43:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   44:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   45:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   46:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   47:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   48:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   49:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   50:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   51:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   52:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   53:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   54:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   55:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   56:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   57:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   58:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   59:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   60:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   61:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   62:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   63:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   64:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   65:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   66:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   67:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   68:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   69:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   70:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   71:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   72:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   73:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   74:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   75:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   76:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   77:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   78:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   79:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   80:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   81:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   82:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   83:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   84:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   85:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   86:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   87:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   88:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   89:     0x7ff70e6a9631 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   90:     0x7ff70e693d97 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   91:     0x7ff70e69f579 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   92:     0x7ff70e6a06cb - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::for_each::ForEachConsumer<closure>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   93:     0x7ff70e697156 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   94:     0x7ff70e6ac093 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   95:     0x7ff70e6937cc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   96:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   97:     0x7ff70e69126f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   98:     0x7ff70e6ac123 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   99:     0x7ff70e699f6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   100:     0x7ff70e6954f4 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr] note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff70e74040c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff70e74040c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff70e7438ce - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff70e7438ce - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff70e743553 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff70e744160 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff70e72ce91 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff70e69914b - iter_panic::check
+[INFO] [stderr]                                at C:\crater\workdir\tests\iter_panic.rs:13
+[INFO] [stderr]    8:     0x7ff70e6991b7 - iter_panic::iter_panic::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\tests\iter_panic.rs:20
+[INFO] [stderr]    9:     0x7ff70e6ab1e9 - rayon::iter::for_each::{{impl}}::consume_iter::{{closure}}<closure,i32,core::ops::range::Range<i32>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\for_each.rs:55
+[INFO] [stderr]   10:     0x7ff70e6ab753 - core::iter::traits::iterator::Iterator::fold::{{closure}}<core::ops::range::Range<i32>,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1685
+[INFO] [stderr]   11:     0x7ff70e69bfc2 - core::iter::traits::iterator::Iterator::try_fold<core::ops::range::Range<i32>,(),closure,core::result::Result<(), !>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1573
+[INFO] [stderr]   12:     0x7ff70e69be71 - core::iter::traits::iterator::Iterator::fold<core::ops::range::Range<i32>,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1685
+[INFO] [stderr]   13:     0x7ff70e6ab0d3 - rayon::iter::for_each::{{impl}}::consume_iter<closure,i32,core::ops::range::Range<i32>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\for_each.rs:55
+[INFO] [stderr]   14:     0x7ff70e6ad127 - rayon::iter::plumbing::Producer::fold_with<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:110
+[INFO] [stderr]   15:     0x7ff70e69ebcd - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:438
+[INFO] [stderr]   16:     0x7ff70e6a04fa - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   17:     0x7ff70e69748e - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   18:     0x7ff70e6abf53 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   19:     0x7ff70e693549 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   20:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   21:     0x7ff70e6928cf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   22:     0x7ff70e6ac5c3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   23:     0x7ff70e699e6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   24:     0x7ff70e694b4e - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   25:     0x7ff70e6a9bf1 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   26:     0x7ff70e693d36 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   27:     0x7ff70e69eb58 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   28:     0x7ff70e6a04fa - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   29:     0x7ff70e69748e - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   30:     0x7ff70e6abf53 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   31:     0x7ff70e693549 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   32:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   33:     0x7ff70e6928cf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   34:     0x7ff70e6ac5c3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   35:     0x7ff70e699e6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   36:     0x7ff70e694b4e - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   37:     0x7ff70e6a9bf1 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   38:     0x7ff70e693d36 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   39:     0x7ff70e69eb58 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   40:     0x7ff70e6a04fa - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   41:     0x7ff70e69748e - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   42:     0x7ff70e6abf53 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   43:     0x7ff70e693549 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   44:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   45:     0x7ff70e6928cf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   46:     0x7ff70e6ac5c3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   47:     0x7ff70e699e6a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   48:     0x7ff70e694b4e - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   49:     0x7ff70e6a9bf1 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   50:     0x7ff70e693d36 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   51:     0x7ff70e69eb58 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   52:     0x7ff70e6a05d6 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:427
+[INFO] [stderr]   53:     0x7ff70e6971ec - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:127
+[INFO] [stderr]   54:     0x7ff70e6a163b - rayon_core::job::StackJob<rayon_core::latch::SpinLatch, closure, ()>::run_inline<rayon_core::latch::SpinLatch,closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:97
+[INFO] [stderr]   55:     0x7ff70e694e6b - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:154
+[INFO] [stderr]   56:     0x7ff70e6a9bf1 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   57:     0x7ff70e693d36 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   58:     0x7ff70e69eb58 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   59:     0x7ff70e6a05d6 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::range::IterProducer<i32>,rayon::iter::for_each::ForEachConsumer<closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:427
+[INFO] [stderr]   60:     0x7ff70e6971ec - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:127
+[INFO] [stderr]   61:     0x7ff70e6a163b - rayon_core::job::StackJob<rayon_core::latch::SpinLatch, closure, ()>::run_inline<rayon_core::latch::SpinLatch,closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:97
+[INFO] [stderr]   62:     0x7ff70e694e6b - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:154
+[INFO] [stderr]   63:     0x7ff70e6a917a - rayon_core::registry::{{impl}}::in_worker_cold::{{closure}}<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:495
+[INFO] [stderr]   64:     0x7ff70e6a567d - rayon_core::job::{{impl}}::execute::{{closure}}<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   65:     0x7ff70e6abf96 - std::panic::{{impl}}::call_once<((), ()),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   66:     0x7ff70e693bcc - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   67:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   68:     0x7ff70e6926ef - std::panicking::try<((), ()),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   69:     0x7ff70e6ac236 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,((), ())>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   70:     0x7ff70e69a46a - rayon_core::unwind::halt_unwinding<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   71:     0x7ff70e6a464e - rayon_core::job::{{impl}}::execute<rayon_core::latch::LockLatch,closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:115
+[INFO] [stderr]   72:     0x7ff70e708179 - rayon_core::job::JobRef::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\job.rs:59
+[INFO] [stderr]   73:     0x7ff70e703ead - rayon_core::registry::WorkerThread::execute
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:734
+[INFO] [stderr]   74:     0x7ff70e7038c7 - rayon_core::registry::WorkerThread::wait_until_cold<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:718
+[INFO] [stderr]   75:     0x7ff70e703744 - rayon_core::registry::WorkerThread::wait_until<rayon_core::latch::CountLatch>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:692
+[INFO] [stderr]   76:     0x7ff70e7046dd - rayon_core::registry::main_loop
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:812
+[INFO] [stderr]   77:     0x7ff70e70165a - rayon_core::registry::ThreadBuilder::run
+[INFO] [stdout] test iter_panic ... ok
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:58
+[INFO] [stderr]   78:     0x7ff70e701be6 - rayon_core::registry::{{impl}}::spawn::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:103
+[INFO] [stderr]   79:     0x7ff70e7074e6 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]   80:     0x7ff70e6ffe96 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   81:     0x7ff70e7086a6 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   82:     0x7ff70e70058c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   83:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   84:     0x7ff70e6fffcf - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   85:     0x7ff70e709186 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   86:     0x7ff70e6ffcb9 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   87:     0x7ff70e6fab93 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stderr]   88:     0x7ff70e735367 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr] thread '<unnamed>' panicked at 'boom', tests\iter_panic.rs:13:9
+[INFO] [stderr]   89:     0x7ff70e746827 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]   90:     0x7ff70e746827 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   91:     0x7ff70e746827 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   92:     0x7ffa1e607974 - BaseThreadInitThunk
+[INFO] [stderr]   93:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff70e74040c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff70e74040c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff70e7438ce - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff70e7438ce - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff70e743553 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff70e744160 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff70e72ce91 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff70e69914b - iter_panic::check
+[INFO] [stderr]                                at C:\crater\workdir\tests\iter_panic.rs:13
+[INFO] [stderr]    8:     0x7ff70e69a718 - core::ops::function::Fn::call<fn(i32*),(i32*)>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:69
+[INFO] [stderr]    9:     0x7ff70e699100 - core::ops::function::impls::{{impl}}::call_mut<(i32*),fn(i32*)>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:249
+[INFO] [stderr]   10:     0x7ff70e698751 - core::iter::adapters::{{impl}}::try_fold::{{closure}}<core::ops::range::Range<i32>,fn(i32*)*,(),closure,core::iter::LoopState<(), core::result::Result<(), !>>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\adapters\mod.rs:2010
+[INFO] [stderr]   11:     0x7ff70e69c0be - core::iter::traits::iterator::Iterator::try_fold<core::ops::range::Range<i32>,(),closure,core::iter::LoopState<(), core::result::Result<(), !>>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1573
+[INFO] [stderr]   12:     0x7ff70e6986fa - core::iter::adapters::{{impl}}::try_fold<core::ops::range::Range<i32>,fn(i32*)*,(),closure,core::iter::LoopState<(), core::result::Result<(), !>>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\adapters\mod.rs:2010
+[INFO] [stderr]   13:     0x7ff70e69892d - core::iter::adapters::{{impl}}::try_fold<core::iter::adapters::Inspect<core::ops::range::Range<i32>, fn(i32*)*>,closure,(),closure,core::result::Result<(), !>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\adapters\mod.rs:1373
+[INFO] [stderr]   14:     0x7ff70e698dd7 - core::iter::traits::iterator::Iterator::fold<core::iter::adapters::TakeWhile<core::iter::adapters::Inspect<core::ops::range::Range<i32>, fn(i32*)*>, closure>,(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\iter\traits\iterator.rs:1685
+[INFO] [stderr]   15:     0x7ff70e6ab084 - rayon::iter::for_each::{{impl}}::consume_iter<closure,i32,core::iter::adapters::TakeWhile<core::iter::adapters::Inspect<core::ops::range::Range<i32>, fn(i32*)*>, closure>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\for_each.rs:55
+[INFO] [stderr]   16:     0x7ff70e6aa033 - rayon::iter::panic_fuse::{{impl}}::consume_iter<i32,rayon::iter::for_each::ForEachConsumer<closure>,core::iter::adapters::Inspect<core::ops::range::Range<i32>, fn(i32*)*>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\panic_fuse.rs:312
+[INFO] [stderr]   17:     0x7ff70e6ada20 - rayon::iter::inspect::{{impl}}::consume_iter<i32,rayon::iter::panic_fuse::PanicFuseFolder<rayon::iter::for_each::ForEachConsumer<closure>>,fn(i32*),core::ops::range::Range<i32>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\inspect.rs:244
+[INFO] [stderr]   18:     0x7ff70e6ad29e - rayon::iter::plumbing::Producer::fold_with<rayon::range::IterProducer<i32>,rayon::iter::inspect::InspectFolder<rayon::iter::panic_fuse::PanicFuseFolder<rayon::iter::for_each::ForEachConsumer<closure>>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:110
+[INFO] [stderr]   19:     0x7ff70e6983ce - rayon::iter::len::{{impl}}::fold_with<rayon::range::IterProducer<i32>,rayon::iter::inspect::InspectFolder<rayon::iter::panic_fuse::PanicFuseFolder<rayon::iter::for_each::ForEachConsumer<closure>>, fn(i32*)>>
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\len.rs:269
+[INFO] [stderr]   20:     0x7ff70e69f0f2 - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:438
+[INFO] [stderr]   21:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   22:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   23:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   24:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   25:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   26:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   27:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   28:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   29:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   30:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   31:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   32:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   33:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   34:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   35:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   36:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   37:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   38:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   39:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   40:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   41:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   42:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   43:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   44:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   45:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   46:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   47:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   48:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   49:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   50:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   51:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   52:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr]   53:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   54:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stdout] test iter_panic_fuse ... FAILED
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stdout] 
+[INFO] [stderr]   55:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stdout] failures:
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stdout] 
+[INFO] [stderr]   56:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stdout] ---- iter_panic_fuse stdout ----
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stdout] thread 'iter_panic_fuse' panicked at 'assertion failed: count(iter.clone().inspect(check).panic_fuse()) < expected', tests\iter_panic.rs:42:5
+[INFO] [stderr]   57:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stdout] stack backtrace:
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stdout]    0:     0x7ff70e74040c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]   58:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stdout]    1:     0x7ff70e74040c - std::sys_common::backtrace::_print
+[INFO] [stderr]   59:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]    2:     0x7ff70e7438ce - std::sys_common::backtrace::print
+[INFO] [stderr]   60:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]    3:     0x7ff70e7438ce - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]   61:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]    4:     0x7ff70e7434db - std::panicking::default_hook
+[INFO] [stderr]   62:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]    5:     0x7ff70e744160 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]   63:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]    6:     0x7ff70e72ce91 - std::panicking::begin_panic<str*>
+[INFO] [stderr]   64:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:411
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stdout]    7:     0x7ff70e6994a2 - iter_panic::iter_panic_fuse
+[INFO] [stderr]   65:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stdout]                                at C:\crater\workdir\tests\iter_panic.rs:42
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stdout]    8:     0x7ff70e6991ce - iter_panic::iter_panic_fuse::{{closure}}
+[INFO] [stderr]   66:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stdout]                                at C:\crater\workdir\tests\iter_panic.rs:24
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stdout]    9:     0x7ff70e69a7bb - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]   67:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stdout]   10:     0x7ff70e6bcbb7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]   68:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stdout]   11:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]   69:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stdout]   12:     0x7ff70e6dbbbb - std::panicking::try
+[INFO] [stderr]   70:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stdout]   13:     0x7ff70e6dbbbb - std::panic::catch_unwind
+[INFO] [stderr]   71:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   14:     0x7ff70e6dbbbb - test::run_test::run_test_inner::{{closure}}
+[INFO] [stderr]   72:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff70e6aea3e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]   73:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff70e6b48ce - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stderr]   74:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff70e6b48ce - std::panic::{{impl}}::call_once
+[INFO] [stderr]   75:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff70e6b48ce - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]   76:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stdout]   19:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]   77:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stdout]   20:     0x7ff70e6b4ed0 - std::panicking::try
+[INFO] [stderr]   78:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stdout]   21:     0x7ff70e6b4ed0 - std::panic::catch_unwind
+[INFO] [stderr]   79:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stdout]   22:     0x7ff70e6b4ed0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stderr]   80:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stdout]   23:     0x7ff70e6b4ed0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]   81:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stdout]   24:     0x7ff70e735367 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]   82:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stdout]   25:     0x7ff70e746827 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]   83:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   26:     0x7ff70e746827 - std::sys_common::thread::start_thread
+[INFO] [stderr]   84:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   27:     0x7ff70e746827 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]   85:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   28:     0x7ffa1e607974 - BaseThreadInitThunk
+[INFO] [stderr]   86:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stdout]   29:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout] 
+[INFO] [stderr]   87:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout] 
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout] failures:
+[INFO] [stderr]   88:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stdout]     iter_panic_fuse
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]   89:     0x7ff70e695eb9 - rayon_core::join::join_context::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   90:     0x7ff70e6a97a9 - rayon_core::registry::in_worker<closure,((), ())>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\registry.rs:852
+[INFO] [stderr]   91:     0x7ff70e693df7 - rayon_core::join::join_context<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:118
+[INFO] [stderr]   92:     0x7ff70e69f06b - rayon::iter::plumbing::bridge_producer_consumer::helper<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<closure>>, fn
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:416
+[INFO] [stderr]   93:     0x7ff70e6a07b3 - rayon::iter::plumbing::bridge_producer_consumer::helper::{{closure}}<rayon::iter::len::MaxLenProducer<rayon::range::IterProducer<i32>>,rayon::iter::inspect::InspectConsumer<rayon::iter::panic_fuse::PanicFuseConsumer<rayon::iter::for_each::ForEachConsumer<
+[INFO] [stderr]                                at C:\crater\workdir\src\iter\plumbing\mod.rs:418
+[INFO] [stderr]   94:     0x7ff70e697294 - rayon_core::join::join_context::{{closure}}::{{closure}}<closure,closure,(),()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\join\mod.rs:134
+[INFO] [stderr]   95:     0x7ff70e6abd56 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stderr]   96:     0x7ff70e693b4c - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stderr]   97:     0x7ff70e747b02 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   98:     0x7ff70e69108f - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stderr]   99:     0x7ff70e6ac566 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stderr]   100:     0x7ff70e69a36a - rayon_core::unwind::halt_unwinding<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rayon-core-1.5.0\src\unwind.rs:17
+[INFO] [stderr] note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+[INFO] [stderr] error: test failed, to rerun pass '--test iter_panic'
+[INFO] running `"docker" "inspect" "d1fceb32d29be192797118ea68b48ccfb471fc544fe4f101d0f47295270118d1"`
+[INFO] running `"docker" "rm" "-f" "d1fceb32d29be192797118ea68b48ccfb471fc544fe4f101d0f47295270118d1"`
+[INFO] [stdout] d1fceb32d29be192797118ea68b48ccfb471fc544fe4f101d0f47295270118d1

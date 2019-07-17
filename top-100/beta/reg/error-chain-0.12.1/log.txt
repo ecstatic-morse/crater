@@ -1,0 +1,363 @@
+[INFO] fetching crate error-chain 0.12.1...
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\stable\reg\error-chain\0.12.1
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\beta\reg\error-chain\0.12.1
+[INFO] validating manifest of error-chain-0.12.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of error-chain-0.12.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\stable\reg\error-chain\0.12.1\Cargo.toml
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\beta\reg\error-chain\0.12.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building error-chain-0.12.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 3a3f7b307a1134a73885b4221744be690f6c5dfab8db6a02e2726c74b6b1a450
+[INFO] running `"docker" "start" "-a" "3a3f7b307a1134a73885b4221744be690f6c5dfab8db6a02e2726c74b6b1a450"`
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |         fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:24:5
+[INFO] [stderr]     |
+[INFO] [stderr] 24  |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:24:5
+[INFO] [stderr]     |
+[INFO] [stderr] 24  |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error_chain.rs:51:42
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |             fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]    | 
+[INFO] [stderr]   ::: src\example_generated.rs:24:5
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |     error_chain!{}
+[INFO] [stderr]    |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |           fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:27:1
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | / error_chain! {
+[INFO] [stderr] 28  | |     links {
+[INFO] [stderr] 29  | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30  | |     }
+[INFO] [stderr] ...   |
+[INFO] [stderr] 37  | |     }
+[INFO] [stderr] 38  | | }
+[INFO] [stderr]     | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |               pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:27:1
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | / error_chain! {
+[INFO] [stderr] 28  | |     links {
+[INFO] [stderr] 29  | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30  | |     }
+[INFO] [stderr] ...   |
+[INFO] [stderr] 37  | |     }
+[INFO] [stderr] 38  | | }
+[INFO] [stderr]     | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error_chain.rs:51:42
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |               fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]    | 
+[INFO] [stderr]   ::: src\example_generated.rs:27:1
+[INFO] [stderr]    |
+[INFO] [stderr] 27 | / error_chain! {
+[INFO] [stderr] 28 | |     links {
+[INFO] [stderr] 29 | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30 | |     }
+[INFO] [stderr] ...  |
+[INFO] [stderr] 37 | |     }
+[INFO] [stderr] 38 | | }
+[INFO] [stderr]    | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:558:32
+[INFO] [stderr]     |
+[INFO] [stderr] 558 | pub struct Iter<'a>(Option<&'a error::Error>);
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:562:32
+[INFO] [stderr]     |
+[INFO] [stderr] 562 |     pub fn new(err: Option<&'a error::Error>) -> Iter<'a> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:568:21
+[INFO] [stderr]     |
+[INFO] [stderr] 568 |     type Item = &'a error::Error;
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:570:45
+[INFO] [stderr]     |
+[INFO] [stderr] 570 |     fn next<'b>(&'b mut self) -> Option<&'a error::Error> {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:630:31
+[INFO] [stderr]     |
+[INFO] [stderr] 630 |     fn extract_backtrace(e: &(error::Error + Send + 'static)) -> Option<InternalBacktrace>
+[INFO] [stderr]     |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:662:32
+[INFO] [stderr]     |
+[INFO] [stderr] 662 |     pub next_error: Option<Box<error::Error + Send>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:678:41
+[INFO] [stderr]     |
+[INFO] [stderr] 678 |     pub fn new<CE: ChainedError>(e: Box<error::Error + Send>) -> State {
+[INFO] [stderr]     |                                         ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |         fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:51:42
+[INFO] [stderr]     |
+[INFO] [stderr] 51  |             fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.32s
+[INFO] running `"docker" "inspect" "3a3f7b307a1134a73885b4221744be690f6c5dfab8db6a02e2726c74b6b1a450"`
+[INFO] running `"docker" "rm" "-f" "3a3f7b307a1134a73885b4221744be690f6c5dfab8db6a02e2726c74b6b1a450"`
+[INFO] [stdout] 3a3f7b307a1134a73885b4221744be690f6c5dfab8db6a02e2726c74b6b1a450
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5548d6b1e4ddcec63c863e76d20c3c6fac2e9be9eb11506f13ab8febb457129c
+[INFO] running `"docker" "start" "-a" "5548d6b1e4ddcec63c863e76d20c3c6fac2e9be9eb11506f13ab8febb457129c"`
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |         fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:24:5
+[INFO] [stderr]     |
+[INFO] [stderr] 24  |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:24:5
+[INFO] [stderr]     |
+[INFO] [stderr] 24  |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error_chain.rs:51:42
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |             fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]    | 
+[INFO] [stderr]   ::: src\example_generated.rs:24:5
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |     error_chain!{}
+[INFO] [stderr]    |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |           fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:27:1
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | / error_chain! {
+[INFO] [stderr] 28  | |     links {
+[INFO] [stderr] 29  | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30  | |     }
+[INFO] [stderr] ...   |
+[INFO] [stderr] 37  | |     }
+[INFO] [stderr] 38  | | }
+[INFO] [stderr]     | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |               pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\example_generated.rs:27:1
+[INFO] [stderr]     |
+[INFO] [stderr] 27  | / error_chain! {
+[INFO] [stderr] 28  | |     links {
+[INFO] [stderr] 29  | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30  | |     }
+[INFO] [stderr] ...   |
+[INFO] [stderr] 37  | |     }
+[INFO] [stderr] 38  | | }
+[INFO] [stderr]     | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error_chain.rs:51:42
+[INFO] [stderr]    |
+[INFO] [stderr] 51 |               fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]    | 
+[INFO] [stderr]   ::: src\example_generated.rs:27:1
+[INFO] [stderr]    |
+[INFO] [stderr] 27 | / error_chain! {
+[INFO] [stderr] 28 | |     links {
+[INFO] [stderr] 29 | |         Inner(inner::Error, inner::ErrorKind) #[doc = "Link to another `ErrorChain`."];
+[INFO] [stderr] 30 | |     }
+[INFO] [stderr] ...  |
+[INFO] [stderr] 37 | |     }
+[INFO] [stderr] 38 | | }
+[INFO] [stderr]    | |_- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:558:32
+[INFO] [stderr]     |
+[INFO] [stderr] 558 | pub struct Iter<'a>(Option<&'a error::Error>);
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:562:32
+[INFO] [stderr]     |
+[INFO] [stderr] 562 |     pub fn new(err: Option<&'a error::Error>) -> Iter<'a> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:568:21
+[INFO] [stderr]     |
+[INFO] [stderr] 568 |     type Item = &'a error::Error;
+[INFO] [stderr]     |                     ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:570:45
+[INFO] [stderr]     |
+[INFO] [stderr] 570 |     fn next<'b>(&'b mut self) -> Option<&'a error::Error> {
+[INFO] [stderr]     |                                             ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:630:31
+[INFO] [stderr]     |
+[INFO] [stderr] 630 |     fn extract_backtrace(e: &(error::Error + Send + 'static)) -> Option<InternalBacktrace>
+[INFO] [stderr]     |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:662:32
+[INFO] [stderr]     |
+[INFO] [stderr] 662 |     pub next_error: Option<Box<error::Error + Send>>,
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:678:41
+[INFO] [stderr]     |
+[INFO] [stderr] 678 |     pub fn new<CE: ChainedError>(e: Box<error::Error + Send>) -> State {
+[INFO] [stderr]     |                                         ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:486:35
+[INFO] [stderr]     |
+[INFO] [stderr] 486 |         fn extract_backtrace(e: &(::std::error::Error + Send + 'static))
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:208:51
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             pub fn with_boxed_chain<K>(error: Box<::std::error::Error + Send>, kind: K)
+[INFO] [stderr]     |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn ::std::error::Error + Send`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\error_chain.rs:51:42
+[INFO] [stderr]     |
+[INFO] [stderr] 51  |             fn source(&self) -> Option<&(std::error::Error + 'static)> {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn std::error::Error + 'static`
+[INFO] [stderr]     | 
+[INFO] [stderr]    ::: src\lib.rs:807:5
+[INFO] [stderr]     |
+[INFO] [stderr] 807 |     error_chain!{}
+[INFO] [stderr]     |     -------------- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> tests\tests.rs:381:52
+[INFO] [stderr]     |
+[INFO] [stderr] 381 |         assert_eq!(format!("{:?}", None as Option<&::std::error::Error>),
+[INFO] [stderr]     |                                                    ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.66s
+[INFO] running `"docker" "inspect" "5548d6b1e4ddcec63c863e76d20c3c6fac2e9be9eb11506f13ab8febb457129c"`
+[INFO] running `"docker" "rm" "-f" "5548d6b1e4ddcec63c863e76d20c3c6fac2e9be9eb11506f13ab8febb457129c"`
+[INFO] [stdout] 5548d6b1e4ddcec63c863e76d20c3c6fac2e9be9eb11506f13ab8febb457129c

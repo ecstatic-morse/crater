@@ -1,0 +1,54 @@
+[INFO] fetching crate remark-lib 0.0.0...
+[INFO] extracting crate remark-lib 0.0.0 into work\ex\default\sources\stable\reg\remark-lib\0.0.0
+[INFO] extracting crate remark-lib 0.0.0 into work\ex\default\sources\beta\reg\remark-lib\0.0.0
+[INFO] validating manifest of remark-lib-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of remark-lib-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing remark-lib-0.0.0
+[INFO] finished frobbing remark-lib-0.0.0
+[INFO] frobbed toml for remark-lib-0.0.0 written to work\ex\default\sources\stable\reg\remark-lib\0.0.0\Cargo.toml
+[INFO] started frobbing remark-lib-0.0.0
+[INFO] finished frobbing remark-lib-0.0.0
+[INFO] frobbed toml for remark-lib-0.0.0 written to work\ex\default\sources\beta\reg\remark-lib\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing remark-lib-0.0.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\remark-lib\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] bd0b0e9d7783c88242b798b70fa0c055e92d000db9d4b3b707193d8209ea6950
+[INFO] running `"docker" "start" "-a" "bd0b0e9d7783c88242b798b70fa0c055e92d000db9d4b3b707193d8209ea6950"`
+[INFO] [stderr]    Compiling remark-lib v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.34s
+[INFO] running `"docker" "inspect" "bd0b0e9d7783c88242b798b70fa0c055e92d000db9d4b3b707193d8209ea6950"`
+[INFO] running `"docker" "rm" "-f" "bd0b0e9d7783c88242b798b70fa0c055e92d000db9d4b3b707193d8209ea6950"`
+[INFO] [stdout] bd0b0e9d7783c88242b798b70fa0c055e92d000db9d4b3b707193d8209ea6950
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\remark-lib\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 959ca77e7feb8fc981ceeef3a6e130ae91ffed8df686c92662b505caa59a5c12
+[INFO] running `"docker" "start" "-a" "959ca77e7feb8fc981ceeef3a6e130ae91ffed8df686c92662b505caa59a5c12"`
+[INFO] [stderr]    Compiling remark-lib v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.26s
+[INFO] running `"docker" "inspect" "959ca77e7feb8fc981ceeef3a6e130ae91ffed8df686c92662b505caa59a5c12"`
+[INFO] running `"docker" "rm" "-f" "959ca77e7feb8fc981ceeef3a6e130ae91ffed8df686c92662b505caa59a5c12"`
+[INFO] [stdout] 959ca77e7feb8fc981ceeef3a6e130ae91ffed8df686c92662b505caa59a5c12
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\remark-lib\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] b2b0a86f5a986db10548aec59fb0adc46b30932a24c5d8b9a4f4d2218dd9b94a
+[INFO] running `"docker" "start" "-a" "b2b0a86f5a986db10548aec59fb0adc46b30932a24c5d8b9a4f4d2218dd9b94a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\remark_lib-8aa4e0bf7473b4cc.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests remark-lib
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b2b0a86f5a986db10548aec59fb0adc46b30932a24c5d8b9a4f4d2218dd9b94a"`
+[INFO] running `"docker" "rm" "-f" "b2b0a86f5a986db10548aec59fb0adc46b30932a24c5d8b9a4f4d2218dd9b94a"`
+[INFO] [stdout] b2b0a86f5a986db10548aec59fb0adc46b30932a24c5d8b9a4f4d2218dd9b94a

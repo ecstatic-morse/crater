@@ -1,0 +1,78 @@
+[INFO] cloning repository jiqiang/euler-in-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/jiqiang/euler-in-rust.git" "work\\cache\\sources\\gh\\jiqiang\\euler-in-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jiqiang\euler-in-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jiqiang\\euler-in-rust" "work\\ex\\default\\sources\\stable\\gh\\jiqiang\\euler-in-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\jiqiang\euler-in-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jiqiang\\euler-in-rust" "work\\ex\\default\\sources\\beta\\gh\\jiqiang\\euler-in-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\jiqiang\euler-in-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b991d39a7996d086c96c05dcf1faa3849abd7bf6
+[INFO] sha for GitHub repo jiqiang/euler-in-rust: b991d39a7996d086c96c05dcf1faa3849abd7bf6
+[INFO] validating manifest of jiqiang/euler-in-rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jiqiang/euler-in-rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jiqiang/euler-in-rust
+[INFO] finished frobbing jiqiang/euler-in-rust
+[INFO] frobbed toml for jiqiang/euler-in-rust written to work\ex\default\sources\stable\gh\jiqiang\euler-in-rust\Cargo.toml
+[INFO] started frobbing jiqiang/euler-in-rust
+[INFO] finished frobbing jiqiang/euler-in-rust
+[INFO] frobbed toml for jiqiang/euler-in-rust written to work\ex\default\sources\beta\gh\jiqiang\euler-in-rust\Cargo.toml
+[INFO] crate jiqiang/euler-in-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded threadpool v1.7.1
+[INFO] [stderr]   Downloaded libc v0.2.46
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing jiqiang/euler-in-rust against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\jiqiang\\euler-in-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 15757fff3d9c57b80335d75678ae744128324c01b2fa06ec16b5f72c7093c271
+[INFO] running `"docker" "start" "-a" "15757fff3d9c57b80335d75678ae744128324c01b2fa06ec16b5f72c7093c271"`
+[INFO] [stderr]    Compiling libc v0.2.46
+[INFO] [stderr]    Compiling num_cpus v1.9.0
+[INFO] [stderr]    Compiling threadpool v1.7.1
+[INFO] [stderr]    Compiling euler v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.34s
+[INFO] running `"docker" "inspect" "15757fff3d9c57b80335d75678ae744128324c01b2fa06ec16b5f72c7093c271"`
+[INFO] running `"docker" "rm" "-f" "15757fff3d9c57b80335d75678ae744128324c01b2fa06ec16b5f72c7093c271"`
+[INFO] [stdout] 15757fff3d9c57b80335d75678ae744128324c01b2fa06ec16b5f72c7093c271
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\jiqiang\\euler-in-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f9d068996701bee0756f59c6340fe229f641a3950e5872cb65e458b5079df142
+[INFO] running `"docker" "start" "-a" "f9d068996701bee0756f59c6340fe229f641a3950e5872cb65e458b5079df142"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling euler v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.28s
+[INFO] running `"docker" "inspect" "f9d068996701bee0756f59c6340fe229f641a3950e5872cb65e458b5079df142"`
+[INFO] running `"docker" "rm" "-f" "f9d068996701bee0756f59c6340fe229f641a3950e5872cb65e458b5079df142"`
+[INFO] [stdout] f9d068996701bee0756f59c6340fe229f641a3950e5872cb65e458b5079df142
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\jiqiang\\euler-in-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 7a4aed8f90fc23cbffbbe023250648f2436b1dc0520fa0e01cafab902b229cfe
+[INFO] running `"docker" "start" "-a" "7a4aed8f90fc23cbffbbe023250648f2436b1dc0520fa0e01cafab902b229cfe"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\euler-82fb507ffd083e97.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test s001::s001_tests::test_multiples_of_3_and_5_2 ... ok
+[INFO] [stdout] test s002::s002_tests::test_even_fibonacci_numbers ... ok
+[INFO] [stdout] test s001::s001_tests::test_multiples_of_3_and_5_3 ... ok
+[INFO] [stdout] test s001::s001_tests::test_multiples_of_3_and_5_1 ... ok
+[INFO] [stdout] test s003::s003_tests::test_largest_prime_factor ... ok
+[INFO] [stdout] test s004::s004_tests::test_is_palindrome_1 ... ok
+[INFO] [stdout] test s004::s004_tests::test_is_palindrome_2 ... ok
+[INFO] [stdout] test s028::s028_tests::test_number_spiral_diagonals ... ok
+[INFO] [stdout] test s004::s004_tests::test_largest_palindrome_product ... ok
+[INFO] [stdout] test s005::s005_tests::test_smallest_multiple ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests euler
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7a4aed8f90fc23cbffbbe023250648f2436b1dc0520fa0e01cafab902b229cfe"`
+[INFO] running `"docker" "rm" "-f" "7a4aed8f90fc23cbffbbe023250648f2436b1dc0520fa0e01cafab902b229cfe"`
+[INFO] [stdout] 7a4aed8f90fc23cbffbbe023250648f2436b1dc0520fa0e01cafab902b229cfe

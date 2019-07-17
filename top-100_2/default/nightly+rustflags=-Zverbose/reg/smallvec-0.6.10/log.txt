@@ -1,0 +1,111 @@
+[INFO] crate smallvec 0.6.10 is already in cache
+[INFO] extracting crate smallvec 0.6.10 into work\ex\default\sources\nightly\reg\smallvec\0.6.10
+[INFO] extracting crate smallvec 0.6.10 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\smallvec\0.6.10
+[INFO] validating manifest of smallvec-0.6.10 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of smallvec-0.6.10 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing smallvec-0.6.10
+[INFO] finished frobbing smallvec-0.6.10
+[INFO] frobbed toml for smallvec-0.6.10 written to work\ex\default\sources\nightly\reg\smallvec\0.6.10\Cargo.toml
+[INFO] started frobbing smallvec-0.6.10
+[INFO] finished frobbing smallvec-0.6.10
+[INFO] frobbed toml for smallvec-0.6.10 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\smallvec\0.6.10\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing smallvec-0.6.10 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 432b8d40ca0d5bc2c51211c92e92fe33a1ae4f18a2547daf6fdcd149318c4476
+[INFO] running `"docker" "start" "-a" "432b8d40ca0d5bc2c51211c92e92fe33a1ae4f18a2547daf6fdcd149318c4476"`
+[INFO] [stderr]    Compiling smallvec v0.6.10 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.42s
+[INFO] running `"docker" "inspect" "432b8d40ca0d5bc2c51211c92e92fe33a1ae4f18a2547daf6fdcd149318c4476"`
+[INFO] running `"docker" "rm" "-f" "432b8d40ca0d5bc2c51211c92e92fe33a1ae4f18a2547daf6fdcd149318c4476"`
+[INFO] [stdout] 432b8d40ca0d5bc2c51211c92e92fe33a1ae4f18a2547daf6fdcd149318c4476
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 0aa7d60698469f29bddab58e97e8a6089e8d9c3f5724f76876bc726a7aed942c
+[INFO] running `"docker" "start" "-a" "0aa7d60698469f29bddab58e97e8a6089e8d9c3f5724f76876bc726a7aed942c"`
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling smallvec v0.6.10 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 52.79s
+[INFO] running `"docker" "inspect" "0aa7d60698469f29bddab58e97e8a6089e8d9c3f5724f76876bc726a7aed942c"`
+[INFO] running `"docker" "rm" "-f" "0aa7d60698469f29bddab58e97e8a6089e8d9c3f5724f76876bc726a7aed942c"`
+[INFO] [stdout] 0aa7d60698469f29bddab58e97e8a6089e8d9c3f5724f76876bc726a7aed942c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\smallvec\\0.6.10,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 7fcb2325c7763a149469dfbfae7da89829b753269e239f3843b381422298227c
+[INFO] running `"docker" "start" "-a" "7fcb2325c7763a149469dfbfae7da89829b753269e239f3843b381422298227c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\smallvec-f9d481f68315b0f9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 44 tests
+[INFO] [stdout] test tests::drain ... ok
+[INFO] [stdout] test tests::drain_rev ... ok
+[INFO] [stdout] test tests::grow_spilled_same_size ... ok
+[INFO] [stdout] test tests::grow_to_shrink ... ok
+[INFO] [stdout] test tests::into_iter ... ok
+[INFO] [stdout] test tests::into_iter_drop ... ok
+[INFO] [stdout] test tests::into_iter_rev ... ok
+[INFO] [stdout] test tests::issue_4 ... ok
+[INFO] [stdout] test tests::issue_5 ... ok
+[INFO] [stdout] test tests::resumable_extend ... ok
+[INFO] [stdout] test tests::shrink_to_fit_unspill ... ok
+[INFO] [stdout] test tests::test_as_mut ... ok
+[INFO] [stdout] test tests::test_as_ref ... ok
+[INFO] [stdout] test tests::test_borrow ... ok
+[INFO] [stdout] test tests::test_borrow_mut ... ok
+[INFO] [stdout] test tests::test_capacity ... ok
+[INFO] [stdout] test tests::test_dedup ... ok
+[INFO] [stdout] test tests::test_double_spill ... ok
+[INFO] [stdout] test tests::test_eq ... ok
+[INFO] [stdout] test tests::test_exact_size_iterator ... ok
+[INFO] [stdout] test tests::test_drop_panic_smallvec ... ok
+[INFO] [stdout] test tests::test_extend_from_slice ... ok
+[INFO] [stdout] test tests::test_from ... ok
+[INFO] [stdout] test tests::test_from_slice ... ok
+[INFO] [stdout] test tests::test_from_vec ... ok
+[INFO] [stdout] test tests::test_hash ... ok
+[INFO] [stdout] test tests::test_inline ... ok
+[INFO] [stdout] test tests::test_insert_from_slice ... ok
+[INFO] [stdout] test tests::test_insert_many ... ok
+[INFO] [stdout] test tests::test_insert_many_long_hint ... ok
+[INFO] [stdout] test tests::test_insert_many_short_hint ... ok
+[INFO] [stdout] test tests::test_insert_many_panic ... ok
+[INFO] [stdout] test tests::test_into_inner ... ok
+[INFO] [stderr]    Doc-tests smallvec
+[INFO] [stdout] test tests::test_into_vec ... ok
+[INFO] [stdout] test tests::test_ord ... ok
+[INFO] [stdout] test tests::test_invalid_grow ... ok
+[INFO] [stdout] test tests::test_resize ... ok
+[INFO] [stdout] test tests::test_retain ... ok
+[INFO] [stdout] test tests::test_spill ... ok
+[INFO] [stdout] test tests::test_truncate ... ok
+[INFO] [stdout] test tests::test_with_capacity ... ok
+[INFO] [stdout] test tests::test_write ... ok
+[INFO] [stdout] test tests::test_zero ... ok
+[INFO] [stdout] test tests::veclike_deref_slice ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 44 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf (line 475) ... ok
+[INFO] [stdout] test lib.rs - SmallVec (line 381) ... ok
+[INFO] [stdout] test lib.rs - ExtendFromSlice (line 207) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf_and_len (line 495) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_raw_parts (line 986) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_buf_and_len_unchecked (line 513) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_vec (line 439) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::from_elem (line 1108) ... ok
+[INFO] [stdout] test lib.rs - SmallVec<A>::with_capacity (line 420) ... ok
+[INFO] [stdout] test lib.rs - smallvec (line 93) ... ok
+[INFO] [stdout] test lib.rs - smallvec (line 80) ... ok
+[INFO] [stdout] test lib.rs - VecLike (line 161) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7fcb2325c7763a149469dfbfae7da89829b753269e239f3843b381422298227c"`
+[INFO] running `"docker" "rm" "-f" "7fcb2325c7763a149469dfbfae7da89829b753269e239f3843b381422298227c"`
+[INFO] [stdout] 7fcb2325c7763a149469dfbfae7da89829b753269e239f3843b381422298227c

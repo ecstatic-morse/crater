@@ -1,0 +1,45 @@
+[INFO] cloning repository matematikaadit/putar
+[INFO] running `"git" "clone" "--bare" "git://github.com/matematikaadit/putar.git" "work\\cache\\sources\\gh\\matematikaadit\\putar"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\matematikaadit\putar'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\matematikaadit\\putar" "work\\ex\\default\\sources\\nightly\\gh\\matematikaadit\\putar"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\matematikaadit\putar'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\matematikaadit\\putar" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\matematikaadit\\putar"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\matematikaadit\putar'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 87aef2d8ba8335efdc237068ad67956868612db1
+[INFO] sha for GitHub repo matematikaadit/putar: 87aef2d8ba8335efdc237068ad67956868612db1
+[INFO] validating manifest of matematikaadit/putar on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of matematikaadit/putar on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing matematikaadit/putar
+[INFO] finished frobbing matematikaadit/putar
+[INFO] frobbed toml for matematikaadit/putar written to work\ex\default\sources\nightly\gh\matematikaadit\putar\Cargo.toml
+[INFO] started frobbing matematikaadit/putar
+[INFO] finished frobbing matematikaadit/putar
+[INFO] frobbed toml for matematikaadit/putar written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\matematikaadit\putar\Cargo.toml
+[INFO] crate matematikaadit/putar already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tera v0.10.10
+[INFO] [stderr]   Downloaded unidecode v0.2.0
+[INFO] [stderr]   Downloaded serde_json v1.0.3
+[INFO] [stderr]   Downloaded serde v1.0.15
+[INFO] [stderr]   Downloaded pest v0.4.1
+[INFO] [stderr]   Downloaded humansize v1.0.1
+[INFO] [stderr]   Downloaded backtrace-sys v0.1.14
+[INFO] [stderr]   Downloaded cc v1.0.0
+[INFO] [stderr]   Downloaded slug v0.1.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing matematikaadit/putar against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\matematikaadit\\putar,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5100b70f492a19e29c101b8f1bcaab7c20743010c92cca17c07bab5a19c1a104
+[INFO] running `"docker" "start" "-a" "5100b70f492a19e29c101b8f1bcaab7c20743010c92cca17c07bab5a19c1a104"`
+[INFO] [stderr] unable to upgrade to tcp, received 500
+[INFO] running `"docker" "inspect" "5100b70f492a19e29c101b8f1bcaab7c20743010c92cca17c07bab5a19c1a104"`
+[INFO] running `"docker" "rm" "-f" "5100b70f492a19e29c101b8f1bcaab7c20743010c92cca17c07bab5a19c1a104"`
+[INFO] [stdout] 5100b70f492a19e29c101b8f1bcaab7c20743010c92cca17c07bab5a19c1a104

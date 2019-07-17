@@ -1,0 +1,118 @@
+[INFO] crate error-chain 0.12.1 is already in cache
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\nightly\reg\error-chain\0.12.1
+[INFO] extracting crate error-chain 0.12.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\error-chain\0.12.1
+[INFO] validating manifest of error-chain-0.12.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of error-chain-0.12.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\nightly\reg\error-chain\0.12.1\Cargo.toml
+[INFO] started frobbing error-chain-0.12.1
+[INFO] finished frobbing error-chain-0.12.1
+[INFO] frobbed toml for error-chain-0.12.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\error-chain\0.12.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing error-chain-0.12.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] f256e314ebd150841246a7c347a109d1b082ae20176eb4b43bd64ecc22a25dd1
+[INFO] running `"docker" "start" "-a" "f256e314ebd150841246a7c347a109d1b082ae20176eb4b43bd64ecc22a25dd1"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr]    Compiling backtrace-sys v0.1.31
+[INFO] [stderr]    Compiling backtrace v0.3.33
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.52s
+[INFO] running `"docker" "inspect" "f256e314ebd150841246a7c347a109d1b082ae20176eb4b43bd64ecc22a25dd1"`
+[INFO] running `"docker" "rm" "-f" "f256e314ebd150841246a7c347a109d1b082ae20176eb4b43bd64ecc22a25dd1"`
+[INFO] [stdout] f256e314ebd150841246a7c347a109d1b082ae20176eb4b43bd64ecc22a25dd1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 057541008e392ac6030cbf23b465ac00087cb36dad6d704d2b7cd1727655ea13
+[INFO] running `"docker" "start" "-a" "057541008e392ac6030cbf23b465ac00087cb36dad6d704d2b7cd1727655ea13"`
+[INFO] [stderr]    Compiling error-chain v0.12.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.36s
+[INFO] running `"docker" "inspect" "057541008e392ac6030cbf23b465ac00087cb36dad6d704d2b7cd1727655ea13"`
+[INFO] running `"docker" "rm" "-f" "057541008e392ac6030cbf23b465ac00087cb36dad6d704d2b7cd1727655ea13"`
+[INFO] [stdout] 057541008e392ac6030cbf23b465ac00087cb36dad6d704d2b7cd1727655ea13
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\error-chain\\0.12.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] de92258b6c477ea199a1eb1e2a0e92c3f457cb3995ace31cc8835550fc1ffd23
+[INFO] running `"docker" "start" "-a" "de92258b6c477ea199a1eb1e2a0e92c3f457cb3995ace31cc8835550fc1ffd23"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.35s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\error_chain-74f22589c065fb95.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\has_backtrace-5221d93e80844ee1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quick_main-40343e0b068a2c9d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tests-2af4c8379388e6c3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 37 tests
+[INFO] [stdout] test bail ... ok
+[INFO] [stdout] test comma_in_errors_impl ... ok
+[INFO] [stdout] test documentation ... ok
+[INFO] [stdout] test empty ... ok
+[INFO] [stdout] test error_first ... ok
+[INFO] [stdout] test ensure ... ok
+[INFO] [stdout] test chain_err ... ok
+[INFO] [stdout] test error_patterns ... ok
+[INFO] [stdout] test error_chain_err ... ok
+[INFO] [stdout] test foreign_link_test::display_underlying_error ... ok
+[INFO] [stdout] test has_backtrace_depending_on_env ... FAILED
+[INFO] [stdout] test foreign_link_test::finds_source ... ok
+[INFO] [stdout] test links ... ok
+[INFO] [stdout] test order_test_1 ... ok
+[INFO] [stdout] test order_test_2 ... ok
+[INFO] [stdout] test order_test_3 ... ok
+[INFO] [stdout] test order_test_4 ... ok
+[INFO] [stdout] test order_test_5 ... ok
+[INFO] [stdout] test order_test_6 ... ok
+[INFO] [stdout] test foreign_link_test::iterates ... ok
+[INFO] [stdout] test order_test_7 ... ok
+[INFO] [stdout] test order_test_8 ... ok
+[INFO] [stdout] test result_match ... ok
+[INFO] [stdout] test rustup_regression ... ok
+[INFO] [stdout] test smoke_test_1 ... ok
+[INFO] [stdout] test smoke_test_2 ... ok
+[INFO] [stdout] test smoke_test_3 ... ok
+[INFO] [stdout] test smoke_test_4 ... ok
+[INFO] [stdout] test smoke_test_5 ... ok
+[INFO] [stdout] test smoke_test_6 ... ok
+[INFO] [stdout] test rewrapping ... ok
+[INFO] [stdout] test smoke_test_7 ... ok
+[INFO] [stdout] test smoke_test_8 ... ok
+[INFO] [stdout] test trailing_comma_in_errors_impl ... ok
+[INFO] [stdout] test with_result ... ok
+[INFO] [stdout] test without_result ... ok
+[INFO] [stdout] test types_declarations ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- has_backtrace_depending_on_env stdout ----
+[INFO] [stdout] thread 'has_backtrace_depending_on_env' panicked at 'called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:1051:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     has_backtrace_depending_on_env
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 36 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--test tests'
+[INFO] running `"docker" "inspect" "de92258b6c477ea199a1eb1e2a0e92c3f457cb3995ace31cc8835550fc1ffd23"`
+[INFO] running `"docker" "rm" "-f" "de92258b6c477ea199a1eb1e2a0e92c3f457cb3995ace31cc8835550fc1ffd23"`
+[INFO] [stdout] de92258b6c477ea199a1eb1e2a0e92c3f457cb3995ace31cc8835550fc1ffd23

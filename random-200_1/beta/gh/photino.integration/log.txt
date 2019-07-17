@@ -1,0 +1,65 @@
+[INFO] cloning repository photino/integration
+[INFO] running `"git" "clone" "--bare" "git://github.com/photino/integration.git" "work\\cache\\sources\\gh\\photino\\integration"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\photino\integration'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\photino\\integration" "work\\ex\\default\\sources\\stable\\gh\\photino\\integration"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\photino\integration'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\photino\\integration" "work\\ex\\default\\sources\\beta\\gh\\photino\\integration"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\photino\integration'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] e800589021cc8d866748e0f793468e33db20e4eb
+[INFO] sha for GitHub repo photino/integration: e800589021cc8d866748e0f793468e33db20e4eb
+[INFO] validating manifest of photino/integration on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of photino/integration on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing photino/integration
+[INFO] finished frobbing photino/integration
+[INFO] frobbed toml for photino/integration written to work\ex\default\sources\stable\gh\photino\integration\Cargo.toml
+[INFO] started frobbing photino/integration
+[INFO] finished frobbing photino/integration
+[INFO] frobbed toml for photino/integration written to work\ex\default\sources\beta\gh\photino\integration\Cargo.toml
+[INFO] crate photino/integration already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing photino/integration against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\photino\\integration,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 4611e16fd636998deeda865c0d0b52e7b953753daf1e97916a3a41d863d37258
+[INFO] running `"docker" "start" "-a" "4611e16fd636998deeda865c0d0b52e7b953753daf1e97916a3a41d863d37258"`
+[INFO] [stderr]    Compiling integration v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.69s
+[INFO] running `"docker" "inspect" "4611e16fd636998deeda865c0d0b52e7b953753daf1e97916a3a41d863d37258"`
+[INFO] running `"docker" "rm" "-f" "4611e16fd636998deeda865c0d0b52e7b953753daf1e97916a3a41d863d37258"`
+[INFO] [stdout] 4611e16fd636998deeda865c0d0b52e7b953753daf1e97916a3a41d863d37258
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\photino\\integration,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 53e365dddca90d9421d2abf31ce0688c6252ea77d8bedbc8e1b90b7840eb906f
+[INFO] running `"docker" "start" "-a" "53e365dddca90d9421d2abf31ce0688c6252ea77d8bedbc8e1b90b7840eb906f"`
+[INFO] [stderr]    Compiling integration v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.16s
+[INFO] running `"docker" "inspect" "53e365dddca90d9421d2abf31ce0688c6252ea77d8bedbc8e1b90b7840eb906f"`
+[INFO] running `"docker" "rm" "-f" "53e365dddca90d9421d2abf31ce0688c6252ea77d8bedbc8e1b90b7840eb906f"`
+[INFO] [stdout] 53e365dddca90d9421d2abf31ce0688c6252ea77d8bedbc8e1b90b7840eb906f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\photino\\integration,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 2281cda93d563d0575a5af979f5198399407e5906f9adc500ea9ed36e74bb26e
+[INFO] running `"docker" "start" "-a" "2281cda93d563d0575a5af979f5198399407e5906f9adc500ea9ed36e74bb26e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\integration-1f2538357fc9db94.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests integration
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\quadrature.rs - quadrature::gauss_legendre (line 7) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2281cda93d563d0575a5af979f5198399407e5906f9adc500ea9ed36e74bb26e"`
+[INFO] running `"docker" "rm" "-f" "2281cda93d563d0575a5af979f5198399407e5906f9adc500ea9ed36e74bb26e"`
+[INFO] [stdout] 2281cda93d563d0575a5af979f5198399407e5906f9adc500ea9ed36e74bb26e

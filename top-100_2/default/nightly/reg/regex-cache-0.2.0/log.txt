@@ -1,0 +1,68 @@
+[INFO] fetching crate regex-cache 0.2.0...
+[INFO] extracting crate regex-cache 0.2.0 into work\ex\default\sources\nightly\reg\regex-cache\0.2.0
+[INFO] extracting crate regex-cache 0.2.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\regex-cache\0.2.0
+[INFO] validating manifest of regex-cache-0.2.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of regex-cache-0.2.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing regex-cache-0.2.0
+[INFO] finished frobbing regex-cache-0.2.0
+[INFO] frobbed toml for regex-cache-0.2.0 written to work\ex\default\sources\nightly\reg\regex-cache\0.2.0\Cargo.toml
+[INFO] started frobbing regex-cache-0.2.0
+[INFO] finished frobbing regex-cache-0.2.0
+[INFO] frobbed toml for regex-cache-0.2.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\regex-cache\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded oncemutex v0.1.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing regex-cache-0.2.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\regex-cache\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 3ee66b6c5595835ccd04ed2c3fb3ab23e1883b6055ebf125c77d4e61334bb4eb
+[INFO] running `"docker" "start" "-a" "3ee66b6c5595835ccd04ed2c3fb3ab23e1883b6055ebf125c77d4e61334bb4eb"`
+[INFO] [stderr]    Compiling ucd-util v0.1.5
+[INFO] [stderr]    Compiling oncemutex v0.1.1
+[INFO] [stderr]    Compiling regex-syntax v0.6.10
+[INFO] [stderr]    Compiling regex v1.2.0
+[INFO] [stderr]    Compiling regex-cache v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 37.78s
+[INFO] running `"docker" "inspect" "3ee66b6c5595835ccd04ed2c3fb3ab23e1883b6055ebf125c77d4e61334bb4eb"`
+[INFO] running `"docker" "rm" "-f" "3ee66b6c5595835ccd04ed2c3fb3ab23e1883b6055ebf125c77d4e61334bb4eb"`
+[INFO] [stdout] 3ee66b6c5595835ccd04ed2c3fb3ab23e1883b6055ebf125c77d4e61334bb4eb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\regex-cache\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a4ed5b2a4197fcce41ee6e382fe5b7e36699915725ee92c196cf3afc1ac3774b
+[INFO] running `"docker" "start" "-a" "a4ed5b2a4197fcce41ee6e382fe5b7e36699915725ee92c196cf3afc1ac3774b"`
+[INFO] [stderr]    Compiling regex-cache v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.89s
+[INFO] running `"docker" "inspect" "a4ed5b2a4197fcce41ee6e382fe5b7e36699915725ee92c196cf3afc1ac3774b"`
+[INFO] running `"docker" "rm" "-f" "a4ed5b2a4197fcce41ee6e382fe5b7e36699915725ee92c196cf3afc1ac3774b"`
+[INFO] [stdout] a4ed5b2a4197fcce41ee6e382fe5b7e36699915725ee92c196cf3afc1ac3774b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\regex-cache\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 0922b10cd1f62413630d1e8dfbe208bd5a4f09fcf7ff2d9016552713622842db
+[INFO] running `"docker" "start" "-a" "0922b10cd1f62413630d1e8dfbe208bd5a4f09fcf7ff2d9016552713622842db"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\regex_cache-b3e185a7d1042af0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test cache::test::cached_regex ... ok
+[INFO] [stdout] test cache::test::respects_limit ... ok
+[INFO] [stdout] test lazy::test::build ... ok
+[INFO] [stdout] test lazy::test::new ... ok
+[INFO] [stdout] test lazy::test::same ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests regex-cache
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test src\cache.rs - cache::RegexCache::compile (line 73) ... ok
+[INFO] [stdout] test src\cache.rs - cache::RegexCache::save (line 47) ... ok
+[INFO] [stdout] test src\cache.rs - cache::RegexCache::configure (line 92) ... ok
+[INFO] [stdout] test src\lazy.rs - lazy::LazyRegex (line 41) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0922b10cd1f62413630d1e8dfbe208bd5a4f09fcf7ff2d9016552713622842db"`
+[INFO] running `"docker" "rm" "-f" "0922b10cd1f62413630d1e8dfbe208bd5a4f09fcf7ff2d9016552713622842db"`
+[INFO] [stdout] 0922b10cd1f62413630d1e8dfbe208bd5a4f09fcf7ff2d9016552713622842db

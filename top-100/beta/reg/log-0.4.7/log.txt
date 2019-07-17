@@ -1,0 +1,179 @@
+[INFO] fetching crate log 0.4.7...
+[INFO] extracting crate log 0.4.7 into work\ex\default\sources\stable\reg\log\0.4.7
+[INFO] extracting crate log 0.4.7 into work\ex\default\sources\beta\reg\log\0.4.7
+[INFO] validating manifest of log-0.4.7 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of log-0.4.7 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing log-0.4.7
+[INFO] removed 1 missing tests
+[INFO] finished frobbing log-0.4.7
+[INFO] frobbed toml for log-0.4.7 written to work\ex\default\sources\stable\reg\log\0.4.7\Cargo.toml
+[INFO] started frobbing log-0.4.7
+[INFO] removed 1 missing tests
+[INFO] finished frobbing log-0.4.7
+[INFO] frobbed toml for log-0.4.7 written to work\ex\default\sources\beta\reg\log\0.4.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing log-0.4.7 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] b0d3c827f344fdc4fb83644b91440aa42d58036fcd194b00bf2db21e3bc57721
+[INFO] running `"docker" "start" "-a" "b0d3c827f344fdc4fb83644b91440aa42d58036fcd194b00bf2db21e3bc57721"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling log v0.4.7 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:309:29
+[INFO] [stderr]     |
+[INFO] [stderr] 309 | static mut LOGGER: &'static Log = &NopLogger;
+[INFO] [stderr]     |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1238:36
+[INFO] [stderr]      |
+[INFO] [stderr] 1238 | pub fn set_logger(logger: &'static Log) -> Result<(), SetLoggerError> {
+[INFO] [stderr]      |                                    ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1245:29
+[INFO] [stderr]      |
+[INFO] [stderr] 1245 |     F: FnOnce() -> &'static Log,
+[INFO] [stderr]      |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1282:48
+[INFO] [stderr]      |
+[INFO] [stderr] 1282 | pub unsafe fn set_logger_racy(logger: &'static Log) -> Result<(), SetLoggerError> {
+[INFO] [stderr]      |                                                ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1342:29
+[INFO] [stderr]      |
+[INFO] [stderr] 1342 | pub fn logger() -> &'static Log {
+[INFO] [stderr]      |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.42s
+[INFO] running `"docker" "inspect" "b0d3c827f344fdc4fb83644b91440aa42d58036fcd194b00bf2db21e3bc57721"`
+[INFO] running `"docker" "rm" "-f" "b0d3c827f344fdc4fb83644b91440aa42d58036fcd194b00bf2db21e3bc57721"`
+[INFO] [stdout] b0d3c827f344fdc4fb83644b91440aa42d58036fcd194b00bf2db21e3bc57721
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a8d5054cd38f472603b9030bf3bdc415ec030256ed0342c5f6c41b51be9875ca
+[INFO] running `"docker" "start" "-a" "a8d5054cd38f472603b9030bf3bdc415ec030256ed0342c5f6c41b51be9875ca"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling serde v1.0.95
+[INFO] [stderr]    Compiling serde_test v1.0.95
+[INFO] [stderr]    Compiling log v0.4.7 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:309:29
+[INFO] [stderr]     |
+[INFO] [stderr] 309 | static mut LOGGER: &'static Log = &NopLogger;
+[INFO] [stderr]     |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1238:36
+[INFO] [stderr]      |
+[INFO] [stderr] 1238 | pub fn set_logger(logger: &'static Log) -> Result<(), SetLoggerError> {
+[INFO] [stderr]      |                                    ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1245:29
+[INFO] [stderr]      |
+[INFO] [stderr] 1245 |     F: FnOnce() -> &'static Log,
+[INFO] [stderr]      |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1282:48
+[INFO] [stderr]      |
+[INFO] [stderr] 1282 | pub unsafe fn set_logger_racy(logger: &'static Log) -> Result<(), SetLoggerError> {
+[INFO] [stderr]      |                                                ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1342:29
+[INFO] [stderr]      |
+[INFO] [stderr] 1342 | pub fn logger() -> &'static Log {
+[INFO] [stderr]      |                             ^^^ help: use `dyn`: `dyn Log`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 58.17s
+[INFO] running `"docker" "inspect" "a8d5054cd38f472603b9030bf3bdc415ec030256ed0342c5f6c41b51be9875ca"`
+[INFO] running `"docker" "rm" "-f" "a8d5054cd38f472603b9030bf3bdc415ec030256ed0342c5f6c41b51be9875ca"`
+[INFO] [stdout] a8d5054cd38f472603b9030bf3bdc415ec030256ed0342c5f6c41b51be9875ca
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\log\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] ffb9a8edb32da910d79d6366f2ee63e9547e97c209d081770328ebe4e75a770c
+[INFO] running `"docker" "start" "-a" "ffb9a8edb32da910d79d6366f2ee63e9547e97c209d081770328ebe4e75a770c"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\filters.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\log-15bd355c8d3c7d0a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test tests::test_cross_cmp ... ok
+[INFO] [stdout] test tests::test_cross_eq ... ok
+[INFO] [stdout] test tests::test_level_from_str ... ok
+[INFO] [stdout] test tests::test_level_show ... ok
+[INFO] [stdout] test tests::test_levelfilter_from_str ... ok
+[INFO] [stdout] test tests::test_levelfilter_show ... ok
+[INFO] [stdout] test tests::test_metadata_builder ... ok
+[INFO] [stdout] test tests::test_metadata_convenience_builder ... ok
+[INFO] [stdout] test tests::test_record_builder ... ok
+[INFO] [stdout] test tests::test_record_complete_builder ... ok
+[INFO] [stdout] test tests::test_record_convenience_builder ... ok
+[INFO] [stdout] test tests::test_to_level ... ok
+[INFO] [stdout] test tests::test_to_level_filter ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests log
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ffb9a8edb32da910d79d6366f2ee63e9547e97c209d081770328ebe4e75a770c"`
+[INFO] running `"docker" "rm" "-f" "ffb9a8edb32da910d79d6366f2ee63e9547e97c209d081770328ebe4e75a770c"`
+[INFO] [stdout] ffb9a8edb32da910d79d6366f2ee63e9547e97c209d081770328ebe4e75a770c

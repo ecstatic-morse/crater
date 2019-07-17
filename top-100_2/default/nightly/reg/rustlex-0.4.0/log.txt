@@ -1,0 +1,683 @@
+[INFO] fetching crate rustlex 0.4.0...
+[INFO] extracting crate rustlex 0.4.0 into work\ex\default\sources\nightly\reg\rustlex\0.4.0
+[INFO] extracting crate rustlex 0.4.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rustlex\0.4.0
+[INFO] validating manifest of rustlex-0.4.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rustlex-0.4.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rustlex-0.4.0
+[INFO] finished frobbing rustlex-0.4.0
+[INFO] frobbed toml for rustlex-0.4.0 written to work\ex\default\sources\nightly\reg\rustlex\0.4.0\Cargo.toml
+[INFO] started frobbing rustlex-0.4.0
+[INFO] finished frobbing rustlex-0.4.0
+[INFO] frobbed toml for rustlex-0.4.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\rustlex\0.4.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rustlex_codegen v0.4.0
+[INFO] [stderr]   Downloaded rustlex_fsa v0.4.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rustlex-0.4.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\rustlex\\0.4.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c1ea855d026c87b8e36459fbb1a802369b936d86316e66bcecb0a790b92e98ab
+[INFO] running `"docker" "start" "-a" "c1ea855d026c87b8e36459fbb1a802369b936d86316e66bcecb0a790b92e98ab"`
+[INFO] [stderr]    Compiling bit-vec v0.5.1
+[INFO] [stderr]    Compiling rustlex_fsa v0.4.0
+[INFO] [stderr]    Compiling bit-set v0.5.1
+[INFO] [stderr]    Compiling rustlex_codegen v0.4.0
+[INFO] [stderr] error[E0557]: feature has been removed
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\lib.rs:1:43
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(plugin_registrar,rustc_private,quote)]
+[INFO] [stderr]   |                                           ^^^^^ feature has been removed
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\lib.rs:12:13
+[INFO] [stderr]    |
+[INFO] [stderr] 12 | use syntax::codemap::Span;
+[INFO] [stderr]    |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:7:13
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | use syntax::codemap::{Span, Spanned};
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::util::small_vector`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:13:19
+[INFO] [stderr]    |
+[INFO] [stderr] 13 | use syntax::util::small_vector::SmallVector;
+[INFO] [stderr]    |                   ^^^^^^^^^^^^ could not find `small_vector` in `util`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\lexer.rs:9:13
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use syntax::codemap::Span;
+[INFO] [stderr]   |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::codemap`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:15:13
+[INFO] [stderr]    |
+[INFO] [stderr] 15 | use syntax::codemap::Span;
+[INFO] [stderr]    |             ^^^^^^^ could not find `codemap` in `syntax`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `syntax::symbol::keywords`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:18:30
+[INFO] [stderr]    |
+[INFO] [stderr] 18 | use syntax::symbol::{Symbol, keywords};
+[INFO] [stderr]    |                              ^^^^^^^^ no `keywords` in `symbol`
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_ty!` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:82:13
+[INFO] [stderr]    |
+[INFO] [stderr] 82 |         ty: quote_ty!(&*cx, ::rustlex::rt::RustLexLexer<R>),
+[INFO] [stderr]    |             ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_ty!` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:91:13
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |         ty: quote_ty!(&*cx, usize),
+[INFO] [stderr]    |             ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:160:22
+[INFO] [stderr]     |
+[INFO] [stderr] 160 |     let match_expr = quote_expr!(&*cx, last_matching_action);
+[INFO] [stderr]     |                      ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_ty!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:166:23
+[INFO] [stderr]     |
+[INFO] [stderr] 166 |     let action_type = quote_ty!(&*cx,  Fn(&mut $ident<R>) -> Option<$tokens>);
+[INFO] [stderr]     |                       ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:169:24
+[INFO] [stderr]     |
+[INFO] [stderr] 169 |         let pat_expr = quote_expr!(&*cx, $i);
+[INFO] [stderr]     |                        ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:173:13
+[INFO] [stderr]     |
+[INFO] [stderr] 173 |             quote_expr!(&*cx, (Box::new($new_act)) as Box<$action_type>));
+[INFO] [stderr]     |             ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:178:19
+[INFO] [stderr]     |
+[INFO] [stderr] 178 |     let def_act = quote_expr!(&*cx, Box::new(|_:&mut $ident<R>| -> Option<$tokens> {
+[INFO] [stderr]     |                   ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_item!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:215:5
+[INFO] [stderr]     |
+[INFO] [stderr] 215 |     quote_item!(cx,
+[INFO] [stderr]     |     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_item!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:246:5
+[INFO] [stderr]     |
+[INFO] [stderr] 246 |     quote_item!(cx,
+[INFO] [stderr]     |     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:267:9
+[INFO] [stderr]     |
+[INFO] [stderr] 267 |         quote_expr!(&*cx, ::rustlex::rt::RustLexLexer::new(reader))));
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_expr!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:269:9
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |         quote_expr!(&*cx, $initial)));
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_item!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:278:9
+[INFO] [stderr]     |
+[INFO] [stderr] 278 |         quote_item!(cx,
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_item!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:288:16
+[INFO] [stderr]     |
+[INFO] [stderr] 288 |     items.push(quote_item!(cx,
+[INFO] [stderr]     |                ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: cannot find macro `quote_item!` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:327:16
+[INFO] [stderr]     |
+[INFO] [stderr] 327 |     items.push(quote_item!(cx,
+[INFO] [stderr]     |                ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `NestedMetaItemKind` in `ast`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:99:32
+[INFO] [stderr]    |
+[INFO] [stderr] 99 |             vec![span(sp, ast::NestedMetaItemKind::MetaItem(
+[INFO] [stderr]    |                                ^^^^^^^^^^^^^^^^^^ could not find `NestedMetaItemKind` in `ast`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `char_lit` in module `parse`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:152:33
+[INFO] [stderr]     |
+[INFO] [stderr] 152 |                 let ch = parse::char_lit(&*i.as_str(), None).0;
+[INFO] [stderr]     |                                 ^^^^^^^^ not found in `parse`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `char_lit` in module `parse`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:160:40
+[INFO] [stderr]     |
+[INFO] [stderr] 160 |                                 parse::char_lit(&*ch.as_str(), None).0,
+[INFO] [stderr]     |                                        ^^^^^^^^ not found in `parse`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `char_lit` in module `parse`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:222:36
+[INFO] [stderr]     |
+[INFO] [stderr] 222 |                 regex::Char(parse::char_lit(&*ch.as_str(), None).0)
+[INFO] [stderr]     |                                    ^^^^^^^^ not found in `parse`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `IdentTT` in module `syntax::ext::base`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\lib.rs:44:28
+[INFO] [stderr]    |
+[INFO] [stderr] 44 |         syntax::ext::base::IdentTT(Box::new(rustlex), None, false)
+[INFO] [stderr]    |                            ^^^^^^^ not found in `syntax::ext::base`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0061]: this function takes 3 parameters but 2 parameters were supplied
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:97:9
+[INFO] [stderr]     |
+[INFO] [stderr] 97  | /         attr::mk_list_item(
+[INFO] [stderr] 98  | |             Symbol::intern("allow"),
+[INFO] [stderr] 99  | |             vec![span(sp, ast::NestedMetaItemKind::MetaItem(
+[INFO] [stderr] 100 | |                 attr::mk_word_item(Symbol::intern("missing_docs"))
+[INFO] [stderr] 101 | |             ))]
+[INFO] [stderr] 102 | |         )
+[INFO] [stderr]     | |_________^ expected 3 parameters
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:100:36
+[INFO] [stderr]     |
+[INFO] [stderr] 100 |                 attr::mk_word_item(Symbol::intern("missing_docs"))
+[INFO] [stderr]     |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::ast::Ident`, found struct `syntax::ast::Symbol`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::ast::Ident`
+[INFO] [stderr]                found type `syntax::ast::Symbol`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:110:46
+[INFO] [stderr]     |
+[INFO] [stderr] 110 |             ast::VariantData::Struct(fields, ast::DUMMY_NODE_ID),
+[INFO] [stderr]     |                                              ^^^^^^^^^^^^^^^^^^ expected bool, found struct `syntax::ast::NodeId`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `bool`
+[INFO] [stderr]                found type `syntax::ast::NodeId`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Type` found for type `syntax::ast::GenericParam` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:113:40
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |                     ast::GenericParam::Type(cx.typaram(
+[INFO] [stderr]     |                                        ^^^^ associated item not found in `syntax::ast::GenericParam`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no method named `typarambound` found for type `&mut syntax::ext::base::ExtCtxt<'_>` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:116:32
+[INFO] [stderr]     |
+[INFO] [stderr] 116 |                             cx.typarambound(cx.path_global(sp, vec![
+[INFO] [stderr]     |                                ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0560]: struct `syntax::ast::WhereClause` has no field named `id`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:126:21
+[INFO] [stderr]     |
+[INFO] [stderr] 126 |                     id: ast::DUMMY_NODE_ID,
+[INFO] [stderr]     |                     ^^ `syntax::ast::WhereClause` does not have this field
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: available fields are: `predicates`, `span`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:192:9
+[INFO] [stderr]     |
+[INFO] [stderr] 192 |         cx.expr_usize(sp, 256)));
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::ast::AnonConst`, found struct `syntax::ptr::P`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::ast::AnonConst`
+[INFO] [stderr]                found type `syntax::ptr::P<syntax::ast::Expr>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:206:9
+[INFO] [stderr]     |
+[INFO] [stderr] 206 |         cx.expr_usize(sp, lex.auto.states.len())
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::ast::AnonConst`, found struct `syntax::ptr::P`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::ast::AnonConst`
+[INFO] [stderr]                found type `syntax::ptr::P<syntax::ast::Expr>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\codegen.rs:231:9
+[INFO] [stderr]     |
+[INFO] [stderr] 231 |         cx.expr_usize(sp, lex.auto.states.len())
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::ast::AnonConst`, found struct `syntax::ptr::P`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::ast::AnonConst`
+[INFO] [stderr]                found type `syntax::ptr::P<syntax::ast::Expr>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Whitespace` found for type `syntax::parse::token::Token` in the current scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:65:72
+[INFO] [stderr]    |
+[INFO] [stderr] 65 |         let token = ::std::mem::replace(&mut self.token, token::Token::Whitespace);
+[INFO] [stderr]    |                                                                        ^^^^^^^^^^ associated item not found in `syntax::parse::token::Token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:70:18
+[INFO] [stderr]    |
+[INFO] [stderr] 70 |         self.eat(tok)
+[INFO] [stderr]    |                  ^^^ expected enum `syntax::parse::token::TokenKind`, found struct `syntax::parse::token::Token`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `&syntax::parse::token::TokenKind`
+[INFO] [stderr]               found type `&syntax::parse::token::Token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:82:21
+[INFO] [stderr]    |
+[INFO] [stderr] 82 |         self.expect(tok)
+[INFO] [stderr]    |                     ^^^ expected enum `syntax::parse::token::TokenKind`, found struct `syntax::parse::token::Token`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `&syntax::parse::token::TokenKind`
+[INFO] [stderr]               found type `&syntax::parse::token::Token`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:82:9
+[INFO] [stderr]    |
+[INFO] [stderr] 81 |     fn expect(&mut self, tok: &token::Token) -> Result<(),DiagnosticBuilder<'a>> {
+[INFO] [stderr]    |                                                 -------------------------------- expected `std::result::Result<(), rustc_errors::DiagnosticBuilder<'a>>` because of return type
+[INFO] [stderr] 82 |         self.expect(tok)
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^ expected (), found bool
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `std::result::Result<(), rustc_errors::DiagnosticBuilder<'a>>`
+[INFO] [stderr]               found type `std::result::Result<bool, rustc_errors::DiagnosticBuilder<'_>>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0107]: wrong number of type arguments: expected 0, found 1
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:89:78
+[INFO] [stderr]    |
+[INFO] [stderr] 89 |     fn unexpected(&mut self) -> DiagnosticBuilder<'a> { Parser::unexpected::<()>(self).unwrap_err() }
+[INFO] [stderr]    |                                                                              ^^ unexpected type argument
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no method named `unwrap_err` found for type `rustc_errors::DiagnosticBuilder<'_>` in the current scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:89:88
+[INFO] [stderr]    |
+[INFO] [stderr] 89 |     fn unexpected(&mut self) -> DiagnosticBuilder<'a> { Parser::unexpected::<()>(self).unwrap_err() }
+[INFO] [stderr]    |                                                                                        ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0107]: wrong number of type arguments: expected 0, found 1
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:91:35
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |         Parser::unexpected_last::<()>(self, tok).unwrap_err()
+[INFO] [stderr]    |                                   ^^ unexpected type argument
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no method named `unwrap_err` found for type `rustc_errors::DiagnosticBuilder<'_>` in the current scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:91:50
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |         Parser::unexpected_last::<()>(self, tok).unwrap_err()
+[INFO] [stderr]    |                                                  ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:101:9
+[INFO] [stderr]     |
+[INFO] [stderr] 100 |     match parser.token {
+[INFO] [stderr]     |           ------------ this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 101 |         token::Ident(id) if id.name == token => {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 1 field, but the corresponding tuple variant has 2 fields
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:101:9
+[INFO] [stderr]     |
+[INFO] [stderr] 101 |         token::Ident(id) if id.name == token => {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^ expected 2 fields, found 1
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:117:13
+[INFO] [stderr]     |
+[INFO] [stderr] 116 |         match parser.token {
+[INFO] [stderr]     |               ------------ this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 117 |             token::Ident(id) if id.name == prop => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 1 field, but the corresponding tuple variant has 2 fields
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:117:13
+[INFO] [stderr]     |
+[INFO] [stderr] 117 |             token::Ident(id) if id.name == prop => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^ expected 2 fields, found 1
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:147:13
+[INFO] [stderr]     |
+[INFO] [stderr] 146 |         match tok {
+[INFO] [stderr]     |               --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 147 |             token::CloseDelim(token::Bracket) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:151:13
+[INFO] [stderr]     |
+[INFO] [stderr] 146 |         match tok {
+[INFO] [stderr]     |               --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 151 |             token::Literal(token::Lit::Char(i), _) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 2 fields, but the corresponding tuple variant has 1 field
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:151:13
+[INFO] [stderr]     |
+[INFO] [stderr] 151 |             token::Literal(token::Lit::Char(i), _) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 1 field, found 2
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Char` found for type `syntax::parse::token::Lit` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:151:40
+[INFO] [stderr]     |
+[INFO] [stderr] 151 |             token::Literal(token::Lit::Char(i), _) => {
+[INFO] [stderr]     |                                        ^^^^ associated item not found in `syntax::parse::token::Lit`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:175:13
+[INFO] [stderr]     |
+[INFO] [stderr] 146 |         match tok {
+[INFO] [stderr]     |               --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 175 |             token::Literal(token::Lit::Str_(id),_) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 2 fields, but the corresponding tuple variant has 1 field
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:175:13
+[INFO] [stderr]     |
+[INFO] [stderr] 175 |             token::Literal(token::Lit::Str_(id),_) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 1 field, found 2
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Str_` found for type `syntax::parse::token::Lit` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:175:40
+[INFO] [stderr]     |
+[INFO] [stderr] 175 |             token::Literal(token::Lit::Str_(id),_) => {
+[INFO] [stderr]     |                                        ^^^^ associated item not found in `syntax::parse::token::Lit`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:155:21
+[INFO] [stderr]     |
+[INFO] [stderr] 154 |                 match *parser.token() {
+[INFO] [stderr]     |                       --------------- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 155 |                     token::BinOp(token::Minus) => {
+[INFO] [stderr]     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:159:29
+[INFO] [stderr]     |
+[INFO] [stderr] 158 |                         let ch2 = match parser.bump_and_get() {
+[INFO] [stderr]     |                                         --------------------- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 159 |                             token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 2 fields, but the corresponding tuple variant has 1 field
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:159:29
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |                             token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 1 field, found 2
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Char` found for type `syntax::parse::token::Lit` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:159:56
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |                             token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |                                                        ^^^^ associated item not found in `syntax::parse::token::Lit`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:206:9
+[INFO] [stderr]     |
+[INFO] [stderr] 206 |         token::Dot => Ok(Box::new(regex::Literal(regex::Any))),
+[INFO] [stderr]     |         ^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:207:9
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     match tok {
+[INFO] [stderr]     |           --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 206 |         token::Dot => Ok(Box::new(regex::Literal(regex::Any))),
+[INFO] [stderr] 207 |         token::OpenDelim(token::Paren) => get_regex(parser,
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:209:9
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     match tok {
+[INFO] [stderr]     |           --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 209 |         token::OpenDelim(token::Bracket) => {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:220:9
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     match tok {
+[INFO] [stderr]     |           --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 220 |         token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 2 fields, but the corresponding tuple variant has 1 field
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:220:9
+[INFO] [stderr]     |
+[INFO] [stderr] 220 |         token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 1 field, found 2
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Char` found for type `syntax::parse::token::Lit` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:220:36
+[INFO] [stderr]     |
+[INFO] [stderr] 220 |         token::Literal(token::Lit::Char(ch), _) =>
+[INFO] [stderr]     |                                    ^^^^ associated item not found in `syntax::parse::token::Lit`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:224:9
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     match tok {
+[INFO] [stderr]     |           --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 224 |         token::Literal(token::Lit::Str_(id), _) =>
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 2 fields, but the corresponding tuple variant has 1 field
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:224:9
+[INFO] [stderr]     |
+[INFO] [stderr] 224 |         token::Literal(token::Lit::Str_(id), _) =>
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 1 field, found 2
+[INFO] [stderr] 
+[INFO] [stderr] error[E0599]: no associated item named `Str_` found for type `syntax::parse::token::Lit` in the current scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:224:36
+[INFO] [stderr]     |
+[INFO] [stderr] 224 |         token::Literal(token::Lit::Str_(id), _) =>
+[INFO] [stderr]     |                                    ^^^^ associated item not found in `syntax::parse::token::Lit`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:233:9
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |     match tok {
+[INFO] [stderr]     |           --- this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] ...
+[INFO] [stderr] 233 |         token::Ident(id) => match env.get(&id.name).cloned() {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 1 field, but the corresponding tuple variant has 2 fields
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:233:9
+[INFO] [stderr]     |
+[INFO] [stderr] 233 |         token::Ident(id) => match env.get(&id.name).cloned() {
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^ expected 2 fields, found 1
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:208:13
+[INFO] [stderr]     |
+[INFO] [stderr] 208 |             &token::CloseDelim(token::Paren), env),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:210:27
+[INFO] [stderr]     |
+[INFO] [stderr] 210 |             if parser.eat(&token::BinOp(token::Caret)) {
+[INFO] [stderr]     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:250:19
+[INFO] [stderr]     |
+[INFO] [stderr] 250 |     if parser.eat(&token::BinOp(token::Star)) {
+[INFO] [stderr]     |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:252:26
+[INFO] [stderr]     |
+[INFO] [stderr] 252 |     } else if parser.eat(&token::BinOp(token::Plus)) {
+[INFO] [stderr]     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:254:26
+[INFO] [stderr]     |
+[INFO] [stderr] 254 |     } else if parser.eat(&token::Question) {
+[INFO] [stderr]     |                          ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:270:22
+[INFO] [stderr]     |
+[INFO] [stderr] 270 |         parser.check(&token::BinOp(token::Or)) {
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:302:28
+[INFO] [stderr]     |
+[INFO] [stderr] 302 |         try!(parser.expect(&token::BinOp(token::Or)));
+[INFO] [stderr]     |                            ^^^^^^^^^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:315:38
+[INFO] [stderr]     |
+[INFO] [stderr] 315 |     let reg = try!(get_regex(parser, &token::Semi, env));
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:345:46
+[INFO] [stderr]     |
+[INFO] [stderr] 345 |         let pattern = try!(get_regex(parser, &token::FatArrow, env));
+[INFO] [stderr]     |                                              ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0609]: no field `span` on type `&mut syntax::parse::parser::Parser<'a>`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:367:22
+[INFO] [stderr]     |
+[INFO] [stderr] 367 |         span: parser.span,
+[INFO] [stderr]     |                      ^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:380:13
+[INFO] [stderr]     |
+[INFO] [stderr] 379 |         match parser.token {
+[INFO] [stderr]     |               ------------ this match expression has type `syntax::parse::token::Token`
+[INFO] [stderr] 380 |             token::Ident(id) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `syntax::parse::token::Token`
+[INFO] [stderr]                found type `syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0023]: this pattern has 1 field, but the corresponding tuple variant has 2 fields
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:380:13
+[INFO] [stderr]     |
+[INFO] [stderr] 380 |             token::Ident(id) => {
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^ expected 2 fields, found 1
+[INFO] [stderr] 
+[INFO] [stderr] error[E0609]: no field `span` on type `&mut syntax::parse::parser::Parser<'a>`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:389:37
+[INFO] [stderr]     |
+[INFO] [stderr] 389 |                     let sp = parser.span;
+[INFO] [stderr]     |                                     ^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:412:54
+[INFO] [stderr]     |
+[INFO] [stderr] 412 |                     let reg = try!(get_regex(parser, &token::FatArrow, env));
+[INFO] [stderr]     |                                                      ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\rustlex_codegen-0.4.0\parser.rs:422:50
+[INFO] [stderr]     |
+[INFO] [stderr] 422 |                 let reg = try!(get_regex(parser, &token::FatArrow, env));
+[INFO] [stderr]     |                                                  ^^^^^^^^^^^^^^^^ expected struct `syntax::parse::token::Token`, found enum `syntax::parse::token::TokenKind`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `&syntax::parse::token::Token`
+[INFO] [stderr]                found type `&syntax::parse::token::TokenKind`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 84 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0023, E0061, E0107, E0308, E0425, E0432, E0433, E0557, E0560...
+[INFO] [stderr] For more information about an error, try `rustc --explain E0023`.
+[INFO] [stderr] error: Could not compile `rustlex_codegen`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "c1ea855d026c87b8e36459fbb1a802369b936d86316e66bcecb0a790b92e98ab"`
+[INFO] running `"docker" "rm" "-f" "c1ea855d026c87b8e36459fbb1a802369b936d86316e66bcecb0a790b92e98ab"`
+[INFO] [stdout] c1ea855d026c87b8e36459fbb1a802369b936d86316e66bcecb0a790b92e98ab

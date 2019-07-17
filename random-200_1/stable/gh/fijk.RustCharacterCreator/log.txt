@@ -1,0 +1,68 @@
+[INFO] cloning repository fijk/RustCharacterCreator
+[INFO] running `"git" "clone" "--bare" "git://github.com/fijk/RustCharacterCreator.git" "work\\cache\\sources\\gh\\fijk\\RustCharacterCreator"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\fijk\RustCharacterCreator'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\fijk\\RustCharacterCreator" "work\\ex\\default\\sources\\stable\\gh\\fijk\\RustCharacterCreator"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\fijk\RustCharacterCreator'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\fijk\\RustCharacterCreator" "work\\ex\\default\\sources\\beta\\gh\\fijk\\RustCharacterCreator"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\fijk\RustCharacterCreator'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 1725a3c521364a4730a1ae3855f8ea42af277032
+[INFO] sha for GitHub repo fijk/RustCharacterCreator: 1725a3c521364a4730a1ae3855f8ea42af277032
+[INFO] validating manifest of fijk/RustCharacterCreator on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of fijk/RustCharacterCreator on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing fijk/RustCharacterCreator
+[INFO] finished frobbing fijk/RustCharacterCreator
+[INFO] frobbed toml for fijk/RustCharacterCreator written to work\ex\default\sources\stable\gh\fijk\RustCharacterCreator\Cargo.toml
+[INFO] started frobbing fijk/RustCharacterCreator
+[INFO] finished frobbing fijk/RustCharacterCreator
+[INFO] frobbed toml for fijk/RustCharacterCreator written to work\ex\default\sources\beta\gh\fijk\RustCharacterCreator\Cargo.toml
+[INFO] crate fijk/RustCharacterCreator already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing fijk/RustCharacterCreator against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\fijk\\RustCharacterCreator,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] beb3bbd3a2eeda14159ea7140851d0b34f714747e5460eaf864c7956ac0c8ca7
+[INFO] running `"docker" "start" "-a" "beb3bbd3a2eeda14159ea7140851d0b34f714747e5460eaf864c7956ac0c8ca7"`
+[INFO] [stderr]    Compiling character_creator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.88s
+[INFO] running `"docker" "inspect" "beb3bbd3a2eeda14159ea7140851d0b34f714747e5460eaf864c7956ac0c8ca7"`
+[INFO] running `"docker" "rm" "-f" "beb3bbd3a2eeda14159ea7140851d0b34f714747e5460eaf864c7956ac0c8ca7"`
+[INFO] [stdout] beb3bbd3a2eeda14159ea7140851d0b34f714747e5460eaf864c7956ac0c8ca7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\fijk\\RustCharacterCreator,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 11e2fb8acc46e39f3ba3a049593ee45df19f98cd69487a184d04628b45048984
+[INFO] running `"docker" "start" "-a" "11e2fb8acc46e39f3ba3a049593ee45df19f98cd69487a184d04628b45048984"`
+[INFO] [stderr]    Compiling character_creator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.89s
+[INFO] running `"docker" "inspect" "11e2fb8acc46e39f3ba3a049593ee45df19f98cd69487a184d04628b45048984"`
+[INFO] running `"docker" "rm" "-f" "11e2fb8acc46e39f3ba3a049593ee45df19f98cd69487a184d04628b45048984"`
+[INFO] [stdout] 11e2fb8acc46e39f3ba3a049593ee45df19f98cd69487a184d04628b45048984
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\fijk\\RustCharacterCreator,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] b815b160c37d7c650e81aef286b167a07d42f568b12dd132e59a833ed1a45602
+[INFO] running `"docker" "start" "-a" "b815b160c37d7c650e81aef286b167a07d42f568b12dd132e59a833ed1a45602"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\character_creator-6de772a000da6572.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\character_creator-eefc68809c3a75a1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests character_creator
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b815b160c37d7c650e81aef286b167a07d42f568b12dd132e59a833ed1a45602"`
+[INFO] running `"docker" "rm" "-f" "b815b160c37d7c650e81aef286b167a07d42f568b12dd132e59a833ed1a45602"`
+[INFO] [stdout] b815b160c37d7c650e81aef286b167a07d42f568b12dd132e59a833ed1a45602

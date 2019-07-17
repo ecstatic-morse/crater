@@ -1,0 +1,59 @@
+[INFO] fetching crate failure 0.1.5...
+[INFO] extracting crate failure 0.1.5 into work\ex\default\sources\stable\reg\failure\0.1.5
+[INFO] extracting crate failure 0.1.5 into work\ex\default\sources\beta\reg\failure\0.1.5
+[INFO] validating manifest of failure-0.1.5 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of failure-0.1.5 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing failure-0.1.5
+[INFO] finished frobbing failure-0.1.5
+[INFO] frobbed toml for failure-0.1.5 written to work\ex\default\sources\stable\reg\failure\0.1.5\Cargo.toml
+[INFO] started frobbing failure-0.1.5
+[INFO] finished frobbing failure-0.1.5
+[INFO] frobbed toml for failure-0.1.5 written to work\ex\default\sources\beta\reg\failure\0.1.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building failure-0.1.5 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\failure\\0.1.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] b5df2c817efa56da4ff915b53dc7f696c7dd30135b5ff9d06dce8ef3eadf0dc3
+[INFO] running `"docker" "start" "-a" "b5df2c817efa56da4ff915b53dc7f696c7dd30135b5ff9d06dce8ef3eadf0dc3"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling backtrace v0.3.32
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling failure v0.1.5 (C:\crater\workdir)
+[INFO] [stderr] error: use of deprecated item 'std::sync::atomic::ATOMIC_USIZE_INIT': the `new` function is now preferred
+[INFO] [stderr]  --> src\backtrace\internal.rs:5:38
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use std::sync::atomic::{AtomicUsize, ATOMIC_USIZE_INIT, Ordering};
+[INFO] [stderr]   |                                      ^^^^^^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]  --> src\lib.rs:25:9
+[INFO] [stderr]   |
+[INFO] [stderr] 25| #![deny(warnings)]
+[INFO] [stderr]   |         ^^^^^^^^
+[INFO] [stderr]   = note: #[deny(deprecated)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'std::sync::atomic::ATOMIC_USIZE_INIT': the `new` function is now preferred
+[INFO] [stderr]   --> src\backtrace\internal.rs:27:39
+[INFO] [stderr]    |
+[INFO] [stderr] 27 |         static ENABLED: AtomicUsize = ATOMIC_USIZE_INIT;
+[INFO] [stderr]    |                                       ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `AtomicUsize::new(0)`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `failure`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "b5df2c817efa56da4ff915b53dc7f696c7dd30135b5ff9d06dce8ef3eadf0dc3"`
+[INFO] running `"docker" "rm" "-f" "b5df2c817efa56da4ff915b53dc7f696c7dd30135b5ff9d06dce8ef3eadf0dc3"`
+[INFO] [stdout] b5df2c817efa56da4ff915b53dc7f696c7dd30135b5ff9d06dce8ef3eadf0dc3

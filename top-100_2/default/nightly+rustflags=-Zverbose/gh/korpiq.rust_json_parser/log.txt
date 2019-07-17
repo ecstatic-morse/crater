@@ -1,0 +1,78 @@
+[INFO] cloning repository korpiq/rust_json_parser
+[INFO] running `"git" "clone" "--bare" "git://github.com/korpiq/rust_json_parser.git" "work\\cache\\sources\\gh\\korpiq\\rust_json_parser"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\korpiq\rust_json_parser'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\korpiq\\rust_json_parser" "work\\ex\\default\\sources\\nightly\\gh\\korpiq\\rust_json_parser"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\korpiq\rust_json_parser'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\korpiq\\rust_json_parser" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\korpiq\\rust_json_parser"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\korpiq\rust_json_parser'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 6feceb98d0d48d4fb6e547a25a6066d400053721
+[INFO] sha for GitHub repo korpiq/rust_json_parser: 6feceb98d0d48d4fb6e547a25a6066d400053721
+[INFO] validating manifest of korpiq/rust_json_parser on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of korpiq/rust_json_parser on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing korpiq/rust_json_parser
+[INFO] finished frobbing korpiq/rust_json_parser
+[INFO] frobbed toml for korpiq/rust_json_parser written to work\ex\default\sources\nightly\gh\korpiq\rust_json_parser\Cargo.toml
+[INFO] started frobbing korpiq/rust_json_parser
+[INFO] finished frobbing korpiq/rust_json_parser
+[INFO] frobbed toml for korpiq/rust_json_parser written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\korpiq\rust_json_parser\Cargo.toml
+[INFO] crate korpiq/rust_json_parser already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded circular v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing korpiq/rust_json_parser against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\korpiq\\rust_json_parser,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1a6e71c248df0caeb909c5af2ee0013625e7ea26df267f9e8ffb0aa1145e9675
+[INFO] running `"docker" "start" "-a" "1a6e71c248df0caeb909c5af2ee0013625e7ea26df267f9e8ffb0aa1145e9675"`
+[INFO] [stderr]    Compiling libc v0.2.48
+[INFO] [stderr]    Compiling memchr v2.1.3
+[INFO] [stderr]    Compiling circular v0.2.0
+[INFO] [stderr]    Compiling nom v4.2.0
+[INFO] [stderr]    Compiling json_parser v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.49s
+[INFO] running `"docker" "inspect" "1a6e71c248df0caeb909c5af2ee0013625e7ea26df267f9e8ffb0aa1145e9675"`
+[INFO] running `"docker" "rm" "-f" "1a6e71c248df0caeb909c5af2ee0013625e7ea26df267f9e8ffb0aa1145e9675"`
+[INFO] [stdout] 1a6e71c248df0caeb909c5af2ee0013625e7ea26df267f9e8ffb0aa1145e9675
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\korpiq\\rust_json_parser,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e6e6bb9503a0e96bf11dc2a4abea566801f095dba057fcf9b0e95b2a0d2f21a6
+[INFO] running `"docker" "start" "-a" "e6e6bb9503a0e96bf11dc2a4abea566801f095dba057fcf9b0e95b2a0d2f21a6"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling json_parser v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.39s
+[INFO] running `"docker" "inspect" "e6e6bb9503a0e96bf11dc2a4abea566801f095dba057fcf9b0e95b2a0d2f21a6"`
+[INFO] running `"docker" "rm" "-f" "e6e6bb9503a0e96bf11dc2a4abea566801f095dba057fcf9b0e95b2a0d2f21a6"`
+[INFO] [stdout] e6e6bb9503a0e96bf11dc2a4abea566801f095dba057fcf9b0e95b2a0d2f21a6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\korpiq\\rust_json_parser,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] e1a752148e531ff2fb328f0a21f7d05590e387754f0c3e36a4d5a044e2ffc54d
+[INFO] running `"docker" "start" "-a" "e1a752148e531ff2fb328f0a21f7d05590e387754f0c3e36a4d5a044e2ffc54d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\json_parser-b787d2aab6efd657.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 16 tests
+[INFO] [stdout] test json::parser::tests::test_boolean_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_empty_list_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_bad_syntax_input_fails ... ok
+[INFO] [stdout] test json::parser::tests::test_empty_object_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_empty_string_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_empty_input_fails ... ok
+[INFO] [stdout] test json::parser::tests::test_escaped_strings_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_list_starting_with_comma_fails ... ok
+[INFO] [stdout] test json::parser::tests::test_lists_within_lists_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_list_with_a_comma_only_fails ... ok
+[INFO] [stdout] test json::parser::tests::test_null_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_number_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_object_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_list_with_extra_comma_fails ... ok
+[INFO] [stdout] test json::parser::tests::test_output_format_ok ... ok
+[INFO] [stdout] test json::parser::tests::test_strings_ok ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e1a752148e531ff2fb328f0a21f7d05590e387754f0c3e36a4d5a044e2ffc54d"`
+[INFO] running `"docker" "rm" "-f" "e1a752148e531ff2fb328f0a21f7d05590e387754f0c3e36a4d5a044e2ffc54d"`
+[INFO] [stdout] e1a752148e531ff2fb328f0a21f7d05590e387754f0c3e36a4d5a044e2ffc54d

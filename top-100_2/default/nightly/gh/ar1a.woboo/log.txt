@@ -1,0 +1,104 @@
+[INFO] cloning repository ar1a/woboo
+[INFO] running `"git" "clone" "--bare" "git://github.com/ar1a/woboo.git" "work\\cache\\sources\\gh\\ar1a\\woboo"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ar1a\woboo'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ar1a\\woboo" "work\\ex\\default\\sources\\nightly\\gh\\ar1a\\woboo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\ar1a\woboo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ar1a\\woboo" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ar1a\\woboo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ar1a\woboo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a72d52265ae7742fa628d2fc8c6448b110cb441f
+[INFO] sha for GitHub repo ar1a/woboo: a72d52265ae7742fa628d2fc8c6448b110cb441f
+[INFO] validating manifest of ar1a/woboo on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ar1a/woboo on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ar1a/woboo
+[INFO] finished frobbing ar1a/woboo
+[INFO] frobbed toml for ar1a/woboo written to work\ex\default\sources\nightly\gh\ar1a\woboo\Cargo.toml
+[INFO] started frobbing ar1a/woboo
+[INFO] finished frobbing ar1a/woboo
+[INFO] frobbed toml for ar1a/woboo written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ar1a\woboo\Cargo.toml
+[INFO] crate ar1a/woboo already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded quicli v0.3.0
+[INFO] [stderr]   Downloaded backtrace v0.3.8
+[INFO] [stderr]   Downloaded rustc-demangle v0.1.8
+[INFO] [stderr]   Downloaded cc v1.0.17
+[INFO] [stderr]   Downloaded env_logger v0.5.10
+[INFO] [stderr]   Downloaded clap-verbosity-flag v0.1.0
+[INFO] [stderr]   Downloaded log v0.4.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ar1a/woboo against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ar1a\\woboo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8c28bbfc7048e3bb7430f732af2183da92636f61f2ddeded4f45e7b2345f7b90
+[INFO] running `"docker" "start" "-a" "8c28bbfc7048e3bb7430f732af2183da92636f61f2ddeded4f45e7b2345f7b90"`
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling libc v0.2.42
+[INFO] [stderr]    Compiling cfg-if v0.1.3
+[INFO] [stderr]    Compiling regex v1.0.1
+[INFO] [stderr]    Compiling lazy_static v1.0.1
+[INFO] [stderr]    Compiling ucd-util v0.1.1
+[INFO] [stderr]    Compiling rustc-demangle v0.1.8
+[INFO] [stderr]    Compiling bitflags v1.0.3
+[INFO] [stderr]    Compiling serde v1.0.66
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling proc-macro2 v0.4.6
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling log v0.4.2
+[INFO] [stderr]    Compiling memchr v2.0.1
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling textwrap v0.9.0
+[INFO] [stderr]    Compiling regex-syntax v0.6.1
+[INFO] [stderr]    Compiling humantime v1.1.1
+[INFO] [stderr]    Compiling thread_local v0.3.5
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling quote v0.6.3
+[INFO] [stderr]    Compiling aho-corasick v0.6.4
+[INFO] [stderr]    Compiling synstructure v0.6.1
+[INFO] [stderr]    Compiling syn v0.14.2
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling failure_derive v0.1.1
+[INFO] [stderr]    Compiling wincolor v0.1.6
+[INFO] [stderr]    Compiling atty v0.2.10
+[INFO] [stderr]    Compiling backtrace v0.3.8
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling termcolor v0.3.6
+[INFO] [stderr]    Compiling clap v2.31.2
+[INFO] [stderr]    Compiling failure v0.1.1
+[INFO] [stderr]    Compiling rayon-core v1.4.0
+[INFO] [stderr]    Compiling structopt-derive v0.2.10
+[INFO] [stderr]    Compiling serde_derive v1.0.66
+[INFO] [stderr]    Compiling rayon v1.0.1
+[INFO] [stderr]    Compiling env_logger v0.5.10
+[INFO] [stderr]    Compiling structopt v0.2.10
+[INFO] [stderr]    Compiling clap-verbosity-flag v0.1.0
+[INFO] [stderr]    Compiling quicli v0.3.0
+[INFO] [stderr]    Compiling woboo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3m 29s
+[INFO] running `"docker" "inspect" "8c28bbfc7048e3bb7430f732af2183da92636f61f2ddeded4f45e7b2345f7b90"`
+[INFO] running `"docker" "rm" "-f" "8c28bbfc7048e3bb7430f732af2183da92636f61f2ddeded4f45e7b2345f7b90"`
+[INFO] [stdout] 8c28bbfc7048e3bb7430f732af2183da92636f61f2ddeded4f45e7b2345f7b90
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ar1a\\woboo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 11c768a51f4e1d0b1fac668a9f727da7a8b74555c25b8415da2ec51f9c2ac063
+[INFO] running `"docker" "start" "-a" "11c768a51f4e1d0b1fac668a9f727da7a8b74555c25b8415da2ec51f9c2ac063"`
+[INFO] [stderr]    Compiling woboo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.01s
+[INFO] running `"docker" "inspect" "11c768a51f4e1d0b1fac668a9f727da7a8b74555c25b8415da2ec51f9c2ac063"`
+[INFO] running `"docker" "rm" "-f" "11c768a51f4e1d0b1fac668a9f727da7a8b74555c25b8415da2ec51f9c2ac063"`
+[INFO] [stdout] 11c768a51f4e1d0b1fac668a9f727da7a8b74555c25b8415da2ec51f9c2ac063
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\ar1a\\woboo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3f8f96adcca4de430925c21a4884f5c4c8f0361f728bcebb14eb94a25f22ef33
+[INFO] running `"docker" "start" "-a" "3f8f96adcca4de430925c21a4884f5c4c8f0361f728bcebb14eb94a25f22ef33"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.77s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\woboo-8b52f05e424284a6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3f8f96adcca4de430925c21a4884f5c4c8f0361f728bcebb14eb94a25f22ef33"`
+[INFO] running `"docker" "rm" "-f" "3f8f96adcca4de430925c21a4884f5c4c8f0361f728bcebb14eb94a25f22ef33"`
+[INFO] [stdout] 3f8f96adcca4de430925c21a4884f5c4c8f0361f728bcebb14eb94a25f22ef33

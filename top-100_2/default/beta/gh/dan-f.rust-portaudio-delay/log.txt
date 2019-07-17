@@ -1,0 +1,55 @@
+[INFO] cloning repository dan-f/rust-portaudio-delay
+[INFO] running `"git" "clone" "--bare" "git://github.com/dan-f/rust-portaudio-delay.git" "work\\cache\\sources\\gh\\dan-f\\rust-portaudio-delay"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\dan-f\rust-portaudio-delay'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dan-f\\rust-portaudio-delay" "work\\ex\\default\\sources\\stable\\gh\\dan-f\\rust-portaudio-delay"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\dan-f\rust-portaudio-delay'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\dan-f\\rust-portaudio-delay" "work\\ex\\default\\sources\\beta\\gh\\dan-f\\rust-portaudio-delay"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\dan-f\rust-portaudio-delay'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c1a8c39572f0fc9530809a803ad2f9f6cdfc21a4
+[INFO] sha for GitHub repo dan-f/rust-portaudio-delay: c1a8c39572f0fc9530809a803ad2f9f6cdfc21a4
+[INFO] validating manifest of dan-f/rust-portaudio-delay on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dan-f/rust-portaudio-delay on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dan-f/rust-portaudio-delay
+[INFO] finished frobbing dan-f/rust-portaudio-delay
+[INFO] frobbed toml for dan-f/rust-portaudio-delay written to work\ex\default\sources\stable\gh\dan-f\rust-portaudio-delay\Cargo.toml
+[INFO] started frobbing dan-f/rust-portaudio-delay
+[INFO] finished frobbing dan-f/rust-portaudio-delay
+[INFO] frobbed toml for dan-f/rust-portaudio-delay written to work\ex\default\sources\beta\gh\dan-f\rust-portaudio-delay\Cargo.toml
+[INFO] crate dan-f/rust-portaudio-delay already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded portaudio v0.7.0
+[INFO] [stderr]   Downloaded num-traits v0.2.4
+[INFO] [stderr]   Downloaded num-integer v0.1.38
+[INFO] [stderr]   Downloaded pkg-config v0.3.11
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dan-f/rust-portaudio-delay against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\dan-f\\rust-portaudio-delay,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 26dc12cda939a2926a516a8c8407945791e04d3becded1c1044a489dc6aa6a3e
+[INFO] running `"docker" "start" "-a" "26dc12cda939a2926a516a8c8407945791e04d3becded1c1044a489dc6aa6a3e"`
+[INFO] [stderr]    Compiling num-traits v0.2.4
+[INFO] [stderr]    Compiling num-integer v0.1.38
+[INFO] [stderr]    Compiling pkg-config v0.3.11
+[INFO] [stderr]    Compiling portaudio v0.7.0
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling rust-portaudio-delay v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1181
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.rust_portaudio_delay.2ncnhky4-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.exe" "C:\\crater\\target\\debug\\deps\\rust_portaudio_delay-25c2f3633548d44b.lkkabem3tepbj1y.rcgu.o" "/OPT:REF,NOICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\libportaudio-6985b1e28eccfe46.rlib" "C:\\crater\\target\\debug\\deps\\libnum-d5708b5780321852.rlib" "C:\\crater\\target\\debug\\deps\\libnum_iter-8c2240e476769ca6.rlib" "C:\\crater\\target\\debug\\deps\\libnum_integer-86c7d7058a1abd07.rlib" "C:\\crater\\target\\debug\\deps\\libnum_traits-92243b210e5a1c51.rlib" "C:\\crater\\target\\debug\\deps\\liblibc-3a54f19f3d06215d.rlib" "C:\\crater\\target\\debug\\deps\\libbitflags-507fce4c83acd673.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libstd-ae440165b54f3716.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libpanic_unwind-8a83f4a09865bc9f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libbacktrace-1850b48c943180da.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_demangle-0a5e03c766fa20b5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libhashbrown-d1709237ec5374af.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_alloc-775541a947236e83.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libunwind-2e4c68437e8b5e9c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcfg_if-b5a30980482ab3ec.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liblibc-ab3a9fb5d30a4dfd.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liballoc-001c7ac0c20c5e0f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_core-6b49372d6bd9e0c5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcore-29633d14c5ac589c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcompiler_builtins-843b3d69fb034b53.rlib" "portaudio.lib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib"
+[INFO] [stderr]   = note: LINK : fatal error LNK1181: cannot open input file 'portaudio.lib'
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `rust-portaudio-delay`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "26dc12cda939a2926a516a8c8407945791e04d3becded1c1044a489dc6aa6a3e"`
+[INFO] running `"docker" "rm" "-f" "26dc12cda939a2926a516a8c8407945791e04d3becded1c1044a489dc6aa6a3e"`
+[INFO] [stdout] 26dc12cda939a2926a516a8c8407945791e04d3becded1c1044a489dc6aa6a3e

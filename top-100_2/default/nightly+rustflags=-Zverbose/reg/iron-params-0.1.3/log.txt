@@ -1,0 +1,63 @@
+[INFO] fetching crate iron-params 0.1.3...
+[INFO] extracting crate iron-params 0.1.3 into work\ex\default\sources\nightly\reg\iron-params\0.1.3
+[INFO] extracting crate iron-params 0.1.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\iron-params\0.1.3
+[INFO] validating manifest of iron-params-0.1.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of iron-params-0.1.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing iron-params-0.1.3
+[INFO] finished frobbing iron-params-0.1.3
+[INFO] frobbed toml for iron-params-0.1.3 written to work\ex\default\sources\nightly\reg\iron-params\0.1.3\Cargo.toml
+[INFO] started frobbing iron-params-0.1.3
+[INFO] finished frobbing iron-params-0.1.3
+[INFO] frobbed toml for iron-params-0.1.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\iron-params\0.1.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded hyper v0.9.18
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing iron-params-0.1.3 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\iron-params\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5fb4aec911caf33194c907c1059bb858d51d31d9f1dd7d4fe2ae0fb4cf90a2cd
+[INFO] running `"docker" "start" "-a" "5fb4aec911caf33194c907c1059bb858d51d31d9f1dd7d4fe2ae0fb4cf90a2cd"`
+[INFO] [stderr]    Compiling traitobject v0.0.1
+[INFO] [stderr]    Compiling error v0.1.9
+[INFO] [stderr]    Compiling num_cpus v0.2.13
+[INFO] [stderr]    Compiling hpack v0.2.0
+[INFO] [stderr]    Compiling cookie v0.2.5
+[INFO] [stderr]    Compiling solicit v0.4.4
+[INFO] [stderr]    Compiling hyper v0.9.18
+[INFO] [stderr]    Compiling iron v0.4.0
+[INFO] [stderr]    Compiling iron-params v0.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 40.90s
+[INFO] running `"docker" "inspect" "5fb4aec911caf33194c907c1059bb858d51d31d9f1dd7d4fe2ae0fb4cf90a2cd"`
+[INFO] running `"docker" "rm" "-f" "5fb4aec911caf33194c907c1059bb858d51d31d9f1dd7d4fe2ae0fb4cf90a2cd"`
+[INFO] [stdout] 5fb4aec911caf33194c907c1059bb858d51d31d9f1dd7d4fe2ae0fb4cf90a2cd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\iron-params\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a0a17185156ab9442c2301cd8b2d6eab81daaf898a60c4c1c7f7ed4bb8b79b56
+[INFO] running `"docker" "start" "-a" "a0a17185156ab9442c2301cd8b2d6eab81daaf898a60c4c1c7f7ed4bb8b79b56"`
+[INFO] [stderr]    Compiling iron-params v0.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.64s
+[INFO] running `"docker" "inspect" "a0a17185156ab9442c2301cd8b2d6eab81daaf898a60c4c1c7f7ed4bb8b79b56"`
+[INFO] running `"docker" "rm" "-f" "a0a17185156ab9442c2301cd8b2d6eab81daaf898a60c4c1c7f7ed4bb8b79b56"`
+[INFO] [stdout] a0a17185156ab9442c2301cd8b2d6eab81daaf898a60c4c1c7f7ed4bb8b79b56
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\iron-params\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 10111402e5beaf6dfc2cf8c38d705bb19b4353abbdd152a920e4cb219abe063d
+[INFO] running `"docker" "start" "-a" "10111402e5beaf6dfc2cf8c38d705bb19b4353abbdd152a920e4cb219abe063d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\iron_params-ac816a5176c0e9eb.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests iron_params
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "10111402e5beaf6dfc2cf8c38d705bb19b4353abbdd152a920e4cb219abe063d"`
+[INFO] running `"docker" "rm" "-f" "10111402e5beaf6dfc2cf8c38d705bb19b4353abbdd152a920e4cb219abe063d"`
+[INFO] [stdout] 10111402e5beaf6dfc2cf8c38d705bb19b4353abbdd152a920e4cb219abe063d

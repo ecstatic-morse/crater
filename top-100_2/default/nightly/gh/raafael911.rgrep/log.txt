@@ -1,0 +1,81 @@
+[INFO] cloning repository raafael911/rgrep
+[INFO] running `"git" "clone" "--bare" "git://github.com/raafael911/rgrep.git" "work\\cache\\sources\\gh\\raafael911\\rgrep"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\raafael911\rgrep'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\raafael911\\rgrep" "work\\ex\\default\\sources\\nightly\\gh\\raafael911\\rgrep"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\raafael911\rgrep'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\raafael911\\rgrep" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\raafael911\\rgrep"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\raafael911\rgrep'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b8b65f30e304d04c57ce432cd9e1a07d7783fbe8
+[INFO] sha for GitHub repo raafael911/rgrep: b8b65f30e304d04c57ce432cd9e1a07d7783fbe8
+[INFO] validating manifest of raafael911/rgrep on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of raafael911/rgrep on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing raafael911/rgrep
+[INFO] finished frobbing raafael911/rgrep
+[INFO] frobbed toml for raafael911/rgrep written to work\ex\default\sources\nightly\gh\raafael911\rgrep\Cargo.toml
+[INFO] started frobbing raafael911/rgrep
+[INFO] finished frobbing raafael911/rgrep
+[INFO] frobbed toml for raafael911/rgrep written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\raafael911\rgrep\Cargo.toml
+[INFO] crate raafael911/rgrep already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded colored v1.6.0
+[INFO] [stderr]   Downloaded atty v0.2.3
+[INFO] [stderr]   Downloaded clap v2.27.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing raafael911/rgrep against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\raafael911\\rgrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d93cfc127e5efe2a5661e02cf647ee8bdae9bed885015ecab341d1b9825739cd
+[INFO] running `"docker" "start" "-a" "d93cfc127e5efe2a5661e02cf647ee8bdae9bed885015ecab341d1b9825739cd"`
+[INFO] [stderr]    Compiling libc v0.2.33
+[INFO] [stderr]    Compiling ansi_term v0.9.0
+[INFO] [stderr]    Compiling colored v1.6.0
+[INFO] [stderr]    Compiling thread_local v0.3.4
+[INFO] [stderr]    Compiling memchr v1.0.2
+[INFO] [stderr]    Compiling atty v0.2.3
+[INFO] [stderr]    Compiling aho-corasick v0.6.3
+[INFO] [stderr]    Compiling clap v2.27.1
+[INFO] [stderr]    Compiling regex v0.2.2
+[INFO] [stderr]    Compiling rgrep v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 21s
+[INFO] running `"docker" "inspect" "d93cfc127e5efe2a5661e02cf647ee8bdae9bed885015ecab341d1b9825739cd"`
+[INFO] running `"docker" "rm" "-f" "d93cfc127e5efe2a5661e02cf647ee8bdae9bed885015ecab341d1b9825739cd"`
+[INFO] [stdout] d93cfc127e5efe2a5661e02cf647ee8bdae9bed885015ecab341d1b9825739cd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\raafael911\\rgrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 85ef38ef33712fccb1324d38c3504647104f2076477405f384bb5f4c2fb88e51
+[INFO] running `"docker" "start" "-a" "85ef38ef33712fccb1324d38c3504647104f2076477405f384bb5f4c2fb88e51"`
+[INFO] [stderr]    Compiling rgrep v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.17s
+[INFO] running `"docker" "inspect" "85ef38ef33712fccb1324d38c3504647104f2076477405f384bb5f4c2fb88e51"`
+[INFO] running `"docker" "rm" "-f" "85ef38ef33712fccb1324d38c3504647104f2076477405f384bb5f4c2fb88e51"`
+[INFO] [stdout] 85ef38ef33712fccb1324d38c3504647104f2076477405f384bb5f4c2fb88e51
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\raafael911\\rgrep,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] a090efafb428b7d82cf820214f5d49d207cbc2cfeae9b654a30b9140ac654d74
+[INFO] running `"docker" "start" "-a" "a090efafb428b7d82cf820214f5d49d207cbc2cfeae9b654a30b9140ac654d74"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.49s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rgrep-f19af32d71364fa6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::two_matches ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rgrep-85a6eadad56fe630.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rgrep
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a090efafb428b7d82cf820214f5d49d207cbc2cfeae9b654a30b9140ac654d74"`
+[INFO] running `"docker" "rm" "-f" "a090efafb428b7d82cf820214f5d49d207cbc2cfeae9b654a30b9140ac654d74"`
+[INFO] [stdout] a090efafb428b7d82cf820214f5d49d207cbc2cfeae9b654a30b9140ac654d74

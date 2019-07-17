@@ -1,0 +1,124 @@
+[INFO] crate slog 2.5.0 is already in cache
+[INFO] extracting crate slog 2.5.0 into work\ex\default\sources\nightly\reg\slog\2.5.0
+[INFO] extracting crate slog 2.5.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\slog\2.5.0
+[INFO] validating manifest of slog-2.5.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of slog-2.5.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing slog-2.5.0
+[INFO] removed 1 missing examples
+[INFO] finished frobbing slog-2.5.0
+[INFO] frobbed toml for slog-2.5.0 written to work\ex\default\sources\nightly\reg\slog\2.5.0\Cargo.toml
+[INFO] started frobbing slog-2.5.0
+[INFO] removed 1 missing examples
+[INFO] finished frobbing slog-2.5.0
+[INFO] frobbed toml for slog-2.5.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\slog\2.5.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing slog-2.5.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\slog\\2.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7805361c28541e8faac5cfdca367fdfaa616a94fbae183ff8d55342b54b57fa8
+[INFO] running `"docker" "start" "-a" "7805361c28541e8faac5cfdca367fdfaa616a94fbae183ff8d55342b54b57fa8"`
+[INFO] [stderr]    Compiling slog v2.5.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.59s
+[INFO] running `"docker" "inspect" "7805361c28541e8faac5cfdca367fdfaa616a94fbae183ff8d55342b54b57fa8"`
+[INFO] running `"docker" "rm" "-f" "7805361c28541e8faac5cfdca367fdfaa616a94fbae183ff8d55342b54b57fa8"`
+[INFO] [stdout] 7805361c28541e8faac5cfdca367fdfaa616a94fbae183ff8d55342b54b57fa8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\slog\\2.5.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 93e1ff00491b5c9ff21a49ed22689432b46e2ebc22049c11b67b3e5672a0f53e
+[INFO] running `"docker" "start" "-a" "93e1ff00491b5c9ff21a49ed22689432b46e2ebc22049c11b67b3e5672a0f53e"`
+[INFO] [stderr]    Compiling slog v2.5.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0277]: `std::rc::Rc<std::cell::RefCell<usize>>` cannot be sent between threads safely
+[INFO] [stderr]   --> examples\singlethread.rs:24:26
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |       let sublog = log.new(o!("obj.val" => slog::FnValue(move |_| {
+[INFO] [stderr]    |  __________________________^
+[INFO] [stderr] 25 | |         format!("{}", obj2.val.borrow())
+[INFO] [stderr] 26 | |     })));
+[INFO] [stderr]    | |_______^ `std::rc::Rc<std::cell::RefCell<usize>>` cannot be sent between threads safely
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: within `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`, the trait `std::marker::Send` is not implemented for `std::rc::Rc<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `NoThreadSafeObject`
+[INFO] [stderr]    = note: required because it appears within the type `[closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]`
+[INFO] [stderr]    = note: required because it appears within the type `slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>`
+[INFO] [stderr]    = note: required because it appears within the type `slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>`
+[INFO] [stderr]    = note: required because it appears within the type `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required because of the requirements on the impl of `slog::SendSyncRefUnwindSafeKV` for `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required by `slog::OwnedKV`
+[INFO] [stderr]    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `std::rc::Rc<std::cell::RefCell<usize>>` cannot be shared between threads safely
+[INFO] [stderr]   --> examples\singlethread.rs:24:26
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |       let sublog = log.new(o!("obj.val" => slog::FnValue(move |_| {
+[INFO] [stderr]    |  __________________________^
+[INFO] [stderr] 25 | |         format!("{}", obj2.val.borrow())
+[INFO] [stderr] 26 | |     })));
+[INFO] [stderr]    | |_______^ `std::rc::Rc<std::cell::RefCell<usize>>` cannot be shared between threads safely
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: within `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`, the trait `std::marker::Sync` is not implemented for `std::rc::Rc<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `NoThreadSafeObject`
+[INFO] [stderr]    = note: required because it appears within the type `[closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]`
+[INFO] [stderr]    = note: required because it appears within the type `slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>`
+[INFO] [stderr]    = note: required because it appears within the type `slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>`
+[INFO] [stderr]    = note: required because it appears within the type `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required because of the requirements on the impl of `slog::SendSyncRefUnwindSafeKV` for `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required by `slog::OwnedKV`
+[INFO] [stderr]    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the type `std::cell::UnsafeCell<usize>` may contain interior mutability and a reference may not be safely transferrable across a catch_unwind boundary
+[INFO] [stderr]   --> examples\singlethread.rs:24:26
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |       let sublog = log.new(o!("obj.val" => slog::FnValue(move |_| {
+[INFO] [stderr]    |  __________________________^
+[INFO] [stderr] 25 | |         format!("{}", obj2.val.borrow())
+[INFO] [stderr] 26 | |     })));
+[INFO] [stderr]    | |_______^ `std::cell::UnsafeCell<usize>` may contain interior mutability and a reference may not be safely transferrable across a catch_unwind boundary
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: within `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`, the trait `std::panic::RefUnwindSafe` is not implemented for `std::cell::UnsafeCell<usize>`
+[INFO] [stderr]    = note: required because it appears within the type `std::cell::RefCell<usize>`
+[INFO] [stderr]    = note: required because it appears within the type `std::marker::PhantomData<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `std::rc::Rc<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `NoThreadSafeObject`
+[INFO] [stderr]    = note: required because it appears within the type `[closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]`
+[INFO] [stderr]    = note: required because it appears within the type `slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>`
+[INFO] [stderr]    = note: required because it appears within the type `slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>`
+[INFO] [stderr]    = note: required because it appears within the type `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required because of the requirements on the impl of `slog::SendSyncRefUnwindSafeKV` for `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required by `slog::OwnedKV`
+[INFO] [stderr]    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the type `std::cell::UnsafeCell<isize>` may contain interior mutability and a reference may not be safely transferrable across a catch_unwind boundary
+[INFO] [stderr]   --> examples\singlethread.rs:24:26
+[INFO] [stderr]    |
+[INFO] [stderr] 24 |       let sublog = log.new(o!("obj.val" => slog::FnValue(move |_| {
+[INFO] [stderr]    |  __________________________^
+[INFO] [stderr] 25 | |         format!("{}", obj2.val.borrow())
+[INFO] [stderr] 26 | |     })));
+[INFO] [stderr]    | |_______^ `std::cell::UnsafeCell<isize>` may contain interior mutability and a reference may not be safely transferrable across a catch_unwind boundary
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: within `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`, the trait `std::panic::RefUnwindSafe` is not implemented for `std::cell::UnsafeCell<isize>`
+[INFO] [stderr]    = note: required because it appears within the type `std::cell::Cell<isize>`
+[INFO] [stderr]    = note: required because it appears within the type `std::cell::RefCell<usize>`
+[INFO] [stderr]    = note: required because it appears within the type `std::marker::PhantomData<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `std::rc::Rc<std::cell::RefCell<usize>>`
+[INFO] [stderr]    = note: required because it appears within the type `NoThreadSafeObject`
+[INFO] [stderr]    = note: required because it appears within the type `[closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]`
+[INFO] [stderr]    = note: required because it appears within the type `slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>`
+[INFO] [stderr]    = note: required because it appears within the type `slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>`
+[INFO] [stderr]    = note: required because it appears within the type `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required because of the requirements on the impl of `slog::SendSyncRefUnwindSafeKV` for `(slog::SingleKV<slog::FnValue<std::string::String, [closure@examples\singlethread.rs:24:56: 26:6 obj2:NoThreadSafeObject]>>, ())`
+[INFO] [stderr]    = note: required by `slog::OwnedKV`
+[INFO] [stderr]    = note: this error originates in a macro outside of the current crate (in Nightly builds, run with -Z external-macro-backtrace for more info)
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0277`.
+[INFO] [stderr] error: Could not compile `slog`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "93e1ff00491b5c9ff21a49ed22689432b46e2ebc22049c11b67b3e5672a0f53e"`
+[INFO] running `"docker" "rm" "-f" "93e1ff00491b5c9ff21a49ed22689432b46e2ebc22049c11b67b3e5672a0f53e"`
+[INFO] [stdout] 93e1ff00491b5c9ff21a49ed22689432b46e2ebc22049c11b67b3e5672a0f53e

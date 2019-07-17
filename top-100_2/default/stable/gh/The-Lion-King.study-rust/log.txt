@@ -1,0 +1,58 @@
+[INFO] cloning repository The-Lion-King/study-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/The-Lion-King/study-rust.git" "work\\cache\\sources\\gh\\The-Lion-King\\study-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\The-Lion-King\study-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\The-Lion-King\\study-rust" "work\\ex\\default\\sources\\stable\\gh\\The-Lion-King\\study-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\The-Lion-King\study-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\The-Lion-King\\study-rust" "work\\ex\\default\\sources\\beta\\gh\\The-Lion-King\\study-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\The-Lion-King\study-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 48b7cee349b199a03a32dfb9117d72f73b516402
+[INFO] sha for GitHub repo The-Lion-King/study-rust: 48b7cee349b199a03a32dfb9117d72f73b516402
+[INFO] validating manifest of The-Lion-King/study-rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of The-Lion-King/study-rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing The-Lion-King/study-rust
+[INFO] finished frobbing The-Lion-King/study-rust
+[INFO] frobbed toml for The-Lion-King/study-rust written to work\ex\default\sources\stable\gh\The-Lion-King\study-rust\Cargo.toml
+[INFO] started frobbing The-Lion-King/study-rust
+[INFO] finished frobbing The-Lion-King/study-rust
+[INFO] frobbed toml for The-Lion-King/study-rust written to work\ex\default\sources\beta\gh\The-Lion-King\study-rust\Cargo.toml
+[INFO] crate The-Lion-King/study-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing The-Lion-King/study-rust against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\The-Lion-King\\study-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] e61520ddcd04b69fa96acc26c8e95efb4d67a8aad0b41d2b2adea96bdab6054f
+[INFO] running `"docker" "start" "-a" "e61520ddcd04b69fa96acc26c8e95efb4d67a8aad0b41d2b2adea96bdab6054f"`
+[INFO] [stderr]    Compiling webTest v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.48s
+[INFO] running `"docker" "inspect" "e61520ddcd04b69fa96acc26c8e95efb4d67a8aad0b41d2b2adea96bdab6054f"`
+[INFO] running `"docker" "rm" "-f" "e61520ddcd04b69fa96acc26c8e95efb4d67a8aad0b41d2b2adea96bdab6054f"`
+[INFO] [stdout] e61520ddcd04b69fa96acc26c8e95efb4d67a8aad0b41d2b2adea96bdab6054f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\The-Lion-King\\study-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 35ea0b811cfe4e853023d9f069af4df2d007f25a2bca8e876aa5f154bf7bc3cb
+[INFO] running `"docker" "start" "-a" "35ea0b811cfe4e853023d9f069af4df2d007f25a2bca8e876aa5f154bf7bc3cb"`
+[INFO] [stderr]    Compiling webTest v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.58s
+[INFO] running `"docker" "inspect" "35ea0b811cfe4e853023d9f069af4df2d007f25a2bca8e876aa5f154bf7bc3cb"`
+[INFO] running `"docker" "rm" "-f" "35ea0b811cfe4e853023d9f069af4df2d007f25a2bca8e876aa5f154bf7bc3cb"`
+[INFO] [stdout] 35ea0b811cfe4e853023d9f069af4df2d007f25a2bca8e876aa5f154bf7bc3cb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\The-Lion-King\\study-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 56757383906e36b840c7b7d234f3bbb898dbca5b2f4bff7808d55e7259beaa45
+[INFO] running `"docker" "start" "-a" "56757383906e36b840c7b7d234f3bbb898dbca5b2f4bff7808d55e7259beaa45"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.53s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\webTest-4fb8b5fa6f7d2476.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "56757383906e36b840c7b7d234f3bbb898dbca5b2f4bff7808d55e7259beaa45"`
+[INFO] running `"docker" "rm" "-f" "56757383906e36b840c7b7d234f3bbb898dbca5b2f4bff7808d55e7259beaa45"`
+[INFO] [stdout] 56757383906e36b840c7b7d234f3bbb898dbca5b2f4bff7808d55e7259beaa45

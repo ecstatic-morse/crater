@@ -1,0 +1,362 @@
+[INFO] fetching crate rustc-serialize 0.3.24...
+[INFO] extracting crate rustc-serialize 0.3.24 into work\ex\default\sources\stable\reg\rustc-serialize\0.3.24
+[INFO] extracting crate rustc-serialize 0.3.24 into work\ex\default\sources\beta\reg\rustc-serialize\0.3.24
+[INFO] validating manifest of rustc-serialize-0.3.24 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rustc-serialize-0.3.24 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rustc-serialize-0.3.24
+[INFO] finished frobbing rustc-serialize-0.3.24
+[INFO] frobbed toml for rustc-serialize-0.3.24 written to work\ex\default\sources\stable\reg\rustc-serialize\0.3.24\Cargo.toml
+[INFO] started frobbing rustc-serialize-0.3.24
+[INFO] finished frobbing rustc-serialize-0.3.24
+[INFO] frobbed toml for rustc-serialize-0.3.24 written to work\ex\default\sources\beta\reg\rustc-serialize\0.3.24\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rand v0.3.23
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rustc-serialize-0.3.24 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rustc-serialize\\0.3.24,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 93df7ecaea7b40f9e27d95869066c6c9a5421bf8a124f0e9269f740c96a6f9dc
+[INFO] running `"docker" "start" "-a" "93df7ecaea7b40f9e27d95869066c6c9a5421bf8a124f0e9269f740c96a6f9dc"`
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:137:21
+[INFO] [stderr]     |
+[INFO] [stderr] 137 |                 b'A'...b'F' => buf |= byte - b'A' + 10,
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:138:21
+[INFO] [stderr]     |
+[INFO] [stderr] 138 |                 b'a'...b'f' => buf |= byte - b'a' + 10,
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:139:21
+[INFO] [stderr]     |
+[INFO] [stderr] 139 |                 b'0'...b'9' => buf |= byte - b'0',
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:407:32
+[INFO] [stderr]     |
+[INFO] [stderr] 407 |     fn cause(&self) -> Option<&StdError> {
+[INFO] [stderr]     |                                ^^^^^^^^ help: use `dyn`: `dyn StdError`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:460:24
+[INFO] [stderr]     |
+[INFO] [stderr] 460 | fn escape_str(wr: &mut fmt::Write, v: &str) -> EncodeResult<()> {
+[INFO] [stderr]     |                        ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:522:29
+[INFO] [stderr]     |
+[INFO] [stderr] 522 | fn escape_char(writer: &mut fmt::Write, v: char) -> EncodeResult<()> {
+[INFO] [stderr]     |                             ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:529:20
+[INFO] [stderr]     |
+[INFO] [stderr] 529 | fn spaces(wr: &mut fmt::Write, n: u32) -> EncodeResult<()> {
+[INFO] [stderr]     |                    ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:578:22
+[INFO] [stderr]     |
+[INFO] [stderr] 578 |     writer: &'a mut (fmt::Write+'a),
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write+'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:586:39
+[INFO] [stderr]     |
+[INFO] [stderr] 586 |     pub fn new_pretty(writer: &'a mut fmt::Write) -> Encoder<'a> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:599:32
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |     pub fn new(writer: &'a mut fmt::Write) -> Encoder<'a> {
+[INFO] [stderr]     |                                ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:959:34
+[INFO] [stderr]     |
+[INFO] [stderr] 959 |     pub fn from_reader(rdr: &mut io::Read) -> Result<Self, BuilderError> {
+[INFO] [stderr]     |                                  ^^^^^^^^ help: use `dyn`: `dyn io::Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1543:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1543 |                     '0' ... '9' => return self.error(InvalidNumber),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1547:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1547 |             '1' ... '9' => {
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1550:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1550 |                         c @ '0' ... '9' => {
+[INFO] [stderr]      |                                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1579:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1579 |             '0' ... '9' => (),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1587:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1587 |                 c @ '0' ... '9' => {
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1616:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1616 |             '0' ... '9' => (),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1621:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1621 |                 c @ '0' ... '9' => {
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1647:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1647 |                 c @ '0' ... '9' => n * 16 + ((c as u16) - ('0' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1648:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1648 |                 c @ 'a' ... 'f' => n * 16 + (10 + (c as u16) - ('a' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1649:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1649 |                 c @ 'A' ... 'F' => n * 16 + (10 + (c as u16) - ('A' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1680:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1680 |                         0xDC00 ... 0xDFFF => {
+[INFO] [stderr]      |                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1686:37
+[INFO] [stderr]      |
+[INFO] [stderr] 1686 |                         n1 @ 0xD800 ... 0xDBFF => {
+[INFO] [stderr]      |                                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1916:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1916 |             '0' ... '9' | '-' => self.parse_number(),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.37s
+[INFO] running `"docker" "inspect" "93df7ecaea7b40f9e27d95869066c6c9a5421bf8a124f0e9269f740c96a6f9dc"`
+[INFO] running `"docker" "rm" "-f" "93df7ecaea7b40f9e27d95869066c6c9a5421bf8a124f0e9269f740c96a6f9dc"`
+[INFO] [stdout] 93df7ecaea7b40f9e27d95869066c6c9a5421bf8a124f0e9269f740c96a6f9dc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rustc-serialize\\0.3.24,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3de05dcccab7d58a58b2f4ad6c5663567a8f76e09726c4a8b50c1f995981268e
+[INFO] running `"docker" "start" "-a" "3de05dcccab7d58a58b2f4ad6c5663567a8f76e09726c4a8b50c1f995981268e"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24 (C:\crater\workdir)
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:137:21
+[INFO] [stderr]     |
+[INFO] [stderr] 137 |                 b'A'...b'F' => buf |= byte - b'A' + 10,
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:43:24
+[INFO] [stderr]     |
+[INFO] [stderr] 43  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(ellipsis_inclusive_range_patterns)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:138:21
+[INFO] [stderr]     |
+[INFO] [stderr] 138 |                 b'a'...b'f' => buf |= byte - b'a' + 10,
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\hex.rs:139:21
+[INFO] [stderr]     |
+[INFO] [stderr] 139 |                 b'0'...b'9' => buf |= byte - b'0',
+[INFO] [stderr]     |                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:407:32
+[INFO] [stderr]     |
+[INFO] [stderr] 407 |     fn cause(&self) -> Option<&StdError> {
+[INFO] [stderr]     |                                ^^^^^^^^ help: use `dyn`: `dyn StdError`
+[INFO] [stderr]     |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]    --> src\lib.rs:43:24
+[INFO] [stderr]     |
+[INFO] [stderr] 43  | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr]     = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:460:24
+[INFO] [stderr]     |
+[INFO] [stderr] 460 | fn escape_str(wr: &mut fmt::Write, v: &str) -> EncodeResult<()> {
+[INFO] [stderr]     |                        ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:522:29
+[INFO] [stderr]     |
+[INFO] [stderr] 522 | fn escape_char(writer: &mut fmt::Write, v: char) -> EncodeResult<()> {
+[INFO] [stderr]     |                             ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:529:20
+[INFO] [stderr]     |
+[INFO] [stderr] 529 | fn spaces(wr: &mut fmt::Write, n: u32) -> EncodeResult<()> {
+[INFO] [stderr]     |                    ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:578:22
+[INFO] [stderr]     |
+[INFO] [stderr] 578 |     writer: &'a mut (fmt::Write+'a),
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write+'a`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:586:39
+[INFO] [stderr]     |
+[INFO] [stderr] 586 |     pub fn new_pretty(writer: &'a mut fmt::Write) -> Encoder<'a> {
+[INFO] [stderr]     |                                       ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:599:32
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |     pub fn new(writer: &'a mut fmt::Write) -> Encoder<'a> {
+[INFO] [stderr]     |                                ^^^^^^^^^^ help: use `dyn`: `dyn fmt::Write`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\json.rs:959:34
+[INFO] [stderr]     |
+[INFO] [stderr] 959 |     pub fn from_reader(rdr: &mut io::Read) -> Result<Self, BuilderError> {
+[INFO] [stderr]     |                                  ^^^^^^^^ help: use `dyn`: `dyn io::Read`
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1543:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1543 |                     '0' ... '9' => return self.error(InvalidNumber),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1547:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1547 |             '1' ... '9' => {
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1550:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1550 |                         c @ '0' ... '9' => {
+[INFO] [stderr]      |                                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1579:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1579 |             '0' ... '9' => (),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1587:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1587 |                 c @ '0' ... '9' => {
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1616:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1616 |             '0' ... '9' => (),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1621:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1621 |                 c @ '0' ... '9' => {
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1647:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1647 |                 c @ '0' ... '9' => n * 16 + ((c as u16) - ('0' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1648:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1648 |                 c @ 'a' ... 'f' => n * 16 + (10 + (c as u16) - ('a' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1649:25
+[INFO] [stderr]      |
+[INFO] [stderr] 1649 |                 c @ 'A' ... 'F' => n * 16 + (10 + (c as u16) - ('A' as u16)),
+[INFO] [stderr]      |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1680:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1680 |                         0xDC00 ... 0xDFFF => {
+[INFO] [stderr]      |                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1686:37
+[INFO] [stderr]      |
+[INFO] [stderr] 1686 |                         n1 @ 0xD800 ... 0xDBFF => {
+[INFO] [stderr]      |                                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\json.rs:1916:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1916 |             '0' ... '9' | '-' => self.parse_number(),
+[INFO] [stderr]      |                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]     --> src\json.rs:3513:34
+[INFO] [stderr]      |
+[INFO] [stderr] 3513 |             let trimmed = source.trim_left_matches(' ');
+[INFO] [stderr]      |                                  ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr]      |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]     --> src\lib.rs:43:24
+[INFO] [stderr]      |
+[INFO] [stderr] 43   | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]      |                        ^^^^^^^^
+[INFO] [stderr]      = note: #[deny(deprecated)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 25 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `rustc-serialize`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "3de05dcccab7d58a58b2f4ad6c5663567a8f76e09726c4a8b50c1f995981268e"`
+[INFO] running `"docker" "rm" "-f" "3de05dcccab7d58a58b2f4ad6c5663567a8f76e09726c4a8b50c1f995981268e"`
+[INFO] [stdout] 3de05dcccab7d58a58b2f4ad6c5663567a8f76e09726c4a8b50c1f995981268e

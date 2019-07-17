@@ -1,0 +1,224 @@
+[INFO] crate image 0.22.0 is already in cache
+[INFO] extracting crate image 0.22.0 into work\ex\default\sources\nightly\reg\image\0.22.0
+[INFO] extracting crate image 0.22.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\image\0.22.0
+[INFO] validating manifest of image-0.22.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of image-0.22.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing image-0.22.0
+[INFO] finished frobbing image-0.22.0
+[INFO] frobbed toml for image-0.22.0 written to work\ex\default\sources\nightly\reg\image\0.22.0\Cargo.toml
+[INFO] started frobbing image-0.22.0
+[INFO] finished frobbing image-0.22.0
+[INFO] frobbed toml for image-0.22.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\image\0.22.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing image-0.22.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\image\\0.22.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 0ba973c109c31e7988328c7ab4c85bd83c74ca207296379e8c65c08ce4a176aa
+[INFO] running `"docker" "start" "-a" "0ba973c109c31e7988328c7ab4c85bd83c74ca207296379e8c65c08ce4a176aa"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling num-derive v0.2.5
+[INFO] [stderr]    Compiling adler32 v1.0.3
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling color_quant v1.0.1
+[INFO] [stderr]    Compiling scoped_threadpool v0.1.9
+[INFO] [stderr]    Compiling num-rational v0.2.2
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling inflate v0.4.5
+[INFO] [stderr]    Compiling gif v0.10.2
+[INFO] [stderr]    Compiling deflate v0.7.20
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling png v0.15.0
+[INFO] [stderr]    Compiling tiff v0.3.1
+[INFO] [stderr]    Compiling image v0.22.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 11s
+[INFO] running `"docker" "inspect" "0ba973c109c31e7988328c7ab4c85bd83c74ca207296379e8c65c08ce4a176aa"`
+[INFO] running `"docker" "rm" "-f" "0ba973c109c31e7988328c7ab4c85bd83c74ca207296379e8c65c08ce4a176aa"`
+[INFO] [stdout] 0ba973c109c31e7988328c7ab4c85bd83c74ca207296379e8c65c08ce4a176aa
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\image\\0.22.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 355c5047325360c1945dc63a6c1533d52b430b5f666b79a862285a7c5e4ab3a9
+[INFO] running `"docker" "start" "-a" "355c5047325360c1945dc63a6c1533d52b430b5f666b79a862285a7c5e4ab3a9"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling glob v0.3.0
+[INFO] [stderr]    Compiling num-complex v0.2.3
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling env_logger v0.5.13
+[INFO] [stderr]    Compiling quickcheck v0.6.2
+[INFO] [stderr]    Compiling image v0.22.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 30s
+[INFO] running `"docker" "inspect" "355c5047325360c1945dc63a6c1533d52b430b5f666b79a862285a7c5e4ab3a9"`
+[INFO] running `"docker" "rm" "-f" "355c5047325360c1945dc63a6c1533d52b430b5f666b79a862285a7c5e4ab3a9"`
+[INFO] [stdout] 355c5047325360c1945dc63a6c1533d52b430b5f666b79a862285a7c5e4ab3a9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\image\\0.22.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] b160a8200cf18482254fcf40ae6ae7865d62f6e01d806665e6d6ff0b902093e9
+[INFO] running `"docker" "start" "-a" "b160a8200cf18482254fcf40ae6ae7865d62f6e01d806665e6d6ff0b902093e9"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.78s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\image-ba88399dede5908e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 75 tests
+[INFO] [stdout] test bmp::decoder::test::test_bitfield_len ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_3px_rgb ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_gray ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_graya ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_single_pixel_rgb ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_single_pixel_rgba ... ok
+[INFO] [stdout] test buffer::test::slice_buffer ... ok
+[INFO] [stdout] test buffer::test::test_get_pixel ... ok
+[INFO] [stdout] test buffer::test::test_mut_iter ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_rgb ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_rgba ... ok
+[INFO] [stdout] test color::tests::test_apply_without_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_apply_without_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_apply_without_alpha_rgb ... ok
+[INFO] [stdout] test color::tests::test_apply_without_alpha_rgba ... ok
+[INFO] [stdout] test color::tests::test_blend_luma_alpha ... ok
+[INFO] [stdout] test color::tests::test_blend_rgba ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_rgb ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_rgba ... ok
+[INFO] [stdout] test color::tests::test_map_without_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_map_without_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_map_without_alpha_rgb ... ok
+[INFO] [stdout] test color::tests::test_map_without_alpha_rgba ... ok
+[INFO] [stdout] test dynimage::test::gray_to_luma8_skip ... ok
+[INFO] [stdout] test dynimage::test::resize_bounds_correctly_height ... ok
+[INFO] [stdout] test dynimage::test::resize_bounds_correctly_width ... ok
+[INFO] [stdout] test dynimage::test::resize_handles_fill ... ok
+[INFO] [stdout] test dynimage::test::resize_handles_overflow ... ok
+[INFO] [stdout] test dynimage::test::test_empty_file ... ok
+[INFO] [stdout] test flat::tests::image_buffer_conversion ... ok
+[INFO] [stdout] test flat::tests::aliasing_view ... ok
+[INFO] [stdout] test flat::tests::normal_forms ... ok
+[INFO] [stdout] test flat::tests::mutable_view ... ok
+[INFO] [stdout] test hdr::decoder::read_line_u8_test ... ok
+[INFO] [stdout] test hdr::decoder::split_at_first_test ... ok
+[INFO] [stdout] test dynimage::test::image_dimensions ... FAILED
+[INFO] [stdout] test hdr::encoder::noruncombine_test ... ok
+[INFO] [stdout] test hdr::encoder::runiterator_test ... ok
+[INFO] [stdout] test image::tests::test_can_nest_views ... ok
+[INFO] [stdout] test image::tests::test_can_subimage_clone_nonmut ... ok
+[INFO] [stdout] test image::tests::test_image_alpha_blending ... ok
+[INFO] [stdout] test hdr::encoder::to_rgbe8_test ... ok
+[INFO] [stdout] test image::tests::test_in_bounds ... ok
+[INFO] [stdout] test image::tests::test_load_rect ... ok
+[INFO] [stdout] test imageops::affine::test::test_flip_horizontal ... ok
+[INFO] [stdout] test imageops::affine::test::test_flip_vertical ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate180 ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate270 ... ok
+[INFO] [stdout] test imageops::colorops::test::test_dither ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate90 ... ok
+[INFO] [stdout] test imageops::sample::tests::test_issue_186 ... ok
+[INFO] [stdout] test imageops::tests::test_image_coordinate_overflow ... ok
+[INFO] [stdout] test imageops::tests::test_image_in_image ... ok
+[INFO] [stdout] test imageops::tests::test_image_in_image_outside_of_bounds ... ok
+[INFO] [stdout] test imageops::tests::test_image_outside_image_no_wrap_around ... ok
+[INFO] [stdout] test pnm::autobreak::tests::test_aligned_writes ... ok
+[INFO] [stdout] test pnm::autobreak::tests::test_greater_writes ... ok
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout] test jpeg::encoder::tests::grayscale_roundtrip_sanity_check ... ok
+[INFO] [stdout] test jpeg::encoder::tests::roundtrip_sanity_check ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_blackandwhite ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_grayscale ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_rgb ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_ascii ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_ascii_nospace ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_binary ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_binary_ascii_termination ... ok
+[INFO] [stdout] test pnm::decoder::tests::pgm_ascii ... ok
+[INFO] [stdout] test pnm::decoder::tests::pgm_binary ... ok
+[INFO] [stdout] test pnm::encoder::tests::custom_header_and_color ... ok
+[INFO] [stdout] test pnm::tests::roundtrip_rgb ... ok
+[INFO] [stdout] test pnm::tests::roundtrip_u16 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- dynimage::test::image_dimensions stdout ----
+[INFO] [stdout] thread 'dynimage::test::image_dimensions' panicked at 'called `Result::unwrap()` on an `Err` value: IoError(Os { code: 3, kind: NotFound, message: "The system cannot find the path specified." })', src\libcore\result.rs:1051:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff6595f53ac - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff6595f53ac - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6595f893e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6595f893e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff6595f854d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff6595f91d0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff6595f8d04 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff6595f8be9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff659609c2c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff659609d2f - core::result::unwrap_failed
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stdout]   10:     0x7ff6591196af - core::result::Result<(u32, u32), image::image::ImageError>::unwrap<(u32, u32),image::image::ImageError>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:852
+[INFO] [stdout]   11:     0x7ff659178e4a - image::dynimage::test::image_dimensions
+[INFO] [stdout]                                at C:\crater\workdir\src\dynimage.rs:1166
+[INFO] [stdout]   12:     0x7ff659178dfe - image::dynimage::test::image_dimensions::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\dynimage.rs:1164
+[INFO] [stdout]   13:     0x7ff6590d701b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff659266667 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   15:     0x7ff6595fd0e2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff659285c28 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff659285c28 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff659285c28 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   19:     0x7ff65925851e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff65925e6be - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff65925e6be - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff65925e6be - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff6595fd0e2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff65925ed60 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff65925ed60 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff65925ed60 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff65925ed60 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff6595e98c7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   29:     0x7ff6595fb9e6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   30:     0x7ff6595fb9e6 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff6595fb9e6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff8fa507974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     dynimage::test::image_dimensions
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 74 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b160a8200cf18482254fcf40ae6ae7865d62f6e01d806665e6d6ff0b902093e9"`
+[INFO] running `"docker" "rm" "-f" "b160a8200cf18482254fcf40ae6ae7865d62f6e01d806665e6d6ff0b902093e9"`
+[INFO] [stdout] b160a8200cf18482254fcf40ae6ae7865d62f6e01d806665e6d6ff0b902093e9

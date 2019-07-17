@@ -1,0 +1,105 @@
+[INFO] cloning repository llogiq/flamer
+[INFO] running `"git" "clone" "--bare" "git://github.com/llogiq/flamer.git" "work\\cache\\sources\\gh\\llogiq\\flamer"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\llogiq\flamer'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\llogiq\\flamer" "work\\ex\\default\\sources\\nightly\\gh\\llogiq\\flamer"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\llogiq\flamer'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\llogiq\\flamer" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\llogiq\\flamer"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\llogiq\flamer'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f93def5049617c1d578dd202dc49ea7ef414716d
+[INFO] sha for GitHub repo llogiq/flamer: f93def5049617c1d578dd202dc49ea7ef414716d
+[INFO] validating manifest of llogiq/flamer on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of llogiq/flamer on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing llogiq/flamer
+[INFO] finished frobbing llogiq/flamer
+[INFO] frobbed toml for llogiq/flamer written to work\ex\default\sources\nightly\gh\llogiq\flamer\Cargo.toml
+[INFO] started frobbing llogiq/flamer
+[INFO] finished frobbing llogiq/flamer
+[INFO] frobbed toml for llogiq/flamer written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\llogiq\flamer\Cargo.toml
+[INFO] crate llogiq/flamer already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded flame v0.2.2
+[INFO] [stderr]   Downloaded serde v1.0.75
+[INFO] [stderr]   Downloaded ryu v0.2.6
+[INFO] [stderr]   Downloaded serde_derive v1.0.75
+[INFO] [stderr]   Downloaded serde_json v1.0.26
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing llogiq/flamer against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\llogiq\\flamer,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] b62e66788f30a0fc03b7a280ab582d1acdbea688057ae8455be86c78a8767240
+[INFO] running `"docker" "start" "-a" "b62e66788f30a0fc03b7a280ab582d1acdbea688057ae8455be86c78a8767240"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling ryu v0.2.6
+[INFO] [stderr]    Compiling serde v1.0.75
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling itoa v0.4.2
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling syn v0.14.9
+[INFO] [stderr]    Compiling thread-id v3.3.0
+[INFO] [stderr]    Compiling serde_derive v1.0.75
+[INFO] [stderr]    Compiling serde_json v1.0.26
+[INFO] [stderr]    Compiling flame v0.2.2
+[INFO] [stderr]    Compiling flamer v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 35s
+[INFO] running `"docker" "inspect" "b62e66788f30a0fc03b7a280ab582d1acdbea688057ae8455be86c78a8767240"`
+[INFO] running `"docker" "rm" "-f" "b62e66788f30a0fc03b7a280ab582d1acdbea688057ae8455be86c78a8767240"`
+[INFO] [stdout] b62e66788f30a0fc03b7a280ab582d1acdbea688057ae8455be86c78a8767240
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\llogiq\\flamer,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d5c7ad33cd32eb966fd2b387d97e5d9d9098932f3c9e82eecb00829d08d5d5b1
+[INFO] running `"docker" "start" "-a" "d5c7ad33cd32eb966fd2b387d97e5d9d9098932f3c9e82eecb00829d08d5d5b1"`
+[INFO] [stderr]    Compiling flamer v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.06s
+[INFO] running `"docker" "inspect" "d5c7ad33cd32eb966fd2b387d97e5d9d9098932f3c9e82eecb00829d08d5d5b1"`
+[INFO] running `"docker" "rm" "-f" "d5c7ad33cd32eb966fd2b387d97e5d9d9098932f3c9e82eecb00829d08d5d5b1"`
+[INFO] [stdout] d5c7ad33cd32eb966fd2b387d97e5d9d9098932f3c9e82eecb00829d08d5d5b1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\llogiq\\flamer,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 6d584d6c044eb80eb79a32e8fb15b9791bb5e1f67fd96563976cf5a80e1bfc81
+[INFO] running `"docker" "start" "-a" "6d584d6c044eb80eb79a32e8fb15b9791bb5e1f67fd96563976cf5a80e1bfc81"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.58s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flamer-f607205b22b96074.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\double-8d1c8fce59f3d505.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flamed-b7a178ff1727887a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flamed_const-e3a7d3ae42572e58.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\opt_name-023eb892835c0f54.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test main ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests flamer
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6d584d6c044eb80eb79a32e8fb15b9791bb5e1f67fd96563976cf5a80e1bfc81"`
+[INFO] running `"docker" "rm" "-f" "6d584d6c044eb80eb79a32e8fb15b9791bb5e1f67fd96563976cf5a80e1bfc81"`
+[INFO] [stdout] 6d584d6c044eb80eb79a32e8fb15b9791bb5e1f67fd96563976cf5a80e1bfc81

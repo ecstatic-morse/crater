@@ -1,0 +1,451 @@
+[INFO] fetching crate structopt 0.2.18...
+[INFO] extracting crate structopt 0.2.18 into work\ex\default\sources\stable\reg\structopt\0.2.18
+[INFO] extracting crate structopt 0.2.18 into work\ex\default\sources\beta\reg\structopt\0.2.18
+[INFO] validating manifest of structopt-0.2.18 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of structopt-0.2.18 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing structopt-0.2.18
+[INFO] finished frobbing structopt-0.2.18
+[INFO] frobbed toml for structopt-0.2.18 written to work\ex\default\sources\stable\reg\structopt\0.2.18\Cargo.toml
+[INFO] started frobbing structopt-0.2.18
+[INFO] finished frobbing structopt-0.2.18
+[INFO] frobbed toml for structopt-0.2.18 written to work\ex\default\sources\beta\reg\structopt\0.2.18\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded yaml-rust v0.3.5
+[INFO] [stderr]   Downloaded term v0.5.2
+[INFO] [stderr]   Downloaded argon2rs v0.2.5
+[INFO] [stderr]   Downloaded blake2-rfc v0.2.18
+[INFO] [stderr]   Downloaded term_size v0.3.1
+[INFO] [stderr]   Downloaded scoped_threadpool v0.1.9
+[INFO] [stderr]   Downloaded constant_time_eq v0.1.3
+[INFO] [stderr]   Downloaded clippy v0.0.302
+[INFO] [stderr]   Downloaded redox_users v0.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing structopt-0.2.18 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\structopt\\0.2.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 6235bf4f716655d14bac73e8b4890f7921398381f21825e1f3959c203fff131c
+[INFO] running `"docker" "start" "-a" "6235bf4f716655d14bac73e8b4890f7921398381f21825e1f3959c203fff131c"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling unicode-segmentation v1.3.0
+[INFO] [stderr]    Compiling strsim v0.8.0
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling heck v0.3.1
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling structopt-derive v0.2.18
+[INFO] [stderr]    Compiling structopt v0.2.18 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 42s
+[INFO] running `"docker" "inspect" "6235bf4f716655d14bac73e8b4890f7921398381f21825e1f3959c203fff131c"`
+[INFO] running `"docker" "rm" "-f" "6235bf4f716655d14bac73e8b4890f7921398381f21825e1f3959c203fff131c"`
+[INFO] [stdout] 6235bf4f716655d14bac73e8b4890f7921398381f21825e1f3959c203fff131c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\structopt\\0.2.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9cc1db532661674e3426109380a639f8c43ca37f66ee8a9f4dfc5f522a9f7718
+[INFO] running `"docker" "start" "-a" "9cc1db532661674e3426109380a639f8c43ca37f66ee8a9f4dfc5f522a9f7718"`
+[INFO] [stderr]    Compiling structopt v0.2.18 (C:\crater\workdir)
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\author_version_about.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\gen_completions.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\doc_comments.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\custom-string-parsers.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\flags.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\subcommand_aliases.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\simple_group.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\basic.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\subcommands.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\raw_attributes.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\flatten.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\git.rs:6:1
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\raw_attributes.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]   --> examples\rename_all.rs:20:1
+[INFO] [stderr]    |
+[INFO] [stderr] 20 | #[macro_use]
+[INFO] [stderr]    | ^^^^^^^^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\argument_naming.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\nested-subcommands.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\enum_tuple.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\example.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\options.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\doc-comments-help.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\flatten.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\no_version.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\group.rs:4:1
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\at_least_two.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\arguments.rs:9:1
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> examples\keyvalue.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]   --> examples\deny_missing_docs.rs:16:1
+[INFO] [stderr]    |
+[INFO] [stderr] 16 | #[macro_use]
+[INFO] [stderr]    | ^^^^^^^^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 55.71s
+[INFO] running `"docker" "inspect" "9cc1db532661674e3426109380a639f8c43ca37f66ee8a9f4dfc5f522a9f7718"`
+[INFO] running `"docker" "rm" "-f" "9cc1db532661674e3426109380a639f8c43ca37f66ee8a9f4dfc5f522a9f7718"`
+[INFO] [stdout] 9cc1db532661674e3426109380a639f8c43ca37f66ee8a9f4dfc5f522a9f7718
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\structopt\\0.2.18,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 0c2763b67b2dfe6c6c0f7ceb4f8bf54ca0bc31f39700ae163573816f21842c02
+[INFO] running `"docker" "start" "-a" "0c2763b67b2dfe6c6c0f7ceb4f8bf54ca0bc31f39700ae163573816f21842c02"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.91s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\structopt-ab5c07cd6518b6e2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\argument_naming-c5e818dbbbaa850a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 19 tests
+[INFO] [stdout] test test_custom_long_overwrites_default_name ... ok
+[INFO] [stdout] test test_custom_short_overwrites_default_name ... ok
+[INFO] [stdout] test test_multi_word_enum_variant_is_renamed ... ok
+[INFO] [stdout] test test_rename_all_is_not_propagated_from_struct_into_flattened ... ok
+[INFO] [stdout] test test_rename_all_is_not_propagated_from_struct_into_subcommand ... ok
+[INFO] [stdout] test test_rename_all_is_propagated_from_enum_to_variants_and_their_fields ... ok
+[INFO] [stdout] test test_rename_all_is_propagated_from_struct_to_fields ... ok
+[INFO] [stdout] test test_rename_all_is_propagation_can_be_overridden ... ok
+[INFO] [stdout] test test_single_word_enum_variant_is_default_renamed_into_verbatim_case ... ok
+[INFO] [stdout] test test_standalone_long_generates_verbatim_case ... ok
+[INFO] [stdout] test test_standalone_long_ignores_afterwards_defined_custom_name ... ok
+[INFO] [stdout] test test_standalone_long_uses_previous_defined_casing ... ok
+[INFO] [stdout] test test_standalone_long_uses_previous_defined_custom_name ... ok
+[INFO] [stdout] test test_standalone_long_works_with_verbatim_casing ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\arguments-dcd60088fc236fda.exe
+[INFO] [stdout] test test_standalone_short_generates_verbatim_case ... ok
+[INFO] [stdout] test test_standalone_short_ignores_afterwards_defined_custom_name ... ok
+[INFO] [stdout] test test_standalone_short_uses_previous_defined_casing ... ok
+[INFO] [stdout] test test_standalone_short_uses_previous_defined_custom_name ... ok
+[INFO] [stdout] test test_standalone_short_works_with_verbatim_casing ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test argument_with_raw_default ... ok
+[INFO] [stdout] test arguments ... ok
+[INFO] [stdout] test arguments_safe ... ok
+[INFO] [stdout] test argument_with_default ... ok
+[INFO] [stdout] test optional_argument ... ok
+[INFO] [stdout] test required_argument ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\author_version_about-9505a4510a2e9e9c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test use_env ... ok
+[INFO] [stdout] test no_author_version_about ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\custom_string_parsers-f558f5a37eb44570.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test test_every_custom_parser ... ok
+[INFO] [stdout] test test_parse_hex ... ok
+[INFO] [stdout] test test_parser_occurrences ... ok
+[INFO] [stdout] test test_parser_with_default_value ... ok
+[INFO] [stdout] test test_path_opt_simple ... ok
+[INFO] [stdout] test test_custom_bool ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\deny_warnings-0a19c3a79a45935e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\doc_comments_help-60bda677136f1953.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test help_is_better_than_comments ... ok
+[INFO] [stdout] test empty_line_in_doc_comment_is_double_linefeed ... ok
+[INFO] [stdout] test splits_flag_doc_comment_between_short_and_long ... ok
+[INFO] [stdout] test commets_intead_of_actual_help ... ok
+[INFO] [stdout] test splits_subcommand_doc_comment_between_short_and_long ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flags-781e7fb1dcac161e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test combined_flags ... ok
+[INFO] [stdout] test multiple_flag ... ok
+[INFO] [stdout] test unique_flag ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flatten-d7a6c3abbd598fa1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test flatten_in_subcommand ... ok
+[INFO] [stdout] test flatten ... ok
+[INFO] [stdout] test flatten_twice ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\nested_subcommands-0a8c69515f367814.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test test_add ... ok
+[INFO] [stdout] test test_fetch ... ok
+[INFO] [stdout] test test_badinput ... ok
+[INFO] [stdout] test sub_sub_cmd_with_option ... ok
+[INFO] [stdout] test test_subsubcommand ... ok
+[INFO] [stdout] test test_no_cmd ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\options-64d18b7d125af058.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test empy_default_value ... ok
+[INFO] [stdout] test option_from_str ... ok
+[INFO] [stdout] test option_with_default ... ok
+[INFO] [stdout] test option_with_raw_default ... ok
+[INFO] [stdout] test optional_argument_for_optional_option ... ok
+[INFO] [stdout] test options ... ok
+[INFO] [stdout] test optional_option ... ok
+[INFO] [stdout] test required_option ... ok
+[INFO] [stdout] test two_option_options ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\privacy-9c2ef5644fd335ee.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\raw_attributes-35a32f170abe1c54.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test test_raw_multi_args ... ok
+[INFO] [stdout] test test_raw_multi_args_fail ... ok
+[INFO] [stdout] test test_raw_slice ... ok
+[INFO] [stdout] test test_raw_bool ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\subcommands-1ebeec9bd1842413.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 8 tests
+[INFO] [stdout] test test_add ... ok
+[INFO] [stdout] test flatten_enum ... ok
+[INFO] [stdout] test test_fetch ... ok
+[INFO] [stdout] test enum_in_enum_subsubcommand ... ok
+[INFO] [stdout] test test_hyphenated_subcommands ... ok
+[INFO] [stdout] test test_no_parse ... ok
+[INFO] [stdout] test test_null_commands ... ok
+[INFO] [stdout] test test_tuple_commands ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests structopt
+[INFO] [stdout] 
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test src\lib.rs -  (line 220) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 253) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 135) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 174) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 280) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 392) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 321) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 417) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 451) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 91) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 40) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "0c2763b67b2dfe6c6c0f7ceb4f8bf54ca0bc31f39700ae163573816f21842c02"`
+[INFO] running `"docker" "rm" "-f" "0c2763b67b2dfe6c6c0f7ceb4f8bf54ca0bc31f39700ae163573816f21842c02"`
+[INFO] [stdout] 0c2763b67b2dfe6c6c0f7ceb4f8bf54ca0bc31f39700ae163573816f21842c02

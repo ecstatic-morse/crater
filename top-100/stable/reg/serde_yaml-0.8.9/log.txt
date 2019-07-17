@@ -1,0 +1,173 @@
+[INFO] fetching crate serde_yaml 0.8.9...
+[INFO] extracting crate serde_yaml 0.8.9 into work\ex\default\sources\stable\reg\serde_yaml\0.8.9
+[INFO] extracting crate serde_yaml 0.8.9 into work\ex\default\sources\beta\reg\serde_yaml\0.8.9
+[INFO] validating manifest of serde_yaml-0.8.9 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of serde_yaml-0.8.9 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing serde_yaml-0.8.9
+[INFO] finished frobbing serde_yaml-0.8.9
+[INFO] frobbed toml for serde_yaml-0.8.9 written to work\ex\default\sources\stable\reg\serde_yaml\0.8.9\Cargo.toml
+[INFO] started frobbing serde_yaml-0.8.9
+[INFO] finished frobbing serde_yaml-0.8.9
+[INFO] frobbed toml for serde_yaml-0.8.9 written to work\ex\default\sources\beta\reg\serde_yaml\0.8.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded version-sync v0.5.0
+[INFO] [stderr]   Downloaded synom v0.11.3
+[INFO] [stderr]   Downloaded itertools v0.7.11
+[INFO] [stderr]   Downloaded bitflags v0.9.1
+[INFO] [stderr]   Downloaded pulldown-cmark v0.1.2
+[INFO] [stderr]   Downloaded unindent v0.1.3
+[INFO] [stderr]   Downloaded unicode-xid v0.0.4
+[INFO] [stderr]   Downloaded quote v0.3.15
+[INFO] [stderr]   Downloaded syn v0.11.11
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing serde_yaml-0.8.9 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f455b9bdeb428b449dcf703727221f2acc709997c78868b3917653eaf54d96ef
+[INFO] running `"docker" "start" "-a" "f455b9bdeb428b449dcf703727221f2acc709997c78868b3917653eaf54d96ef"`
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling yaml-rust v0.4.3
+[INFO] [stderr]    Compiling serde_yaml v0.8.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 19.13s
+[INFO] running `"docker" "inspect" "f455b9bdeb428b449dcf703727221f2acc709997c78868b3917653eaf54d96ef"`
+[INFO] running `"docker" "rm" "-f" "f455b9bdeb428b449dcf703727221f2acc709997c78868b3917653eaf54d96ef"`
+[INFO] [stdout] f455b9bdeb428b449dcf703727221f2acc709997c78868b3917653eaf54d96ef
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 993a2c70d9d225a1ee3c8907b5e67a201eade34a79bd0bebda960daa1895f365
+[INFO] running `"docker" "start" "-a" "993a2c70d9d225a1ee3c8907b5e67a201eade34a79bd0bebda960daa1895f365"`
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling unicode-xid v0.0.4
+[INFO] [stderr]    Compiling pulldown-cmark v0.1.2
+[INFO] [stderr]    Compiling bitflags v0.9.1
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling quote v0.3.15
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling unindent v0.1.3
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling itertools v0.7.11
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling toml v0.4.10
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling version-sync v0.5.0
+[INFO] [stderr]    Compiling serde_yaml v0.8.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 56.22s
+[INFO] running `"docker" "inspect" "993a2c70d9d225a1ee3c8907b5e67a201eade34a79bd0bebda960daa1895f365"`
+[INFO] running `"docker" "rm" "-f" "993a2c70d9d225a1ee3c8907b5e67a201eade34a79bd0bebda960daa1895f365"`
+[INFO] [stdout] 993a2c70d9d225a1ee3c8907b5e67a201eade34a79bd0bebda960daa1895f365
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] cf2a9c4bc49d0c0e0b799658f625674949caf0cbb8d9a3a062634cc2a4b05e1b
+[INFO] running `"docker" "start" "-a" "cf2a9c4bc49d0c0e0b799658f625674949caf0cbb8d9a3a062634cc2a4b05e1b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.66s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde_yaml-45720062f86ad219.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_de-f938795b7deafdcc.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test test_alias ... ok
+[INFO] [stdout] test test_bomb ... ok
+[INFO] [stdout] test test_de_mapping ... ok
+[INFO] [stdout] test test_enum_alias ... ok
+[INFO] [stdout] test test_enum_tag ... ok
+[INFO] [stdout] test test_i128_big ... ok
+[INFO] [stdout] test test_number_alias_as_string ... ok
+[INFO] [stdout] test test_number_as_string ... ok
+[INFO] [stdout] test test_numbers ... ok
+[INFO] [stdout] test test_option ... ok
+[INFO] [stdout] test test_u128_big ... ok
+[INFO] [stdout] test test_option_alias ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_error-ffee2f16573d4783.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test test_bad_bool ... ok
+[INFO] [stdout] test test_bad_float ... ok
+[INFO] [stdout] test test_bad_int ... ok
+[INFO] [stdout] test test_bad_null ... ok
+[INFO] [stdout] test test_empty ... ok
+[INFO] [stdout] test test_finite_recursion_arrays ... ok
+[INFO] [stdout] test test_finite_recursion_objects ... ok
+[INFO] [stdout] test test_ignored_unknown_anchor ... ok
+[INFO] [stdout] test test_incorrect_nested_type ... ok
+[INFO] [stdout] test test_incorrect_type ... ok
+[INFO] [stdout] test test_invalid_scalar_type ... ok
+[INFO] [stdout] test test_long_tuple ... ok
+[INFO] [stdout] test test_infinite_recursion_objects ... ok
+[INFO] [stdout] test test_infinite_recursion_arrays ... ok
+[INFO] [stdout] test test_no_location ... ok
+[INFO] [stdout] test test_short_tuple ... ok
+[INFO] [stdout] test test_two_documents ... ok
+[INFO] [stdout] test test_missing_field ... ok
+[INFO] [stdout] test test_unknown_anchor ... ok
+[INFO] [stdout] test test_variant_not_a_map ... ok
+[INFO] [stdout] test test_variant_not_string ... ok
+[INFO] [stdout] test test_variant_map_wrong_size ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_serde-4fe92bf04f1ca682.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test test_basic_struct ... ok
+[INFO] [stdout] test test_default ... ok
+[INFO] [stdout] test test_float ... ok
+[INFO] [stdout] test test_i128_small ... ok
+[INFO] [stdout] test test_int ... ok
+[INFO] [stdout] test test_int_max_i64 ... ok
+[INFO] [stdout] test test_int_max_u64 ... ok
+[INFO] [stdout] test test_int_min_i64 ... ok
+[INFO] [stdout] test test_map ... ok
+[INFO] [stdout] test test_mapping ... ok
+[INFO] [stdout] test test_nested_struct ... ok
+[INFO] [stdout] test test_nested_vec ... ok
+[INFO] [stdout] test test_newtype_struct ... ok
+[INFO] [stdout] test test_newtype_variant ... ok
+[INFO] [stdout] test test_option ... ok
+[INFO] [stdout] test test_struct_variant ... ok
+[INFO] [stdout] test test_tuple_variant ... ok
+[INFO] [stdout] test test_u128_small ... ok
+[INFO] [stdout] test test_unit ... ok
+[INFO] [stdout] test test_unit_variant ... ok
+[INFO] [stdout] test test_value ... ok
+[INFO] [stdout] test test_vec ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_visitor-6b63f38de414e9fa.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_visitor ... ignored
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\version_numbers-8a55bbb0fef1f72d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test test_readme_deps ... ok
+[INFO] [stdout] test test_html_root_url ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests serde_yaml
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "cf2a9c4bc49d0c0e0b799658f625674949caf0cbb8d9a3a062634cc2a4b05e1b"`
+[INFO] running `"docker" "rm" "-f" "cf2a9c4bc49d0c0e0b799658f625674949caf0cbb8d9a3a062634cc2a4b05e1b"`
+[INFO] [stdout] cf2a9c4bc49d0c0e0b799658f625674949caf0cbb8d9a3a062634cc2a4b05e1b

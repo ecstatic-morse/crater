@@ -1,0 +1,114 @@
+[INFO] fetching crate jemalloc-ctl 0.3.3...
+[INFO] extracting crate jemalloc-ctl 0.3.3 into work\ex\default\sources\nightly\reg\jemalloc-ctl\0.3.3
+[INFO] extracting crate jemalloc-ctl 0.3.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\jemalloc-ctl\0.3.3
+[INFO] validating manifest of jemalloc-ctl-0.3.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jemalloc-ctl-0.3.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jemalloc-ctl-0.3.3
+[INFO] finished frobbing jemalloc-ctl-0.3.3
+[INFO] frobbed toml for jemalloc-ctl-0.3.3 written to work\ex\default\sources\nightly\reg\jemalloc-ctl\0.3.3\Cargo.toml
+[INFO] started frobbing jemalloc-ctl-0.3.3
+[INFO] finished frobbing jemalloc-ctl-0.3.3
+[INFO] frobbed toml for jemalloc-ctl-0.3.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\jemalloc-ctl\0.3.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded jemallocator v0.3.2
+[INFO] [stderr]   Downloaded jemalloc-sys v0.3.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing jemalloc-ctl-0.3.3 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\jemalloc-ctl\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7b68f48ed148464348508565f7b271177ef4a8cb515923d60c9c3eca02a643f0
+[INFO] running `"docker" "start" "-a" "7b68f48ed148464348508565f7b271177ef4a8cb515923d60c9c3eca02a643f0"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling fs_extra v1.1.0
+[INFO] [stderr]    Compiling jemalloc-sys v0.3.2
+[INFO] [stderr] error: failed to run custom build command for `jemalloc-sys v0.3.2`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\jemalloc-sys-d5b6840ab1b61735\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] TARGET=x86_64-pc-windows-msvc
+[INFO] [stderr] HOST=x86_64-pc-windows-msvc
+[INFO] [stderr] NUM_JOBS=4
+[INFO] [stderr] OUT_DIR="C:\\crater\\target\\debug\\build\\jemalloc-sys-8006c4a1552053f2\\out"
+[INFO] [stderr] BUILD_DIR="C:\\crater\\target\\debug\\build\\jemalloc-sys-8006c4a1552053f2\\out\\build"
+[INFO] [stderr] SRC_DIR="C:\\crater\\cargo-home\\registry\\src\\github.com-1ecc6299db9ec823\\jemalloc-sys-0.3.2"
+[INFO] [stderr] cargo:warning="jemalloc support for `x86_64-pc-windows-msvc` is untested"
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] CRATE_CC_NO_DEFAULTS = None
+[INFO] [stderr] CARGO_CFG_TARGET_FEATURE = Some("fxsr,mmx,sse,sse2")
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] CC="C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe"
+[INFO] [stderr] CFLAGS="/nologo /MD /Z7 /W4"
+[INFO] [stderr] JEMALLOC_REPO_DIR="jemalloc"
+[INFO] [stderr] JEMALLOC_SRC_DIR="C:\\crater\\target\\debug\\build\\jemalloc-sys-8006c4a1552053f2\\out\\jemalloc"
+[INFO] [stderr] cargo:rustc-cfg=prefixed
+[INFO] [stderr] --with-jemalloc-prefix=_rjem_
+[INFO] [stderr] running: "sh" "/c/crater/target/debug/build/jemalloc-sys-8006c4a1552053f2/out/jemalloc/configure" "--disable-cxx" "--with-jemalloc-prefix=_rjem_" "--with-private-namespace=_rjem_" "--host=x86_64-pc-win32" "--build=x86_64-pc-win32" "--prefix=C:\\crater\\target\\debug\\build\\jemalloc-sys-8006c4a1552053f2\\out"
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'failed to execute command: The system cannot find the file specified. (os error 2)', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\jemalloc-sys-0.3.2\build.rs:389:19
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff62e41ac0c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff62e41ac0c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff62e41dfde - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff62e41dfde - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff62e41dc62 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff62e41e7e0 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff62e41e314 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff62e41e262 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff62e376036 - build_script_build::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\jemalloc-sys-0.3.2\build.rs:389
+[INFO] [stderr]    9:     0x7ff62e374666 - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\jemalloc-sys-0.3.2\build.rs:326
+[INFO] [stderr]   10:     0x7ff62e37caa0 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   11:     0x7ff62e41e157 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   12:     0x7ff62e41e157 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   13:     0x7ff62e4292b2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   14:     0x7ff62e41ea02 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   15:     0x7ff62e41ea02 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   16:     0x7ff62e41ea02 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   17:     0x7ff62e37ca7b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   18:     0x7ff62e3766a0 - main
+[INFO] [stderr]   19:     0x7ff62e4370e4 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   20:     0x7ff62e4370e4 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   21:     0x7ff98aa97974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "7b68f48ed148464348508565f7b271177ef4a8cb515923d60c9c3eca02a643f0"`
+[INFO] running `"docker" "rm" "-f" "7b68f48ed148464348508565f7b271177ef4a8cb515923d60c9c3eca02a643f0"`
+[INFO] [stdout] 7b68f48ed148464348508565f7b271177ef4a8cb515923d60c9c3eca02a643f0

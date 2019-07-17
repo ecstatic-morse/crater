@@ -1,0 +1,78 @@
+[INFO] cloning repository cadaverine/k-combinations
+[INFO] running `"git" "clone" "--bare" "git://github.com/cadaverine/k-combinations.git" "work\\cache\\sources\\gh\\cadaverine\\k-combinations"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\cadaverine\k-combinations'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cadaverine\\k-combinations" "work\\ex\\default\\sources\\stable\\gh\\cadaverine\\k-combinations"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\cadaverine\k-combinations'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cadaverine\\k-combinations" "work\\ex\\default\\sources\\beta\\gh\\cadaverine\\k-combinations"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\cadaverine\k-combinations'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 7e1a3e1ca43560cf72da504cf7b334474cefb87e
+[INFO] sha for GitHub repo cadaverine/k-combinations: 7e1a3e1ca43560cf72da504cf7b334474cefb87e
+[INFO] validating manifest of cadaverine/k-combinations on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cadaverine/k-combinations on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cadaverine/k-combinations
+[INFO] finished frobbing cadaverine/k-combinations
+[INFO] frobbed toml for cadaverine/k-combinations written to work\ex\default\sources\stable\gh\cadaverine\k-combinations\Cargo.toml
+[INFO] started frobbing cadaverine/k-combinations
+[INFO] finished frobbing cadaverine/k-combinations
+[INFO] frobbed toml for cadaverine/k-combinations written to work\ex\default\sources\beta\gh\cadaverine\k-combinations\Cargo.toml
+[INFO] crate cadaverine/k-combinations already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing cadaverine/k-combinations against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\cadaverine\\k-combinations,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 70ed0270487b947d261401fcd0fc12b5d8ac44cae199ee097557034926a6a179
+[INFO] running `"docker" "start" "-a" "70ed0270487b947d261401fcd0fc12b5d8ac44cae199ee097557034926a6a179"`
+[INFO] [stderr]    Compiling k-combinations v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0425]: cannot find value `arr` in this scope
+[INFO] [stderr]  --> src\main.rs:8:30
+[INFO] [stderr]   |
+[INFO] [stderr] 8 |     let mut numeratorArray = arr[1..k];
+[INFO] [stderr]   |                              ^^^ help: a tuple variant with a similar name exists: `Err`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]  --> src\main.rs:1:49
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | fn get_k_combinations_number(n: u64, k: u64) -> u64 {
+[INFO] [stderr]   |    -------------------------                    ^^^ expected u64, found ()
+[INFO] [stderr]   |    |
+[INFO] [stderr]   |    this function's body doesn't return
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: expected type `u64`
+[INFO] [stderr]              found type `()`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\main.rs:13:47
+[INFO] [stderr]    |
+[INFO] [stderr] 13 | fn k_combinations_generate(n: u64, k: u64) -> u64 {
+[INFO] [stderr]    |    -----------------------                    ^^^ expected u64, found ()
+[INFO] [stderr]    |    |
+[INFO] [stderr]    |    this function's body doesn't return
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `u64`
+[INFO] [stderr]               found type `()`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: `std::ops::Range<{integer}>` doesn't implement `std::fmt::Display`
+[INFO] [stderr]   --> src\main.rs:19:18
+[INFO] [stderr]    |
+[INFO] [stderr] 19 |     print!("{}", (1..20));
+[INFO] [stderr]    |                  ^^^^^^^ `std::ops::Range<{integer}>` cannot be formatted with the default formatter
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: the trait `std::fmt::Display` is not implemented for `std::ops::Range<{integer}>`
+[INFO] [stderr]    = note: in format strings you may be able to use `{:?}` (or {:#?} for pretty-print) instead
+[INFO] [stderr]    = note: required by `std::fmt::Display::fmt`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0277, E0308, E0425.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0277`.
+[INFO] [stderr] error: Could not compile `k-combinations`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "70ed0270487b947d261401fcd0fc12b5d8ac44cae199ee097557034926a6a179"`
+[INFO] running `"docker" "rm" "-f" "70ed0270487b947d261401fcd0fc12b5d8ac44cae199ee097557034926a6a179"`
+[INFO] [stdout] 70ed0270487b947d261401fcd0fc12b5d8ac44cae199ee097557034926a6a179

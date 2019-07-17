@@ -1,0 +1,44 @@
+[INFO] crate protobuf 2.7.0 is already in cache
+[INFO] extracting crate protobuf 2.7.0 into work\ex\default\sources\nightly\reg\protobuf\2.7.0
+[INFO] extracting crate protobuf 2.7.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\protobuf\2.7.0
+[INFO] validating manifest of protobuf-2.7.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of protobuf-2.7.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing protobuf-2.7.0
+[INFO] finished frobbing protobuf-2.7.0
+[INFO] frobbed toml for protobuf-2.7.0 written to work\ex\default\sources\nightly\reg\protobuf\2.7.0\Cargo.toml
+[INFO] started frobbing protobuf-2.7.0
+[INFO] finished frobbing protobuf-2.7.0
+[INFO] frobbed toml for protobuf-2.7.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\protobuf\2.7.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing protobuf-2.7.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\protobuf\\2.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8a584677d54bebedf7d28cf94739b7f3284f39dfdb01998fe10974b5981c4712
+[INFO] running `"docker" "start" "-a" "8a584677d54bebedf7d28cf94739b7f3284f39dfdb01998fe10974b5981c4712"`
+[INFO] [stderr]    Compiling protobuf v2.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 53.53s
+[INFO] running `"docker" "inspect" "8a584677d54bebedf7d28cf94739b7f3284f39dfdb01998fe10974b5981c4712"`
+[INFO] running `"docker" "rm" "-f" "8a584677d54bebedf7d28cf94739b7f3284f39dfdb01998fe10974b5981c4712"`
+[INFO] [stdout] 8a584677d54bebedf7d28cf94739b7f3284f39dfdb01998fe10974b5981c4712
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\protobuf\\2.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 01afe01cc37f7abd76cc5f3545b21e843df9f3cb8b7c593593e21e7330128b74
+[INFO] running `"docker" "start" "-a" "01afe01cc37f7abd76cc5f3545b21e843df9f3cb8b7c593593e21e7330128b74"`
+[INFO] [stderr]    Compiling protobuf v2.7.0 (C:\crater\workdir)
+[INFO] [stderr] error: couldn't read src\..\..\protobuf-test-common\src\hex.rs: The system cannot find the path specified. (os error 3)
+[INFO] [stderr]   --> src\lib.rs:68:5
+[INFO] [stderr]    |
+[INFO] [stderr] 68 | mod hex;
+[INFO] [stderr]    |     ^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `protobuf`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "01afe01cc37f7abd76cc5f3545b21e843df9f3cb8b7c593593e21e7330128b74"`
+[INFO] running `"docker" "rm" "-f" "01afe01cc37f7abd76cc5f3545b21e843df9f3cb8b7c593593e21e7330128b74"`
+[INFO] [stdout] 01afe01cc37f7abd76cc5f3545b21e843df9f3cb8b7c593593e21e7330128b74

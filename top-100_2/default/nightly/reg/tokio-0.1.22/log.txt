@@ -1,0 +1,454 @@
+[INFO] crate tokio 0.1.22 is already in cache
+[INFO] extracting crate tokio 0.1.22 into work\ex\default\sources\nightly\reg\tokio\0.1.22
+[INFO] extracting crate tokio 0.1.22 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tokio\0.1.22
+[INFO] validating manifest of tokio-0.1.22 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tokio-0.1.22 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tokio-0.1.22
+[INFO] finished frobbing tokio-0.1.22
+[INFO] frobbed toml for tokio-0.1.22 written to work\ex\default\sources\nightly\reg\tokio\0.1.22\Cargo.toml
+[INFO] started frobbing tokio-0.1.22
+[INFO] finished frobbing tokio-0.1.22
+[INFO] frobbed toml for tokio-0.1.22 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\tokio\0.1.22\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tokio-0.1.22 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\tokio\\0.1.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d7a1631232379db98cf75efdfc06bd5033f0c82c70fc595bf7cbdb534be38a0e
+[INFO] running `"docker" "start" "-a" "d7a1631232379db98cf75efdfc06bd5033f0c82c70fc595bf7cbdb534be38a0e"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling tokio-executor v0.1.8
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.15
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling tokio-fs v0.1.6
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio v0.1.22 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 34s
+[INFO] running `"docker" "inspect" "d7a1631232379db98cf75efdfc06bd5033f0c82c70fc595bf7cbdb534be38a0e"`
+[INFO] running `"docker" "rm" "-f" "d7a1631232379db98cf75efdfc06bd5033f0c82c70fc595bf7cbdb534be38a0e"`
+[INFO] [stdout] d7a1631232379db98cf75efdfc06bd5033f0c82c70fc595bf7cbdb534be38a0e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\tokio\\0.1.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 39ff0d1a63d803b41b80fefb01ea4cdf3435de6faf8faa64bd77e83cb8612e06
+[INFO] running `"docker" "start" "-a" "39ff0d1a63d803b41b80fefb01ea4cdf3435de6faf8faa64bd77e83cb8612e06"`
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling miniz-sys v0.1.12
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling flate2 v1.0.9
+[INFO] [stderr]    Compiling env_logger v0.5.13
+[INFO] [stderr]    Compiling tokio v0.1.22 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 30s
+[INFO] running `"docker" "inspect" "39ff0d1a63d803b41b80fefb01ea4cdf3435de6faf8faa64bd77e83cb8612e06"`
+[INFO] running `"docker" "rm" "-f" "39ff0d1a63d803b41b80fefb01ea4cdf3435de6faf8faa64bd77e83cb8612e06"`
+[INFO] [stdout] 39ff0d1a63d803b41b80fefb01ea4cdf3435de6faf8faa64bd77e83cb8612e06
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\tokio\\0.1.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 16e8f82abbca29f93eda6358e413fd5a4cc4c282c7e9b5ab77094f6b6c73a464
+[INFO] running `"docker" "start" "-a" "16e8f82abbca29f93eda6358e413fd5a4cc4c282c7e9b5ab77094f6b6c73a464"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.36s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tokio-ed8ef17f8f765600.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test util::future::test::timeout_polls_at_least_once ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\buffered-f8fecef31706606c.exe
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test echo_server ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\clock-7d0cfbaa256071ca.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test clock_and_timer_single_threaded ... ok
+[INFO] [stdout] test clock_and_timer_concurrent ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\drop_core-ef7e97e1e3672377.exe
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test tcp_doesnt_block ... ok
+[INFO] [stdout] test drop_wakes ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\enumerate-e422312846001cde.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test enumerate ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\global-8e6859ba8262e75b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test hammer_old ... ok
+[INFO] [stdout] test hammer_split ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\length_delimited-74a3f298e6cf2015.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 32 tests
+[INFO] [stdout] test encode_overflow ... ok
+[INFO] [stdout] test read_empty_io_yields_nothing ... ok
+[INFO] [stdout] test read_incomplete_head ... ok
+[INFO] [stdout] test read_header_offset ... ok
+[INFO] [stdout] test read_incomplete_head_multi ... ok
+[INFO] [stdout] test read_incomplete_payload ... ok
+[INFO] [stdout] test read_max_frame_len ... ok
+[INFO] [stdout] test read_multi_frame_multi_packet ... ok
+[INFO] [stdout] test read_one_byte_length_field ... ok
+[INFO] [stdout] test read_multi_frame_multi_packet_wait ... ok
+[INFO] [stdout] test read_single_frame_multi_packet ... ok
+[INFO] [stdout] test read_single_frame_multi_packet_wait ... ok
+[INFO] [stdout] test read_single_frame_one_packet ... ok
+[INFO] [stdout] test read_single_frame_one_packet_little_endian ... ok
+[INFO] [stdout] test read_single_frame_one_packet_native_endian ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet_length_includes_head ... ok
+[INFO] [stdout] test read_single_multi_frame_one_packet_skip_none_adjusted ... ok
+[INFO] [stdout] test read_update_max_frame_len_at_rest ... ok
+[INFO] [stdout] test read_update_max_frame_len_in_flight ... ok
+[INFO] [stdout] test write_max_frame_len ... ok
+[INFO] [stdout] test write_nothing_yields_nothing ... ok
+[INFO] [stdout] test write_single_frame_length_adjusted ... ok
+[INFO] [stdout] test write_single_frame_little_endian ... ok
+[INFO] [stdout] test write_single_frame_one_packet ... ok
+[INFO] [stdout] test write_single_frame_with_short_length_field ... ok
+[INFO] [stdout] test write_single_frame_would_block ... ok
+[INFO] [stdout] test write_single_multi_frame_multi_packet ... ok
+[INFO] [stdout] test write_single_multi_frame_one_packet ... ok
+[INFO] [stdout] test write_update_max_frame_len_at_rest ... ok
+[INFO] [stdout] test write_update_max_frame_len_in_flight ... ok
+[INFO] [stdout] test write_zero ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\line_frames-18643e8724c29bd4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test echo ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\pipe_hup-aa59b3306700d510.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\reactor-a7053c11b835780f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_drop_on_notify ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\runtime-6e010ab55cf956a3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 23 tests
+[INFO] [stdout] test from_block_on::execute ... ok
+[INFO] [stdout] test from_block_on::spawn ... ok
+[INFO] [stdout] test after_start_and_before_stop_is_called ... ok
+[INFO] [stdout] test from_block_on_all::execute ... ok
+[INFO] [stdout] test from_block_on_all::spawn ... ok
+[INFO] [stdout] test block_on_timer ... ok
+[INFO] [stdout] test many::execute ... ok
+[INFO] [stdout] test many::spawn ... ok
+[INFO] [stdout] test nested_enter::current_thread_block_on_all_in_run ... ok
+[INFO] [stderr] thread 'tokio-runtime-worker-0' panicked at 'nested tokio::run: EnterError { reason: "attempted to run an executor while another executor is already running" }', src\libcore\result.rs:1051:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff78f3dd31c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff78f3dd31c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff78f3e0bce - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff78f3e0bce - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff78f3e0852 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff78f3e1485 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:481
+[INFO] [stderr]    6:     0x7ff78f3e0f94 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff78f3e0e79 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stderr]    8:     0x7ff78f3ee63c - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stderr]    9:     0x7ff78f3ee73f - core::result::unwrap_failed
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\result.rs:1051
+[INFO] [stderr]   10:     0x7ff78f243295 - core::result::Result<tokio_executor::enter::Enter, tokio_executor::enter::EnterError>::expect<tokio_executor::enter::Enter,tokio_executor::enter::EnterError>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\result.rs:879
+[INFO] [stderr]   11:     0x7ff78f1c34bd - tokio::runtime::threadpool::run<alloc::boxed::Box<Future>>
+[INFO] [stderr]                                at C:\crater\workdir\src\runtime\threadpool\mod.rs:105
+[INFO] [stderr]   12:     0x7ff78f17dca2 - core::ops::function::Fn::call<fn(alloc::boxed::Box<Future>),(alloc::boxed::Box<Future>)>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:69
+[INFO] [stderr]   13:     0x7ff78f1c94bb - runtime::nested_enter::test::{{closure}}::{{closure}}<fn(alloc::boxed::Box<Future>),fn(alloc::boxed::Box<Future>)>
+[INFO] [stderr]                                at C:\crater\workdir\tests\runtime.rs:440
+[INFO] [stderr]   14:     0x7ff78f19f1df - std::panicking::try::do_call<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   15:     0x7ff78f3e5e32 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   16:     0x7ff78f19ebb7 - std::panicking::try<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   17:     0x7ff78f19af19 - std::panic::catch_unwind<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff78f1c96f1 - runtime::nested_enter::test::{{closure}}<fn(alloc::boxed::Box<Future>),fn(alloc::boxed::Box<Future>)>
+[INFO] [stderr]                                at C:\crater\workdir\tests\runtime.rs:440
+[INFO] [stderr]   19:     0x7ff78f1b28bf - futures::future::lazy::Lazy<closure, core::result::Result<(), ()>>::get<closure,core::result::Result<(), ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\future\lazy.rs:64
+[INFO] [stderr]   20:     0x7ff78f1b5e93 - futures::future::lazy::{{impl}}::poll<closure,core::result::Result<(), ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\future\lazy.rs:82
+[INFO] [stderr]   21:     0x7ff78f37f798 - futures::future::{{impl}}::poll<Future>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\future\mod.rs:113
+[INFO] [stderr]   22:     0x7ff78f37f798 - futures::future::{{impl}}::poll<Future>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\future\mod.rs:113
+[INFO] [stderr]   23:     0x7ff78f2b2cb3 - futures::task_impl::{{impl}}::poll_future_notify::{{closure}}<alloc::boxed::Box<Future>,alloc::sync::Arc<tokio_threadpool::notifier::Notifier>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\mod.rs:329
+[INFO] [stderr]   24:     0x7ff78f2b2ec3 - futures::task_impl::{{impl}}::enter::{{closure}}<alloc::boxed::Box<Future>,closure,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\mod.rs:399
+[INFO] [stderr]   25:     0x7ff78f2aa206 - futures::task_impl::std::set<closure,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\std\mod.rs:83
+[INFO] [stderr]   26:     0x7ff78f2b2d66 - futures::task_impl::Spawn<alloc::boxed::Box<Future>>::enter<alloc::boxed::Box<Future>,closure,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\mod.rs:399
+[INFO] [stderr]   27:     0x7ff78f2b2a6a - futures::task_impl::Spawn<alloc::boxed::Box<Future>>::poll_fn_notify<alloc::boxed::Box<Future>,alloc::sync::Arc<tokio_threadpool::notifier::Notifier>,closure,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\mod.rs:291
+[INFO] [stderr]   28:     0x7ff78f2b2c27 - futures::task_impl::Spawn<alloc::boxed::Box<Future>>::poll_future_notify<alloc::boxed::Box<Future>,alloc::sync::Arc<tokio_threadpool::notifier::Notifier>>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\futures-0.1.28\src\task_impl\mod.rs:329
+[INFO] [stderr]   29:     0x7ff78f2bd231 - tokio_threadpool::task::{{impl}}::run::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\task\mod.rs:145
+[INFO] [stderr]   30:     0x7ff78f29ee67 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   31:     0x7ff78f2a9028 - std::panic::{{impl}}::call_once<core::result::Result<futures::poll::Async<()>, ()>,closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   32:     0x7ff78f2a9bd7 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   33:     0x7ff78f3e5e32 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   34:     0x7ff78f2a9a38 - std::panicking::try<core::result::Result<futures::poll::Async<()>, ()>,std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   35:     0x7ff78f2a97d0 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,core::result::Result<futures::poll::Async<()>, ()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   36:     0x7ff78f2bcc07 - tokio_threadpool::task::Task::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\task\mod.rs:130
+[INFO] [stderr]   37:     0x7ff78f2bf76e - tokio_threadpool::worker::Worker::run_task2
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:567
+[INFO] [stderr]   38:     0x7ff78f2bf151 - tokio_threadpool::worker::Worker::run_task
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:459
+[INFO] [stderr]   39:     0x7ff78f2be9b4 - tokio_threadpool::worker::Worker::try_run_owned_task
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:390
+[INFO] [stderr]   40:     0x7ff78f2be3bd - tokio_threadpool::worker::Worker::try_run_task
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:297
+[INFO] [stderr]   41:     0x7ff78f2be23a - tokio_threadpool::worker::Worker::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:241
+[INFO] [stderr]   42:     0x7ff78f233d7b - tokio::runtime::threadpool::builder::{{impl}}::build::{{closure}}::{{closure}}::{{closure}}::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\runtime\threadpool\builder.rs:390
+[INFO] [stderr]   43:     0x7ff78f24182a - tokio_timer::timer::handle::with_default::{{closure}}<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-timer-0.2.11\src\timer\handle.rs:101
+[INFO] [stderr]   44:     0x7ff78f22e182 - std::thread::local::LocalKey<core::cell::RefCell<core::option::Option<tokio_timer::timer::handle::HandlePriv>>>::try_with<core::cell::RefCell<core::option::Option<tokio_timer::timer::handle::HandlePriv>>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:257
+[INFO] [stderr]   45:     0x7ff78f22dd02 - std::thread::local::LocalKey<core::cell::RefCell<core::option::Option<tokio_timer::timer::handle::HandlePriv>>>::with<core::cell::RefCell<core::option::Option<tokio_timer::timer::handle::HandlePriv>>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:234
+[INFO] [stderr]   46:     0x7ff78f241436 - tokio_timer::timer::handle::with_default<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-timer-0.2.11\src\timer\handle.rs:84
+[INFO] [stderr]   47:     0x7ff78f233dd7 - tokio::runtime::threadpool::builder::{{impl}}::build::{{closure}}::{{closure}}::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\runtime\threadpool\builder.rs:382
+[INFO] [stderr]   48:     0x7ff78f23ac30 - tokio_timer::clock::clock::with_default::{{closure}}<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-timer-0.2.11\src\clock\clock.rs:137
+[INFO] [stderr]   49:     0x7ff78f22e4ea - std::thread::local::LocalKey<core::cell::Cell<core::option::Option<const tokio_timer::clock::clock::Clock*>>>::try_with<core::cell::Cell<core::option::Option<const tokio_timer::clock::clock::Clock*>>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:257
+[INFO] [stderr]   50:     0x7ff78f22defd - std::thread::local::LocalKey<core::cell::Cell<core::option::Option<const tokio_timer::clock::clock::Clock*>>>::with<core::cell::Cell<core::option::Option<const tokio_timer::clock::clock::Clock*>>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:234
+[INFO] [stderr]   51:     0x7ff78f23aacd - tokio_timer::clock::clock::with_default<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-timer-0.2.11\src\clock\clock.rs:117
+[INFO] [stderr]   52:     0x7ff78f233e19 - tokio::runtime::threadpool::builder::{{impl}}::build::{{closure}}::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\runtime\threadpool\builder.rs:381
+[INFO] [stderr]   53:     0x7ff78f245181 - tokio_reactor::with_default::{{closure}}<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-reactor-0.1.9\src\lib.rs:237
+[INFO] [stderr]   54:     0x7ff78f22e72a - std::thread::local::LocalKey<core::cell::RefCell<core::option::Option<tokio_reactor::HandlePriv>>>::try_with<core::cell::RefCell<core::option::Option<tokio_reactor::HandlePriv>>,closure,()>
+[INFO] [stdout] test nested_enter::run_in_run ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:257
+[INFO] [stdout] test nested_enter::threadpool_block_on_all_in_run ... ok
+[INFO] [stderr]   55:     0x7ff78f22dc9d - std::thread::local::LocalKey<core::cell::RefCell<core::option::Option<tokio_reactor::HandlePriv>>>::with<core::cell::RefCell<core::option::Option<tokio_reactor::HandlePriv>>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:234
+[INFO] [stderr]   56:     0x7ff78f244feb - tokio_reactor::with_default<closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-reactor-0.1.9\src\lib.rs:217
+[INFO] [stderr]   57:     0x7ff78f233eb1 - tokio::runtime::threadpool::builder::{{impl}}::build::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\runtime\threadpool\builder.rs:380
+[INFO] [stderr]   58:     0x7ff78f2ae0c3 - tokio_threadpool::callback::Callback::call
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\callback.rs:22
+[INFO] [stderr]   59:     0x7ff78f2bdf2f - tokio_threadpool::worker::{{impl}}::do_run::{{closure}}::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:127
+[INFO] [stderr]   60:     0x7ff78f2c7ef3 - tokio_executor::global::with_default::{{closure}}<tokio_threadpool::sender::Sender,closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-executor-0.1.8\src\global.rs:209
+[INFO] [stderr]   61:     0x7ff78f2b5392 - std::thread::local::LocalKey<core::cell::Cell<tokio_executor::global::State>>::try_with<core::cell::Cell<tokio_executor::global::State>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:257
+[INFO] [stderr]   62:     0x7ff78f2b4bf2 - std::thread::local::LocalKey<core::cell::Cell<tokio_executor::global::State>>::with<core::cell::Cell<tokio_executor::global::State>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:234
+[INFO] [stderr]   63:     0x7ff78f2c7e02 - tokio_executor::global::with_default<tokio_threadpool::sender::Sender,closure,()>
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-executor-0.1.8\src\global.rs:178
+[INFO] [stderr]   64:     0x7ff78f2bdfbb - tokio_threadpool::worker::{{impl}}::do_run::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:125
+[INFO] [stderr]   65:     0x7ff78f2b549f - std::thread::local::LocalKey<core::cell::Cell<const tokio_threadpool::worker::Worker*>>::try_with<core::cell::Cell<const tokio_threadpool::worker::Worker*>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:257
+[INFO] [stderr]   66:     0x7ff78f2b4c3d - std::thread::local::LocalKey<core::cell::Cell<const tokio_threadpool::worker::Worker*>>::with<core::cell::Cell<const tokio_threadpool::worker::Worker*>,closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\local.rs:234
+[INFO] [stderr]   67:     0x7ff78f2bde04 - tokio_threadpool::worker::Worker::do_run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\worker\mod.rs:116
+[INFO] [stderr]   68:     0x7ff78f2cdaa7 - tokio_threadpool::pool::{{impl}}::spawn_thread::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\tokio-threadpool-0.1.15\src\pool\mod.rs:344
+[INFO] [stderr]   69:     0x7ff78f2c7f91 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]   70:     0x7ff78f2b5ce1 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   71:     0x7ff78f2a8ff1 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   72:     0x7ff78f2a9c54 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout] test nested_enter::threadpool_block_on_in_run ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout] test runtime_multi_threaded::spawn ... ok
+[INFO] [stderr]   73:     0x7ff78f3e5e32 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout] test runtime_multi_threaded::execute ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout] test runtime_single_threaded ... ok
+[INFO] [stderr]   74:     0x7ff78f2a987a - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stdout] test runtime_reactor_handle ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout] test runtime_single_threaded_block_on ... ok
+[INFO] [stderr]   75:     0x7ff78f2a9781 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout] test block_waits ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout] test runtime_single_threaded_block_on_all::execute ... ok
+[INFO] [stderr]   76:     0x7ff78f2b5b33 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stdout] test runtime_single_threaded_block_on_all::spawn ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout] test runtime_single_threaded_racy::execute ... ok
+[INFO] [stderr]   77:     0x7ff78f29ee23 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout] test runtime_single_threaded_racy::spawn ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout] test runtime_tokio_run ... ok
+[INFO] [stderr]   78:     0x7ff78f3cfdb7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout] 
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout] test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stderr]   79:     0x7ff78f3e4a16 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout] 
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout] 
+[INFO] [stderr]   80:     0x7ff78f3e4a16 - std::sys_common::thread::start_thread
+[INFO] [stdout] running 4 tests
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout] test starving ... ok
+[INFO] [stderr]   81:     0x7ff78f3e4a16 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout] test timeout ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout] test deadline ... ok
+[INFO] [stderr]   82:     0x7ff8fa807974 - BaseThreadInitThunk
+[INFO] [stderr]   83:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stderr]      Running C:\crater\target\debug\deps\timer-8e54b7f711eb4bbc.exe
+[INFO] [stderr]    Doc-tests tokio
+[INFO] [stdout] test timer_with_runtime ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 56 tests
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 119) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 17) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 152) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 187) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 232) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 279) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 326) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 42) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited (line 84) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::big_endian (line 656) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::length_adjustment (line 812) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::length_field_length (line 766) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::length_field_offset (line 790) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::little_endian (line 681) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::max_frame_length (line 741) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::native_endian (line 706) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::new (line 611) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::new_framed (line 932) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::new_read (line 882) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::new_codec (line 858) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::new_write (line 908) ... ok
+[INFO] [stdout] test src\codec\length_delimited.rs - codec::length_delimited::Builder::num_skip (line 837) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 29) ... ok
+[INFO] [stdout] test src\executor\current_thread\mod.rs - executor::current_thread (line 21) ... ok
+[INFO] [stdout] test src\executor\mod.rs - executor::spawn (line 97) ... ok
+[INFO] [stdout] test src\executor\current_thread\mod.rs - executor::current_thread (line 49) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 7) ... ok
+[INFO] [stdout] test src\reactor\mod.rs - reactor (line 23) ... ok
+[INFO] [stdout] test src\runtime\current_thread\builder.rs - runtime::current_thread::builder::Builder (line 25) ... ok
+[INFO] [stdout] test src\runtime\current_thread\mod.rs - runtime::current_thread (line 52) ... ok
+[INFO] [stdout] test src\runtime\current_thread\mod.rs - runtime::current_thread (line 26) ... ok
+[INFO] [stdout] test src\runtime\current_thread\runtime.rs - runtime::current_thread::runtime::Runtime::spawn (line 149) ... ok
+[INFO] [stdout] test src\runtime\mod.rs - runtime (line 38) ... ok
+[INFO] [stdout] test src\runtime\mod.rs - runtime (line 71) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder (line 34) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::after_start (line 285) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::before_stop (line 311) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::blocking_threads (line 179) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::core_threads (line 147) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::build (line 337) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::keep_alive (line 209) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::name_prefix (line 236) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::panic_handler (line 117) ... ok
+[INFO] [stdout] test src\runtime\threadpool\builder.rs - runtime::threadpool::builder::Builder::stack_size (line 262) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::executor (line 191) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::new (line 129) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::reactor (line 163) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::shutdown_now (line 362) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::spawn (line 218) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::Runtime::shutdown_on_idle (line 321) ... ok
+[INFO] [stdout] test src\runtime\threadpool\mod.rs - runtime::threadpool::run (line 72) ... ok
+[INFO] [stdout] test src\runtime\threadpool\task_executor.rs - runtime::threadpool::task_executor::TaskExecutor::spawn (line 30) ... ok
+[INFO] [stdout] test src\timer.rs - timer (line 32) ... ok
+[INFO] [stdout] test src\timer.rs - timer (line 54) ... ok
+[INFO] [stdout] test src\util\future.rs - util::future::FutureExt::timeout (line 40) ... ok
+[INFO] [stdout] test src\util\stream.rs - util::stream::StreamExt::timeout (line 65) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 56 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "16e8f82abbca29f93eda6358e413fd5a4cc4c282c7e9b5ab77094f6b6c73a464"`
+[INFO] running `"docker" "rm" "-f" "16e8f82abbca29f93eda6358e413fd5a4cc4c282c7e9b5ab77094f6b6c73a464"`
+[INFO] [stdout] 16e8f82abbca29f93eda6358e413fd5a4cc4c282c7e9b5ab77094f6b6c73a464

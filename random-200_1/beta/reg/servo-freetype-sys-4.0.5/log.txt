@@ -1,0 +1,88 @@
+[INFO] fetching crate servo-freetype-sys 4.0.5...
+[INFO] extracting crate servo-freetype-sys 4.0.5 into work\ex\default\sources\stable\reg\servo-freetype-sys\4.0.5
+[INFO] extracting crate servo-freetype-sys 4.0.5 into work\ex\default\sources\beta\reg\servo-freetype-sys\4.0.5
+[INFO] validating manifest of servo-freetype-sys-4.0.5 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of servo-freetype-sys-4.0.5 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing servo-freetype-sys-4.0.5
+[INFO] finished frobbing servo-freetype-sys-4.0.5
+[INFO] frobbed toml for servo-freetype-sys-4.0.5 written to work\ex\default\sources\stable\reg\servo-freetype-sys\4.0.5\Cargo.toml
+[INFO] started frobbing servo-freetype-sys-4.0.5
+[INFO] finished frobbing servo-freetype-sys-4.0.5
+[INFO] frobbed toml for servo-freetype-sys-4.0.5 written to work\ex\default\sources\beta\reg\servo-freetype-sys\4.0.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing servo-freetype-sys-4.0.5 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\servo-freetype-sys\\4.0.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 8466baff875daf0c36b6fbba7d181d2c6989d85ce92d37a86011380f0f584f51
+[INFO] running `"docker" "start" "-a" "8466baff875daf0c36b6fbba7d181d2c6989d85ce92d37a86011380f0f584f51"`
+[INFO] [stderr]    Compiling cmake v0.1.40
+[INFO] [stderr]    Compiling servo-freetype-sys v4.0.5 (C:\crater\workdir)
+[INFO] [stderr] error: failed to run custom build command for `servo-freetype-sys v4.0.5 (C:\crater\workdir)`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\servo-freetype-sys-25d40b674b8cd3f8\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] running: "cmake" "C:\\crater\\workdir\\freetype2" "-G" "Visual Studio 15 2017" "-Thost=x64" "-Ax64" "-DWITH_BZip2=OFF" "-DWITH_HarfBuzz=OFF" "-DWITH_PNG=OFF" "-DWITH_ZLIB=OFF" "-DCMAKE_INSTALL_PREFIX=C:\\crater\\target\\debug\\build\\servo-freetype-sys-64f467513f4a7ecf\\out" "-DCMAKE_C_FLAGS= /nologo /MD" "-DCMAKE_C_FLAGS_RELEASE= /nologo /MD" "-DCMAKE_CXX_FLAGS= /nologo /MD" "-DCMAKE_CXX_FLAGS_RELEASE= /nologo /MD" "-DCMAKE_BUILD_TYPE=Release"
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at '
+[INFO] [stderr] failed to execute command: The system cannot find the file specified. (os error 2)
+[INFO] [stderr] is `cmake` not installed?
+[INFO] [stderr] 
+[INFO] [stderr] build script failed, must exit now', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\cmake-0.1.40\src\lib.rs:832:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff60eb91cec - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff60eb91cec - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff60eb94fde - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff60eb94fde - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff60eb94c63 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff60eb957e0 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff60eb95314 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff60eb95262 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff60eaf510e - cmake::fail
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\cmake-0.1.40\src\lib.rs:832
+[INFO] [stderr]    9:     0x7ff60eaf48fc - cmake::run
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\cmake-0.1.40\src\lib.rs:802
+[INFO] [stderr]   10:     0x7ff60eaf05d8 - cmake::Config::build
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\cmake-0.1.40\src\lib.rs:648
+[INFO] [stderr]   11:     0x7ff60eab138e - build_script_build::main
+[INFO] [stderr]                                at C:\crater\workdir\build.rs:23
+[INFO] [stderr]   12:     0x7ff60eab1060 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   13:     0x7ff60eb95157 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stderr]   14:     0x7ff60eb95157 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stderr]   15:     0x7ff60eba0502 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   16:     0x7ff60eb95a02 - std::panicking::try
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stderr]   17:     0x7ff60eb95a02 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff60eb95a02 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stderr]   19:     0x7ff60eab103b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\rt.rs:64
+[INFO] [stderr]   20:     0x7ff60eab1780 - main
+[INFO] [stderr]   21:     0x7ff60ebaef60 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   22:     0x7ff60ebaef60 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   23:     0x7ff99ba17974 - BaseThreadInitThunk
+[INFO] [stderr]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] running `"docker" "inspect" "8466baff875daf0c36b6fbba7d181d2c6989d85ce92d37a86011380f0f584f51"`
+[INFO] running `"docker" "rm" "-f" "8466baff875daf0c36b6fbba7d181d2c6989d85ce92d37a86011380f0f584f51"`
+[INFO] [stdout] 8466baff875daf0c36b6fbba7d181d2c6989d85ce92d37a86011380f0f584f51

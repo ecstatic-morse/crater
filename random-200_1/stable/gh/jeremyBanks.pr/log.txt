@@ -1,0 +1,59 @@
+[INFO] cloning repository jeremyBanks/pr
+[INFO] running `"git" "clone" "--bare" "git://github.com/jeremyBanks/pr.git" "work\\cache\\sources\\gh\\jeremyBanks\\pr"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jeremyBanks\pr'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jeremyBanks\\pr" "work\\ex\\default\\sources\\stable\\gh\\jeremyBanks\\pr"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\jeremyBanks\pr'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jeremyBanks\\pr" "work\\ex\\default\\sources\\beta\\gh\\jeremyBanks\\pr"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\jeremyBanks\pr'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 77dea109ee0299b4c8cbd85200b83637f05fcfff
+[INFO] sha for GitHub repo jeremyBanks/pr: 77dea109ee0299b4c8cbd85200b83637f05fcfff
+[INFO] validating manifest of jeremyBanks/pr on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jeremyBanks/pr on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jeremyBanks/pr
+[INFO] finished frobbing jeremyBanks/pr
+[INFO] frobbed toml for jeremyBanks/pr written to work\ex\default\sources\stable\gh\jeremyBanks\pr\Cargo.toml
+[INFO] started frobbing jeremyBanks/pr
+[INFO] finished frobbing jeremyBanks/pr
+[INFO] frobbed toml for jeremyBanks/pr written to work\ex\default\sources\beta\gh\jeremyBanks\pr\Cargo.toml
+[INFO] crate jeremyBanks/pr already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing jeremyBanks/pr against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\jeremyBanks\\pr,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 3d38a13eee2ce2081f594dc038c27e8de9ad584ad5db3d6ffe76e2a9828cdcc6
+[INFO] running `"docker" "start" "-a" "3d38a13eee2ce2081f594dc038c27e8de9ad584ad5db3d6ffe76e2a9828cdcc6"`
+[INFO] [stderr] warning: the cargo feature `edition` is now stable and is no longer necessary to be listed in the manifest
+[INFO] [stderr]    Compiling program v0.0.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `test`
+[INFO] [stderr]  --> src\main.rs:9:5
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use test::{black_box, Bencher};
+[INFO] [stderr]   |     ^^^^ use of undeclared type or module `test`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]  --> src\main.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #![feature(associated_type_defaults)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]  --> src\main.rs:2:1
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | #![feature(test)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 3 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0554.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `program`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "3d38a13eee2ce2081f594dc038c27e8de9ad584ad5db3d6ffe76e2a9828cdcc6"`
+[INFO] running `"docker" "rm" "-f" "3d38a13eee2ce2081f594dc038c27e8de9ad584ad5db3d6ffe76e2a9828cdcc6"`
+[INFO] [stdout] 3d38a13eee2ce2081f594dc038c27e8de9ad584ad5db3d6ffe76e2a9828cdcc6

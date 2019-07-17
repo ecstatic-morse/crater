@@ -1,0 +1,98 @@
+[INFO] fetching crate proc-macro2 0.4.30...
+[INFO] extracting crate proc-macro2 0.4.30 into work\ex\default\sources\stable\reg\proc-macro2\0.4.30
+[INFO] extracting crate proc-macro2 0.4.30 into work\ex\default\sources\beta\reg\proc-macro2\0.4.30
+[INFO] validating manifest of proc-macro2-0.4.30 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of proc-macro2-0.4.30 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing proc-macro2-0.4.30
+[INFO] finished frobbing proc-macro2-0.4.30
+[INFO] frobbed toml for proc-macro2-0.4.30 written to work\ex\default\sources\stable\reg\proc-macro2\0.4.30\Cargo.toml
+[INFO] started frobbing proc-macro2-0.4.30
+[INFO] finished frobbing proc-macro2-0.4.30
+[INFO] frobbed toml for proc-macro2-0.4.30 written to work\ex\default\sources\beta\reg\proc-macro2\0.4.30\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing proc-macro2-0.4.30 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro2\\0.4.30,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] cbd1e7dc853dc3f347a3facf9f584fd9ab3689d4147da5344936b6de3c67265d
+[INFO] running `"docker" "start" "-a" "cbd1e7dc853dc3f347a3facf9f584fd9ab3689d4147da5344936b6de3c67265d"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.72s
+[INFO] running `"docker" "inspect" "cbd1e7dc853dc3f347a3facf9f584fd9ab3689d4147da5344936b6de3c67265d"`
+[INFO] running `"docker" "rm" "-f" "cbd1e7dc853dc3f347a3facf9f584fd9ab3689d4147da5344936b6de3c67265d"`
+[INFO] [stdout] cbd1e7dc853dc3f347a3facf9f584fd9ab3689d4147da5344936b6de3c67265d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro2\\0.4.30,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d3d26e9060789f9dd11990e888dec52af48dbf72a1c9355dc7df742a57684f7f
+[INFO] running `"docker" "start" "-a" "d3d26e9060789f9dd11990e888dec52af48dbf72a1c9355dc7df742a57684f7f"`
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.96s
+[INFO] running `"docker" "inspect" "d3d26e9060789f9dd11990e888dec52af48dbf72a1c9355dc7df742a57684f7f"`
+[INFO] running `"docker" "rm" "-f" "d3d26e9060789f9dd11990e888dec52af48dbf72a1c9355dc7df742a57684f7f"`
+[INFO] [stdout] d3d26e9060789f9dd11990e888dec52af48dbf72a1c9355dc7df742a57684f7f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\proc-macro2\\0.4.30,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 6581f912a84ac5e3f6424deb55bef892be77436342bcc94296e708f43ae8dc6c
+[INFO] running `"docker" "start" "-a" "6581f912a84ac5e3f6424deb55bef892be77436342bcc94296e708f43ae8dc6c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\proc_macro2-6f4bc911145dfb1f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\marker-c8f4ec7508ba665b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test Delimiter ... ok
+[INFO] [stdout] test Group ... ok
+[INFO] [stdout] test Ident ... ok
+[INFO] [stdout] test LexError ... ok
+[INFO] [stdout] test Literal ... ok
+[INFO] [stdout] test Punct ... ok
+[INFO] [stdout] test Spacing ... ok
+[INFO] [stdout] test Span ... ok
+[INFO] [stdout] test TokenStream ... ok
+[INFO] [stdout] test TokenTree ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-61b0e3d2f0baf1d9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test fail ... ok
+[INFO] [stdout] test default_tokenstream_is_empty ... ok
+[INFO] [stdout] test idents ... ok
+[INFO] [stdout] test ident_invalid ... ok
+[INFO] [stdout] test ident_empty ... ok
+[INFO] [stdout] test ident_number ... ok
+[INFO] [stdout] test literal_character ... ok
+[INFO] [stdout] test literal_float ... ok
+[INFO] [stdout] test lifetime_empty ... ok
+[INFO] [stdout] test literal_string ... ok
+[INFO] [stdout] test no_panic ... ok
+[INFO] [stdout] test op_before_comment ... ok
+[INFO] [stdout] test lifetime_invalid ... ok
+[INFO] [stdout] test lifetime_number ... ok
+[INFO] [stdout] test raw_identifier ... ok
+[INFO] [stdout] test roundtrip ... ok
+[INFO] [stdout] test test_debug_ident ... ok
+[INFO] [stdout] test raw_ident_empty ... ok
+[INFO] [stdout] test test_debug_tokenstream ... ok
+[INFO] [stdout] test tricky_doc_comment ... ok
+[INFO] [stdout] test raw_ident_invalid ... ok
+[INFO] [stdout] test raw_ident_number ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests proc-macro2
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6581f912a84ac5e3f6424deb55bef892be77436342bcc94296e708f43ae8dc6c"`
+[INFO] running `"docker" "rm" "-f" "6581f912a84ac5e3f6424deb55bef892be77436342bcc94296e708f43ae8dc6c"`
+[INFO] [stdout] 6581f912a84ac5e3f6424deb55bef892be77436342bcc94296e708f43ae8dc6c

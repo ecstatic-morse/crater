@@ -1,0 +1,219 @@
+[INFO] cloning repository museun/twitchchat
+[INFO] running `"git" "clone" "--bare" "git://github.com/museun/twitchchat.git" "work\\cache\\sources\\gh\\museun\\twitchchat"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\museun\twitchchat'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\museun\\twitchchat" "work\\ex\\default\\sources\\nightly\\gh\\museun\\twitchchat"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\museun\twitchchat'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\museun\\twitchchat" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\museun\\twitchchat"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\museun\twitchchat'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 2bbb77f92b71a4d926a0f0ff80a7729f69443b1d
+[INFO] sha for GitHub repo museun/twitchchat: 2bbb77f92b71a4d926a0f0ff80a7729f69443b1d
+[INFO] validating manifest of museun/twitchchat on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of museun/twitchchat on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing museun/twitchchat
+[INFO] finished frobbing museun/twitchchat
+[INFO] frobbed toml for museun/twitchchat written to work\ex\default\sources\nightly\gh\museun\twitchchat\Cargo.toml
+[INFO] started frobbing museun/twitchchat
+[INFO] finished frobbing museun/twitchchat
+[INFO] frobbed toml for museun/twitchchat written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\museun\twitchchat\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded hashbrown v0.4.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing museun/twitchchat against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\museun\\twitchchat,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ec9c38df561cd14e84588879c1cb97be13b3afea98b95170cf95474886ce2d27
+[INFO] running `"docker" "start" "-a" "ec9c38df561cd14e84588879c1cb97be13b3afea98b95170cf95474886ce2d27"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling semver-parser v0.7.0
+[INFO] [stderr]    Compiling rand_core v0.4.0
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling scopeguard v1.0.0
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling semver v0.9.0
+[INFO] [stderr]    Compiling lock_api v0.2.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rustc_version v0.2.3
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling parking_lot_core v0.5.0
+[INFO] [stderr]    Compiling parking_lot v0.8.0
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling hashbrown v0.4.0
+[INFO] [stderr]    Compiling twitchchat v0.6.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 21s
+[INFO] running `"docker" "inspect" "ec9c38df561cd14e84588879c1cb97be13b3afea98b95170cf95474886ce2d27"`
+[INFO] running `"docker" "rm" "-f" "ec9c38df561cd14e84588879c1cb97be13b3afea98b95170cf95474886ce2d27"`
+[INFO] [stdout] ec9c38df561cd14e84588879c1cb97be13b3afea98b95170cf95474886ce2d27
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\museun\\twitchchat,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2d10cce5038e5d9fd8a9bb6493ed49e1dc50310ccf1717b9ff50ad23e6d38289
+[INFO] running `"docker" "start" "-a" "2d10cce5038e5d9fd8a9bb6493ed49e1dc50310ccf1717b9ff50ad23e6d38289"`
+[INFO] [stderr]    Compiling ryu v1.0.0
+[INFO] [stderr]    Compiling itoa v0.4.4
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling twitchchat v0.6.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 02s
+[INFO] running `"docker" "inspect" "2d10cce5038e5d9fd8a9bb6493ed49e1dc50310ccf1717b9ff50ad23e6d38289"`
+[INFO] running `"docker" "rm" "-f" "2d10cce5038e5d9fd8a9bb6493ed49e1dc50310ccf1717b9ff50ad23e6d38289"`
+[INFO] [stdout] 2d10cce5038e5d9fd8a9bb6493ed49e1dc50310ccf1717b9ff50ad23e6d38289
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\museun\\twitchchat,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 2b79322bded1f4ccd5014905aa9fe15d36f3b1133ea9d7e42065cbf44cff5174
+[INFO] running `"docker" "start" "-a" "2b79322bded1f4ccd5014905aa9fe15d36f3b1133ea9d7e42065cbf44cff5174"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.10s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\twitchchat-ea1df39862d75439.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 59 tests
+[INFO] [stdout] test irc::message::tests::parse_empty_data ... ok
+[INFO] [stdout] test irc::prefix::tests::parse_missing ... ok
+[INFO] [stdout] test irc::prefix::tests::parse_server ... ok
+[INFO] [stdout] test irc::prefix::tests::parse_user ... ok
+[INFO] [stdout] test twitch::channel::tests::bad_channel ... ok
+[INFO] [stdout] test twitch::channel::tests::equals ... ok
+[INFO] [stdout] test twitch::channel::tests::into_channel ... ok
+[INFO] [stdout] test twitch::channel::tests::good_channel ... ok
+[INFO] [stdout] test twitch::color::tests::parse_color ... ok
+[INFO] [stdout] test twitch::color::tests::parse_turbo_color ... ok
+[INFO] [stdout] test twitch::color::tests::round_trip_color ... ok
+[INFO] [stdout] test twitch::color::tests::round_trip_turbo_color ... ok
+[INFO] [stdout] test twitch::commands::tests::parse_bad_auth ... ok
+[INFO] [stdout] test twitch::commands::tests::parse_badge_info ... ok
+[INFO] [stdout] test twitch::commands::tests::parse_commands ... ok
+[INFO] [stdout] test twitch::commands::usernotice::tests::system_msg_unescape ... ok
+[INFO] [stdout] test twitch::emotes::tests::parse_emotes ... ok
+[INFO] [stdout] test twitch::extension::tests::join_many ... ok
+[INFO] [stdout] test twitch::extension::tests::join_many_burst ... FAILED
+[INFO] [stdout] test twitch::userconfig::tests::print_userconfig ... ok
+[INFO] [stdout] test twitch::writer::tests::ban ... ok
+[INFO] [stdout] test twitch::writer::tests::clear ... ok
+[INFO] [stdout] test twitch::writer::tests::color ... ok
+[INFO] [stdout] test twitch::writer::tests::command ... ok
+[INFO] [stdout] test twitch::writer::tests::commercial ... ok
+[INFO] [stdout] test twitch::writer::tests::disconnect ... ok
+[INFO] [stdout] test twitch::writer::tests::emoteonly ... ok
+[INFO] [stdout] test twitch::writer::tests::emoteonlyoff ... ok
+[INFO] [stdout] test twitch::writer::tests::followers ... ok
+[INFO] [stdout] test twitch::writer::tests::followersoff ... ok
+[INFO] [stdout] test twitch::writer::tests::help ... ok
+[INFO] [stdout] test twitch::writer::tests::host ... ok
+[INFO] [stdout] test twitch::writer::tests::join ... ok
+[INFO] [stdout] test twitch::writer::tests::marker ... ok
+[INFO] [stdout] test twitch::writer::tests::me ... ok
+[INFO] [stdout] test twitch::writer::tests::mods ... ok
+[INFO] [stdout] test twitch::writer::tests::op ... ok
+[INFO] [stdout] test twitch::writer::tests::part ... ok
+[INFO] [stdout] test twitch::writer::tests::privmsg ... ok
+[INFO] [stdout] test twitch::writer::tests::r9kbeta ... ok
+[INFO] [stdout] test twitch::writer::tests::r9kbetaoff ... ok
+[INFO] [stdout] test twitch::writer::tests::raid ... ok
+[INFO] [stdout] test twitch::writer::tests::raw ... ok
+[INFO] [stdout] test twitch::writer::tests::send ... ok
+[INFO] [stdout] test twitch::writer::tests::slow ... ok
+[INFO] [stdout] test twitch::writer::tests::slowoff ... ok
+[INFO] [stdout] test twitch::writer::tests::subscribers ... ok
+[INFO] [stdout] test twitch::writer::tests::subscribersoff ... ok
+[INFO] [stdout] test twitch::writer::tests::timeout ... ok
+[INFO] [stdout] test twitch::extension::tests::join_many_limited ... ok
+[INFO] [stdout] test twitch::writer::tests::unban ... ok
+[INFO] [stdout] test twitch::writer::tests::unhost ... ok
+[INFO] [stdout] test twitch::writer::tests::unmod ... ok
+[INFO] [stdout] test twitch::writer::tests::unraid ... ok
+[INFO] [stdout] test twitch::writer::tests::untimeout ... ok
+[INFO] [stdout] test twitch::writer::tests::unvip ... ok
+[INFO] [stdout] test twitch::writer::tests::vip ... ok
+[INFO] [stdout] test twitch::writer::tests::vips ... ok
+[INFO] [stdout] test twitch::writer::tests::whisper ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- twitch::extension::tests::join_many_burst stdout ----
+[INFO] [stdout] thread 'twitch::extension::tests::join_many_burst' panicked at '48.2897ms', src\twitch\extension.rs:218:9
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7596ed0bc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7596ed0bc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7596f063e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7596f063e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7596f024d - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7596f0ed0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7596f0a04 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7596f0952 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:339
+[INFO] [stdout]    8:     0x7ff7595b220c - twitchchat::twitch::extension::tests::join_many_burst
+[INFO] [stdout]                                at C:\crater\workdir\src\twitch\extension.rs:218
+[INFO] [stdout]    9:     0x7ff7595b1b1e - twitchchat::twitch::extension::tests::join_many_burst::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\twitch\extension.rs:192
+[INFO] [stdout]   10:     0x7ff7595a93fb - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff75965d4a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   12:     0x7ff7596f4832 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   13:     0x7ff75967ca68 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   14:     0x7ff75967ca68 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff75967ca68 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   16:     0x7ff75964f35e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   17:     0x7ff7596554fe - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff7596554fe - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff7596554fe - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   20:     0x7ff7596f4832 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   21:     0x7ff759655ba0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   22:     0x7ff759655ba0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff759655ba0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff759655ba0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff7596e1ab7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   26:     0x7ff7596f3546 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   27:     0x7ff7596f3546 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff7596f3546 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ff9993e7974 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     twitch::extension::tests::join_many_burst
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] [stdout] test result: FAILED. 58 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2b79322bded1f4ccd5014905aa9fe15d36f3b1133ea9d7e42065cbf44cff5174"`
+[INFO] running `"docker" "rm" "-f" "2b79322bded1f4ccd5014905aa9fe15d36f3b1133ea9d7e42065cbf44cff5174"`
+[INFO] [stdout] 2b79322bded1f4ccd5014905aa9fe15d36f3b1133ea9d7e42065cbf44cff5174

@@ -1,0 +1,136 @@
+[INFO] cloning repository rafaelklaessen/rust_react
+[INFO] running `"git" "clone" "--bare" "git://github.com/rafaelklaessen/rust_react.git" "work\\cache\\sources\\gh\\rafaelklaessen\\rust_react"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rafaelklaessen\rust_react'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafaelklaessen\\rust_react" "work\\ex\\default\\sources\\stable\\gh\\rafaelklaessen\\rust_react"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\rafaelklaessen\rust_react'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rafaelklaessen\\rust_react" "work\\ex\\default\\sources\\beta\\gh\\rafaelklaessen\\rust_react"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\rafaelklaessen\rust_react'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 845fa8592f7cd74ec35d62f8c90648914d9a2a18
+[INFO] sha for GitHub repo rafaelklaessen/rust_react: 845fa8592f7cd74ec35d62f8c90648914d9a2a18
+[INFO] validating manifest of rafaelklaessen/rust_react on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rafaelklaessen/rust_react on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rafaelklaessen/rust_react
+[INFO] finished frobbing rafaelklaessen/rust_react
+[INFO] frobbed toml for rafaelklaessen/rust_react written to work\ex\default\sources\stable\gh\rafaelklaessen\rust_react\Cargo.toml
+[INFO] started frobbing rafaelklaessen/rust_react
+[INFO] finished frobbing rafaelklaessen/rust_react
+[INFO] frobbed toml for rafaelklaessen/rust_react written to work\ex\default\sources\beta\gh\rafaelklaessen\rust_react\Cargo.toml
+[INFO] crate rafaelklaessen/rust_react already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/iron/mount.git`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded staticfile v0.4.0
+[INFO] [stderr]   Downloaded error v0.1.9
+[INFO] [stderr]   Downloaded matches v0.1.6
+[INFO] [stderr]   Downloaded base64 v0.5.2
+[INFO] [stderr]   Downloaded idna v0.1.4
+[INFO] [stderr]   Downloaded unicode-normalization v0.1.5
+[INFO] [stderr]   Downloaded redox_syscall v0.1.30
+[INFO] [stderr]   Downloaded time v0.1.38
+[INFO] [stderr]   Downloaded mount v0.3.0
+[INFO] [stderr]   Downloaded libc v0.2.29
+[INFO] [stderr]   Downloaded sequence_trie v0.2.1
+[INFO] [stderr]   Downloaded plugin v0.2.6
+[INFO] [stderr]   Downloaded modifier v0.1.0
+[INFO] [stderr]   Downloaded iron v0.5.1
+[INFO] [stderr]   Downloaded num_cpus v1.6.2
+[INFO] [stderr]   Downloaded log v0.3.8
+[INFO] [stderr]   Downloaded hyper v0.10.12
+[INFO] [stderr]   Downloaded typeable v0.1.2
+[INFO] [stderr]   Downloaded mime v0.2.6
+[INFO] [stderr]   Downloaded byteorder v1.1.0
+[INFO] [stderr]   Downloaded version_check v0.1.3
+[INFO] [stderr]   Downloaded conduit-mime-types v0.7.3
+[INFO] [stderr]   Downloaded httparse v1.2.3
+[INFO] [stderr]   Downloaded router v0.5.1
+[INFO] [stderr]   Downloaded route-recognizer v0.1.12
+[INFO] [stderr]   Downloaded url v1.5.1
+[INFO] [stderr]   Downloaded percent-encoding v1.0.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rafaelklaessen/rust_react against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafaelklaessen\\rust_react,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 26325e0541087912fdab70bb2e922898960cf9b6fa91e300c9f2b3a9cd1054a3
+[INFO] running `"docker" "start" "-a" "26325e0541087912fdab70bb2e922898960cf9b6fa91e300c9f2b3a9cd1054a3"`
+[INFO] [stderr]    Compiling matches v0.1.6
+[INFO] [stderr]    Compiling version_check v0.1.3
+[INFO] [stderr]    Compiling traitobject v0.1.0
+[INFO] [stderr]    Compiling winapi v0.2.8
+[INFO] [stderr]    Compiling unicode-normalization v0.1.5
+[INFO] [stderr]    Compiling log v0.3.8
+[INFO] [stderr]    Compiling libc v0.2.29
+[INFO] [stderr]    Compiling percent-encoding v1.0.0
+[INFO] [stderr]    Compiling byteorder v1.1.0
+[INFO] [stderr]    Compiling typeable v0.1.2
+[INFO] [stderr]    Compiling httparse v1.2.3
+[INFO] [stderr]    Compiling language-tags v0.2.2
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling modifier v0.1.0
+[INFO] [stderr]    Compiling lazy_static v0.2.8
+[INFO] [stderr]    Compiling sequence_trie v0.2.1
+[INFO] [stderr]    Compiling route-recognizer v0.1.12
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unsafe-any v0.4.2
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling mime v0.2.6
+[INFO] [stderr]    Compiling num_cpus v1.6.2
+[INFO] [stderr]    Compiling error v0.1.9
+[INFO] [stderr]    Compiling base64 v0.5.2
+[INFO] [stderr]    Compiling typemap v0.3.3
+[INFO] [stderr]    Compiling idna v0.1.4
+[INFO] [stderr]    Compiling conduit-mime-types v0.7.3
+[INFO] [stderr]    Compiling plugin v0.2.6
+[INFO] [stderr]    Compiling url v1.5.1
+[INFO] [stderr] warning[E0713]: borrow may still be in use when destructor runs
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\url-1.5.1\src\form_urlencoded.rs:251:40
+[INFO] [stderr]     |
+[INFO] [stderr] 249 | impl<'a> Target for ::UrlQuery<'a> {
+[INFO] [stderr]     |      -- lifetime `'a` defined here
+[INFO] [stderr] 250 |     fn as_mut_string(&mut self) -> &mut String { &mut self.url.serialization }
+[INFO] [stderr] 251 |     fn finish(self) -> &'a mut ::Url { self.url }
+[INFO] [stderr]     |                                        ^^^^^^^^ - here, drop of `self` needs exclusive access to `*self.url`, because the type `UrlQuery<'_>` implements the `Drop` trait
+[INFO] [stderr]     |                                        |
+[INFO] [stderr]     |                                        returning this value requires that `*self.url` is borrowed for `'a`
+[INFO] [stderr]     |
+[INFO] [stderr]     = warning: this error has been downgraded to a warning for backwards compatibility with previous releases
+[INFO] [stderr]     = warning: this represents potential undefined behavior in your code and this warning will become a hard error in the future
+[INFO] [stderr]     = note: for more information, try `rustc --explain E0729`
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling kernel32-sys v0.2.2
+[INFO] [stderr]    Compiling time v0.1.38
+[INFO] [stderr]    Compiling hyper v0.10.12
+[INFO] [stderr]    Compiling iron v0.5.1
+[INFO] [stderr]    Compiling mount v0.3.0
+[INFO] [stderr]    Compiling router v0.5.1
+[INFO] [stderr]    Compiling mount v0.3.0 (https://github.com/iron/mount.git#2c3d719b)
+[INFO] [stderr]    Compiling staticfile v0.4.0
+[INFO] [stderr]    Compiling rust_react v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3m 38s
+[INFO] running `"docker" "inspect" "26325e0541087912fdab70bb2e922898960cf9b6fa91e300c9f2b3a9cd1054a3"`
+[INFO] running `"docker" "rm" "-f" "26325e0541087912fdab70bb2e922898960cf9b6fa91e300c9f2b3a9cd1054a3"`
+[INFO] [stdout] 26325e0541087912fdab70bb2e922898960cf9b6fa91e300c9f2b3a9cd1054a3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafaelklaessen\\rust_react,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f94fe1be863a7059e759e2ecc4e193f4c0feee1456528eb0d6ecff328ffe7acf
+[INFO] running `"docker" "start" "-a" "f94fe1be863a7059e759e2ecc4e193f4c0feee1456528eb0d6ecff328ffe7acf"`
+[INFO] [stderr]    Compiling rust_react v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.46s
+[INFO] running `"docker" "inspect" "f94fe1be863a7059e759e2ecc4e193f4c0feee1456528eb0d6ecff328ffe7acf"`
+[INFO] running `"docker" "rm" "-f" "f94fe1be863a7059e759e2ecc4e193f4c0feee1456528eb0d6ecff328ffe7acf"`
+[INFO] [stdout] f94fe1be863a7059e759e2ecc4e193f4c0feee1456528eb0d6ecff328ffe7acf
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\rafaelklaessen\\rust_react,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 367a7d83feca4b826e9a61fe3588a6b0be3e4a20bab0336ef0397d79b08b725d
+[INFO] running `"docker" "start" "-a" "367a7d83feca4b826e9a61fe3588a6b0be3e4a20bab0336ef0397d79b08b725d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.67s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_react-1caef5a5e7cf1300.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "367a7d83feca4b826e9a61fe3588a6b0be3e4a20bab0336ef0397d79b08b725d"`
+[INFO] running `"docker" "rm" "-f" "367a7d83feca4b826e9a61fe3588a6b0be3e4a20bab0336ef0397d79b08b725d"`
+[INFO] [stdout] 367a7d83feca4b826e9a61fe3588a6b0be3e4a20bab0336ef0397d79b08b725d

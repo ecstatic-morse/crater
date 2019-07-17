@@ -1,0 +1,57 @@
+[INFO] crate libz-sys 1.0.25 is already in cache
+[INFO] extracting crate libz-sys 1.0.25 into work\ex\default\sources\stable\reg\libz-sys\1.0.25
+[INFO] extracting crate libz-sys 1.0.25 into work\ex\default\sources\beta\reg\libz-sys\1.0.25
+[INFO] validating manifest of libz-sys-1.0.25 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libz-sys-1.0.25 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libz-sys-1.0.25
+[INFO] finished frobbing libz-sys-1.0.25
+[INFO] frobbed toml for libz-sys-1.0.25 written to work\ex\default\sources\stable\reg\libz-sys\1.0.25\Cargo.toml
+[INFO] started frobbing libz-sys-1.0.25
+[INFO] finished frobbing libz-sys-1.0.25
+[INFO] frobbed toml for libz-sys-1.0.25 written to work\ex\default\sources\beta\reg\libz-sys\1.0.25\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libz-sys-1.0.25 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libz-sys\\1.0.25,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 1ea02af8738c734124534ed1d713c97dab0aeacdd60777d970db6d9dd30d482b
+[INFO] running `"docker" "start" "-a" "1ea02af8738c734124534ed1d713c97dab0aeacdd60777d970db6d9dd30d482b"`
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling libz-sys v1.0.25 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.56s
+[INFO] running `"docker" "inspect" "1ea02af8738c734124534ed1d713c97dab0aeacdd60777d970db6d9dd30d482b"`
+[INFO] running `"docker" "rm" "-f" "1ea02af8738c734124534ed1d713c97dab0aeacdd60777d970db6d9dd30d482b"`
+[INFO] [stdout] 1ea02af8738c734124534ed1d713c97dab0aeacdd60777d970db6d9dd30d482b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libz-sys\\1.0.25,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7e88908f80f56b3d22a9a9fe0ad2bf55a4949b5ad991feaf4d931dd4147ff347
+[INFO] running `"docker" "start" "-a" "7e88908f80f56b3d22a9a9fe0ad2bf55a4949b5ad991feaf4d931dd4147ff347"`
+[INFO] [stderr]    Compiling libz-sys v1.0.25 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.11s
+[INFO] running `"docker" "inspect" "7e88908f80f56b3d22a9a9fe0ad2bf55a4949b5ad991feaf4d931dd4147ff347"`
+[INFO] running `"docker" "rm" "-f" "7e88908f80f56b3d22a9a9fe0ad2bf55a4949b5ad991feaf4d931dd4147ff347"`
+[INFO] [stdout] 7e88908f80f56b3d22a9a9fe0ad2bf55a4949b5ad991feaf4d931dd4147ff347
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libz-sys\\1.0.25,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] aedde46e55f239ebced26107c82a66cd1f5df71a2a2965f7a8bb6791b27d23db
+[INFO] running `"docker" "start" "-a" "aedde46e55f239ebced26107c82a66cd1f5df71a2a2965f7a8bb6791b27d23db"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\libz_sys-57c57af85356d872.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests libz-sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "aedde46e55f239ebced26107c82a66cd1f5df71a2a2965f7a8bb6791b27d23db"`
+[INFO] running `"docker" "rm" "-f" "aedde46e55f239ebced26107c82a66cd1f5df71a2a2965f7a8bb6791b27d23db"`
+[INFO] [stdout] aedde46e55f239ebced26107c82a66cd1f5df71a2a2965f7a8bb6791b27d23db

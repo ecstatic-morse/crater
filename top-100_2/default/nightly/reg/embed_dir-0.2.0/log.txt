@@ -1,0 +1,47 @@
+[INFO] fetching crate embed_dir 0.2.0...
+[INFO] extracting crate embed_dir 0.2.0 into work\ex\default\sources\nightly\reg\embed_dir\0.2.0
+[INFO] extracting crate embed_dir 0.2.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\embed_dir\0.2.0
+[INFO] validating manifest of embed_dir-0.2.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of embed_dir-0.2.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing embed_dir-0.2.0
+[INFO] finished frobbing embed_dir-0.2.0
+[INFO] frobbed toml for embed_dir-0.2.0 written to work\ex\default\sources\nightly\reg\embed_dir\0.2.0\Cargo.toml
+[INFO] started frobbing embed_dir-0.2.0
+[INFO] finished frobbing embed_dir-0.2.0
+[INFO] frobbed toml for embed_dir-0.2.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\embed_dir\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing embed_dir-0.2.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\embed_dir\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 359237a65eef7aaa6e34e442b85a1f9a467d4191684790b2b57ef6bb5fae1d3c
+[INFO] running `"docker" "start" "-a" "359237a65eef7aaa6e34e442b85a1f9a467d4191684790b2b57ef6bb5fae1d3c"`
+[INFO] [stderr]    Compiling embed_dir v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.22s
+[INFO] running `"docker" "inspect" "359237a65eef7aaa6e34e442b85a1f9a467d4191684790b2b57ef6bb5fae1d3c"`
+[INFO] running `"docker" "rm" "-f" "359237a65eef7aaa6e34e442b85a1f9a467d4191684790b2b57ef6bb5fae1d3c"`
+[INFO] [stdout] 359237a65eef7aaa6e34e442b85a1f9a467d4191684790b2b57ef6bb5fae1d3c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\embed_dir\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 54de09bdfbaa4e9cdd634b07086201adbb64b95b6f0b9b1afef269efc80e0136
+[INFO] running `"docker" "start" "-a" "54de09bdfbaa4e9cdd634b07086201adbb64b95b6f0b9b1afef269efc80e0136"`
+[INFO] [stderr]    Compiling embed_dir v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.50s
+[INFO] running `"docker" "inspect" "54de09bdfbaa4e9cdd634b07086201adbb64b95b6f0b9b1afef269efc80e0136"`
+[INFO] running `"docker" "rm" "-f" "54de09bdfbaa4e9cdd634b07086201adbb64b95b6f0b9b1afef269efc80e0136"`
+[INFO] [stdout] 54de09bdfbaa4e9cdd634b07086201adbb64b95b6f0b9b1afef269efc80e0136
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\embed_dir\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 921c08a0a0c33e1ee9f71e47136d53a0d822fec3f8a3173c84829876c089f7bb
+[INFO] running `"docker" "start" "-a" "921c08a0a0c33e1ee9f71e47136d53a0d822fec3f8a3173c84829876c089f7bb"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\embed_dir-1f505b37d41b616b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "921c08a0a0c33e1ee9f71e47136d53a0d822fec3f8a3173c84829876c089f7bb"`
+[INFO] running `"docker" "rm" "-f" "921c08a0a0c33e1ee9f71e47136d53a0d822fec3f8a3173c84829876c089f7bb"`
+[INFO] [stdout] 921c08a0a0c33e1ee9f71e47136d53a0d822fec3f8a3173c84829876c089f7bb

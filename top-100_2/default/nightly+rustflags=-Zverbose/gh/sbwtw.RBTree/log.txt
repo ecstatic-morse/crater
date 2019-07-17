@@ -1,0 +1,58 @@
+[INFO] cloning repository sbwtw/RBTree
+[INFO] running `"git" "clone" "--bare" "git://github.com/sbwtw/RBTree.git" "work\\cache\\sources\\gh\\sbwtw\\RBTree"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\sbwtw\RBTree'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sbwtw\\RBTree" "work\\ex\\default\\sources\\nightly\\gh\\sbwtw\\RBTree"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\sbwtw\RBTree'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sbwtw\\RBTree" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sbwtw\\RBTree"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sbwtw\RBTree'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ab8c988a7cb8a70dbbae4e8589e805bafdfc2f49
+[INFO] sha for GitHub repo sbwtw/RBTree: ab8c988a7cb8a70dbbae4e8589e805bafdfc2f49
+[INFO] validating manifest of sbwtw/RBTree on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sbwtw/RBTree on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sbwtw/RBTree
+[INFO] finished frobbing sbwtw/RBTree
+[INFO] frobbed toml for sbwtw/RBTree written to work\ex\default\sources\nightly\gh\sbwtw\RBTree\Cargo.toml
+[INFO] started frobbing sbwtw/RBTree
+[INFO] finished frobbing sbwtw/RBTree
+[INFO] frobbed toml for sbwtw/RBTree written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sbwtw\RBTree\Cargo.toml
+[INFO] crate sbwtw/RBTree already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing sbwtw/RBTree against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sbwtw\\RBTree,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 36e74338d2a80c98f9a8b605bb68cd04a47c3f71cfa2d20f6570126b0a151a88
+[INFO] running `"docker" "start" "-a" "36e74338d2a80c98f9a8b605bb68cd04a47c3f71cfa2d20f6570126b0a151a88"`
+[INFO] [stderr]    Compiling rbtree v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.03s
+[INFO] running `"docker" "inspect" "36e74338d2a80c98f9a8b605bb68cd04a47c3f71cfa2d20f6570126b0a151a88"`
+[INFO] running `"docker" "rm" "-f" "36e74338d2a80c98f9a8b605bb68cd04a47c3f71cfa2d20f6570126b0a151a88"`
+[INFO] [stdout] 36e74338d2a80c98f9a8b605bb68cd04a47c3f71cfa2d20f6570126b0a151a88
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sbwtw\\RBTree,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 95a6aba8e1e11bcf948f666d608abd7780e27850b25e837f187d7be0db218bb4
+[INFO] running `"docker" "start" "-a" "95a6aba8e1e11bcf948f666d608abd7780e27850b25e837f187d7be0db218bb4"`
+[INFO] [stderr]    Compiling rbtree v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.57s
+[INFO] running `"docker" "inspect" "95a6aba8e1e11bcf948f666d608abd7780e27850b25e837f187d7be0db218bb4"`
+[INFO] running `"docker" "rm" "-f" "95a6aba8e1e11bcf948f666d608abd7780e27850b25e837f187d7be0db218bb4"`
+[INFO] [stdout] 95a6aba8e1e11bcf948f666d608abd7780e27850b25e837f187d7be0db218bb4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sbwtw\\RBTree,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 466bcc779a73750947d7d2b4a7d7a3ce06bc74d3ea842eebf63c3d64c5a8a11f
+[INFO] running `"docker" "start" "-a" "466bcc779a73750947d7d2b4a7d7a3ce06bc74d3ea842eebf63c3d64c5a8a11f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.23s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rbtree-a74fadcb343f8042.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "466bcc779a73750947d7d2b4a7d7a3ce06bc74d3ea842eebf63c3d64c5a8a11f"`
+[INFO] running `"docker" "rm" "-f" "466bcc779a73750947d7d2b4a7d7a3ce06bc74d3ea842eebf63c3d64c5a8a11f"`
+[INFO] [stdout] 466bcc779a73750947d7d2b4a7d7a3ce06bc74d3ea842eebf63c3d64c5a8a11f

@@ -1,0 +1,59 @@
+[INFO] fetching crate zipkin-types 0.1.0...
+[INFO] extracting crate zipkin-types 0.1.0 into work\ex\default\sources\stable\reg\zipkin-types\0.1.0
+[INFO] extracting crate zipkin-types 0.1.0 into work\ex\default\sources\beta\reg\zipkin-types\0.1.0
+[INFO] validating manifest of zipkin-types-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of zipkin-types-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing zipkin-types-0.1.0
+[INFO] finished frobbing zipkin-types-0.1.0
+[INFO] frobbed toml for zipkin-types-0.1.0 written to work\ex\default\sources\stable\reg\zipkin-types\0.1.0\Cargo.toml
+[INFO] started frobbing zipkin-types-0.1.0
+[INFO] finished frobbing zipkin-types-0.1.0
+[INFO] frobbed toml for zipkin-types-0.1.0 written to work\ex\default\sources\beta\reg\zipkin-types\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded data-encoding v2.1.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing zipkin-types-0.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\zipkin-types\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 06710108461ba2711c5d4cd9c6704d92ce02ba5d704fcd9c28e9defe48dd1b35
+[INFO] running `"docker" "start" "-a" "06710108461ba2711c5d4cd9c6704d92ce02ba5d704fcd9c28e9defe48dd1b35"`
+[INFO] [stderr]    Compiling data-encoding v2.1.2
+[INFO] [stderr]    Compiling zipkin-types v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.81s
+[INFO] running `"docker" "inspect" "06710108461ba2711c5d4cd9c6704d92ce02ba5d704fcd9c28e9defe48dd1b35"`
+[INFO] running `"docker" "rm" "-f" "06710108461ba2711c5d4cd9c6704d92ce02ba5d704fcd9c28e9defe48dd1b35"`
+[INFO] [stdout] 06710108461ba2711c5d4cd9c6704d92ce02ba5d704fcd9c28e9defe48dd1b35
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\zipkin-types\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7e12610df46ee0361298dc482756fda90f0e92044dfc9da8afbd2bace8842c26
+[INFO] running `"docker" "start" "-a" "7e12610df46ee0361298dc482756fda90f0e92044dfc9da8afbd2bace8842c26"`
+[INFO] [stderr]    Compiling zipkin-types v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.38s
+[INFO] running `"docker" "inspect" "7e12610df46ee0361298dc482756fda90f0e92044dfc9da8afbd2bace8842c26"`
+[INFO] running `"docker" "rm" "-f" "7e12610df46ee0361298dc482756fda90f0e92044dfc9da8afbd2bace8842c26"`
+[INFO] [stdout] 7e12610df46ee0361298dc482756fda90f0e92044dfc9da8afbd2bace8842c26
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\zipkin-types\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 3300bd92b51b273ab558913edcb623bd0c04aec50154b1e0358c11fcdccd22f8
+[INFO] running `"docker" "start" "-a" "3300bd92b51b273ab558913edcb623bd0c04aec50154b1e0358c11fcdccd22f8"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\zipkin_types-370f1e9bb21af1bf.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests zipkin-types
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3300bd92b51b273ab558913edcb623bd0c04aec50154b1e0358c11fcdccd22f8"`
+[INFO] running `"docker" "rm" "-f" "3300bd92b51b273ab558913edcb623bd0c04aec50154b1e0358c11fcdccd22f8"`
+[INFO] [stdout] 3300bd92b51b273ab558913edcb623bd0c04aec50154b1e0358c11fcdccd22f8

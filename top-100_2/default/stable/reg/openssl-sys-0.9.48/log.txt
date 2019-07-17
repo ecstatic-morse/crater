@@ -1,0 +1,60 @@
+[INFO] crate openssl-sys 0.9.48 is already in cache
+[INFO] extracting crate openssl-sys 0.9.48 into work\ex\default\sources\stable\reg\openssl-sys\0.9.48
+[INFO] extracting crate openssl-sys 0.9.48 into work\ex\default\sources\beta\reg\openssl-sys\0.9.48
+[INFO] validating manifest of openssl-sys-0.9.48 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of openssl-sys-0.9.48 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing openssl-sys-0.9.48
+[INFO] finished frobbing openssl-sys-0.9.48
+[INFO] frobbed toml for openssl-sys-0.9.48 written to work\ex\default\sources\stable\reg\openssl-sys\0.9.48\Cargo.toml
+[INFO] started frobbing openssl-sys-0.9.48
+[INFO] finished frobbing openssl-sys-0.9.48
+[INFO] frobbed toml for openssl-sys-0.9.48 written to work\ex\default\sources\beta\reg\openssl-sys\0.9.48\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing openssl-sys-0.9.48 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl-sys\\0.9.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 7db5a26a3ba626d179d9a8b23dcc8b92dc04acff8b1d00f095c99c777ff68888
+[INFO] running `"docker" "start" "-a" "7db5a26a3ba626d179d9a8b23dcc8b92dc04acff8b1d00f095c99c777ff68888"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling openssl-sys v0.9.48 (C:\crater\workdir)
+[INFO] [stderr] warning: expando.c
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 21.79s
+[INFO] running `"docker" "inspect" "7db5a26a3ba626d179d9a8b23dcc8b92dc04acff8b1d00f095c99c777ff68888"`
+[INFO] running `"docker" "rm" "-f" "7db5a26a3ba626d179d9a8b23dcc8b92dc04acff8b1d00f095c99c777ff68888"`
+[INFO] [stdout] 7db5a26a3ba626d179d9a8b23dcc8b92dc04acff8b1d00f095c99c777ff68888
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl-sys\\0.9.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ffc48517365600f64589c822c88a1d73a2fec6fa490c70a3e2fded13738adaa3
+[INFO] running `"docker" "start" "-a" "ffc48517365600f64589c822c88a1d73a2fec6fa490c70a3e2fded13738adaa3"`
+[INFO] [stderr] warning: expando.c
+[INFO] [stderr]    Compiling openssl-sys v0.9.48 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.41s
+[INFO] running `"docker" "inspect" "ffc48517365600f64589c822c88a1d73a2fec6fa490c70a3e2fded13738adaa3"`
+[INFO] running `"docker" "rm" "-f" "ffc48517365600f64589c822c88a1d73a2fec6fa490c70a3e2fded13738adaa3"`
+[INFO] [stdout] ffc48517365600f64589c822c88a1d73a2fec6fa490c70a3e2fded13738adaa3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\openssl-sys\\0.9.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 38db3d592d167d1cc212ee0c0560cd6a8a35ec5db16d80d9a0136633f9460dff
+[INFO] running `"docker" "start" "-a" "38db3d592d167d1cc212ee0c0560cd6a8a35ec5db16d80d9a0136633f9460dff"`
+[INFO] [stderr] warning: expando.c
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.46s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\openssl_sys-6fde73757ecab6c7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests openssl-sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "38db3d592d167d1cc212ee0c0560cd6a8a35ec5db16d80d9a0136633f9460dff"`
+[INFO] running `"docker" "rm" "-f" "38db3d592d167d1cc212ee0c0560cd6a8a35ec5db16d80d9a0136633f9460dff"`
+[INFO] [stdout] 38db3d592d167d1cc212ee0c0560cd6a8a35ec5db16d80d9a0136633f9460dff

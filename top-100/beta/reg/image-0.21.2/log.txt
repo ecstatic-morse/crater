@@ -1,0 +1,501 @@
+[INFO] fetching crate image 0.21.2...
+[INFO] extracting crate image 0.21.2 into work\ex\default\sources\stable\reg\image\0.21.2
+[INFO] extracting crate image 0.21.2 into work\ex\default\sources\beta\reg\image\0.21.2
+[INFO] validating manifest of image-0.21.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of image-0.21.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing image-0.21.2
+[INFO] finished frobbing image-0.21.2
+[INFO] frobbed toml for image-0.21.2 written to work\ex\default\sources\stable\reg\image\0.21.2\Cargo.toml
+[INFO] started frobbing image-0.21.2
+[INFO] finished frobbing image-0.21.2
+[INFO] frobbed toml for image-0.21.2 written to work\ex\default\sources\beta\reg\image\0.21.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tiff v0.2.2
+[INFO] [stderr]   Downloaded png v0.14.1
+[INFO] [stderr]   Downloaded deflate v0.7.20
+[INFO] [stderr]   Downloaded quickcheck v0.6.2
+[INFO] [stderr]   Downloaded gif v0.10.2
+[INFO] [stderr]   Downloaded num-derive v0.2.5
+[INFO] [stderr]   Downloaded jpeg-decoder v0.1.15
+[INFO] [stderr]   Downloaded color_quant v1.0.1
+[INFO] [stderr]   Downloaded inflate v0.4.5
+[INFO] [stderr]   Downloaded lzw v0.10.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing image-0.21.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\image\\0.21.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] f6be83d9449f1ebe132ac4341d758d8af938c4fe5a11e6db7a25c1591a2cee87
+[INFO] running `"docker" "start" "-a" "f6be83d9449f1ebe132ac4341d758d8af938c4fe5a11e6db7a25c1591a2cee87"`
+[INFO] [stderr]    Compiling rayon-core v1.5.0
+[INFO] [stderr]    Compiling num-derive v0.2.5
+[INFO] [stderr]    Compiling adler32 v1.0.3
+[INFO] [stderr]    Compiling lzw v0.10.0
+[INFO] [stderr]    Compiling color_quant v1.0.1
+[INFO] [stderr]    Compiling scoped_threadpool v0.1.9
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling num-rational v0.2.2
+[INFO] [stderr]    Compiling inflate v0.4.5
+[INFO] [stderr]    Compiling gif v0.10.2
+[INFO] [stderr]    Compiling deflate v0.7.20
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling png v0.14.1
+[INFO] [stderr]    Compiling rayon v1.1.0
+[INFO] [stderr]    Compiling tiff v0.2.2
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling image v0.21.2 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\imageops\sample.rs:37:21
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |     pub kernel: Box<Fn(f32) -> f32 + 'a>,
+[INFO] [stderr]    |                     ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(f32) -> f32 + 'a`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\pnm\decoder.rs:30:32
+[INFO] [stderr]    |
+[INFO] [stderr] 30 |     fn from_ascii(reader: &mut Read, width: u32, height: u32, samples: u32)
+[INFO] [stderr]    |                                ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:485:50
+[INFO] [stderr]     |
+[INFO] [stderr] 485 | fn read_separated_ascii<T: FromStr>(reader: &mut Read) -> ImageResult<T>
+[INFO] [stderr]     |                                                  ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:532:22
+[INFO] [stderr]     |
+[INFO] [stderr] 532 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:565:22
+[INFO] [stderr]     |
+[INFO] [stderr] 565 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:599:22
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:653:23
+[INFO] [stderr]     |
+[INFO] [stderr] 653 |         _reader: &mut Read,
+[INFO] [stderr]     |                       ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:173:34
+[INFO] [stderr]     |
+[INFO] [stderr] 173 |             ColorType::Gray(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::Grayscale),
+[INFO] [stderr]     |                                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:174:35
+[INFO] [stderr]     |
+[INFO] [stderr] 174 |             ColorType::GrayA(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::GrayscaleAlpha),
+[INFO] [stderr]     |                                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:175:33
+[INFO] [stderr]     |
+[INFO] [stderr] 175 |             ColorType::RGB(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::RGB),
+[INFO] [stderr]     |                                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:176:34
+[INFO] [stderr]     |
+[INFO] [stderr] 176 |             ColorType::RGBA(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::RGBAlpha),
+[INFO] [stderr]     |                                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:254:22
+[INFO] [stderr]     |
+[INFO] [stderr] 254 |         writer: &mut Write,
+[INFO] [stderr]     |                      ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:475:40
+[INFO] [stderr]     |
+[INFO] [stderr] 475 |     fn write_header(self, writer: &mut Write) -> io::Result<TupleEncoding<'a>> {
+[INFO] [stderr]     |                                        ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:485:33
+[INFO] [stderr]     |
+[INFO] [stderr] 485 | struct SampleWriter<'a>(&'a mut Write);
+[INFO] [stderr]     |                                 ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:599:40
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |     fn write_image(&self, writer: &mut Write) -> io::Result<()> {
+[INFO] [stderr]     |                                        ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\header.rs:235:38
+[INFO] [stderr]     |
+[INFO] [stderr] 235 |     pub fn write(&self, writer: &mut io::Write) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^ help: use `dyn`: `dyn io::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\tga\decoder.rs:104:28
+[INFO] [stderr]     |
+[INFO] [stderr] 104 |     fn from_reader(r: &mut Read) -> ImageResult<Header> {
+[INFO] [stderr]     |                            ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\tga\decoder.rs:131:17
+[INFO] [stderr]     |
+[INFO] [stderr] 131 |         r: &mut Read,
+[INFO] [stderr]     |                 ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\webp\vp8.rs:1366:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1366 |                 literal @ DCT_1...DCT_4 => i16::from(literal),
+[INFO] [stderr]      |                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\webp\vp8.rs:1368:36
+[INFO] [stderr]      |
+[INFO] [stderr] 1368 |                 category @ DCT_CAT1...DCT_CAT6 => {
+[INFO] [stderr]      |                                    ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\animation.rs:10:19
+[INFO] [stderr]    |
+[INFO] [stderr] 10 |     iterator: Box<Iterator<Item = ImageResult<Frame>> + 'a>
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item = ImageResult<Frame>> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\animation.rs:15:30
+[INFO] [stderr]    |
+[INFO] [stderr] 15 |     pub fn new(iterator: Box<Iterator<Item = ImageResult<Frame>> + 'a>) -> Self {
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item = ImageResult<Frame>> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\image.rs:93:32
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     fn cause(&self) -> Option<&Error> {
+[INFO] [stderr]    |                                ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]    --> src\gif.rs:197:17
+[INFO] [stderr]     |
+[INFO] [stderr] 197 |             let mut adjusted_pixel: &mut Rgba<u8> = pixel;
+[INFO] [stderr]     |                 ----^^^^^^^^^^^^^^
+[INFO] [stderr]     |                 |
+[INFO] [stderr]     |                 help: remove this `mut`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 33s
+[INFO] running `"docker" "inspect" "f6be83d9449f1ebe132ac4341d758d8af938c4fe5a11e6db7a25c1591a2cee87"`
+[INFO] running `"docker" "rm" "-f" "f6be83d9449f1ebe132ac4341d758d8af938c4fe5a11e6db7a25c1591a2cee87"`
+[INFO] [stdout] f6be83d9449f1ebe132ac4341d758d8af938c4fe5a11e6db7a25c1591a2cee87
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\image\\0.21.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 37fd0fa0751aecb2c8ca7de6973c49d1f8987d7a1edd51242c1efa95708cf24d
+[INFO] running `"docker" "start" "-a" "37fd0fa0751aecb2c8ca7de6973c49d1f8987d7a1edd51242c1efa95708cf24d"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling glob v0.2.11
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling num-complex v0.2.3
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling env_logger v0.5.13
+[INFO] [stderr]    Compiling quickcheck v0.6.2
+[INFO] [stderr]    Compiling image v0.21.2 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\imageops\sample.rs:37:21
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |     pub kernel: Box<Fn(f32) -> f32 + 'a>,
+[INFO] [stderr]    |                     ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Fn(f32) -> f32 + 'a`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\pnm\decoder.rs:30:32
+[INFO] [stderr]    |
+[INFO] [stderr] 30 |     fn from_ascii(reader: &mut Read, width: u32, height: u32, samples: u32)
+[INFO] [stderr]    |                                ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:485:50
+[INFO] [stderr]     |
+[INFO] [stderr] 485 | fn read_separated_ascii<T: FromStr>(reader: &mut Read) -> ImageResult<T>
+[INFO] [stderr]     |                                                  ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:532:22
+[INFO] [stderr]     |
+[INFO] [stderr] 532 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:565:22
+[INFO] [stderr]     |
+[INFO] [stderr] 565 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:599:22
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |         reader: &mut Read,
+[INFO] [stderr]     |                      ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\decoder.rs:653:23
+[INFO] [stderr]     |
+[INFO] [stderr] 653 |         _reader: &mut Read,
+[INFO] [stderr]     |                       ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:173:34
+[INFO] [stderr]     |
+[INFO] [stderr] 173 |             ColorType::Gray(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::Grayscale),
+[INFO] [stderr]     |                                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:174:35
+[INFO] [stderr]     |
+[INFO] [stderr] 174 |             ColorType::GrayA(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::GrayscaleAlpha),
+[INFO] [stderr]     |                                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:175:33
+[INFO] [stderr]     |
+[INFO] [stderr] 175 |             ColorType::RGB(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::RGB),
+[INFO] [stderr]     |                                 ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:176:34
+[INFO] [stderr]     |
+[INFO] [stderr] 176 |             ColorType::RGBA(n @ 1...16) => ((1 << n) - 1, ArbitraryTuplType::RGBAlpha),
+[INFO] [stderr]     |                                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:254:22
+[INFO] [stderr]     |
+[INFO] [stderr] 254 |         writer: &mut Write,
+[INFO] [stderr]     |                      ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:475:40
+[INFO] [stderr]     |
+[INFO] [stderr] 475 |     fn write_header(self, writer: &mut Write) -> io::Result<TupleEncoding<'a>> {
+[INFO] [stderr]     |                                        ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:485:33
+[INFO] [stderr]     |
+[INFO] [stderr] 485 | struct SampleWriter<'a>(&'a mut Write);
+[INFO] [stderr]     |                                 ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\encoder.rs:599:40
+[INFO] [stderr]     |
+[INFO] [stderr] 599 |     fn write_image(&self, writer: &mut Write) -> io::Result<()> {
+[INFO] [stderr]     |                                        ^^^^^ help: use `dyn`: `dyn Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\pnm\header.rs:235:38
+[INFO] [stderr]     |
+[INFO] [stderr] 235 |     pub fn write(&self, writer: &mut io::Write) -> io::Result<()> {
+[INFO] [stderr]     |                                      ^^^^^^^^^ help: use `dyn`: `dyn io::Write`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\tga\decoder.rs:104:28
+[INFO] [stderr]     |
+[INFO] [stderr] 104 |     fn from_reader(r: &mut Read) -> ImageResult<Header> {
+[INFO] [stderr]     |                            ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\tga\decoder.rs:131:17
+[INFO] [stderr]     |
+[INFO] [stderr] 131 |         r: &mut Read,
+[INFO] [stderr]     |                 ^^^^ help: use `dyn`: `dyn Read`
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\webp\vp8.rs:1366:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1366 |                 literal @ DCT_1...DCT_4 => i16::from(literal),
+[INFO] [stderr]      |                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]     --> src\webp\vp8.rs:1368:36
+[INFO] [stderr]      |
+[INFO] [stderr] 1368 |                 category @ DCT_CAT1...DCT_CAT6 => {
+[INFO] [stderr]      |                                    ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\animation.rs:10:19
+[INFO] [stderr]    |
+[INFO] [stderr] 10 |     iterator: Box<Iterator<Item = ImageResult<Frame>> + 'a>
+[INFO] [stderr]    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item = ImageResult<Frame>> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\animation.rs:15:30
+[INFO] [stderr]    |
+[INFO] [stderr] 15 |     pub fn new(iterator: Box<Iterator<Item = ImageResult<Frame>> + 'a>) -> Self {
+[INFO] [stderr]    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Iterator<Item = ImageResult<Frame>> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\image.rs:93:32
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     fn cause(&self) -> Option<&Error> {
+[INFO] [stderr]    |                                ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\image.rs:918:31
+[INFO] [stderr]     |
+[INFO] [stderr] 918 |             type Reader = Box<::std::io::Read>;
+[INFO] [stderr]     |                               ^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::io::Read)`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]    --> src\gif.rs:197:17
+[INFO] [stderr]     |
+[INFO] [stderr] 197 |             let mut adjusted_pixel: &mut Rgba<u8> = pixel;
+[INFO] [stderr]     |                 ----^^^^^^^^^^^^^^
+[INFO] [stderr]     |                 |
+[INFO] [stderr]     |                 help: remove this `mut`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\pnm\mod.rs:37:17
+[INFO] [stderr]    |
+[INFO] [stderr] 37 |             let mut decoder = PNMDecoder::new(&encoded_buffer[..]).unwrap();
+[INFO] [stderr]    |                 ----^^^^^^^
+[INFO] [stderr]    |                 |
+[INFO] [stderr]    |                 help: remove this `mut`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\pnm\mod.rs:67:17
+[INFO] [stderr]    |
+[INFO] [stderr] 67 |             let mut decoder = PNMDecoder::new(&encoded_buffer[..]).unwrap();
+[INFO] [stderr]    |                 ----^^^^^^^
+[INFO] [stderr]    |                 |
+[INFO] [stderr]    |                 help: remove this `mut`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\pnm\mod.rs:92:17
+[INFO] [stderr]    |
+[INFO] [stderr] 92 |             let mut decoder = PNMDecoder::new(&encoded_buffer[..]).unwrap();
+[INFO] [stderr]    |                 ----^^^^^^^
+[INFO] [stderr]    |                 |
+[INFO] [stderr]    |                 help: remove this `mut`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 19s
+[INFO] running `"docker" "inspect" "37fd0fa0751aecb2c8ca7de6973c49d1f8987d7a1edd51242c1efa95708cf24d"`
+[INFO] running `"docker" "rm" "-f" "37fd0fa0751aecb2c8ca7de6973c49d1f8987d7a1edd51242c1efa95708cf24d"`
+[INFO] [stdout] 37fd0fa0751aecb2c8ca7de6973c49d1f8987d7a1edd51242c1efa95708cf24d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\image\\0.21.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 307bd2a09737f7f74920e1c4c10550ccff58e319c6692228724dfbba6d66e690
+[INFO] running `"docker" "start" "-a" "307bd2a09737f7f74920e1c4c10550ccff58e319c6692228724dfbba6d66e690"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.04s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\image-13f30e7374f838fb.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 66 tests
+[INFO] [stdout] test bmp::decoder::test::test_bitfield_len ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_3px_rgb ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_gray ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_graya ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_single_pixel_rgb ... ok
+[INFO] [stdout] test bmp::encoder::tests::round_trip_single_pixel_rgba ... ok
+[INFO] [stdout] test buffer::test::slice_buffer ... ok
+[INFO] [stdout] test buffer::test::test_get_pixel ... ok
+[INFO] [stdout] test buffer::test::test_mut_iter ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_rgb ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_apply_with_alpha_rgba ... ok
+[INFO] [stdout] test color::tests::test_blend_luma_alpha ... ok
+[INFO] [stdout] test color::tests::test_blend_rgba ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_bgr ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_bgra ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_rgb ... ok
+[INFO] [stdout] test dynimage::test::gray_to_luma8_skip ... ok
+[INFO] [stdout] test color::tests::test_map_with_alpha_rgba ... ok
+[INFO] [stdout] test dynimage::test::resize_handles_fill ... ok
+[INFO] [stdout] test dynimage::test::resize_handles_overflow ... ok
+[INFO] [stdout] test dynimage::test::resize_bounds_correctly_height ... ok
+[INFO] [stdout] test dynimage::test::resize_bounds_correctly_width ... ok
+[INFO] [stdout] test dynimage::test::test_empty_file ... ok
+[INFO] [stdout] test flat::tests::aliasing_view ... ok
+[INFO] [stdout] test flat::tests::image_buffer_conversion ... ok
+[INFO] [stdout] test flat::tests::mutable_view ... ok
+[INFO] [stdout] test flat::tests::normal_forms ... ok
+[INFO] [stdout] test hdr::decoder::read_line_u8_test ... ok
+[INFO] [stdout] test hdr::decoder::split_at_first_test ... ok
+[INFO] [stdout] test hdr::encoder::noruncombine_test ... ok
+[INFO] [stdout] test hdr::encoder::runiterator_test ... ok
+[INFO] [stdout] test hdr::encoder::to_rgbe8_test ... ok
+[INFO] [stdout] test image::tests::test_can_nest_views ... ok
+[INFO] [stdout] test image::tests::test_can_subimage_clone_nonmut ... ok
+[INFO] [stdout] test image::tests::test_image_alpha_blending ... ok
+[INFO] [stdout] test image::tests::test_in_bounds ... ok
+[INFO] [stdout] test image::tests::test_load_rect ... ok
+[INFO] [stdout] test imageops::affine::test::test_flip_horizontal ... ok
+[INFO] [stdout] test imageops::affine::test::test_flip_vertical ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate180 ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate270 ... ok
+[INFO] [stdout] test imageops::affine::test::test_rotate90 ... ok
+[INFO] [stdout] test imageops::colorops::test::test_dither ... ok
+[INFO] [stdout] test imageops::tests::test_image_coordinate_overflow ... ok
+[INFO] [stdout] test imageops::sample::tests::test_issue_186 ... ok
+[INFO] [stdout] test imageops::tests::test_image_in_image ... ok
+[INFO] [stdout] test imageops::tests::test_image_in_image_outside_of_bounds ... ok
+[INFO] [stdout] test imageops::tests::test_image_outside_image_no_wrap_around ... ok
+[INFO] [stdout] test jpeg::encoder::tests::grayscale_roundtrip_sanity_check ... ok
+[INFO] [stdout] test jpeg::encoder::tests::roundtrip_sanity_check ... ok
+[INFO] [stdout] test pnm::autobreak::tests::test_aligned_writes ... ok
+[INFO] [stdout] test pnm::autobreak::tests::test_greater_writes ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_blackandwhite ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_grayscale ... ok
+[INFO] [stdout] test pnm::decoder::tests::pam_rgb ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_ascii ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_ascii_nospace ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_binary ... ok
+[INFO] [stdout] test pnm::decoder::tests::pbm_binary_ascii_termination ... ok
+[INFO] [stdout] test pnm::decoder::tests::pgm_ascii ... ok
+[INFO] [stdout] test pnm::decoder::tests::pgm_binary ... ok
+[INFO] [stdout] test pnm::encoder::tests::custom_header_and_color ... ok
+[INFO] [stdout] test pnm::tests::roundtrip_rgb ... ok
+[INFO] [stdout] test pnm::tests::roundtrip_u16 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 66 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests image
+[INFO] [stdout] 
+[INFO] [stdout] running 8 tests
+[INFO] [stdout] test src\flat.rs - flat (line 9) ... ok
+[INFO] [stdout] test src\flat.rs - flat::FlatSamples<Buffer>::get_sample (line 495) ... ok
+[INFO] [stdout] test src\flat.rs - flat::SampleLayout::column_major_packed (line 143) ... ok
+[INFO] [stdout] test src\flat.rs - flat::SampleLayout::row_major_packed (line 114) ... ok
+[INFO] [stdout] test src\flat.rs - flat::FlatSamples<Buffer>::get_mut_sample (line 528) ... ok
+[INFO] [stdout] test src\gif.rs - gif (line 9) ... ok
+[INFO] [stdout] test src\flat.rs - flat::View<Buffer, P>::try_upgrade (line 1078) ... ok
+[INFO] [stdout] test src\math\utils.rs - math::utils::clamp (line 5) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "307bd2a09737f7f74920e1c4c10550ccff58e319c6692228724dfbba6d66e690"`
+[INFO] running `"docker" "rm" "-f" "307bd2a09737f7f74920e1c4c10550ccff58e319c6692228724dfbba6d66e690"`
+[INFO] [stdout] 307bd2a09737f7f74920e1c4c10550ccff58e319c6692228724dfbba6d66e690

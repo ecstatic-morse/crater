@@ -1,0 +1,53 @@
+[INFO] fetching crate ocr_latin_vocabulary 0.1.0...
+[INFO] extracting crate ocr_latin_vocabulary 0.1.0 into work\ex\default\sources\stable\reg\ocr_latin_vocabulary\0.1.0
+[INFO] extracting crate ocr_latin_vocabulary 0.1.0 into work\ex\default\sources\beta\reg\ocr_latin_vocabulary\0.1.0
+[INFO] validating manifest of ocr_latin_vocabulary-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ocr_latin_vocabulary-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ocr_latin_vocabulary-0.1.0
+[INFO] finished frobbing ocr_latin_vocabulary-0.1.0
+[INFO] frobbed toml for ocr_latin_vocabulary-0.1.0 written to work\ex\default\sources\stable\reg\ocr_latin_vocabulary\0.1.0\Cargo.toml
+[INFO] started frobbing ocr_latin_vocabulary-0.1.0
+[INFO] finished frobbing ocr_latin_vocabulary-0.1.0
+[INFO] frobbed toml for ocr_latin_vocabulary-0.1.0 written to work\ex\default\sources\beta\reg\ocr_latin_vocabulary\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ocr_latin_vocabulary-0.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ocr_latin_vocabulary\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 3ddbd4ded7d5f1d3ea47d4d77c5b2d3ac99d144444a7d8f167f7225b1d6d6bbb
+[INFO] running `"docker" "start" "-a" "3ddbd4ded7d5f1d3ea47d4d77c5b2d3ac99d144444a7d8f167f7225b1d6d6bbb"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling memchr v1.0.2
+[INFO] [stderr]    Compiling csv v0.15.0
+[INFO] [stderr]    Compiling ocr_latin_vocabulary v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.26s
+[INFO] running `"docker" "inspect" "3ddbd4ded7d5f1d3ea47d4d77c5b2d3ac99d144444a7d8f167f7225b1d6d6bbb"`
+[INFO] running `"docker" "rm" "-f" "3ddbd4ded7d5f1d3ea47d4d77c5b2d3ac99d144444a7d8f167f7225b1d6d6bbb"`
+[INFO] [stdout] 3ddbd4ded7d5f1d3ea47d4d77c5b2d3ac99d144444a7d8f167f7225b1d6d6bbb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ocr_latin_vocabulary\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] bd59d646cb0120bc3275eda1209bc3fddb02cd4dc0df4d7e363a0bf78ffe2dad
+[INFO] running `"docker" "start" "-a" "bd59d646cb0120bc3275eda1209bc3fddb02cd4dc0df4d7e363a0bf78ffe2dad"`
+[INFO] [stderr]    Compiling ocr_latin_vocabulary v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.13s
+[INFO] running `"docker" "inspect" "bd59d646cb0120bc3275eda1209bc3fddb02cd4dc0df4d7e363a0bf78ffe2dad"`
+[INFO] running `"docker" "rm" "-f" "bd59d646cb0120bc3275eda1209bc3fddb02cd4dc0df4d7e363a0bf78ffe2dad"`
+[INFO] [stdout] bd59d646cb0120bc3275eda1209bc3fddb02cd4dc0df4d7e363a0bf78ffe2dad
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ocr_latin_vocabulary\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 280bec1023a2ea6d36c9e5b07d4efbd55a011c474e2d6f3e60b60c450a487cf3
+[INFO] running `"docker" "start" "-a" "280bec1023a2ea6d36c9e5b07d4efbd55a011c474e2d6f3e60b60c450a487cf3"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.60s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ocr_latin_vocabulary-94bdda1212dd3c49.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "280bec1023a2ea6d36c9e5b07d4efbd55a011c474e2d6f3e60b60c450a487cf3"`
+[INFO] running `"docker" "rm" "-f" "280bec1023a2ea6d36c9e5b07d4efbd55a011c474e2d6f3e60b60c450a487cf3"`
+[INFO] [stdout] 280bec1023a2ea6d36c9e5b07d4efbd55a011c474e2d6f3e60b60c450a487cf3

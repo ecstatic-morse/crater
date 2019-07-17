@@ -1,0 +1,143 @@
+[INFO] fetching crate nmea-0183 0.0.5...
+[INFO] extracting crate nmea-0183 0.0.5 into work\ex\default\sources\stable\reg\nmea-0183\0.0.5
+[INFO] extracting crate nmea-0183 0.0.5 into work\ex\default\sources\beta\reg\nmea-0183\0.0.5
+[INFO] validating manifest of nmea-0183-0.0.5 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nmea-0183-0.0.5 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nmea-0183-0.0.5
+[INFO] finished frobbing nmea-0183-0.0.5
+[INFO] frobbed toml for nmea-0183-0.0.5 written to work\ex\default\sources\stable\reg\nmea-0183\0.0.5\Cargo.toml
+[INFO] started frobbing nmea-0183-0.0.5
+[INFO] finished frobbing nmea-0183-0.0.5
+[INFO] frobbed toml for nmea-0183-0.0.5 written to work\ex\default\sources\beta\reg\nmea-0183\0.0.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded nom v5.0.0
+[INFO] [stderr]   Downloaded stackvector v1.0.6
+[INFO] [stderr]   Downloaded lexical-core v0.4.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing nmea-0183-0.0.5 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\nmea-0183\\0.0.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 4f9150af5a15cd4e73a3a9d2ba01a0ea006d55cb41ecfb1f0f196329b7f293b5
+[INFO] running `"docker" "start" "-a" "4f9150af5a15cd4e73a3a9d2ba01a0ea006d55cb41ecfb1f0f196329b7f293b5"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling ryu v0.2.8
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling static_assertions v0.2.5
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling nom v5.0.0
+[INFO] [stderr]    Compiling stackvector v1.0.6
+[INFO] [stderr]    Compiling lexical-core v0.4.2
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling nmea-0183 v0.0.5 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 20s
+[INFO] running `"docker" "inspect" "4f9150af5a15cd4e73a3a9d2ba01a0ea006d55cb41ecfb1f0f196329b7f293b5"`
+[INFO] running `"docker" "rm" "-f" "4f9150af5a15cd4e73a3a9d2ba01a0ea006d55cb41ecfb1f0f196329b7f293b5"`
+[INFO] [stdout] 4f9150af5a15cd4e73a3a9d2ba01a0ea006d55cb41ecfb1f0f196329b7f293b5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\nmea-0183\\0.0.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a0ca8b8f79623890645607e40d9c237fd73e3b3572ab542f60766262287ae1e0
+[INFO] running `"docker" "start" "-a" "a0ca8b8f79623890645607e40d9c237fd73e3b3572ab542f60766262287ae1e0"`
+[INFO] [stderr]    Compiling nmea-0183 v0.0.5 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.80s
+[INFO] running `"docker" "inspect" "a0ca8b8f79623890645607e40d9c237fd73e3b3572ab542f60766262287ae1e0"`
+[INFO] running `"docker" "rm" "-f" "a0ca8b8f79623890645607e40d9c237fd73e3b3572ab542f60766262287ae1e0"`
+[INFO] [stdout] a0ca8b8f79623890645607e40d9c237fd73e3b3572ab542f60766262287ae1e0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\nmea-0183\\0.0.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] d95cb53991c1131a2419658102a583a49b344a4d4992c3b5c8f55bef40063255
+[INFO] running `"docker" "start" "-a" "d95cb53991c1131a2419658102a583a49b344a4d4992c3b5c8f55bef40063255"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.44s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\nmea_0183-a3863ea9fb0d8ee2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 74 tests
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_east_indicator ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_empty_indicator ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_empty_indicators ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_north_indicator ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_west_indicator ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_south_indicator ... ok
+[INFO] [stdout] test fields::cardinality::cardinality_tests::test_parse_wrong_indicators ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_0_meter ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_0_minutes ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_invalid_meter ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_invalid_minutes ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_meter ... ok
+[INFO] [stdout] test fields::distance::tests::test_parse_minutes ... ok
+[INFO] [stdout] test fields::identity::talker_tests::test_parse_not_enough_characters ... ok
+[INFO] [stdout] test fields::identity::talker_tests::test_parse_talker ... ok
+[INFO] [stdout] test fields::identity::talker_tests::test_parse_talker_empty_input ... ok
+[INFO] [stdout] test fields::identity::talker_tests::test_parse_wrong_parse_talker ... ok
+[INFO] [stdout] test fields::parameter::tests::test_parse_status_data_invalid ... ok
+[INFO] [stdout] test fields::parameter::tests::test_parse_status_data_valid ... ok
+[INFO] [stdout] test fields::parameter::tests::test_parse_status_garbage_data ... ok
+[INFO] [stdout] test fields::parameter::tests::test_parse_status_missing_comma ... ok
+[INFO] [stdout] test messages::dtm::tests::test_parse_dtm ... ok
+[INFO] [stdout] test messages::gbq::tests::test_parse_gbq ... ok
+[INFO] [stdout] test messages::gbs::tests::test_parse_gbs ... ok
+[INFO] [stdout] test messages::gga::tests::test_parse_gga ... ok
+[INFO] [stdout] test messages::glq::tests::test_parse_glq ... ok
+[INFO] [stdout] test messages::gnq::tests::test_parse_gnq ... ok
+[INFO] [stdout] test messages::gll::tests::test_parse_gll ... ok
+[INFO] [stdout] test messages::gns::tests::test_parse_gns ... ok
+[INFO] [stdout] test messages::gpq::tests::test_parse_gpq ... ok
+[INFO] [stdout] test messages::gsa::tests::test_parse_gsa ... ok
+[INFO] [stdout] test messages::grs::tests::test_parse_grs ... ok
+[INFO] [stdout] test messages::gst::tests::test_parse_gst ... ok
+[INFO] [stdout] test messages::gsv::tests::test_parse_gsv ... ok
+[INFO] [stdout] test messages::rmc::tests::test_parse_rmc ... ok
+[INFO] [stdout] test messages::txt::tests::test_parse_txt ... ok
+[INFO] [stdout] test messages::vtg::tests::test_parse_vtg ... ok
+[INFO] [stdout] test messages::vlw::tests::test_parse_vlw ... ok
+[INFO] [stdout] test messages::zda::tests::test_parse_zda ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_0_float ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_empty_float ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_empty_last_string ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_empty_string ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_float ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_invalid_float ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_last_string ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_string ... ok
+[INFO] [stdout] test parser_utils::tests::test_parse_string_sequence ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_dtm_0_lat_lon_alt ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_dtm_lat_lon_alt ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_dtm_no_lat_lon_alt ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gbq ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gbs ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gga ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gll ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_glq ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gnq ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gns ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gpq ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_grs ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gsa ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gst ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_gsv ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_rmc ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_txt ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_vlw ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_zda ... ok
+[INFO] [stdout] test sentence::sentence_tests::test_parse_vtg ... ok
+[INFO] [stdout] test sentence::sentence_type_tests::test_parse_encapsulation_empty_input ... ok
+[INFO] [stdout] test sentence::sentence_type_tests::test_parse_encapsulation_invalid_type ... ok
+[INFO] [stdout] test sentence::sentence_type_tests::test_parse_encapsulation_parse_sentence_type ... ok
+[INFO] [stdout] test sentence::sentence_type_tests::test_parse_parametric_parse_sentence_type ... ok
+[INFO] [stdout] test talker_tests::test_parse_missing_crlf ... ok
+[INFO] [stdout] test talker_tests::test_parse_valid ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 74 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests nmea-0183
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs - parse (line 18) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d95cb53991c1131a2419658102a583a49b344a4d4992c3b5c8f55bef40063255"`
+[INFO] running `"docker" "rm" "-f" "d95cb53991c1131a2419658102a583a49b344a4d4992c3b5c8f55bef40063255"`
+[INFO] [stdout] d95cb53991c1131a2419658102a583a49b344a4d4992c3b5c8f55bef40063255

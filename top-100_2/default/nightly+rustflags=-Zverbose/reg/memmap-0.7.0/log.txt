@@ -1,0 +1,85 @@
+[INFO] crate memmap 0.7.0 is already in cache
+[INFO] extracting crate memmap 0.7.0 into work\ex\default\sources\nightly\reg\memmap\0.7.0
+[INFO] extracting crate memmap 0.7.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\memmap\0.7.0
+[INFO] validating manifest of memmap-0.7.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of memmap-0.7.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing memmap-0.7.0
+[INFO] finished frobbing memmap-0.7.0
+[INFO] frobbed toml for memmap-0.7.0 written to work\ex\default\sources\nightly\reg\memmap\0.7.0\Cargo.toml
+[INFO] started frobbing memmap-0.7.0
+[INFO] finished frobbing memmap-0.7.0
+[INFO] frobbed toml for memmap-0.7.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\memmap\0.7.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing memmap-0.7.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\memmap\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 9a67f4e2164059f62fa65f794fcb7cf880badb087098e24594b4276e437f9359
+[INFO] running `"docker" "start" "-a" "9a67f4e2164059f62fa65f794fcb7cf880badb087098e24594b4276e437f9359"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memmap v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 23.40s
+[INFO] running `"docker" "inspect" "9a67f4e2164059f62fa65f794fcb7cf880badb087098e24594b4276e437f9359"`
+[INFO] running `"docker" "rm" "-f" "9a67f4e2164059f62fa65f794fcb7cf880badb087098e24594b4276e437f9359"`
+[INFO] [stdout] 9a67f4e2164059f62fa65f794fcb7cf880badb087098e24594b4276e437f9359
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\memmap\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ac28efac56158091d3a54f073cd3c3f54be1a42a7d689b318bdbd5c0fe658a03
+[INFO] running `"docker" "start" "-a" "ac28efac56158091d3a54f073cd3c3f54be1a42a7d689b318bdbd5c0fe658a03"`
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling memmap v0.7.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 12.61s
+[INFO] running `"docker" "inspect" "ac28efac56158091d3a54f073cd3c3f54be1a42a7d689b318bdbd5c0fe658a03"`
+[INFO] running `"docker" "rm" "-f" "ac28efac56158091d3a54f073cd3c3f54be1a42a7d689b318bdbd5c0fe658a03"`
+[INFO] [stdout] ac28efac56158091d3a54f073cd3c3f54be1a42a7d689b318bdbd5c0fe658a03
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\memmap\\0.7.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 82f1150d9fe0b8dae48c1e2e4606c60f7259be5e573ebfb0c9d33945459c65c1
+[INFO] running `"docker" "start" "-a" "82f1150d9fe0b8dae48c1e2e4606c60f7259be5e573ebfb0c9d33945459c65c1"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\memmap-da703db2a2cef419.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test test::file_write ... ok
+[INFO] [stdout] test test::flush_range ... ok
+[INFO] [stdout] test test::index ... ok
+[INFO] [stdout] test test::jit_x86_anon ... ok
+[INFO] [stdout] test test::map_anon ... ok
+[INFO] [stdout] test test::map_anon_zero_len ... ok
+[INFO] [stdout] test test::jit_x86_file ... ok
+[INFO] [stdout] test test::map_empty_file ... ok
+[INFO] [stdout] test test::map_copy ... ok
+[INFO] [stdout] test test::map_file ... ok
+[INFO] [stdout] test test::map_offset ... ok
+[INFO] [stdout] test test::mprotect_anon ... ok
+[INFO] [stdout] test test::mprotect_copy ... ok
+[INFO] [stdout] test test::mprotect_file ... ok
+[INFO] [stdout] test test::sync_send ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests memmap
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test src\lib.rs - Mmap::make_mut (line 350) ... ok
+[INFO] [stdout] test src\lib.rs - Mmap (line 287) ... ok
+[INFO] [stdout] test src\lib.rs - Mmap::map (line 317) ... ok
+[INFO] [stdout] test src\lib.rs - MmapMut::flush (line 479) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::len (line 100) ... ok
+[INFO] [stdout] test src\lib.rs - MmapMut::map_mut (line 430) ... ok
+[INFO] [stdout] test src\lib.rs - MmapMut::make_read_only (line 555) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::map (line 163) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::new (line 41) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::map_copy (line 247) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::map_mut (line 206) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::offset (line 72) ... ok
+[INFO] [stdout] test src\lib.rs - MmapOptions::stack (line 141) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "82f1150d9fe0b8dae48c1e2e4606c60f7259be5e573ebfb0c9d33945459c65c1"`
+[INFO] running `"docker" "rm" "-f" "82f1150d9fe0b8dae48c1e2e4606c60f7259be5e573ebfb0c9d33945459c65c1"`
+[INFO] [stdout] 82f1150d9fe0b8dae48c1e2e4606c60f7259be5e573ebfb0c9d33945459c65c1

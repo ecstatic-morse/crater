@@ -1,0 +1,78 @@
+[INFO] fetching crate block-modes 0.3.3...
+[INFO] extracting crate block-modes 0.3.3 into work\ex\default\sources\nightly\reg\block-modes\0.3.3
+[INFO] extracting crate block-modes 0.3.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\block-modes\0.3.3
+[INFO] validating manifest of block-modes-0.3.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of block-modes-0.3.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing block-modes-0.3.3
+[INFO] finished frobbing block-modes-0.3.3
+[INFO] frobbed toml for block-modes-0.3.3 written to work\ex\default\sources\nightly\reg\block-modes\0.3.3\Cargo.toml
+[INFO] started frobbing block-modes-0.3.3
+[INFO] finished frobbing block-modes-0.3.3
+[INFO] frobbed toml for block-modes-0.3.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\block-modes\0.3.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded hex-literal v0.1.4
+[INFO] [stderr]   Downloaded hex-literal-impl v0.1.2
+[INFO] [stderr]   Downloaded aes-soft v0.3.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing block-modes-0.3.3 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\block-modes\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1c0d95d60f92781861a831fc1aed1d8f301e47eef107c268dd45c20f23dce558
+[INFO] running `"docker" "start" "-a" "1c0d95d60f92781861a831fc1aed1d8f301e47eef107c268dd45c20f23dce558"`
+[INFO] [stderr]    Compiling byte-tools v0.3.1
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling block-padding v0.1.4
+[INFO] [stderr]    Compiling block-cipher-trait v0.6.2
+[INFO] [stderr]    Compiling block-modes v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.75s
+[INFO] running `"docker" "inspect" "1c0d95d60f92781861a831fc1aed1d8f301e47eef107c268dd45c20f23dce558"`
+[INFO] running `"docker" "rm" "-f" "1c0d95d60f92781861a831fc1aed1d8f301e47eef107c268dd45c20f23dce558"`
+[INFO] [stdout] 1c0d95d60f92781861a831fc1aed1d8f301e47eef107c268dd45c20f23dce558
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\block-modes\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] bc8c011ac8e9a949d276cc97421981f7e85429c834bda499622374c97fcc6eea
+[INFO] running `"docker" "start" "-a" "bc8c011ac8e9a949d276cc97421981f7e85429c834bda499622374c97fcc6eea"`
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling proc-macro-hack-impl v0.4.2
+[INFO] [stderr]    Compiling opaque-debug v0.2.2
+[INFO] [stderr]    Compiling proc-macro-hack v0.4.2
+[INFO] [stderr]    Compiling hex-literal-impl v0.1.2
+[INFO] [stderr]    Compiling aes-soft v0.3.3
+[INFO] [stderr]    Compiling hex-literal v0.1.4
+[INFO] [stderr]    Compiling block-modes v0.3.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.33s
+[INFO] running `"docker" "inspect" "bc8c011ac8e9a949d276cc97421981f7e85429c834bda499622374c97fcc6eea"`
+[INFO] running `"docker" "rm" "-f" "bc8c011ac8e9a949d276cc97421981f7e85429c834bda499622374c97fcc6eea"`
+[INFO] [stdout] bc8c011ac8e9a949d276cc97421981f7e85429c834bda499622374c97fcc6eea
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\block-modes\\0.3.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 7f304137e8c1fb135aa2dd8980218808c71c520bda11c85997eed6a201751d85
+[INFO] running `"docker" "start" "-a" "7f304137e8c1fb135aa2dd8980218808c71c520bda11c85997eed6a201751d85"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\block_modes-4b4989ba3217573c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-6077d089f7ca6424.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test cbc_aes128 ... ok
+[INFO] [stdout] test ecb_aes128 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests block-modes
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\lib.rs -  (line 9) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 47) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "7f304137e8c1fb135aa2dd8980218808c71c520bda11c85997eed6a201751d85"`
+[INFO] running `"docker" "rm" "-f" "7f304137e8c1fb135aa2dd8980218808c71c520bda11c85997eed6a201751d85"`
+[INFO] [stdout] 7f304137e8c1fb135aa2dd8980218808c71c520bda11c85997eed6a201751d85

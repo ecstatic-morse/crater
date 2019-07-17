@@ -1,0 +1,55 @@
+[INFO] fetching crate serde_schema 0.0.1...
+[INFO] extracting crate serde_schema 0.0.1 into work\ex\default\sources\nightly\reg\serde_schema\0.0.1
+[INFO] extracting crate serde_schema 0.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde_schema\0.0.1
+[INFO] validating manifest of serde_schema-0.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of serde_schema-0.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing serde_schema-0.0.1
+[INFO] finished frobbing serde_schema-0.0.1
+[INFO] frobbed toml for serde_schema-0.0.1 written to work\ex\default\sources\nightly\reg\serde_schema\0.0.1\Cargo.toml
+[INFO] started frobbing serde_schema-0.0.1
+[INFO] finished frobbing serde_schema-0.0.1
+[INFO] frobbed toml for serde_schema-0.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde_schema\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_bytes v0.10.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing serde_schema-0.0.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\serde_schema\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d034271003170109a758a02657aeff5f544f50fc399f56a89dfb287b3c3f80e0
+[INFO] running `"docker" "start" "-a" "d034271003170109a758a02657aeff5f544f50fc399f56a89dfb287b3c3f80e0"`
+[INFO] [stderr]    Compiling serde_schema v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.55s
+[INFO] running `"docker" "inspect" "d034271003170109a758a02657aeff5f544f50fc399f56a89dfb287b3c3f80e0"`
+[INFO] running `"docker" "rm" "-f" "d034271003170109a758a02657aeff5f544f50fc399f56a89dfb287b3c3f80e0"`
+[INFO] [stdout] d034271003170109a758a02657aeff5f544f50fc399f56a89dfb287b3c3f80e0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\serde_schema\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 1ef722b89f751e340dd5f03f1be564a38cac4960e1b3c166620c3ce71809f8d8
+[INFO] running `"docker" "start" "-a" "1ef722b89f751e340dd5f03f1be564a38cac4960e1b3c166620c3ce71809f8d8"`
+[INFO] [stderr]    Compiling serde_schema v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.66s
+[INFO] running `"docker" "inspect" "1ef722b89f751e340dd5f03f1be564a38cac4960e1b3c166620c3ce71809f8d8"`
+[INFO] running `"docker" "rm" "-f" "1ef722b89f751e340dd5f03f1be564a38cac4960e1b3c166620c3ce71809f8d8"`
+[INFO] [stdout] 1ef722b89f751e340dd5f03f1be564a38cac4960e1b3c166620c3ce71809f8d8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\serde_schema\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 21604ce52a793e528739ae53c3f9f9e86cb61733b9d1932491b85ec72ca0a785
+[INFO] running `"docker" "start" "-a" "21604ce52a793e528739ae53c3f9f9e86cb61733b9d1932491b85ec72ca0a785"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde_schema-34f895ba8c3241d0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests serde_schema
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "21604ce52a793e528739ae53c3f9f9e86cb61733b9d1932491b85ec72ca0a785"`
+[INFO] running `"docker" "rm" "-f" "21604ce52a793e528739ae53c3f9f9e86cb61733b9d1932491b85ec72ca0a785"`
+[INFO] [stdout] 21604ce52a793e528739ae53c3f9f9e86cb61733b9d1932491b85ec72ca0a785

@@ -1,0 +1,58 @@
+[INFO] fetching crate doubly 1.1.3...
+[INFO] extracting crate doubly 1.1.3 into work\ex\default\sources\stable\reg\doubly\1.1.3
+[INFO] extracting crate doubly 1.1.3 into work\ex\default\sources\beta\reg\doubly\1.1.3
+[INFO] validating manifest of doubly-1.1.3 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of doubly-1.1.3 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing doubly-1.1.3
+[INFO] finished frobbing doubly-1.1.3
+[INFO] frobbed toml for doubly-1.1.3 written to work\ex\default\sources\stable\reg\doubly\1.1.3\Cargo.toml
+[INFO] started frobbing doubly-1.1.3
+[INFO] finished frobbing doubly-1.1.3
+[INFO] frobbed toml for doubly-1.1.3 written to work\ex\default\sources\beta\reg\doubly\1.1.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing doubly-1.1.3 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\doubly\\1.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] cb74e3a06519c9500d8dbea2f727e6ff4fc7d6e0a118a278c7b50c90a7f1fc76
+[INFO] running `"docker" "start" "-a" "cb74e3a06519c9500d8dbea2f727e6ff4fc7d6e0a118a278c7b50c90a7f1fc76"`
+[INFO] [stderr]    Compiling doubly v1.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.91s
+[INFO] running `"docker" "inspect" "cb74e3a06519c9500d8dbea2f727e6ff4fc7d6e0a118a278c7b50c90a7f1fc76"`
+[INFO] running `"docker" "rm" "-f" "cb74e3a06519c9500d8dbea2f727e6ff4fc7d6e0a118a278c7b50c90a7f1fc76"`
+[INFO] [stdout] cb74e3a06519c9500d8dbea2f727e6ff4fc7d6e0a118a278c7b50c90a7f1fc76
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\doubly\\1.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 587ac9f884bb751d145436b83f03bb3e34d5005216b9d3c22f9acc3045bffc4a
+[INFO] running `"docker" "start" "-a" "587ac9f884bb751d145436b83f03bb3e34d5005216b9d3c22f9acc3045bffc4a"`
+[INFO] [stderr]    Compiling doubly v1.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.33s
+[INFO] running `"docker" "inspect" "587ac9f884bb751d145436b83f03bb3e34d5005216b9d3c22f9acc3045bffc4a"`
+[INFO] running `"docker" "rm" "-f" "587ac9f884bb751d145436b83f03bb3e34d5005216b9d3c22f9acc3045bffc4a"`
+[INFO] [stdout] 587ac9f884bb751d145436b83f03bb3e34d5005216b9d3c22f9acc3045bffc4a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\doubly\\1.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 94604d308ffc1edacbf3b80d18173fc87cc5440d0016e620ffe5540f96764f24
+[INFO] running `"docker" "start" "-a" "94604d308ffc1edacbf3b80d18173fc87cc5440d0016e620ffe5540f96764f24"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\doubly-2106a37b0090b045.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test tests::test_append ... ok
+[INFO] [stdout] test tests::test_empty ... ok
+[INFO] [stdout] test tests::test_iter ... ok
+[INFO] [stdout] test tests::test_len ... ok
+[INFO] [stdout] test tests::test_list ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests doubly
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "94604d308ffc1edacbf3b80d18173fc87cc5440d0016e620ffe5540f96764f24"`
+[INFO] running `"docker" "rm" "-f" "94604d308ffc1edacbf3b80d18173fc87cc5440d0016e620ffe5540f96764f24"`
+[INFO] [stdout] 94604d308ffc1edacbf3b80d18173fc87cc5440d0016e620ffe5540f96764f24

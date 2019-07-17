@@ -1,0 +1,64 @@
+[INFO] cloning repository hydrixos/raycaster-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/hydrixos/raycaster-rust.git" "work\\cache\\sources\\gh\\hydrixos\\raycaster-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\hydrixos\raycaster-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hydrixos\\raycaster-rust" "work\\ex\\default\\sources\\stable\\gh\\hydrixos\\raycaster-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\hydrixos\raycaster-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\hydrixos\\raycaster-rust" "work\\ex\\default\\sources\\beta\\gh\\hydrixos\\raycaster-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\hydrixos\raycaster-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 77096abca6d3f854b2c844235a5851b53fccd166
+[INFO] sha for GitHub repo hydrixos/raycaster-rust: 77096abca6d3f854b2c844235a5851b53fccd166
+[INFO] validating manifest of hydrixos/raycaster-rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hydrixos/raycaster-rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hydrixos/raycaster-rust
+[INFO] finished frobbing hydrixos/raycaster-rust
+[INFO] frobbed toml for hydrixos/raycaster-rust written to work\ex\default\sources\stable\gh\hydrixos\raycaster-rust\Cargo.toml
+[INFO] started frobbing hydrixos/raycaster-rust
+[INFO] finished frobbing hydrixos/raycaster-rust
+[INFO] frobbed toml for hydrixos/raycaster-rust written to work\ex\default\sources\beta\gh\hydrixos\raycaster-rust\Cargo.toml
+[INFO] crate hydrixos/raycaster-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded sdl2 v0.31.0
+[INFO] [stderr]   Downloaded libc v0.2.39
+[INFO] [stderr]   Downloaded num-traits v0.2.1
+[INFO] [stderr]   Downloaded num-iter v0.1.35
+[INFO] [stderr]   Downloaded num-integer v0.1.36
+[INFO] [stderr]   Downloaded sdl2-sys v0.31.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hydrixos/raycaster-rust against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\hydrixos\\raycaster-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] fac8a977939fb679fd1860b0e505165a5dad3999429a14ecf230235d20d54886
+[INFO] running `"docker" "start" "-a" "fac8a977939fb679fd1860b0e505165a5dad3999429a14ecf230235d20d54886"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling num-traits v0.2.1
+[INFO] [stderr]    Compiling cfg-if v0.1.2
+[INFO] [stderr]    Compiling libc v0.2.39
+[INFO] [stderr]    Compiling lazy_static v0.2.11
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling sdl2-sys v0.31.0
+[INFO] [stderr]    Compiling num-integer v0.1.36
+[INFO] [stderr]    Compiling num-iter v0.1.35
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling rand v0.3.22
+[INFO] [stderr]    Compiling sdl2 v0.31.0
+[INFO] [stderr]    Compiling raycaster v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1181
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.raycaster.8lrhs706-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.exe" "C:\\crater\\target\\debug\\deps\\raycaster-b269b0d34427ed6f.3imlbfcbb4lg5moo.rcgu.o" "/OPT:REF,ICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\libsdl2-9baf588b29fba764.rlib" "C:\\crater\\target\\debug\\deps\\librand-67ef63c3a5a3f1c0.rlib" "C:\\crater\\target\\debug\\deps\\librand-0c4feb4004b440a8.rlib" "C:\\crater\\target\\debug\\deps\\libwinapi-bbb06533a7641a5d.rlib" "C:\\crater\\target\\debug\\deps\\libsdl2_sys-52be2ef027161e7a.rlib" "C:\\crater\\target\\debug\\deps\\libbitflags-b8a6f1ee8082502b.rlib" "C:\\crater\\target\\debug\\deps\\liblazy_static-b21c8514563a91a7.rlib" "C:\\crater\\target\\debug\\deps\\liblibc-db3844976dec289b.rlib" "C:\\crater\\target\\debug\\deps\\libnum-8beb38a952638d29.rlib" "C:\\crater\\target\\debug\\deps\\libnum_iter-12bde4678907a165.rlib" "C:\\crater\\target\\debug\\deps\\libnum_integer-df0513dbfd7efe39.rlib" "C:\\crater\\target\\debug\\deps\\libnum_traits-d7d156baf442a1be.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libstd-c418a1c7c96bdbae.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libpanic_unwind-740e55ec30ec9b42.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_demangle-4e3d4b2c73be2130.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libhashbrown-e03c95365300773b.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_alloc-9b63ec27f8df7123.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libunwind-cc811f306714ba24.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liblibc-dee84a63f4b90027.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liballoc-7d070a58cfb70fe0.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_core-10ec18f1dfe36e70.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcore-e0e69d50f48d4667.rlib" "C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcompiler_builtins-45eb0e961cc324b2.rlib" "secur32.lib" "kernel32.lib" "advapi32.lib" "credui.lib" "SDL2.lib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib"
+[INFO] [stderr]   = note: LINK : fatal error LNK1181: cannot open input file 'SDL2.lib'
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `raycaster`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "fac8a977939fb679fd1860b0e505165a5dad3999429a14ecf230235d20d54886"`
+[INFO] running `"docker" "rm" "-f" "fac8a977939fb679fd1860b0e505165a5dad3999429a14ecf230235d20d54886"`
+[INFO] [stdout] fac8a977939fb679fd1860b0e505165a5dad3999429a14ecf230235d20d54886

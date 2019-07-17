@@ -1,0 +1,172 @@
+[INFO] fetching crate env_logger 0.6.2...
+[INFO] extracting crate env_logger 0.6.2 into work\ex\default\sources\stable\reg\env_logger\0.6.2
+[INFO] extracting crate env_logger 0.6.2 into work\ex\default\sources\beta\reg\env_logger\0.6.2
+[INFO] validating manifest of env_logger-0.6.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of env_logger-0.6.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing env_logger-0.6.2
+[INFO] removed 3 missing tests
+[INFO] finished frobbing env_logger-0.6.2
+[INFO] frobbed toml for env_logger-0.6.2 written to work\ex\default\sources\stable\reg\env_logger\0.6.2\Cargo.toml
+[INFO] started frobbing env_logger-0.6.2
+[INFO] removed 3 missing tests
+[INFO] finished frobbing env_logger-0.6.2
+[INFO] frobbed toml for env_logger-0.6.2 written to work\ex\default\sources\beta\reg\env_logger\0.6.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing env_logger-0.6.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\env_logger\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] acd674c276c1ac5c6d6aac3cbbc2620a92310416f17571b508fd163b364f369c
+[INFO] running `"docker" "start" "-a" "acd674c276c1ac5c6d6aac3cbbc2620a92310416f17571b508fd163b364f369c"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\init-twice-retains-filter.rs
+[INFO] [stderr] * C:\crater\workdir\tests\log-in-log.rs
+[INFO] [stderr] * C:\crater\workdir\tests\regexp_filter.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling env_logger v0.6.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 36.06s
+[INFO] running `"docker" "inspect" "acd674c276c1ac5c6d6aac3cbbc2620a92310416f17571b508fd163b364f369c"`
+[INFO] running `"docker" "rm" "-f" "acd674c276c1ac5c6d6aac3cbbc2620a92310416f17571b508fd163b364f369c"`
+[INFO] [stdout] acd674c276c1ac5c6d6aac3cbbc2620a92310416f17571b508fd163b364f369c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\env_logger\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3540cf5c8c2cb25f8630ab5b3dc8c509aa07620facf8faa03e88d72d195fe990
+[INFO] running `"docker" "start" "-a" "3540cf5c8c2cb25f8630ab5b3dc8c509aa07620facf8faa03e88d72d195fe990"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\init-twice-retains-filter.rs
+[INFO] [stderr] * C:\crater\workdir\tests\log-in-log.rs
+[INFO] [stderr] * C:\crater\workdir\tests\regexp_filter.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling env_logger v0.6.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.68s
+[INFO] running `"docker" "inspect" "3540cf5c8c2cb25f8630ab5b3dc8c509aa07620facf8faa03e88d72d195fe990"`
+[INFO] running `"docker" "rm" "-f" "3540cf5c8c2cb25f8630ab5b3dc8c509aa07620facf8faa03e88d72d195fe990"`
+[INFO] [stdout] 3540cf5c8c2cb25f8630ab5b3dc8c509aa07620facf8faa03e88d72d195fe990
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\env_logger\\0.6.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] b9d6e30c7c1d484ad9f42319060d6c7a401be3aded161ebdf62fcb157ff409cc
+[INFO] running `"docker" "start" "-a" "b9d6e30c7c1d484ad9f42319060d6c7a401be3aded161ebdf62fcb157ff409cc"`
+[INFO] [stderr] warning: An explicit [[test]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other test targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a test target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\tests\init-twice-retains-filter.rs
+[INFO] [stderr] * C:\crater\workdir\tests\log-in-log.rs
+[INFO] [stderr] * C:\crater\workdir\tests\regexp_filter.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a test target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autotests = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.66s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\env_logger-2bd3d1b80a8fb896.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 26 tests
+[INFO] [stdout] test filter::tests::filter_beginning_longest_match ... ok
+[INFO] [stdout] test filter::tests::filter_info ... ok
+[INFO] [stdout] test filter::tests::match_beginning ... ok
+[INFO] [stdout] test filter::tests::match_beginning_longest_match ... ok
+[INFO] [stdout] test filter::tests::match_default ... ok
+[INFO] [stdout] test filter::tests::match_full_path ... ok
+[INFO] [stdout] test filter::tests::no_match ... ok
+[INFO] [stdout] test filter::tests::parse_default ... ok
+[INFO] [stdout] test filter::tests::parse_spec_empty_level ... ok
+[INFO] [stdout] test filter::tests::parse_spec_empty_with_filter ... ok
+[INFO] [stdout] test filter::tests::parse_spec_global ... ok
+[INFO] [stdout] test filter::tests::parse_spec_invalid_crate ... ok
+[INFO] [stdout] test filter::tests::parse_spec_invalid_crate_filter ... ok
+[INFO] [stdout] test filter::tests::parse_spec_invalid_level ... ok
+[INFO] [stdout] test filter::tests::parse_spec_string_level ... ok
+[INFO] [stdout] test filter::tests::parse_spec_valid ... ok
+[INFO] [stdout] test filter::tests::parse_spec_valid_filter ... ok
+[INFO] [stdout] test filter::tests::zero_level ... ok
+[INFO] [stdout] test fmt::tests::default_format_no_header ... ok
+[INFO] [stdout] test fmt::writer::tests::parse_write_style_invalid ... ok
+[INFO] [stdout] test fmt::tests::default_format_with_header ... ok
+[INFO] [stdout] test fmt::writer::tests::parse_write_style_valid ... ok
+[INFO] [stdout] test tests::env_get_filter_reads_from_default_if_var_not_set ... ok
+[INFO] [stdout] test tests::env_get_filter_reads_from_var_if_set ... ok
+[INFO] [stdout] test tests::env_get_write_style_reads_from_default_if_var_not_set ... ok
+[INFO] [stdout] test tests::env_get_write_style_reads_from_var_if_set ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests env_logger
+[INFO] [stdout] 
+[INFO] [stdout] running 35 tests
+[INFO] [stdout] test src\filter\mod.rs - filter (line 15) ... ok
+[INFO] [stdout] test src\filter\mod.rs - filter::Filter::filter (line 134) ... ok
+[INFO] [stdout] test src\filter\mod.rs - filter::Builder (line 94) ... ok
+[INFO] [stdout] test src\fmt\humantime\extern_impl.rs - fmt::humantime::imp::Formatter::timestamp (line 19) ... ok
+[INFO] [stdout] test src\fmt\mod.rs - fmt::Formatter (line 62) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Formatter::style (line 24) ... ok
+[INFO] [stdout] test src\fmt\mod.rs - fmt (line 15) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style (line 188) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style (line 207) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style::set_color (line 252) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style::set_bg (line 331) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style::set_bold (line 280) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 148) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style::value (line 358) ... ok
+[INFO] [stdout] test src\fmt\writer\termcolor\extern_impl.rs - fmt::writer::termcolor::imp::Style::set_intense (line 307) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 17) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 188) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 227) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 208) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::filter (line 587) ... ok
+[INFO] [stdout] test src\lib.rs - Builder (line 336) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::filter_module (line 538) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::filter_level (line 561) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::format (line 481) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::from_default_env (line 455) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::from_env (line 419) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::from_env (line 409) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::new (line 376) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::target (line 632) ... ok
+[INFO] [stdout] test src\lib.rs - Builder::write_style (line 653) ... ok
+[INFO] [stdout] test src\lib.rs - Logger::from_env (line 745) ... ok
+[INFO] [stdout] test src\lib.rs - Logger::from_default_env (line 778) ... ok
+[INFO] [stdout] test src\lib.rs - Logger::from_env (line 754) ... ok
+[INFO] [stdout] test src\lib.rs - init_from_env (line 1098) ... ok
+[INFO] [stdout] test src\lib.rs - try_init_from_env (line 1060) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b9d6e30c7c1d484ad9f42319060d6c7a401be3aded161ebdf62fcb157ff409cc"`
+[INFO] running `"docker" "rm" "-f" "b9d6e30c7c1d484ad9f42319060d6c7a401be3aded161ebdf62fcb157ff409cc"`
+[INFO] [stdout] b9d6e30c7c1d484ad9f42319060d6c7a401be3aded161ebdf62fcb157ff409cc

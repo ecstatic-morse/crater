@@ -1,0 +1,641 @@
+[INFO] cloning repository knoebber/Rustals
+[INFO] running `"git" "clone" "--bare" "git://github.com/knoebber/Rustals.git" "work\\cache\\sources\\gh\\knoebber\\Rustals"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\knoebber\Rustals'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\knoebber\\Rustals" "work\\ex\\default\\sources\\stable\\gh\\knoebber\\Rustals"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\knoebber\Rustals'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\knoebber\\Rustals" "work\\ex\\default\\sources\\beta\\gh\\knoebber\\Rustals"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\knoebber\Rustals'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ef38faa7c1a938edb56ca63e7713120ec19ff6c1
+[INFO] sha for GitHub repo knoebber/Rustals: ef38faa7c1a938edb56ca63e7713120ec19ff6c1
+[INFO] validating manifest of knoebber/Rustals on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of knoebber/Rustals on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing knoebber/Rustals
+[INFO] finished frobbing knoebber/Rustals
+[INFO] frobbed toml for knoebber/Rustals written to work\ex\default\sources\stable\gh\knoebber\Rustals\Cargo.toml
+[INFO] started frobbing knoebber/Rustals
+[INFO] finished frobbing knoebber/Rustals
+[INFO] frobbed toml for knoebber/Rustals written to work\ex\default\sources\beta\gh\knoebber\Rustals\Cargo.toml
+[INFO] crate knoebber/Rustals already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/PistonDevelopers/image`
+[INFO] [stderr]     Updating git repository `https://github.com/rust-lang/num.git`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\knoebber\Rustals\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Updating git repository `https://github.com/PistonDevelopers/image`
+[INFO] [stderr]     Updating git repository `https://github.com/rust-lang/num.git`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Updating git repository `https://github.com/PistonDevelopers/image`
+[INFO] [stderr]     Updating git repository `https://github.com/rust-lang/num.git`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded num-rational v0.2.2
+[INFO] [stderr]   Downloaded num-complex v0.2.3
+[INFO] [stderr]   Downloaded gif v0.10.2
+[INFO] [stderr]   Downloaded deflate v0.7.20
+[INFO] [stderr]   Downloaded tiff v0.3.1
+[INFO] [stderr]   Downloaded png v0.15.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing knoebber/Rustals against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\knoebber\\Rustals,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 068d1ff4a7d7814dbbbc4b43b66d64c5fce0a2e9d7a7af86eaacf02f1818f166
+[INFO] running `"docker" "start" "-a" "068d1ff4a7d7814dbbbc4b43b66d64c5fce0a2e9d7a7af86eaacf02f1818f166"`
+[INFO] [stderr]    Compiling arrayvec v0.4.11
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling nodrop v0.1.13
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling rayon-core v1.5.0
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling num-bigint v0.2.2
+[INFO] [stderr]    Compiling num-derive v0.2.5
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling num-rational v0.2.2
+[INFO] [stderr]    Compiling num-complex v0.2.3
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling inflate v0.4.5
+[INFO] [stderr]    Compiling gif v0.10.2
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling num_cpus v1.10.1
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling deflate v0.7.20
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling png v0.15.0
+[INFO] [stderr]    Compiling rayon v1.1.0
+[INFO] [stderr]    Compiling num v0.2.0 (https://github.com/rust-lang/num.git#f0022772)
+[INFO] [stderr]    Compiling jpeg-decoder v0.1.15
+[INFO] [stderr]    Compiling tiff v0.3.1
+[INFO] [stderr]    Compiling image v0.22.0 (https://github.com/PistonDevelopers/image#9fc1f01b)
+[INFO] [stderr]    Compiling fractal v0.0.1 (C:\crater\workdir)
+[INFO] [stderr] error: invalid width `` for integer literal
+[INFO] [stderr]   --> src\main.rs:32:18
+[INFO] [stderr]    |
+[INFO] [stderr] 32 |     let mut ddf_x = 1i;
+[INFO] [stderr]    |                     ^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: valid widths are 8, 16, 32, 64 and 128
+[INFO] [stderr] 
+[INFO] [stderr] error: invalid width `` for integer literal
+[INFO] [stderr]   --> src\main.rs:34:14
+[INFO] [stderr]    |
+[INFO] [stderr] 34 |     let mut x = 0i;
+[INFO] [stderr]    |                 ^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = help: valid widths are 8, 16, 32, 64 and 128
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::io::File`
+[INFO] [stderr]  --> src\main.rs:7:5
+[INFO] [stderr]   |
+[INFO] [stderr] 7 | use std::io::File;
+[INFO] [stderr]   |     ^^^^^^^^^^^^^ no `File` in `io`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rand`
+[INFO] [stderr]  --> src\main.rs:9:10
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use std::rand::{task_rng,Rng}; 
+[INFO] [stderr]   |          ^^^^ could not find `rand` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::rand`
+[INFO] [stderr]   --> src\main.rs:10:10
+[INFO] [stderr]    |
+[INFO] [stderr] 10 | use std::rand::random;
+[INFO] [stderr]    |          ^^^^ could not find `rand` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::num::FloatMath`
+[INFO] [stderr]   --> src\main.rs:15:5
+[INFO] [stderr]    |
+[INFO] [stderr] 15 | use std::num::FloatMath;
+[INFO] [stderr]    |     ^^^^^^^^^^^^^^^^^^^ no `FloatMath` in `num`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: use of undeclared type or module `Path`
+[INFO] [stderr]    --> src\main.rs:383:27
+[INFO] [stderr]     |
+[INFO] [stderr] 383 |     let fout = File::create(&Path::new(file_name)).unwrap();
+[INFO] [stderr]     |                              ^^^^ use of undeclared type or module `Path`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]   --> src\main.rs:16:14
+[INFO] [stderr]    |
+[INFO] [stderr] 16 | const WIDTH: uint = 1000;
+[INFO] [stderr]    |              ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]   --> src\main.rs:17:15
+[INFO] [stderr]    |
+[INFO] [stderr] 17 | const HEIGHT: uint = 1000;
+[INFO] [stderr]    |               ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:29:35
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | fn draw_circle(pixels:&mut[u8],x0:int,y0:int,radius:int)
+[INFO] [stderr]    |                                   ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:29:42
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | fn draw_circle(pixels:&mut[u8],x0:int,y0:int,radius:int)
+[INFO] [stderr]    |                                          ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:29:53
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | fn draw_circle(pixels:&mut[u8],x0:int,y0:int,radius:int)
+[INFO] [stderr]    |                                                     ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:67:33
+[INFO] [stderr]    |
+[INFO] [stderr] 67 | fn draw_rect(pixels:&mut[u8], x:int, y:int, w:int, h:int)
+[INFO] [stderr]    |                                 ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:67:40
+[INFO] [stderr]    |
+[INFO] [stderr] 67 | fn draw_rect(pixels:&mut[u8], x:int, y:int, w:int, h:int)
+[INFO] [stderr]    |                                        ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:67:47
+[INFO] [stderr]    |
+[INFO] [stderr] 67 | fn draw_rect(pixels:&mut[u8], x:int, y:int, w:int, h:int)
+[INFO] [stderr]    |                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:67:54
+[INFO] [stderr]    |
+[INFO] [stderr] 67 | fn draw_rect(pixels:&mut[u8], x:int, y:int, w:int, h:int)
+[INFO] [stderr]    |                                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `range` in this scope
+[INFO] [stderr]   --> src\main.rs:69:12
+[INFO] [stderr]    |
+[INFO] [stderr] 69 |         for i in range(x,x+w)
+[INFO] [stderr]    |                  ^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `range` in this scope
+[INFO] [stderr]   --> src\main.rs:71:13
+[INFO] [stderr]    |
+[INFO] [stderr] 71 |             for j in range(y,y+w)
+[INFO] [stderr]    |                      ^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:91:33
+[INFO] [stderr]    |
+[INFO] [stderr] 91 | fn draw_line(pixels:&mut[u8],x0:int,y0:int,x1:int,y1:int)
+[INFO] [stderr]    |                                 ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:91:40
+[INFO] [stderr]    |
+[INFO] [stderr] 91 | fn draw_line(pixels:&mut[u8],x0:int,y0:int,x1:int,y1:int)
+[INFO] [stderr]    |                                        ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:91:47
+[INFO] [stderr]    |
+[INFO] [stderr] 91 | fn draw_line(pixels:&mut[u8],x0:int,y0:int,x1:int,y1:int)
+[INFO] [stderr]    |                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]   --> src\main.rs:91:54
+[INFO] [stderr]    |
+[INFO] [stderr] 91 | fn draw_line(pixels:&mut[u8],x0:int,y0:int,x1:int,y1:int)
+[INFO] [stderr]    |                                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:102:16
+[INFO] [stderr]     |
+[INFO] [stderr] 102 |     let mut index:uint;
+[INFO] [stderr]     |                   ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:112:14
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |         while x as int != x1
+[INFO] [stderr]     |                    ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:114:29
+[INFO] [stderr]     |
+[INFO] [stderr] 114 |             index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:114:38
+[INFO] [stderr]     |
+[INFO] [stderr] 114 |             index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:131:14
+[INFO] [stderr]     |
+[INFO] [stderr] 131 |         while y as int != y1 
+[INFO] [stderr]     |                    ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:133:29
+[INFO] [stderr]     |
+[INFO] [stderr] 133 |             index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:133:38
+[INFO] [stderr]     |
+[INFO] [stderr] 133 |             index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:147:28
+[INFO] [stderr]     |
+[INFO] [stderr] 147 |         index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:147:37
+[INFO] [stderr]     |
+[INFO] [stderr] 147 |         index = get_index_i(x as int,y as int);
+[INFO] [stderr]     |                                           ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:39
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                       ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:46
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                              ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:52
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                                    ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:63
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:72
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                                                        ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:162:76
+[INFO] [stderr]     |
+[INFO] [stderr] 162 | fn draw_polar_line(pixels:&mut[u8],x0:int,y0:int,r:int,degree:int) -> (int,int)
+[INFO] [stderr]     |                                                                            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:168:31
+[INFO] [stderr]     |
+[INFO] [stderr] 168 |     draw_line(pixels,x0,y0,x1 as int,y1 as int);
+[INFO] [stderr]     |                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:168:41
+[INFO] [stderr]     |
+[INFO] [stderr] 168 |     draw_line(pixels,x0,y0,x1 as int,y1 as int);
+[INFO] [stderr]     |                                            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:169:9
+[INFO] [stderr]     |
+[INFO] [stderr] 169 |     (x1 as int, y1 as int)
+[INFO] [stderr]     |            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:169:20
+[INFO] [stderr]     |
+[INFO] [stderr] 169 |     (x1 as int, y1 as int)
+[INFO] [stderr]     |                       ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:176:16
+[INFO] [stderr]     |
+[INFO] [stderr] 176 | fn get_index(x:uint, y:uint) -> uint
+[INFO] [stderr]     |                ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:176:24
+[INFO] [stderr]     |
+[INFO] [stderr] 176 | fn get_index(x:uint, y:uint) -> uint
+[INFO] [stderr]     |                        ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:176:33
+[INFO] [stderr]     |
+[INFO] [stderr] 176 | fn get_index(x:uint, y:uint) -> uint
+[INFO] [stderr]     |                                 ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:182:18
+[INFO] [stderr]     |
+[INFO] [stderr] 182 | fn get_index_i(x:int, y:int) -> uint
+[INFO] [stderr]     |                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:182:25
+[INFO] [stderr]     |
+[INFO] [stderr] 182 | fn get_index_i(x:int, y:int) -> uint
+[INFO] [stderr]     |                         ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:182:33
+[INFO] [stderr]     |
+[INFO] [stderr] 182 | fn get_index_i(x:int, y:int) -> uint
+[INFO] [stderr]     |                                 ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:185:17
+[INFO] [stderr]     |
+[INFO] [stderr] 185 |         (x+((WIDTH as int)*y)) as uint
+[INFO] [stderr]     |                       ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `uint` in this scope
+[INFO] [stderr]    --> src\main.rs:185:29
+[INFO] [stderr]     |
+[INFO] [stderr] 185 |         (x+((WIDTH as int)*y)) as uint
+[INFO] [stderr]     |                                   ^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:188:16
+[INFO] [stderr]     |
+[INFO] [stderr] 188 | fn on_screen(x:int,y:int) -> bool
+[INFO] [stderr]     |                ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:188:22
+[INFO] [stderr]     |
+[INFO] [stderr] 188 | fn on_screen(x:int,y:int) -> bool
+[INFO] [stderr]     |                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:190:25
+[INFO] [stderr]     |
+[INFO] [stderr] 190 |     (x>=0 && x <= WIDTH as int && y>=0 && y <= HEIGHT as int)
+[INFO] [stderr]     |                            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:190:55
+[INFO] [stderr]     |
+[INFO] [stderr] 190 |     (x>=0 && x <= WIDTH as int && y>=0 && y <= HEIGHT as int)
+[INFO] [stderr]     |                                                          ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:194:37
+[INFO] [stderr]     |
+[INFO] [stderr] 194 | fn square_fractal(pixels:&mut[u8],x:int, y:int, side:int)
+[INFO] [stderr]     |                                     ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:194:44
+[INFO] [stderr]     |
+[INFO] [stderr] 194 | fn square_fractal(pixels:&mut[u8],x:int, y:int, side:int)
+[INFO] [stderr]     |                                            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:194:54
+[INFO] [stderr]     |
+[INFO] [stderr] 194 | fn square_fractal(pixels:&mut[u8],x:int, y:int, side:int)
+[INFO] [stderr]     |                                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:207:35
+[INFO] [stderr]     |
+[INFO] [stderr] 207 | fn circ_fractal(pixels:&mut[u8],x:int, y:int, radius:int)
+[INFO] [stderr]     |                                   ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:207:42
+[INFO] [stderr]     |
+[INFO] [stderr] 207 | fn circ_fractal(pixels:&mut[u8],x:int, y:int, radius:int)
+[INFO] [stderr]     |                                          ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:207:54
+[INFO] [stderr]     |
+[INFO] [stderr] 207 | fn circ_fractal(pixels:&mut[u8],x:int, y:int, radius:int)
+[INFO] [stderr]     |                                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:219:30
+[INFO] [stderr]     |
+[INFO] [stderr] 219 | fn squares(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                              ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:219:37
+[INFO] [stderr]     |
+[INFO] [stderr] 219 | fn squares(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                     ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:219:48
+[INFO] [stderr]     |
+[INFO] [stderr] 219 | fn squares(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:219:59
+[INFO] [stderr]     |
+[INFO] [stderr] 219 | fn squares(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                           ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:230:34
+[INFO] [stderr]     |
+[INFO] [stderr] 230 | fn curved_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:230:41
+[INFO] [stderr]     |
+[INFO] [stderr] 230 | fn curved_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                         ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:230:52
+[INFO] [stderr]     |
+[INFO] [stderr] 230 | fn curved_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                    ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:230:63
+[INFO] [stderr]     |
+[INFO] [stderr] 230 | fn curved_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                               ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:240:27
+[INFO] [stderr]     |
+[INFO] [stderr] 240 | fn tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                           ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:240:34
+[INFO] [stderr]     |
+[INFO] [stderr] 240 | fn tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:240:45
+[INFO] [stderr]     |
+[INFO] [stderr] 240 | fn tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                             ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:240:56
+[INFO] [stderr]     |
+[INFO] [stderr] 240 | fn tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                        ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:255:32
+[INFO] [stderr]     |
+[INFO] [stderr] 255 | fn rand_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:255:39
+[INFO] [stderr]     |
+[INFO] [stderr] 255 | fn rand_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                       ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:255:50
+[INFO] [stderr]     |
+[INFO] [stderr] 255 | fn rand_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:255:61
+[INFO] [stderr]     |
+[INFO] [stderr] 255 | fn rand_tree(pixels:&mut[u8],x:int, y:int,length:int, theta:int)
+[INFO] [stderr]     |                                                             ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:261:21
+[INFO] [stderr]     |
+[INFO] [stderr] 261 |         let mut new_theta:int = theta+task_rng().gen_range(-30,30);
+[INFO] [stderr]     |                           ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:282:34
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | fn snow_flake(pixels: &mut[u8],x:int,y:int,length:int,theta:int,depth:int)
+[INFO] [stderr]     |                                  ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:282:40
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | fn snow_flake(pixels: &mut[u8],x:int,y:int,length:int,theta:int,depth:int)
+[INFO] [stderr]     |                                        ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:282:51
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | fn snow_flake(pixels: &mut[u8],x:int,y:int,length:int,theta:int,depth:int)
+[INFO] [stderr]     |                                                   ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:282:61
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | fn snow_flake(pixels: &mut[u8],x:int,y:int,length:int,theta:int,depth:int)
+[INFO] [stderr]     |                                                             ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:282:71
+[INFO] [stderr]     |
+[INFO] [stderr] 282 | fn snow_flake(pixels: &mut[u8],x:int,y:int,length:int,theta:int,depth:int)
+[INFO] [stderr]     |                                                                       ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:296:27
+[INFO] [stderr]     |
+[INFO] [stderr] 296 | fn exp(pixels: &mut[u8],x:int,y:int,radius:int,depth:int)
+[INFO] [stderr]     |                           ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:296:33
+[INFO] [stderr]     |
+[INFO] [stderr] 296 | fn exp(pixels: &mut[u8],x:int,y:int,radius:int,depth:int)
+[INFO] [stderr]     |                                 ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:296:44
+[INFO] [stderr]     |
+[INFO] [stderr] 296 | fn exp(pixels: &mut[u8],x:int,y:int,radius:int,depth:int)
+[INFO] [stderr]     |                                            ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `int` in this scope
+[INFO] [stderr]    --> src\main.rs:296:54
+[INFO] [stderr]     |
+[INFO] [stderr] 296 | fn exp(pixels: &mut[u8],x:int,y:int,radius:int,depth:int)
+[INFO] [stderr]     |                                                      ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `args` in module `os`
+[INFO] [stderr]    --> src\main.rs:310:18
+[INFO] [stderr]     |
+[INFO] [stderr] 310 |   let args = os::args();
+[INFO] [stderr]     |                  ^^^^ not found in `os`
+[INFO] [stderr] help: possible candidate is found in another module, you can import it into scope
+[INFO] [stderr]     |
+[INFO] [stderr] 7   | use std::env::args;
+[INFO] [stderr]     |
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `range` in this scope
+[INFO] [stderr]    --> src\main.rs:369:11
+[INFO] [stderr]     |
+[INFO] [stderr] 369 |     for i in range(0,WIDTH)
+[INFO] [stderr]     |              ^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `range` in this scope
+[INFO] [stderr]    --> src\main.rs:371:12
+[INFO] [stderr]     |
+[INFO] [stderr] 371 |         for j in range(0,HEIGHT)
+[INFO] [stderr]     |                  ^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\main.rs:306:36
+[INFO] [stderr]     |
+[INFO] [stderr] 306 |     let pixels: &mut[u8] = &mut [0u8, ..WIDTH*HEIGHT];
+[INFO] [stderr]     |                                       ^^^^^^^^^^^^^^ expected u8, found struct `std::ops::RangeTo`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `u8`
+[INFO] [stderr]                found type `std::ops::RangeTo<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0061]: this function takes 1 parameter but 2 parameters were supplied
+[INFO] [stderr]    --> src\main.rs:386:39
+[INFO] [stderr]     |
+[INFO] [stderr] 386 |     let _    = image::ImageLuma8(imgbuf).save(fout, image::PNG);
+[INFO] [stderr]     |                                          ^^^^ expected 1 parameter
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 90 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0061, E0308, E0412, E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0061`.
+[INFO] [stderr] error: Could not compile `fractal`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "068d1ff4a7d7814dbbbc4b43b66d64c5fce0a2e9d7a7af86eaacf02f1818f166"`
+[INFO] running `"docker" "rm" "-f" "068d1ff4a7d7814dbbbc4b43b66d64c5fce0a2e9d7a7af86eaacf02f1818f166"`
+[INFO] [stdout] 068d1ff4a7d7814dbbbc4b43b66d64c5fce0a2e9d7a7af86eaacf02f1818f166

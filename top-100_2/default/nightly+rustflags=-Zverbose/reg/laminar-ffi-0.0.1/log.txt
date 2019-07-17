@@ -1,0 +1,53 @@
+[INFO] fetching crate laminar-ffi 0.0.1...
+[INFO] extracting crate laminar-ffi 0.0.1 into work\ex\default\sources\nightly\reg\laminar-ffi\0.0.1
+[INFO] extracting crate laminar-ffi 0.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\laminar-ffi\0.0.1
+[INFO] validating manifest of laminar-ffi-0.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of laminar-ffi-0.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing laminar-ffi-0.0.1
+[INFO] finished frobbing laminar-ffi-0.0.1
+[INFO] frobbed toml for laminar-ffi-0.0.1 written to work\ex\default\sources\nightly\reg\laminar-ffi\0.0.1\Cargo.toml
+[INFO] started frobbing laminar-ffi-0.0.1
+[INFO] finished frobbing laminar-ffi-0.0.1
+[INFO] frobbed toml for laminar-ffi-0.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\laminar-ffi\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded laminar v0.1.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing laminar-ffi-0.0.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\laminar-ffi\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] b8fc9f5259bf325477ec728f97556c02f164073b26350621a4b1023801f99b43
+[INFO] running `"docker" "start" "-a" "b8fc9f5259bf325477ec728f97556c02f164073b26350621a4b1023801f99b43"`
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling rand v0.5.6
+[INFO] [stderr]    Compiling laminar v0.1.0
+[INFO] [stderr]    Compiling laminar-ffi v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 17.31s
+[INFO] running `"docker" "inspect" "b8fc9f5259bf325477ec728f97556c02f164073b26350621a4b1023801f99b43"`
+[INFO] running `"docker" "rm" "-f" "b8fc9f5259bf325477ec728f97556c02f164073b26350621a4b1023801f99b43"`
+[INFO] [stdout] b8fc9f5259bf325477ec728f97556c02f164073b26350621a4b1023801f99b43
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\laminar-ffi\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 74abf5d54453a812cb8d484996d150b63d5050035898d5e8253dfafb48d9134e
+[INFO] running `"docker" "start" "-a" "74abf5d54453a812cb8d484996d150b63d5050035898d5e8253dfafb48d9134e"`
+[INFO] [stderr]    Compiling laminar-ffi v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.76s
+[INFO] running `"docker" "inspect" "74abf5d54453a812cb8d484996d150b63d5050035898d5e8253dfafb48d9134e"`
+[INFO] running `"docker" "rm" "-f" "74abf5d54453a812cb8d484996d150b63d5050035898d5e8253dfafb48d9134e"`
+[INFO] [stdout] 74abf5d54453a812cb8d484996d150b63d5050035898d5e8253dfafb48d9134e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\laminar-ffi\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] dd1333e646dfdb1e5ad15cf09af84fcc55c32715e1737870b90f8d6bc4417a68
+[INFO] running `"docker" "start" "-a" "dd1333e646dfdb1e5ad15cf09af84fcc55c32715e1737870b90f8d6bc4417a68"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\laminar_ffi-69ea169b1a2ad542.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "dd1333e646dfdb1e5ad15cf09af84fcc55c32715e1737870b90f8d6bc4417a68"`
+[INFO] running `"docker" "rm" "-f" "dd1333e646dfdb1e5ad15cf09af84fcc55c32715e1737870b90f8d6bc4417a68"`
+[INFO] [stdout] dd1333e646dfdb1e5ad15cf09af84fcc55c32715e1737870b90f8d6bc4417a68

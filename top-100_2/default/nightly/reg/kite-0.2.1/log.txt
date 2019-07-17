@@ -1,0 +1,90 @@
+[INFO] fetching crate kite 0.2.1...
+[INFO] extracting crate kite 0.2.1 into work\ex\default\sources\nightly\reg\kite\0.2.1
+[INFO] extracting crate kite 0.2.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\kite\0.2.1
+[INFO] validating manifest of kite-0.2.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of kite-0.2.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing kite-0.2.1
+[INFO] finished frobbing kite-0.2.1
+[INFO] frobbed toml for kite-0.2.1 written to work\ex\default\sources\nightly\reg\kite\0.2.1\Cargo.toml
+[INFO] started frobbing kite-0.2.1
+[INFO] finished frobbing kite-0.2.1
+[INFO] frobbed toml for kite-0.2.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\kite\0.2.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded unicode-segmentation v0.1.3
+[INFO] [stderr]   Downloaded roaring v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing kite-0.2.1 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\kite\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d4f2e4288e754544004020bab2233b45d3706887327ab657a60fd1ba773e07c8
+[INFO] running `"docker" "start" "-a" "d4f2e4288e754544004020bab2233b45d3706887327ab657a60fd1ba773e07c8"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling byteorder v0.5.3
+[INFO] [stderr]    Compiling unicode-segmentation v0.1.3
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling roaring v0.5.2
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling kite v0.2.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 41.57s
+[INFO] running `"docker" "inspect" "d4f2e4288e754544004020bab2233b45d3706887327ab657a60fd1ba773e07c8"`
+[INFO] running `"docker" "rm" "-f" "d4f2e4288e754544004020bab2233b45d3706887327ab657a60fd1ba773e07c8"`
+[INFO] [stdout] d4f2e4288e754544004020bab2233b45d3706887327ab657a60fd1ba773e07c8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\kite\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2ab2d0765b421ec1bc25f400b9d8046bdddf80a184ea10a39bd35e4604c990c9
+[INFO] running `"docker" "start" "-a" "2ab2d0765b421ec1bc25f400b9d8046bdddf80a184ea10a39bd35e4604c990c9"`
+[INFO] [stderr]    Compiling kite v0.2.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.33s
+[INFO] running `"docker" "inspect" "2ab2d0765b421ec1bc25f400b9d8046bdddf80a184ea10a39bd35e4604c990c9"`
+[INFO] running `"docker" "rm" "-f" "2ab2d0765b421ec1bc25f400b9d8046bdddf80a184ea10a39bd35e4604c990c9"`
+[INFO] [stdout] 2ab2d0765b421ec1bc25f400b9d8046bdddf80a184ea10a39bd35e4604c990c9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\kite\\0.2.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] b4b1b883fb292257d7339925446dc801eefd29a7a0d37ad18c67048f5037879e
+[INFO] running `"docker" "start" "-a" "b4b1b883fb292257d7339925446dc801eefd29a7a0d37ad18c67048f5037879e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.39s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\kite-f96e14667db435e1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 27 tests
+[INFO] [stdout] test collectors::top_score::tests::test_top_score_collector_collect ... ok
+[INFO] [stdout] test collectors::top_score::tests::test_top_score_collector_inital_state ... ok
+[INFO] [stdout] test collectors::top_score::tests::test_top_score_collector_needs_score ... ok
+[INFO] [stdout] test collectors::top_score::tests::test_top_score_collector_truncate ... ok
+[INFO] [stdout] test collectors::total_count::tests::test_total_count_collector_collect ... ok
+[INFO] [stdout] test collectors::total_count::tests::test_total_count_collector_inital_state ... ok
+[INFO] [stdout] test collectors::total_count::tests::test_total_count_collector_needs_score ... ok
+[INFO] [stdout] test similarity::tests::test_bm25_handles_zeros ... ok
+[INFO] [stdout] test similarity::tests::test_bm25_higher_term_freq_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_bm25_higher_total_tokens_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_bm25_lower_field_length_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_bm25_lower_term_docs_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_tf_idf_field_length_doesnt_affect_score ... ok
+[INFO] [stdout] test similarity::tests::test_tf_idf_handles_zeros ... ok
+[INFO] [stderr]    Doc-tests kite
+[INFO] [stdout] test similarity::tests::test_tf_idf_higher_term_freq_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_tf_idf_lower_term_docs_increases_score ... ok
+[INFO] [stdout] test similarity::tests::test_tf_idf_total_tokens_doesnt_affect_score ... ok
+[INFO] [stdout] test term::tests::test_blank_string_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_boolean_false_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_boolean_true_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_datetime_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_datetime_with_different_timezone_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_datetime_with_microseconds_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_hiragana_string_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_integer_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_negative_integer_to_bytes ... ok
+[INFO] [stdout] test term::tests::test_string_to_bytes ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b4b1b883fb292257d7339925446dc801eefd29a7a0d37ad18c67048f5037879e"`
+[INFO] running `"docker" "rm" "-f" "b4b1b883fb292257d7339925446dc801eefd29a7a0d37ad18c67048f5037879e"`
+[INFO] [stdout] b4b1b883fb292257d7339925446dc801eefd29a7a0d37ad18c67048f5037879e

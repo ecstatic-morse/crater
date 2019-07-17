@@ -1,0 +1,69 @@
+[INFO] crate maplit 1.0.1 is already in cache
+[INFO] extracting crate maplit 1.0.1 into work\ex\default\sources\nightly\reg\maplit\1.0.1
+[INFO] extracting crate maplit 1.0.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\maplit\1.0.1
+[INFO] validating manifest of maplit-1.0.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of maplit-1.0.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing maplit-1.0.1
+[INFO] finished frobbing maplit-1.0.1
+[INFO] frobbed toml for maplit-1.0.1 written to work\ex\default\sources\nightly\reg\maplit\1.0.1\Cargo.toml
+[INFO] started frobbing maplit-1.0.1
+[INFO] finished frobbing maplit-1.0.1
+[INFO] frobbed toml for maplit-1.0.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\maplit\1.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing maplit-1.0.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\maplit\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 3575d97407599a02dbeb6e3a435710896c5db5b2d941db0459ab13b1f792bf99
+[INFO] running `"docker" "start" "-a" "3575d97407599a02dbeb6e3a435710896c5db5b2d941db0459ab13b1f792bf99"`
+[INFO] [stderr]    Compiling maplit v1.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.74s
+[INFO] running `"docker" "inspect" "3575d97407599a02dbeb6e3a435710896c5db5b2d941db0459ab13b1f792bf99"`
+[INFO] running `"docker" "rm" "-f" "3575d97407599a02dbeb6e3a435710896c5db5b2d941db0459ab13b1f792bf99"`
+[INFO] [stdout] 3575d97407599a02dbeb6e3a435710896c5db5b2d941db0459ab13b1f792bf99
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\maplit\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2fa7e4663a3454420f180586ae2a8767e59cafb354425de8e387077bec82bd84
+[INFO] running `"docker" "start" "-a" "2fa7e4663a3454420f180586ae2a8767e59cafb354425de8e387077bec82bd84"`
+[INFO] [stderr]    Compiling maplit v1.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.88s
+[INFO] running `"docker" "inspect" "2fa7e4663a3454420f180586ae2a8767e59cafb354425de8e387077bec82bd84"`
+[INFO] running `"docker" "rm" "-f" "2fa7e4663a3454420f180586ae2a8767e59cafb354425de8e387077bec82bd84"`
+[INFO] [stdout] 2fa7e4663a3454420f180586ae2a8767e59cafb354425de8e387077bec82bd84
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\maplit\\1.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] a731cbe0132b7f4f13a510640963dec6b8d6a0480a883d103d159c39420af0b6
+[INFO] running `"docker" "start" "-a" "a731cbe0132b7f4f13a510640963dec6b8d6a0480a883d103d159c39420af0b6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\maplit-3069a1c3372bf7e2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test test_btreemap ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tests-f9d5ff5b957b28c4.exe
+[INFO] [stdout] test test_hashmap ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests maplit
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test hashset ... ok
+[INFO] [stdout] test test_parse ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test src\lib.rs -  (line 7) ... ok
+[INFO] [stdout] test src\lib.rs - btreeset (line 133) ... ok
+[INFO] [stdout] test src\lib.rs - btreemap (line 100) ... ok
+[INFO] [stdout] test src\lib.rs - convert_args (line 178) ... ok
+[INFO] [stdout] test src\lib.rs - hashset (line 67) ... ok
+[INFO] [stdout] test src\lib.rs - hashmap (line 33) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a731cbe0132b7f4f13a510640963dec6b8d6a0480a883d103d159c39420af0b6"`
+[INFO] running `"docker" "rm" "-f" "a731cbe0132b7f4f13a510640963dec6b8d6a0480a883d103d159c39420af0b6"`
+[INFO] [stdout] a731cbe0132b7f4f13a510640963dec6b8d6a0480a883d103d159c39420af0b6

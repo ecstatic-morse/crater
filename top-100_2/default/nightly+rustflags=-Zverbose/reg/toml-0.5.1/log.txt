@@ -1,0 +1,90 @@
+[INFO] crate toml 0.5.1 is already in cache
+[INFO] extracting crate toml 0.5.1 into work\ex\default\sources\nightly\reg\toml\0.5.1
+[INFO] extracting crate toml 0.5.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\toml\0.5.1
+[INFO] validating manifest of toml-0.5.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of toml-0.5.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing toml-0.5.1
+[INFO] finished frobbing toml-0.5.1
+[INFO] frobbed toml for toml-0.5.1 written to work\ex\default\sources\nightly\reg\toml\0.5.1\Cargo.toml
+[INFO] started frobbing toml-0.5.1
+[INFO] finished frobbing toml-0.5.1
+[INFO] frobbed toml for toml-0.5.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\toml\0.5.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing toml-0.5.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8bd393680f2f7b268677aeea1bf6dc8ec96bbaa2b9489d8fa34426f4c09a870b
+[INFO] running `"docker" "start" "-a" "8bd393680f2f7b268677aeea1bf6dc8ec96bbaa2b9489d8fa34426f4c09a870b"`
+[INFO] [stderr]    Compiling toml v0.5.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.50s
+[INFO] running `"docker" "inspect" "8bd393680f2f7b268677aeea1bf6dc8ec96bbaa2b9489d8fa34426f4c09a870b"`
+[INFO] running `"docker" "rm" "-f" "8bd393680f2f7b268677aeea1bf6dc8ec96bbaa2b9489d8fa34426f4c09a870b"`
+[INFO] [stdout] 8bd393680f2f7b268677aeea1bf6dc8ec96bbaa2b9489d8fa34426f4c09a870b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ba34d1e0cb619cac45b8b243d12a6cfc8a17785fc3dc30e9f36325c0d2a65fd5
+[INFO] running `"docker" "start" "-a" "ba34d1e0cb619cac45b8b243d12a6cfc8a17785fc3dc30e9f36325c0d2a65fd5"`
+[INFO] [stderr]    Compiling toml v0.5.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.66s
+[INFO] running `"docker" "inspect" "ba34d1e0cb619cac45b8b243d12a6cfc8a17785fc3dc30e9f36325c0d2a65fd5"`
+[INFO] running `"docker" "rm" "-f" "ba34d1e0cb619cac45b8b243d12a6cfc8a17785fc3dc30e9f36325c0d2a65fd5"`
+[INFO] [stdout] ba34d1e0cb619cac45b8b243d12a6cfc8a17785fc3dc30e9f36325c0d2a65fd5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\toml\\0.5.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] ed08d201ac39a914baf9e22c582d630b413336a79d40cb5fd9c4a6d4e47f2743
+[INFO] running `"docker" "start" "-a" "ed08d201ac39a914baf9e22c582d630b413336a79d40cb5fd9c4a6d4e47f2743"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.44s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\toml-0a2a813049d03966.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test tokens::tests::all ... ok
+[INFO] [stdout] test tokens::tests::bad_comment ... ok
+[INFO] [stdout] test tokens::tests::bare_cr_bad ... ok
+[INFO] [stdout] test tokens::tests::basic_strings ... ok
+[INFO] [stdout] test tokens::tests::keylike ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\enum_external_deserialize-c680c1cdd487a344.exe
+[INFO] [stdout] test tokens::tests::literal_strings ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests toml
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test enum_array::from_dotted_table ... ignored
+[INFO] [stdout] test enum_newtype::from_dotted_table ... ignored
+[INFO] [stdout] test enum_array::from_inline_tables ... ok
+[INFO] [stdout] test enum_newtype::from_inline_table ... ok
+[INFO] [stdout] test enum_struct::from_dotted_table ... ok
+[INFO] [stdout] test enum_struct::from_inline_table ... ok
+[INFO] [stdout] test enum_tuple::from_dotted_table ... ok
+[INFO] [stdout] test enum_tuple::from_inline_table ... ok
+[INFO] [stdout] test enum_unit::from_dotted_table ... ok
+[INFO] [stdout] test enum_unit::from_inline_table ... ok
+[INFO] [stdout] test enum_unit::from_str ... ok
+[INFO] [stdout] test extra_field_returns_expected_empty_table_error ... ok
+[INFO] [stdout] test extra_field_returns_expected_empty_table_error_struct_variant ... ok
+[INFO] [stdout] test invalid_variant_returns_error_with_good_message_inline_table ... ok
+[INFO] [stdout] test invalid_variant_returns_error_with_good_message_string ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test src\lib.rs -  (line 26) ... ignored
+[INFO] [stdout] test src\lib.rs -  (line 113) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 46) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 79) ... ok
+[INFO] [stdout] test src\de.rs - de::from_str (line 43) ... ok
+[INFO] [stdout] test src\ser.rs - ser (line 14) ... ok
+[INFO] [stdout] test src\ser.rs - ser::tables_last (line 1583) ... ok
+[INFO] [stdout] test src\macros.rs - toml (line 9) ... ok
+[INFO] [stdout] test src\ser.rs - ser::to_string (line 57) ... ok
+[INFO] [stdout] test src\spanned.rs - spanned (line 1) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ed08d201ac39a914baf9e22c582d630b413336a79d40cb5fd9c4a6d4e47f2743"`
+[INFO] running `"docker" "rm" "-f" "ed08d201ac39a914baf9e22c582d630b413336a79d40cb5fd9c4a6d4e47f2743"`
+[INFO] [stdout] ed08d201ac39a914baf9e22c582d630b413336a79d40cb5fd9c4a6d4e47f2743

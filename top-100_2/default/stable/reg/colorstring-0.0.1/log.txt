@@ -1,0 +1,57 @@
+[INFO] fetching crate colorstring 0.0.1...
+[INFO] extracting crate colorstring 0.0.1 into work\ex\default\sources\stable\reg\colorstring\0.0.1
+[INFO] extracting crate colorstring 0.0.1 into work\ex\default\sources\beta\reg\colorstring\0.0.1
+[INFO] validating manifest of colorstring-0.0.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of colorstring-0.0.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing colorstring-0.0.1
+[INFO] finished frobbing colorstring-0.0.1
+[INFO] frobbed toml for colorstring-0.0.1 written to work\ex\default\sources\stable\reg\colorstring\0.0.1\Cargo.toml
+[INFO] started frobbing colorstring-0.0.1
+[INFO] finished frobbing colorstring-0.0.1
+[INFO] frobbed toml for colorstring-0.0.1 written to work\ex\default\sources\beta\reg\colorstring\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing colorstring-0.0.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\colorstring\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a7ab3fb3b9dec9dfb198a67f5c8a80d3e7fd9e973a6fd440e323508d31f341e0
+[INFO] running `"docker" "start" "-a" "a7ab3fb3b9dec9dfb198a67f5c8a80d3e7fd9e973a6fd440e323508d31f341e0"`
+[INFO] [stderr]    Compiling regex v0.2.11
+[INFO] [stderr]    Compiling regex-syntax v0.5.6
+[INFO] [stderr]    Compiling aho-corasick v0.6.10
+[INFO] [stderr]    Compiling colorstring v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 38.23s
+[INFO] running `"docker" "inspect" "a7ab3fb3b9dec9dfb198a67f5c8a80d3e7fd9e973a6fd440e323508d31f341e0"`
+[INFO] running `"docker" "rm" "-f" "a7ab3fb3b9dec9dfb198a67f5c8a80d3e7fd9e973a6fd440e323508d31f341e0"`
+[INFO] [stdout] a7ab3fb3b9dec9dfb198a67f5c8a80d3e7fd9e973a6fd440e323508d31f341e0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\colorstring\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c9f33ef4d5e08ec845448360df7a4ebbd9d9281a67e90c304ee255eb02e01a34
+[INFO] running `"docker" "start" "-a" "c9f33ef4d5e08ec845448360df7a4ebbd9d9281a67e90c304ee255eb02e01a34"`
+[INFO] [stderr]    Compiling colorstring v0.0.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.71s
+[INFO] running `"docker" "inspect" "c9f33ef4d5e08ec845448360df7a4ebbd9d9281a67e90c304ee255eb02e01a34"`
+[INFO] running `"docker" "rm" "-f" "c9f33ef4d5e08ec845448360df7a4ebbd9d9281a67e90c304ee255eb02e01a34"`
+[INFO] [stdout] c9f33ef4d5e08ec845448360df7a4ebbd9d9281a67e90c304ee255eb02e01a34
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\colorstring\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 056917d963da26d8e6f5c063416975cca85b66d52ac7c127bf80f7dfb9fce917
+[INFO] running `"docker" "start" "-a" "056917d963da26d8e6f5c063416975cca85b66d52ac7c127bf80f7dfb9fce917"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\colorstring-17dce0fa77a2ea81.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stderr]    Doc-tests colorstring
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "056917d963da26d8e6f5c063416975cca85b66d52ac7c127bf80f7dfb9fce917"`
+[INFO] running `"docker" "rm" "-f" "056917d963da26d8e6f5c063416975cca85b66d52ac7c127bf80f7dfb9fce917"`
+[INFO] [stdout] 056917d963da26d8e6f5c063416975cca85b66d52ac7c127bf80f7dfb9fce917

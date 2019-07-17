@@ -1,0 +1,34 @@
+[INFO] fetching crate git2 0.9.1...
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\stable\reg\git2\0.9.1
+[INFO] extracting crate git2 0.9.1 into work\ex\default\sources\beta\reg\git2\0.9.1
+[INFO] validating manifest of git2-0.9.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of git2-0.9.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\stable\reg\git2\0.9.1\Cargo.toml
+[INFO] started frobbing git2-0.9.1
+[INFO] finished frobbing git2-0.9.1
+[INFO] frobbed toml for git2-0.9.1 written to work\ex\default\sources\beta\reg\git2\0.9.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded libgit2-sys v0.8.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing git2-0.9.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\git2\\0.9.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] bbad5be9670f74fd4b35d6ea1159afba7a4dd957914b96baf49df6be35fc6b92
+[INFO] running `"docker" "start" "-a" "bbad5be9670f74fd4b35d6ea1159afba7a4dd957914b96baf49df6be35fc6b92"`
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling vcpkg v0.2.7
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling libgit2-sys v0.8.1
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11
+[INFO] [stderr]    Compiling url v1.7.2
+[ERROR] error running command: no output for 300 seconds
+[INFO] running `"docker" "inspect" "bbad5be9670f74fd4b35d6ea1159afba7a4dd957914b96baf49df6be35fc6b92"`
+[INFO] running `"docker" "rm" "-f" "bbad5be9670f74fd4b35d6ea1159afba7a4dd957914b96baf49df6be35fc6b92"`
+[INFO] [stdout] bbad5be9670f74fd4b35d6ea1159afba7a4dd957914b96baf49df6be35fc6b92

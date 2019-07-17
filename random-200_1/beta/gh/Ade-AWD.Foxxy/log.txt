@@ -1,0 +1,59 @@
+[INFO] cloning repository Ade-AWD/Foxxy
+[INFO] running `"git" "clone" "--bare" "git://github.com/Ade-AWD/Foxxy.git" "work\\cache\\sources\\gh\\Ade-AWD\\Foxxy"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Ade-AWD\Foxxy'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Ade-AWD\\Foxxy" "work\\ex\\default\\sources\\stable\\gh\\Ade-AWD\\Foxxy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Ade-AWD\Foxxy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Ade-AWD\\Foxxy" "work\\ex\\default\\sources\\beta\\gh\\Ade-AWD\\Foxxy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Ade-AWD\Foxxy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 2bd0da5fe6315feee19f744205b4120a989d69d6
+[INFO] sha for GitHub repo Ade-AWD/Foxxy: 2bd0da5fe6315feee19f744205b4120a989d69d6
+[INFO] validating manifest of Ade-AWD/Foxxy on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Ade-AWD/Foxxy on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Ade-AWD/Foxxy
+[INFO] finished frobbing Ade-AWD/Foxxy
+[INFO] frobbed toml for Ade-AWD/Foxxy written to work\ex\default\sources\stable\gh\Ade-AWD\Foxxy\Cargo.toml
+[INFO] started frobbing Ade-AWD/Foxxy
+[INFO] finished frobbing Ade-AWD/Foxxy
+[INFO] frobbed toml for Ade-AWD/Foxxy written to work\ex\default\sources\beta\gh\Ade-AWD\Foxxy\Cargo.toml
+[INFO] crate Ade-AWD/Foxxy already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing Ade-AWD/Foxxy against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\Ade-AWD\\Foxxy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 5f29b445feb66ab264f1595e211dc204d41a36728471cf61905c329f2a8fad6a
+[INFO] running `"docker" "start" "-a" "5f29b445feb66ab264f1595e211dc204d41a36728471cf61905c329f2a8fad6a"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling num-traits v0.2.1
+[INFO] [stderr]    Compiling libc v0.2.39
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling sdl2-sys v0.31.0
+[INFO] [stderr]    Compiling num-integer v0.1.36
+[INFO] [stderr]    Compiling num-iter v0.1.35
+[INFO] [stderr]    Compiling num v0.1.42
+[INFO] [stderr]    Compiling rand v0.4.2
+[INFO] [stderr]    Compiling rand v0.3.22
+[INFO] [stderr]    Compiling sdl2 v0.31.0
+[INFO] [stderr]    Compiling foxxy v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1181
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.foxxy.83hjd3xp-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.exe" "C:\\crater\\target\\debug\\deps\\foxxy-519bddffb3bea1c7.d2cgyqkiph66eqq.rcgu.o" "/OPT:REF,NOICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\libsdl2-d6cec145af4e9d5d.rlib" "C:\\crater\\target\\debug\\deps\\librand-152fb9e0e68851fd.rlib" "C:\\crater\\target\\debug\\deps\\librand-03ec083624cdc54d.rlib" "C:\\crater\\target\\debug\\deps\\libwinapi-60b3fe6e96ca676d.rlib" "C:\\crater\\target\\debug\\deps\\libsdl2_sys-e18df162657dce2e.rlib" "C:\\crater\\target\\debug\\deps\\libbitflags-507fce4c83acd673.rlib" "C:\\crater\\target\\debug\\deps\\liblazy_static-ef42b5d0d8e2083b.rlib" "C:\\crater\\target\\debug\\deps\\liblibc-9e68228221d3119c.rlib" "C:\\crater\\target\\debug\\deps\\libnum-ab9369fbec1019d8.rlib" "C:\\crater\\target\\debug\\deps\\libnum_iter-280bcbda33ea1353.rlib" "C:\\crater\\target\\debug\\deps\\libnum_integer-d1cbf8c273d3793e.rlib" "C:\\crater\\target\\debug\\deps\\libnum_traits-82867987f6b8ec6c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libstd-ae440165b54f3716.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libpanic_unwind-8a83f4a09865bc9f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libbacktrace-1850b48c943180da.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_demangle-0a5e03c766fa20b5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libhashbrown-d1709237ec5374af.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_alloc-775541a947236e83.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libunwind-2e4c68437e8b5e9c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcfg_if-b5a30980482ab3ec.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liblibc-ab3a9fb5d30a4dfd.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\liballoc-001c7ac0c20c5e0f.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\librustc_std_workspace_core-6b49372d6bd9e0c5.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcore-29633d14c5ac589c.rlib" "C:\\crater\\rustup-home\\toolchains\\beta-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib\\libcompiler_builtins-843b3d69fb034b53.rlib" "advapi32.lib" "kernel32.lib" "secur32.lib" "credui.lib" "SDL2.lib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib"
+[INFO] [stderr]   = note: LINK : fatal error LNK1181: cannot open input file 'SDL2.lib'
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `foxxy`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "5f29b445feb66ab264f1595e211dc204d41a36728471cf61905c329f2a8fad6a"`
+[INFO] running `"docker" "rm" "-f" "5f29b445feb66ab264f1595e211dc204d41a36728471cf61905c329f2a8fad6a"`
+[INFO] [stdout] 5f29b445feb66ab264f1595e211dc204d41a36728471cf61905c329f2a8fad6a

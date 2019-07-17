@@ -1,0 +1,63 @@
+[INFO] cloning repository TheArchmage/rust_stat_generator
+[INFO] running `"git" "clone" "--bare" "git://github.com/TheArchmage/rust_stat_generator.git" "work\\cache\\sources\\gh\\TheArchmage\\rust_stat_generator"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\TheArchmage\rust_stat_generator'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\TheArchmage\\rust_stat_generator" "work\\ex\\default\\sources\\nightly\\gh\\TheArchmage\\rust_stat_generator"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\TheArchmage\rust_stat_generator'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\TheArchmage\\rust_stat_generator" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\TheArchmage\\rust_stat_generator"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\TheArchmage\rust_stat_generator'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 37062110b4e4e310f120586f8854b5e072e2b103
+[INFO] sha for GitHub repo TheArchmage/rust_stat_generator: 37062110b4e4e310f120586f8854b5e072e2b103
+[INFO] validating manifest of TheArchmage/rust_stat_generator on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of TheArchmage/rust_stat_generator on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing TheArchmage/rust_stat_generator
+[INFO] finished frobbing TheArchmage/rust_stat_generator
+[INFO] frobbed toml for TheArchmage/rust_stat_generator written to work\ex\default\sources\nightly\gh\TheArchmage\rust_stat_generator\Cargo.toml
+[INFO] started frobbing TheArchmage/rust_stat_generator
+[INFO] finished frobbing TheArchmage/rust_stat_generator
+[INFO] frobbed toml for TheArchmage/rust_stat_generator written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\TheArchmage\rust_stat_generator\Cargo.toml
+[INFO] crate TheArchmage/rust_stat_generator already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing TheArchmage/rust_stat_generator against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\TheArchmage\\rust_stat_generator,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 80b5b87d64875d3378692ddd875c868b90f4291e6e32aec54b7e256d74248ff2
+[INFO] running `"docker" "start" "-a" "80b5b87d64875d3378692ddd875c868b90f4291e6e32aec54b7e256d74248ff2"`
+[INFO] [stderr]    Compiling stat_generator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0261]: use of undeclared lifetime name `'a`
+[INFO] [stderr]   --> src\lib.rs:92:11
+[INFO] [stderr]    |
+[INFO] [stderr] 92 | impl Stat<'a> {
+[INFO] [stderr]    |           ^^ undeclared lifetime
+[INFO] [stderr] 
+[INFO] [stderr] error[E0261]: use of undeclared lifetime name `'a`
+[INFO] [stderr]   --> src\lib.rs:93:19
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     fn new(name: &'a str, value: i32) -> Stat<'a> {
+[INFO] [stderr]    |                   ^^ undeclared lifetime
+[INFO] [stderr] 
+[INFO] [stderr] error[E0261]: use of undeclared lifetime name `'a`
+[INFO] [stderr]   --> src\lib.rs:93:47
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |     fn new(name: &'a str, value: i32) -> Stat<'a> {
+[INFO] [stderr]    |                                               ^^ undeclared lifetime
+[INFO] [stderr] 
+[INFO] [stderr] error[E0261]: use of undeclared lifetime name `'a`
+[INFO] [stderr]    --> src\lib.rs:103:25
+[INFO] [stderr]     |
+[INFO] [stderr] 103 |     pub stats: Vec<Stat<'a>>,
+[INFO] [stderr]     |                         ^^ undeclared lifetime
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0261`.
+[INFO] [stderr] error: Could not compile `stat_generator`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "80b5b87d64875d3378692ddd875c868b90f4291e6e32aec54b7e256d74248ff2"`
+[INFO] running `"docker" "rm" "-f" "80b5b87d64875d3378692ddd875c868b90f4291e6e32aec54b7e256d74248ff2"`
+[INFO] [stdout] 80b5b87d64875d3378692ddd875c868b90f4291e6e32aec54b7e256d74248ff2

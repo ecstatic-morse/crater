@@ -1,0 +1,285 @@
+[INFO] fetching crate quick-error 1.2.2...
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\stable\reg\quick-error\1.2.2
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\beta\reg\quick-error\1.2.2
+[INFO] validating manifest of quick-error-1.2.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quick-error-1.2.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\stable\reg\quick-error\1.2.2\Cargo.toml
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\beta\reg\quick-error\1.2.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quick-error-1.2.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 32b4db18d820284574e745af350506c9580faeef040030662a24b849d1342cf4
+[INFO] running `"docker" "start" "-a" "32b4db18d820284574e745af350506c9580faeef040030662a24b849d1342cf4"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.48s
+[INFO] running `"docker" "inspect" "32b4db18d820284574e745af350506c9580faeef040030662a24b849d1342cf4"`
+[INFO] running `"docker" "rm" "-f" "32b4db18d820284574e745af350506c9580faeef040030662a24b849d1342cf4"`
+[INFO] [stdout] 32b4db18d820284574e745af350506c9580faeef040030662a24b849d1342cf4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 31d3b7bef72cc7abcefd3d25223841e4d7583b905281bdf8cada3671740b4891
+[INFO] running `"docker" "start" "-a" "31d3b7bef72cc7abcefd3d25223841e4d7583b905281bdf8cada3671740b4891"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1036 | /     quick_error! {
+[INFO] [stderr] 1037 | |         #[derive(Debug)]
+[INFO] [stderr] 1038 | |         pub enum Bare {
+[INFO] [stderr] 1039 | |             One
+[INFO] [stderr] 1040 | |             Two
+[INFO] [stderr] 1041 | |         }
+[INFO] [stderr] 1042 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr]      |
+[INFO] [stderr]      = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1053:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1053 |         let err: &Error = &Bare::Two;
+[INFO] [stderr]      |                   ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:385:40
+[INFO] [stderr]      |
+[INFO] [stderr] 385  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1060 | /     quick_error! {
+[INFO] [stderr] 1061 | |         #[derive(Debug)]
+[INFO] [stderr] 1062 | |         pub enum Wrapper wraps Wrapped {
+[INFO] [stderr] 1063 | |             One
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1068 | |         }
+[INFO] [stderr] 1069 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1060 | /     quick_error! {
+[INFO] [stderr] 1061 | |         #[derive(Debug)]
+[INFO] [stderr] 1062 | |         pub enum Wrapper wraps Wrapped {
+[INFO] [stderr] 1063 | |             One
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1068 | |         }
+[INFO] [stderr] 1069 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1084 | /     quick_error! {
+[INFO] [stderr] 1085 | |         #[derive(Debug, PartialEq)]
+[INFO] [stderr] 1086 | |         pub enum TupleWrapper {
+[INFO] [stderr] 1087 | |             /// ParseFloat Error
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1111 | |         }
+[INFO] [stderr] 1112 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1127:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1127 |         let err: &Error = &TupleWrapper::Other(desc);
+[INFO] [stderr]      |                   ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1138:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1138 |         let err: &Error = &TupleWrapper::FromUtf8Error(cause.clone(), invalid_utf8.clone());
+[INFO] [stderr]      |                   ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1180 | /     quick_error! {
+[INFO] [stderr] 1181 | |         #[derive(Debug, PartialEq)]
+[INFO] [stderr] 1182 | |         pub enum StructWrapper {
+[INFO] [stderr] 1183 | |             // Utf8 Error
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1195 | |         }
+[INFO] [stderr] 1196 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:1202:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1202 |         let err: &Error = &StructWrapper::Utf8Error{ err: cause.clone(), hint: Some("nonsense") };
+[INFO] [stderr]      |                   ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1228 | /     quick_error! {
+[INFO] [stderr] 1229 | |         #[derive(Debug)]
+[INFO] [stderr] 1230 | |         pub enum ContextErr {
+[INFO] [stderr] 1231 | |             Float(src: String, err: ParseFloatError) {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1250 | |         }
+[INFO] [stderr] 1251 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]     --> src\lib.rs:685:40
+[INFO] [stderr]      |
+[INFO] [stderr] 685  |               fn cause(&self) -> Option<&::std::error::Error> {
+[INFO] [stderr]      |                                          ^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (::std::error::Error)`
+[INFO] [stderr] ...
+[INFO] [stderr] 1300 | /         quick_error! {
+[INFO] [stderr] 1301 | |             #[allow(dead_code)]
+[INFO] [stderr] 1302 | |             #[derive(Debug)]
+[INFO] [stderr] 1303 | |             pub enum Test {
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1306 | |             }
+[INFO] [stderr] 1307 | |         }
+[INFO] [stderr]      | |_________- in this macro invocation
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:386:24
+[INFO] [stderr]      |
+[INFO] [stderr] 386  |                   self.0.cause()
+[INFO] [stderr]      |                          ^^^^^
+[INFO] [stderr] ...
+[INFO] [stderr] 1060 | /     quick_error! {
+[INFO] [stderr] 1061 | |         #[derive(Debug)]
+[INFO] [stderr] 1062 | |         pub enum Wrapper wraps Wrapped {
+[INFO] [stderr] 1063 | |             One
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1068 | |         }
+[INFO] [stderr] 1069 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr]      |
+[INFO] [stderr]      = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1049:27
+[INFO] [stderr]      |
+[INFO] [stderr] 1049 |         assert!(Bare::One.cause().is_none());
+[INFO] [stderr]      |                           ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1057:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1057 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1121:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1121 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1131:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1131 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1142:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1142 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1168:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1168 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1177:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1177 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1206:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1206 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1225:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1225 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.31s
+[INFO] running `"docker" "inspect" "31d3b7bef72cc7abcefd3d25223841e4d7583b905281bdf8cada3671740b4891"`
+[INFO] running `"docker" "rm" "-f" "31d3b7bef72cc7abcefd3d25223841e4d7583b905281bdf8cada3671740b4891"`
+[INFO] [stdout] 31d3b7bef72cc7abcefd3d25223841e4d7583b905281bdf8cada3671740b4891
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 8e4de3ed9a20b2c0a135787bfebe52fb908279069a6b192acef675d365d16259
+[INFO] running `"docker" "start" "-a" "8e4de3ed9a20b2c0a135787bfebe52fb908279069a6b192acef675d365d16259"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quick_error-67b6891668dceaf7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 18 tests
+[INFO] [stdout] test test::bare_item_direct ... ok
+[INFO] [stdout] test test::bare_item_trait ... ok
+[INFO] [stdout] test test::conditional_compilation ... ok
+[INFO] [stdout] test test::debug_context ... ok
+[INFO] [stdout] test test::parse_float_error ... ok
+[INFO] [stdout] test test::parse_int_error ... ok
+[INFO] [stdout] test test::path_context ... ok
+[INFO] [stdout] test test::struct_wrapper_err ... ok
+[INFO] [stdout] test test::struct_wrapper_excess_comma ... ok
+[INFO] [stdout] test test::struct_wrapper_struct_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_custom_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_discard ... ok
+[INFO] [stdout] test test::tuple_wrapper_err ... ok
+[INFO] [stdout] test test::tuple_wrapper_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_singleton ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_str ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_two_fields ... ok
+[INFO] [stdout] test test::wrapper ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quick-error
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test src\lib.rs -  (line 150) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 106) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 169) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 126) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 187) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 270) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 27) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 212) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 284) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 55) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 78) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 6) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "8e4de3ed9a20b2c0a135787bfebe52fb908279069a6b192acef675d365d16259"`
+[INFO] running `"docker" "rm" "-f" "8e4de3ed9a20b2c0a135787bfebe52fb908279069a6b192acef675d365d16259"`
+[INFO] [stdout] 8e4de3ed9a20b2c0a135787bfebe52fb908279069a6b192acef675d365d16259

@@ -1,0 +1,81 @@
+[INFO] cloning repository ryanobeirne/monte_carlo
+[INFO] running `"git" "clone" "--bare" "git://github.com/ryanobeirne/monte_carlo.git" "work\\cache\\sources\\gh\\ryanobeirne\\monte_carlo"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ryanobeirne\monte_carlo'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ryanobeirne\\monte_carlo" "work\\ex\\default\\sources\\nightly\\gh\\ryanobeirne\\monte_carlo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\ryanobeirne\monte_carlo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ryanobeirne\\monte_carlo" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ryanobeirne\\monte_carlo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ryanobeirne\monte_carlo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 275da0d4053df07288ab333033610fdaedf0a4f3
+[INFO] sha for GitHub repo ryanobeirne/monte_carlo: 275da0d4053df07288ab333033610fdaedf0a4f3
+[INFO] validating manifest of ryanobeirne/monte_carlo on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ryanobeirne/monte_carlo on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ryanobeirne/monte_carlo
+[INFO] finished frobbing ryanobeirne/monte_carlo
+[INFO] frobbed toml for ryanobeirne/monte_carlo written to work\ex\default\sources\nightly\gh\ryanobeirne\monte_carlo\Cargo.toml
+[INFO] started frobbing ryanobeirne/monte_carlo
+[INFO] finished frobbing ryanobeirne/monte_carlo
+[INFO] frobbed toml for ryanobeirne/monte_carlo written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\ryanobeirne\monte_carlo\Cargo.toml
+[INFO] crate ryanobeirne/monte_carlo already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ryanobeirne/monte_carlo against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ryanobeirne\\monte_carlo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 1abc624fbce06a9e7e562dc7b340fa1a1182975ee17220b19cbf5a066b4ab73c
+[INFO] running `"docker" "start" "-a" "1abc624fbce06a9e7e562dc7b340fa1a1182975ee17220b19cbf5a066b4ab73c"`
+[INFO] [stderr]    Compiling semver-parser v0.7.0
+[INFO] [stderr]    Compiling libc v0.2.44
+[INFO] [stderr]    Compiling cfg-if v0.1.6
+[INFO] [stderr]    Compiling nodrop v0.1.13
+[INFO] [stderr]    Compiling memoffset v0.2.1
+[INFO] [stderr]    Compiling lazy_static v1.2.0
+[INFO] [stderr]    Compiling scopeguard v0.3.3
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling rayon-core v1.4.1
+[INFO] [stderr]    Compiling rand_core v0.3.0
+[INFO] [stderr]    Compiling rayon v1.0.3
+[INFO] [stderr]    Compiling either v1.5.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.2.2
+[INFO] [stderr]    Compiling arrayvec v0.4.8
+[INFO] [stderr]    Compiling semver v0.9.0
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rand_xorshift v0.1.0
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling crossbeam-epoch v0.3.1
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling rustc_version v0.2.3
+[INFO] [stderr]    Compiling crossbeam-deque v0.2.0
+[INFO] [stderr]    Compiling rand_pcg v0.1.1
+[INFO] [stderr]    Compiling rand_chacha v0.1.0
+[INFO] [stderr]    Compiling rand v0.6.1
+[INFO] [stderr]    Compiling monte_carlo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 34.31s
+[INFO] running `"docker" "inspect" "1abc624fbce06a9e7e562dc7b340fa1a1182975ee17220b19cbf5a066b4ab73c"`
+[INFO] running `"docker" "rm" "-f" "1abc624fbce06a9e7e562dc7b340fa1a1182975ee17220b19cbf5a066b4ab73c"`
+[INFO] [stdout] 1abc624fbce06a9e7e562dc7b340fa1a1182975ee17220b19cbf5a066b4ab73c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ryanobeirne\\monte_carlo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5583760d6d39b087e10bf8d24459bc14ee296583e7b988005cd1bb2da0adc53f
+[INFO] running `"docker" "start" "-a" "5583760d6d39b087e10bf8d24459bc14ee296583e7b988005cd1bb2da0adc53f"`
+[INFO] [stderr]    Compiling monte_carlo v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.83s
+[INFO] running `"docker" "inspect" "5583760d6d39b087e10bf8d24459bc14ee296583e7b988005cd1bb2da0adc53f"`
+[INFO] running `"docker" "rm" "-f" "5583760d6d39b087e10bf8d24459bc14ee296583e7b988005cd1bb2da0adc53f"`
+[INFO] [stdout] 5583760d6d39b087e10bf8d24459bc14ee296583e7b988005cd1bb2da0adc53f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\ryanobeirne\\monte_carlo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] a9dd606e603b1ebb1214d1bc45175531bc8830094ebccbbfc2dbfd1d2d8bc830
+[INFO] running `"docker" "start" "-a" "a9dd606e603b1ebb1214d1bc45175531bc8830094ebccbbfc2dbfd1d2d8bc830"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\monte_carlo-1dcb7a5a96db63dd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a9dd606e603b1ebb1214d1bc45175531bc8830094ebccbbfc2dbfd1d2d8bc830"`
+[INFO] running `"docker" "rm" "-f" "a9dd606e603b1ebb1214d1bc45175531bc8830094ebccbbfc2dbfd1d2d8bc830"`
+[INFO] [stdout] a9dd606e603b1ebb1214d1bc45175531bc8830094ebccbbfc2dbfd1d2d8bc830

@@ -1,0 +1,171 @@
+[INFO] crate criterion 0.2.11 is already in cache
+[INFO] extracting crate criterion 0.2.11 into work\ex\default\sources\nightly\reg\criterion\0.2.11
+[INFO] extracting crate criterion 0.2.11 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\criterion\0.2.11
+[INFO] validating manifest of criterion-0.2.11 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of criterion-0.2.11 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing criterion-0.2.11
+[INFO] finished frobbing criterion-0.2.11
+[INFO] frobbed toml for criterion-0.2.11 written to work\ex\default\sources\nightly\reg\criterion\0.2.11\Cargo.toml
+[INFO] started frobbing criterion-0.2.11
+[INFO] finished frobbing criterion-0.2.11
+[INFO] frobbed toml for criterion-0.2.11 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\criterion\0.2.11\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing criterion-0.2.11 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\criterion\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 96589eaac9ead2e1b0e2b8ede59a54b21ff772153bced198eac73aa342d6f569
+[INFO] running `"docker" "start" "-a" "96589eaac9ead2e1b0e2b8ede59a54b21ff772153bced198eac73aa342d6f569"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling rayon-core v1.5.0
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling cast v0.2.2
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling itertools v0.8.0
+[INFO] [stderr]    Compiling regex-automata v0.1.8
+[INFO] [stderr]    Compiling rand_xoshiro v0.1.0
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling csv-core v0.1.6
+[INFO] [stderr]    Compiling tinytemplate v1.0.2
+[INFO] [stderr]    Compiling bstr v0.2.4
+[INFO] [stderr]    Compiling criterion-plot v0.3.1
+[INFO] [stderr]    Compiling csv v1.1.1
+[INFO] [stderr]    Compiling rayon v1.1.0
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling same-file v1.0.5
+[INFO] [stderr]    Compiling walkdir v2.2.9
+[INFO] [stderr]    Compiling criterion v0.2.11 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 44s
+[INFO] running `"docker" "inspect" "96589eaac9ead2e1b0e2b8ede59a54b21ff772153bced198eac73aa342d6f569"`
+[INFO] running `"docker" "rm" "-f" "96589eaac9ead2e1b0e2b8ede59a54b21ff772153bced198eac73aa342d6f569"`
+[INFO] [stdout] 96589eaac9ead2e1b0e2b8ede59a54b21ff772153bced198eac73aa342d6f569
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\criterion\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d959dca0e3e846ff4e5810c20dca5dbc5fb4f4a945b30f14a5313f6ba5b57ffb
+[INFO] running `"docker" "start" "-a" "d959dca0e3e846ff4e5810c20dca5dbc5fb4f4a945b30f14a5313f6ba5b57ffb"`
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling approx v0.3.2
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling quickcheck v0.8.5
+[INFO] [stderr]    Compiling criterion v0.2.11 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 49.45s
+[INFO] running `"docker" "inspect" "d959dca0e3e846ff4e5810c20dca5dbc5fb4f4a945b30f14a5313f6ba5b57ffb"`
+[INFO] running `"docker" "rm" "-f" "d959dca0e3e846ff4e5810c20dca5dbc5fb4f4a945b30f14a5313f6ba5b57ffb"`
+[INFO] [stdout] d959dca0e3e846ff4e5810c20dca5dbc5fb4f4a945b30f14a5313f6ba5b57ffb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\criterion\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] dd04bdeff8d534341b892017659deeb711ee80e3d9e5adadd74b79252d263b90
+[INFO] running `"docker" "start" "-a" "dd04bdeff8d534341b892017659deeb711ee80e3d9e5adadd74b79252d263b90"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.37s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\criterion-5591e248b32f56cd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 29 tests
+[INFO] [stdout] test format::test::short_max_len ... ok
+[INFO] [stdout] test format::test::signed_short_max_len ... ok
+[INFO] [stdout] test report::test::test_benchmark_id_make_directory_name_unique ... ok
+[INFO] [stdout] test report::test::test_make_filename_safe_replaces_characters ... ok
+[INFO] [stdout] test report::test::test_make_filename_safe_respects_character_boundaries ... ok
+[INFO] [stdout] test report::test::test_make_filename_safe_truncates_long_strings ... ok
+[INFO] [stdout] test stats::bivariate::bootstrap::test::f32::slope ... ok
+[INFO] [stdout] test stats::bivariate::bootstrap::test::f32::means ... ok
+[INFO] [stdout] test stats::rand_util::test::range_is_uniform ... ok
+[INFO] [stdout] test stats::rand_util::test::range_is_uniform_outside_of_zone ... ok
+[INFO] [stdout] test stats::rand_util::test::range_returns_samples_in_range ... ok
+[INFO] [stdout] test stats::bivariate::bootstrap::test::f64::slope ... ok
+[INFO] [stdout] test stats::bivariate::bootstrap::test::f64::means ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f32::two_sample ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f32::mean ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f64::mean ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f32::mixed_two_sample ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f64::two_sample ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f32::mean_median ... ok
+[INFO] [stdout] test stats::univariate::kde::kernel::test::f32::gaussian::symmetric ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f64::mean_median ... ok
+[INFO] [stdout] test stats::univariate::kde::kernel::test::f64::gaussian::symmetric ... ok
+[INFO] [stdout] test stats::univariate::bootstrap::test::f64::mixed_two_sample ... ok
+[INFO] [stdout] test stats::univariate::kde::kernel::test::f32::gaussian::integral ... ok
+[INFO] [stdout] test stats::univariate::resamples::test::different_subsets ... ok
+[INFO] [stdout] test stats::univariate::kde::kernel::test::f64::gaussian::integral ... ok
+[INFO] [stdout] test stats::univariate::resamples::test::subset ... ok
+[INFO] [stdout] test stats::univariate::kde::test::f32::integral ... ok
+[INFO] [stdout] test stats::univariate::kde::test::f64::integral ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\criterion_tests-b309f19f9a255094.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 24 tests
+[INFO] [stdout] test macros::criterion_main_trailing_comma ... ok
+[INFO] [stdout] test macros::criterion_main ... ok
+[INFO] [stdout] test macros::criterion_group ... ok
+[INFO] [stdout] test macros::criterion_group_trailing_comma ... ok
+[INFO] [stdout] test test_bench_function ... ok
+[INFO] [stdout] test test_bench_program ... ok
+[INFO] [stdout] test test_bench_program_over_inputs ... ok
+[INFO] [stdout] test test_bench_function_over_inputs ... ok
+[INFO] [stdout] test test_bench_functions ... ok
+[INFO] [stdout] test test_bench_with_no_iteration_panics ... ok
+[INFO] [stdout] test test_compare_baseline ... ok
+[INFO] [stdout] test test_filtering ... ok
+[INFO] [stdout] test test_bench_unparameterized ... ok
+[INFO] [stdout] test test_creates_directory ... ok
+[INFO] [stdout] test test_bench_parameterized ... ok
+[INFO] [stdout] test test_measurement_time ... ok
+[INFO] [stdout] test test_sample_size ... ok
+[INFO] [stdout] test test_retain_baseline ... ok
+[INFO] [stdout] test test_save_baseline ... ok
+[INFO] [stdout] test test_throughput ... ok
+[INFO] [stdout] test test_warmup_time ... ok
+[INFO] [stdout] test test_without_plots ... ok
+[INFO] [stdout] test test_output_files ... ok
+[INFO] [stdout] test test_timing_loops ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests criterion
+[INFO] [stdout] 
+[INFO] [stdout] running 26 tests
+[INFO] [stdout] test src\benchmark.rs - benchmark::Benchmark::new_external (line 267) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::Benchmark::new (line 229) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::Benchmark::throughput (line 366) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::Benchmark::with_function (line 320) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::ParameterizedBenchmark<T>::new_external (line 497) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::Benchmark::with_program (line 341) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::ParameterizedBenchmark<T>::new (line 450) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::ParameterizedBenchmark<T>::throughput (line 626) ... ok
+[INFO] [stdout] test src\lib.rs - Bencher::iter (line 314) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::ParameterizedBenchmark<T>::with_function (line 572) ... ok
+[INFO] [stdout] test src\benchmark.rs - benchmark::ParameterizedBenchmark<T>::with_program (line 594) ... ok
+[INFO] [stdout] test src\lib.rs - Bencher::iter_batched (line 423) ... ok
+[INFO] [stdout] test src\lib.rs - Bencher::iter_batched_ref (line 508) ... ok
+[INFO] [stdout] test src\lib.rs - Criterion::bench (line 1242) ... ok
+[INFO] [stdout] test src\lib.rs - Bencher::iter_with_large_drop (line 370) ... ok
+[INFO] [stdout] test src\lib.rs - Criterion::bench_program (line 1159) ... ok
+[INFO] [stdout] test src\lib.rs - Criterion::bench_function (line 1047) ... ok
+[INFO] [stdout] test src\lib.rs - Criterion::bench_function_over_inputs (line 1126) ... ok
+[INFO] [stdout] test src\lib.rs - Criterion::bench_functions (line 1078) ... ok
+[INFO] [stdout] test src\macros.rs - criterion_main (line 99) ... ignored
+[INFO] [stdout] test src\stats\univariate\outliers\tukey.rs - stats::univariate::outliers::tukey (line 18) ... ignored
+[INFO] [stdout] test src\stats\univariate\outliers\tukey.rs - stats::univariate::outliers::tukey (line 29) ... ignored
+[INFO] [stdout] test src\stats\univariate\outliers\tukey.rs - stats::univariate::outliers::tukey (line 8) ... ignored
+[INFO] [stdout] test src\macros.rs - criterion_group (line 16) ... ok
+[INFO] [stdout] test src\macros.rs - criterion_group (line 42) ... ok
+[INFO] [stdout] test src\lib.rs - PlotConfiguration (line 1376) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "dd04bdeff8d534341b892017659deeb711ee80e3d9e5adadd74b79252d263b90"`
+[INFO] running `"docker" "rm" "-f" "dd04bdeff8d534341b892017659deeb711ee80e3d9e5adadd74b79252d263b90"`
+[INFO] [stdout] dd04bdeff8d534341b892017659deeb711ee80e3d9e5adadd74b79252d263b90

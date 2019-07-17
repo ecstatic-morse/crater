@@ -1,0 +1,48 @@
+[INFO] fetching crate msxml6-sys 0.0.1...
+[INFO] extracting crate msxml6-sys 0.0.1 into work\ex\default\sources\stable\reg\msxml6-sys\0.0.1
+[INFO] extracting crate msxml6-sys 0.0.1 into work\ex\default\sources\beta\reg\msxml6-sys\0.0.1
+[INFO] validating manifest of msxml6-sys-0.0.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of msxml6-sys-0.0.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing msxml6-sys-0.0.1
+[INFO] finished frobbing msxml6-sys-0.0.1
+[INFO] frobbed toml for msxml6-sys-0.0.1 written to work\ex\default\sources\stable\reg\msxml6-sys\0.0.1\Cargo.toml
+[INFO] started frobbing msxml6-sys-0.0.1
+[INFO] finished frobbing msxml6-sys-0.0.1
+[INFO] frobbed toml for msxml6-sys-0.0.1 written to work\ex\default\sources\beta\reg\msxml6-sys\0.0.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing msxml6-sys-0.0.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\msxml6-sys\\0.0.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 9acbad2471e4ee56f636e1e78eea815ea72d28520bff67da8b38ed358cbada74
+[INFO] running `"docker" "start" "-a" "9acbad2471e4ee56f636e1e78eea815ea72d28520bff67da8b38ed358cbada74"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling msxml6-sys v0.0.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0658]: non-builtin inner attributes are unstable
+[INFO] [stderr]  --> src\lib.rs:5:1
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | #![experimental]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: for more information, see https://github.com/rust-lang/rust/issues/54726
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: The attribute `experimental` is currently unknown to the compiler and may have meaning added to it in the future
+[INFO] [stderr]  --> src\lib.rs:5:4
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | #![experimental]
+[INFO] [stderr]   |    ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: for more information, see https://github.com/rust-lang/rust/issues/29642
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0658`.
+[INFO] [stderr] error: Could not compile `msxml6-sys`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "9acbad2471e4ee56f636e1e78eea815ea72d28520bff67da8b38ed358cbada74"`
+[INFO] running `"docker" "rm" "-f" "9acbad2471e4ee56f636e1e78eea815ea72d28520bff67da8b38ed358cbada74"`
+[INFO] [stdout] 9acbad2471e4ee56f636e1e78eea815ea72d28520bff67da8b38ed358cbada74

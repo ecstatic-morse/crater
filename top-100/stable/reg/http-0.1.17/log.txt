@@ -1,0 +1,418 @@
+[INFO] fetching crate http 0.1.17...
+[INFO] extracting crate http 0.1.17 into work\ex\default\sources\stable\reg\http\0.1.17
+[INFO] extracting crate http 0.1.17 into work\ex\default\sources\beta\reg\http\0.1.17
+[INFO] validating manifest of http-0.1.17 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of http-0.1.17 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing http-0.1.17
+[INFO] finished frobbing http-0.1.17
+[INFO] frobbed toml for http-0.1.17 written to work\ex\default\sources\stable\reg\http\0.1.17\Cargo.toml
+[INFO] started frobbing http-0.1.17
+[INFO] finished frobbing http-0.1.17
+[INFO] frobbed toml for http-0.1.17 written to work\ex\default\sources\beta\reg\http\0.1.17\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded seahash v3.0.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing http-0.1.17 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\http\\0.1.17,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 2b77267325b3489b6114ca900b3dd45370ff6ee65d38a6a5b3bd25a88b8fa801
+[INFO] running `"docker" "start" "-a" "2b77267325b3489b6114ca900b3dd45370ff6ee65d38a6a5b3bd25a88b8fa801"`
+[INFO] [stderr]    Compiling http v0.1.17 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 22.59s
+[INFO] running `"docker" "inspect" "2b77267325b3489b6114ca900b3dd45370ff6ee65d38a6a5b3bd25a88b8fa801"`
+[INFO] running `"docker" "rm" "-f" "2b77267325b3489b6114ca900b3dd45370ff6ee65d38a6a5b3bd25a88b8fa801"`
+[INFO] [stdout] 2b77267325b3489b6114ca900b3dd45370ff6ee65d38a6a5b3bd25a88b8fa801
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\http\\0.1.17,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4bd97fb257a72a65104eb04a1b7471d46467622e723a3e80f44e85390748a7bc
+[INFO] running `"docker" "start" "-a" "4bd97fb257a72a65104eb04a1b7471d46467622e723a3e80f44e85390748a7bc"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling seahash v3.0.6
+[INFO] [stderr]    Compiling indexmap v1.0.2
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling env_logger v0.5.13
+[INFO] [stderr]    Compiling quickcheck v0.6.2
+[INFO] [stderr]    Compiling http v0.1.17 (C:\crater\workdir)
+[INFO] [stderr] warning: unused return value of `std::iter::Iterator::collect` that must be used
+[INFO] [stderr]    --> tests\header_map_fuzz.rs:258:17
+[INFO] [stderr]     |
+[INFO] [stderr] 258 |                 map.get_all(&name).iter().collect::<Vec<_>>();
+[INFO] [stderr]     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_must_use)] on by default
+[INFO] [stderr]     = note: if you really need to exhaust the iterator, consider `.for_each(drop)` instead
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 22s
+[INFO] running `"docker" "inspect" "4bd97fb257a72a65104eb04a1b7471d46467622e723a3e80f44e85390748a7bc"`
+[INFO] running `"docker" "rm" "-f" "4bd97fb257a72a65104eb04a1b7471d46467622e723a3e80f44e85390748a7bc"`
+[INFO] [stdout] 4bd97fb257a72a65104eb04a1b7471d46467622e723a3e80f44e85390748a7bc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\http\\0.1.17,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] f649d712fe644bcca063dc84416689ef2f4447cc16b80f44c8f1488b275a2232
+[INFO] running `"docker" "start" "-a" "f649d712fe644bcca063dc84416689ef2f4447cc16b80f44c8f1488b275a2232"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.33s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\http-48199ce6cfffffb5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 99 tests
+[INFO] [stdout] test error::tests::inner_error_is_invalid_status_code ... ok
+[INFO] [stdout] test extensions::test_extensions ... ok
+[INFO] [stdout] test header::map::skip_duplicates_during_key_iteration ... ok
+[INFO] [stdout] test header::map::test_bounds ... ok
+[INFO] [stdout] test header::name::test_parse_standard_headers ... ok
+[INFO] [stdout] test header::name::test_standard_headers_into_bytes ... ok
+[INFO] [stdout] test header::name::tests::test_bounds ... ok
+[INFO] [stdout] test header::name::tests::test_eq_hdr_name ... ok
+[INFO] [stdout] test header::name::tests::test_all_tokens ... ok
+[INFO] [stdout] test header::name::tests::test_from_hdr_name ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_long ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_short ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_long_symbol ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_single_char ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_long_uppercase ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_std ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_short_uppercase ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_custom_short_symbol ... ok
+[INFO] [stdout] test header::name::tests::test_parse_invalid_headers ... ok
+[INFO] [stdout] test header::value::from_header_name_tests::it_can_insert_header_name_as_header_value ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_empty ... ok
+[INFO] [stdout] test header::value::from_i16 ... ok
+[INFO] [stdout] test header::value::from_i32 ... ok
+[INFO] [stdout] test header::value::from_i64 ... ok
+[INFO] [stdout] test header::value::from_isize ... ok
+[INFO] [stdout] test header::value::from_u16 ... ok
+[INFO] [stdout] test header::value::from_u32 ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_std_symbol ... ok
+[INFO] [stdout] test header::value::from_u64 ... ok
+[INFO] [stdout] test header::value::from_usize ... ok
+[INFO] [stdout] test header::value::test_debug ... ok
+[INFO] [stdout] test header::value::test_try_from ... ok
+[INFO] [stdout] test header::value::try_from_header_name_tests::it_converts_using_try_from ... ok
+[INFO] [stdout] test method::test_invalid_method ... ok
+[INFO] [stdout] test header::name::tests::test_from_static_std_uppercase ... ok
+[INFO] [stdout] test method::test_method_eq ... ok
+[INFO] [stdout] test request::tests::it_can_map_a_body_from_one_type_to_another ... ok
+[INFO] [stdout] test response::tests::it_can_map_a_body_from_one_type_to_another ... ok
+[INFO] [stdout] test uri::authority::tests::allows_percent_in_userinfo ... ok
+[INFO] [stdout] test uri::authority::tests::compares_to_self ... ok
+[INFO] [stdout] test uri::authority::tests::compares_with_a_str ... ok
+[INFO] [stdout] test uri::authority::tests::compares_with_a_string ... ok
+[INFO] [stdout] test uri::authority::tests::equal_to_self_of_same_authority ... ok
+[INFO] [stdout] test uri::authority::tests::equates_with_a_str ... ok
+[INFO] [stdout] test uri::authority::tests::equates_with_a_string ... ok
+[INFO] [stdout] test uri::authority::tests::equates_with_a_string_of_a_different_authority ... ok
+[INFO] [stdout] test uri::authority::tests::not_equal_to_self_of_different_authority ... ok
+[INFO] [stdout] test uri::authority::tests::not_equal_with_a_str_of_a_different_authority ... ok
+[INFO] [stdout] test uri::authority::tests::parse_empty_string_is_error ... ok
+[INFO] [stdout] test uri::authority::tests::rejects_percent_in_hostname ... ok
+[INFO] [stdout] test uri::path::tests::compares_to_self ... ok
+[INFO] [stdout] test uri::path::tests::compares_with_a_str ... ok
+[INFO] [stdout] test uri::path::tests::compares_with_a_string ... ok
+[INFO] [stdout] test uri::path::tests::equal_to_self_of_same_path ... ok
+[INFO] [stdout] test uri::path::tests::equates_with_a_str ... ok
+[INFO] [stdout] test uri::path::tests::equates_with_a_string ... ok
+[INFO] [stdout] test uri::path::tests::ignores_invalid_percent_encodings ... ok
+[INFO] [stdout] test uri::path::tests::ignores_valid_percent_encodings ... ok
+[INFO] [stdout] test uri::path::tests::not_equal_to_self_of_different_path ... ok
+[INFO] [stdout] test uri::path::tests::not_equal_with_a_str_of_a_different_path ... ok
+[INFO] [stdout] test uri::port::tests::partialeq_port ... ok
+[INFO] [stdout] test uri::path::tests::not_equal_with_a_string_of_a_different_path ... ok
+[INFO] [stdout] test uri::port::tests::partialeq_port_different_reprs ... ok
+[INFO] [stdout] test uri::port::tests::partialeq_u16 ... ok
+[INFO] [stdout] test uri::port::tests::u16_from_port ... ok
+[INFO] [stdout] test uri::tests::test_authority_uri_parts_round_trip ... ok
+[INFO] [stdout] test uri::tests::test_char_table ... ok
+[INFO] [stdout] test uri::tests::test_ipv6 ... ok
+[INFO] [stdout] test uri::tests::test_ipv6_shorthand ... ok
+[INFO] [stdout] test uri::tests::test_ipv6_shorthand2 ... ok
+[INFO] [stdout] test uri::tests::test_ipv6_shorthand3 ... ok
+[INFO] [stdout] test uri::tests::test_ipv6_with_port ... ok
+[INFO] [stdout] test uri::tests::test_long_scheme ... ok
+[INFO] [stdout] test uri::tests::test_max_uri_len ... ok
+[INFO] [stdout] test uri::tests::test_partial_eq_path_with_terminating_questionmark ... ok
+[INFO] [stdout] test uri::tests::test_path_permissive ... ok
+[INFO] [stdout] test uri::tests::test_percentage_encoded_path ... ok
+[INFO] [stdout] test uri::tests::test_query_permissive ... ok
+[INFO] [stdout] test uri::tests::test_uri_authority_only_one_character_issue_197 ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_form ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_form_with_empty_path_and_fragment_with_questionmark ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_form_with_empty_path_and_fragment_with_slash ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_form_with_empty_path_and_nonempty_query ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_form_without_path ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_with_default_port_http ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_absolute_with_default_port_https ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_asterisk_form ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_authority_form ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_authority_no_port ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_error ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_fragment_questionmark ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_path_and_query ... ok
+[INFO] [stdout] test uri::tests::test_uri_parse_path_with_terminating_questionmark ... ok
+[INFO] [stdout] test uri::tests::test_uri_to_path_and_query ... ok
+[INFO] [stdout] test uri::tests::test_userinfo1 ... ok
+[INFO] [stdout] test uri::tests::test_userinfo2 ... ok
+[INFO] [stdout] test uri::tests::test_userinfo3 ... ok
+[INFO] [stdout] test uri::tests::test_userinfo_pass_with_port ... ok
+[INFO] [stdout] test uri::tests::test_userinfo_with_port ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 99 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\header_map-61a067637b6859b7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test append_multiple_values ... ok
+[INFO] [stdout] test as_header_name ... ok
+[INFO] [stdout] test drain ... ok
+[INFO] [stdout] test drain_entry ... ok
+[INFO] [stdout] test eq ... ok
+[INFO] [stdout] test get_invalid ... ok
+[INFO] [stdout] test insert_79_custom_std_headers ... ok
+[INFO] [stdout] test insert_all_std_headers ... ok
+[INFO] [stdout] test into_header_name ... ok
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test value_htab ... ok
+[INFO] [stdout] test insert_invalid ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\header_map_fuzz-1278aa968203f5b4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test header_map_fuzz ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\status_code-161989a20f023858.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test equates_with_u16 ... ok
+[INFO] [stdout] test from_bytes ... ok
+[INFO] [stdout] test roundtrip ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests http
+[INFO] [stdout] 
+[INFO] [stdout] running 211 tests
+[INFO] [stdout] test src\extensions.rs - extensions::Extensions::clear (line 154) ... ok
+[INFO] [stdout] test src\extensions.rs - extensions::Extensions::get_mut (line 105) ... ok
+[INFO] [stdout] test src\extensions.rs - extensions::Extensions::insert (line 59) ... ok
+[INFO] [stdout] test src\extensions.rs - extensions::Extensions::get (line 84) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::Entry::key (line 2203) ... ok
+[INFO] [stdout] test src\extensions.rs - extensions::Extensions::remove (line 129) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::Entry::or_insert_with (line 2165) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::Entry::or_insert (line 2125) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::GetAll::iter (line 2326) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::Entry::or_insert_with (line 2177) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap::new (line 420) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap (line 23) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::append (line 1155) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::capacity (line 582) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::clear (line 555) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::contains_key (line 744) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::drain (line 900) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::entry (line 989) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::extend (line 1735) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::get (line 646) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::get_all (line 716) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::get_mut (line 685) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::insert (line 1066) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::into_iter (line 1666) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::into_iter (line 1681) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::is_empty (line 535) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::iter (line 767) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::iter_mut (line 799) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::keys (line 829) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::keys_len (line 511) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::len (line 484) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::remove (line 1275) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::reserve (line 611) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::values (line 853) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::values_mut (line 877) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::HeaderMap<T>::with_capacity (line 444) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::append (line 2746) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::get (line 2622) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::get_mut (line 2649) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::insert (line 2697) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::insert_mult (line 2720) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::into_mut (line 2674) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::iter (line 2841) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::iter_mut (line 2865) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::key (line 2599) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::remove (line 2773) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::VacantEntry::insert (line 2259) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::OccupiedEntry::remove_entry (line 2797) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::VacantEntry::insert_entry (line 2288) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::VacantEntry::into_key (line 2240) ... ok
+[INFO] [stdout] test src\header\name.rs - header::name::HeaderName::eq (line 1828) ... ok
+[INFO] [stdout] test src\header\map.rs - header::map::VacantEntry::key (line 2226) ... ok
+[INFO] [stdout] test src\header\name.rs - header::name::HeaderName::from_lowercase (line 1571) ... ok
+[INFO] [stdout] test src\header\name.rs - header::name::HeaderName::from_static (line 1615) ... ok
+[INFO] [stdout] test src\header\name.rs - header::name::HeaderName::from_static (line 1629) ... ok
+[INFO] [stdout] test src\header\name.rs - header::name::str::eq (line 1848) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::as_bytes (line 269) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_bytes (line 139) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_bytes (line 147) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_static (line 61) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_name (line 117) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_str (line 101) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::from_str (line 93) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::is_sensitive (line 309) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::is_empty (line 252) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::set_sensitive (line 283) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::len (line 238) ... ok
+[INFO] [stdout] test src\header\value.rs - header::value::HeaderValue::to_str (line 215) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 101) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 110) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 120) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 129) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 149) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 33) ... ok
+[INFO] [stdout] test src\request.rs - request (line 12) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 57) ... ok
+[INFO] [stdout] test src\method.rs - method (line 10) ... ok
+[INFO] [stdout] test src\request.rs - request (line 37) ... ok
+[INFO] [stdout] test src\method.rs - method::Method (line 37) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::body (line 1022) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::header (line 887) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::extension (line 976) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::headers_ref (line 920) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::headers_mut (line 947) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::method (line 753) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::method_ref (line 780) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::new (line 731) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::uri (line 810) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::version (line 864) ... ok
+[INFO] [stdout] test src\request.rs - request::Request (line 74) ... ok
+[INFO] [stdout] test src\request.rs - request::Builder::uri_ref (line 835) ... ok
+[INFO] [stdout] test src\request.rs - request::Request (line 119) ... ok
+[INFO] [stdout] test src\request.rs - request::Request (line 139) ... ok
+[INFO] [stdout] test src\request.rs - request::Request (line 99) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::connect (line 351) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::delete (line 287) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::builder (line 202) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::get (line 224) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::head (line 330) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::options (line 308) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::post (line 266) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::patch (line 372) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::put (line 245) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<()>::trace (line 393) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::body_mut (line 616) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::body (line 602) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::extensions (line 572) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::from_parts (line 435) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::extensions_mut (line 586) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::headers (line 542) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::into_body (line 632) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::headers_mut (line 556) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::into_parts (line 647) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::map (line 663) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::method (line 455) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::method_mut (line 469) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::new (line 416) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::uri (line 484) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::version (line 513) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::uri_mut (line 498) ... ok
+[INFO] [stdout] test src\response.rs - response (line 12) ... ok
+[INFO] [stdout] test src\response.rs - response (line 42) ... ok
+[INFO] [stdout] test src\request.rs - request::Request<T>::version_mut (line 527) ... ok
+[INFO] [stdout] test src\response.rs - response (line 30) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::body (line 740) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::extension (line 694) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::header (line 604) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::headers_mut (line 665) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::headers_ref (line 638) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::new (line 530) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::status (line 552) ... ok
+[INFO] [stdout] test src\response.rs - response::Response (line 117) ... ok
+[INFO] [stdout] test src\response.rs - response::Builder::version (line 581) ... ok
+[INFO] [stdout] test src\response.rs - response::Response (line 105) ... ok
+[INFO] [stdout] test src\response.rs - response::Response (line 141) ... ok
+[INFO] [stdout] test src\response.rs - response::Response (line 161) ... ok
+[INFO] [stdout] test src\response.rs - response::Response (line 87) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<()>::builder (line 221) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::body (line 403) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::body_mut (line 417) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::extensions (line 373) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::extensions_mut (line 387) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::headers (line 343) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::from_parts (line 262) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::headers_mut (line 357) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::into_body (line 432) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::into_parts (line 447) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::map (line 463) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::new (line 243) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::status (line 285) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::status_mut (line 299) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::version (line 314) ... ok
+[INFO] [stdout] test src\response.rs - response::Response<T>::version_mut (line 328) ... ok
+[INFO] [stdout] test src\status.rs - status (line 9) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode (line 197) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode (line 35) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode::as_str (line 125) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode::as_u16 (line 109) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode::canonical_reason (line 147) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority (line 293) ... ok
+[INFO] [stdout] test src\status.rs - status::StatusCode::from_u16 (line 62) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority (line 339) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority (line 405) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::from_shared (line 32) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::from_static (line 70) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::host (line 189) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::port_part (line 224) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::port_part (line 235) ... ok
+[INFO] [stdout] test src\uri\authority.rs - uri::authority::Authority::port_u16 (line 252) ... ok
+[INFO] [stdout] test src\uri\builder.rs - uri::builder::Builder::authority (line 58) ... ok
+[INFO] [stdout] test src\uri\builder.rs - uri::builder::Builder::build (line 115) ... ok
+[INFO] [stdout] test src\uri\builder.rs - uri::builder::Builder::path_and_query (line 80) ... ok
+[INFO] [stdout] test src\uri\builder.rs - uri::builder::Builder::new (line 19) ... ok
+[INFO] [stdout] test src\uri\builder.rs - uri::builder::Builder::scheme (line 38) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri (line 11) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Parts (line 770) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Parts (line 785) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri (line 85) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::authority_part (line 514) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::authority_part (line 524) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::from_shared (line 250) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::builder (line 191) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::from_static (line 328) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::into_parts (line 352) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::host (line 567) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::host (line 577) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::path (line 396) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::path (line 406) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::port_part (line 622) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::port_part (line 612) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::port_part (line 631) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::port_u16 (line 647) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::query (line 676) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::query (line 685) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::query (line 694) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::scheme_part (line 439) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::scheme_part (line 450) ... ok
+[INFO] [stdout] test src\uri\mod.rs - uri::Uri::scheme_str (line 476) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::as_str (line 248) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::as_str (line 257) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::from_shared (line 27) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::from_static (line 125) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::path (line 176) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::query (line 217) ... ok
+[INFO] [stdout] test src\uri\path.rs - uri::path::PathAndQuery::query (line 226) ... ok
+[INFO] [stdout] test src\uri\port.rs - uri::port::Port<T>::as_str (line 56) ... ok
+[INFO] [stdout] test src\uri\port.rs - uri::port::Port<T>::as_u16 (line 18) ... ok
+[INFO] [stdout] test src\uri\scheme.rs - uri::scheme::Scheme (line 211) ... ok
+[INFO] [stdout] test src\uri\scheme.rs - uri::scheme::Scheme::as_str (line 88) ... ok
+[INFO] [stdout] test src\uri\scheme.rs - uri::scheme::Scheme::from_shared (line 51) ... ok
+[INFO] [stdout] test src\version.rs - version (line 12) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 211 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f649d712fe644bcca063dc84416689ef2f4447cc16b80f44c8f1488b275a2232"`
+[INFO] running `"docker" "rm" "-f" "f649d712fe644bcca063dc84416689ef2f4447cc16b80f44c8f1488b275a2232"`
+[INFO] [stdout] f649d712fe644bcca063dc84416689ef2f4447cc16b80f44c8f1488b275a2232

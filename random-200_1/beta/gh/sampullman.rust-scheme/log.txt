@@ -1,0 +1,97 @@
+[INFO] cloning repository sampullman/rust-scheme
+[INFO] running `"git" "clone" "--bare" "git://github.com/sampullman/rust-scheme.git" "work\\cache\\sources\\gh\\sampullman\\rust-scheme"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\sampullman\rust-scheme'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sampullman\\rust-scheme" "work\\ex\\default\\sources\\stable\\gh\\sampullman\\rust-scheme"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\sampullman\rust-scheme'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sampullman\\rust-scheme" "work\\ex\\default\\sources\\beta\\gh\\sampullman\\rust-scheme"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\sampullman\rust-scheme'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f9bd7aa53c119bf21693606a480d7bc76c18badb
+[INFO] sha for GitHub repo sampullman/rust-scheme: f9bd7aa53c119bf21693606a480d7bc76c18badb
+[INFO] validating manifest of sampullman/rust-scheme on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sampullman/rust-scheme on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sampullman/rust-scheme
+[INFO] finished frobbing sampullman/rust-scheme
+[INFO] frobbed toml for sampullman/rust-scheme written to work\ex\default\sources\stable\gh\sampullman\rust-scheme\Cargo.toml
+[INFO] started frobbing sampullman/rust-scheme
+[INFO] finished frobbing sampullman/rust-scheme
+[INFO] frobbed toml for sampullman/rust-scheme written to work\ex\default\sources\beta\gh\sampullman\rust-scheme\Cargo.toml
+[INFO] crate sampullman/rust-scheme already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sampullman/rust-scheme against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\sampullman\\rust-scheme,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] e31f842513b1ad01b03c38ed7d83aa848863c4d1ea6c32ab40eb97848353db45
+[INFO] running `"docker" "start" "-a" "e31f842513b1ad01b03c38ed7d83aa848863c4d1ea6c32ab40eb97848353db45"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling rust-scheme v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.65s
+[INFO] running `"docker" "inspect" "e31f842513b1ad01b03c38ed7d83aa848863c4d1ea6c32ab40eb97848353db45"`
+[INFO] running `"docker" "rm" "-f" "e31f842513b1ad01b03c38ed7d83aa848863c4d1ea6c32ab40eb97848353db45"`
+[INFO] [stdout] e31f842513b1ad01b03c38ed7d83aa848863c4d1ea6c32ab40eb97848353db45
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\sampullman\\rust-scheme,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f5b556681df527f6e716015b7151733b798b886ed230ce73ffc1c589031f16da
+[INFO] running `"docker" "start" "-a" "f5b556681df527f6e716015b7151733b798b886ed230ce73ffc1c589031f16da"`
+[INFO] [stderr]    Compiling rust-scheme v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.53s
+[INFO] running `"docker" "inspect" "f5b556681df527f6e716015b7151733b798b886ed230ce73ffc1c589031f16da"`
+[INFO] running `"docker" "rm" "-f" "f5b556681df527f6e716015b7151733b798b886ed230ce73ffc1c589031f16da"`
+[INFO] [stdout] f5b556681df527f6e716015b7151733b798b886ed230ce73ffc1c589031f16da
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\sampullman\\rust-scheme,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 3fdb88e09b7a1f5c208660152fad804fb3b66c4dea75a384761f7c56ee97559a
+[INFO] running `"docker" "start" "-a" "3fdb88e09b7a1f5c208660152fad804fb3b66c4dea75a384761f7c56ee97559a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_scheme-8d9a82263a08ed8b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\main-f753dfaafeb16eda.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lib-0f9c993dbd991522.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 23 tests
+[INFO] [stdout] test test_abs ... ok
+[INFO] [stdout] test test_add ... ok
+[INFO] [stdout] test test_apply ... ok
+[INFO] [stdout] test test_begin ... ok
+[INFO] [stdout] test test_car ... ok
+[INFO] [stdout] test test_cdr ... ok
+[INFO] [stdout] test test_define ... ok
+[INFO] [stdout] test test_divide ... ok
+[INFO] [stdout] test test_eq ... ok
+[INFO] [stdout] test test_ge ... ok
+[INFO] [stdout] test test_is_eq ... ok
+[INFO] [stdout] test test_gt ... ok
+[INFO] [stdout] test test_is_equal ... ok
+[INFO] [stdout] test test_is_list ... ok
+[INFO] [stdout] test test_le ... ok
+[INFO] [stdout] test test_list_and_append ... ok
+[INFO] [stdout] test test_lt ... ok
+[INFO] [stdout] test test_misc ... ok
+[INFO] [stdout] test test_mismatch_paren ... ok
+[INFO] [stdout] test test_multiply ... ok
+[INFO] [stdout] test test_quote ... ok
+[INFO] [stdout] test test_recursion_simple ... ok
+[INFO] [stdout] test test_subtract ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rust-scheme
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3fdb88e09b7a1f5c208660152fad804fb3b66c4dea75a384761f7c56ee97559a"`
+[INFO] running `"docker" "rm" "-f" "3fdb88e09b7a1f5c208660152fad804fb3b66c4dea75a384761f7c56ee97559a"`
+[INFO] [stdout] 3fdb88e09b7a1f5c208660152fad804fb3b66c4dea75a384761f7c56ee97559a

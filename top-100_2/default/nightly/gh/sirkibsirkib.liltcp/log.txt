@@ -1,0 +1,70 @@
+[INFO] cloning repository sirkibsirkib/liltcp
+[INFO] running `"git" "clone" "--bare" "git://github.com/sirkibsirkib/liltcp.git" "work\\cache\\sources\\gh\\sirkibsirkib\\liltcp"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\sirkibsirkib\liltcp'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sirkibsirkib\\liltcp" "work\\ex\\default\\sources\\nightly\\gh\\sirkibsirkib\\liltcp"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\sirkibsirkib\liltcp'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\sirkibsirkib\\liltcp" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\sirkibsirkib\\liltcp"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sirkibsirkib\liltcp'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] c40a978fe086baf60d362bdcc81910569010c29e
+[INFO] sha for GitHub repo sirkibsirkib/liltcp: c40a978fe086baf60d362bdcc81910569010c29e
+[INFO] validating manifest of sirkibsirkib/liltcp on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of sirkibsirkib/liltcp on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing sirkibsirkib/liltcp
+[INFO] finished frobbing sirkibsirkib/liltcp
+[INFO] frobbed toml for sirkibsirkib/liltcp written to work\ex\default\sources\nightly\gh\sirkibsirkib\liltcp\Cargo.toml
+[INFO] started frobbing sirkibsirkib/liltcp
+[INFO] finished frobbing sirkibsirkib/liltcp
+[INFO] frobbed toml for sirkibsirkib/liltcp written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\sirkibsirkib\liltcp\Cargo.toml
+[INFO] crate sirkibsirkib/liltcp already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded byteorder v1.2.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing sirkibsirkib/liltcp against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\sirkibsirkib\\liltcp,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e5dad18a37ff483cb956cbbc0267bfd14b30e1c1d36d28e94a088d723b79a8ba
+[INFO] running `"docker" "start" "-a" "e5dad18a37ff483cb956cbbc0267bfd14b30e1c1d36d28e94a088d723b79a8ba"`
+[INFO] [stderr]    Compiling winapi v0.3.4
+[INFO] [stderr]    Compiling unicode-width v0.1.4
+[INFO] [stderr]    Compiling strsim v0.7.0
+[INFO] [stderr]    Compiling vec_map v0.8.0
+[INFO] [stderr]    Compiling bitflags v1.0.3
+[INFO] [stderr]    Compiling safemem v0.2.0
+[INFO] [stderr]    Compiling byteorder v1.2.2
+[INFO] [stderr]    Compiling hex v0.3.2
+[INFO] [stderr]    Compiling textwrap v0.9.0
+[INFO] [stderr]    Compiling base64 v0.6.0
+[INFO] [stderr]    Compiling atty v0.2.10
+[INFO] [stderr]    Compiling clap v2.31.2
+[INFO] [stderr]    Compiling liltcp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 06s
+[INFO] running `"docker" "inspect" "e5dad18a37ff483cb956cbbc0267bfd14b30e1c1d36d28e94a088d723b79a8ba"`
+[INFO] running `"docker" "rm" "-f" "e5dad18a37ff483cb956cbbc0267bfd14b30e1c1d36d28e94a088d723b79a8ba"`
+[INFO] [stdout] e5dad18a37ff483cb956cbbc0267bfd14b30e1c1d36d28e94a088d723b79a8ba
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\sirkibsirkib\\liltcp,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] beab6f40b87bff66a2f2c955648fc4661d19526cc46731d954b2a7e5217128fb
+[INFO] running `"docker" "start" "-a" "beab6f40b87bff66a2f2c955648fc4661d19526cc46731d954b2a7e5217128fb"`
+[INFO] [stderr]    Compiling liltcp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.75s
+[INFO] running `"docker" "inspect" "beab6f40b87bff66a2f2c955648fc4661d19526cc46731d954b2a7e5217128fb"`
+[INFO] running `"docker" "rm" "-f" "beab6f40b87bff66a2f2c955648fc4661d19526cc46731d954b2a7e5217128fb"`
+[INFO] [stdout] beab6f40b87bff66a2f2c955648fc4661d19526cc46731d954b2a7e5217128fb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\sirkibsirkib\\liltcp,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 1c186a6e9f3e99e3fe6f6e79ee5725da11979c7a2732f7ac6571752cc8b6fafa
+[INFO] running `"docker" "start" "-a" "1c186a6e9f3e99e3fe6f6e79ee5725da11979c7a2732f7ac6571752cc8b6fafa"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.43s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\liltcp-17fb25c137107eff.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "1c186a6e9f3e99e3fe6f6e79ee5725da11979c7a2732f7ac6571752cc8b6fafa"`
+[INFO] running `"docker" "rm" "-f" "1c186a6e9f3e99e3fe6f6e79ee5725da11979c7a2732f7ac6571752cc8b6fafa"`
+[INFO] [stdout] 1c186a6e9f3e99e3fe6f6e79ee5725da11979c7a2732f7ac6571752cc8b6fafa

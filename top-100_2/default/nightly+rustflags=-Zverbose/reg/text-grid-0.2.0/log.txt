@@ -1,0 +1,101 @@
+[INFO] fetching crate text-grid 0.2.0...
+[INFO] extracting crate text-grid 0.2.0 into work\ex\default\sources\nightly\reg\text-grid\0.2.0
+[INFO] extracting crate text-grid 0.2.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\text-grid\0.2.0
+[INFO] validating manifest of text-grid-0.2.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of text-grid-0.2.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing text-grid-0.2.0
+[INFO] finished frobbing text-grid-0.2.0
+[INFO] frobbed toml for text-grid-0.2.0 written to work\ex\default\sources\nightly\reg\text-grid\0.2.0\Cargo.toml
+[INFO] started frobbing text-grid-0.2.0
+[INFO] finished frobbing text-grid-0.2.0
+[INFO] frobbed toml for text-grid-0.2.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\text-grid\0.2.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing text-grid-0.2.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\text-grid\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 36ed023e8b8b5d5e5c77a984c7ee312fae5e19a52be6809cde68d6c8d4ed2336
+[INFO] running `"docker" "start" "-a" "36ed023e8b8b5d5e5c77a984c7ee312fae5e19a52be6809cde68d6c8d4ed2336"`
+[INFO] [stderr]    Compiling text-grid v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.80s
+[INFO] running `"docker" "inspect" "36ed023e8b8b5d5e5c77a984c7ee312fae5e19a52be6809cde68d6c8d4ed2336"`
+[INFO] running `"docker" "rm" "-f" "36ed023e8b8b5d5e5c77a984c7ee312fae5e19a52be6809cde68d6c8d4ed2336"`
+[INFO] [stdout] 36ed023e8b8b5d5e5c77a984c7ee312fae5e19a52be6809cde68d6c8d4ed2336
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\text-grid\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4596ecffd79e8e2bbc3e4270ecf2ce25fd525ae60e57b480233975d3b22b8339
+[INFO] running `"docker" "start" "-a" "4596ecffd79e8e2bbc3e4270ecf2ce25fd525ae60e57b480233975d3b22b8339"`
+[INFO] [stderr]    Compiling text-grid v0.2.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 11.78s
+[INFO] running `"docker" "inspect" "4596ecffd79e8e2bbc3e4270ecf2ce25fd525ae60e57b480233975d3b22b8339"`
+[INFO] running `"docker" "rm" "-f" "4596ecffd79e8e2bbc3e4270ecf2ce25fd525ae60e57b480233975d3b22b8339"`
+[INFO] [stdout] 4596ecffd79e8e2bbc3e4270ecf2ce25fd525ae60e57b480233975d3b22b8339
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\text-grid\\0.2.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3de448a31a52773a1873f68d0d299c741ec366ae4345f40eb41652c6ad3a50db
+[INFO] running `"docker" "start" "-a" "3de448a31a52773a1873f68d0d299c741ec366ae4345f40eb41652c6ad3a50db"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\text_grid-a47032bd436380e7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\grid-4650b21e1ba1709c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 14 tests
+[INFO] [stdout] test column_cell_by ... ok
+[INFO] [stdout] test column_cell_macro ... ok
+[INFO] [stdout] test column_group ... ok
+[INFO] [stdout] test column_group_differing_level ... ok
+[INFO] [stdout] test column_group_differing_level_2 ... ok
+[INFO] [stdout] test column_multipart ... ok
+[INFO] [stdout] test column_static_str ... ok
+[INFO] [stdout] test column_str ... ok
+[INFO] [stdout] test column_u8 ... ok
+[INFO] [stdout] test column_u8_ref ... ok
+[INFO] [stdout] test impl_debug ... ok
+[INFO] [stdout] test map ... ok
+[INFO] [stdout] test map_ref ... ok
+[INFO] [stdout] test with_schema ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\grid_buf-5ce68479228a62ef.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test cell_1 ... ok
+[INFO] [stdout] test cell_option_ref_u8 ... ok
+[INFO] [stdout] test cell_option_u8 ... ok
+[INFO] [stdout] test cell_u8 ... ok
+[INFO] [stdout] test colspan_2 ... ok
+[INFO] [stdout] test colspan_3 ... ok
+[INFO] [stdout] test separator ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests text-grid
+[INFO] [stdout] 
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test src\cell.rs - cell (line 177) ... ignored
+[INFO] [stdout] test src\cell.rs - cell (line 187) ... ok
+[INFO] [stdout] test src\cell.rs - cell (line 213) ... ok
+[INFO] [stdout] test src\cell.rs - cell::cell (line 97) ... ignored
+[INFO] [stdout] test src\cell.rs - cell (line 146) ... ok
+[INFO] [stdout] test src\cell.rs - cell (line 200) ... ok
+[INFO] [stdout] test src\cell.rs - cell::cell (line 106) ... ok
+[INFO] [stdout] test src\grid.rs - grid::GridSchema (line 19) ... ok
+[INFO] [stdout] test src\cell.rs - cell::cell_by (line 129) ... ok
+[INFO] [stdout] test src\grid.rs - grid::Grid (line 69) ... ok
+[INFO] [stdout] test src\grid_buf.rs - grid_buf::GridBuf::set_column_separators (line 89) ... ok
+[INFO] [stdout] test src\row_write.rs - row_write::RowWrite::column (line 126) ... ok
+[INFO] [stdout] test src\grid_buf.rs - grid_buf::GridBuf (line 11) ... ok
+[INFO] [stdout] test src\row_write.rs - row_write::RowWrite::content (line 76) ... ok
+[INFO] [stdout] test src\row_write.rs - row_write::RowWrite::group (line 22) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3de448a31a52773a1873f68d0d299c741ec366ae4345f40eb41652c6ad3a50db"`
+[INFO] running `"docker" "rm" "-f" "3de448a31a52773a1873f68d0d299c741ec366ae4345f40eb41652c6ad3a50db"`
+[INFO] [stdout] 3de448a31a52773a1873f68d0d299c741ec366ae4345f40eb41652c6ad3a50db

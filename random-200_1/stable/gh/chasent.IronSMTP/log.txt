@@ -1,0 +1,117 @@
+[INFO] cloning repository chasent/IronSMTP
+[INFO] running `"git" "clone" "--bare" "git://github.com/chasent/IronSMTP.git" "work\\cache\\sources\\gh\\chasent\\IronSMTP"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\chasent\IronSMTP'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chasent\\IronSMTP" "work\\ex\\default\\sources\\stable\\gh\\chasent\\IronSMTP"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\chasent\IronSMTP'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\chasent\\IronSMTP" "work\\ex\\default\\sources\\beta\\gh\\chasent\\IronSMTP"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\chasent\IronSMTP'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3c2e3c19b848d020ebbe341afcbe2f6d6431adc3
+[INFO] sha for GitHub repo chasent/IronSMTP: 3c2e3c19b848d020ebbe341afcbe2f6d6431adc3
+[INFO] validating manifest of chasent/IronSMTP on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of chasent/IronSMTP on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing chasent/IronSMTP
+[INFO] finished frobbing chasent/IronSMTP
+[INFO] frobbed toml for chasent/IronSMTP written to work\ex\default\sources\stable\gh\chasent\IronSMTP\Cargo.toml
+[INFO] started frobbing chasent/IronSMTP
+[INFO] finished frobbing chasent/IronSMTP
+[INFO] frobbed toml for chasent/IronSMTP written to work\ex\default\sources\beta\gh\chasent\IronSMTP\Cargo.toml
+[INFO] crate chasent/IronSMTP already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tokio-codec v0.1.0
+[INFO] [stderr]   Downloaded lazycell v1.1.0
+[INFO] [stderr]   Downloaded bytes v0.4.10
+[INFO] [stderr]   Downloaded smallvec v0.6.5
+[INFO] [stderr]   Downloaded tokio-uds v0.2.1
+[INFO] [stderr]   Downloaded tokio v0.1.8
+[INFO] [stderr]   Downloaded tokio-reactor v0.1.5
+[INFO] [stderr]   Downloaded tokio-executor v0.1.4
+[INFO] [stderr]   Downloaded lock_api v0.1.3
+[INFO] [stderr]   Downloaded tokio-threadpool v0.1.6
+[INFO] [stderr]   Downloaded crossbeam-deque v0.6.1
+[INFO] [stderr]   Downloaded tokio-timer v0.2.6
+[INFO] [stderr]   Downloaded tokio-fs v0.1.3
+[INFO] [stderr]   Downloaded tokio-tcp v0.1.1
+[INFO] [stderr]   Downloaded tokio-current-thread v0.1.1
+[INFO] [stderr]   Downloaded nom v4.1.1
+[INFO] [stderr]   Downloaded memchr v2.1.0
+[INFO] [stderr]   Downloaded tokio-io v0.1.8
+[INFO] [stderr]   Downloaded futures v0.1.24
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing chasent/IronSMTP against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\chasent\\IronSMTP,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] ca1284befeab3a8a485a3ff2c993d944f0b8e74f9f0ffb86f72e51c4bfe219fc
+[INFO] running `"docker" "start" "-a" "ca1284befeab3a8a485a3ff2c993d944f0b8e74f9f0ffb86f72e51c4bfe219fc"`
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling rand_core v0.2.1
+[INFO] [stderr]    Compiling nodrop v0.1.12
+[INFO] [stderr]    Compiling byteorder v1.2.6
+[INFO] [stderr]    Compiling crossbeam-utils v0.5.0
+[INFO] [stderr]    Compiling futures v0.1.24
+[INFO] [stderr]    Compiling slab v0.4.1
+[INFO] [stderr]    Compiling libc v0.2.43
+[INFO] [stderr]    Compiling lazycell v1.1.0
+[INFO] [stderr]    Compiling lazy_static v1.1.0
+[INFO] [stderr]    Compiling memchr v2.1.0
+[INFO] [stderr]    Compiling log v0.4.5
+[INFO] [stderr]    Compiling owning_ref v0.3.3
+[INFO] [stderr]    Compiling arrayvec v0.4.7
+[INFO] [stderr]    Compiling num_cpus v1.8.0
+[INFO] [stderr]    Compiling smallvec v0.6.5
+[INFO] [stderr]    Compiling bytes v0.4.10
+[INFO] [stderr]    Compiling lock_api v0.1.3
+[INFO] [stderr]    Compiling parking_lot_core v0.3.1
+[INFO] [stderr]    Compiling tokio-executor v0.1.4
+[INFO] [stderr]    Compiling crossbeam-epoch v0.5.2
+[INFO] [stderr]    Compiling tokio-io v0.1.8
+[INFO] [stderr]    Compiling nom v4.1.1
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.1
+[INFO] [stderr]    Compiling tokio-timer v0.2.6
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.1
+[INFO] [stderr]    Compiling tokio-codec v0.1.0
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling rand v0.5.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.16
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.6
+[INFO] [stderr]    Compiling parking_lot v0.6.4
+[INFO] [stderr]    Compiling tokio-fs v0.1.3
+[INFO] [stderr]    Compiling tokio-reactor v0.1.5
+[INFO] [stderr]    Compiling tokio-tcp v0.1.1
+[INFO] [stderr]    Compiling tokio-udp v0.1.2
+[INFO] [stderr]    Compiling tokio v0.1.8
+[INFO] [stderr]    Compiling rsmtp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 20s
+[INFO] running `"docker" "inspect" "ca1284befeab3a8a485a3ff2c993d944f0b8e74f9f0ffb86f72e51c4bfe219fc"`
+[INFO] running `"docker" "rm" "-f" "ca1284befeab3a8a485a3ff2c993d944f0b8e74f9f0ffb86f72e51c4bfe219fc"`
+[INFO] [stdout] ca1284befeab3a8a485a3ff2c993d944f0b8e74f9f0ffb86f72e51c4bfe219fc
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\chasent\\IronSMTP,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a5781a99aeb37d3800615d256443d035d8d5fc5ff1597117887f231d936886b5
+[INFO] running `"docker" "start" "-a" "a5781a99aeb37d3800615d256443d035d8d5fc5ff1597117887f231d936886b5"`
+[INFO] [stderr]    Compiling rsmtp v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\main.rs:569:27
+[INFO] [stderr]     |
+[INFO] [stderr] 569 |             reverse_path: "<mail@samlogic.com>"
+[INFO] [stderr]     |                           ^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |                           |
+[INFO] [stderr]     |                           expected struct `std::string::String`, found reference
+[INFO] [stderr]     |                           help: try using a conversion method: `"<mail@samlogic.com>".to_string()`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `std::string::String`
+[INFO] [stderr]                found type `&'static str`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `rsmtp`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "a5781a99aeb37d3800615d256443d035d8d5fc5ff1597117887f231d936886b5"`
+[INFO] running `"docker" "rm" "-f" "a5781a99aeb37d3800615d256443d035d8d5fc5ff1597117887f231d936886b5"`
+[INFO] [stdout] a5781a99aeb37d3800615d256443d035d8d5fc5ff1597117887f231d936886b5

@@ -1,0 +1,59 @@
+[INFO] fetching crate enclose 1.1.6...
+[INFO] extracting crate enclose 1.1.6 into work\ex\default\sources\stable\reg\enclose\1.1.6
+[INFO] extracting crate enclose 1.1.6 into work\ex\default\sources\beta\reg\enclose\1.1.6
+[INFO] validating manifest of enclose-1.1.6 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of enclose-1.1.6 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing enclose-1.1.6
+[INFO] finished frobbing enclose-1.1.6
+[INFO] frobbed toml for enclose-1.1.6 written to work\ex\default\sources\stable\reg\enclose\1.1.6\Cargo.toml
+[INFO] started frobbing enclose-1.1.6
+[INFO] finished frobbing enclose-1.1.6
+[INFO] frobbed toml for enclose-1.1.6 written to work\ex\default\sources\beta\reg\enclose\1.1.6\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing enclose-1.1.6 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enclose\\1.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] cd128b15eaa040211dcf5fa915b22e941c185c707508c066b3d772bd1b7d6d12
+[INFO] running `"docker" "start" "-a" "cd128b15eaa040211dcf5fa915b22e941c185c707508c066b3d772bd1b7d6d12"`
+[INFO] [stderr]    Compiling enclose v1.1.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.72s
+[INFO] running `"docker" "inspect" "cd128b15eaa040211dcf5fa915b22e941c185c707508c066b3d772bd1b7d6d12"`
+[INFO] running `"docker" "rm" "-f" "cd128b15eaa040211dcf5fa915b22e941c185c707508c066b3d772bd1b7d6d12"`
+[INFO] [stdout] cd128b15eaa040211dcf5fa915b22e941c185c707508c066b3d772bd1b7d6d12
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enclose\\1.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9cb1af6e4174758c9631b4eaadc266d8a651ca6602bb8b4b635fc0f348d83ec1
+[INFO] running `"docker" "start" "-a" "9cb1af6e4174758c9631b4eaadc266d8a651ca6602bb8b4b635fc0f348d83ec1"`
+[INFO] [stderr]    Compiling enclose v1.1.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.76s
+[INFO] running `"docker" "inspect" "9cb1af6e4174758c9631b4eaadc266d8a651ca6602bb8b4b635fc0f348d83ec1"`
+[INFO] running `"docker" "rm" "-f" "9cb1af6e4174758c9631b4eaadc266d8a651ca6602bb8b4b635fc0f348d83ec1"`
+[INFO] [stdout] 9cb1af6e4174758c9631b4eaadc266d8a651ca6602bb8b4b635fc0f348d83ec1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\enclose\\1.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 6aecf0d93cb714305cf481e935b98b6b58e57209ef19c4b574e1b05cd4ea711e
+[INFO] running `"docker" "start" "-a" "6aecf0d93cb714305cf481e935b98b6b58e57209ef19c4b574e1b05cd4ea711e"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.17s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\enclose-d53dc2833827db7f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests enclose
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test src\lib.rs -  (line 50) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 26) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 122) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 79) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6aecf0d93cb714305cf481e935b98b6b58e57209ef19c4b574e1b05cd4ea711e"`
+[INFO] running `"docker" "rm" "-f" "6aecf0d93cb714305cf481e935b98b6b58e57209ef19c4b574e1b05cd4ea711e"`
+[INFO] [stdout] 6aecf0d93cb714305cf481e935b98b6b58e57209ef19c4b574e1b05cd4ea711e

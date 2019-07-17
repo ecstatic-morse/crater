@@ -1,0 +1,469 @@
+[INFO] fetching crate chrono 0.4.7...
+[INFO] extracting crate chrono 0.4.7 into work\ex\default\sources\stable\reg\chrono\0.4.7
+[INFO] extracting crate chrono 0.4.7 into work\ex\default\sources\beta\reg\chrono\0.4.7
+[INFO] validating manifest of chrono-0.4.7 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of chrono-0.4.7 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing chrono-0.4.7
+[INFO] finished frobbing chrono-0.4.7
+[INFO] frobbed toml for chrono-0.4.7 written to work\ex\default\sources\stable\reg\chrono\0.4.7\Cargo.toml
+[INFO] started frobbing chrono-0.4.7
+[INFO] finished frobbing chrono-0.4.7
+[INFO] frobbed toml for chrono-0.4.7 written to work\ex\default\sources\beta\reg\chrono\0.4.7\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bincode v0.8.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing chrono-0.4.7 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 502a2a3b2589b420c1bce2aa0e292e8fe9552378569171ecbf81d1f857616acb
+[INFO] running `"docker" "start" "-a" "502a2a3b2589b420c1bce2aa0e292e8fe9552378569171ecbf81d1f857616acb"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.4.7 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:282:40
+[INFO] [stderr]     |
+[INFO] [stderr] 282 |                 (Some(y), q, r @ Some(0...99)) | (Some(y), q, r @ None) => {
+[INFO] [stderr]     |                                        ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:294:43
+[INFO] [stderr]     |
+[INFO] [stderr] 294 |                 (None, Some(q), Some(r @ 0...99)) => {
+[INFO] [stderr]     |                                           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:302:40
+[INFO] [stderr]     |
+[INFO] [stderr] 302 |                 (None, None, Some(r @ 0...99)) => Ok(Some(r + if r < 70 {2000} else {1900})),
+[INFO] [stderr]     |                                        ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:457:23
+[INFO] [stderr]     |
+[INFO] [stderr] 457 |             Some(v @ 0...1) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:462:23
+[INFO] [stderr]     |
+[INFO] [stderr] 462 |             Some(v @ 0...11) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:469:23
+[INFO] [stderr]     |
+[INFO] [stderr] 469 |             Some(v @ 0...59) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:476:18
+[INFO] [stderr]     |
+[INFO] [stderr] 476 |             v @ 0...59 => (v, 0),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:481:23
+[INFO] [stderr]     |
+[INFO] [stderr] 481 |             Some(v @ 0...999_999_999) if self.second.is_some() => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:482:19
+[INFO] [stderr]     |
+[INFO] [stderr] 482 |             Some(0...999_999_999) => return Err(NOT_ENOUGH), // second is missing
+[INFO] [stderr]     |                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\format\scan.rs:16:61
+[INFO] [stderr]    |
+[INFO] [stderr] 16 |     let mut xs = s.as_bytes().iter().map(|&c| match c { b'A'...b'Z' => c + 32, _ => c });
+[INFO] [stderr]    |                                                             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:217:19
+[INFO] [stderr]     |
+[INFO] [stderr] 217 |         (h1 @ b'0'...b'9', h2 @ b'0'...b'9') => i32::from((h1 - b'0') * 10 + (h2 - b'0')),
+[INFO] [stderr]     |                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:217:37
+[INFO] [stderr]     |
+[INFO] [stderr] 217 |         (h1 @ b'0'...b'9', h2 @ b'0'...b'9') => i32::from((h1 - b'0') * 10 + (h2 - b'0')),
+[INFO] [stderr]     |                                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:229:23
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |             (m1 @ b'0'...b'5', m2 @ b'0'...b'9') => i32::from((m1 - b'0') * 10 + (m2 - b'0')),
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:229:41
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |             (m1 @ b'0'...b'5', m2 @ b'0'...b'9') => i32::from((m1 - b'0') * 10 + (m2 - b'0')),
+[INFO] [stderr]     |                                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:230:18
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |             (b'6'...b'9', b'0'...b'9') => return Err(OUT_OF_RANGE),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:230:31
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |             (b'6'...b'9', b'0'...b'9') => return Err(OUT_OF_RANGE),
+[INFO] [stderr]     |                               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:275:64
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     let upto = s.as_bytes().iter().position(|&c| match c { b'a'...b'z' | b'A'...b'Z' => false,
+[INFO] [stderr]     |                                                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:275:78
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     let upto = s.as_bytes().iter().position(|&c| match c { b'a'...b'z' | b'A'...b'Z' => false,
+[INFO] [stderr]     |                                                                              ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parse.rs:106:15
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         (2,  0...49) => { year += 2000; } //   47 -> 2047,   05 -> 2005
+[INFO] [stderr]     |               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parse.rs:107:15
+[INFO] [stderr]     |
+[INFO] [stderr] 107 |         (2, 50...99) => { year += 1900; } //   79 -> 1979
+[INFO] [stderr]     |               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 32.70s
+[INFO] running `"docker" "inspect" "502a2a3b2589b420c1bce2aa0e292e8fe9552378569171ecbf81d1f857616acb"`
+[INFO] running `"docker" "rm" "-f" "502a2a3b2589b420c1bce2aa0e292e8fe9552378569171ecbf81d1f857616acb"`
+[INFO] [stdout] 502a2a3b2589b420c1bce2aa0e292e8fe9552378569171ecbf81d1f857616acb
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 94d1978d18073b5f9d439e7ee9b0a6ecc46a09775eced925fdb1aa64a9045e47
+[INFO] running `"docker" "start" "-a" "94d1978d18073b5f9d439e7ee9b0a6ecc46a09775eced925fdb1aa64a9045e47"`
+[INFO] [stderr]    Compiling doc-comment v0.3.1
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling bincode v0.8.0
+[INFO] [stderr]    Compiling chrono v0.4.7 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:282:40
+[INFO] [stderr]     |
+[INFO] [stderr] 282 |                 (Some(y), q, r @ Some(0...99)) | (Some(y), q, r @ None) => {
+[INFO] [stderr]     |                                        ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:294:43
+[INFO] [stderr]     |
+[INFO] [stderr] 294 |                 (None, Some(q), Some(r @ 0...99)) => {
+[INFO] [stderr]     |                                           ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:302:40
+[INFO] [stderr]     |
+[INFO] [stderr] 302 |                 (None, None, Some(r @ 0...99)) => Ok(Some(r + if r < 70 {2000} else {1900})),
+[INFO] [stderr]     |                                        ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:457:23
+[INFO] [stderr]     |
+[INFO] [stderr] 457 |             Some(v @ 0...1) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:462:23
+[INFO] [stderr]     |
+[INFO] [stderr] 462 |             Some(v @ 0...11) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:469:23
+[INFO] [stderr]     |
+[INFO] [stderr] 469 |             Some(v @ 0...59) => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:476:18
+[INFO] [stderr]     |
+[INFO] [stderr] 476 |             v @ 0...59 => (v, 0),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:481:23
+[INFO] [stderr]     |
+[INFO] [stderr] 481 |             Some(v @ 0...999_999_999) if self.second.is_some() => v,
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parsed.rs:482:19
+[INFO] [stderr]     |
+[INFO] [stderr] 482 |             Some(0...999_999_999) => return Err(NOT_ENOUGH), // second is missing
+[INFO] [stderr]     |                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\format\scan.rs:16:61
+[INFO] [stderr]    |
+[INFO] [stderr] 16 |     let mut xs = s.as_bytes().iter().map(|&c| match c { b'A'...b'Z' => c + 32, _ => c });
+[INFO] [stderr]    |                                                             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:217:19
+[INFO] [stderr]     |
+[INFO] [stderr] 217 |         (h1 @ b'0'...b'9', h2 @ b'0'...b'9') => i32::from((h1 - b'0') * 10 + (h2 - b'0')),
+[INFO] [stderr]     |                   ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:217:37
+[INFO] [stderr]     |
+[INFO] [stderr] 217 |         (h1 @ b'0'...b'9', h2 @ b'0'...b'9') => i32::from((h1 - b'0') * 10 + (h2 - b'0')),
+[INFO] [stderr]     |                                     ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:229:23
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |             (m1 @ b'0'...b'5', m2 @ b'0'...b'9') => i32::from((m1 - b'0') * 10 + (m2 - b'0')),
+[INFO] [stderr]     |                       ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:229:41
+[INFO] [stderr]     |
+[INFO] [stderr] 229 |             (m1 @ b'0'...b'5', m2 @ b'0'...b'9') => i32::from((m1 - b'0') * 10 + (m2 - b'0')),
+[INFO] [stderr]     |                                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:230:18
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |             (b'6'...b'9', b'0'...b'9') => return Err(OUT_OF_RANGE),
+[INFO] [stderr]     |                  ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:230:31
+[INFO] [stderr]     |
+[INFO] [stderr] 230 |             (b'6'...b'9', b'0'...b'9') => return Err(OUT_OF_RANGE),
+[INFO] [stderr]     |                               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:275:64
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     let upto = s.as_bytes().iter().position(|&c| match c { b'a'...b'z' | b'A'...b'Z' => false,
+[INFO] [stderr]     |                                                                ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\scan.rs:275:78
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |     let upto = s.as_bytes().iter().position(|&c| match c { b'a'...b'z' | b'A'...b'Z' => false,
+[INFO] [stderr]     |                                                                              ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parse.rs:106:15
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         (2,  0...49) => { year += 2000; } //   47 -> 2047,   05 -> 2005
+[INFO] [stderr]     |               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\format\parse.rs:107:15
+[INFO] [stderr]     |
+[INFO] [stderr] 107 |         (2, 50...99) => { year += 1900; } //   79 -> 1979
+[INFO] [stderr]     |               ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 36.16s
+[INFO] running `"docker" "inspect" "94d1978d18073b5f9d439e7ee9b0a6ecc46a09775eced925fdb1aa64a9045e47"`
+[INFO] running `"docker" "rm" "-f" "94d1978d18073b5f9d439e7ee9b0a6ecc46a09775eced925fdb1aa64a9045e47"`
+[INFO] [stdout] 94d1978d18073b5f9d439e7ee9b0a6ecc46a09775eced925fdb1aa64a9045e47
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\chrono\\0.4.7,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 65aef3f0b2ec90acb778d35aba9a15c7cd737b431851b53e28889e4b8b7f6cd4
+[INFO] running `"docker" "start" "-a" "65aef3f0b2ec90acb778d35aba9a15c7cd737b431851b53e28889e4b8b7f6cd4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.85s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\chrono-c7f138858a4c3b42.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 97 tests
+[INFO] [stdout] test datetime::test_auto_conversion ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_date_and_time ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_format_with_local ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_from_str ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_is_copy ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_offset ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_parse_from_str ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_rfc2822_and_rfc3339 ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_with_timezone ... ok
+[INFO] [stdout] test datetime::tests::test_datetime_is_send ... ok
+[INFO] [stdout] test datetime::tests::test_rfc3339_opts ... ok
+[INFO] [stdout] test datetime::tests::test_subsecond_part ... ok
+[INFO] [stdout] test datetime::tests::test_from_system_time ... FAILED
+[INFO] [stdout] test div::tests::test_div_mod_floor ... ok
+[INFO] [stdout] test div::tests::test_mod_floor ... ok
+[INFO] [stdout] test format::parse::parse_rfc850 ... ok
+[INFO] [stdout] test format::parse::test_parse ... ok
+[INFO] [stdout] test datetime::tests::test_rfc3339_opts_nonexhaustive ... ok
+[INFO] [stdout] test format::parse::test_rfc2822 ... ok
+[INFO] [stdout] test format::parse::test_rfc3339 ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_set_fields ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_datetime ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_datetime_with_timezone ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_date ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_datetime_with_offset ... ok
+[INFO] [stdout] test format::parsed::tests::test_parsed_to_naive_time ... ok
+[INFO] [stdout] test format::strftime::test_strftime_docs ... ok
+[INFO] [stdout] test format::strftime::test_strftime_items ... ok
+[INFO] [stdout] test naive::date::test_date_bounds ... ok
+[INFO] [stdout] test naive::date::tests::test_date_add ... ok
+[INFO] [stdout] test naive::date::tests::test_date_addassignment ... ok
+[INFO] [stdout] test naive::date::tests::test_date_fields ... ok
+[INFO] [stdout] test naive::date::tests::test_date_fmt ... ok
+[INFO] [stdout] test naive::date::tests::test_date_format ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_isoywd ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_num_days_from_ce ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_str ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_ymd ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_yo ... ok
+[INFO] [stdout] test naive::date::tests::test_date_num_days_from_ce ... ok
+[INFO] [stdout] test naive::date::tests::test_date_from_isoywd_and_iso_week ... ok
+[INFO] [stdout] test naive::date::tests::test_date_parse_from_str ... ok
+[INFO] [stdout] test naive::date::tests::test_date_pred ... ok
+[INFO] [stdout] test naive::date::tests::test_date_sub ... ok
+[INFO] [stdout] test naive::date::tests::test_date_subassignment ... ok
+[INFO] [stdout] test naive::date::tests::test_date_succ ... ok
+[INFO] [stdout] test naive::date::tests::test_date_weekday ... ok
+[INFO] [stdout] test naive::date::tests::test_date_with_fields ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_add ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_add_sub_invariant ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_addassignment ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_format ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_from_str ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_from_timestamp ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_parse_from_str ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_sub ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_subassignment ... ok
+[INFO] [stdout] test naive::datetime::tests::test_datetime_timestamp ... ok
+[INFO] [stdout] test naive::datetime::tests::test_nanosecond_range ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_to_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_to_of_to_mdf ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_valid ... ok
+[INFO] [stdout] test naive::internals::tests::test_mdf_with_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_isoweekdate_raw ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_to_mdf ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_to_mdf_to_of ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_weekday ... ok
+[INFO] [stdout] test naive::internals::tests::test_of_with_fields ... ok
+[INFO] [stdout] test naive::internals::tests::test_year_flags_ndays_from_year ... ok
+[INFO] [stdout] test naive::internals::tests::test_year_flags_nisoweeks ... ok
+[INFO] [stdout] test naive::isoweek::tests::test_iso_week_extremes ... ok
+[INFO] [stdout] test naive::time::tests::test_date_from_str ... ok
+[INFO] [stdout] test naive::time::tests::test_time_add ... ok
+[INFO] [stdout] test naive::time::tests::test_time_addassignment ... ok
+[INFO] [stdout] test naive::time::tests::test_time_fmt ... ok
+[INFO] [stdout] test naive::time::tests::test_time_format ... ok
+[INFO] [stdout] test naive::time::tests::test_time_from_hms_micro ... ok
+[INFO] [stdout] test naive::time::tests::test_time_from_hms_milli ... ok
+[INFO] [stdout] test naive::time::tests::test_time_hms ... ok
+[INFO] [stdout] test naive::time::tests::test_time_overflowing_add ... ok
+[INFO] [stdout] test naive::time::tests::test_time_parse_from_str ... ok
+[INFO] [stdout] test naive::time::tests::test_time_sub ... ok
+[INFO] [stdout] test naive::time::tests::test_time_subassignment ... ok
+[INFO] [stdout] test offset::fixed::tests::test_date_extreme_offset ... ok
+[INFO] [stdout] test offset::local::tests::test_leap_second ... ok
+[INFO] [stdout] test offset::local::tests::test_local_date_sanity_check ... ok
+[INFO] [stdout] test offset::tests::test_nanos_never_panics ... ok
+[INFO] [stdout] test offset::tests::test_negative_millis ... ok
+[INFO] [stdout] test offset::tests::test_negative_nanos ... ok
+[INFO] [stdout] test round::tests::test_round ... ok
+[INFO] [stdout] test round::tests::test_round_leap_nanos ... ok
+[INFO] [stdout] test round::tests::test_trunc ... ok
+[INFO] [stdout] test round::tests::test_trunc_leap_nanos ... ok
+[INFO] [stdout] test test_readme_doomsday ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- datetime::tests::test_from_system_time stdout ----
+[INFO] [stdout] thread 'datetime::tests::test_from_system_time' panicked at 'assertion failed: `(left == right)`
+[INFO] [stdout]   left: `2001-09-09T01:46:39.999999900Z`,
+[INFO] [stdout]  right: `2001-09-09T01:46:39.999999999Z`', src\datetime.rs:1705:9
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff61993f53c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff61993f53c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6199429ee - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6199429ee - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff6199425fb - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff619943280 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff619942db4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff619942d02 - std::panicking::begin_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:339
+[INFO] [stdout]    8:     0x7ff6198c8fb8 - chrono::datetime::tests::test_from_system_time
+[INFO] [stdout]                                at C:\crater\workdir\src\datetime.rs:1705
+[INFO] [stdout]    9:     0x7ff6198c8b0e - chrono::datetime::tests::test_from_system_time::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\src\datetime.rs:1698
+[INFO] [stdout]   10:     0x7ff61982ae9b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   11:     0x7ff6198ed9c7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   12:     0x7ff619946b72 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   13:     0x7ff61990c9cb - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   14:     0x7ff61990c9cb - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   15:     0x7ff61990c9cb - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libtest\lib.rs:1466
+[INFO] [stdout]   16:     0x7ff6198df84e - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   17:     0x7ff6198e56de - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   18:     0x7ff6198e56de - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:315
+[INFO] [stdout]   19:     0x7ff6198e56de - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:296
+[INFO] [stdout]   20:     0x7ff619946b72 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   21:     0x7ff6198e5ce0 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panicking.rs:275
+[INFO] [stdout]   22:     0x7ff6198e5ce0 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\panic.rs:394
+[INFO] [stdout]   23:     0x7ff6198e5ce0 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   24:     0x7ff6198e5ce0 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\ops\function.rs:231
+[INFO] [stdout]   25:     0x7ff619934417 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   26:     0x7ff619945837 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\liballoc\boxed.rs:746
+[INFO] [stdout]   27:     0x7ff619945837 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   28:     0x7ff619945837 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   29:     0x7ffa19897974 - BaseThreadInitThunk
+[INFO] [stdout]   30:     0x7ffa4074a271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     datetime::tests::test_from_system_time
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 96 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--lib'
+[INFO] running `"docker" "inspect" "65aef3f0b2ec90acb778d35aba9a15c7cd737b431851b53e28889e4b8b7f6cd4"`
+[INFO] running `"docker" "rm" "-f" "65aef3f0b2ec90acb778d35aba9a15c7cd737b431851b53e28889e4b8b7f6cd4"`
+[INFO] [stdout] 65aef3f0b2ec90acb778d35aba9a15c7cd737b431851b53e28889e4b8b7f6cd4

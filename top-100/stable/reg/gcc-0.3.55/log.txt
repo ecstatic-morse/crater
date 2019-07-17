@@ -1,0 +1,1677 @@
+[INFO] fetching crate gcc 0.3.55...
+[INFO] extracting crate gcc 0.3.55 into work\ex\default\sources\stable\reg\gcc\0.3.55
+[INFO] extracting crate gcc 0.3.55 into work\ex\default\sources\beta\reg\gcc\0.3.55
+[INFO] validating manifest of gcc-0.3.55 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of gcc-0.3.55 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing gcc-0.3.55
+[INFO] finished frobbing gcc-0.3.55
+[INFO] frobbed toml for gcc-0.3.55 written to work\ex\default\sources\stable\reg\gcc\0.3.55\Cargo.toml
+[INFO] started frobbing gcc-0.3.55
+[INFO] finished frobbing gcc-0.3.55
+[INFO] frobbed toml for gcc-0.3.55 written to work\ex\default\sources\beta\reg\gcc\0.3.55\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rayon v0.8.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building gcc-0.3.55 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\gcc\\0.3.55,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] e18b8c4e59dda9f38e33760074e7b8a4b8891e6246521457f725f4f5d835f607
+[INFO] running `"docker" "start" "-a" "e18b8c4e59dda9f38e33760074e7b8a4b8891e6246521457f725f4f5d835f607"`
+[INFO] [stderr]    Compiling gcc v0.3.55 (C:\crater\workdir)
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> src\lib.rs:57:19
+[INFO] [stderr]    |
+[INFO] [stderr] 57 | pub type Config = Build;
+[INFO] [stderr]    |                   ^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:239:17
+[INFO] [stderr]     |
+[INFO] [stderr] 239 |     let mut c = Build::new();
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:246:6
+[INFO] [stderr]     |
+[INFO] [stderr] 246 | impl Build {
+[INFO] [stderr]     |      ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1539:18
+[INFO] [stderr]      |
+[INFO] [stderr] 1539 | impl Default for Build {
+[INFO] [stderr]      |                  ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:253:21
+[INFO] [stderr]     |
+[INFO] [stderr] 253 |     pub fn new() -> Build {
+[INFO] [stderr]     |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:254:9
+[INFO] [stderr]     |
+[INFO] [stderr] 254 |         Build {
+[INFO] [stderr]     |         ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:297:63
+[INFO] [stderr]     |
+[INFO] [stderr] 297 |     pub fn include<P: AsRef<Path>>(&mut self, dir: P) -> &mut Build {
+[INFO] [stderr]     |                                                               ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:313:87
+[INFO] [stderr]     |
+[INFO] [stderr] 313 |     pub fn define<'a, V: Into<Option<&'a str>>>(&mut self, var: &str, val: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                       ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:319:62
+[INFO] [stderr]     |
+[INFO] [stderr] 319 |     pub fn object<P: AsRef<Path>>(&mut self, obj: P) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:334:48
+[INFO] [stderr]     |
+[INFO] [stderr] 334 |     pub fn flag(&mut self, flag: &str) -> &mut Build {
+[INFO] [stderr]     |                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:360:23
+[INFO] [stderr]     |
+[INFO] [stderr] 360 |         let mut cfg = Build::new();
+[INFO] [stderr]     |                       ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:387:61
+[INFO] [stderr]     |
+[INFO] [stderr] 387 |     pub fn flag_if_supported(&mut self, flag: &str) -> &mut Build {
+[INFO] [stderr]     |                                                             ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:406:62
+[INFO] [stderr]     |
+[INFO] [stderr] 406 |     pub fn shared_flag(&mut self, shared_flag: bool) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:425:62
+[INFO] [stderr]     |
+[INFO] [stderr] 425 |     pub fn static_flag(&mut self, static_flag: bool) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:431:58
+[INFO] [stderr]     |
+[INFO] [stderr] 431 |     pub fn file<P: AsRef<Path>>(&mut self, p: P) -> &mut Build {
+[INFO] [stderr]     |                                                          ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:437:46
+[INFO] [stderr]     |
+[INFO] [stderr] 437 |     pub fn files<P>(&mut self, p: P) -> &mut Build
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:450:46
+[INFO] [stderr]     |
+[INFO] [stderr] 450 |     pub fn cpp(&mut self, cpp: bool) -> &mut Build {
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:474:80
+[INFO] [stderr]     |
+[INFO] [stderr] 474 |     pub fn warnings_into_errors(&mut self, warnings_into_errors: bool) -> &mut Build {
+[INFO] [stderr]     |                                                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:495:56
+[INFO] [stderr]     |
+[INFO] [stderr] 495 |     pub fn warnings(&mut self, warnings: bool) -> &mut Build {
+[INFO] [stderr]     |                                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:525:97
+[INFO] [stderr]     |
+[INFO] [stderr] 525 |     pub fn cpp_link_stdlib<'a, V: Into<Option<&'a str>>>(&mut self, cpp_link_stdlib: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                                 ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:563:95
+[INFO] [stderr]     |
+[INFO] [stderr] 563 |     pub fn cpp_set_stdlib<'a, V: Into<Option<&'a str>>>(&mut self, cpp_set_stdlib: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                               ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:583:52
+[INFO] [stderr]     |
+[INFO] [stderr] 583 |     pub fn target(&mut self, target: &str) -> &mut Build {
+[INFO] [stderr]     |                                                    ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:601:48
+[INFO] [stderr]     |
+[INFO] [stderr] 601 |     pub fn host(&mut self, host: &str) -> &mut Build {
+[INFO] [stderr]     |                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:610:57
+[INFO] [stderr]     |
+[INFO] [stderr] 610 |     pub fn opt_level(&mut self, opt_level: u32) -> &mut Build {
+[INFO] [stderr]     |                                                         ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:619:62
+[INFO] [stderr]     |
+[INFO] [stderr] 619 |     pub fn opt_level_str(&mut self, opt_level: &str) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:630:50
+[INFO] [stderr]     |
+[INFO] [stderr] 630 |     pub fn debug(&mut self, debug: bool) -> &mut Build {
+[INFO] [stderr]     |                                                  ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:640:67
+[INFO] [stderr]     |
+[INFO] [stderr] 640 |     pub fn out_dir<P: AsRef<Path>>(&mut self, out_dir: P) -> &mut Build {
+[INFO] [stderr]     |                                                                   ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:650:69
+[INFO] [stderr]     |
+[INFO] [stderr] 650 |     pub fn compiler<P: AsRef<Path>>(&mut self, compiler: P) -> &mut Build {
+[INFO] [stderr]     |                                                                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:660:69
+[INFO] [stderr]     |
+[INFO] [stderr] 660 |     pub fn archiver<P: AsRef<Path>>(&mut self, archiver: P) -> &mut Build {
+[INFO] [stderr]     |                                                                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:674:68
+[INFO] [stderr]     |
+[INFO] [stderr] 674 |     pub fn cargo_metadata(&mut self, cargo_metadata: bool) -> &mut Build {
+[INFO] [stderr]     |                                                                    ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:683:46
+[INFO] [stderr]     |
+[INFO] [stderr] 683 |     pub fn pic(&mut self, pic: bool) -> &mut Build {
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:691:60
+[INFO] [stderr]     |
+[INFO] [stderr] 691 |     pub fn static_crt(&mut self, static_crt: bool) -> &mut Build {
+[INFO] [stderr]     |                                                            ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:697:59
+[INFO] [stderr]     |
+[INFO] [stderr] 697 |     pub fn __set_env<A, B>(&mut self, a: A, b: B) -> &mut Build
+[INFO] [stderr]     |                                                           ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1540:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1540 |     fn default() -> Build {
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1541:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1541 |         Build::new()
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:239:17
+[INFO] [stderr]     |
+[INFO] [stderr] 239 |     let mut c = Build::new();
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:255:13
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |             include_directories: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:256:13
+[INFO] [stderr]     |
+[INFO] [stderr] 256 |             definitions: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:257:13
+[INFO] [stderr]     |
+[INFO] [stderr] 257 |             objects: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:258:13
+[INFO] [stderr]     |
+[INFO] [stderr] 258 |             flags: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:259:13
+[INFO] [stderr]     |
+[INFO] [stderr] 259 |             flags_supported: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:260:13
+[INFO] [stderr]     |
+[INFO] [stderr] 260 |             files: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:261:13
+[INFO] [stderr]     |
+[INFO] [stderr] 261 |             shared_flag: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:262:13
+[INFO] [stderr]     |
+[INFO] [stderr] 262 |             static_flag: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:263:13
+[INFO] [stderr]     |
+[INFO] [stderr] 263 |             cpp: false,
+[INFO] [stderr]     |             ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:264:13
+[INFO] [stderr]     |
+[INFO] [stderr] 264 |             cpp_link_stdlib: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:265:13
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |             cpp_set_stdlib: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:266:13
+[INFO] [stderr]     |
+[INFO] [stderr] 266 |             target: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:267:13
+[INFO] [stderr]     |
+[INFO] [stderr] 267 |             host: None,
+[INFO] [stderr]     |             ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:268:13
+[INFO] [stderr]     |
+[INFO] [stderr] 268 |             out_dir: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:269:13
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |             opt_level: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:270:13
+[INFO] [stderr]     |
+[INFO] [stderr] 270 |             debug: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:271:13
+[INFO] [stderr]     |
+[INFO] [stderr] 271 |             env: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:272:13
+[INFO] [stderr]     |
+[INFO] [stderr] 272 |             compiler: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:273:13
+[INFO] [stderr]     |
+[INFO] [stderr] 273 |             archiver: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:274:13
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |             cargo_metadata: true,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:275:13
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |             pic: None,
+[INFO] [stderr]     |             ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:276:13
+[INFO] [stderr]     |
+[INFO] [stderr] 276 |             static_crt: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:277:13
+[INFO] [stderr]     |
+[INFO] [stderr] 277 |             warnings: true,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:278:13
+[INFO] [stderr]     |
+[INFO] [stderr] 278 |             warnings_into_errors: false,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:298:9
+[INFO] [stderr]     |
+[INFO] [stderr] 298 |         self.include_directories.push(dir.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:314:9
+[INFO] [stderr]     |
+[INFO] [stderr] 314 |         self.definitions.push((var.to_string(), val.into().map(|s| s.to_string())));
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:320:9
+[INFO] [stderr]     |
+[INFO] [stderr] 320 |         self.objects.push(obj.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:335:9
+[INFO] [stderr]     |
+[INFO] [stderr] 335 |         self.flags.push(flag.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:341:22
+[INFO] [stderr]     |
+[INFO] [stderr] 341 |         let src = if self.cpp {
+[INFO] [stderr]     |                      ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:360:23
+[INFO] [stderr]     |
+[INFO] [stderr] 360 |         let mut cfg = Build::new();
+[INFO] [stderr]     |                       ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:366:17
+[INFO] [stderr]     |
+[INFO] [stderr] 366 |            .cpp(self.cpp);
+[INFO] [stderr]     |                 ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:388:9
+[INFO] [stderr]     |
+[INFO] [stderr] 388 |         self.flags_supported.push(flag.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:407:9
+[INFO] [stderr]     |
+[INFO] [stderr] 407 |         self.shared_flag = Some(shared_flag);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:426:9
+[INFO] [stderr]     |
+[INFO] [stderr] 426 |         self.static_flag = Some(static_flag);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:432:9
+[INFO] [stderr]     |
+[INFO] [stderr] 432 |         self.files.push(p.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:451:9
+[INFO] [stderr]     |
+[INFO] [stderr] 451 |         self.cpp = cpp;
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:475:9
+[INFO] [stderr]     |
+[INFO] [stderr] 475 |         self.warnings_into_errors = warnings_into_errors;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:496:9
+[INFO] [stderr]     |
+[INFO] [stderr] 496 |         self.warnings = warnings;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:526:9
+[INFO] [stderr]     |
+[INFO] [stderr] 526 |         self.cpp_link_stdlib = Some(cpp_link_stdlib.into().map(|s| s.into()));
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:565:9
+[INFO] [stderr]     |
+[INFO] [stderr] 565 |         self.cpp_set_stdlib = cpp_set_stdlib.map(|s| s.into());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:584:9
+[INFO] [stderr]     |
+[INFO] [stderr] 584 |         self.target = Some(target.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:602:9
+[INFO] [stderr]     |
+[INFO] [stderr] 602 |         self.host = Some(host.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:611:9
+[INFO] [stderr]     |
+[INFO] [stderr] 611 |         self.opt_level = Some(opt_level.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:620:9
+[INFO] [stderr]     |
+[INFO] [stderr] 620 |         self.opt_level = Some(opt_level.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:631:9
+[INFO] [stderr]     |
+[INFO] [stderr] 631 |         self.debug = Some(debug);
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:641:9
+[INFO] [stderr]     |
+[INFO] [stderr] 641 |         self.out_dir = Some(out_dir.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:651:9
+[INFO] [stderr]     |
+[INFO] [stderr] 651 |         self.compiler = Some(compiler.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:661:9
+[INFO] [stderr]     |
+[INFO] [stderr] 661 |         self.archiver = Some(archiver.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:675:9
+[INFO] [stderr]     |
+[INFO] [stderr] 675 |         self.cargo_metadata = cargo_metadata;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:684:9
+[INFO] [stderr]     |
+[INFO] [stderr] 684 |         self.pic = Some(pic);
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:692:9
+[INFO] [stderr]     |
+[INFO] [stderr] 692 |         self.static_crt = Some(static_crt);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:701:9
+[INFO] [stderr]     |
+[INFO] [stderr] 701 |         self.env.push((a.as_ref().to_owned(), b.as_ref().to_owned()));
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:722:21
+[INFO] [stderr]     |
+[INFO] [stderr] 722 |         for file in self.files.iter() {
+[INFO] [stderr]     |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:762:12
+[INFO] [stderr]     |
+[INFO] [stderr] 762 |         if self.cpp {
+[INFO] [stderr]     |            ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:832:36
+[INFO] [stderr]     |
+[INFO] [stderr] 832 |             for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]     |                                    ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:854:32
+[INFO] [stderr]     |
+[INFO] [stderr] 854 |         for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]     |                                ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:859:17
+[INFO] [stderr]     |
+[INFO] [stderr] 859 |         assert!(self.files.len() <= 1,
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:862:21
+[INFO] [stderr]     |
+[INFO] [stderr] 862 |         for file in self.files.iter() {
+[INFO] [stderr]     |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:939:38
+[INFO] [stderr]     |
+[INFO] [stderr] 939 |                 let crt_flag = match self.static_crt {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:975:24
+[INFO] [stderr]     |
+[INFO] [stderr] 975 |                     if self.pic.unwrap_or(!target.contains("windows-gnu")) {
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:978:27
+[INFO] [stderr]     |
+[INFO] [stderr] 978 |                 } else if self.pic.unwrap_or(false) {
+[INFO] [stderr]     |                           ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:984:37
+[INFO] [stderr]     |
+[INFO] [stderr] 984 |         for arg in self.envflags(if self.cpp {"CXXFLAGS"} else {"CFLAGS"}) {
+[INFO] [stderr]     |                                     ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1009:20
+[INFO] [stderr]      |
+[INFO] [stderr] 1009 |                 if self.static_flag.is_none() && target.contains("musl") {
+[INFO] [stderr]      |                    ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1089:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1089 |         if self.static_flag.unwrap_or(false) {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1092:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1092 |         if self.shared_flag.unwrap_or(false) {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1096:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1096 |         if self.cpp {
+[INFO] [stderr]      |            ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1097:20
+[INFO] [stderr]      |
+[INFO] [stderr] 1097 |             match (self.cpp_set_stdlib.as_ref(), cmd.family) {
+[INFO] [stderr]      |                    ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1110:26
+[INFO] [stderr]      |
+[INFO] [stderr] 1110 |         for directory in self.include_directories.iter() {
+[INFO] [stderr]      |                          ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1115:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1115 |         for flag in self.flags.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1119:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1119 |         for flag in self.flags_supported.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1125:38
+[INFO] [stderr]      |
+[INFO] [stderr] 1125 |         for &(ref key, ref value) in self.definitions.iter() {
+[INFO] [stderr]      |                                      ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1134:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1134 |         if self.warnings {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1140:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1140 |         if self.warnings_into_errors {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1155:26
+[INFO] [stderr]      |
+[INFO] [stderr] 1155 |         for directory in self.include_directories.iter() {
+[INFO] [stderr]      |                          ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1158:38
+[INFO] [stderr]      |
+[INFO] [stderr] 1158 |         for &(ref key, ref value) in self.definitions.iter() {
+[INFO] [stderr]      |                                      ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1169:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1169 |         for flag in self.flags.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1183:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1183 |             let mut cmd = match self.archiver {
+[INFO] [stderr]      |                                 ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1192:28
+[INFO] [stderr]      |
+[INFO] [stderr] 1192 |                     .args(&self.objects),
+[INFO] [stderr]      |                            ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1217:28
+[INFO] [stderr]      |
+[INFO] [stderr] 1217 |                     .args(&self.objects),
+[INFO] [stderr]      |                            ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1277:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1277 |         for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]      |                                ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1284:30
+[INFO] [stderr]      |
+[INFO] [stderr] 1284 |         if let Some(ref c) = self.compiler {
+[INFO] [stderr]      |                              ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1289:35
+[INFO] [stderr]      |
+[INFO] [stderr] 1289 |         let (env, msvc, gnu) = if self.cpp {
+[INFO] [stderr]      |                                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1298:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1298 |         } else if self.cpp {
+[INFO] [stderr]      |                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1314:35
+[INFO] [stderr]      |
+[INFO] [stderr] 1314 |                     let tool = if self.cpp {
+[INFO] [stderr]      |                                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'core::str::<impl str>::trim_right_matches': superseded by `trim_end_matches`
+[INFO] [stderr]     --> src\lib.rs:1348:67
+[INFO] [stderr]      |
+[INFO] [stderr] 1348 |                     let cross_compile = cc_env.as_ref().map(|s| s.trim_right_matches('-'));
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_end_matches`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'core::str::<impl str>::trim_left': superseded by `trim_start`
+[INFO] [stderr]     --> src\lib.rs:1429:65
+[INFO] [stderr]      |
+[INFO] [stderr] 1429 |                     return (t.to_string(), vec![tool[t.len()..].trim_left().to_string()]);
+[INFO] [stderr]      |                                                                 ^^^^^^^^^ help: replace the use of the deprecated item: `trim_start`
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1439:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1439 |         match self.cpp_link_stdlib.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1457:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1457 |         match self.archiver
+[INFO] [stderr]      |               ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1481:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1481 |         match self.target.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1488:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1488 |         match self.host.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1495:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1495 |         match self.opt_level.as_ref().cloned() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1502:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1502 |         self.debug.unwrap_or_else(|| {
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1511:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1511 |         match self.out_dir.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1533:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1533 |         if self.cargo_metadata {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1541:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1541 |         Build::new()
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\windows_registry.rs:557:33
+[INFO] [stderr]     |
+[INFO] [stderr] 557 |                 .and_then(|s| s.trim_left_matches("v").replace(".", "").parse().ok());
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.20s
+[INFO] running `"docker" "inspect" "e18b8c4e59dda9f38e33760074e7b8a4b8891e6246521457f725f4f5d835f607"`
+[INFO] running `"docker" "rm" "-f" "e18b8c4e59dda9f38e33760074e7b8a4b8891e6246521457f725f4f5d835f607"`
+[INFO] [stdout] e18b8c4e59dda9f38e33760074e7b8a4b8891e6246521457f725f4f5d835f607
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\gcc\\0.3.55,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9fecdb6215059a9d2b5471d407b375bd8f3a6dc6c7946f30c6b4769ab96a5119
+[INFO] running `"docker" "start" "-a" "9fecdb6215059a9d2b5471d407b375bd8f3a6dc6c7946f30c6b4769ab96a5119"`
+[INFO] [stderr]    Compiling gcc v0.3.55 (C:\crater\workdir)
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:58:26
+[INFO] [stderr]    |
+[INFO] [stderr] 58 |     pub fn gcc(&self) -> gcc::Build {
+[INFO] [stderr]    |                          ^^^^^^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:59:23
+[INFO] [stderr]    |
+[INFO] [stderr] 59 |         let mut cfg = gcc::Build::new();
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:58:26
+[INFO] [stderr]    |
+[INFO] [stderr] 58 |     pub fn gcc(&self) -> gcc::Build {
+[INFO] [stderr]    |                          ^^^^^^^^^^
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:59:23
+[INFO] [stderr]    |
+[INFO] [stderr] 59 |         let mut cfg = gcc::Build::new();
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:59:23
+[INFO] [stderr]    |
+[INFO] [stderr] 59 |         let mut cfg = gcc::Build::new();
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> src\lib.rs:57:19
+[INFO] [stderr]    |
+[INFO] [stderr] 57 | pub type Config = Build;
+[INFO] [stderr]    |                   ^^^^^
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:41:24
+[INFO] [stderr]    |
+[INFO] [stderr] 41 | #![cfg_attr(test, deny(warnings))]
+[INFO] [stderr]    |                        ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(deprecated)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:239:17
+[INFO] [stderr]     |
+[INFO] [stderr] 239 |     let mut c = Build::new();
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:246:6
+[INFO] [stderr]     |
+[INFO] [stderr] 246 | impl Build {
+[INFO] [stderr]     |      ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1539:18
+[INFO] [stderr]      |
+[INFO] [stderr] 1539 | impl Default for Build {
+[INFO] [stderr]      |                  ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:253:21
+[INFO] [stderr]     |
+[INFO] [stderr] 253 |     pub fn new() -> Build {
+[INFO] [stderr]     |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:254:9
+[INFO] [stderr]     |
+[INFO] [stderr] 254 |         Build {
+[INFO] [stderr]     |         ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:297:63
+[INFO] [stderr]     |
+[INFO] [stderr] 297 |     pub fn include<P: AsRef<Path>>(&mut self, dir: P) -> &mut Build {
+[INFO] [stderr]     |                                                               ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:313:87
+[INFO] [stderr]     |
+[INFO] [stderr] 313 |     pub fn define<'a, V: Into<Option<&'a str>>>(&mut self, var: &str, val: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                       ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:319:62
+[INFO] [stderr]     |
+[INFO] [stderr] 319 |     pub fn object<P: AsRef<Path>>(&mut self, obj: P) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:334:48
+[INFO] [stderr]     |
+[INFO] [stderr] 334 |     pub fn flag(&mut self, flag: &str) -> &mut Build {
+[INFO] [stderr]     |                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:360:23
+[INFO] [stderr]     |
+[INFO] [stderr] 360 |         let mut cfg = Build::new();
+[INFO] [stderr]     |                       ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:387:61
+[INFO] [stderr]     |
+[INFO] [stderr] 387 |     pub fn flag_if_supported(&mut self, flag: &str) -> &mut Build {
+[INFO] [stderr]     |                                                             ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:406:62
+[INFO] [stderr]     |
+[INFO] [stderr] 406 |     pub fn shared_flag(&mut self, shared_flag: bool) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:425:62
+[INFO] [stderr]     |
+[INFO] [stderr] 425 |     pub fn static_flag(&mut self, static_flag: bool) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:431:58
+[INFO] [stderr]     |
+[INFO] [stderr] 431 |     pub fn file<P: AsRef<Path>>(&mut self, p: P) -> &mut Build {
+[INFO] [stderr]     |                                                          ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:437:46
+[INFO] [stderr]     |
+[INFO] [stderr] 437 |     pub fn files<P>(&mut self, p: P) -> &mut Build
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:450:46
+[INFO] [stderr]     |
+[INFO] [stderr] 450 |     pub fn cpp(&mut self, cpp: bool) -> &mut Build {
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:474:80
+[INFO] [stderr]     |
+[INFO] [stderr] 474 |     pub fn warnings_into_errors(&mut self, warnings_into_errors: bool) -> &mut Build {
+[INFO] [stderr]     |                                                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:495:56
+[INFO] [stderr]     |
+[INFO] [stderr] 495 |     pub fn warnings(&mut self, warnings: bool) -> &mut Build {
+[INFO] [stderr]     |                                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:525:97
+[INFO] [stderr]     |
+[INFO] [stderr] 525 |     pub fn cpp_link_stdlib<'a, V: Into<Option<&'a str>>>(&mut self, cpp_link_stdlib: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                                 ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:563:95
+[INFO] [stderr]     |
+[INFO] [stderr] 563 |     pub fn cpp_set_stdlib<'a, V: Into<Option<&'a str>>>(&mut self, cpp_set_stdlib: V) -> &mut Build {
+[INFO] [stderr]     |                                                                                               ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:583:52
+[INFO] [stderr]     |
+[INFO] [stderr] 583 |     pub fn target(&mut self, target: &str) -> &mut Build {
+[INFO] [stderr]     |                                                    ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:601:48
+[INFO] [stderr]     |
+[INFO] [stderr] 601 |     pub fn host(&mut self, host: &str) -> &mut Build {
+[INFO] [stderr]     |                                                ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:610:57
+[INFO] [stderr]     |
+[INFO] [stderr] 610 |     pub fn opt_level(&mut self, opt_level: u32) -> &mut Build {
+[INFO] [stderr]     |                                                         ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:619:62
+[INFO] [stderr]     |
+[INFO] [stderr] 619 |     pub fn opt_level_str(&mut self, opt_level: &str) -> &mut Build {
+[INFO] [stderr]     |                                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:630:50
+[INFO] [stderr]     |
+[INFO] [stderr] 630 |     pub fn debug(&mut self, debug: bool) -> &mut Build {
+[INFO] [stderr]     |                                                  ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:640:67
+[INFO] [stderr]     |
+[INFO] [stderr] 640 |     pub fn out_dir<P: AsRef<Path>>(&mut self, out_dir: P) -> &mut Build {
+[INFO] [stderr]     |                                                                   ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:650:69
+[INFO] [stderr]     |
+[INFO] [stderr] 650 |     pub fn compiler<P: AsRef<Path>>(&mut self, compiler: P) -> &mut Build {
+[INFO] [stderr]     |                                                                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:660:69
+[INFO] [stderr]     |
+[INFO] [stderr] 660 |     pub fn archiver<P: AsRef<Path>>(&mut self, archiver: P) -> &mut Build {
+[INFO] [stderr]     |                                                                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:674:68
+[INFO] [stderr]     |
+[INFO] [stderr] 674 |     pub fn cargo_metadata(&mut self, cargo_metadata: bool) -> &mut Build {
+[INFO] [stderr]     |                                                                    ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:683:46
+[INFO] [stderr]     |
+[INFO] [stderr] 683 |     pub fn pic(&mut self, pic: bool) -> &mut Build {
+[INFO] [stderr]     |                                              ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:691:60
+[INFO] [stderr]     |
+[INFO] [stderr] 691 |     pub fn static_crt(&mut self, static_crt: bool) -> &mut Build {
+[INFO] [stderr]     |                                                            ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:697:59
+[INFO] [stderr]     |
+[INFO] [stderr] 697 |     pub fn __set_env<A, B>(&mut self, a: A, b: B) -> &mut Build
+[INFO] [stderr]     |                                                           ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1540:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1540 |     fn default() -> Build {
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1541:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1541 |         Build::new()
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'gcc::Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]   --> tests\support\mod.rs:59:23
+[INFO] [stderr]    |
+[INFO] [stderr] 59 |         let mut cfg = gcc::Build::new();
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:239:17
+[INFO] [stderr]     |
+[INFO] [stderr] 239 |     let mut c = Build::new();
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:255:13
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |             include_directories: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:256:13
+[INFO] [stderr]     |
+[INFO] [stderr] 256 |             definitions: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:257:13
+[INFO] [stderr]     |
+[INFO] [stderr] 257 |             objects: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:258:13
+[INFO] [stderr]     |
+[INFO] [stderr] 258 |             flags: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:259:13
+[INFO] [stderr]     |
+[INFO] [stderr] 259 |             flags_supported: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:260:13
+[INFO] [stderr]     |
+[INFO] [stderr] 260 |             files: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:261:13
+[INFO] [stderr]     |
+[INFO] [stderr] 261 |             shared_flag: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:262:13
+[INFO] [stderr]     |
+[INFO] [stderr] 262 |             static_flag: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:263:13
+[INFO] [stderr]     |
+[INFO] [stderr] 263 |             cpp: false,
+[INFO] [stderr]     |             ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:264:13
+[INFO] [stderr]     |
+[INFO] [stderr] 264 |             cpp_link_stdlib: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:265:13
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |             cpp_set_stdlib: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:266:13
+[INFO] [stderr]     |
+[INFO] [stderr] 266 |             target: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:267:13
+[INFO] [stderr]     |
+[INFO] [stderr] 267 |             host: None,
+[INFO] [stderr]     |             ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:268:13
+[INFO] [stderr]     |
+[INFO] [stderr] 268 |             out_dir: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:269:13
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |             opt_level: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:270:13
+[INFO] [stderr]     |
+[INFO] [stderr] 270 |             debug: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:271:13
+[INFO] [stderr]     |
+[INFO] [stderr] 271 |             env: Vec::new(),
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:272:13
+[INFO] [stderr]     |
+[INFO] [stderr] 272 |             compiler: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:273:13
+[INFO] [stderr]     |
+[INFO] [stderr] 273 |             archiver: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:274:13
+[INFO] [stderr]     |
+[INFO] [stderr] 274 |             cargo_metadata: true,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:275:13
+[INFO] [stderr]     |
+[INFO] [stderr] 275 |             pic: None,
+[INFO] [stderr]     |             ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:276:13
+[INFO] [stderr]     |
+[INFO] [stderr] 276 |             static_crt: None,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:277:13
+[INFO] [stderr]     |
+[INFO] [stderr] 277 |             warnings: true,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:278:13
+[INFO] [stderr]     |
+[INFO] [stderr] 278 |             warnings_into_errors: false,
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:298:9
+[INFO] [stderr]     |
+[INFO] [stderr] 298 |         self.include_directories.push(dir.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:314:9
+[INFO] [stderr]     |
+[INFO] [stderr] 314 |         self.definitions.push((var.to_string(), val.into().map(|s| s.to_string())));
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:320:9
+[INFO] [stderr]     |
+[INFO] [stderr] 320 |         self.objects.push(obj.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:335:9
+[INFO] [stderr]     |
+[INFO] [stderr] 335 |         self.flags.push(flag.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:341:22
+[INFO] [stderr]     |
+[INFO] [stderr] 341 |         let src = if self.cpp {
+[INFO] [stderr]     |                      ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:360:23
+[INFO] [stderr]     |
+[INFO] [stderr] 360 |         let mut cfg = Build::new();
+[INFO] [stderr]     |                       ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:366:17
+[INFO] [stderr]     |
+[INFO] [stderr] 366 |            .cpp(self.cpp);
+[INFO] [stderr]     |                 ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:388:9
+[INFO] [stderr]     |
+[INFO] [stderr] 388 |         self.flags_supported.push(flag.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:407:9
+[INFO] [stderr]     |
+[INFO] [stderr] 407 |         self.shared_flag = Some(shared_flag);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:426:9
+[INFO] [stderr]     |
+[INFO] [stderr] 426 |         self.static_flag = Some(static_flag);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:432:9
+[INFO] [stderr]     |
+[INFO] [stderr] 432 |         self.files.push(p.as_ref().to_path_buf());
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:451:9
+[INFO] [stderr]     |
+[INFO] [stderr] 451 |         self.cpp = cpp;
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:475:9
+[INFO] [stderr]     |
+[INFO] [stderr] 475 |         self.warnings_into_errors = warnings_into_errors;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:496:9
+[INFO] [stderr]     |
+[INFO] [stderr] 496 |         self.warnings = warnings;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:526:9
+[INFO] [stderr]     |
+[INFO] [stderr] 526 |         self.cpp_link_stdlib = Some(cpp_link_stdlib.into().map(|s| s.into()));
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:565:9
+[INFO] [stderr]     |
+[INFO] [stderr] 565 |         self.cpp_set_stdlib = cpp_set_stdlib.map(|s| s.into());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:584:9
+[INFO] [stderr]     |
+[INFO] [stderr] 584 |         self.target = Some(target.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:602:9
+[INFO] [stderr]     |
+[INFO] [stderr] 602 |         self.host = Some(host.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:611:9
+[INFO] [stderr]     |
+[INFO] [stderr] 611 |         self.opt_level = Some(opt_level.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:620:9
+[INFO] [stderr]     |
+[INFO] [stderr] 620 |         self.opt_level = Some(opt_level.to_string());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:631:9
+[INFO] [stderr]     |
+[INFO] [stderr] 631 |         self.debug = Some(debug);
+[INFO] [stderr]     |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:641:9
+[INFO] [stderr]     |
+[INFO] [stderr] 641 |         self.out_dir = Some(out_dir.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:651:9
+[INFO] [stderr]     |
+[INFO] [stderr] 651 |         self.compiler = Some(compiler.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:661:9
+[INFO] [stderr]     |
+[INFO] [stderr] 661 |         self.archiver = Some(archiver.as_ref().to_owned());
+[INFO] [stderr]     |         ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:675:9
+[INFO] [stderr]     |
+[INFO] [stderr] 675 |         self.cargo_metadata = cargo_metadata;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:684:9
+[INFO] [stderr]     |
+[INFO] [stderr] 684 |         self.pic = Some(pic);
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:692:9
+[INFO] [stderr]     |
+[INFO] [stderr] 692 |         self.static_crt = Some(static_crt);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:701:9
+[INFO] [stderr]     |
+[INFO] [stderr] 701 |         self.env.push((a.as_ref().to_owned(), b.as_ref().to_owned()));
+[INFO] [stderr]     |         ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:722:21
+[INFO] [stderr]     |
+[INFO] [stderr] 722 |         for file in self.files.iter() {
+[INFO] [stderr]     |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:762:12
+[INFO] [stderr]     |
+[INFO] [stderr] 762 |         if self.cpp {
+[INFO] [stderr]     |            ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:832:36
+[INFO] [stderr]     |
+[INFO] [stderr] 832 |             for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]     |                                    ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:854:32
+[INFO] [stderr]     |
+[INFO] [stderr] 854 |         for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]     |                                ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:859:17
+[INFO] [stderr]     |
+[INFO] [stderr] 859 |         assert!(self.files.len() <= 1,
+[INFO] [stderr]     |                 ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::files': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:862:21
+[INFO] [stderr]     |
+[INFO] [stderr] 862 |         for file in self.files.iter() {
+[INFO] [stderr]     |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_crt': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:939:38
+[INFO] [stderr]     |
+[INFO] [stderr] 939 |                 let crt_flag = match self.static_crt {
+[INFO] [stderr]     |                                      ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:975:24
+[INFO] [stderr]     |
+[INFO] [stderr] 975 |                     if self.pic.unwrap_or(!target.contains("windows-gnu")) {
+[INFO] [stderr]     |                        ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::pic': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:978:27
+[INFO] [stderr]     |
+[INFO] [stderr] 978 |                 } else if self.pic.unwrap_or(false) {
+[INFO] [stderr]     |                           ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]    --> src\lib.rs:984:37
+[INFO] [stderr]     |
+[INFO] [stderr] 984 |         for arg in self.envflags(if self.cpp {"CXXFLAGS"} else {"CFLAGS"}) {
+[INFO] [stderr]     |                                     ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1009:20
+[INFO] [stderr]      |
+[INFO] [stderr] 1009 |                 if self.static_flag.is_none() && target.contains("musl") {
+[INFO] [stderr]      |                    ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::static_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1089:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1089 |         if self.static_flag.unwrap_or(false) {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::shared_flag': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1092:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1092 |         if self.shared_flag.unwrap_or(false) {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1096:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1096 |         if self.cpp {
+[INFO] [stderr]      |            ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_set_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1097:20
+[INFO] [stderr]      |
+[INFO] [stderr] 1097 |             match (self.cpp_set_stdlib.as_ref(), cmd.family) {
+[INFO] [stderr]      |                    ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1110:26
+[INFO] [stderr]      |
+[INFO] [stderr] 1110 |         for directory in self.include_directories.iter() {
+[INFO] [stderr]      |                          ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1115:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1115 |         for flag in self.flags.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags_supported': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1119:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1119 |         for flag in self.flags_supported.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1125:38
+[INFO] [stderr]      |
+[INFO] [stderr] 1125 |         for &(ref key, ref value) in self.definitions.iter() {
+[INFO] [stderr]      |                                      ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1134:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1134 |         if self.warnings {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::warnings_into_errors': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1140:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1140 |         if self.warnings_into_errors {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::include_directories': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1155:26
+[INFO] [stderr]      |
+[INFO] [stderr] 1155 |         for directory in self.include_directories.iter() {
+[INFO] [stderr]      |                          ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::definitions': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1158:38
+[INFO] [stderr]      |
+[INFO] [stderr] 1158 |         for &(ref key, ref value) in self.definitions.iter() {
+[INFO] [stderr]      |                                      ^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::flags': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1169:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1169 |         for flag in self.flags.iter() {
+[INFO] [stderr]      |                     ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1183:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1183 |             let mut cmd = match self.archiver {
+[INFO] [stderr]      |                                 ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1192:28
+[INFO] [stderr]      |
+[INFO] [stderr] 1192 |                     .args(&self.objects),
+[INFO] [stderr]      |                            ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::objects': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1217:28
+[INFO] [stderr]      |
+[INFO] [stderr] 1217 |                     .args(&self.objects),
+[INFO] [stderr]      |                            ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::env': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1277:32
+[INFO] [stderr]      |
+[INFO] [stderr] 1277 |         for &(ref a, ref b) in self.env.iter() {
+[INFO] [stderr]      |                                ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::compiler': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1284:30
+[INFO] [stderr]      |
+[INFO] [stderr] 1284 |         if let Some(ref c) = self.compiler {
+[INFO] [stderr]      |                              ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1289:35
+[INFO] [stderr]      |
+[INFO] [stderr] 1289 |         let (env, msvc, gnu) = if self.cpp {
+[INFO] [stderr]      |                                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1298:19
+[INFO] [stderr]      |
+[INFO] [stderr] 1298 |         } else if self.cpp {
+[INFO] [stderr]      |                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1314:35
+[INFO] [stderr]      |
+[INFO] [stderr] 1314 |                     let tool = if self.cpp {
+[INFO] [stderr]      |                                   ^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'core::str::<impl str>::trim_right_matches': superseded by `trim_end_matches`
+[INFO] [stderr]     --> src\lib.rs:1348:67
+[INFO] [stderr]      |
+[INFO] [stderr] 1348 |                     let cross_compile = cc_env.as_ref().map(|s| s.trim_right_matches('-'));
+[INFO] [stderr]      |                                                                   ^^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_end_matches`
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'core::str::<impl str>::trim_left': superseded by `trim_start`
+[INFO] [stderr]     --> src\lib.rs:1429:65
+[INFO] [stderr]      |
+[INFO] [stderr] 1429 |                     return (t.to_string(), vec![tool[t.len()..].trim_left().to_string()]);
+[INFO] [stderr]      |                                                                 ^^^^^^^^^ help: replace the use of the deprecated item: `trim_start`
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cpp_link_stdlib': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1439:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1439 |         match self.cpp_link_stdlib.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::archiver': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1457:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1457 |         match self.archiver
+[INFO] [stderr]      |               ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::target': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1481:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1481 |         match self.target.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::host': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1488:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1488 |         match self.host.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::opt_level': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1495:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1495 |         match self.opt_level.as_ref().cloned() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::debug': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1502:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1502 |         self.debug.unwrap_or_else(|| {
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::out_dir': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1511:15
+[INFO] [stderr]      |
+[INFO] [stderr] 1511 |         match self.out_dir.clone() {
+[INFO] [stderr]      |               ^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::cargo_metadata': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1533:12
+[INFO] [stderr]      |
+[INFO] [stderr] 1533 |         if self.cargo_metadata {
+[INFO] [stderr]      |            ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'Build::new': crate has been renamed to `cc`, the `gcc` name is not maintained
+[INFO] [stderr]     --> src\lib.rs:1541:9
+[INFO] [stderr]      |
+[INFO] [stderr] 1541 |         Build::new()
+[INFO] [stderr]      |         ^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: use of deprecated item 'core::str::<impl str>::trim_left_matches': superseded by `trim_start_matches`
+[INFO] [stderr]    --> src\windows_registry.rs:557:33
+[INFO] [stderr]     |
+[INFO] [stderr] 557 |                 .and_then(|s| s.trim_left_matches("v").replace(".", "").parse().ok());
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^^^^^^ help: replace the use of the deprecated item: `trim_start_matches`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 133 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `gcc`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "9fecdb6215059a9d2b5471d407b375bd8f3a6dc6c7946f30c6b4769ab96a5119"`
+[INFO] running `"docker" "rm" "-f" "9fecdb6215059a9d2b5471d407b375bd8f3a6dc6c7946f30c6b4769ab96a5119"`
+[INFO] [stdout] 9fecdb6215059a9d2b5471d407b375bd8f3a6dc6c7946f30c6b4769ab96a5119

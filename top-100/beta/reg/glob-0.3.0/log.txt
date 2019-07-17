@@ -1,0 +1,95 @@
+[INFO] fetching crate glob 0.3.0...
+[INFO] extracting crate glob 0.3.0 into work\ex\default\sources\stable\reg\glob\0.3.0
+[INFO] extracting crate glob 0.3.0 into work\ex\default\sources\beta\reg\glob\0.3.0
+[INFO] validating manifest of glob-0.3.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of glob-0.3.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing glob-0.3.0
+[INFO] finished frobbing glob-0.3.0
+[INFO] frobbed toml for glob-0.3.0 written to work\ex\default\sources\stable\reg\glob\0.3.0\Cargo.toml
+[INFO] started frobbing glob-0.3.0
+[INFO] finished frobbing glob-0.3.0
+[INFO] frobbed toml for glob-0.3.0 written to work\ex\default\sources\beta\reg\glob\0.3.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing glob-0.3.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\glob\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 9821b418e4d8c41cbf8448306f66f454fc8e860c1cca5ab30866e6274faa34de
+[INFO] running `"docker" "start" "-a" "9821b418e4d8c41cbf8448306f66f454fc8e860c1cca5ab30866e6274faa34de"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling glob v0.3.0 (C:\crater\workdir)
+[INFO] [stderr] warning: unused import: `std::path::Prefix`
+[INFO] [stderr]    --> src\lib.rs:173:13
+[INFO] [stderr]     |
+[INFO] [stderr] 173 |         use std::path::Prefix;
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:294:32
+[INFO] [stderr]     |
+[INFO] [stderr] 294 |     fn cause(&self) -> Option<&Error> {
+[INFO] [stderr]     |                                ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 15.79s
+[INFO] running `"docker" "inspect" "9821b418e4d8c41cbf8448306f66f454fc8e860c1cca5ab30866e6274faa34de"`
+[INFO] running `"docker" "rm" "-f" "9821b418e4d8c41cbf8448306f66f454fc8e860c1cca5ab30866e6274faa34de"`
+[INFO] [stdout] 9821b418e4d8c41cbf8448306f66f454fc8e860c1cca5ab30866e6274faa34de
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\glob\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] caeb89477dfac0d46927cc00867d2dce029b2f289876c7718e53dec4370387b4
+[INFO] running `"docker" "start" "-a" "caeb89477dfac0d46927cc00867d2dce029b2f289876c7718e53dec4370387b4"`
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling glob v0.3.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `std::ffi::AsOsStr`
+[INFO] [stderr]     --> src\lib.rs:1081:17
+[INFO] [stderr]      |
+[INFO] [stderr] 1081 |             use std::ffi::AsOsStr;
+[INFO] [stderr]      |                 ^^^^^^^^^^-------
+[INFO] [stderr]      |                 |         |
+[INFO] [stderr]      |                 |         help: a similar name exists in the module: `OsStr`
+[INFO] [stderr]      |                 no `AsOsStr` in `ffi`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the beta release channel
+[INFO] [stderr]   --> src\lib.rs:64:33
+[INFO] [stderr]    |
+[INFO] [stderr] 64 | #![cfg_attr(all(test, windows), feature(std_misc))]
+[INFO] [stderr]    |                                 ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused import: `std::path::Prefix`
+[INFO] [stderr]    --> src\lib.rs:173:13
+[INFO] [stderr]     |
+[INFO] [stderr] 173 |         use std::path::Prefix;
+[INFO] [stderr]     |             ^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\lib.rs:294:32
+[INFO] [stderr]     |
+[INFO] [stderr] 294 |     fn cause(&self) -> Option<&Error> {
+[INFO] [stderr]     |                                ^^^^^ help: use `dyn`: `dyn Error`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] error[E0624]: method `prefix` is private
+[INFO] [stderr]     --> src\lib.rs:1086:33
+[INFO] [stderr]      |
+[INFO] [stderr] 1086 |                 .and_then(|p| p.prefix().map(|p| p.join("*")))
+[INFO] [stderr]      |                                 ^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 3 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0554, E0624.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `glob`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "caeb89477dfac0d46927cc00867d2dce029b2f289876c7718e53dec4370387b4"`
+[INFO] running `"docker" "rm" "-f" "caeb89477dfac0d46927cc00867d2dce029b2f289876c7718e53dec4370387b4"`
+[INFO] [stdout] caeb89477dfac0d46927cc00867d2dce029b2f289876c7718e53dec4370387b4

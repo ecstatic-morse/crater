@@ -1,0 +1,858 @@
+[INFO] fetching crate byteorder 1.3.2...
+[INFO] extracting crate byteorder 1.3.2 into work\ex\default\sources\stable\reg\byteorder\1.3.2
+[INFO] extracting crate byteorder 1.3.2 into work\ex\default\sources\beta\reg\byteorder\1.3.2
+[INFO] validating manifest of byteorder-1.3.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of byteorder-1.3.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing byteorder-1.3.2
+[INFO] finished frobbing byteorder-1.3.2
+[INFO] frobbed toml for byteorder-1.3.2 written to work\ex\default\sources\stable\reg\byteorder\1.3.2\Cargo.toml
+[INFO] started frobbing byteorder-1.3.2
+[INFO] finished frobbing byteorder-1.3.2
+[INFO] frobbed toml for byteorder-1.3.2 written to work\ex\default\sources\beta\reg\byteorder\1.3.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing byteorder-1.3.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\byteorder\\1.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] d30fa323c86ff6a8219e7def968fdcafac5cfeb9f4dcffa529cec6118497c2f4
+[INFO] running `"docker" "start" "-a" "d30fa323c86ff6a8219e7def968fdcafac5cfeb9f4dcffa529cec6118497c2f4"`
+[INFO] [stderr]    Compiling byteorder v1.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.51s
+[INFO] running `"docker" "inspect" "d30fa323c86ff6a8219e7def968fdcafac5cfeb9f4dcffa529cec6118497c2f4"`
+[INFO] running `"docker" "rm" "-f" "d30fa323c86ff6a8219e7def968fdcafac5cfeb9f4dcffa529cec6118497c2f4"`
+[INFO] [stdout] d30fa323c86ff6a8219e7def968fdcafac5cfeb9f4dcffa529cec6118497c2f4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\byteorder\\1.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] d1b34d61224e6057415426d67bd945f17cadea9eaccbdb787b3d9abed6633c48
+[INFO] running `"docker" "start" "-a" "d1b34d61224e6057415426d67bd945f17cadea9eaccbdb787b3d9abed6633c48"`
+[INFO] [stderr]    Compiling doc-comment v0.3.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling quickcheck v0.8.5
+[INFO] [stderr]    Compiling byteorder v1.3.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 38.95s
+[INFO] running `"docker" "inspect" "d1b34d61224e6057415426d67bd945f17cadea9eaccbdb787b3d9abed6633c48"`
+[INFO] running `"docker" "rm" "-f" "d1b34d61224e6057415426d67bd945f17cadea9eaccbdb787b3d9abed6633c48"`
+[INFO] [stdout] d1b34d61224e6057415426d67bd945f17cadea9eaccbdb787b3d9abed6633c48
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\byteorder\\1.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 9ca42e5564d725daeb63944db0c8de2b3fa5b9ad699cb9f9b0c8b3e1388cee2d
+[INFO] running `"docker" "start" "-a" "9ca42e5564d725daeb63944db0c8de2b3fa5b9ad699cb9f9b0c8b3e1388cee2d"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.96s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\byteorder-bb7062f93440a082.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 679 tests
+[INFO] [stdout] test stdtests::prop_ext_f32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_f32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_f32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_f64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_f64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_f64::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i128::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i128::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i128::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_i64::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_10::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_10::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_10::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_11::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_11::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_11::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_12::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_12::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_12::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_13::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_13::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_13::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_14::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_14::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_14::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_15::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_15::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_15::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_1::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_1::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_1::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_2::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_2::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_2::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_3::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_3::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_3::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_4::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_4::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_4::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_5::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_5::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_5::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_6::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_6::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_6::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_7::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_7::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_7::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_8::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_8::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_8::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_9::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_9::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int128_9::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_1::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_1::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_1::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_2::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_2::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_2::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_3::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_3::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_3::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_4::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_4::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_4::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_5::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_5::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_5::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_6::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_6::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_6::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_7::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_7::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_7::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_8::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_8::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_int_8::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u128::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u128::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u128::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_u64::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_10::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_10::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_10::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_11::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_11::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_11::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_12::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_12::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_12::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_13::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_13::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_13::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_14::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_14::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_14::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_15::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_15::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_15::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_1::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_1::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_1::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_2::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_2::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_2::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_3::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_3::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_3::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_4::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_4::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_4::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_5::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_5::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_5::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_6::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_6::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_6::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_7::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_7::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_7::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_8::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_8::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_8::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_9::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_9::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint128_9::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_1::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_1::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_1::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_2::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_2::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_2::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_3::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_3::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_3::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_4::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_4::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_4::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_5::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_5::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_5::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_6::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_6::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_6::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_7::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_7::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_7::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_8::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_8::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_ext_uint_8::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_f64::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i128::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i128::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i128::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_i64::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u128::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u128::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u128::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u16::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u16::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u16::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u32::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u32::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u32::native_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u64::big_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u64::little_endian ... ok
+[INFO] [stdout] test stdtests::prop_slice_u64::native_endian ... ok
+[INFO] [stdout] test test::prop_f32::big_endian ... ok
+[INFO] [stdout] test test::prop_f32::little_endian ... ok
+[INFO] [stdout] test test::prop_f32::native_endian ... ok
+[INFO] [stdout] test test::prop_f64::big_endian ... ok
+[INFO] [stdout] test test::prop_f64::little_endian ... ok
+[INFO] [stdout] test test::prop_f64::native_endian ... ok
+[INFO] [stdout] test test::prop_i128::big_endian ... ok
+[INFO] [stdout] test test::prop_i128::little_endian ... ok
+[INFO] [stdout] test test::prop_i128::native_endian ... ok
+[INFO] [stdout] test test::prop_i16::big_endian ... ok
+[INFO] [stdout] test test::prop_i16::little_endian ... ok
+[INFO] [stdout] test test::prop_i16::native_endian ... ok
+[INFO] [stdout] test test::prop_i24::big_endian ... ok
+[INFO] [stdout] test test::prop_i24::little_endian ... ok
+[INFO] [stdout] test test::prop_i24::native_endian ... ok
+[INFO] [stdout] test test::prop_i32::big_endian ... ok
+[INFO] [stdout] test test::prop_i32::little_endian ... ok
+[INFO] [stdout] test test::prop_i32::native_endian ... ok
+[INFO] [stdout] test test::prop_i48::big_endian ... ok
+[INFO] [stdout] test test::prop_i48::little_endian ... ok
+[INFO] [stdout] test test::prop_i48::native_endian ... ok
+[INFO] [stdout] test test::prop_i64::big_endian ... ok
+[INFO] [stdout] test test::prop_i64::little_endian ... ok
+[INFO] [stdout] test test::prop_i64::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_10::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_10::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_10::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_11::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_11::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_11::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_12::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_12::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_12::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_13::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_13::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_13::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_14::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_14::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_14::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_15::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_15::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_15::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_16::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_16::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_1::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_16::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_1::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_2::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_1::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_2::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_2::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_3::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_3::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_3::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_4::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_4::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_4::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_5::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_5::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_5::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_6::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_6::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_6::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_7::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_7::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_7::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_8::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_8::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_8::native_endian ... ok
+[INFO] [stdout] test test::prop_int128_9::big_endian ... ok
+[INFO] [stdout] test test::prop_int128_9::little_endian ... ok
+[INFO] [stdout] test test::prop_int128_9::native_endian ... ok
+[INFO] [stdout] test test::prop_int_1::big_endian ... ok
+[INFO] [stdout] test test::prop_int_1::little_endian ... ok
+[INFO] [stdout] test test::prop_int_1::native_endian ... ok
+[INFO] [stdout] test test::prop_int_2::little_endian ... ok
+[INFO] [stdout] test test::prop_int_2::native_endian ... ok
+[INFO] [stdout] test test::prop_int_2::big_endian ... ok
+[INFO] [stdout] test test::prop_int_3::big_endian ... ok
+[INFO] [stdout] test test::prop_int_3::little_endian ... ok
+[INFO] [stdout] test test::prop_int_3::native_endian ... ok
+[INFO] [stdout] test test::prop_int_4::big_endian ... ok
+[INFO] [stdout] test test::prop_int_4::little_endian ... ok
+[INFO] [stdout] test test::prop_int_4::native_endian ... ok
+[INFO] [stdout] test test::prop_int_5::big_endian ... ok
+[INFO] [stdout] test test::prop_int_5::little_endian ... ok
+[INFO] [stdout] test test::prop_int_6::big_endian ... ok
+[INFO] [stdout] test test::prop_int_5::native_endian ... ok
+[INFO] [stdout] test test::prop_int_6::little_endian ... ok
+[INFO] [stdout] test test::prop_int_6::native_endian ... ok
+[INFO] [stdout] test test::prop_int_7::big_endian ... ok
+[INFO] [stdout] test test::prop_int_7::little_endian ... ok
+[INFO] [stdout] test test::prop_int_7::native_endian ... ok
+[INFO] [stdout] test test::prop_int_8::big_endian ... ok
+[INFO] [stdout] test test::prop_int_8::little_endian ... ok
+[INFO] [stdout] test test::prop_int_8::native_endian ... ok
+[INFO] [stdout] test test::prop_u128::big_endian ... ok
+[INFO] [stdout] test test::prop_u128::little_endian ... ok
+[INFO] [stdout] test test::prop_u128::native_endian ... ok
+[INFO] [stdout] test test::prop_u16::big_endian ... ok
+[INFO] [stdout] test test::prop_u16::little_endian ... ok
+[INFO] [stdout] test test::prop_u16::native_endian ... ok
+[INFO] [stdout] test test::prop_u24::big_endian ... ok
+[INFO] [stdout] test test::prop_u24::little_endian ... ok
+[INFO] [stdout] test test::prop_u24::native_endian ... ok
+[INFO] [stdout] test test::prop_u32::big_endian ... ok
+[INFO] [stdout] test test::prop_u32::little_endian ... ok
+[INFO] [stdout] test test::prop_u32::native_endian ... ok
+[INFO] [stdout] test test::prop_u48::big_endian ... ok
+[INFO] [stdout] test test::prop_u48::little_endian ... ok
+[INFO] [stdout] test test::prop_u48::native_endian ... ok
+[INFO] [stdout] test test::prop_u64::big_endian ... ok
+[INFO] [stdout] test test::prop_u64::little_endian ... ok
+[INFO] [stdout] test test::prop_u64::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_10::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_10::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_10::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_11::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_11::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_11::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_12::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_12::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_12::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_13::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_13::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_13::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_14::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_14::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_14::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_15::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_15::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_15::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_16::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_16::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_16::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_1::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_1::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_1::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_2::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_2::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_2::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_3::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_3::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_3::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_4::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_4::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_4::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_5::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_5::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_5::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_6::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_6::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_7::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_6::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_7::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_7::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_8::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_8::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_8::native_endian ... ok
+[INFO] [stdout] test test::prop_uint128_9::big_endian ... ok
+[INFO] [stdout] test test::prop_uint128_9::little_endian ... ok
+[INFO] [stdout] test test::prop_uint128_9::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_1::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_1::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_1::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_2::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_2::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_2::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_3::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_3::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_3::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_4::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_4::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_4::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_5::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_5::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_5::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_6::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_6::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_6::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_7::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_7::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_7::native_endian ... ok
+[INFO] [stdout] test test::prop_uint_8::big_endian ... ok
+[INFO] [stdout] test test::prop_uint_8::little_endian ... ok
+[INFO] [stdout] test test::prop_uint_8::native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i128::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i16::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i32::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_i64::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u128::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u16::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u32::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_big_u64::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i128::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i16::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i32::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_i64::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u128::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u16::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u32::write_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::read_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::read_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::read_native_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::write_big_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::write_little_endian ... ok
+[INFO] [stdout] test test::slice_len_too_small_u64::write_native_endian ... ok
+[INFO] [stdout] test test::small_f32::read_big_endian ... ok
+[INFO] [stdout] test test::small_f32::read_little_endian ... ok
+[INFO] [stdout] test test::small_f32::read_native_endian ... ok
+[INFO] [stdout] test test::small_f32::write_big_endian ... ok
+[INFO] [stdout] test test::small_f32::write_little_endian ... ok
+[INFO] [stdout] test test::small_f32::write_native_endian ... ok
+[INFO] [stdout] test test::small_f64::read_big_endian ... ok
+[INFO] [stdout] test test::small_f64::read_little_endian ... ok
+[INFO] [stdout] test test::small_f64::read_native_endian ... ok
+[INFO] [stdout] test test::small_f64::write_big_endian ... ok
+[INFO] [stdout] test test::small_f64::write_little_endian ... ok
+[INFO] [stdout] test test::small_f64::write_native_endian ... ok
+[INFO] [stdout] test test::small_i128::read_big_endian ... ok
+[INFO] [stdout] test test::small_i128::read_little_endian ... ok
+[INFO] [stdout] test test::small_i128::read_native_endian ... ok
+[INFO] [stdout] test test::small_i128::write_big_endian ... ok
+[INFO] [stdout] test test::small_i128::write_little_endian ... ok
+[INFO] [stdout] test test::small_i128::write_native_endian ... ok
+[INFO] [stdout] test test::small_i16::read_big_endian ... ok
+[INFO] [stdout] test test::small_i16::read_little_endian ... ok
+[INFO] [stdout] test test::small_i16::read_native_endian ... ok
+[INFO] [stdout] test test::small_i16::write_big_endian ... ok
+[INFO] [stdout] test test::small_i16::write_little_endian ... ok
+[INFO] [stdout] test test::small_i16::write_native_endian ... ok
+[INFO] [stdout] test test::small_i32::read_big_endian ... ok
+[INFO] [stdout] test test::small_i32::read_little_endian ... ok
+[INFO] [stdout] test test::small_i32::read_native_endian ... ok
+[INFO] [stdout] test test::small_i32::write_big_endian ... ok
+[INFO] [stdout] test test::small_i32::write_little_endian ... ok
+[INFO] [stdout] test test::small_i32::write_native_endian ... ok
+[INFO] [stdout] test test::small_i64::read_big_endian ... ok
+[INFO] [stdout] test test::small_i64::read_little_endian ... ok
+[INFO] [stdout] test test::small_i64::read_native_endian ... ok
+[INFO] [stdout] test test::small_i64::write_big_endian ... ok
+[INFO] [stdout] test test::small_i64::write_little_endian ... ok
+[INFO] [stdout] test test::small_i64::write_native_endian ... ok
+[INFO] [stdout] test test::small_int128_10::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_10::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_10::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_11::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_11::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_11::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_12::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_12::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_12::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_13::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_13::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_13::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_14::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_14::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_14::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_15::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_15::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_15::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_1::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_1::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_1::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_2::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_2::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_2::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_3::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_3::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_3::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_4::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_4::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_4::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_5::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_5::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_5::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_6::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_6::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_6::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_7::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_7::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_7::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_8::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_8::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_8::read_native_endian ... ok
+[INFO] [stdout] test test::small_int128_9::read_big_endian ... ok
+[INFO] [stdout] test test::small_int128_9::read_little_endian ... ok
+[INFO] [stdout] test test::small_int128_9::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_1::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_1::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_1::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_2::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_2::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_2::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_3::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_3::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_3::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_4::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_4::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_4::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_5::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_5::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_5::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_6::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_6::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_6::read_native_endian ... ok
+[INFO] [stdout] test test::small_int_7::read_big_endian ... ok
+[INFO] [stdout] test test::small_int_7::read_little_endian ... ok
+[INFO] [stdout] test test::small_int_7::read_native_endian ... ok
+[INFO] [stdout] test test::small_u128::read_big_endian ... ok
+[INFO] [stdout] test test::small_u128::read_little_endian ... ok
+[INFO] [stdout] test test::small_u128::read_native_endian ... ok
+[INFO] [stdout] test test::small_u128::write_big_endian ... ok
+[INFO] [stdout] test test::small_u128::write_little_endian ... ok
+[INFO] [stdout] test test::small_u128::write_native_endian ... ok
+[INFO] [stdout] test test::small_u16::read_big_endian ... ok
+[INFO] [stdout] test test::small_u16::read_little_endian ... ok
+[INFO] [stdout] test test::small_u16::read_native_endian ... ok
+[INFO] [stdout] test test::small_u16::write_big_endian ... ok
+[INFO] [stdout] test test::small_u16::write_little_endian ... ok
+[INFO] [stdout] test test::small_u16::write_native_endian ... ok
+[INFO] [stdout] test test::small_u32::read_big_endian ... ok
+[INFO] [stdout] test test::small_u32::read_little_endian ... ok
+[INFO] [stdout] test test::small_u32::read_native_endian ... ok
+[INFO] [stdout] test test::small_u32::write_big_endian ... ok
+[INFO] [stdout] test test::small_u32::write_little_endian ... ok
+[INFO] [stdout] test test::small_u32::write_native_endian ... ok
+[INFO] [stdout] test test::small_u64::read_big_endian ... ok
+[INFO] [stdout] test test::small_u64::read_little_endian ... ok
+[INFO] [stdout] test test::small_u64::read_native_endian ... ok
+[INFO] [stdout] test test::small_u64::write_big_endian ... ok
+[INFO] [stdout] test test::small_u64::write_little_endian ... ok
+[INFO] [stdout] test test::small_u64::write_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_10::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_10::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_10::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_11::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_11::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_11::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_12::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_12::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_12::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_13::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_13::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_13::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_14::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_14::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_14::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_15::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_15::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_15::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_1::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_1::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_1::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_2::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_2::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_2::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_3::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_3::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_3::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_4::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_4::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_4::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_5::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_5::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_5::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_6::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_6::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_6::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_7::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_7::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_7::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_8::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_8::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_8::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint128_9::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint128_9::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint128_9::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_1::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_1::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_1::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_2::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_2::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_2::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_3::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_3::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_3::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_4::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_4::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_4::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_5::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_5::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_5::read_native_endian ... ok
+[INFO] [stdout] test test::small_uint_6::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_6::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_6::read_native_endian ... ok
+[INFO] [stdout] test test::uint_bigger_buffer ... ok
+[INFO] [stdout] test test::small_uint_7::read_big_endian ... ok
+[INFO] [stdout] test test::small_uint_7::read_little_endian ... ok
+[INFO] [stdout] test test::small_uint_7::read_native_endian ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 679 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests byteorder
+[INFO] [stdout] 
+[INFO] [stdout] running 121 tests
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f32 (line 489) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f32_into (line 891) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f32_into_unchecked (line 939) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt (line 16) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f64 (line 520) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f64_into (line 979) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_f64_into_unchecked (line 1033) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i128 (line 393) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i128_into (line 848) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i16 (line 128) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i16_into (line 740) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i24 (line 181) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i32 (line 233) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i32_into (line 775) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i48 (line 285) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i64 (line 337) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i64_into (line 810) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i8 (line 74) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_int (line 445) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_i8_into (line 709) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u128 (line 363) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u128_into (line 662) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u16_into (line 554) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u16 (line 101) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u24 (line 155) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u32 (line 207) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u48 (line 259) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u32_into (line 589) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u64 (line 311) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u64_into (line 624) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_u8 (line 44) ... ok
+[INFO] [stdout] test src\io.rs - io::ReadBytesExt::read_uint (line 420) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt (line 1071) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_f32 (line 1545) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i16 (line 1179) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_f64 (line 1574) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i24 (line 1233) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i32 (line 1287) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i48 (line 1341) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i64 (line 1395) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_i8 (line 1127) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_int (line 1481) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u16 (line 1152) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u24 (line 1206) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u32 (line 1260) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u48 (line 1314) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u64 (line 1368) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_u8 (line 1099) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 22) ... ok
+[INFO] [stdout] test src\io.rs - io::WriteBytesExt::write_uint (line 1445) ... ok
+[INFO] [stdout] test src\lib.rs - BigEndian (line 1791) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 35) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder (line 202) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder (line 212) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_i16 (line 1676) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_i128 (line 1751) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_i32 (line 1701) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_i64 (line 1726) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_u128 (line 1656) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_u16 (line 1599) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_u64 (line 1637) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::from_slice_u32 (line 1618) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f32 (line 724) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f32_into (line 1209) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f32_into_unchecked (line 1242) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f64 (line 747) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f64_into (line 1270) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_f64_into_unchecked (line 1304) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i128 (line 654) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i128_into (line 1178) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i16 (line 544) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i16_into (line 1091) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i32 (line 588) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i24 (line 566) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i32_into (line 1120) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i48 (line 610) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i64 (line 632) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_i64_into (line 1149) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_int (line 678) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_int128 (line 701) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u128 (line 323) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u128_into (line 1067) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u24 (line 243) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u16_into (line 998) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u32 (line 264) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u48 (line 283) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u64 (line 304) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u32_into (line 1021) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_u64_into (line 1044) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_uint128 (line 364) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_f32 (line 950) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::read_uint (line 344) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_f32_into (line 1538) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_f64 (line 974) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i128 (line 880) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i128_into (line 1508) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_f64_into (line 1569) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i16 (line 770) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i16_into (line 1424) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i32 (line 814) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i24 (line 792) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i32_into (line 1452) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i48 (line 836) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i64 (line 858) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_i64_into (line 1480) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_int (line 904) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_int128 (line 927) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u128 (line 483) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u128_into (line 1400) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u16 (line 384) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u16_into (line 1331) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u24 (line 403) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u32 (line 424) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u32_into (line 1354) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u64 (line 464) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u48 (line 443) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_u64_into (line 1377) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_uint (line 504) ... ok
+[INFO] [stdout] test src\lib.rs - ByteOrder::write_uint128 (line 524) ... ok
+[INFO] [stdout] test src\lib.rs - LittleEndian (line 1821) ... ok
+[INFO] [stdout] test src\lib.rs - NetworkEndian (line 1857) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 121 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9ca42e5564d725daeb63944db0c8de2b3fa5b9ad699cb9f9b0c8b3e1388cee2d"`
+[INFO] running `"docker" "rm" "-f" "9ca42e5564d725daeb63944db0c8de2b3fa5b9ad699cb9f9b0c8b3e1388cee2d"`
+[INFO] [stdout] 9ca42e5564d725daeb63944db0c8de2b3fa5b9ad699cb9f9b0c8b3e1388cee2d

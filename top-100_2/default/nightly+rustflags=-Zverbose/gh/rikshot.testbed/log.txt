@@ -1,0 +1,68 @@
+[INFO] cloning repository rikshot/testbed
+[INFO] running `"git" "clone" "--bare" "git://github.com/rikshot/testbed.git" "work\\cache\\sources\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rikshot\testbed'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rikshot\\testbed" "work\\ex\\default\\sources\\nightly\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\rikshot\testbed'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rikshot\\testbed" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rikshot\\testbed"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rikshot\testbed'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4677de644f3313e5cc0d8c7bf85a6b7d02c06b72
+[INFO] sha for GitHub repo rikshot/testbed: 4677de644f3313e5cc0d8c7bf85a6b7d02c06b72
+[INFO] validating manifest of rikshot/testbed on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rikshot/testbed on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rikshot/testbed
+[INFO] finished frobbing rikshot/testbed
+[INFO] frobbed toml for rikshot/testbed written to work\ex\default\sources\nightly\gh\rikshot\testbed\Cargo.toml
+[INFO] started frobbing rikshot/testbed
+[INFO] finished frobbing rikshot/testbed
+[INFO] frobbed toml for rikshot/testbed written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rikshot\testbed\Cargo.toml
+[INFO] crate rikshot/testbed already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rikshot/testbed against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ea0307af6e2d97ec739578e1e7e947c26cdc9a5493038d6f7bd528e2b513552f
+[INFO] running `"docker" "start" "-a" "ea0307af6e2d97ec739578e1e7e947c26cdc9a5493038d6f7bd528e2b513552f"`
+[INFO] [stderr]    Compiling unicode-xid v0.0.4
+[INFO] [stderr]    Compiling quote v0.3.15
+[INFO] [stderr]    Compiling num-traits v0.2.0
+[INFO] [stderr]    Compiling serde v1.0.27
+[INFO] [stderr]    Compiling itoa v0.3.4
+[INFO] [stderr]    Compiling dtoa v0.4.2
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling serde_derive_internals v0.19.0
+[INFO] [stderr]    Compiling serde_derive v1.0.27
+[INFO] [stderr]    Compiling serde_json v1.0.9
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 47.88s
+[INFO] running `"docker" "inspect" "ea0307af6e2d97ec739578e1e7e947c26cdc9a5493038d6f7bd528e2b513552f"`
+[INFO] running `"docker" "rm" "-f" "ea0307af6e2d97ec739578e1e7e947c26cdc9a5493038d6f7bd528e2b513552f"`
+[INFO] [stdout] ea0307af6e2d97ec739578e1e7e947c26cdc9a5493038d6f7bd528e2b513552f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 55e14451c99797422eb2ae740b6833e0367117f37508c2587e2319b9fd80d67c
+[INFO] running `"docker" "start" "-a" "55e14451c99797422eb2ae740b6833e0367117f37508c2587e2319b9fd80d67c"`
+[INFO] [stderr]    Compiling mandelbrot v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.60s
+[INFO] running `"docker" "inspect" "55e14451c99797422eb2ae740b6833e0367117f37508c2587e2319b9fd80d67c"`
+[INFO] running `"docker" "rm" "-f" "55e14451c99797422eb2ae740b6833e0367117f37508c2587e2319b9fd80d67c"`
+[INFO] [stdout] 55e14451c99797422eb2ae740b6833e0367117f37508c2587e2319b9fd80d67c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rikshot\\testbed,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 53da64bed8cf6f59737a2c335e5a549904a1717fe57ae904ef516d2b03ef9503
+[INFO] running `"docker" "start" "-a" "53da64bed8cf6f59737a2c335e5a549904a1717fe57ae904ef516d2b03ef9503"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mandelbrot-55d0c835fa10cd8a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test parse ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "53da64bed8cf6f59737a2c335e5a549904a1717fe57ae904ef516d2b03ef9503"`
+[INFO] running `"docker" "rm" "-f" "53da64bed8cf6f59737a2c335e5a549904a1717fe57ae904ef516d2b03ef9503"`
+[INFO] [stdout] 53da64bed8cf6f59737a2c335e5a549904a1717fe57ae904ef516d2b03ef9503

@@ -1,0 +1,78 @@
+[INFO] cloning repository derezzedex/puzzle_solver
+[INFO] running `"git" "clone" "--bare" "git://github.com/derezzedex/puzzle_solver.git" "work\\cache\\sources\\gh\\derezzedex\\puzzle_solver"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\derezzedex\puzzle_solver'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\derezzedex\\puzzle_solver" "work\\ex\\default\\sources\\stable\\gh\\derezzedex\\puzzle_solver"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\derezzedex\puzzle_solver'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\derezzedex\\puzzle_solver" "work\\ex\\default\\sources\\beta\\gh\\derezzedex\\puzzle_solver"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\derezzedex\puzzle_solver'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 12ff182c6baa90371baf565b4980d30c74f7b831
+[INFO] sha for GitHub repo derezzedex/puzzle_solver: 12ff182c6baa90371baf565b4980d30c74f7b831
+[INFO] validating manifest of derezzedex/puzzle_solver on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of derezzedex/puzzle_solver on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing derezzedex/puzzle_solver
+[INFO] finished frobbing derezzedex/puzzle_solver
+[INFO] frobbed toml for derezzedex/puzzle_solver written to work\ex\default\sources\stable\gh\derezzedex\puzzle_solver\Cargo.toml
+[INFO] started frobbing derezzedex/puzzle_solver
+[INFO] finished frobbing derezzedex/puzzle_solver
+[INFO] frobbed toml for derezzedex/puzzle_solver written to work\ex\default\sources\beta\gh\derezzedex\puzzle_solver\Cargo.toml
+[INFO] crate derezzedex/puzzle_solver already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_derive v1.0.24
+[INFO] [stderr]   Downloaded docopt v0.8.1
+[INFO] [stderr]   Downloaded strsim v0.6.0
+[INFO] [stderr]   Downloaded serde_derive_internals v0.18.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing derezzedex/puzzle_solver against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\derezzedex\\puzzle_solver,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 6838ab5aaab2c7bf59cfb8b3a779d0b31ec847c2c0af52c2d583b7fcdf501b52
+[INFO] running `"docker" "start" "-a" "6838ab5aaab2c7bf59cfb8b3a779d0b31ec847c2c0af52c2d583b7fcdf501b52"`
+[INFO] [stderr]    Compiling libc v0.2.34
+[INFO] [stderr]    Compiling lazy_static v1.0.0
+[INFO] [stderr]    Compiling utf8-ranges v1.0.0
+[INFO] [stderr]    Compiling regex-syntax v0.4.1
+[INFO] [stderr]    Compiling serde v1.0.24
+[INFO] [stderr]    Compiling safemem v0.2.0
+[INFO] [stderr]    Compiling byteorder v1.2.1
+[INFO] [stderr]    Compiling strsim v0.6.0
+[INFO] [stderr]    Compiling memchr v2.0.1
+[INFO] [stderr]    Compiling base64 v0.6.0
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling thread_local v0.3.5
+[INFO] [stderr]    Compiling aho-corasick v0.6.4
+[INFO] [stderr]    Compiling regex v0.2.3
+[INFO] [stderr]    Compiling serde_derive_internals v0.18.0
+[INFO] [stderr]    Compiling serde_derive v1.0.24
+[INFO] [stderr]    Compiling docopt v0.8.1
+[INFO] [stderr]    Compiling puzzle_solver v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 25s
+[INFO] running `"docker" "inspect" "6838ab5aaab2c7bf59cfb8b3a779d0b31ec847c2c0af52c2d583b7fcdf501b52"`
+[INFO] running `"docker" "rm" "-f" "6838ab5aaab2c7bf59cfb8b3a779d0b31ec847c2c0af52c2d583b7fcdf501b52"`
+[INFO] [stdout] 6838ab5aaab2c7bf59cfb8b3a779d0b31ec847c2c0af52c2d583b7fcdf501b52
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\derezzedex\\puzzle_solver,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 527b43a919d986d33855a018dbef660244cbe4c5ae4c49846441fb980f8950df
+[INFO] running `"docker" "start" "-a" "527b43a919d986d33855a018dbef660244cbe4c5ae4c49846441fb980f8950df"`
+[INFO] [stderr]    Compiling puzzle_solver v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.66s
+[INFO] running `"docker" "inspect" "527b43a919d986d33855a018dbef660244cbe4c5ae4c49846441fb980f8950df"`
+[INFO] running `"docker" "rm" "-f" "527b43a919d986d33855a018dbef660244cbe4c5ae4c49846441fb980f8950df"`
+[INFO] [stdout] 527b43a919d986d33855a018dbef660244cbe4c5ae4c49846441fb980f8950df
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\derezzedex\\puzzle_solver,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] b87d6a0fd71fa828851f793854ea3487cc58321b1f0161667a05ec9ee738d401
+[INFO] running `"docker" "start" "-a" "b87d6a0fd71fa828851f793854ea3487cc58321b1f0161667a05ec9ee738d401"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 24.26s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\puzzle_solver-5e2c1a56d9b1c401.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b87d6a0fd71fa828851f793854ea3487cc58321b1f0161667a05ec9ee738d401"`
+[INFO] running `"docker" "rm" "-f" "b87d6a0fd71fa828851f793854ea3487cc58321b1f0161667a05ec9ee738d401"`
+[INFO] [stdout] b87d6a0fd71fa828851f793854ea3487cc58321b1f0161667a05ec9ee738d401

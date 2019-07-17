@@ -1,0 +1,48 @@
+[INFO] cloning repository Tethik/beepr
+[INFO] running `"git" "clone" "--bare" "git://github.com/Tethik/beepr.git" "work\\cache\\sources\\gh\\Tethik\\beepr"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\Tethik\beepr'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Tethik\\beepr" "work\\ex\\default\\sources\\stable\\gh\\Tethik\\beepr"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\Tethik\beepr'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\Tethik\\beepr" "work\\ex\\default\\sources\\beta\\gh\\Tethik\\beepr"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\Tethik\beepr'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] fdb264e93875ad00f634df9d87370a60f083bac5
+[INFO] sha for GitHub repo Tethik/beepr: fdb264e93875ad00f634df9d87370a60f083bac5
+[INFO] validating manifest of Tethik/beepr on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of Tethik/beepr on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing Tethik/beepr
+[INFO] finished frobbing Tethik/beepr
+[INFO] frobbed toml for Tethik/beepr written to work\ex\default\sources\stable\gh\Tethik\beepr\Cargo.toml
+[INFO] started frobbing Tethik/beepr
+[INFO] finished frobbing Tethik/beepr
+[INFO] frobbed toml for Tethik/beepr written to work\ex\default\sources\beta\gh\Tethik\beepr\Cargo.toml
+[INFO] crate Tethik/beepr already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded ears v0.3.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing Tethik/beepr against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\Tethik\\beepr,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] fe851b31c84e3a2629835a9da22d8eb85fa5d25453a3d6c5eb92843f6bec0a92
+[INFO] running `"docker" "start" "-a" "fe851b31c84e3a2629835a9da22d8eb85fa5d25453a3d6c5eb92843f6bec0a92"`
+[INFO] [stderr]    Compiling ears v0.3.5
+[INFO] [stderr]    Compiling beepr v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]    Compiling libc v0.2.19
+[INFO] [stderr] error: linking with `link.exe` failed: exit code: 1181
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\link.exe" "/NOLOGO" "/NXCOMPAT" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.0.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.1.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.10.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.11.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.12.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.13.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.14.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.15.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.2.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.3.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.4.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.5.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.6.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.7.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.8.rcgu.o" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.ears.7228u0ij-cgu.9.rcgu.o" "/OUT:C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.dll" "/DEF:C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\rustcKlQwwC\\lib.def" "C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.36wgima9i16uolze.rcgu.o" "/OPT:REF,NOICF" "/DEBUG" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\intrinsic.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\liballoc.natvis" "/NATVIS:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\etc\\libcore.natvis" "/LIBPATH:C:\\crater\\target\\debug\\deps" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "openal.lib" "sndfile.lib" "C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\rustcKlQwwC\\liblibc-35feae7e49f7e372.rlib" "/LIBPATH:C:\\crater\\rustup-home\\toolchains\\stable-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\lib" "std-c418a1c7c96bdbae.dll.lib" "C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\rustcKlQwwC\\libcompiler_builtins-45eb0e961cc324b2.rlib" "advapi32.lib" "ws2_32.lib" "userenv.lib" "msvcrt.lib" "/DLL" "/IMPLIB:C:\\crater\\target\\debug\\deps\\ears-cc6f529dff400672.dll.lib"
+[INFO] [stderr]   = note: LINK : fatal error LNK1181: cannot open input file 'openal.lib'
+[INFO] [stderr]           
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `ears`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "fe851b31c84e3a2629835a9da22d8eb85fa5d25453a3d6c5eb92843f6bec0a92"`
+[INFO] running `"docker" "rm" "-f" "fe851b31c84e3a2629835a9da22d8eb85fa5d25453a3d6c5eb92843f6bec0a92"`
+[INFO] [stdout] fe851b31c84e3a2629835a9da22d8eb85fa5d25453a3d6c5eb92843f6bec0a92

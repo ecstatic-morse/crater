@@ -1,0 +1,87 @@
+[INFO] cloning repository pcmind/projecteuler-rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/pcmind/projecteuler-rust.git" "work\\cache\\sources\\gh\\pcmind\\projecteuler-rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\pcmind\projecteuler-rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pcmind\\projecteuler-rust" "work\\ex\\default\\sources\\stable\\gh\\pcmind\\projecteuler-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\pcmind\projecteuler-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pcmind\\projecteuler-rust" "work\\ex\\default\\sources\\beta\\gh\\pcmind\\projecteuler-rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\pcmind\projecteuler-rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] b238f1a8ec84418bf8620218399b90858954326a
+[INFO] sha for GitHub repo pcmind/projecteuler-rust: b238f1a8ec84418bf8620218399b90858954326a
+[INFO] validating manifest of pcmind/projecteuler-rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of pcmind/projecteuler-rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing pcmind/projecteuler-rust
+[INFO] finished frobbing pcmind/projecteuler-rust
+[INFO] frobbed toml for pcmind/projecteuler-rust written to work\ex\default\sources\stable\gh\pcmind\projecteuler-rust\Cargo.toml
+[INFO] started frobbing pcmind/projecteuler-rust
+[INFO] finished frobbing pcmind/projecteuler-rust
+[INFO] frobbed toml for pcmind/projecteuler-rust written to work\ex\default\sources\beta\gh\pcmind\projecteuler-rust\Cargo.toml
+[INFO] crate pcmind/projecteuler-rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded bencher v0.1.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing pcmind/projecteuler-rust against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\pcmind\\projecteuler-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] d053e2725b96344d30da9feeec0aaa076047bf888e6a93804d8d38d12ab43711
+[INFO] running `"docker" "start" "-a" "d053e2725b96344d30da9feeec0aaa076047bf888e6a93804d8d38d12ab43711"`
+[INFO] [stderr]    Compiling bencher v0.1.5
+[INFO] [stderr]    Compiling projecteuler v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.15s
+[INFO] running `"docker" "inspect" "d053e2725b96344d30da9feeec0aaa076047bf888e6a93804d8d38d12ab43711"`
+[INFO] running `"docker" "rm" "-f" "d053e2725b96344d30da9feeec0aaa076047bf888e6a93804d8d38d12ab43711"`
+[INFO] [stdout] d053e2725b96344d30da9feeec0aaa076047bf888e6a93804d8d38d12ab43711
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\pcmind\\projecteuler-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f0a15dec46917b0b7e24ce3a39e88aae9a6fbe142530f25abe43348e0f697c7c
+[INFO] running `"docker" "start" "-a" "f0a15dec46917b0b7e24ce3a39e88aae9a6fbe142530f25abe43348e0f697c7c"`
+[INFO] [stderr]    Compiling projecteuler v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.25s
+[INFO] running `"docker" "inspect" "f0a15dec46917b0b7e24ce3a39e88aae9a6fbe142530f25abe43348e0f697c7c"`
+[INFO] running `"docker" "rm" "-f" "f0a15dec46917b0b7e24ce3a39e88aae9a6fbe142530f25abe43348e0f697c7c"`
+[INFO] [stdout] f0a15dec46917b0b7e24ce3a39e88aae9a6fbe142530f25abe43348e0f697c7c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\pcmind\\projecteuler-rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 9971c0a8903bc78b41c80edffce16b215833b060634e141258b501015044e579
+[INFO] running `"docker" "start" "-a" "9971c0a8903bc78b41c80edffce16b215833b060634e141258b501015044e579"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.34s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\projecteuler-3c5608c397d4a175.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 17 tests
+[INFO] [stdout] test problem1::tests::compute_correctly_provided_solution ... ok
+[INFO] [stdout] test problem1::tests::iterative ... ok
+[INFO] [stdout] test problem1::tests::optimal1 ... ok
+[INFO] [stdout] test problem2::tests::sum_of_even_fibonacci_numbers_return_correct_sum ... ok
+[INFO] [stdout] test problem4::tests::corner_cases ... ok
+[INFO] [stdout] test problem4::tests::detect_a_valid_palindrome ... ok
+[INFO] [stdout] test problem4::tests::detect_an_invalid_palindrome ... ok
+[INFO] [stdout] test problem4::tests::first_palindrome_is_correct ... ok
+[INFO] [stdout] test problem4::tests::give_correct_solutions ... ok
+[INFO] [stdout] test problem4::tests::max_palindrome_made_out_of_n_digit_number ... ok
+[INFO] [stdout] test problem4::tests::prev_return_only_palindrome_numbers ... ok
+[INFO] [stdout] test problem3::tests::output_correct_value ... ok
+[INFO] [stdout] test problem5::tests::test_corner_case ... ok
+[INFO] [stdout] test problem5::tests::test_given_solution ... ok
+[INFO] [stdout] test problem6::tests::test_correct_result ... ok
+[INFO] [stdout] test problem6::tests::test_given_solution ... ok
+[INFO] [stdout] test problem5::tests::test_correct_result ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\projecteuler-efe2f7e4b392744c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests projecteuler
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9971c0a8903bc78b41c80edffce16b215833b060634e141258b501015044e579"`
+[INFO] running `"docker" "rm" "-f" "9971c0a8903bc78b41c80edffce16b215833b060634e141258b501015044e579"`
+[INFO] [stdout] 9971c0a8903bc78b41c80edffce16b215833b060634e141258b501015044e579

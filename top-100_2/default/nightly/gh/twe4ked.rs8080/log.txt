@@ -1,0 +1,55 @@
+[INFO] cloning repository twe4ked/rs8080
+[INFO] running `"git" "clone" "--bare" "git://github.com/twe4ked/rs8080.git" "work\\cache\\sources\\gh\\twe4ked\\rs8080"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\twe4ked\rs8080'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\twe4ked\\rs8080" "work\\ex\\default\\sources\\nightly\\gh\\twe4ked\\rs8080"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\twe4ked\rs8080'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\twe4ked\\rs8080" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\twe4ked\\rs8080"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\twe4ked\rs8080'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 03a2457297d71a5fd494952dc8488470da77c38c
+[INFO] sha for GitHub repo twe4ked/rs8080: 03a2457297d71a5fd494952dc8488470da77c38c
+[INFO] validating manifest of twe4ked/rs8080 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of twe4ked/rs8080 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing twe4ked/rs8080
+[INFO] finished frobbing twe4ked/rs8080
+[INFO] frobbed toml for twe4ked/rs8080 written to work\ex\default\sources\nightly\gh\twe4ked\rs8080\Cargo.toml
+[INFO] started frobbing twe4ked/rs8080
+[INFO] finished frobbing twe4ked/rs8080
+[INFO] frobbed toml for twe4ked/rs8080 written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\twe4ked\rs8080\Cargo.toml
+[INFO] crate twe4ked/rs8080 already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing twe4ked/rs8080 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\twe4ked\\rs8080,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d6657bf194e2e51518533fd826c4e36810fe67f14286a3b7739dd7cc60eacb72
+[INFO] running `"docker" "start" "-a" "d6657bf194e2e51518533fd826c4e36810fe67f14286a3b7739dd7cc60eacb72"`
+[INFO] [stderr]    Compiling rs8080 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.64s
+[INFO] running `"docker" "inspect" "d6657bf194e2e51518533fd826c4e36810fe67f14286a3b7739dd7cc60eacb72"`
+[INFO] running `"docker" "rm" "-f" "d6657bf194e2e51518533fd826c4e36810fe67f14286a3b7739dd7cc60eacb72"`
+[INFO] [stdout] d6657bf194e2e51518533fd826c4e36810fe67f14286a3b7739dd7cc60eacb72
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\twe4ked\\rs8080,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 182f3210985b7c337cf5ba7e4cd2192619844055b713029ab259ab2fdef141e4
+[INFO] running `"docker" "start" "-a" "182f3210985b7c337cf5ba7e4cd2192619844055b713029ab259ab2fdef141e4"`
+[INFO] [stderr]    Compiling rs8080 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.64s
+[INFO] running `"docker" "inspect" "182f3210985b7c337cf5ba7e4cd2192619844055b713029ab259ab2fdef141e4"`
+[INFO] running `"docker" "rm" "-f" "182f3210985b7c337cf5ba7e4cd2192619844055b713029ab259ab2fdef141e4"`
+[INFO] [stdout] 182f3210985b7c337cf5ba7e4cd2192619844055b713029ab259ab2fdef141e4
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\twe4ked\\rs8080,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 6c54d86341fbd267beaf2d997bde36db53ab3182d7d67e57976e7aa1926b091d
+[INFO] running `"docker" "start" "-a" "6c54d86341fbd267beaf2d997bde36db53ab3182d7d67e57976e7aa1926b091d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.16s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rs8080-427c22f72e980f31.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6c54d86341fbd267beaf2d997bde36db53ab3182d7d67e57976e7aa1926b091d"`
+[INFO] running `"docker" "rm" "-f" "6c54d86341fbd267beaf2d997bde36db53ab3182d7d67e57976e7aa1926b091d"`
+[INFO] [stdout] 6c54d86341fbd267beaf2d997bde36db53ab3182d7d67e57976e7aa1926b091d

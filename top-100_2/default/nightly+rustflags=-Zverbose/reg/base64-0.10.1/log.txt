@@ -1,0 +1,211 @@
+[INFO] crate base64 0.10.1 is already in cache
+[INFO] extracting crate base64 0.10.1 into work\ex\default\sources\nightly\reg\base64\0.10.1
+[INFO] extracting crate base64 0.10.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\base64\0.10.1
+[INFO] validating manifest of base64-0.10.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of base64-0.10.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing base64-0.10.1
+[INFO] finished frobbing base64-0.10.1
+[INFO] frobbed toml for base64-0.10.1 written to work\ex\default\sources\nightly\reg\base64\0.10.1\Cargo.toml
+[INFO] started frobbing base64-0.10.1
+[INFO] finished frobbing base64-0.10.1
+[INFO] frobbed toml for base64-0.10.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\base64\0.10.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing base64-0.10.1 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\base64\\0.10.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 92328975ef5d5428914c7fd1bae1aae51f010d9a5a7033f13bacec58ff0d70c8
+[INFO] running `"docker" "start" "-a" "92328975ef5d5428914c7fd1bae1aae51f010d9a5a7033f13bacec58ff0d70c8"`
+[INFO] [stderr]    Compiling base64 v0.10.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.00s
+[INFO] running `"docker" "inspect" "92328975ef5d5428914c7fd1bae1aae51f010d9a5a7033f13bacec58ff0d70c8"`
+[INFO] running `"docker" "rm" "-f" "92328975ef5d5428914c7fd1bae1aae51f010d9a5a7033f13bacec58ff0d70c8"`
+[INFO] [stdout] 92328975ef5d5428914c7fd1bae1aae51f010d9a5a7033f13bacec58ff0d70c8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\base64\\0.10.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 312e045f86bcb00f19a1ab7d1cce363d8219f19dbfd23f9024f2e975efb09be7
+[INFO] running `"docker" "start" "-a" "312e045f86bcb00f19a1ab7d1cce363d8219f19dbfd23f9024f2e975efb09be7"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling rayon-core v1.5.0
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling cast v0.2.2
+[INFO] [stderr]    Compiling itertools v0.8.0
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling regex-automata v0.1.8
+[INFO] [stderr]    Compiling rand_xoshiro v0.1.0
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling tinytemplate v1.0.2
+[INFO] [stderr]    Compiling criterion-plot v0.3.1
+[INFO] [stderr]    Compiling bstr v0.2.4
+[INFO] [stderr]    Compiling csv-core v0.1.6
+[INFO] [stderr]    Compiling rayon v1.1.0
+[INFO] [stderr]    Compiling csv v1.1.1
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling same-file v1.0.5
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling walkdir v2.2.9
+[INFO] [stderr]    Compiling criterion v0.2.11
+[INFO] [stderr]    Compiling base64 v0.10.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 32s
+[INFO] running `"docker" "inspect" "312e045f86bcb00f19a1ab7d1cce363d8219f19dbfd23f9024f2e975efb09be7"`
+[INFO] running `"docker" "rm" "-f" "312e045f86bcb00f19a1ab7d1cce363d8219f19dbfd23f9024f2e975efb09be7"`
+[INFO] [stdout] 312e045f86bcb00f19a1ab7d1cce363d8219f19dbfd23f9024f2e975efb09be7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\base64\\0.10.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] d4a38bcae6f09684a603f2045f2742f3b0b7ceb22c08b0b8908d5272d1fc8e2c
+[INFO] running `"docker" "start" "-a" "d4a38bcae6f09684a603f2045f2742f3b0b7ceb22c08b0b8908d5272d1fc8e2c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.72s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\base64-05aae33d8cf86bab.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 53 tests
+[INFO] [stdout] test chunked_encoder::tests::chunked_encode_fast_loop ... ok
+[INFO] [stdout] test chunked_encoder::tests::chunked_encode_intermediate_fast_loop ... ok
+[INFO] [stdout] test chunked_encoder::tests::chunked_encode_empty ... ok
+[INFO] [stdout] test chunked_encoder::tests::chunked_encode_slow_loop_only ... ok
+[INFO] [stdout] test chunked_encoder::tests::max_input_length_cant_use_extra_single_encoded_byte ... ok
+[INFO] [stdout] test chunked_encoder::tests::max_input_length_no_pad ... ok
+[INFO] [stdout] test chunked_encoder::tests::max_input_length_with_pad_decrements_one_triple ... ok
+[INFO] [stdout] test chunked_encoder::tests::max_input_length_with_pad_fits_exactly ... ok
+[INFO] [stdout] test chunked_encoder::tests::max_input_length_with_pad_one_byte_short ... ok
+[INFO] [stdout] test decode::tests::decode_chunk_precise_writes_only_6_bytes ... ok
+[INFO] [stdout] test decode::tests::decode_chunk_writes_8_bytes ... ok
+[INFO] [stdout] test decode::tests::decode_into_slice_fits_in_precisely_sized_slice ... ok
+[INFO] [stdout] test decode::tests::detect_invalid_last_symbol_every_possible_three_symbols ... ok
+[INFO] [stdout] test decode::tests::detect_invalid_last_symbol_every_possible_two_symbols ... ok
+[INFO] [stdout] test decode::tests::detect_invalid_last_symbol_one_byte ... ok
+[INFO] [stdout] test decode::tests::detect_invalid_last_symbol_two_bytes ... ok
+[INFO] [stdout] test display::tests::basic_display ... ok
+[INFO] [stdout] test decode::tests::decode_into_nonempty_vec_doesnt_clobber_existing_prefix ... ok
+[INFO] [stdout] test encode::tests::add_padding_random_valid_utf8 ... ok
+[INFO] [stdout] test chunked_encoder::tests::chunked_encode_matches_normal_encode_random_string_sink ... ok
+[INFO] [stdout] test encode::tests::encode_config_buf_into_nonempty_buffer_doesnt_clobber_prefix ... ok
+[INFO] [stdout] test encode::tests::encode_config_slice_fits_into_precisely_sized_slice ... ok
+[INFO] [stdout] test display::tests::display_encode_matches_normal_encode ... ok
+[INFO] [stdout] test encode::tests::encode_to_slice_random_valid_utf8 ... ok
+[INFO] [stdout] test encode::tests::encoded_size_correct_no_pad ... ok
+[INFO] [stdout] test encode::tests::encoded_size_correct_standard ... ok
+[INFO] [stdout] test encode::tests::encoded_size_overflow ... ok
+[INFO] [stdout] test decode::tests::decode_into_slice_doesnt_clobber_existing_prefix_or_suffix ... ok
+[INFO] [stdout] test tests::roundtrip_random_config_short ... ok
+[INFO] [stdout] test write::encoder_tests::drop_calls_finish_for_you ... ok
+[INFO] [stdout] test write::encoder_tests::encode_1_2_3_bytes ... ok
+[INFO] [stdout] test write::encoder_tests::encode_nine_bytes_two_writes ... ok
+[INFO] [stdout] test write::encoder_tests::encode_one_then_five_bytes ... ok
+[INFO] [stdout] test write::encoder_tests::encode_one_then_two_bytes ... ok
+[INFO] [stdout] test encode::tests::encode_with_padding_random_valid_utf8 ... ok
+[INFO] [stdout] test tests::roundtrip_random_config_long ... ok
+[INFO] [stdout] test write::encoder_tests::encode_three_bytes ... ok
+[INFO] [stdout] test write::encoder_tests::encode_with_padding ... ok
+[INFO] [stdout] test write::encoder_tests::encode_with_padding_multiple_writes ... ok
+[INFO] [stdout] test write::encoder_tests::encode_random_config_matches_normal_encode_reasonable_input_len ... ok
+[INFO] [stdout] test write::encoder_tests::finish_writes_extra_byte ... ok
+[INFO] [stdout] test write::encoder_tests::encode_random_config_matches_normal_encode_tiny_input_len ... ok
+[INFO] [stdout] test write::encoder_tests::write_1_chunk_and_partial_encodes_only_complete_chunk ... ok
+[INFO] [stdout] test write::encoder_tests::write_1_chunk_encodes_complete_chunk ... ok
+[INFO] [stdout] test write::encoder_tests::write_2_partials_to_exactly_complete_chunk_encodes_complete_chunk ... ok
+[INFO] [stdout] test write::encoder_tests::write_partial_chunk_encodes_partial_chunk ... ok
+[INFO] [stdout] test write::encoder_tests::write_partial_then_enough_to_complete_chunk_and_another_chunk_and_another_partial_chunk_encodes_only_complete_chunks ... ok
+[INFO] [stdout] test write::encoder_tests::write_partial_then_enough_to_complete_chunk_and_another_chunk_encodes_complete_chunks ... ok
+[INFO] [stdout] test write::encoder_tests::write_partial_then_enough_to_complete_chunk_but_not_complete_another_chunk_encodes_complete_chunk_without_consuming_remaining ... ok
+[INFO] [stdout] test encode::tests::encode_config_slice_into_nonempty_buffer_doesnt_clobber_suffix ... ok
+[INFO] [stdout] test write::encoder_tests::every_possible_split_of_input ... ok
+[INFO] [stdout] test write::encoder_tests::retrying_writes_that_error_with_interrupted_works ... ok
+[INFO] [stdout] test write::encoder_tests::writes_that_only_write_part_of_input_and_sometimes_interrupt_produce_correct_encoded_data ... test write::encoder_tests::writes_that_only_write_part_of_input_and_sometimes_interrupt_produce_correct_encoded_data has been running for over 60 seconds
+[INFO] [stdout] test write::encoder_tests::writes_that_only_write_part_of_input_and_sometimes_interrupt_produce_correct_encoded_data ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\decode-2ede9766494f12b9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 25 tests
+[INFO] [stdout] test decode_2_pad_bytes_in_leftovers_then_extra_padding_chunk_error ... ok
+[INFO] [stdout] test decode_absurd_pad_error ... ok
+[INFO] [stdout] test decode_extra_padding_after_1_pad_bytes_in_trailing_quad_returns_error ... ok
+[INFO] [stdout] test decode_1_pad_byte_in_fast_loop_then_extra_padding_chunk_error ... ok
+[INFO] [stdout] test decode_extra_padding_after_2_pad_bytes_in_trailing_quad_2_returns_error ... ok
+[INFO] [stdout] test decode_one_char_in_quad_without_padding_error ... ok
+[INFO] [stdout] test decode_one_char_in_quad_with_padding_error ... ok
+[INFO] [stdout] test decode_reject_null ... ok
+[INFO] [stdout] test decode_rfc4648_0 ... ok
+[INFO] [stdout] test decode_padding_followed_by_non_padding_returns_error ... ok
+[INFO] [stdout] test decode_rfc4648_1 ... ok
+[INFO] [stdout] test decode_rfc4648_1_just_a_bit_of_padding ... ok
+[INFO] [stdout] test decode_rfc4648_1_no_padding ... ok
+[INFO] [stdout] test decode_rfc4648_2 ... ok
+[INFO] [stdout] test decode_rfc4648_3 ... ok
+[INFO] [stdout] test decode_rfc4648_2_no_padding ... ok
+[INFO] [stdout] test decode_rfc4648_4 ... ok
+[INFO] [stdout] test decode_rfc4648_4_no_padding ... ok
+[INFO] [stdout] test decode_rfc4648_5 ... ok
+[INFO] [stdout] test decode_rfc4648_5_no_padding ... ok
+[INFO] [stdout] test decode_rfc4648_6 ... ok
+[INFO] [stdout] test decode_single_pad_byte_after_2_chars_in_trailing_quad_ok ... ok
+[INFO] [stdout] test decode_valid_bytes_after_padding_in_leftovers_error ... ok
+[INFO] [stdout] test decode_start_quad_with_padding_returns_error ... ok
+[INFO] [stdout] test decode_reject_invalid_bytes_with_correct_error ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\encode-fe31c79bb9ffa944.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 11 tests
+[INFO] [stdout] test encode_all_bytes ... ok
+[INFO] [stdout] test encode_rfc4648_0 ... ok
+[INFO] [stdout] test encode_all_ascii ... ok
+[INFO] [stdout] test encode_all_bytes_url ... ok
+[INFO] [stdout] test encode_rfc4648_1 ... ok
+[INFO] [stdout] test encode_rfc4648_2 ... ok
+[INFO] [stdout] test encode_rfc4648_3 ... ok
+[INFO] [stdout] test encode_rfc4648_4 ... ok
+[INFO] [stdout] test encode_rfc4648_5 ... ok
+[INFO] [stdout] test encode_rfc4648_6 ... ok
+[INFO] [stdout] test encode_url_safe_without_padding ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\helpers-a2cabce863771bc8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tests-65024675cfa36061.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test display_wrapper_matches_normal_encode ... ok
+[INFO] [stdout] test encode_config_slice_can_use_inline_buffer ... ok
+[INFO] [stdout] test because_we_can ... ok
+[INFO] [stdout] test roundtrip_decode_trailing_10_bytes ... ok
+[INFO] [stdout] test encode_config_slice_panics_when_buffer_too_small ... ok
+[INFO] [stdout] test roundtrip_random_no_padding ... ok
+[INFO] [stdout] test roundtrip_random_with_fast_loop_standard ... ok
+[INFO] [stdout] test roundtrip_random_short_standard ... ok
+[INFO] [stdout] test roundtrip_random_short_no_padding ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests base64
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test src\display.rs - display (line 3) ... ok
+[INFO] [stdout] test src\decode.rs - decode::decode_config (line 86) ... ok
+[INFO] [stdout] test src\decode.rs - decode::decode (line 69) ... ok
+[INFO] [stdout] test src\decode.rs - decode::decode_config_buf (line 112) ... ok
+[INFO] [stdout] test src\encode.rs - encode::encode_config (line 27) ... ok
+[INFO] [stdout] test src\encode.rs - encode::encode (line 10) ... ok
+[INFO] [stdout] test src\encode.rs - encode::encode_config_slice (line 93) ... ok
+[INFO] [stdout] test src\encode.rs - encode::encode_config_buf (line 55) ... ok
+[INFO] [stdout] test src\write\encoder.rs - write::encoder::EncoderWriter (line 22) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d4a38bcae6f09684a603f2045f2742f3b0b7ceb22c08b0b8908d5272d1fc8e2c"`
+[INFO] running `"docker" "rm" "-f" "d4a38bcae6f09684a603f2045f2742f3b0b7ceb22c08b0b8908d5272d1fc8e2c"`
+[INFO] [stdout] d4a38bcae6f09684a603f2045f2742f3b0b7ceb22c08b0b8908d5272d1fc8e2c

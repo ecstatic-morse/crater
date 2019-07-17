@@ -1,0 +1,267 @@
+[INFO] cloning repository pingzing/oxide-skies
+[INFO] running `"git" "clone" "--bare" "git://github.com/pingzing/oxide-skies.git" "work\\cache\\sources\\gh\\pingzing\\oxide-skies"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\pingzing\oxide-skies'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pingzing\\oxide-skies" "work\\ex\\default\\sources\\nightly\\gh\\pingzing\\oxide-skies"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\pingzing\oxide-skies'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\pingzing\\oxide-skies" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\pingzing\\oxide-skies"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\pingzing\oxide-skies'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 823e8cb14d60774dc769ff5c3437d0dbe7b0393f
+[INFO] sha for GitHub repo pingzing/oxide-skies: 823e8cb14d60774dc769ff5c3437d0dbe7b0393f
+[INFO] validating manifest of pingzing/oxide-skies on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of pingzing/oxide-skies on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing pingzing/oxide-skies
+[INFO] finished frobbing pingzing/oxide-skies
+[INFO] frobbed toml for pingzing/oxide-skies written to work\ex\default\sources\nightly\gh\pingzing\oxide-skies\Cargo.toml
+[INFO] started frobbing pingzing/oxide-skies
+[INFO] finished frobbing pingzing/oxide-skies
+[INFO] frobbed toml for pingzing/oxide-skies written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\pingzing\oxide-skies\Cargo.toml
+[INFO] crate pingzing/oxide-skies already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\nightly\gh\pingzing\oxide-skies\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded syntex v0.29.2
+[INFO] [stderr]   Downloaded openssl-sys-extras v0.7.14
+[INFO] [stderr]   Downloaded hpack v0.2.0
+[INFO] [stderr]   Downloaded serde_json v0.7.4
+[INFO] [stderr]   Downloaded itoa v0.1.1
+[INFO] [stderr]   Downloaded term v0.2.14
+[INFO] [stderr]   Downloaded serde_codegen v0.7.15
+[INFO] [stderr]   Downloaded syntex_pos v0.39.0
+[INFO] [stderr]   Downloaded syntex_syntax v0.39.0
+[INFO] [stderr]   Downloaded syntex v0.39.0
+[INFO] [stderr]   Downloaded syntex_errors v0.39.0
+[INFO] [stderr]   Downloaded serde_codegen_internals v0.4.0
+[INFO] [stderr]   Downloaded quasi_codegen v0.16.0
+[INFO] [stderr]   Downloaded aster v0.22.1
+[INFO] [stderr]   Downloaded quasi v0.16.0
+[INFO] [stderr]   Downloaded url v0.5.10
+[INFO] [stderr]   Downloaded uuid v0.2.3
+[INFO] [stderr]   Downloaded unicode-bidi v0.2.6
+[INFO] [stderr]   Downloaded traitobject v0.0.1
+[INFO] [stderr]   Downloaded hyper v0.7.2
+[INFO] [stderr]   Downloaded mime v0.1.3
+[INFO] [stderr]   Downloaded solicit v0.4.4
+[INFO] [stderr]   Downloaded cookie v0.2.5
+[INFO] [stderr]   Downloaded openssl v0.7.14
+[INFO] [stderr]   Downloaded filetime v0.1.15
+[INFO] [stderr]   Downloaded syntex_syntax v0.29.3
+[INFO] [stderr]   Downloaded unicode-xid v0.0.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing pingzing/oxide-skies against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\pingzing\\oxide-skies,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 4458197d9c91d4e1451e6aa83567ab9ec09a5fba43f286a7a5e5cab7c3defa72
+[INFO] running `"docker" "start" "-a" "4458197d9c91d4e1451e6aa83567ab9ec09a5fba43f286a7a5e5cab7c3defa72"`
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling unicode-xid v0.0.3
+[INFO] [stderr]    Compiling autocfg v0.1.5
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling gcc v0.3.55
+[INFO] [stderr]    Compiling matches v0.1.8
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling bitflags v0.3.3
+[INFO] [stderr]    Compiling httparse v1.3.4
+[INFO] [stderr]    Compiling percent-encoding v1.0.1
+[INFO] [stderr]    Compiling bitflags v0.7.0
+[INFO] [stderr]    Compiling lazy_static v0.2.11
+[INFO] [stderr]    Compiling itoa v0.1.1
+[INFO] [stderr]    Compiling language-tags v0.2.2
+[INFO] [stderr]    Compiling traitobject v0.0.1
+[INFO] [stderr]    Compiling serde v0.7.15
+[INFO] [stderr]    Compiling typeable v0.1.2
+[INFO] [stderr]    Compiling user32-sys v0.2.0
+[INFO] [stderr]    Compiling gdi32-sys v0.2.0
+[INFO] [stderr]    Compiling filetime v0.1.15
+[INFO] [stderr]    Compiling openssl-sys v0.7.17
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling num-iter v0.1.39
+[INFO] [stderr]    Compiling unicode-bidi v0.3.4
+[INFO] [stderr]    Compiling unicode-bidi v0.2.6
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling openssl-sys-extras v0.7.14
+[INFO] [stderr]    Compiling openssl v0.7.14
+[INFO] [stderr]    Compiling syntex_pos v0.39.0
+[INFO] [stderr]    Compiling kernel32-sys v0.2.2
+[INFO] [stderr]    Compiling num_cpus v0.2.13
+[INFO] [stderr] error: failed to run custom build command for `openssl-sys-extras v0.7.14`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\openssl-sys-extras-d300a29e0b9a301d\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/W4" "/FoC:\\crater\\target\\debug\\build\\openssl-sys-extras-97a706a12b4df699\\out\\src\\openssl_shim.o" "/c" "src/openssl_shim.c"
+[INFO] [stderr] openssl_shim.c
+[INFO] [stderr] src/openssl_shim.c(1): fatal error C1083: Cannot open include file: 'openssl/hmac.h': No such file or directory
+[INFO] [stderr] exit code: 2
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at '
+[INFO] [stderr] 
+[INFO] [stderr] Internal error occurred: Command "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/W4" "/FoC:\\crater\\target\\debug\\build\\openssl-sys-extras-97a706a12b4df699\\out\\src\\openssl_shim.o" "/c" "src/openssl_shim.c" with args "cl.exe" did not execute successfully (status code exit code: 2).
+[INFO] [stderr] 
+[INFO] [stderr] ', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:1672:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff61c19198c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff61c19198c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff61c194e7e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff61c194e7e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff61c194b02 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff61c195680 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff61c1951b4 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff61c195102 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff61c12684e - gcc::fail
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:1672
+[INFO] [stderr]    9:     0x7ff61c1188ad - gcc::Build::compile
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:785
+[INFO] [stderr]   10:     0x7ff61c11128c - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\openssl-sys-extras-0.7.14\build.rs:19
+[INFO] [stderr]   11:     0x7ff61c112a50 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   12:     0x7ff61c195087 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   13:     0x7ff61c195087 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   14:     0x7ff61c19fab2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   15:     0x7ff61c1958a2 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   16:     0x7ff61c1958a2 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   17:     0x7ff61c1958a2 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   18:     0x7ff61c112a2b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   19:     0x7ff61c1123e0 - main
+[INFO] [stderr]   20:     0x7ff61c1ad9f0 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   21:     0x7ff61c1ad9f0 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   22:     0x7ff99bd47974 - BaseThreadInitThunk
+[INFO] [stderr]   23:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: failed to run custom build command for `openssl v0.7.14`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\openssl-9530419418e5ffc8\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/W4" "/FoC:\\crater\\target\\debug\\build\\openssl-8899d2e6b1649254\\out\\src\\c_helpers.o" "/c" "src/c_helpers.c"
+[INFO] [stderr] c_helpers.c
+[INFO] [stderr] src/c_helpers.c(1): fatal error C1083: Cannot open include file: 'openssl/ssl.h': No such file or directory
+[INFO] [stderr] exit code: 2
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at '
+[INFO] [stderr] 
+[INFO] [stderr] Internal error occurred: Command "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/W4" "/FoC:\\crater\\target\\debug\\build\\openssl-8899d2e6b1649254\\out\\src\\c_helpers.o" "/c" "src/c_helpers.c" with args "cl.exe" did not execute successfully (status code exit code: 2).
+[INFO] [stderr] 
+[INFO] [stderr] ', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:1672:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff6f364f32c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff6f364f32c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff6f365281e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff6f365281e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff6f36524a2 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff6f3653020 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff6f3652b54 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stderr]    7:     0x7ff6f3652aa2 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:339
+[INFO] [stderr]    8:     0x7ff6f35ea66e - gcc::fail
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:1672
+[INFO] [stderr]    9:     0x7ff6f35dc6cd - gcc::Build::compile
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\gcc-0.3.55\src\lib.rs:785
+[INFO] [stderr]   10:     0x7ff6f35d135c - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\openssl-0.7.14\build.rs:15
+[INFO] [stderr]   11:     0x7ff6f35d1060 - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   12:     0x7ff6f3652a27 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:49
+[INFO] [stderr]   13:     0x7ff6f3652a27 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:296
+[INFO] [stderr]   14:     0x7ff6f365d3e2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   15:     0x7ff6f3653242 - std::panicking::try
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:275
+[INFO] [stderr]   16:     0x7ff6f3653242 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panic.rs:394
+[INFO] [stderr]   17:     0x7ff6f3653242 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\rt.rs:48
+[INFO] [stderr]   18:     0x7ff6f35d103b - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\rt.rs:64
+[INFO] [stderr]   19:     0x7ff6f35d1550 - main
+[INFO] [stderr]   20:     0x7ff6f366b320 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   21:     0x7ff6f366b320 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   22:     0x7ff99bd47974 - BaseThreadInitThunk
+[INFO] [stderr]   23:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "4458197d9c91d4e1451e6aa83567ab9ec09a5fba43f286a7a5e5cab7c3defa72"`
+[INFO] running `"docker" "rm" "-f" "4458197d9c91d4e1451e6aa83567ab9ec09a5fba43f286a7a5e5cab7c3defa72"`
+[INFO] [stdout] 4458197d9c91d4e1451e6aa83567ab9ec09a5fba43f286a7a5e5cab7c3defa72

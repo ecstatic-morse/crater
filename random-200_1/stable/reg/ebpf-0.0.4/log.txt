@@ -1,0 +1,211 @@
+[INFO] fetching crate ebpf 0.0.4...
+[INFO] extracting crate ebpf 0.0.4 into work\ex\default\sources\stable\reg\ebpf\0.0.4
+[INFO] extracting crate ebpf 0.0.4 into work\ex\default\sources\beta\reg\ebpf\0.0.4
+[INFO] validating manifest of ebpf-0.0.4 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ebpf-0.0.4 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ebpf-0.0.4
+[INFO] finished frobbing ebpf-0.0.4
+[INFO] frobbed toml for ebpf-0.0.4 written to work\ex\default\sources\stable\reg\ebpf\0.0.4\Cargo.toml
+[INFO] started frobbing ebpf-0.0.4
+[INFO] finished frobbing ebpf-0.0.4
+[INFO] frobbed toml for ebpf-0.0.4 written to work\ex\default\sources\beta\reg\ebpf\0.0.4\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded zero v0.1.2
+[INFO] [stderr]   Downloaded perf v0.0.1
+[INFO] [stderr]   Downloaded ioctl-sys v0.5.2
+[INFO] [stderr]   Downloaded xmas-elf v0.6.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing ebpf-0.0.4 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\ebpf\\0.0.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 6d40e28d00d495ec1cba72a8fb6c8cc9e6294badbba9f8d0abdd8a8f1850ca72
+[INFO] running `"docker" "start" "-a" "6d40e28d00d495ec1cba72a8fb6c8cc9e6294badbba9f8d0abdd8a8f1850ca72"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling zero v0.1.2
+[INFO] [stderr]    Compiling xmas-elf v0.6.2
+[INFO] [stderr]    Compiling errno v0.2.4
+[INFO] [stderr]    Compiling ebpf v0.0.4 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved imports `libc::syscall`, `libc::SYS_bpf`
+[INFO] [stderr]  --> src\sys.rs:9:18
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use libc::{self, syscall, SYS_bpf};
+[INFO] [stderr]   |                  ^^^^^^^  ^^^^^^^ no `SYS_bpf` in the root
+[INFO] [stderr]   |                  |
+[INFO] [stderr]   |                  no `syscall` in the root
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved imports `libc::socklen_t`, `libc::SOCK_RAW`
+[INFO] [stderr]   --> src\xdp.rs:12:18
+[INFO] [stderr]    |
+[INFO] [stderr] 12 | use libc::{self, socklen_t, off_t, c_void, SOCK_RAW};
+[INFO] [stderr]    |                  ^^^^^^^^^                 ^^^^^^^^ no `SOCK_RAW` in the root
+[INFO] [stderr]    |                  |
+[INFO] [stderr]    |                  no `socklen_t` in the root
+[INFO] [stderr]    |                  help: a similar name exists in the module: `socket`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `MSG_DONTWAIT` in this scope
+[INFO] [stderr]    --> src\xdp.rs:265:42
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |         match sendto(fd, ptr::null(), 0, MSG_DONTWAIT, ptr::null(), 0) as i32 {
+[INFO] [stderr]     |                                          ^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `ENOBUFS` in this scope
+[INFO] [stderr]    --> src\xdp.rs:269:31
+[INFO] [stderr]     |
+[INFO] [stderr] 269 |             _ if errno().0 == ENOBUFS => Ok(0),
+[INFO] [stderr]     |                               ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sysconf` in this scope
+[INFO] [stderr]    --> src\xdp.rs:301:24
+[INFO] [stderr]     |
+[INFO] [stderr] 301 |         let pagesize = sysconf(_SC_PAGESIZE) as size_t;
+[INFO] [stderr]     |                        ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `_SC_PAGESIZE` in this scope
+[INFO] [stderr]    --> src\xdp.rs:301:32
+[INFO] [stderr]     |
+[INFO] [stderr] 301 |         let pagesize = sysconf(_SC_PAGESIZE) as size_t;
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `posix_memalign` in this scope
+[INFO] [stderr]    --> src\xdp.rs:304:15
+[INFO] [stderr]     |
+[INFO] [stderr] 304 |         match posix_memalign(&mut addr, pagesize, size) {
+[INFO] [stderr]     |               ^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `PROT_READ` in this scope
+[INFO] [stderr]    --> src\xdp.rs:317:22
+[INFO] [stderr]     |
+[INFO] [stderr] 317 |         let prot   = PROT_READ  | PROT_WRITE;
+[INFO] [stderr]     |                      ^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `PROT_WRITE` in this scope
+[INFO] [stderr]    --> src\xdp.rs:317:35
+[INFO] [stderr]     |
+[INFO] [stderr] 317 |         let prot   = PROT_READ  | PROT_WRITE;
+[INFO] [stderr]     |                                   ^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `MAP_SHARED` in this scope
+[INFO] [stderr]    --> src\xdp.rs:318:22
+[INFO] [stderr]     |
+[INFO] [stderr] 318 |         let flags  = MAP_SHARED | MAP_POPULATE;
+[INFO] [stderr]     |                      ^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `MAP_POPULATE` in this scope
+[INFO] [stderr]    --> src\xdp.rs:318:35
+[INFO] [stderr]     |
+[INFO] [stderr] 318 |         let flags  = MAP_SHARED | MAP_POPULATE;
+[INFO] [stderr]     |                                   ^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `MAP_FAILED` in this scope
+[INFO] [stderr]    --> src\xdp.rs:321:27
+[INFO] [stderr]     |
+[INFO] [stderr] 321 |             ptr if ptr == MAP_FAILED => Err(errno()),
+[INFO] [stderr]     |                           ^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0277]: the trait bound `usize: std::ops::Neg` is not satisfied
+[INFO] [stderr]    --> src\xdp.rs:244:13
+[INFO] [stderr]     |
+[INFO] [stderr] 244 |             -1 => Err(errno()),
+[INFO] [stderr]     |             ^^ the trait `std::ops::Neg` is not implemented for `usize`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:245:22
+[INFO] [stderr]     |
+[INFO] [stderr] 245 |              n => Ok(n),
+[INFO] [stderr]     |                      ^ expected i32, found usize
+[INFO] [stderr] help: you can convert an `usize` to `i32` and panic if the converted value wouldn't fit
+[INFO] [stderr]     |
+[INFO] [stderr] 245 |              n => Ok(n.try_into().unwrap()),
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:255:20
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |         match bind(fd, ptr, len) {
+[INFO] [stderr]     |                    ^^ expected usize, found i32
+[INFO] [stderr] help: you can convert an `i32` to `usize` and panic if the converted value wouldn't fit
+[INFO] [stderr]     |
+[INFO] [stderr] 255 |         match bind(fd.try_into().unwrap(), ptr, len) {
+[INFO] [stderr]     |                    ^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:265:22
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |         match sendto(fd, ptr::null(), 0, MSG_DONTWAIT, ptr::null(), 0) as i32 {
+[INFO] [stderr]     |                      ^^ expected usize, found i32
+[INFO] [stderr] help: you can convert an `i32` to `usize` and panic if the converted value wouldn't fit
+[INFO] [stderr]     |
+[INFO] [stderr] 265 |         match sendto(fd.try_into().unwrap(), ptr::null(), 0, MSG_DONTWAIT, ptr::null(), 0) as i32 {
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:280:32
+[INFO] [stderr]     |
+[INFO] [stderr] 280 |         match libc::getsockopt(fd, SOL_XDP, name, mval, &mut len) {
+[INFO] [stderr]     |                                ^^ expected usize, found i32
+[INFO] [stderr] help: you can convert an `i32` to `usize` and panic if the converted value wouldn't fit
+[INFO] [stderr]     |
+[INFO] [stderr] 280 |         match libc::getsockopt(fd.try_into().unwrap(), SOL_XDP, name, mval, &mut len) {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:280:51
+[INFO] [stderr]     |
+[INFO] [stderr] 280 |         match libc::getsockopt(fd, SOL_XDP, name, mval, &mut len) {
+[INFO] [stderr]     |                                                   ^^^^ expected i8, found enum `libc::c_void`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `*mut i8`
+[INFO] [stderr]                found type `*mut libc::c_void`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:291:32
+[INFO] [stderr]     |
+[INFO] [stderr] 291 |         match libc::setsockopt(fd, SOL_XDP, name, val, len) {
+[INFO] [stderr]     |                                ^^ expected usize, found i32
+[INFO] [stderr] help: you can convert an `i32` to `usize` and panic if the converted value wouldn't fit
+[INFO] [stderr]     |
+[INFO] [stderr] 291 |         match libc::setsockopt(fd.try_into().unwrap(), SOL_XDP, name, val, len) {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:291:51
+[INFO] [stderr]     |
+[INFO] [stderr] 291 |         match libc::setsockopt(fd, SOL_XDP, name, val, len) {
+[INFO] [stderr]     |                                                   ^^^ expected i8, found enum `libc::c_void`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `*const i8`
+[INFO] [stderr]                found type `*const libc::c_void`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0061]: this function takes 4 parameters but 6 parameters were supplied
+[INFO] [stderr]    --> src\xdp.rs:320:15
+[INFO] [stderr]     |
+[INFO] [stderr] 311 | fn mmap<T>(count: u32, offset: u64, fd: c_int, kind: off_t) -> Result<*mut c_void, Errno> {
+[INFO] [stderr]     | ----------------------------------------------------------------------------------------- defined here
+[INFO] [stderr] ...
+[INFO] [stderr] 320 |         match mmap(ptr::null_mut(), size, prot, flags, fd, kind) {
+[INFO] [stderr]     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected 4 parameters
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]    --> src\xdp.rs:322:44
+[INFO] [stderr]     |
+[INFO] [stderr] 322 |             ptr                      => Ok(ptr),
+[INFO] [stderr]     |                                            ^^^ expected *-ptr, found enum `std::result::Result`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: expected type `*mut libc::c_void`
+[INFO] [stderr]                found type `std::result::Result<*mut libc::c_void, errno::Errno>`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 22 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0061, E0277, E0308, E0425, E0432.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0061`.
+[INFO] [stderr] error: Could not compile `ebpf`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "6d40e28d00d495ec1cba72a8fb6c8cc9e6294badbba9f8d0abdd8a8f1850ca72"`
+[INFO] running `"docker" "rm" "-f" "6d40e28d00d495ec1cba72a8fb6c8cc9e6294badbba9f8d0abdd8a8f1850ca72"`
+[INFO] [stdout] 6d40e28d00d495ec1cba72a8fb6c8cc9e6294badbba9f8d0abdd8a8f1850ca72

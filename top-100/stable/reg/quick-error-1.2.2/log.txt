@@ -1,0 +1,154 @@
+[INFO] fetching crate quick-error 1.2.2...
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\stable\reg\quick-error\1.2.2
+[INFO] extracting crate quick-error 1.2.2 into work\ex\default\sources\beta\reg\quick-error\1.2.2
+[INFO] validating manifest of quick-error-1.2.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quick-error-1.2.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\stable\reg\quick-error\1.2.2\Cargo.toml
+[INFO] started frobbing quick-error-1.2.2
+[INFO] finished frobbing quick-error-1.2.2
+[INFO] frobbed toml for quick-error-1.2.2 written to work\ex\default\sources\beta\reg\quick-error\1.2.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quick-error-1.2.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 054e357aaa8cbe125d315843e0bfd257d26414325542728db509224af1728e47
+[INFO] running `"docker" "start" "-a" "054e357aaa8cbe125d315843e0bfd257d26414325542728db509224af1728e47"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.22s
+[INFO] running `"docker" "inspect" "054e357aaa8cbe125d315843e0bfd257d26414325542728db509224af1728e47"`
+[INFO] running `"docker" "rm" "-f" "054e357aaa8cbe125d315843e0bfd257d26414325542728db509224af1728e47"`
+[INFO] [stdout] 054e357aaa8cbe125d315843e0bfd257d26414325542728db509224af1728e47
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c2ae5c2ba075edef65c1f24e35675e4fd1cde0e970102d973b273c2e1a28c5f0
+[INFO] running `"docker" "start" "-a" "c2ae5c2ba075edef65c1f24e35675e4fd1cde0e970102d973b273c2e1a28c5f0"`
+[INFO] [stderr]    Compiling quick-error v1.2.2 (C:\crater\workdir)
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:386:24
+[INFO] [stderr]      |
+[INFO] [stderr] 386  |                   self.0.cause()
+[INFO] [stderr]      |                          ^^^^^
+[INFO] [stderr] ...
+[INFO] [stderr] 1060 | /     quick_error! {
+[INFO] [stderr] 1061 | |         #[derive(Debug)]
+[INFO] [stderr] 1062 | |         pub enum Wrapper wraps Wrapped {
+[INFO] [stderr] 1063 | |             One
+[INFO] [stderr] ...    |
+[INFO] [stderr] 1068 | |         }
+[INFO] [stderr] 1069 | |     }
+[INFO] [stderr]      | |_____- in this macro invocation
+[INFO] [stderr]      |
+[INFO] [stderr]      = note: #[warn(deprecated)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1049:27
+[INFO] [stderr]      |
+[INFO] [stderr] 1049 |         assert!(Bare::One.cause().is_none());
+[INFO] [stderr]      |                           ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1057:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1057 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1121:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1121 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1131:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1131 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1142:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1142 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1168:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1168 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1177:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1177 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1206:40
+[INFO] [stderr]      |
+[INFO] [stderr] 1206 |         assert_eq!(format!("{:?}", err.cause().unwrap()), format!("{:?}", cause));
+[INFO] [stderr]      |                                        ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] warning: use of deprecated item 'std::error::Error::cause': replaced by Error::source, which can support downcasting
+[INFO] [stderr]     --> src\lib.rs:1225:21
+[INFO] [stderr]      |
+[INFO] [stderr] 1225 |         assert!(err.cause().is_none());
+[INFO] [stderr]      |                     ^^^^^
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.02s
+[INFO] running `"docker" "inspect" "c2ae5c2ba075edef65c1f24e35675e4fd1cde0e970102d973b273c2e1a28c5f0"`
+[INFO] running `"docker" "rm" "-f" "c2ae5c2ba075edef65c1f24e35675e4fd1cde0e970102d973b273c2e1a28c5f0"`
+[INFO] [stdout] c2ae5c2ba075edef65c1f24e35675e4fd1cde0e970102d973b273c2e1a28c5f0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quick-error\\1.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] e80ce68a7142791fee6d7fb17bb4c607fcb82a9a809c1afeb29bd8fe5157fc55
+[INFO] running `"docker" "start" "-a" "e80ce68a7142791fee6d7fb17bb4c607fcb82a9a809c1afeb29bd8fe5157fc55"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quick_error-2859384b2e889ccd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 18 tests
+[INFO] [stdout] test test::bare_item_direct ... ok
+[INFO] [stdout] test test::bare_item_trait ... ok
+[INFO] [stdout] test test::conditional_compilation ... ok
+[INFO] [stdout] test test::debug_context ... ok
+[INFO] [stdout] test test::parse_float_error ... ok
+[INFO] [stdout] test test::parse_int_error ... ok
+[INFO] [stdout] test test::path_context ... ok
+[INFO] [stdout] test test::struct_wrapper_err ... ok
+[INFO] [stdout] test test::struct_wrapper_excess_comma ... ok
+[INFO] [stdout] test test::struct_wrapper_struct_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_custom_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_discard ... ok
+[INFO] [stdout] test test::tuple_wrapper_err ... ok
+[INFO] [stdout] test test::tuple_wrapper_from ... ok
+[INFO] [stdout] test test::tuple_wrapper_singleton ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_str ... ok
+[INFO] [stdout] test test::tuple_wrapper_trait_two_fields ... ok
+[INFO] [stdout] test test::wrapper ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quick-error
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test src\lib.rs -  (line 106) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 150) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 169) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 126) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 187) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 27) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 212) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 270) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 284) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 55) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 78) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 6) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "e80ce68a7142791fee6d7fb17bb4c607fcb82a9a809c1afeb29bd8fe5157fc55"`
+[INFO] running `"docker" "rm" "-f" "e80ce68a7142791fee6d7fb17bb4c607fcb82a9a809c1afeb29bd8fe5157fc55"`
+[INFO] [stdout] e80ce68a7142791fee6d7fb17bb4c607fcb82a9a809c1afeb29bd8fe5157fc55

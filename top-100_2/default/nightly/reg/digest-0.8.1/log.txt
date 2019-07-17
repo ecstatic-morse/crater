@@ -1,0 +1,55 @@
+[INFO] crate digest 0.8.1 is already in cache
+[INFO] extracting crate digest 0.8.1 into work\ex\default\sources\nightly\reg\digest\0.8.1
+[INFO] extracting crate digest 0.8.1 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\digest\0.8.1
+[INFO] validating manifest of digest-0.8.1 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of digest-0.8.1 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing digest-0.8.1
+[INFO] finished frobbing digest-0.8.1
+[INFO] frobbed toml for digest-0.8.1 written to work\ex\default\sources\nightly\reg\digest\0.8.1\Cargo.toml
+[INFO] started frobbing digest-0.8.1
+[INFO] finished frobbing digest-0.8.1
+[INFO] frobbed toml for digest-0.8.1 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\digest\0.8.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing digest-0.8.1 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\digest\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 351df9479db3b3023d5277f0f1a064eb646e049f3b22d91ea2f9a95d22ad9324
+[INFO] running `"docker" "start" "-a" "351df9479db3b3023d5277f0f1a064eb646e049f3b22d91ea2f9a95d22ad9324"`
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling digest v0.8.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.50s
+[INFO] running `"docker" "inspect" "351df9479db3b3023d5277f0f1a064eb646e049f3b22d91ea2f9a95d22ad9324"`
+[INFO] running `"docker" "rm" "-f" "351df9479db3b3023d5277f0f1a064eb646e049f3b22d91ea2f9a95d22ad9324"`
+[INFO] [stdout] 351df9479db3b3023d5277f0f1a064eb646e049f3b22d91ea2f9a95d22ad9324
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\digest\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 45897e45837e7d8536f14d80202dea9af12a0af847c5041f36086a3812b4c36f
+[INFO] running `"docker" "start" "-a" "45897e45837e7d8536f14d80202dea9af12a0af847c5041f36086a3812b4c36f"`
+[INFO] [stderr]    Compiling digest v0.8.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.74s
+[INFO] running `"docker" "inspect" "45897e45837e7d8536f14d80202dea9af12a0af847c5041f36086a3812b4c36f"`
+[INFO] running `"docker" "rm" "-f" "45897e45837e7d8536f14d80202dea9af12a0af847c5041f36086a3812b4c36f"`
+[INFO] [stdout] 45897e45837e7d8536f14d80202dea9af12a0af847c5041f36086a3812b4c36f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\digest\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 74a9ab801857c2b5060f6ee361d07bced52f1957c8205d6700547b1f1ac6bc97
+[INFO] running `"docker" "start" "-a" "74a9ab801857c2b5060f6ee361d07bced52f1957c8205d6700547b1f1ac6bc97"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.35s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\digest-af941b98b0298790.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests digest
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\digest.rs - digest::Digest::digest (line 42) ... ignored
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "74a9ab801857c2b5060f6ee361d07bced52f1957c8205d6700547b1f1ac6bc97"`
+[INFO] running `"docker" "rm" "-f" "74a9ab801857c2b5060f6ee361d07bced52f1957c8205d6700547b1f1ac6bc97"`
+[INFO] [stdout] 74a9ab801857c2b5060f6ee361d07bced52f1957c8205d6700547b1f1ac6bc97

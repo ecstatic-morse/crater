@@ -1,0 +1,89 @@
+[INFO] cloning repository tylerwhall/insomniad-rs
+[INFO] running `"git" "clone" "--bare" "git://github.com/tylerwhall/insomniad-rs.git" "work\\cache\\sources\\gh\\tylerwhall\\insomniad-rs"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\tylerwhall\insomniad-rs'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tylerwhall\\insomniad-rs" "work\\ex\\default\\sources\\stable\\gh\\tylerwhall\\insomniad-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\tylerwhall\insomniad-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tylerwhall\\insomniad-rs" "work\\ex\\default\\sources\\beta\\gh\\tylerwhall\\insomniad-rs"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\tylerwhall\insomniad-rs'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 62cae28b9a4d0b8cf648ce298dfcdacf1f3f1586
+[INFO] sha for GitHub repo tylerwhall/insomniad-rs: 62cae28b9a4d0b8cf648ce298dfcdacf1f3f1586
+[INFO] validating manifest of tylerwhall/insomniad-rs on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tylerwhall/insomniad-rs on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tylerwhall/insomniad-rs
+[INFO] finished frobbing tylerwhall/insomniad-rs
+[INFO] frobbed toml for tylerwhall/insomniad-rs written to work\ex\default\sources\stable\gh\tylerwhall\insomniad-rs\Cargo.toml
+[INFO] started frobbing tylerwhall/insomniad-rs
+[INFO] finished frobbing tylerwhall/insomniad-rs
+[INFO] frobbed toml for tylerwhall/insomniad-rs written to work\ex\default\sources\beta\gh\tylerwhall\insomniad-rs\Cargo.toml
+[INFO] crate tylerwhall/insomniad-rs already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded log v0.3.6
+[INFO] [stderr]   Downloaded getopts v0.2.14
+[INFO] [stderr]   Downloaded env_logger v0.3.5
+[INFO] [stderr]   Downloaded libc v0.2.19
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tylerwhall/insomniad-rs against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\tylerwhall\\insomniad-rs,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] c61a5483890a3ca02640def08f228ab8c46712801d6d9865468db4419a01c094
+[INFO] running `"docker" "start" "-a" "c61a5483890a3ca02640def08f228ab8c46712801d6d9865468db4419a01c094"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling winapi-build v0.1.1
+[INFO] [stderr]    Compiling winapi v0.2.8
+[INFO] [stderr]    Compiling libc v0.2.19
+[INFO] [stderr]    Compiling regex-syntax v0.3.9
+[INFO] [stderr]    Compiling utf8-ranges v0.1.3
+[INFO] [stderr]    Compiling log v0.3.6
+[INFO] [stderr]    Compiling getopts v0.2.14
+[INFO] [stderr] warning[E0503]: cannot use `state` because it was mutably borrowed
+[INFO] [stderr]     --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\getopts-0.2.14\src\lib.rs:1008:33
+[INFO] [stderr]      |
+[INFO] [stderr] 955  |     let mut machine = |cont: &mut bool, (i, c): (usize, char)| {
+[INFO] [stderr]      |                       ---------------------------------------- borrow of `state` occurs here
+[INFO] [stderr] ...
+[INFO] [stderr] 959  |         state = match (state, whitespace, limit) {
+[INFO] [stderr]      |                        ----- borrow occurs due to use of `state` in closure
+[INFO] [stderr] ...
+[INFO] [stderr] 1008 |     while cont && match state { B | C => true, A => false } {
+[INFO] [stderr]      |                                 ^ use of borrowed `state`
+[INFO] [stderr] 1009 |         machine(&mut cont, (fake_i, ' '));
+[INFO] [stderr]      |         ------- borrow later used here
+[INFO] [stderr]      |
+[INFO] [stderr]      = warning: this error has been downgraded to a warning for backwards compatibility with previous releases
+[INFO] [stderr]      = warning: this represents potential undefined behavior in your code and this warning will become a hard error in the future
+[INFO] [stderr]      = note: for more information, try `rustc --explain E0729`
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling memchr v0.1.11
+[INFO] [stderr]    Compiling kernel32-sys v0.2.2
+[INFO] [stderr]    Compiling aho-corasick v0.5.3
+[INFO] [stderr]    Compiling thread-id v2.0.0
+[INFO] [stderr]    Compiling thread_local v0.2.7
+[INFO] [stderr]    Compiling regex v0.1.80
+[INFO] [stderr]    Compiling env_logger v0.3.5
+[INFO] [stderr]    Compiling insomniad v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0425]: cannot find function `clock_gettime` in module `libc`
+[INFO] [stderr]   --> src\time.rs:15:23
+[INFO] [stderr]    |
+[INFO] [stderr] 15 |     if unsafe { libc::clock_gettime(libc::CLOCK_MONOTONIC, &mut ts) } == -1 {
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `CLOCK_MONOTONIC` in module `libc`
+[INFO] [stderr]   --> src\time.rs:15:43
+[INFO] [stderr]    |
+[INFO] [stderr] 15 |     if unsafe { libc::clock_gettime(libc::CLOCK_MONOTONIC, &mut ts) } == -1 {
+[INFO] [stderr]    |                                           ^^^^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `insomniad`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "c61a5483890a3ca02640def08f228ab8c46712801d6d9865468db4419a01c094"`
+[INFO] running `"docker" "rm" "-f" "c61a5483890a3ca02640def08f228ab8c46712801d6d9865468db4419a01c094"`
+[INFO] [stdout] c61a5483890a3ca02640def08f228ab8c46712801d6d9865468db4419a01c094

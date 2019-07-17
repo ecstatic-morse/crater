@@ -1,0 +1,58 @@
+[INFO] cloning repository almendar/levenshtein-rust-mr-tadeusz
+[INFO] running `"git" "clone" "--bare" "git://github.com/almendar/levenshtein-rust-mr-tadeusz.git" "work\\cache\\sources\\gh\\almendar\\levenshtein-rust-mr-tadeusz"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\almendar\levenshtein-rust-mr-tadeusz'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\almendar\\levenshtein-rust-mr-tadeusz" "work\\ex\\default\\sources\\nightly\\gh\\almendar\\levenshtein-rust-mr-tadeusz"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\almendar\levenshtein-rust-mr-tadeusz'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\almendar\\levenshtein-rust-mr-tadeusz" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\almendar\\levenshtein-rust-mr-tadeusz"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\almendar\levenshtein-rust-mr-tadeusz'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 4ace0b84df9692a7f744a453996278304fd8af83
+[INFO] sha for GitHub repo almendar/levenshtein-rust-mr-tadeusz: 4ace0b84df9692a7f744a453996278304fd8af83
+[INFO] validating manifest of almendar/levenshtein-rust-mr-tadeusz on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of almendar/levenshtein-rust-mr-tadeusz on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing almendar/levenshtein-rust-mr-tadeusz
+[INFO] finished frobbing almendar/levenshtein-rust-mr-tadeusz
+[INFO] frobbed toml for almendar/levenshtein-rust-mr-tadeusz written to work\ex\default\sources\nightly\gh\almendar\levenshtein-rust-mr-tadeusz\Cargo.toml
+[INFO] started frobbing almendar/levenshtein-rust-mr-tadeusz
+[INFO] finished frobbing almendar/levenshtein-rust-mr-tadeusz
+[INFO] frobbed toml for almendar/levenshtein-rust-mr-tadeusz written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\almendar\levenshtein-rust-mr-tadeusz\Cargo.toml
+[INFO] crate almendar/levenshtein-rust-mr-tadeusz already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing almendar/levenshtein-rust-mr-tadeusz against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\almendar\\levenshtein-rust-mr-tadeusz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 0485b1feabad58fdbecfb0c8c337a60dee9c514c42a556c3f31e06d60643c1ab
+[INFO] running `"docker" "start" "-a" "0485b1feabad58fdbecfb0c8c337a60dee9c514c42a556c3f31e06d60643c1ab"`
+[INFO] [stderr]    Compiling levenshtein-rust-mr-tadeusz v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.28s
+[INFO] running `"docker" "inspect" "0485b1feabad58fdbecfb0c8c337a60dee9c514c42a556c3f31e06d60643c1ab"`
+[INFO] running `"docker" "rm" "-f" "0485b1feabad58fdbecfb0c8c337a60dee9c514c42a556c3f31e06d60643c1ab"`
+[INFO] [stdout] 0485b1feabad58fdbecfb0c8c337a60dee9c514c42a556c3f31e06d60643c1ab
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\almendar\\levenshtein-rust-mr-tadeusz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 126c1601bdd6268dc35da5fa92178aa82418e64616e91e1dc10a47133671edc6
+[INFO] running `"docker" "start" "-a" "126c1601bdd6268dc35da5fa92178aa82418e64616e91e1dc10a47133671edc6"`
+[INFO] [stderr]    Compiling levenshtein-rust-mr-tadeusz v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.72s
+[INFO] running `"docker" "inspect" "126c1601bdd6268dc35da5fa92178aa82418e64616e91e1dc10a47133671edc6"`
+[INFO] running `"docker" "rm" "-f" "126c1601bdd6268dc35da5fa92178aa82418e64616e91e1dc10a47133671edc6"`
+[INFO] [stdout] 126c1601bdd6268dc35da5fa92178aa82418e64616e91e1dc10a47133671edc6
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\almendar\\levenshtein-rust-mr-tadeusz,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 07e2caeace84d2fa008a2ed0759dd08fc393985108a1df3fa18a7be4326758e5
+[INFO] running `"docker" "start" "-a" "07e2caeace84d2fa008a2ed0759dd08fc393985108a1df3fa18a7be4326758e5"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.24s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\levenshtein_rust_mr_tadeusz-fb1ae3da7fda4622.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test levenshtein::check_matrix ... ok
+[INFO] [stdout] test levenshtein::distance_test ... ok
+[INFO] [stdout] test words::test_splitting_to_words ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "07e2caeace84d2fa008a2ed0759dd08fc393985108a1df3fa18a7be4326758e5"`
+[INFO] running `"docker" "rm" "-f" "07e2caeace84d2fa008a2ed0759dd08fc393985108a1df3fa18a7be4326758e5"`
+[INFO] [stdout] 07e2caeace84d2fa008a2ed0759dd08fc393985108a1df3fa18a7be4326758e5

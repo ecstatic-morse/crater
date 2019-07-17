@@ -1,0 +1,129 @@
+[INFO] crate uuid 0.7.4 is already in cache
+[INFO] extracting crate uuid 0.7.4 into work\ex\default\sources\nightly\reg\uuid\0.7.4
+[INFO] extracting crate uuid 0.7.4 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\uuid\0.7.4
+[INFO] validating manifest of uuid-0.7.4 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of uuid-0.7.4 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing uuid-0.7.4
+[INFO] finished frobbing uuid-0.7.4
+[INFO] frobbed toml for uuid-0.7.4 written to work\ex\default\sources\nightly\reg\uuid\0.7.4\Cargo.toml
+[INFO] started frobbing uuid-0.7.4
+[INFO] finished frobbing uuid-0.7.4
+[INFO] frobbed toml for uuid-0.7.4 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\uuid\0.7.4\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded slog v2.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing uuid-0.7.4 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] b1faa6bebfae4db4ee343612b0a998d72f0352fda58a99fdc9546ce925ea846b
+[INFO] running `"docker" "start" "-a" "b1faa6bebfae4db4ee343612b0a998d72f0352fda58a99fdc9546ce925ea846b"`
+[INFO] [stderr]    Compiling uuid v0.7.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.91s
+[INFO] running `"docker" "inspect" "b1faa6bebfae4db4ee343612b0a998d72f0352fda58a99fdc9546ce925ea846b"`
+[INFO] running `"docker" "rm" "-f" "b1faa6bebfae4db4ee343612b0a998d72f0352fda58a99fdc9546ce925ea846b"`
+[INFO] [stdout] b1faa6bebfae4db4ee343612b0a998d72f0352fda58a99fdc9546ce925ea846b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 67259111bf0279aee771ff2fb5035c11fdc553231d417b42e28892c9e9e5cc99
+[INFO] running `"docker" "start" "-a" "67259111bf0279aee771ff2fb5035c11fdc553231d417b42e28892c9e9e5cc99"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling ryu v1.0.0
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling bincode v1.1.4
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling serde_test v1.0.97
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling uuid v0.7.4 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 01s
+[INFO] running `"docker" "inspect" "67259111bf0279aee771ff2fb5035c11fdc553231d417b42e28892c9e9e5cc99"`
+[INFO] running `"docker" "rm" "-f" "67259111bf0279aee771ff2fb5035c11fdc553231d417b42e28892c9e9e5cc99"`
+[INFO] [stdout] 67259111bf0279aee771ff2fb5035c11fdc553231d417b42e28892c9e9e5cc99
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\uuid\\0.7.4,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] fb10c87cd85389ba08d18d2012fb79ca30dba0605ffc6e0f27779fa390c18a73
+[INFO] running `"docker" "start" "-a" "fb10c87cd85389ba08d18d2012fb79ca30dba0605ffc6e0f27779fa390c18a73"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\uuid-c0f3889110a9d2aa.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 29 tests
+[INFO] [stdout] test core_support::tests::test_uuid_compare ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_default ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_lowerhex ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_display ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_operator_eq ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_to_string ... ok
+[INFO] [stdout] test core_support::tests::test_uuid_upperhex ... ok
+[INFO] [stdout] test tests::test_as_bytes ... ok
+[INFO] [stdout] test tests::test_as_fields ... ok
+[INFO] [stdout] test tests::test_bytes_roundtrip ... ok
+[INFO] [stdout] test tests::test_fields_le_roundtrip ... ok
+[INFO] [stdout] test tests::test_fields_roundtrip ... ok
+[INFO] [stdout] test tests::test_fields_le_are_actually_le ... ok
+[INFO] [stdout] test tests::test_from_bytes ... ok
+[INFO] [stdout] test tests::test_from_fields_le ... ok
+[INFO] [stdout] test tests::test_from_fields ... ok
+[INFO] [stdout] test tests::test_from_random_bytes ... ok
+[INFO] [stdout] test tests::test_from_slice ... ok
+[INFO] [stdout] test tests::test_iterbytes_impl_for_uuid ... ok
+[INFO] [stdout] test tests::test_nil ... ok
+[INFO] [stdout] test tests::test_parse_uuid_v4 ... ok
+[INFO] [stdout] test tests::test_get_variant ... ok
+[INFO] [stdout] test tests::test_string_roundtrip ... ok
+[INFO] [stdout] test tests::test_to_hyphenated_string ... ok
+[INFO] [stdout] test tests::test_to_simple_string ... ok
+[INFO] [stdout] test tests::test_predefined_namespaces ... ok
+[INFO] [stdout] test tests::test_to_urn_string ... ok
+[INFO] [stdout] test tests::test_upper_lower_hex ... ok
+[INFO] [stdout] test tests::test_to_simple_string_matching ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests uuid
+[INFO] [stdout] 
+[INFO] [stdout] running 35 tests
+[INFO] [stdout] test src\adapter\mod.rs - adapter::HyphenatedRef::encode_upper (line 466) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Hyphenated::encode_upper (line 345) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Hyphenated::encode_lower (line 299) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::HyphenatedRef::encode_lower (line 416) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::SimpleRef::encode_lower (line 654) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Simple::encode_lower (line 539) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Simple::encode_upper (line 582) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::SimpleRef::encode_upper (line 697) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::UrnRef::encode_lower (line 894) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Urn::encode_lower (line 770) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::Urn::encode_upper (line 820) ... ok
+[INFO] [stdout] test src\adapter\mod.rs - adapter::UrnRef::encode_upper (line 944) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_bytes (line 67) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::build (line 211) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder (line 25) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_bytes (line 49) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_fields (line 140) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_fields (line 157) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_slice (line 106) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 91) ... ignored
+[INFO] [stdout] test src\builder.rs - builder::Builder::nil (line 180) ... ok
+[INFO] [stdout] test src\builder.rs - builder::Builder::from_slice (line 89) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 79) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::as_fields (line 732) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields (line 434) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::encode_buffer (line 1004) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields (line 450) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_fields_le (line 502) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_slice (line 578) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_slice (line 562) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::from_random_bytes (line 622) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::nil (line 409) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 18) ... ok
+[INFO] [stdout] test src\lib.rs - Uuid::to_fields_le (line 773) ... ok
+[INFO] [stdout] test src\prelude.rs - prelude (line 24) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 34 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fb10c87cd85389ba08d18d2012fb79ca30dba0605ffc6e0f27779fa390c18a73"`
+[INFO] running `"docker" "rm" "-f" "fb10c87cd85389ba08d18d2012fb79ca30dba0605ffc6e0f27779fa390c18a73"`
+[INFO] [stdout] fb10c87cd85389ba08d18d2012fb79ca30dba0605ffc6e0f27779fa390c18a73

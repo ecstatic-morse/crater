@@ -1,0 +1,189 @@
+[INFO] cloning repository approveapi/actix-web-magic-link-auth
+[INFO] running `"git" "clone" "--bare" "git://github.com/approveapi/actix-web-magic-link-auth.git" "work\\cache\\sources\\gh\\approveapi\\actix-web-magic-link-auth"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\approveapi\actix-web-magic-link-auth'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\approveapi\\actix-web-magic-link-auth" "work\\ex\\default\\sources\\stable\\gh\\approveapi\\actix-web-magic-link-auth"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\approveapi\actix-web-magic-link-auth'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\approveapi\\actix-web-magic-link-auth" "work\\ex\\default\\sources\\beta\\gh\\approveapi\\actix-web-magic-link-auth"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\approveapi\actix-web-magic-link-auth'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3d94ca15e992bd4b79d31552ede293316e993aeb
+[INFO] sha for GitHub repo approveapi/actix-web-magic-link-auth: 3d94ca15e992bd4b79d31552ede293316e993aeb
+[INFO] validating manifest of approveapi/actix-web-magic-link-auth on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of approveapi/actix-web-magic-link-auth on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing approveapi/actix-web-magic-link-auth
+[INFO] finished frobbing approveapi/actix-web-magic-link-auth
+[INFO] frobbed toml for approveapi/actix-web-magic-link-auth written to work\ex\default\sources\stable\gh\approveapi\actix-web-magic-link-auth\Cargo.toml
+[INFO] started frobbing approveapi/actix-web-magic-link-auth
+[INFO] finished frobbing approveapi/actix-web-magic-link-auth
+[INFO] frobbed toml for approveapi/actix-web-magic-link-auth written to work\ex\default\sources\beta\gh\approveapi\actix-web-magic-link-auth\Cargo.toml
+[INFO] crate approveapi/actix-web-magic-link-auth already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde v1.0.90
+[INFO] [stderr]   Downloaded handlebars v1.1.0
+[INFO] [stderr]   Downloaded pest_derive v2.1.0
+[INFO] [stderr]   Downloaded pest_meta v2.1.0
+[INFO] [stderr]   Downloaded regex v1.1.5
+[INFO] [stderr]   Downloaded maplit v1.0.1
+[INFO] [stderr]   Downloaded cc v1.0.34
+[INFO] [stderr]   Downloaded pest v2.1.0
+[INFO] [stderr]   Downloaded tokio-threadpool v0.1.13
+[INFO] [stderr]   Downloaded openssl v0.10.20
+[INFO] [stderr]   Downloaded approveapi v1.0.3
+[INFO] [stderr]   Downloaded approveapi_openapi v0.1.9
+[INFO] [stderr]   Downloaded serde_yaml v0.7.5
+[INFO] [stderr]   Downloaded libc v0.2.51
+[INFO] [stderr]   Downloaded pest_generator v2.1.0
+[INFO] [stderr]   Downloaded sha-1 v0.7.0
+[INFO] [stderr]   Downloaded futures v0.1.26
+[INFO] [stderr]   Downloaded base-62 v0.1.1
+[INFO] [stderr]   Downloaded ucd-trie v0.1.1
+[INFO] [stderr]   Downloaded openssl-sys v0.9.43
+[INFO] [stderr]   Downloaded redis-async v0.4.4
+[INFO] [stderr]   Downloaded h2 v0.1.17
+[INFO] [stderr]   Downloaded actix-redis v0.5.1
+[INFO] [stderr]   Downloaded serde_derive v1.0.90
+[INFO] [stderr]   Downloaded syn v0.15.30
+[INFO] [stderr]   Downloaded backtrace v0.3.15
+[INFO] [stderr]   Downloaded backoff v0.1.3
+[INFO] [stderr]   Downloaded tokio v0.1.18
+[INFO] [stderr]   Downloaded tokio-sync v0.1.4
+[INFO] [stderr]   Downloaded tempfile v3.0.7
+[INFO] [stderr]   Downloaded redox_syscall v0.1.52
+[INFO] [stderr]   Downloaded hyper v0.12.25
+[INFO] [stderr]   Downloaded base64 v0.7.0
+[INFO] [stderr]   Downloaded actix-web v0.7.19
+[INFO] [stderr]   Downloaded unicase v2.3.0
+[INFO] [stderr]   Downloaded arc-swap v0.3.8
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing approveapi/actix-web-magic-link-auth against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\approveapi\\actix-web-magic-link-auth,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 21b72487928cb772b4dc184ba09ac451eca982985305d70486000705d764ec93
+[INFO] running `"docker" "start" "-a" "21b72487928cb772b4dc184ba09ac451eca982985305d70486000705d764ec93"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling syn v0.15.30
+[INFO] [stderr]    Compiling cfg-if v0.1.7
+[INFO] [stderr]    Compiling libc v0.2.51
+[INFO] [stderr]    Compiling futures v0.1.26
+[INFO] [stderr]    Compiling rustc-demangle v0.1.13
+[INFO] [stderr]    Compiling ipconfig v0.1.9
+[INFO] [stderr]    Compiling cc v1.0.34
+[INFO] [stderr]    Compiling widestring v0.2.2
+[INFO] [stderr]    Compiling serde v1.0.90
+[INFO] [stderr]    Compiling ucd-trie v0.1.1
+[INFO] [stderr]    Compiling maplit v1.0.1
+[INFO] [stderr]    Compiling regex v1.1.5
+[INFO] [stderr]    Compiling safemem v0.2.0
+[INFO] [stderr]    Compiling num-bigint v0.2.2
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling backtrace v0.3.15
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling unicase v2.3.0
+[INFO] [stderr]    Compiling actix-web v0.7.19
+[INFO] [stderr]    Compiling tokio-trace-core v0.1.0
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling yaml-rust v0.4.3
+[INFO] [stderr]    Compiling humantime v1.2.0
+[INFO] [stderr]    Compiling pest v2.1.0
+[INFO] [stderr]    Compiling tokio-sync v0.1.4
+[INFO] [stderr]    Compiling tower-service v0.1.0
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling ring v0.13.5
+[INFO] [stderr]    Compiling brotli-sys v0.3.2
+[INFO] [stderr]    Compiling miniz-sys v0.1.11
+[INFO] [stderr]    Compiling want v0.0.6
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling tokio-executor v0.1.7
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling pest_meta v2.1.0
+[INFO] [stderr]    Compiling base64 v0.9.3
+[INFO] [stderr]    Compiling base64 v0.7.0
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling tokio-timer v0.2.10
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling rand_jitter v0.1.3
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling winutil v0.1.1
+[INFO] [stderr]    Compiling rand v0.5.6
+[INFO] [stderr]    Compiling winreg v0.5.1
+[INFO] [stderr]    Compiling socket2 v0.3.8
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling flate2 v1.0.7
+[INFO] [stderr]    Compiling h2 v0.1.17
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling error-chain v0.8.1
+[INFO] [stderr]    Compiling hostname v0.1.5
+[INFO] [stderr]    Compiling native-tls v0.2.2
+[INFO] [stderr]    Compiling synstructure v0.10.1
+[INFO] [stderr]    Compiling v_escape_derive v0.5.3
+[INFO] [stderr]    Compiling actix_derive v0.3.2
+[INFO] [stderr]    Compiling serde_derive v1.0.90
+[INFO] [stderr]    Compiling pest_generator v2.1.0
+[INFO] [stderr]    Compiling brotli2 v0.3.2
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling same-file v1.0.4
+[INFO] [stderr]    Compiling cookie v0.11.0
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.13
+[INFO] [stderr]    Compiling phf_generator v0.7.24
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling backoff v0.1.3
+[INFO] [stderr]    Compiling resolv-conf v0.6.2
+[INFO] [stderr]    Compiling mio v0.6.16
+[INFO] [stderr]    Compiling v_escape v0.7.2
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling termcolor v1.0.4
+[INFO] [stderr]    Compiling walkdir v2.2.7
+[INFO] [stderr]    Compiling pest_derive v2.1.0
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling phf_codegen v0.7.24
+[INFO] [stderr]    Compiling tokio-fs v0.1.6
+[INFO] [stderr]    Compiling v_htmlescape v0.4.3
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling env_logger v0.6.1
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.6
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling base-62 v0.1.1
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio-signal v0.2.7
+[INFO] [stderr]    Compiling trust-dns-proto v0.6.3
+[INFO] [stderr]    Compiling tokio v0.1.18
+[INFO] [stderr]    Compiling trust-dns-proto v0.5.0
+[INFO] [stderr]    Compiling redis-async v0.4.4
+[INFO] [stderr] error[E0283]: type annotations required: cannot resolve `std::string::String: std::convert::AsRef<_>`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\redis-async-0.4.4\src\client\pubsub.rs:294:41
+[INFO] [stderr]     |
+[INFO] [stderr] 294 |         self.con.unsubscribe(self.topic.as_ref());
+[INFO] [stderr]     |                                         ^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0283`.
+[INFO] [stderr] error: Could not compile `redis-async`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "21b72487928cb772b4dc184ba09ac451eca982985305d70486000705d764ec93"`
+[INFO] running `"docker" "rm" "-f" "21b72487928cb772b4dc184ba09ac451eca982985305d70486000705d764ec93"`
+[INFO] [stdout] 21b72487928cb772b4dc184ba09ac451eca982985305d70486000705d764ec93

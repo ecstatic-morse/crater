@@ -1,0 +1,57 @@
+[INFO] crate libssh2-sys 0.2.11 is already in cache
+[INFO] extracting crate libssh2-sys 0.2.11 into work\ex\default\sources\stable\reg\libssh2-sys\0.2.11
+[INFO] extracting crate libssh2-sys 0.2.11 into work\ex\default\sources\beta\reg\libssh2-sys\0.2.11
+[INFO] validating manifest of libssh2-sys-0.2.11 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libssh2-sys-0.2.11 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libssh2-sys-0.2.11
+[INFO] finished frobbing libssh2-sys-0.2.11
+[INFO] frobbed toml for libssh2-sys-0.2.11 written to work\ex\default\sources\stable\reg\libssh2-sys\0.2.11\Cargo.toml
+[INFO] started frobbing libssh2-sys-0.2.11
+[INFO] finished frobbing libssh2-sys-0.2.11
+[INFO] frobbed toml for libssh2-sys-0.2.11 written to work\ex\default\sources\beta\reg\libssh2-sys\0.2.11\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libssh2-sys-0.2.11 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libssh2-sys\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 757494d5e9eee68476a99ab6aa2ab897fa384231de90ec11cf79b60efc920405
+[INFO] running `"docker" "start" "-a" "757494d5e9eee68476a99ab6aa2ab897fa384231de90ec11cf79b60efc920405"`
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 48.62s
+[INFO] running `"docker" "inspect" "757494d5e9eee68476a99ab6aa2ab897fa384231de90ec11cf79b60efc920405"`
+[INFO] running `"docker" "rm" "-f" "757494d5e9eee68476a99ab6aa2ab897fa384231de90ec11cf79b60efc920405"`
+[INFO] [stdout] 757494d5e9eee68476a99ab6aa2ab897fa384231de90ec11cf79b60efc920405
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libssh2-sys\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 033870bdea0e23d1d067706228ace38c50661c7f7f4a5370ea9679ea37c9d97e
+[INFO] running `"docker" "start" "-a" "033870bdea0e23d1d067706228ace38c50661c7f7f4a5370ea9679ea37c9d97e"`
+[INFO] [stderr]    Compiling libssh2-sys v0.2.11 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.33s
+[INFO] running `"docker" "inspect" "033870bdea0e23d1d067706228ace38c50661c7f7f4a5370ea9679ea37c9d97e"`
+[INFO] running `"docker" "rm" "-f" "033870bdea0e23d1d067706228ace38c50661c7f7f4a5370ea9679ea37c9d97e"`
+[INFO] [stdout] 033870bdea0e23d1d067706228ace38c50661c7f7f4a5370ea9679ea37c9d97e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libssh2-sys\\0.2.11,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] c308cf6d80df79476f25bf23eecc80474d52405f410e75f4c74f90c4d477aa0d
+[INFO] running `"docker" "start" "-a" "c308cf6d80df79476f25bf23eecc80474d52405f410e75f4c74f90c4d477aa0d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.50s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\libssh2_sys-b85b5b7228ed5c4e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests libssh2_sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c308cf6d80df79476f25bf23eecc80474d52405f410e75f4c74f90c4d477aa0d"`
+[INFO] running `"docker" "rm" "-f" "c308cf6d80df79476f25bf23eecc80474d52405f410e75f4c74f90c4d477aa0d"`
+[INFO] [stdout] c308cf6d80df79476f25bf23eecc80474d52405f410e75f4c74f90c4d477aa0d

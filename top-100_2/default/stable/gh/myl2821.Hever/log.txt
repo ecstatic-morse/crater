@@ -1,0 +1,82 @@
+[INFO] cloning repository myl2821/Hever
+[INFO] running `"git" "clone" "--bare" "git://github.com/myl2821/Hever.git" "work\\cache\\sources\\gh\\myl2821\\Hever"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\myl2821\Hever'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\myl2821\\Hever" "work\\ex\\default\\sources\\stable\\gh\\myl2821\\Hever"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\myl2821\Hever'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\myl2821\\Hever" "work\\ex\\default\\sources\\beta\\gh\\myl2821\\Hever"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\myl2821\Hever'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 7c49949c7000aceb519dcbcc8db7fc587be169b0
+[INFO] sha for GitHub repo myl2821/Hever: 7c49949c7000aceb519dcbcc8db7fc587be169b0
+[INFO] validating manifest of myl2821/Hever on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of myl2821/Hever on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing myl2821/Hever
+[INFO] finished frobbing myl2821/Hever
+[INFO] frobbed toml for myl2821/Hever written to work\ex\default\sources\stable\gh\myl2821\Hever\Cargo.toml
+[INFO] started frobbing myl2821/Hever
+[INFO] finished frobbing myl2821/Hever
+[INFO] frobbed toml for myl2821/Hever written to work\ex\default\sources\beta\gh\myl2821\Hever\Cargo.toml
+[INFO] crate myl2821/Hever already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\myl2821\Hever\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded docopt v0.6.86
+[INFO] [stderr]   Downloaded strsim v0.5.2
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing myl2821/Hever against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\myl2821\\Hever,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] bbb749d47693bb6846aa677939c2d883baca06e95c9d116fd8c66bdcd8f259c7
+[INFO] running `"docker" "start" "-a" "bbb749d47693bb6846aa677939c2d883baca06e95c9d116fd8c66bdcd8f259c7"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling regex-syntax v0.3.9
+[INFO] [stderr]    Compiling utf8-ranges v0.1.3
+[INFO] [stderr]    Compiling strsim v0.5.2
+[INFO] [stderr]    Compiling lazy_static v0.2.11
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling bufstream v0.1.4
+[INFO] [stderr]    Compiling memchr v0.1.11
+[INFO] [stderr]    Compiling thread-id v2.0.0
+[INFO] [stderr]    Compiling aho-corasick v0.5.3
+[INFO] [stderr]    Compiling thread_local v0.2.7
+[INFO] [stderr]    Compiling regex v0.1.80
+[INFO] [stderr]    Compiling docopt v0.6.86
+[INFO] [stderr]    Compiling hever v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 07s
+[INFO] running `"docker" "inspect" "bbb749d47693bb6846aa677939c2d883baca06e95c9d116fd8c66bdcd8f259c7"`
+[INFO] running `"docker" "rm" "-f" "bbb749d47693bb6846aa677939c2d883baca06e95c9d116fd8c66bdcd8f259c7"`
+[INFO] [stdout] bbb749d47693bb6846aa677939c2d883baca06e95c9d116fd8c66bdcd8f259c7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\myl2821\\Hever,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5828347246bf872e27b4732bdd94048114f1f941ca92e84c5ab4c821fd1154b3
+[INFO] running `"docker" "start" "-a" "5828347246bf872e27b4732bdd94048114f1f941ca92e84c5ab4c821fd1154b3"`
+[INFO] [stderr]    Compiling hever v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.37s
+[INFO] running `"docker" "inspect" "5828347246bf872e27b4732bdd94048114f1f941ca92e84c5ab4c821fd1154b3"`
+[INFO] running `"docker" "rm" "-f" "5828347246bf872e27b4732bdd94048114f1f941ca92e84c5ab4c821fd1154b3"`
+[INFO] [stdout] 5828347246bf872e27b4732bdd94048114f1f941ca92e84c5ab4c821fd1154b3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\myl2821\\Hever,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] c262652ca921f79125d8fa04c2b60da46644132b0d9a796a64533912ecb81602
+[INFO] running `"docker" "start" "-a" "c262652ca921f79125d8fa04c2b60da46644132b0d9a796a64533912ecb81602"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.44s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hever-b2792e9c5f293852.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test parse_uri::test_parse ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c262652ca921f79125d8fa04c2b60da46644132b0d9a796a64533912ecb81602"`
+[INFO] running `"docker" "rm" "-f" "c262652ca921f79125d8fa04c2b60da46644132b0d9a796a64533912ecb81602"`
+[INFO] [stdout] c262652ca921f79125d8fa04c2b60da46644132b0d9a796a64533912ecb81602

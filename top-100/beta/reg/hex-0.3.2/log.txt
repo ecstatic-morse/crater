@@ -1,0 +1,108 @@
+[INFO] fetching crate hex 0.3.2...
+[INFO] extracting crate hex 0.3.2 into work\ex\default\sources\stable\reg\hex\0.3.2
+[INFO] extracting crate hex 0.3.2 into work\ex\default\sources\beta\reg\hex\0.3.2
+[INFO] validating manifest of hex-0.3.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of hex-0.3.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing hex-0.3.2
+[INFO] finished frobbing hex-0.3.2
+[INFO] frobbed toml for hex-0.3.2 written to work\ex\default\sources\stable\reg\hex\0.3.2\Cargo.toml
+[INFO] started frobbing hex-0.3.2
+[INFO] finished frobbing hex-0.3.2
+[INFO] frobbed toml for hex-0.3.2 written to work\ex\default\sources\beta\reg\hex\0.3.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing hex-0.3.2 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 9261568e4076b66fd306206596589ffe19ac793b73015daa7f1223c945b48484
+[INFO] running `"docker" "start" "-a" "9261568e4076b66fd306206596589ffe19ac793b73015daa7f1223c945b48484"`
+[INFO] [stderr]    Compiling hex v0.3.2 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:159:13
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |         b'A'...b'F' => Ok(c - b'A' + 10),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:160:13
+[INFO] [stderr]     |
+[INFO] [stderr] 160 |         b'a'...b'f' => Ok(c - b'a' + 10),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:161:13
+[INFO] [stderr]     |
+[INFO] [stderr] 161 |         b'0'...b'9' => Ok(c - b'0'),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.28s
+[INFO] running `"docker" "inspect" "9261568e4076b66fd306206596589ffe19ac793b73015daa7f1223c945b48484"`
+[INFO] running `"docker" "rm" "-f" "9261568e4076b66fd306206596589ffe19ac793b73015daa7f1223c945b48484"`
+[INFO] [stdout] 9261568e4076b66fd306206596589ffe19ac793b73015daa7f1223c945b48484
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 9d18d23c0c1636767b2f75ef3fe0e3ca8ed126677657266c86ab34ea454c9413
+[INFO] running `"docker" "start" "-a" "9d18d23c0c1636767b2f75ef3fe0e3ca8ed126677657266c86ab34ea454c9413"`
+[INFO] [stderr]    Compiling hex v0.3.2 (C:\crater\workdir)
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:159:13
+[INFO] [stderr]     |
+[INFO] [stderr] 159 |         b'A'...b'F' => Ok(c - b'A' + 10),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(ellipsis_inclusive_range_patterns)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:160:13
+[INFO] [stderr]     |
+[INFO] [stderr] 160 |         b'a'...b'f' => Ok(c - b'a' + 10),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] warning: `...` range patterns are deprecated
+[INFO] [stderr]    --> src\lib.rs:161:13
+[INFO] [stderr]     |
+[INFO] [stderr] 161 |         b'0'...b'9' => Ok(c - b'0'),
+[INFO] [stderr]     |             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.75s
+[INFO] running `"docker" "inspect" "9d18d23c0c1636767b2f75ef3fe0e3ca8ed126677657266c86ab34ea454c9413"`
+[INFO] running `"docker" "rm" "-f" "9d18d23c0c1636767b2f75ef3fe0e3ca8ed126677657266c86ab34ea454c9413"`
+[INFO] [stdout] 9d18d23c0c1636767b2f75ef3fe0e3ca8ed126677657266c86ab34ea454c9413
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\hex\\0.3.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] d65df26ff4e676e8ee5917babaffd7f9a3861d6d1cdcaea36a6c114709f162ca
+[INFO] running `"docker" "start" "-a" "d65df26ff4e676e8ee5917babaffd7f9a3861d6d1cdcaea36a6c114709f162ca"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hex-6c370fb0d9c5f15a.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test test::test_decode ... ok
+[INFO] [stdout] test test::test_empty ... ok
+[INFO] [stdout] test test::test_encode ... ok
+[INFO] [stdout] test test::test_from_hex_array ... ok
+[INFO] [stdout] test test::test_from_hex_okay_bytes ... ok
+[INFO] [stdout] test test::test_from_hex_okay_str ... ok
+[INFO] [stdout] test test::test_from_hex_whitespace ... ok
+[INFO] [stdout] test test::test_invalid_char ... ok
+[INFO] [stdout] test test::test_invalid_length ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests hex
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test src\lib.rs -  (line 19) ... ok
+[INFO] [stdout] test src\lib.rs - ToHex (line 38) ... ok
+[INFO] [stdout] test src\lib.rs - FromHex (line 132) ... ok
+[INFO] [stdout] test src\lib.rs - decode (line 283) ... ok
+[INFO] [stdout] test src\lib.rs - encode (line 247) ... ok
+[INFO] [stdout] test src\lib.rs - encode_upper (line 265) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d65df26ff4e676e8ee5917babaffd7f9a3861d6d1cdcaea36a6c114709f162ca"`
+[INFO] running `"docker" "rm" "-f" "d65df26ff4e676e8ee5917babaffd7f9a3861d6d1cdcaea36a6c114709f162ca"`
+[INFO] [stdout] d65df26ff4e676e8ee5917babaffd7f9a3861d6d1cdcaea36a6c114709f162ca

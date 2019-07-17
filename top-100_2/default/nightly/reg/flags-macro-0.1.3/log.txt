@@ -1,0 +1,74 @@
+[INFO] fetching crate flags-macro 0.1.3...
+[INFO] extracting crate flags-macro 0.1.3 into work\ex\default\sources\nightly\reg\flags-macro\0.1.3
+[INFO] extracting crate flags-macro 0.1.3 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\flags-macro\0.1.3
+[INFO] validating manifest of flags-macro-0.1.3 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of flags-macro-0.1.3 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing flags-macro-0.1.3
+[INFO] finished frobbing flags-macro-0.1.3
+[INFO] frobbed toml for flags-macro-0.1.3 written to work\ex\default\sources\nightly\reg\flags-macro\0.1.3\Cargo.toml
+[INFO] started frobbing flags-macro-0.1.3
+[INFO] finished frobbing flags-macro-0.1.3
+[INFO] frobbed toml for flags-macro-0.1.3 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\flags-macro\0.1.3\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded enumflags_derive v0.4.1
+[INFO] [stderr]   Downloaded enumflags v0.4.2
+[INFO] [stderr]   Downloaded syn v0.12.15
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing flags-macro-0.1.3 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\flags-macro\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 75102d0847853dec52b2dcc42881753d4ee7a41023382db7a8c8d02b4940b32b
+[INFO] running `"docker" "start" "-a" "75102d0847853dec52b2dcc42881753d4ee7a41023382db7a8c8d02b4940b32b"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling flags-macro v0.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.72s
+[INFO] running `"docker" "inspect" "75102d0847853dec52b2dcc42881753d4ee7a41023382db7a8c8d02b4940b32b"`
+[INFO] running `"docker" "rm" "-f" "75102d0847853dec52b2dcc42881753d4ee7a41023382db7a8c8d02b4940b32b"`
+[INFO] [stdout] 75102d0847853dec52b2dcc42881753d4ee7a41023382db7a8c8d02b4940b32b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\flags-macro\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 1961b7339e161b0d934baa6a7152b696b048edc4d7b47c80f10617f913c88d0f
+[INFO] running `"docker" "start" "-a" "1961b7339e161b0d934baa6a7152b696b048edc4d7b47c80f10617f913c88d0f"`
+[INFO] [stderr]    Compiling enumflags v0.4.2
+[INFO] [stderr]    Compiling proc-macro2 v0.2.3
+[INFO] [stderr]    Compiling quote v0.4.2
+[INFO] [stderr]    Compiling syn v0.12.15
+[INFO] [stderr]    Compiling enumflags_derive v0.4.1
+[INFO] [stderr]    Compiling flags-macro v0.1.3 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 45.83s
+[INFO] running `"docker" "inspect" "1961b7339e161b0d934baa6a7152b696b048edc4d7b47c80f10617f913c88d0f"`
+[INFO] running `"docker" "rm" "-f" "1961b7339e161b0d934baa6a7152b696b048edc4d7b47c80f10617f913c88d0f"`
+[INFO] [stdout] 1961b7339e161b0d934baa6a7152b696b048edc4d7b47c80f10617f913c88d0f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\flags-macro\\0.1.3,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c0b56cfc91bc808cd370ba0614234f32484fc4afce52b94798dc7bb51fdf3569
+[INFO] running `"docker" "start" "-a" "c0b56cfc91bc808cd370ba0614234f32484fc4afce52b94798dc7bb51fdf3569"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\flags_macro-2992bddb445141d9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::trailing_separators ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-0b897f46b3de6786.exe
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests flags-macro
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test deeper_path ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test src\lib.rs -  (line 12) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 36) ... ok
+[INFO] [stdout] test src\lib.rs - set_array (line 132) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c0b56cfc91bc808cd370ba0614234f32484fc4afce52b94798dc7bb51fdf3569"`
+[INFO] running `"docker" "rm" "-f" "c0b56cfc91bc808cd370ba0614234f32484fc4afce52b94798dc7bb51fdf3569"`
+[INFO] [stdout] c0b56cfc91bc808cd370ba0614234f32484fc4afce52b94798dc7bb51fdf3569

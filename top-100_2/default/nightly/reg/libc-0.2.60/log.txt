@@ -1,0 +1,53 @@
+[INFO] crate libc 0.2.60 is already in cache
+[INFO] extracting crate libc 0.2.60 into work\ex\default\sources\nightly\reg\libc\0.2.60
+[INFO] extracting crate libc 0.2.60 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\libc\0.2.60
+[INFO] validating manifest of libc-0.2.60 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libc-0.2.60 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libc-0.2.60
+[INFO] finished frobbing libc-0.2.60
+[INFO] frobbed toml for libc-0.2.60 written to work\ex\default\sources\nightly\reg\libc\0.2.60\Cargo.toml
+[INFO] started frobbing libc-0.2.60
+[INFO] finished frobbing libc-0.2.60
+[INFO] frobbed toml for libc-0.2.60 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\libc\0.2.60\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libc-0.2.60 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\libc\\0.2.60,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2e2f95477118d6b885c6685566e78b533446789578ce794f7e9e9bd7d66523a9
+[INFO] running `"docker" "start" "-a" "2e2f95477118d6b885c6685566e78b533446789578ce794f7e9e9bd7d66523a9"`
+[INFO] [stderr]    Compiling libc v0.2.60 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.64s
+[INFO] running `"docker" "inspect" "2e2f95477118d6b885c6685566e78b533446789578ce794f7e9e9bd7d66523a9"`
+[INFO] running `"docker" "rm" "-f" "2e2f95477118d6b885c6685566e78b533446789578ce794f7e9e9bd7d66523a9"`
+[INFO] [stdout] 2e2f95477118d6b885c6685566e78b533446789578ce794f7e9e9bd7d66523a9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\libc\\0.2.60,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f847f3bb5f61885408d7e0fae40e601d93fc6cf5879578626cb79402e39d1f2a
+[INFO] running `"docker" "start" "-a" "f847f3bb5f61885408d7e0fae40e601d93fc6cf5879578626cb79402e39d1f2a"`
+[INFO] [stderr]    Compiling libc v0.2.60 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.78s
+[INFO] running `"docker" "inspect" "f847f3bb5f61885408d7e0fae40e601d93fc6cf5879578626cb79402e39d1f2a"`
+[INFO] running `"docker" "rm" "-f" "f847f3bb5f61885408d7e0fae40e601d93fc6cf5879578626cb79402e39d1f2a"`
+[INFO] [stdout] f847f3bb5f61885408d7e0fae40e601d93fc6cf5879578626cb79402e39d1f2a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\libc\\0.2.60,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 51707edee51c48bf1e94a897ea641dc2da25e46dcdd853a7aa569803ba61d9be
+[INFO] running `"docker" "start" "-a" "51707edee51c48bf1e94a897ea641dc2da25e46dcdd853a7aa569803ba61d9be"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\libc-261f5b53cc5403de.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests libc
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "51707edee51c48bf1e94a897ea641dc2da25e46dcdd853a7aa569803ba61d9be"`
+[INFO] running `"docker" "rm" "-f" "51707edee51c48bf1e94a897ea641dc2da25e46dcdd853a7aa569803ba61d9be"`
+[INFO] [stdout] 51707edee51c48bf1e94a897ea641dc2da25e46dcdd853a7aa569803ba61d9be

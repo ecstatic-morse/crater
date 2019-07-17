@@ -1,0 +1,105 @@
+[INFO] fetching crate nix 0.13.1...
+[INFO] extracting crate nix 0.13.1 into work\ex\default\sources\stable\reg\nix\0.13.1
+[INFO] extracting crate nix 0.13.1 into work\ex\default\sources\beta\reg\nix\0.13.1
+[INFO] validating manifest of nix-0.13.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of nix-0.13.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing nix-0.13.1
+[INFO] removed 0 missing tests
+[INFO] finished frobbing nix-0.13.1
+[INFO] frobbed toml for nix-0.13.1 written to work\ex\default\sources\stable\reg\nix\0.13.1\Cargo.toml
+[INFO] started frobbing nix-0.13.1
+[INFO] removed 0 missing tests
+[INFO] finished frobbing nix-0.13.1
+[INFO] frobbed toml for nix-0.13.1 written to work\ex\default\sources\beta\reg\nix\0.13.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded sysctl v0.1.4
+[INFO] [stderr]   Downloaded errno v0.2.4
+[INFO] [stderr]   Downloaded errno-dragonfly v0.1.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] building nix-0.13.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\nix\\0.13.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f747adf35291fb6f4855613204f52c7d4aeb4ea02fe62e67d4ba10f336c0d34c
+[INFO] running `"docker" "start" "-a" "f747adf35291fb6f4855613204f52c7d4aeb4ea02fe62e67d4ba10f336c0d34c"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling nix v0.13.1 (C:\crater\workdir)
+[INFO] [stderr]    Compiling void v1.0.2
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.69s
+[INFO] running `"docker" "inspect" "f747adf35291fb6f4855613204f52c7d4aeb4ea02fe62e67d4ba10f336c0d34c"`
+[INFO] running `"docker" "rm" "-f" "f747adf35291fb6f4855613204f52c7d4aeb4ea02fe62e67d4ba10f336c0d34c"`
+[INFO] [stdout] f747adf35291fb6f4855613204f52c7d4aeb4ea02fe62e67d4ba10f336c0d34c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\nix\\0.13.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6bfb4f49d5279250d8f54592016408af6e3ad46b4956b7d2cf0d299c381ff824
+[INFO] running `"docker" "start" "-a" "6bfb4f49d5279250d8f54592016408af6e3ad46b4956b7d2cf0d299c381ff824"`
+[INFO] [stderr]    Compiling getrandom v0.1.6
+[INFO] [stderr]    Compiling ppv-lite86 v0.2.5
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling iovec v0.1.2
+[INFO] [stderr]    Compiling rand_core v0.5.0
+[INFO] [stderr]    Compiling c2-chacha v0.2.2
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling rand v0.7.0
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.5.6
+[INFO] [stderr]    Compiling tempfile v3.1.0
+[INFO] [stderr]    Compiling nix v0.13.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `nix::fcntl`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:3:10
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | use nix::fcntl::OFlag;
+[INFO] [stderr]   |          ^^^^^ could not find `fcntl` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `nix::pty`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:4:10
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use nix::pty::*;
+[INFO] [stderr]   |          ^^^ could not find `pty` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: could not find `unix` in `os`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:6:14
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | use std::os::unix::io::AsRawFd;
+[INFO] [stderr]   |              ^^^^ could not find `unix` in `os`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `nix::unistd`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:5:10
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use nix::unistd::close;
+[INFO] [stderr]   |          ^^^^^^ could not find `unistd` in `nix`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `posix_openpt` in this scope
+[INFO] [stderr]   --> test/test_ptymaster_drop.rs:18:13
+[INFO] [stderr]    |
+[INFO] [stderr] 18 |     let m = posix_openpt(OFlag::O_RDWR).unwrap();
+[INFO] [stderr]    |             ^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused import: `nix::pty::*`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:4:5
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use nix::pty::*;
+[INFO] [stderr]   |     ^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused import: `std::os::unix::io::AsRawFd`
+[INFO] [stderr]  --> test/test_ptymaster_drop.rs:6:5
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | use std::os::unix::io::AsRawFd;
+[INFO] [stderr]   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 5 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `nix`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "6bfb4f49d5279250d8f54592016408af6e3ad46b4956b7d2cf0d299c381ff824"`
+[INFO] running `"docker" "rm" "-f" "6bfb4f49d5279250d8f54592016408af6e3ad46b4956b7d2cf0d299c381ff824"`
+[INFO] [stdout] 6bfb4f49d5279250d8f54592016408af6e3ad46b4956b7d2cf0d299c381ff824

@@ -1,0 +1,47 @@
+[INFO] fetching crate mbedcrypto-sys 0.0.0...
+[INFO] extracting crate mbedcrypto-sys 0.0.0 into work\ex\default\sources\stable\reg\mbedcrypto-sys\0.0.0
+[INFO] extracting crate mbedcrypto-sys 0.0.0 into work\ex\default\sources\beta\reg\mbedcrypto-sys\0.0.0
+[INFO] validating manifest of mbedcrypto-sys-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mbedcrypto-sys-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mbedcrypto-sys-0.0.0
+[INFO] finished frobbing mbedcrypto-sys-0.0.0
+[INFO] frobbed toml for mbedcrypto-sys-0.0.0 written to work\ex\default\sources\stable\reg\mbedcrypto-sys\0.0.0\Cargo.toml
+[INFO] started frobbing mbedcrypto-sys-0.0.0
+[INFO] finished frobbing mbedcrypto-sys-0.0.0
+[INFO] frobbed toml for mbedcrypto-sys-0.0.0 written to work\ex\default\sources\beta\reg\mbedcrypto-sys\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mbedcrypto-sys-0.0.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mbedcrypto-sys\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0ebc76af528c35d4591cc47d5ef82df1b6772fd02019d1c3d18220025d08c62c
+[INFO] running `"docker" "start" "-a" "0ebc76af528c35d4591cc47d5ef82df1b6772fd02019d1c3d18220025d08c62c"`
+[INFO] [stderr]    Compiling mbedcrypto-sys v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.89s
+[INFO] running `"docker" "inspect" "0ebc76af528c35d4591cc47d5ef82df1b6772fd02019d1c3d18220025d08c62c"`
+[INFO] running `"docker" "rm" "-f" "0ebc76af528c35d4591cc47d5ef82df1b6772fd02019d1c3d18220025d08c62c"`
+[INFO] [stdout] 0ebc76af528c35d4591cc47d5ef82df1b6772fd02019d1c3d18220025d08c62c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mbedcrypto-sys\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c35ed0b3f3cd1e2e0a2428ffb7f246c644a25ead2c6a1147fcd53b468fa88df3
+[INFO] running `"docker" "start" "-a" "c35ed0b3f3cd1e2e0a2428ffb7f246c644a25ead2c6a1147fcd53b468fa88df3"`
+[INFO] [stderr]    Compiling mbedcrypto-sys v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.47s
+[INFO] running `"docker" "inspect" "c35ed0b3f3cd1e2e0a2428ffb7f246c644a25ead2c6a1147fcd53b468fa88df3"`
+[INFO] running `"docker" "rm" "-f" "c35ed0b3f3cd1e2e0a2428ffb7f246c644a25ead2c6a1147fcd53b468fa88df3"`
+[INFO] [stdout] c35ed0b3f3cd1e2e0a2428ffb7f246c644a25ead2c6a1147fcd53b468fa88df3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\mbedcrypto-sys\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] abcce92e329d88a67202c37ec3f7ef392db7247e59b79e1486ed93810c7d160b
+[INFO] running `"docker" "start" "-a" "abcce92e329d88a67202c37ec3f7ef392db7247e59b79e1486ed93810c7d160b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mbedcrypto_sys-56064a6485e64ae1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "abcce92e329d88a67202c37ec3f7ef392db7247e59b79e1486ed93810c7d160b"`
+[INFO] running `"docker" "rm" "-f" "abcce92e329d88a67202c37ec3f7ef392db7247e59b79e1486ed93810c7d160b"`
+[INFO] [stdout] abcce92e329d88a67202c37ec3f7ef392db7247e59b79e1486ed93810c7d160b

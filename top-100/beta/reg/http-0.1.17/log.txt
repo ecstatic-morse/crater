@@ -1,0 +1,118 @@
+[INFO] fetching crate http 0.1.17...
+[INFO] extracting crate http 0.1.17 into work\ex\default\sources\stable\reg\http\0.1.17
+[INFO] extracting crate http 0.1.17 into work\ex\default\sources\beta\reg\http\0.1.17
+[INFO] validating manifest of http-0.1.17 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of http-0.1.17 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing http-0.1.17
+[INFO] finished frobbing http-0.1.17
+[INFO] frobbed toml for http-0.1.17 written to work\ex\default\sources\stable\reg\http\0.1.17\Cargo.toml
+[INFO] started frobbing http-0.1.17
+[INFO] finished frobbing http-0.1.17
+[INFO] frobbed toml for http-0.1.17 written to work\ex\default\sources\beta\reg\http\0.1.17\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded seahash v3.0.6
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing http-0.1.17 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\http\\0.1.17,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 55ea51b6759c66b852778a20598a0ec9617ee46f64845a9d8e51c052a2cc6d08
+[INFO] running `"docker" "start" "-a" "55ea51b6759c66b852778a20598a0ec9617ee46f64845a9d8e51c052a2cc6d08"`
+[INFO] [stderr]    Compiling http v0.1.17 (C:\crater\workdir)
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\uri\path.rs:68:25
+[INFO] [stderr]    |
+[INFO] [stderr] 68 |                     0x24...0x3B |
+[INFO] [stderr]    |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:160:9
+[INFO] [stderr]    |
+[INFO] [stderr] 160| #![deny(warnings, missing_docs, missing_debug_implementations)]
+[INFO] [stderr]    |         ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(ellipsis_inclusive_range_patterns)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\uri\path.rs:70:25
+[INFO] [stderr]    |
+[INFO] [stderr] 70 |                     0x40...0x5F |
+[INFO] [stderr]    |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\uri\path.rs:71:25
+[INFO] [stderr]    |
+[INFO] [stderr] 71 |                     0x61...0x7A |
+[INFO] [stderr]    |                         ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\uri\path.rs:89:29
+[INFO] [stderr]    |
+[INFO] [stderr] 89 |                         0x24...0x3B |
+[INFO] [stderr]    |                             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: `...` range patterns are deprecated
+[INFO] [stderr]   --> src\uri\path.rs:91:29
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |                         0x3F...0x7E => {},
+[INFO] [stderr]    |                             ^^^ help: use `..=` for an inclusive range
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error.rs:50:32
+[INFO] [stderr]    |
+[INFO] [stderr] 50 |     pub fn get_ref(&self) -> &(error::Error + 'static) {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error + 'static`
+[INFO] [stderr]    |
+[INFO] [stderr] note: lint level defined here
+[INFO] [stderr]   --> src\lib.rs:160:9
+[INFO] [stderr]    |
+[INFO] [stderr] 160| #![deny(warnings, missing_docs, missing_debug_implementations)]
+[INFO] [stderr]    |         ^^^^^^^^
+[INFO] [stderr]    = note: #[deny(bare_trait_objects)] implied by #[deny(warnings)]
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\error.rs:87:32
+[INFO] [stderr]    |
+[INFO] [stderr] 87 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]    |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]  --> src\extensions.rs:6:35
+[INFO] [stderr]   |
+[INFO] [stderr] 6 | type AnyMap = HashMap<TypeId, Box<Any + Send + Sync>, BuildHasherDefault<IdHasher>>;
+[INFO] [stderr]   |                                   ^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn Any + Send + Sync`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\extensions.rs:73:31
+[INFO] [stderr]    |
+[INFO] [stderr] 73 |                 (boxed as Box<Any + 'static>)
+[INFO] [stderr]    |                               ^^^^^^^^^^^^^ help: use `dyn`: `dyn Any + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\extensions.rs:98:46
+[INFO] [stderr]    |
+[INFO] [stderr] 98 |             .and_then(|boxed| (&**boxed as &(Any + 'static)).downcast_ref())
+[INFO] [stderr]    |                                              ^^^^^^^^^^^^^ help: use `dyn`: `dyn Any + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\extensions.rs:119:54
+[INFO] [stderr]     |
+[INFO] [stderr] 119 |             .and_then(|boxed| (&mut **boxed as &mut (Any + 'static)).downcast_mut())
+[INFO] [stderr]     |                                                      ^^^^^^^^^^^^^ help: use `dyn`: `dyn Any + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\extensions.rs:143:31
+[INFO] [stderr]     |
+[INFO] [stderr] 143 |                 (boxed as Box<Any + 'static>)
+[INFO] [stderr]     |                               ^^^^^^^^^^^^^ help: use `dyn`: `dyn Any + 'static`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 12 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] error: Could not compile `http`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "55ea51b6759c66b852778a20598a0ec9617ee46f64845a9d8e51c052a2cc6d08"`
+[INFO] running `"docker" "rm" "-f" "55ea51b6759c66b852778a20598a0ec9617ee46f64845a9d8e51c052a2cc6d08"`
+[INFO] [stdout] 55ea51b6759c66b852778a20598a0ec9617ee46f64845a9d8e51c052a2cc6d08

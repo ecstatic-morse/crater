@@ -1,0 +1,211 @@
+[INFO] cloning repository elomatreb/actix-web-bug-demo
+[INFO] running `"git" "clone" "--bare" "git://github.com/elomatreb/actix-web-bug-demo.git" "work\\cache\\sources\\gh\\elomatreb\\actix-web-bug-demo"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\elomatreb\actix-web-bug-demo'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\elomatreb\\actix-web-bug-demo" "work\\ex\\default\\sources\\stable\\gh\\elomatreb\\actix-web-bug-demo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\elomatreb\actix-web-bug-demo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\elomatreb\\actix-web-bug-demo" "work\\ex\\default\\sources\\beta\\gh\\elomatreb\\actix-web-bug-demo"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\elomatreb\actix-web-bug-demo'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] eddf73e70c33acc573276a2174d32ba394257430
+[INFO] sha for GitHub repo elomatreb/actix-web-bug-demo: eddf73e70c33acc573276a2174d32ba394257430
+[INFO] validating manifest of elomatreb/actix-web-bug-demo on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of elomatreb/actix-web-bug-demo on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing elomatreb/actix-web-bug-demo
+[INFO] finished frobbing elomatreb/actix-web-bug-demo
+[INFO] frobbed toml for elomatreb/actix-web-bug-demo written to work\ex\default\sources\stable\gh\elomatreb\actix-web-bug-demo\Cargo.toml
+[INFO] started frobbing elomatreb/actix-web-bug-demo
+[INFO] finished frobbing elomatreb/actix-web-bug-demo
+[INFO] frobbed toml for elomatreb/actix-web-bug-demo written to work\ex\default\sources\beta\gh\elomatreb\actix-web-bug-demo\Cargo.toml
+[INFO] crate elomatreb/actix-web-bug-demo already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded actix-codec v0.1.2
+[INFO] [stderr]   Downloaded actix-threadpool v0.1.0
+[INFO] [stderr]   Downloaded actix-connect v0.2.0
+[INFO] [stderr]   Downloaded actix-web v1.0.0-rc
+[INFO] [stderr]   Downloaded actix-server v0.5.1
+[INFO] [stderr]   Downloaded arc-swap v0.3.11
+[INFO] [stderr]   Downloaded parking_lot_core v0.5.0
+[INFO] [stderr]   Downloaded scopeguard v1.0.0
+[INFO] [stderr]   Downloaded derive_more v0.14.1
+[INFO] [stderr]   Downloaded actix-service v0.4.0
+[INFO] [stderr]   Downloaded trust-dns-resolver v0.11.1
+[INFO] [stderr]   Downloaded awc v0.2.0
+[INFO] [stderr]   Downloaded trust-dns-proto v0.7.4
+[INFO] [stderr]   Downloaded enum-as-inner v0.2.1
+[INFO] [stderr]   Downloaded hashbrown v0.3.1
+[INFO] [stderr]   Downloaded lock_api v0.2.0
+[INFO] [stderr]   Downloaded ipconfig v0.2.0
+[INFO] [stderr]   Downloaded winreg v0.6.0
+[INFO] [stderr]   Downloaded widestring v0.4.0
+[INFO] [stderr]   Downloaded actix-http v0.2.2
+[INFO] [stderr]   Downloaded copyless v0.1.3
+[INFO] [stderr]   Downloaded h2 v0.1.21
+[INFO] [stderr]   Downloaded actix-utils v0.4.1
+[INFO] [stderr]   Downloaded signal-hook-registry v1.0.1
+[INFO] [stderr]   Downloaded actix-web-codegen v0.1.0
+[INFO] [stderr]   Downloaded actix-rt v0.2.2
+[INFO] [stderr]   Downloaded v_htmlescape v0.4.3
+[INFO] [stderr]   Downloaded v_escape v0.7.2
+[INFO] [stderr]   Downloaded actix-server-config v0.1.1
+[INFO] [stderr]   Downloaded actix-files v0.1.0
+[INFO] [stderr]   Downloaded v_escape_derive v0.5.3
+[INFO] [stderr]   Downloaded parking_lot v0.8.0
+[INFO] [stderr]   Downloaded signal-hook v0.1.9
+[INFO] [stderr]   Downloaded actix-router v0.1.5
+[INFO] [stderr]   Downloaded string v0.2.0
+[INFO] [stderr]   Downloaded libc v0.2.57
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing elomatreb/actix-web-bug-demo against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\elomatreb\\actix-web-bug-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 9544fc05cb38d8061af185f160bee22f36bef32d149a29a7319e58f1a63fc45b
+[INFO] running `"docker" "start" "-a" "9544fc05cb38d8061af185f160bee22f36bef32d149a29a7319e58f1a63fc45b"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling autocfg v0.1.4
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling syn v0.15.34
+[INFO] [stderr]    Compiling libc v0.2.57
+[INFO] [stderr]    Compiling smallvec v0.6.9
+[INFO] [stderr]    Compiling futures v0.1.27
+[INFO] [stderr]    Compiling encoding_index_tests v0.1.4
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling memchr v2.2.0
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling ipconfig v0.2.0
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling ryu v0.2.8
+[INFO] [stderr]    Compiling widestring v0.4.0
+[INFO] [stderr]    Compiling serde v1.0.91
+[INFO] [stderr]    Compiling quick-error v1.2.2
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling regex v1.1.6
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling itoa v0.4.4
+[INFO] [stderr]    Compiling utf8-ranges v1.0.2
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling sha1 v0.6.0
+[INFO] [stderr]    Compiling hashbrown v0.3.1
+[INFO] [stderr]    Compiling copyless v0.1.3
+[INFO] [stderr]    Compiling scopeguard v1.0.0
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling backtrace v0.3.26
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling encoding-index-korean v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-simpchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-tradchinese v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-singlebyte v1.20141219.5
+[INFO] [stderr]    Compiling encoding-index-japanese v1.20141219.5
+[INFO] [stderr]    Compiling nom v4.2.3
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling v_escape v0.7.2
+[INFO] [stderr]    Compiling backtrace-sys v0.1.28
+[INFO] [stderr]    Compiling brotli-sys v0.3.2
+[INFO] [stderr]    Compiling miniz-sys v0.1.12
+[INFO] [stderr]    Compiling ring v0.14.6
+[INFO] [stderr]    Compiling lru-cache v0.1.2
+[INFO] [stderr]    Compiling tokio-sync v0.1.5
+[INFO] [stderr]    Compiling actix-service v0.4.0
+[INFO] [stderr]    Compiling regex-syntax v0.6.6
+[INFO] [stderr]    Compiling lock_api v0.2.0
+[INFO] [stderr]    Compiling tokio-executor v0.1.7
+[INFO] [stderr]    Compiling encoding v0.2.33
+[INFO] [stderr]    Compiling parking_lot_core v0.5.0
+[INFO] [stderr]    Compiling parking_lot v0.8.0
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling aho-corasick v0.7.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling winutil v0.1.1
+[INFO] [stderr]    Compiling winreg v0.6.0
+[INFO] [stderr]    Compiling socket2 v0.3.9
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling string v0.2.0
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling threadpool v1.7.1
+[INFO] [stderr]    Compiling flate2 v1.0.7
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling hostname v0.1.5
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling brotli2 v0.3.2
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling h2 v0.1.21
+[INFO] [stderr]    Compiling resolv-conf v0.6.2
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling phf_generator v0.7.24
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling actix-codec v0.1.2
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling enum-as-inner v0.2.1
+[INFO] [stderr]    Compiling serde_derive v1.0.91
+[INFO] [stderr]    Compiling derive_more v0.14.1
+[INFO] [stderr]    Compiling v_escape_derive v0.5.3
+[INFO] [stderr]    Compiling actix-web-codegen v0.1.0
+[INFO] [stderr]    Compiling phf_codegen v0.7.24
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling actix-utils v0.4.1
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.6
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling actix-threadpool v0.1.0
+[INFO] [stderr]    Compiling v_htmlescape v0.4.3
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-signal v0.2.7
+[INFO] [stderr]    Compiling actix-rt v0.2.2
+[INFO] [stderr]    Compiling actix-server-config v0.1.1
+[INFO] [stderr]    Compiling trust-dns-proto v0.7.4
+[INFO] [stderr]    Compiling actix-server v0.5.1
+[INFO] [stderr]    Compiling trust-dns-resolver v0.11.1
+[INFO] [stderr]    Compiling actix-connect v0.2.0
+[INFO] [stderr]    Compiling serde_json v1.0.39
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.5
+[INFO] [stderr]    Compiling actix-router v0.1.5
+[INFO] [stderr]    Compiling actix-http v0.2.2
+[INFO] [stderr]    Compiling awc v0.2.0
+[INFO] [stderr]    Compiling actix-web v1.0.0-rc
+[INFO] [stderr]    Compiling actix-files v0.1.0
+[INFO] [stderr]    Compiling actix-web-test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7m 13s
+[INFO] running `"docker" "inspect" "9544fc05cb38d8061af185f160bee22f36bef32d149a29a7319e58f1a63fc45b"`
+[INFO] running `"docker" "rm" "-f" "9544fc05cb38d8061af185f160bee22f36bef32d149a29a7319e58f1a63fc45b"`
+[INFO] [stdout] 9544fc05cb38d8061af185f160bee22f36bef32d149a29a7319e58f1a63fc45b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\elomatreb\\actix-web-bug-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 04013884f53af2fbd93d08d2d8f3d2da78dcb124a4d99937630c8fc2bda36394
+[INFO] running `"docker" "start" "-a" "04013884f53af2fbd93d08d2d8f3d2da78dcb124a4d99937630c8fc2bda36394"`
+[INFO] [stderr]    Compiling actix-web-test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.51s
+[INFO] running `"docker" "inspect" "04013884f53af2fbd93d08d2d8f3d2da78dcb124a4d99937630c8fc2bda36394"`
+[INFO] running `"docker" "rm" "-f" "04013884f53af2fbd93d08d2d8f3d2da78dcb124a4d99937630c8fc2bda36394"`
+[INFO] [stdout] 04013884f53af2fbd93d08d2d8f3d2da78dcb124a4d99937630c8fc2bda36394
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\elomatreb\\actix-web-bug-demo,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 2fc1d6366443867d1bd64c761581bcefac47209659f43786c4855eb4e9bad662
+[INFO] running `"docker" "start" "-a" "2fc1d6366443867d1bd64c761581bcefac47209659f43786c4855eb4e9bad662"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.02s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\actix_web_test-14b7f2697472a8b3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "2fc1d6366443867d1bd64c761581bcefac47209659f43786c4855eb4e9bad662"`
+[INFO] running `"docker" "rm" "-f" "2fc1d6366443867d1bd64c761581bcefac47209659f43786c4855eb4e9bad662"`
+[INFO] [stdout] 2fc1d6366443867d1bd64c761581bcefac47209659f43786c4855eb4e9bad662

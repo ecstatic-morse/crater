@@ -1,0 +1,80 @@
+[INFO] fetching crate quote 0.6.13...
+[INFO] extracting crate quote 0.6.13 into work\ex\default\sources\stable\reg\quote\0.6.13
+[INFO] extracting crate quote 0.6.13 into work\ex\default\sources\beta\reg\quote\0.6.13
+[INFO] validating manifest of quote-0.6.13 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of quote-0.6.13 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing quote-0.6.13
+[INFO] finished frobbing quote-0.6.13
+[INFO] frobbed toml for quote-0.6.13 written to work\ex\default\sources\stable\reg\quote\0.6.13\Cargo.toml
+[INFO] started frobbing quote-0.6.13
+[INFO] finished frobbing quote-0.6.13
+[INFO] frobbed toml for quote-0.6.13 written to work\ex\default\sources\beta\reg\quote\0.6.13\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing quote-0.6.13 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] cd44e899f529085054d806f8b5bb137a42af9c952383da6ab0bdf99e5ae59ce8
+[INFO] running `"docker" "start" "-a" "cd44e899f529085054d806f8b5bb137a42af9c952383da6ab0bdf99e5ae59ce8"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling quote v0.6.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 10.55s
+[INFO] running `"docker" "inspect" "cd44e899f529085054d806f8b5bb137a42af9c952383da6ab0bdf99e5ae59ce8"`
+[INFO] running `"docker" "rm" "-f" "cd44e899f529085054d806f8b5bb137a42af9c952383da6ab0bdf99e5ae59ce8"`
+[INFO] [stdout] cd44e899f529085054d806f8b5bb137a42af9c952383da6ab0bdf99e5ae59ce8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 27b618de4b405f8d007b635edced5744216da54bcbf8a829fb39c8000a6a614f
+[INFO] running `"docker" "start" "-a" "27b618de4b405f8d007b635edced5744216da54bcbf8a829fb39c8000a6a614f"`
+[INFO] [stderr]    Compiling quote v0.6.13 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.97s
+[INFO] running `"docker" "inspect" "27b618de4b405f8d007b635edced5744216da54bcbf8a829fb39c8000a6a614f"`
+[INFO] running `"docker" "rm" "-f" "27b618de4b405f8d007b635edced5744216da54bcbf8a829fb39c8000a6a614f"`
+[INFO] [stdout] 27b618de4b405f8d007b635edced5744216da54bcbf8a829fb39c8000a6a614f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\quote\\0.6.13,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 85e7f2953880edad6f23d83f9b14ab22ae04d5638b862ec50b3ecfa3079fdc2b
+[INFO] running `"docker" "start" "-a" "85e7f2953880edad6f23d83f9b14ab22ae04d5638b862ec50b3ecfa3079fdc2b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.37s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\quote-5fc7d66075d6d37d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-3b48591c19bd4e52.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 20 tests
+[INFO] [stdout] test test_advanced ... ok
+[INFO] [stdout] test test_append_tokens ... ok
+[INFO] [stdout] test test_box_str ... ok
+[INFO] [stdout] test test_char ... ok
+[INFO] [stdout] test test_closure ... ok
+[INFO] [stdout] test test_cow ... ok
+[INFO] [stdout] test test_duplicate ... ok
+[INFO] [stdout] test test_empty_quote ... ok
+[INFO] [stdout] test test_empty_repetition ... ok
+[INFO] [stdout] test test_fancy_repetition ... ok
+[INFO] [stdout] test test_floating ... ok
+[INFO] [stdout] test test_ident ... ok
+[INFO] [stdout] test test_integer ... ok
+[INFO] [stdout] test test_iter ... ok
+[INFO] [stdout] test test_nested_fancy_repetition ... ok
+[INFO] [stdout] test test_quote_impl ... ok
+[INFO] [stdout] test test_str ... ok
+[INFO] [stdout] test test_string ... ok
+[INFO] [stdout] test test_substitution ... ok
+[INFO] [stdout] test test_variable_name_conflict ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests quote
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "85e7f2953880edad6f23d83f9b14ab22ae04d5638b862ec50b3ecfa3079fdc2b"`
+[INFO] running `"docker" "rm" "-f" "85e7f2953880edad6f23d83f9b14ab22ae04d5638b862ec50b3ecfa3079fdc2b"`
+[INFO] [stdout] 85e7f2953880edad6f23d83f9b14ab22ae04d5638b862ec50b3ecfa3079fdc2b

@@ -1,0 +1,254 @@
+[INFO] cloning repository mockersf/episod-slack-bot
+[INFO] running `"git" "clone" "--bare" "git://github.com/mockersf/episod-slack-bot.git" "work\\cache\\sources\\gh\\mockersf\\episod-slack-bot"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\mockersf\episod-slack-bot'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\mockersf\\episod-slack-bot" "work\\ex\\default\\sources\\nightly\\gh\\mockersf\\episod-slack-bot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\mockersf\episod-slack-bot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\mockersf\\episod-slack-bot" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\mockersf\\episod-slack-bot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\mockersf\episod-slack-bot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 94021abbd5cf88076544df32bc3053039237a489
+[INFO] sha for GitHub repo mockersf/episod-slack-bot: 94021abbd5cf88076544df32bc3053039237a489
+[INFO] validating manifest of mockersf/episod-slack-bot on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mockersf/episod-slack-bot on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mockersf/episod-slack-bot
+[INFO] finished frobbing mockersf/episod-slack-bot
+[INFO] frobbed toml for mockersf/episod-slack-bot written to work\ex\default\sources\nightly\gh\mockersf\episod-slack-bot\Cargo.toml
+[INFO] started frobbing mockersf/episod-slack-bot
+[INFO] finished frobbing mockersf/episod-slack-bot
+[INFO] frobbed toml for mockersf/episod-slack-bot written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\mockersf\episod-slack-bot\Cargo.toml
+[INFO] crate mockersf/episod-slack-bot already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/mockersf/slack-push`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rusoto_sns v0.39.0
+[INFO] [stderr]   Downloaded rusoto_credential v0.39.0
+[INFO] [stderr]   Downloaded tokio-process v0.2.3
+[INFO] [stderr]   Downloaded mio-named-pipes v0.1.6
+[INFO] [stderr]   Downloaded miow v0.3.3
+[INFO] [stderr]   Downloaded lambda_runtime v0.2.1
+[INFO] [stderr]   Downloaded lambda_runtime_core v0.1.2
+[INFO] [stderr]   Downloaded lambda_runtime_errors v0.1.1
+[INFO] [stderr]   Downloaded lambda_runtime_errors_derive v0.1.1
+[INFO] [stderr]   Downloaded lambda_runtime_client v0.2.2
+[INFO] [stderr]   Downloaded lambda_http v0.1.1
+[INFO] [stderr]   Downloaded aws_lambda_events v0.2.4
+[INFO] [stderr]   Downloaded rusoto_core v0.39.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing mockersf/episod-slack-bot against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\mockersf\\episod-slack-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ef33832b165d83f38309a7d621385dad3a51ea058b78250f0faa09bed0c5e207
+[INFO] running `"docker" "start" "-a" "ef33832b165d83f38309a7d621385dad3a51ea058b78250f0faa09bed0c5e207"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling syn v0.15.34
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand_core v0.4.0
+[INFO] [stderr]    Compiling serde v1.0.91
+[INFO] [stderr]    Compiling libc v0.2.57
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling smallvec v0.6.9
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling siphasher v0.2.3
+[INFO] [stderr]    Compiling slab v0.4.2
+[INFO] [stderr]    Compiling futures v0.1.27
+[INFO] [stderr]    Compiling failure_derive v0.1.5
+[INFO] [stderr]    Compiling ryu v0.2.8
+[INFO] [stderr]    Compiling httparse v1.3.3
+[INFO] [stderr]    Compiling string_cache_shared v0.3.0
+[INFO] [stderr]    Compiling typenum v1.10.0
+[INFO] [stderr]    Compiling itoa v0.4.4
+[INFO] [stderr]    Compiling memchr v2.2.0
+[INFO] [stderr]    Compiling rustc-demangle v0.1.15
+[INFO] [stderr]    Compiling build_const v0.2.1
+[INFO] [stderr]    Compiling indexmap v1.0.2
+[INFO] [stderr]    Compiling try-lock v0.2.2
+[INFO] [stderr]    Compiling string v0.1.3
+[INFO] [stderr]    Compiling new_debug_unreachable v1.0.3
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling native-tls v0.2.3
+[INFO] [stderr]    Compiling mac v0.1.1
+[INFO] [stderr]    Compiling regex v1.1.6
+[INFO] [stderr]    Compiling utf8-ranges v1.0.2
+[INFO] [stderr]    Compiling precomputed-hash v0.1.1
+[INFO] [stderr]    Compiling constant_time_eq v0.1.3
+[INFO] [stderr]    Compiling byte-tools v0.2.0
+[INFO] [stderr]    Compiling utf-8 v0.7.5
+[INFO] [stderr]    Compiling arrayref v0.3.5
+[INFO] [stderr]    Compiling crc32fast v1.2.0
+[INFO] [stderr]    Compiling encoding_rs v0.8.17
+[INFO] [stderr]    Compiling shlex v0.1.1
+[INFO] [stderr]    Compiling fake-simd v0.1.2
+[INFO] [stderr]    Compiling safemem v0.3.0
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling bit-vec v0.4.4
+[INFO] [stderr]    Compiling md5 v0.3.8
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling backtrace v0.3.26
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling error-chain v0.12.1
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling tokio-trace-core v0.2.0
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling try_from v0.3.2
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling tokio-sync v0.1.5
+[INFO] [stderr]    Compiling backtrace-sys v0.1.28
+[INFO] [stderr]    Compiling miniz_oxide_c_api v0.2.1
+[INFO] [stderr]    Compiling unreachable v0.1.1
+[INFO] [stderr]    Compiling crc v1.8.1
+[INFO] [stderr]    Compiling futf v0.1.4
+[INFO] [stderr]    Compiling regex-syntax v0.6.6
+[INFO] [stderr]    Compiling miniz_oxide v0.2.1
+[INFO] [stderr]    Compiling block-buffer v0.3.3
+[INFO] [stderr]    Compiling xml-rs v0.7.0
+[INFO] [stderr]    Compiling bit-set v0.4.0
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling want v0.0.6
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling tokio-executor v0.1.7
+[INFO] [stderr]    Compiling crossbeam-queue v0.1.2
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling debug_unreachable v0.1.1
+[INFO] [stderr]    Compiling tendril v0.3.1
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling lambda_runtime_core v0.1.2
+[INFO] [stderr]    Compiling rusoto_core v0.39.0
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling unicase v1.4.2
+[INFO] [stderr]    Compiling base64 v0.9.3
+[INFO] [stderr]    Compiling base64 v0.10.1
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling quote v0.6.12
+[INFO] [stderr]    Compiling tokio-timer v0.2.11
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.6
+[INFO] [stderr]    Compiling generic-array v0.9.0
+[INFO] [stderr]    Compiling aho-corasick v0.7.3
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling socket2 v0.3.9
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr]    Compiling dirs v1.0.5
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling crossbeam-deque v0.7.1
+[INFO] [stderr]    Compiling phf_shared v0.7.24
+[INFO] [stderr]    Compiling html5ever v0.18.0
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling digest v0.7.6
+[INFO] [stderr]    Compiling crypto-mac v0.5.2
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling miow v0.3.3
+[INFO] [stderr]    Compiling phf v0.7.24
+[INFO] [stderr]    Compiling cookie v0.12.0
+[INFO] [stderr]    Compiling sha2 v0.7.1
+[INFO] [stderr]    Compiling hmac v0.5.0
+[INFO] [stderr]    Compiling flate2 v1.0.7
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.14
+[INFO] [stderr]    Compiling phf_generator v0.7.24
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling string_cache_codegen v0.4.2
+[INFO] [stderr]    Compiling phf_codegen v0.7.24
+[INFO] [stderr]    Compiling serde_derive v1.0.91
+[INFO] [stderr]    Compiling synstructure v0.10.2
+[INFO] [stderr]    Compiling publicsuffix v1.5.2
+[INFO] [stderr]    Compiling mime_guess v2.0.0-alpha.6
+[INFO] [stderr]    Compiling string_cache v0.6.2
+[INFO] [stderr]    Compiling markup5ever v0.3.2
+[INFO] [stderr]    Compiling mio-named-pipes v0.1.6
+[INFO] [stderr]    Compiling lambda_runtime_errors_derive v0.1.1
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling bytes v0.4.12
+[INFO] [stderr]    Compiling serde_json v1.0.39
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling serde_urlencoded v0.5.5
+[INFO] [stderr]    Compiling slack_push v0.1.0 (https://github.com/mockersf/slack-push#3f70bcda)
+[INFO] [stderr]    Compiling tokio-io v0.1.12
+[INFO] [stderr]    Compiling tokio-buf v0.1.1
+[INFO] [stderr]    Compiling http v0.1.17
+[INFO] [stderr]    Compiling lambda_runtime_errors v0.1.1
+[INFO] [stderr]    Compiling cookie_store v0.7.0
+[INFO] [stderr]    Compiling aws_lambda_events v0.2.4
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling tokio-reactor v0.1.9
+[INFO] [stderr]    Compiling tokio-fs v0.1.6
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-process v0.2.3
+[INFO] [stderr]    Compiling h2 v0.1.21
+[INFO] [stderr]    Compiling http-body v0.1.0
+[INFO] [stderr]    Compiling tokio v0.1.21
+[INFO] [stderr]    Compiling select v0.4.2
+[INFO] [stderr]    Compiling hyper v0.12.29
+[INFO] [stderr]    Compiling lambda_runtime_client v0.2.2
+[INFO] [stderr]    Compiling rusoto_credential v0.39.0
+[INFO] [stderr]    Compiling hyper-tls v0.3.2
+[INFO] [stderr]    Compiling reqwest v0.9.17
+[INFO] [stderr]    Compiling lambda_runtime v0.2.1
+[INFO] [stderr]    Compiling lambda_http v0.1.1
+[INFO] [stderr]    Compiling rusoto_sns v0.39.0
+[INFO] [stderr]    Compiling episod v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7m 52s
+[INFO] running `"docker" "inspect" "ef33832b165d83f38309a7d621385dad3a51ea058b78250f0faa09bed0c5e207"`
+[INFO] running `"docker" "rm" "-f" "ef33832b165d83f38309a7d621385dad3a51ea058b78250f0faa09bed0c5e207"`
+[INFO] [stdout] ef33832b165d83f38309a7d621385dad3a51ea058b78250f0faa09bed0c5e207
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\mockersf\\episod-slack-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3f3318a7879c71573e87fa2d4dc2a72f36949ef6ba276d97f70c8e4cbf209c05
+[INFO] running `"docker" "start" "-a" "3f3318a7879c71573e87fa2d4dc2a72f36949ef6ba276d97f70c8e4cbf209c05"`
+[INFO] [stderr]    Compiling episod v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 13.97s
+[INFO] running `"docker" "inspect" "3f3318a7879c71573e87fa2d4dc2a72f36949ef6ba276d97f70c8e4cbf209c05"`
+[INFO] running `"docker" "rm" "-f" "3f3318a7879c71573e87fa2d4dc2a72f36949ef6ba276d97f70c8e4cbf209c05"`
+[INFO] [stdout] 3f3318a7879c71573e87fa2d4dc2a72f36949ef6ba276d97f70c8e4cbf209c05
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\mockersf\\episod-slack-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] f19bb2299ad8559fb93b47a96b685c50494ccee6860efb878d62a9416d98d053
+[INFO] running `"docker" "start" "-a" "f19bb2299ad8559fb93b47a96b685c50494ccee6860efb878d62a9416d98d053"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.96s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\episod-e22aabdff59242c9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\get_session-49b98225342e71d1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\query_sessions-66a3862c3fe6a21e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\slack_event-4cbde9436f8404a3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests episod
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "f19bb2299ad8559fb93b47a96b685c50494ccee6860efb878d62a9416d98d053"`
+[INFO] running `"docker" "rm" "-f" "f19bb2299ad8559fb93b47a96b685c50494ccee6860efb878d62a9416d98d053"`
+[INFO] [stdout] f19bb2299ad8559fb93b47a96b685c50494ccee6860efb878d62a9416d98d053

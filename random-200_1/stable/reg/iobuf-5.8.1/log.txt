@@ -1,0 +1,119 @@
+[INFO] fetching crate iobuf 5.8.1...
+[INFO] extracting crate iobuf 5.8.1 into work\ex\default\sources\stable\reg\iobuf\5.8.1
+[INFO] extracting crate iobuf 5.8.1 into work\ex\default\sources\beta\reg\iobuf\5.8.1
+[INFO] validating manifest of iobuf-5.8.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of iobuf-5.8.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing iobuf-5.8.1
+[INFO] finished frobbing iobuf-5.8.1
+[INFO] frobbed toml for iobuf-5.8.1 written to work\ex\default\sources\stable\reg\iobuf\5.8.1\Cargo.toml
+[INFO] started frobbing iobuf-5.8.1
+[INFO] finished frobbing iobuf-5.8.1
+[INFO] frobbed toml for iobuf-5.8.1 written to work\ex\default\sources\beta\reg\iobuf\5.8.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing iobuf-5.8.1 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\iobuf\\5.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] ac9bb5a130d220edccd91170662d407f5dcc029b26ed1c7bee3b3dd3b74d9422
+[INFO] running `"docker" "start" "-a" "ac9bb5a130d220edccd91170662d407f5dcc029b26ed1c7bee3b3dd3b74d9422"`
+[INFO] [stderr] warning: profile `doc` is deprecated and has no effect
+[INFO] [stderr]    Compiling iobuf v5.8.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `alloc::heap`
+[INFO] [stderr]  --> src\raw.rs:1:12
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use alloc::heap::{Heap, Alloc, Layout};
+[INFO] [stderr]   |            ^^^^ could not find `heap` in `alloc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `core::nonzero`
+[INFO] [stderr]  --> src\raw.rs:4:11
+[INFO] [stderr]   |
+[INFO] [stderr] 4 | use core::nonzero::NonZero;
+[INFO] [stderr]   |           ^^^^^^^ could not find `nonzero` in `core`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `core::nonzero`
+[INFO] [stderr]  --> src\iobuf.rs:1:11
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use core::nonzero::NonZero;
+[INFO] [stderr]   |           ^^^^^^^ could not find `nonzero` in `core`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `core::nonzero`
+[INFO] [stderr]  --> src\impls.rs:1:11
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use core::nonzero::NonZero;
+[INFO] [stderr]   |           ^^^^^^^ could not find `nonzero` in `core`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:42:1
+[INFO] [stderr]    |
+[INFO] [stderr] 42 | #![feature(plugin)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:43:1
+[INFO] [stderr]    |
+[INFO] [stderr] 43 | #![feature(core_intrinsics)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:44:1
+[INFO] [stderr]    |
+[INFO] [stderr] 44 | #![feature(nonzero)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:45:1
+[INFO] [stderr]    |
+[INFO] [stderr] 45 | #![feature(allocator_api)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:46:1
+[INFO] [stderr]    |
+[INFO] [stderr] 46 | #![feature(alloc)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]   --> src\lib.rs:47:1
+[INFO] [stderr]    |
+[INFO] [stderr] 47 | #![feature(unique)]
+[INFO] [stderr]    | ^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: use of unstable library feature 'ptr_internals': use NonNull instead and consider PhantomData<T> (if you also use #[may_dangle]), Send, and/or Sync
+[INFO] [stderr]  --> src\raw.rs:2:5
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use core::ptr::Unique;
+[INFO] [stderr]   |     ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: use of unstable library feature 'ptr_internals': use NonNull instead and consider PhantomData<T> (if you also use #[may_dangle]), Send, and/or Sync
+[INFO] [stderr]    --> src\raw.rs:354:37
+[INFO] [stderr]     |
+[INFO] [stderr] 354 |       buf:    unsafe { NonZero::new(Unique::empty().as_ptr()) },
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: use of unstable library feature 'ptr_internals'
+[INFO] [stderr]    --> src\raw.rs:354:37
+[INFO] [stderr]     |
+[INFO] [stderr] 354 |       buf:    unsafe { NonZero::new(Unique::empty().as_ptr()) },
+[INFO] [stderr]     |                                     ^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0658]: use of unstable library feature 'ptr_internals'
+[INFO] [stderr]    --> src\raw.rs:354:53
+[INFO] [stderr]     |
+[INFO] [stderr] 354 |       buf:    unsafe { NonZero::new(Unique::empty().as_ptr()) },
+[INFO] [stderr]     |                                                     ^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 14 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0432, E0554, E0658.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stderr] error: Could not compile `iobuf`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "ac9bb5a130d220edccd91170662d407f5dcc029b26ed1c7bee3b3dd3b74d9422"`
+[INFO] running `"docker" "rm" "-f" "ac9bb5a130d220edccd91170662d407f5dcc029b26ed1c7bee3b3dd3b74d9422"`
+[INFO] [stdout] ac9bb5a130d220edccd91170662d407f5dcc029b26ed1c7bee3b3dd3b74d9422

@@ -1,0 +1,162 @@
+[INFO] cloning repository carlos-buendia/pm-twitter-bot
+[INFO] running `"git" "clone" "--bare" "git://github.com/carlos-buendia/pm-twitter-bot.git" "work\\cache\\sources\\gh\\carlos-buendia\\pm-twitter-bot"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\carlos-buendia\pm-twitter-bot'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\carlos-buendia\\pm-twitter-bot" "work\\ex\\default\\sources\\nightly\\gh\\carlos-buendia\\pm-twitter-bot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\carlos-buendia\pm-twitter-bot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\carlos-buendia\\pm-twitter-bot" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\carlos-buendia\\pm-twitter-bot"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\carlos-buendia\pm-twitter-bot'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 9a40e234efd56c0348f77885f0f3b09e05c34a93
+[INFO] sha for GitHub repo carlos-buendia/pm-twitter-bot: 9a40e234efd56c0348f77885f0f3b09e05c34a93
+[INFO] validating manifest of carlos-buendia/pm-twitter-bot on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of carlos-buendia/pm-twitter-bot on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing carlos-buendia/pm-twitter-bot
+[INFO] finished frobbing carlos-buendia/pm-twitter-bot
+[INFO] frobbed toml for carlos-buendia/pm-twitter-bot written to work\ex\default\sources\nightly\gh\carlos-buendia\pm-twitter-bot\Cargo.toml
+[INFO] started frobbing carlos-buendia/pm-twitter-bot
+[INFO] finished frobbing carlos-buendia/pm-twitter-bot
+[INFO] frobbed toml for carlos-buendia/pm-twitter-bot written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\carlos-buendia\pm-twitter-bot\Cargo.toml
+[INFO] crate carlos-buendia/pm-twitter-bot already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded twitter-api v0.3.0
+[INFO] [stderr]   Downloaded oauth-client v0.3.2
+[INFO] [stderr]   Downloaded reqwest v0.5.2
+[INFO] [stderr]   Downloaded serde_urlencoded v0.4.3
+[INFO] [stderr]   Downloaded libflate v0.1.20
+[INFO] [stderr]   Downloaded job_scheduler v1.0.6
+[INFO] [stderr]   Downloaded cron v0.6.0
+[INFO] [stderr]   Downloaded nom v2.1.0
+[INFO] [stderr]   Downloaded hyper-tls v0.1.4
+[INFO] [stderr]   Downloaded hyper v0.11.27
+[INFO] [stderr]   Downloaded want v0.0.4
+[INFO] [stderr]   Downloaded try-lock v0.1.0
+[INFO] [stderr]   Downloaded serde_derive v1.0.88
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing carlos-buendia/pm-twitter-bot against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\carlos-buendia\\pm-twitter-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7efdb5bef75d06eecdefb43d300eb04f4f1ac8f5ecea971659229360385b64c9
+[INFO] running `"docker" "start" "-a" "7efdb5bef75d06eecdefb43d300eb04f4f1ac8f5ecea971659229360385b64c9"`
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling libc v0.2.48
+[INFO] [stderr]    Compiling byteorder v1.3.1
+[INFO] [stderr]    Compiling futures v0.1.25
+[INFO] [stderr]    Compiling lazycell v1.2.1
+[INFO] [stderr]    Compiling httparse v1.3.3
+[INFO] [stderr]    Compiling proc-macro2 v0.4.27
+[INFO] [stderr]    Compiling gcc v0.3.55
+[INFO] [stderr]    Compiling rustc-demangle v0.1.13
+[INFO] [stderr]    Compiling scoped-tls v0.1.2
+[INFO] [stderr]    Compiling serde v1.0.88
+[INFO] [stderr]    Compiling serde v0.9.15
+[INFO] [stderr]    Compiling dtoa v0.4.3
+[INFO] [stderr]    Compiling itoa v0.3.4
+[INFO] [stderr]    Compiling antidote v1.0.0
+[INFO] [stderr]    Compiling try-lock v0.1.0
+[INFO] [stderr]    Compiling slab v0.3.0
+[INFO] [stderr]    Compiling take v0.1.0
+[INFO] [stderr]    Compiling smallvec v0.2.1
+[INFO] [stderr]    Compiling nom v2.1.0
+[INFO] [stderr]    Compiling backtrace v0.3.14
+[INFO] [stderr]    Compiling crossbeam-utils v0.6.5
+[INFO] [stderr]    Compiling log v0.4.6
+[INFO] [stderr]    Compiling unicode-normalization v0.1.8
+[INFO] [stderr]    Compiling unicase v2.2.0
+[INFO] [stderr]    Compiling tokio-sync v0.1.1
+[INFO] [stderr]    Compiling tokio-service v0.1.0
+[INFO] [stderr]    Compiling relay v0.1.1
+[INFO] [stderr]    Compiling rust-crypto v0.2.36
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling want v0.0.4
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8
+[INFO] [stderr]    Compiling tokio-executor v0.1.6
+[INFO] [stderr]    Compiling rand_pcg v0.1.1
+[INFO] [stderr]    Compiling crossbeam-epoch v0.7.1
+[INFO] [stderr]    Compiling mime v0.2.6
+[INFO] [stderr]    Compiling idna v0.1.5
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling num_cpus v1.10.0
+[INFO] [stderr]    Compiling tokio-current-thread v0.1.4
+[INFO] [stderr]    Compiling tokio-timer v0.2.10
+[INFO] [stderr]    Compiling bytes v0.4.11
+[INFO] [stderr]    Compiling base64 v0.9.3
+[INFO] [stderr]    Compiling libflate v0.1.20
+[INFO] [stderr]    Compiling base64 v0.5.2
+[INFO] [stderr]    Compiling quote v0.6.11
+[INFO] [stderr]    Compiling crossbeam-deque v0.6.3
+[INFO] [stderr]    Compiling mime v0.3.13
+[INFO] [stderr]    Compiling rand_jitter v0.1.3
+[INFO] [stderr]    Compiling rand_os v0.1.2
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling schannel v0.1.14
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling serde_json v0.9.10
+[INFO] [stderr]    Compiling url v1.7.2
+[INFO] [stderr]    Compiling futures-cpupool v0.1.8
+[INFO] [stderr]    Compiling tokio-io v0.1.11
+[INFO] [stderr]    Compiling syn v0.15.26
+[INFO] [stderr]    Compiling serde_json v1.0.38
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling chrono v0.4.6
+[INFO] [stderr]    Compiling pbr v1.0.1
+[INFO] [stderr]    Compiling native-tls v0.1.5
+[INFO] [stderr]    Compiling error-chain v0.10.0
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling tokio-codec v0.1.1
+[INFO] [stderr]    Compiling hyper v0.10.15
+[INFO] [stderr]    Compiling serde_urlencoded v0.4.3
+[INFO] [stderr]    Compiling mio v0.6.16
+[INFO] [stderr]    Compiling cron v0.6.0
+[INFO] [stderr]    Compiling parking_lot_core v0.4.0
+[INFO] [stderr]    Compiling serde_derive v1.0.88
+[INFO] [stderr]    Compiling job_scheduler v1.0.6
+[INFO] [stderr]    Compiling parking_lot v0.7.1
+[INFO] [stderr]    Compiling crossbeam v0.6.0
+[INFO] [stderr]    Compiling tokio-reactor v0.1.8
+[INFO] [stderr]    Compiling hyper-native-tls v0.2.4
+[INFO] [stderr]    Compiling tokio-threadpool v0.1.11
+[INFO] [stderr]    Compiling reqwest v0.5.2
+[INFO] [stderr]    Compiling tokio-udp v0.1.3
+[INFO] [stderr]    Compiling tokio-tcp v0.1.3
+[INFO] [stderr]    Compiling oauth-client v0.3.2
+[INFO] [stderr]    Compiling tokio-fs v0.1.5
+[INFO] [stderr]    Compiling tokio v0.1.15
+[INFO] [stderr]    Compiling twitter-api v0.3.0
+[INFO] [stderr]    Compiling tokio-core v0.1.17
+[INFO] [stderr]    Compiling tokio-proto v0.1.1
+[INFO] [stderr]    Compiling tokio-tls v0.1.4
+[INFO] [stderr]    Compiling hyper v0.11.27
+[INFO] [stderr]    Compiling hyper-tls v0.1.4
+[INFO] [stderr]    Compiling twitter-bot-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4m 54s
+[INFO] running `"docker" "inspect" "7efdb5bef75d06eecdefb43d300eb04f4f1ac8f5ecea971659229360385b64c9"`
+[INFO] running `"docker" "rm" "-f" "7efdb5bef75d06eecdefb43d300eb04f4f1ac8f5ecea971659229360385b64c9"`
+[INFO] [stdout] 7efdb5bef75d06eecdefb43d300eb04f4f1ac8f5ecea971659229360385b64c9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\carlos-buendia\\pm-twitter-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f2580ef19f617a7a0904571e46c175709e03ec0ab0d1a7b9e70043624d3dc54f
+[INFO] running `"docker" "start" "-a" "f2580ef19f617a7a0904571e46c175709e03ec0ab0d1a7b9e70043624d3dc54f"`
+[INFO] [stderr]    Compiling twitter-bot-rs v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.53s
+[INFO] running `"docker" "inspect" "f2580ef19f617a7a0904571e46c175709e03ec0ab0d1a7b9e70043624d3dc54f"`
+[INFO] running `"docker" "rm" "-f" "f2580ef19f617a7a0904571e46c175709e03ec0ab0d1a7b9e70043624d3dc54f"`
+[INFO] [stdout] f2580ef19f617a7a0904571e46c175709e03ec0ab0d1a7b9e70043624d3dc54f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\carlos-buendia\\pm-twitter-bot,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 9cf42a728cd2b43c5e7094e94f67ae5330ca31d88323f623594918169ae57cec
+[INFO] running `"docker" "start" "-a" "9cf42a728cd2b43c5e7094e94f67ae5330ca31d88323f623594918169ae57cec"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.92s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\twitter_bot_rs-f878c606bd1813a1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9cf42a728cd2b43c5e7094e94f67ae5330ca31d88323f623594918169ae57cec"`
+[INFO] running `"docker" "rm" "-f" "9cf42a728cd2b43c5e7094e94f67ae5330ca31d88323f623594918169ae57cec"`
+[INFO] [stdout] 9cf42a728cd2b43c5e7094e94f67ae5330ca31d88323f623594918169ae57cec

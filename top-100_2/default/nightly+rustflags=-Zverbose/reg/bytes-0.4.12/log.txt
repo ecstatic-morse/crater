@@ -1,0 +1,325 @@
+[INFO] crate bytes 0.4.12 is already in cache
+[INFO] extracting crate bytes 0.4.12 into work\ex\default\sources\nightly\reg\bytes\0.4.12
+[INFO] extracting crate bytes 0.4.12 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytes\0.4.12
+[INFO] validating manifest of bytes-0.4.12 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bytes-0.4.12 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bytes-0.4.12
+[INFO] finished frobbing bytes-0.4.12
+[INFO] frobbed toml for bytes-0.4.12 written to work\ex\default\sources\nightly\reg\bytes\0.4.12\Cargo.toml
+[INFO] started frobbing bytes-0.4.12
+[INFO] finished frobbing bytes-0.4.12
+[INFO] frobbed toml for bytes-0.4.12 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bytes\0.4.12\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bytes-0.4.12 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\bytes\\0.4.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e5489beba0df746b8dcaf1218e098025cd78cc83e36f7ca93c23c56a36e87152
+[INFO] running `"docker" "start" "-a" "e5489beba0df746b8dcaf1218e098025cd78cc83e36f7ca93c23c56a36e87152"`
+[INFO] [stderr]    Compiling bytes v0.4.12 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.97s
+[INFO] running `"docker" "inspect" "e5489beba0df746b8dcaf1218e098025cd78cc83e36f7ca93c23c56a36e87152"`
+[INFO] running `"docker" "rm" "-f" "e5489beba0df746b8dcaf1218e098025cd78cc83e36f7ca93c23c56a36e87152"`
+[INFO] [stdout] e5489beba0df746b8dcaf1218e098025cd78cc83e36f7ca93c23c56a36e87152
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\bytes\\0.4.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 72cad800162d3a3a3d7f5ebe3eb5d5fc51f7055964f68e7b7e70132969de3b1f
+[INFO] running `"docker" "start" "-a" "72cad800162d3a3a3d7f5ebe3eb5d5fc51f7055964f68e7b7e70132969de3b1f"`
+[INFO] [stderr]    Compiling bytes v0.4.12 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 21.40s
+[INFO] running `"docker" "inspect" "72cad800162d3a3a3d7f5ebe3eb5d5fc51f7055964f68e7b7e70132969de3b1f"`
+[INFO] running `"docker" "rm" "-f" "72cad800162d3a3a3d7f5ebe3eb5d5fc51f7055964f68e7b7e70132969de3b1f"`
+[INFO] [stdout] 72cad800162d3a3a3d7f5ebe3eb5d5fc51f7055964f68e7b7e70132969de3b1f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\bytes\\0.4.12,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 6135e4b2309cb7aa925a665115287ac52666c70ffc7ffc53d7ec3d7e14b0ce31
+[INFO] running `"docker" "start" "-a" "6135e4b2309cb7aa925a665115287ac52666c70ffc7ffc53d7ec3d7e14b0ce31"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.40s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bytes-ccd89bf1f8ac6666.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test buf::vec_deque::tests::hello_world ... ok
+[INFO] [stdout] test bytes::test_original_capacity_from_repr ... ok
+[INFO] [stdout] test bytes::test_original_capacity_to_repr ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_buf-1e046ffe2306b81b.exe
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test test_bufs_vec ... ok
+[INFO] [stdout] test test_fresh_cursor_vec ... ok
+[INFO] [stdout] test test_get_u16 ... ok
+[INFO] [stdout] test test_get_u8 ... ok
+[INFO] [stdout] test test_get_u16_buffer_underflow ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_buf_mut-76e0c1acca2a0985.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test test_bufs_vec_mut ... ok
+[INFO] [stdout] test test_clone ... ok
+[INFO] [stdout] test test_put_u16 ... ok
+[INFO] [stdout] test test_put_u8 ... ok
+[INFO] [stdout] test test_vec_advance_mut ... ok
+[INFO] [stdout] test test_vec_as_mut_buf ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_bytes-e23fefcd895051db.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 56 tests
+[INFO] [stdout] test advance_inline ... ok
+[INFO] [stdout] test advance_static ... ok
+[INFO] [stdout] test advance_vec ... ok
+[INFO] [stdout] test extend_from_slice_mut ... ok
+[INFO] [stdout] test advance_past_len ... ok
+[INFO] [stdout] test extend_from_slice_shr ... ok
+[INFO] [stdout] test extend_shr ... ok
+[INFO] [stdout] test fmt ... ok
+[INFO] [stdout] test extend_mut ... ok
+[INFO] [stdout] test empty_slice_ref_catches_not_an_empty_subset ... ok
+[INFO] [stdout] test fmt_write ... ok
+[INFO] [stdout] test fns_defined_for_bytes_mut ... ok
+[INFO] [stdout] test from_iter_no_size_hint ... ok
+[INFO] [stdout] test from_slice ... ok
+[INFO] [stdout] test from_static ... ok
+[INFO] [stdout] test index ... ok
+[INFO] [stdout] test inline_storage ... ok
+[INFO] [stdout] test len ... ok
+[INFO] [stdout] test mut_into_buf ... ok
+[INFO] [stdout] test partial_eq_bytesmut ... ok
+[INFO] [stdout] test reserve_allocates_at_least_original_capacity ... ok
+[INFO] [stdout] test reserve_convert ... ok
+[INFO] [stdout] test reserve_growth ... ok
+[INFO] [stdout] test reserve_in_arc_nonunique_does_not_overallocate ... ok
+[INFO] [stdout] test reserve_in_arc_unique_does_not_overallocate ... ok
+[INFO] [stdout] test reserve_in_arc_unique_doubles ... ok
+[INFO] [stdout] test reserve_max_original_capacity_value ... ok
+[INFO] [stdout] test reserve_vec_recycling ... ok
+[INFO] [stdout] test slice ... ok
+[INFO] [stdout] test slice_oob_1 ... ok
+[INFO] [stdout] test slice_oob_2 ... ok
+[INFO] [stdout] test slice_ref_empty ... ok
+[INFO] [stdout] test slice_ref_catches_not_a_subset ... ok
+[INFO] [stdout] test slice_ref_works ... ok
+[INFO] [stdout] test slice_ref_catches_not_an_empty_subset ... ok
+[INFO] [stdout] test split_off ... ok
+[INFO] [stdout] test split_off_oob ... ok
+[INFO] [stdout] test split_off_to_loop ... ok
+[INFO] [stdout] test split_off_uninitialized ... ok
+[INFO] [stdout] test split_to_1 ... ok
+[INFO] [stdout] test split_to_2 ... ok
+[INFO] [stdout] test split_off_to_at_gt_len ... ok
+[INFO] [stdout] test split_to_uninitialized ... ok
+[INFO] [stdout] test test_bounds ... ok
+[INFO] [stdout] test split_to_oob ... ok
+[INFO] [stdout] test split_to_oob_mut ... ok
+[INFO] [stdout] test unsplit_arc_different ... ok
+[INFO] [stdout] test unsplit_arc_inline ... ok
+[INFO] [stdout] test unsplit_arc_non_contiguous ... ok
+[INFO] [stdout] test unsplit_basic ... ok
+[INFO] [stdout] test unsplit_both_inline ... ok
+[INFO] [stdout] test unsplit_empty_other ... ok
+[INFO] [stdout] test unsplit_empty_self ... ok
+[INFO] [stdout] test unsplit_inline_arc ... ok
+[INFO] [stdout] test unsplit_two_split_offs ... ok
+[INFO] [stdout] test stress ... test stress has been running for over 60 seconds
+[INFO] [stdout] test stress ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 56 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_chain-10164eb683cbb5bd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test iterating_two_bufs ... ok
+[INFO] [stdout] test collect_two_bufs ... ok
+[INFO] [stdout] test writing_chained ... ok
+[INFO] [stdout] test vectored_read ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_debug-492a36c776c39e8b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test fmt ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_from_buf-72075a56eb4048ac.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test collect_to_bytes ... ok
+[INFO] [stdout] test collect_to_bytes_mut ... ok
+[INFO] [stdout] test collect_to_vec ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_iter-eef167eb283d146f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test empty_iter_len ... ok
+[INFO] [stdout] test iter_len ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_reader-60a8ee222ef75d00.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test buf_read ... ok
+[INFO] [stdout] test read ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_serde-081339762ef62b62.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_take-99e92dde60e605b0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test long_take ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests bytes
+[INFO] [stdout] 
+[INFO] [stdout] running 128 tests
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf (line 49) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::by_ref (line 987) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::bytes (line 102) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::advance (line 169) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::copy_to_slice (line 224) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_f32_be (line 816) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::collect (line 914) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::chain (line 964) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i16_be (line 373) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_f64_le (line 890) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_f64_be (line 868) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_f32_le (line 838) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i32_be (line 473) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i16_le (line 394) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i64_be (line 573) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i32_le (line 494) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_int_be (line 765) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i64_le (line 594) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_i8 (line 291) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_int_le (line 786) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u32_be (line 423) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u16_be (line 323) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u16_le (line 344) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u32_le (line 444) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u64_le (line 544) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u64_be (line 523) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_u8 (line 267) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_uint_be (line 715) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::has_remaining (line 201) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::get_uint_le (line 736) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::iter (line 1039) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::reader (line 1017) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::remaining (line 73) ... ok
+[INFO] [stdout] test src\buf\buf.rs - buf::buf::Buf::take (line 936) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut (line 18) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::advance_mut (line 66) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::bytes_mut (line 134) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::by_ref (line 1017) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::has_remaining_mut (line 106) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put (line 210) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_f32_be (line 909) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_f32_le (line 934) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_f64_le (line 992) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_f64_be (line 967) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i16_be (line 412) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i16_le (line 436) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i32_le (line 548) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i32_be (line 524) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i64_be (line 636) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i64_le (line 660) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_i8 (line 325) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_int_be (line 852) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_int_le (line 876) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_slice (line 256) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u16_be (line 356) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u16_le (line 380) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u32_be (line 468) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u32_le (line 492) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u64_be (line 580) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u64_le (line 604) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_u8 (line 302) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_uint_be (line 796) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::remaining_mut (line 36) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::put_uint_le (line 820) ... ok
+[INFO] [stdout] test src\buf\buf_mut.rs - buf::buf_mut::BufMut::writer (line 1048) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain (line 15) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::first_ref (line 61) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::first_mut (line 77) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::into_inner (line 131) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::last_mut (line 112) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::last_ref (line 96) ... ok
+[INFO] [stdout] test src\buf\chain.rs - buf::chain::Chain<T, U>::new (line 40) ... ok
+[INFO] [stdout] test src\buf\from_buf.rs - buf::from_buf::FromBuf (line 17) ... ok
+[INFO] [stdout] test src\buf\from_buf.rs - buf::from_buf::FromBuf (line 29) ... ok
+[INFO] [stdout] test src\buf\from_buf.rs - buf::from_buf::FromBuf (line 40) ... ok
+[INFO] [stdout] test src\buf\from_buf.rs - buf::from_buf::FromBuf::from_buf (line 77) ... ok
+[INFO] [stdout] test src\buf\into_buf.rs - buf::into_buf::IntoBuf (line 13) ... ok
+[INFO] [stdout] test src\buf\into_buf.rs - buf::into_buf::IntoBuf::into_buf (line 34) ... ok
+[INFO] [stdout] test src\buf\iter.rs - buf::iter::Iter (line 11) ... ok
+[INFO] [stdout] test src\buf\iter.rs - buf::iter::Iter<T>::get_mut (line 76) ... ok
+[INFO] [stdout] test src\buf\iter.rs - buf::iter::Iter<T>::get_ref (line 56) ... ok
+[INFO] [stdout] test src\buf\iter.rs - buf::iter::Iter<T>::into_inner (line 35) ... ok
+[INFO] [stdout] test src\buf\reader.rs - buf::reader::Reader<B>::get_ref (line 26) ... ok
+[INFO] [stdout] test src\buf\reader.rs - buf::reader::Reader<B>::get_mut (line 44) ... ok
+[INFO] [stdout] test src\buf\reader.rs - buf::reader::Reader<B>::into_inner (line 64) ... ok
+[INFO] [stdout] test src\buf\take.rs - buf::take::Take<T>::get_mut (line 71) ... ok
+[INFO] [stdout] test src\buf\take.rs - buf::take::Take<T>::get_ref (line 53) ... ok
+[INFO] [stdout] test src\buf\take.rs - buf::take::Take<T>::into_inner (line 27) ... ok
+[INFO] [stdout] test src\buf\take.rs - buf::take::Take<T>::limit (line 96) ... ok
+[INFO] [stdout] test src\buf\take.rs - buf::take::Take<T>::set_limit (line 119) ... ok
+[INFO] [stdout] test src\buf\writer.rs - buf::writer::Writer<B>::get_mut (line 43) ... ok
+[INFO] [stdout] test src\buf\writer.rs - buf::writer::Writer<B>::get_ref (line 26) ... ok
+[INFO] [stdout] test src\buf\writer.rs - buf::writer::Writer<B>::into_inner (line 60) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes (line 23) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::clear (line 747) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::extend_from_slice (line 804) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::from_static (line 445) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::is_empty (line 477) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::len (line 462) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::new (line 427) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::slice (line 497) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::slice_from (line 538) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::slice_ref (line 590) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::slice_to (line 563) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::split_off (line 629) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::split_to (line 668) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::truncate (line 714) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::try_mut (line 766) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::Bytes::with_capacity (line 402) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut (line 131) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::capacity (line 1133) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::clear (line 1323) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::extend_from_slice (line 1454) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::is_empty (line 1118) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::freeze (line 1152) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::len (line 1103) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::new (line 1082) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::reserve (line 1411) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::reserve (line 1421) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::resize (line 1342) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::set_len (line 1368) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::split_off (line 1183) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::split_to (line 1251) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::take (line 1217) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::truncate (line 1290) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::unsplit (line 1474) ... ok
+[INFO] [stdout] test src\bytes.rs - bytes::BytesMut::with_capacity (line 1056) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 25) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 128 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "6135e4b2309cb7aa925a665115287ac52666c70ffc7ffc53d7ec3d7e14b0ce31"`
+[INFO] running `"docker" "rm" "-f" "6135e4b2309cb7aa925a665115287ac52666c70ffc7ffc53d7ec3d7e14b0ce31"`
+[INFO] [stdout] 6135e4b2309cb7aa925a665115287ac52666c70ffc7ffc53d7ec3d7e14b0ce31

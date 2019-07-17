@@ -1,0 +1,810 @@
+[INFO] fetching crate curl 0.4.22...
+[INFO] extracting crate curl 0.4.22 into work\ex\default\sources\stable\reg\curl\0.4.22
+[INFO] extracting crate curl 0.4.22 into work\ex\default\sources\beta\reg\curl\0.4.22
+[INFO] validating manifest of curl-0.4.22 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of curl-0.4.22 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing curl-0.4.22
+[INFO] removed 1 missing tests
+[INFO] finished frobbing curl-0.4.22
+[INFO] frobbed toml for curl-0.4.22 written to work\ex\default\sources\stable\reg\curl\0.4.22\Cargo.toml
+[INFO] started frobbing curl-0.4.22
+[INFO] removed 1 missing tests
+[INFO] finished frobbing curl-0.4.22
+[INFO] frobbed toml for curl-0.4.22 written to work\ex\default\sources\beta\reg\curl\0.4.22\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded socket2 v0.3.9
+[INFO] [stderr]   Downloaded mio-extras v2.0.5
+[INFO] [stderr]   Downloaded lazycell v1.2.1
+[INFO] [stderr]   Downloaded libnghttp2-sys v0.1.1
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing curl-0.4.22 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\curl\\0.4.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6411f845025e765c443ceff232c10d03459f65e4d8e7278d2403e41b6a6e593e
+[INFO] running `"docker" "start" "-a" "6411f845025e765c443ceff232c10d03459f65e4d8e7278d2403e41b6a6e593e"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling curl v0.4.22 (C:\crater\workdir)
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling curl-sys v0.4.20
+[INFO] [stderr]    Compiling socket2 v0.3.9
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:108:23
+[INFO] [stderr]     |
+[INFO] [stderr] 108 |     write: Option<Box<FnMut(&[u8]) -> Result<usize, WriteError> + 'a>>,
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&[u8]) -> Result<usize, WriteError> + 'a`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:109:22
+[INFO] [stderr]     |
+[INFO] [stderr] 109 |     read: Option<Box<FnMut(&mut [u8]) -> Result<usize, ReadError> + 'a>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&mut [u8]) -> Result<usize, ReadError> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:110:22
+[INFO] [stderr]     |
+[INFO] [stderr] 110 |     seek: Option<Box<FnMut(SeekFrom) -> SeekResult + 'a>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(SeekFrom) -> SeekResult + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:111:23
+[INFO] [stderr]     |
+[INFO] [stderr] 111 |     debug: Option<Box<FnMut(InfoType, &[u8]) + 'a>>,
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(InfoType, &[u8]) + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:112:24
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |     header: Option<Box<FnMut(&[u8]) -> bool + 'a>>,
+[INFO] [stderr]     |                        ^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&[u8]) -> bool + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:113:26
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |     progress: Option<Box<FnMut(f64, f64, f64, f64) -> bool + 'a>>,
+[INFO] [stderr]     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(f64, f64, f64, f64) -> bool + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:114:25
+[INFO] [stderr]     |
+[INFO] [stderr] 114 |     ssl_ctx: Option<Box<FnMut(*mut c_void) -> Result<(), Error> + 'a>>,
+[INFO] [stderr]     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(*mut c_void) -> Result<(), Error> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\multi.rs:38:17
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |     socket: Box<FnMut(Socket, SocketEvents, usize) + Send>,
+[INFO] [stderr]    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Socket, SocketEvents, usize) + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\multi.rs:39:16
+[INFO] [stderr]    |
+[INFO] [stderr] 39 |     timer: Box<FnMut(Option<Duration>) -> bool + Send>,
+[INFO] [stderr]    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Option<Duration>) -> bool + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:137:16
+[INFO] [stderr]     |
+[INFO] [stderr] 137 |         f: Box<FnMut(Socket, SocketEvents, usize) + Send>,
+[INFO] [stderr]     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Socket, SocketEvents, usize) + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:236:16
+[INFO] [stderr]     |
+[INFO] [stderr] 236 |         f: Box<FnMut(Option<Duration>) -> bool + Send>,
+[INFO] [stderr]     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Option<Duration>) -> bool + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:414:33
+[INFO] [stderr]     |
+[INFO] [stderr] 414 |     fn _messages(&self, f: &mut FnMut(Message)) {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Message)`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]  --> src\panic.rs:5:53
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | thread_local!(static LAST_ERROR: RefCell<Option<Box<Any + Send>>> = {
+[INFO] [stderr]   |                                                     ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\easy\windows.rs:91:13
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |         let mut store = match CertStore::open_current_user("ROOT") {
+[INFO] [stderr]    |             ----^^^^^
+[INFO] [stderr]    |             |
+[INFO] [stderr]    |             help: remove this `mut`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 10s
+[INFO] running `"docker" "inspect" "6411f845025e765c443ceff232c10d03459f65e4d8e7278d2403e41b6a6e593e"`
+[INFO] running `"docker" "rm" "-f" "6411f845025e765c443ceff232c10d03459f65e4d8e7278d2403e41b6a6e593e"`
+[INFO] [stdout] 6411f845025e765c443ceff232c10d03459f65e4d8e7278d2403e41b6a6e593e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\curl\\0.4.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 955278d34cf7addc0b09f4144b0bdfad8e9a79754651d05f153a89a719face24
+[INFO] running `"docker" "start" "-a" "955278d34cf7addc0b09f4144b0bdfad8e9a79754651d05f153a89a719face24"`
+[INFO] [stderr]    Compiling lazycell v1.2.1
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19
+[INFO] [stderr]    Compiling mio-extras v2.0.5
+[INFO] [stderr]    Compiling curl v0.4.22 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:108:23
+[INFO] [stderr]     |
+[INFO] [stderr] 108 |     write: Option<Box<FnMut(&[u8]) -> Result<usize, WriteError> + 'a>>,
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&[u8]) -> Result<usize, WriteError> + 'a`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:109:22
+[INFO] [stderr]     |
+[INFO] [stderr] 109 |     read: Option<Box<FnMut(&mut [u8]) -> Result<usize, ReadError> + 'a>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&mut [u8]) -> Result<usize, ReadError> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:110:22
+[INFO] [stderr]     |
+[INFO] [stderr] 110 |     seek: Option<Box<FnMut(SeekFrom) -> SeekResult + 'a>>,
+[INFO] [stderr]     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(SeekFrom) -> SeekResult + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:111:23
+[INFO] [stderr]     |
+[INFO] [stderr] 111 |     debug: Option<Box<FnMut(InfoType, &[u8]) + 'a>>,
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(InfoType, &[u8]) + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:112:24
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |     header: Option<Box<FnMut(&[u8]) -> bool + 'a>>,
+[INFO] [stderr]     |                        ^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(&[u8]) -> bool + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:113:26
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |     progress: Option<Box<FnMut(f64, f64, f64, f64) -> bool + 'a>>,
+[INFO] [stderr]     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(f64, f64, f64, f64) -> bool + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\easy\handle.rs:114:25
+[INFO] [stderr]     |
+[INFO] [stderr] 114 |     ssl_ctx: Option<Box<FnMut(*mut c_void) -> Result<(), Error> + 'a>>,
+[INFO] [stderr]     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(*mut c_void) -> Result<(), Error> + 'a`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\multi.rs:38:17
+[INFO] [stderr]    |
+[INFO] [stderr] 38 |     socket: Box<FnMut(Socket, SocketEvents, usize) + Send>,
+[INFO] [stderr]    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Socket, SocketEvents, usize) + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]   --> src\multi.rs:39:16
+[INFO] [stderr]    |
+[INFO] [stderr] 39 |     timer: Box<FnMut(Option<Duration>) -> bool + Send>,
+[INFO] [stderr]    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Option<Duration>) -> bool + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:137:16
+[INFO] [stderr]     |
+[INFO] [stderr] 137 |         f: Box<FnMut(Socket, SocketEvents, usize) + Send>,
+[INFO] [stderr]     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Socket, SocketEvents, usize) + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:236:16
+[INFO] [stderr]     |
+[INFO] [stderr] 236 |         f: Box<FnMut(Option<Duration>) -> bool + Send>,
+[INFO] [stderr]     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Option<Duration>) -> bool + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\multi.rs:414:33
+[INFO] [stderr]     |
+[INFO] [stderr] 414 |     fn _messages(&self, f: &mut FnMut(Message)) {
+[INFO] [stderr]     |                                 ^^^^^^^^^^^^^^ help: use `dyn`: `dyn FnMut(Message)`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]  --> src\panic.rs:5:53
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | thread_local!(static LAST_ERROR: RefCell<Option<Box<Any + Send>>> = {
+[INFO] [stderr]   |                                                     ^^^^^^^^^^ help: use `dyn`: `dyn Any + Send`
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused return value of `std::result::Result::<T, E>::is_ok` that must be used
+[INFO] [stderr]    --> tests\easy.rs:808:5
+[INFO] [stderr]     |
+[INFO] [stderr] 808 |     h.unix_socket("/var/something.socks").is_ok();
+[INFO] [stderr]     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(unused_must_use)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\easy\windows.rs:91:13
+[INFO] [stderr]    |
+[INFO] [stderr] 91 |         let mut store = match CertStore::open_current_user("ROOT") {
+[INFO] [stderr]    |             ----^^^^^
+[INFO] [stderr]    |             |
+[INFO] [stderr]    |             help: remove this `mut`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 25.06s
+[INFO] running `"docker" "inspect" "955278d34cf7addc0b09f4144b0bdfad8e9a79754651d05f153a89a719face24"`
+[INFO] running `"docker" "rm" "-f" "955278d34cf7addc0b09f4144b0bdfad8e9a79754651d05f153a89a719face24"`
+[INFO] [stdout] 955278d34cf7addc0b09f4144b0bdfad8e9a79754651d05f153a89a719face24
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\curl\\0.4.22,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 9ab24e0a79125c9b8f012722b6a450ce685ad4f4731a2aef97560800ed3ff6ad
+[INFO] running `"docker" "start" "-a" "9ab24e0a79125c9b8f012722b6a450ce685ad4f4731a2aef97560800ed3ff6ad"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.76s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\curl-70acf7becb7b3229.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test easy::handler::double_seconds_to_duration_sub_second1 ... ok
+[INFO] [stdout] test easy::handler::double_seconds_to_duration_sub_second2 ... ok
+[INFO] [stdout] test easy::handler::double_seconds_to_duration_whole_second ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\atexit-387b46ddfdf85346.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\easy-0803d0dcb62ca6b7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 30 tests
+[INFO] [stdout] test check_unix_socket ... ok
+[INFO] [stdout] test cookie ... ok
+[INFO] [stdout] test accept_encoding ... ok
+[INFO] [stdout] test abort_read ... ok
+[INFO] [stdout] test dns_servers ... ok
+[INFO] [stdout] test custom_headers ... ok
+[INFO] [stdout] test get_smoke ... ok
+[INFO] [stdout] test getters ... ok
+[INFO] [stdout] test headers ... ok
+[INFO] [stdout] test misc ... ok
+[INFO] [stdout] test noproxy ... ignored
+[INFO] [stdout] test get_path ... ok
+[INFO] [stdout] test follow_location ... ok
+[INFO] [stdout] test fail_on_error ... ok
+[INFO] [stdout] test panic_in_callback ... ok
+[INFO] [stdout] test pause_write_then_resume ... ok
+[INFO] [stdout] test perform_in_perform_is_bad ... ok
+[INFO] [stdout] test post3 ... ok
+[INFO] [stdout] test post1 ... ok
+[INFO] [stdout] test port ... ok
+[INFO] [stdout] test post2 ... ok
+[INFO] [stdout] test proxy ... ok
+[INFO] [stdout] test progress ... ok
+[INFO] [stdout] test resolve ... ok
+[INFO] [stdout] test url_encoding ... ok
+[INFO] [stdout] test useragent ... ok
+[INFO] [stdout] test put ... ok
+[INFO] [stdout] test referer ... ok
+[INFO] [stdout] test userpass ... ok
+[INFO] [stdout] test write_callback ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 29 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\multi-d4d881b0e48d9552.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\post-d6aec2f7598ea30f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test buffer ... ok
+[INFO] [stdout] test custom ... ok
+[INFO] [stdout] test file ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests curl
+[INFO] [stdout] 
+[INFO] [stdout] running 15 tests
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy (line 34) ... ok
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::header_function (line 489) ... FAILED
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy (line 42) ... FAILED
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::read_function (line 276) ... ok
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy (line 58) ... FAILED
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::read_function (line 291) ... ok
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::header_function (line 505) ... FAILED
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::write_function (line 219) ... FAILED
+[INFO] [stdout] test src\easy\handle.rs - easy::handle::Easy::write_function (line 205) ... FAILED
+[INFO] [stdout] test src\easy\handler.rs - easy::handler::Easy2<H>::resolve (line 1740) ... ok
+[INFO] [stdout] test src\easy\handler.rs - easy::handler::Easy2 (line 357) ... FAILED
+[INFO] [stdout] test src\lib.rs -  (line 18) ... ok
+[INFO] [stdout] test src\easy\handler.rs - easy::handler::Easy2<H>::http_headers (line 1262) ... FAILED
+[INFO] [stdout] test src\easy\handler.rs - easy::handler::Handler (line 31) ... FAILED
+[INFO] [stdout] test src\multi.rs - multi::Multi::wait (line 534) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy::header_function (line 489) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff770d642fc - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff770d642fc - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff770d6738e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff770d6738e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff770d67013 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff770d67c20 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff770d67754 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff770d67639 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff770d730ac - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff770d32b31 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff770d312a1 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff770d3235a - alloc::alloc::exchange_malloc::hc94936c5e6dc3733
+[INFO] [stdout]   12:     0x7ff770d31346 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff770d67597 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff770d67597 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff770d6aaf2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff770d67f52 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff770d67f52 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff770d67f52 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff770d31324 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff770d32490 - main
+[INFO] [stdout]   21:     0x7ff770dd4de4 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff770dd4de4 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy (line 42) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff72a96591c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff72a96591c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff72a9689be - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff72a9689be - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff72a968643 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff72a969250 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff72a968d84 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff72a968c69 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff72a97488c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff72a943181 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff72a933731 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff72a931a5a - <std::io::buffered::BufWriter<W> as core::ops::drop::Drop>::drop::h6b377ba0868fadc0
+[INFO] [stdout]   12:     0x7ff72a931bc6 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff72a968bc7 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff72a968bc7 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff72a96c2d2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff72a969582 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff72a969582 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff72a969582 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff72a931ba4 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff72a931b60 - main
+[INFO] [stdout]   21:     0x7ff72a9d65c4 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff72a9d65c4 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy (line 58) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff77d304f9c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff77d304f9c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff77d30802e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff77d30802e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff77d307cb3 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff77d3088c0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff77d3083f4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff77d3082d9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff77d313d4c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff77d2d2d01 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff77d2d1281 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff77d2d24af - alloc::alloc::exchange_malloc::hc94936c5e6dc3733
+[INFO] [stdout]   12:     0x7ff77d2d1326 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff77d308237 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff77d308237 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff77d30b792 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff77d308bf2 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff77d308bf2 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff77d308bf2 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff77d2d1304 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff77d2d2660 - main
+[INFO] [stdout]   21:     0x7ff77d375a84 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff77d375a84 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy::header_function (line 505) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff74248509c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff74248509c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff74248812e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff74248812e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff742487db3 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff7424889c0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7424884f4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7424883d9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff742493e4c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff742454911 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff742451531 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff7424510bf - __ImageBase
+[INFO] [stdout]   12:     0x7ff742452be6 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff742488337 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff742488337 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff74248b892 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff742488cf2 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff742488cf2 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff742488cf2 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff742452bc4 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff742451270 - main
+[INFO] [stdout]   21:     0x7ff7424f5b84 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff7424f5b84 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy::write_function (line 219) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7ef462f2c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7ef462f2c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7ef465fbe - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7ef465fbe - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7ef465c43 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff7ef466850 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7ef466384 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7ef466269 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7ef471cdc - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff7ef432bb1 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff7ef4311b1 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff7ef43239a - alloc::alloc::exchange_malloc::hc94936c5e6dc3733
+[INFO] [stdout]   12:     0x7ff7ef431256 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff7ef4661c7 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff7ef4661c7 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff7ef469722 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7ef466b82 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7ef466b82 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7ef466b82 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff7ef431234 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff7ef4324d0 - main
+[INFO] [stdout]   21:     0x7ff7ef4d39f4 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff7ef4d39f4 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handle.rs - easy::handle::Easy::write_function (line 205) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff76c8c566c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff76c8c566c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff76c8c870e - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff76c8c870e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff76c8c8393 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff76c8c8fa0 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff76c8c8ad4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff76c8c89b9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff76c8d45dc - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff76c8a3181 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff76c893731 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff76c891bda - <std::io::error::ErrorKind as core::cmp::PartialEq>::eq::h1825744167659443
+[INFO] [stdout]   12:     0x7ff76c891a36 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff76c8c8917 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff76c8c8917 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff76c8cc022 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff76c8c92d2 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff76c8c92d2 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff76c8c92d2 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff76c891a14 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff76c891ce0 - main
+[INFO] [stdout]   21:     0x7ff76c936314 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff76c936314 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handler.rs - easy::handler::Easy2 (line 357) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff67a400c6c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff67a400c6c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff67a403cfe - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff67a403cfe - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff67a403983 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff67a404590 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stderr] error: test failed, to rerun pass '--doc'
+[INFO] [stdout]    6:     0x7ff67a4040c4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff67a403fa9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff67a40fa1c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff67a3ddef1 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff67a3da2f1 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff67a3d9429 - curl::easy::handler::Handler::progress::h08120720cbeeb91f
+[INFO] [stdout]   12:     0x7ff67a3d4706 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   13:     0x7ff67a403f07 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff67a403f07 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff67a407462 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff67a4048c2 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff67a4048c2 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff67a4048c2 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff67a3d46e4 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff67a3d9770 - main
+[INFO] [stdout]   21:     0x7ff67a471754 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff67a471754 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handler.rs - easy::handler::Easy2<H>::http_headers (line 1262) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff66911281c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff66911281c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff6691158ae - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff6691158ae - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff669115533 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff669116140 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff669115c74 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff669115b59 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff6691215cc - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff6690e2781 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff6690e1081 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff6690e1ff9 - core::ptr::real_drop_in_place::hc2f67d338d7c8b76
+[INFO] [stdout]   12:     0x7ff6690e1126 - std::rt::lang_start::{{closure}}::hc49d1ae605e24bca
+[INFO] [stdout]   13:     0x7ff669115ab7 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff669115ab7 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff669119012 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff669116472 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff669116472 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff669116472 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff6690e1104 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff6690e20a0 - main
+[INFO] [stdout]   21:     0x7ff6691832e4 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff6691832e4 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\easy\handler.rs - easy::handler::Handler (line 31) stdout ----
+[INFO] [stdout] Test executable failed (exit code 101).
+[INFO] [stdout] 
+[INFO] [stdout] stderr:
+[INFO] [stdout] thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { description: "Couldn\'t resolve host name", code: 6, extra: None }', src\libcore\result.rs:999:5
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff619640c6c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff619640c6c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff619643cfe - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff619643cfe - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff619643983 - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:214
+[INFO] [stdout]    5:     0x7ff619644590 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff6196440c4 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff619643fa9 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff61964fa1c - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff61961def1 - core::result::unwrap_failed<curl::error::Error>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\src\libcore\macros.rs:18
+[INFO] [stdout]   10:     0x7ff61961a2f1 - core::result::Result<T,E>::unwrap::h4341445fdbb21136
+[INFO] [stdout]   11:     0x7ff619619429 - curl::easy::handler::Handler::progress::h08120720cbeeb91f
+[INFO] [stdout]   12:     0x7ff619614706 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   13:     0x7ff619643f07 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:49
+[INFO] [stdout]   14:     0x7ff619643f07 - std::panicking::try::do_call<closure,i32>
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:296
+[INFO] [stdout]   15:     0x7ff619647462 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff6196448c2 - std::panicking::try
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff6196448c2 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff6196448c2 - std::rt::lang_start_internal
+[INFO] [stdout]                                at /rustc/2ba6de7e28692578b33251e73fc6f8ae6da41336\/src\libstd\rt.rs:48
+[INFO] [stdout]   19:     0x7ff6196146e4 - std::rt::lang_start::hc1b577416671949f
+[INFO] [stdout]   20:     0x7ff619619770 - main
+[INFO] [stdout]   21:     0x7ff6196b1754 - invoke_main
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stdout]   22:     0x7ff6196b1754 - __scrt_common_main_seh
+[INFO] [stdout]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stdout]   23:     0x7ff99a147974 - BaseThreadInitThunk
+[INFO] [stdout]   24:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy (line 42)
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy (line 58)
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy::header_function (line 489)
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy::header_function (line 505)
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy::write_function (line 205)
+[INFO] [stdout]     src\easy\handle.rs - easy::handle::Easy::write_function (line 219)
+[INFO] [stdout]     src\easy\handler.rs - easy::handler::Easy2 (line 357)
+[INFO] [stdout]     src\easy\handler.rs - easy::handler::Easy2<H>::http_headers (line 1262)
+[INFO] [stdout]     src\easy\handler.rs - easy::handler::Handler (line 31)
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 6 passed; 9 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9ab24e0a79125c9b8f012722b6a450ce685ad4f4731a2aef97560800ed3ff6ad"`
+[INFO] running `"docker" "rm" "-f" "9ab24e0a79125c9b8f012722b6a450ce685ad4f4731a2aef97560800ed3ff6ad"`
+[INFO] [stdout] 9ab24e0a79125c9b8f012722b6a450ce685ad4f4731a2aef97560800ed3ff6ad

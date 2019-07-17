@@ -1,0 +1,266 @@
+[INFO] fetching crate crossbeam-channel 0.3.8...
+[INFO] extracting crate crossbeam-channel 0.3.8 into work\ex\default\sources\stable\reg\crossbeam-channel\0.3.8
+[INFO] extracting crate crossbeam-channel 0.3.8 into work\ex\default\sources\beta\reg\crossbeam-channel\0.3.8
+[INFO] validating manifest of crossbeam-channel-0.3.8 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of crossbeam-channel-0.3.8 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing crossbeam-channel-0.3.8
+[INFO] finished frobbing crossbeam-channel-0.3.8
+[INFO] frobbed toml for crossbeam-channel-0.3.8 written to work\ex\default\sources\stable\reg\crossbeam-channel\0.3.8\Cargo.toml
+[INFO] started frobbing crossbeam-channel-0.3.8
+[INFO] finished frobbing crossbeam-channel-0.3.8
+[INFO] frobbed toml for crossbeam-channel-0.3.8 written to work\ex\default\sources\beta\reg\crossbeam-channel\0.3.8\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing crossbeam-channel-0.3.8 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\crossbeam-channel\\0.3.8,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 6107270fca011915b4b91cb8d4e609a67e883bf1b36be635162ead4f47fd1b1b
+[INFO] running `"docker" "start" "-a" "6107270fca011915b4b91cb8d4e609a67e883bf1b36be635162ead4f47fd1b1b"`
+[INFO] [stderr]    Compiling crossbeam-channel v0.3.8 (C:\crater\workdir)
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:135:32
+[INFO] [stderr]     |
+[INFO] [stderr] 135 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr]     |
+[INFO] [stderr]     = note: #[warn(bare_trait_objects)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:186:32
+[INFO] [stderr]     |
+[INFO] [stderr] 186 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:257:32
+[INFO] [stderr]     |
+[INFO] [stderr] 257 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:320:32
+[INFO] [stderr]     |
+[INFO] [stderr] 320 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:342:32
+[INFO] [stderr]     |
+[INFO] [stderr] 342 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:390:32
+[INFO] [stderr]     |
+[INFO] [stderr] 390 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:432:32
+[INFO] [stderr]     |
+[INFO] [stderr] 432 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\err.rs:448:32
+[INFO] [stderr]     |
+[INFO] [stderr] 448 |     fn cause(&self) -> Option<&error::Error> {
+[INFO] [stderr]     |                                ^^^^^^^^^^^^ help: use `dyn`: `dyn error::Error`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:175:22
+[INFO] [stderr]     |
+[INFO] [stderr] 175 |     handles: &mut [(&SelectHandle, usize, *const u8)],
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:224:55
+[INFO] [stderr]     |
+[INFO] [stderr] 224 |                 if handle.register(Operation::hook::<&SelectHandle>(handle), cx) {
+[INFO] [stderr]     |                                                       ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:263:54
+[INFO] [stderr]     |
+[INFO] [stderr] 263 |                 handle.unregister(Operation::hook::<&SelectHandle>(handle));
+[INFO] [stderr]     |                                                      ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:283:74
+[INFO] [stderr]     |
+[INFO] [stderr] 283 |                         if sel == Selected::Operation(Operation::hook::<&SelectHandle>(handle)) {
+[INFO] [stderr]     |                                                                          ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:322:22
+[INFO] [stderr]     |
+[INFO] [stderr] 322 |     handles: &mut [(&SelectHandle, usize, *const u8)],
+[INFO] [stderr]     |                      ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:379:47
+[INFO] [stderr]     |
+[INFO] [stderr] 379 |                 let oper = Operation::hook::<&SelectHandle>(handle);
+[INFO] [stderr]     |                                               ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:417:51
+[INFO] [stderr]     |
+[INFO] [stderr] 417 |                 handle.unwatch(Operation::hook::<&SelectHandle>(handle));
+[INFO] [stderr]     |                                                   ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:426:55
+[INFO] [stderr]     |
+[INFO] [stderr] 426 |                         let oper = Operation::hook::<&SelectHandle>(handle);
+[INFO] [stderr]     |                                                       ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: trait objects without an explicit `dyn` are deprecated
+[INFO] [stderr]    --> src\select.rs:529:29
+[INFO] [stderr]     |
+[INFO] [stderr] 529 |     handles: SmallVec<[(&'a SelectHandle, usize, *const u8); 4]>,
+[INFO] [stderr]     |                             ^^^^^^^^^^^^ help: use `dyn`: `dyn SelectHandle`
+[INFO] [stderr] 
+[INFO] [stderr] warning: variable does not need to be mutable
+[INFO] [stderr]   --> src\flavors\tick.rs:63:21
+[INFO] [stderr]    |
+[INFO] [stderr] 63 |                 let mut delivery_time = self.delivery_time.load();
+[INFO] [stderr]    |                     ----^^^^^^^^^^^^^
+[INFO] [stderr]    |                     |
+[INFO] [stderr]    |                     help: remove this `mut`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_mut)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.61s
+[INFO] running `"docker" "inspect" "6107270fca011915b4b91cb8d4e609a67e883bf1b36be635162ead4f47fd1b1b"`
+[INFO] running `"docker" "rm" "-f" "6107270fca011915b4b91cb8d4e609a67e883bf1b36be635162ead4f47fd1b1b"`
+[INFO] [stdout] 6107270fca011915b4b91cb8d4e609a67e883bf1b36be635162ead4f47fd1b1b
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\crossbeam-channel\\0.3.8,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a15462d92670ae14dbdbb77dd36682db14f2b733470ea68dca5151068d87ca71
+[INFO] running `"docker" "start" "-a" "a15462d92670ae14dbdbb77dd36682db14f2b733470ea68dca5151068d87ca71"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling arc-swap v0.3.11
+[INFO] [stderr]    Compiling signal-hook-registry v1.0.1
+[INFO] [stderr] error[E0432]: unresolved imports `libc::sigaction`, `libc::siginfo_t`, `libc::sigset_t`, `libc::SIG_BLOCK`, `libc::SIG_SETMASK`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:58:27
+[INFO] [stderr]    |
+[INFO] [stderr] 58 | use libc::{c_int, c_void, sigaction, siginfo_t, sigset_t, SIG_BLOCK, SIG_SETMASK};
+[INFO] [stderr]    |                           ^^^^^^^^^  ^^^^^^^^^  ^^^^^^^^  ^^^^^^^^^  ^^^^^^^^^^^ no `SIG_SETMASK` in the root
+[INFO] [stderr]    |                           |          |          |         |
+[INFO] [stderr]    |                           |          |          |         no `SIG_BLOCK` in the root
+[INFO] [stderr]    |                           |          |          no `sigset_t` in the root
+[INFO] [stderr]    |                           |          no `siginfo_t` in the root
+[INFO] [stderr]    |                           no `sigaction` in the root
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved imports `libc::SIGKILL`, `libc::SIGSTOP`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:60:28
+[INFO] [stderr]    |
+[INFO] [stderr] 60 | use libc::{SIGFPE, SIGILL, SIGKILL, SIGSEGV, SIGSTOP};
+[INFO] [stderr]    |                            ^^^^^^^           ^^^^^^^ no `SIGSTOP` in the root
+[INFO] [stderr]    |                            |
+[INFO] [stderr]    |                            no `SIGKILL` in the root
+[INFO] [stderr]    |                            help: a similar name exists in the module: `SIGILL`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `sigaction` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:101:28
+[INFO] [stderr]     |
+[INFO] [stderr] 101 |         let mut new: libc::sigaction = unsafe { mem::zeroed() };
+[INFO] [stderr]     |                            ^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SA_RESTART` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:106:27
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         let flags = libc::SA_RESTART | libc::SA_NOCLDSTOP;
+[INFO] [stderr]     |                           ^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SA_NOCLDSTOP` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:106:46
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         let flags = libc::SA_RESTART | libc::SA_NOCLDSTOP;
+[INFO] [stderr]     |                                              ^^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SA_SIGINFO` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:109:25
+[INFO] [stderr]     |
+[INFO] [stderr] 109 |         siginfo = libc::SA_SIGINFO as _;
+[INFO] [stderr]     |                         ^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `sigaction` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:113:28
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |         let mut old: libc::sigaction = unsafe { mem::zeroed() };
+[INFO] [stderr]     |                            ^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigaction` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:115:27
+[INFO] [stderr]     |
+[INFO] [stderr] 115 |         if unsafe { libc::sigaction(signal, &new, &mut old) } != 0 {
+[INFO] [stderr]     |                           ^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SIG_DFL` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:166:39
+[INFO] [stderr]     |
+[INFO] [stderr] 166 |         if fptr != 0 && fptr != libc::SIG_DFL && fptr != libc::SIG_IGN {
+[INFO] [stderr]     |                                       ^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SIG_IGN` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:166:64
+[INFO] [stderr]     |
+[INFO] [stderr] 166 |         if fptr != 0 && fptr != libc::SIG_DFL && fptr != libc::SIG_IGN {
+[INFO] [stderr]     |                                                                ^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find value `SA_SIGINFO` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:178:33
+[INFO] [stderr]     |
+[INFO] [stderr] 178 |                 siginfo = libc::SA_SIGINFO as _;
+[INFO] [stderr]     |                                 ^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigemptyset` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:201:15
+[INFO] [stderr]     |
+[INFO] [stderr] 201 |         libc::sigemptyset(&mut newsigs);
+[INFO] [stderr]     |               ^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigaddset` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:202:15
+[INFO] [stderr]     |
+[INFO] [stderr] 202 |         libc::sigaddset(&mut newsigs, signal);
+[INFO] [stderr]     |               ^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigemptyset` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:204:15
+[INFO] [stderr]     |
+[INFO] [stderr] 204 |         libc::sigemptyset(&mut oldsigs);
+[INFO] [stderr]     |               ^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigprocmask` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:205:18
+[INFO] [stderr]     |
+[INFO] [stderr] 205 |         if libc::sigprocmask(SIG_BLOCK, &newsigs, &mut oldsigs) == 0 {
+[INFO] [stderr]     |                  ^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0412]: cannot find type `sigset_t` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:213:35
+[INFO] [stderr]     |
+[INFO] [stderr] 213 | fn restore_signals(signals: libc::sigset_t) -> Result<(), Error> {
+[INFO] [stderr]     |                                   ^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `sigprocmask` in module `libc`
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\signal-hook-registry-1.0.1\src\lib.rs:214:23
+[INFO] [stderr]     |
+[INFO] [stderr] 214 |     if unsafe { libc::sigprocmask(SIG_SETMASK, &signals, ptr::null_mut()) } == 0 {
+[INFO] [stderr]     |                       ^^^^^^^^^^^ not found in `libc`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 17 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0412, E0425, E0432.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0412`.
+[INFO] [stderr] error: Could not compile `signal-hook-registry`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "a15462d92670ae14dbdbb77dd36682db14f2b733470ea68dca5151068d87ca71"`
+[INFO] running `"docker" "rm" "-f" "a15462d92670ae14dbdbb77dd36682db14f2b733470ea68dca5151068d87ca71"`
+[INFO] [stdout] a15462d92670ae14dbdbb77dd36682db14f2b733470ea68dca5151068d87ca71

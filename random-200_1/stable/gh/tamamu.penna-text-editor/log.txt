@@ -1,0 +1,94 @@
+[INFO] cloning repository tamamu/penna-text-editor
+[INFO] running `"git" "clone" "--bare" "git://github.com/tamamu/penna-text-editor.git" "work\\cache\\sources\\gh\\tamamu\\penna-text-editor"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\tamamu\penna-text-editor'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tamamu\\penna-text-editor" "work\\ex\\default\\sources\\stable\\gh\\tamamu\\penna-text-editor"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\tamamu\penna-text-editor'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\tamamu\\penna-text-editor" "work\\ex\\default\\sources\\beta\\gh\\tamamu\\penna-text-editor"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\tamamu\penna-text-editor'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] d3c0a70c216755465e1d0cf65a1fa3be37cab65a
+[INFO] sha for GitHub repo tamamu/penna-text-editor: d3c0a70c216755465e1d0cf65a1fa3be37cab65a
+[INFO] validating manifest of tamamu/penna-text-editor on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tamamu/penna-text-editor on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tamamu/penna-text-editor
+[INFO] finished frobbing tamamu/penna-text-editor
+[INFO] frobbed toml for tamamu/penna-text-editor written to work\ex\default\sources\stable\gh\tamamu\penna-text-editor\Cargo.toml
+[INFO] started frobbing tamamu/penna-text-editor
+[INFO] finished frobbing tamamu/penna-text-editor
+[INFO] frobbed toml for tamamu/penna-text-editor written to work\ex\default\sources\beta\gh\tamamu\penna-text-editor\Cargo.toml
+[INFO] crate tamamu/penna-text-editor already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gtk.git`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/cairo`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk-pixbuf`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/sys`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gio`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/glib`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/pango`
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\tamamu\penna-text-editor\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk.git`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gtk.git`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/cairo`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk-pixbuf`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/sys`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gio`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/glib`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/pango`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/atk`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk.git`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gtk.git`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/cairo`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gdk-pixbuf`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/sys`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/gio`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/glib`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/pango`
+[INFO] [stderr]     Updating git repository `https://github.com/gtk-rs/atk`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded fragile v0.3.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing tamamu/penna-text-editor against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\tamamu\\penna-text-editor,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] d1591d8506db906bc3724e59343f2ad11f132e0898751783c47ecc8207316bcb
+[INFO] running `"docker" "start" "-a" "d1591d8506db906bc3724e59343f2ad11f132e0898751783c47ecc8207316bcb"`
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling gio v0.7.0 (https://github.com/gtk-rs/gio#f52e1f3c)
+[INFO] [stderr]    Compiling cairo-rs v0.7.0 (https://github.com/gtk-rs/cairo#d66fce03)
+[INFO] [stderr]    Compiling pango v0.7.0 (https://github.com/gtk-rs/pango#54fa7b43)
+[INFO] [stderr]    Compiling fragile v0.3.0
+[INFO] [stderr]    Compiling gdk-pixbuf v0.7.0 (https://github.com/gtk-rs/gdk-pixbuf#8dabbf8c)
+[INFO] [stderr]    Compiling gdk v0.11.0 (https://github.com/gtk-rs/gdk.git#eac54029)
+[INFO] [stderr]    Compiling atk v0.7.0 (https://github.com/gtk-rs/atk#6fab9773)
+[INFO] [stderr]    Compiling gtk v0.7.0 (https://github.com/gtk-rs/gtk.git#292268ad)
+[INFO] [stderr]    Compiling lazy_static v0.1.16
+[INFO] [stderr]    Compiling glib-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling gobject-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling gio-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling cairo-sys-rs v0.9.0 (https://github.com/gtk-rs/cairo#d66fce03)
+[INFO] [stderr]    Compiling gdk-pixbuf-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling pango-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling gdk-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling atk-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling gtk-sys v0.9.0 (https://github.com/gtk-rs/sys#02799930)
+[INFO] [stderr]    Compiling glib v0.8.0 (https://github.com/gtk-rs/glib#ffe1549f)
+[ERROR] error running command: no output for 300 seconds
+[INFO] running `"docker" "inspect" "d1591d8506db906bc3724e59343f2ad11f132e0898751783c47ecc8207316bcb"`
+[INFO] running `"docker" "rm" "-f" "d1591d8506db906bc3724e59343f2ad11f132e0898751783c47ecc8207316bcb"`
+[INFO] [stdout] d1591d8506db906bc3724e59343f2ad11f132e0898751783c47ecc8207316bcb

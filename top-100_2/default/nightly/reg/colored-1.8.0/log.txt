@@ -1,0 +1,186 @@
+[INFO] crate colored 1.8.0 is already in cache
+[INFO] extracting crate colored 1.8.0 into work\ex\default\sources\nightly\reg\colored\1.8.0
+[INFO] extracting crate colored 1.8.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\colored\1.8.0
+[INFO] validating manifest of colored-1.8.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of colored-1.8.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing colored-1.8.0
+[INFO] finished frobbing colored-1.8.0
+[INFO] frobbed toml for colored-1.8.0 written to work\ex\default\sources\nightly\reg\colored\1.8.0\Cargo.toml
+[INFO] started frobbing colored-1.8.0
+[INFO] finished frobbing colored-1.8.0
+[INFO] frobbed toml for colored-1.8.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\colored\1.8.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing colored-1.8.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\colored\\1.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 5c6d52152f20d6f2d04254f53d6392fd2e6465c3f9b8d065a4f2284ea0108c78
+[INFO] running `"docker" "start" "-a" "5c6d52152f20d6f2d04254f53d6392fd2e6465c3f9b8d065a4f2284ea0108c78"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling cgmath v0.16.1
+[INFO] [stderr]    Compiling approx v0.1.1
+[INFO] [stderr]    Compiling rgb v0.8.13
+[INFO] [stderr]    Compiling num-traits v0.1.43
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling winconsole v0.10.0
+[INFO] [stderr]    Compiling colored v1.8.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 50.03s
+[INFO] running `"docker" "inspect" "5c6d52152f20d6f2d04254f53d6392fd2e6465c3f9b8d065a4f2284ea0108c78"`
+[INFO] running `"docker" "rm" "-f" "5c6d52152f20d6f2d04254f53d6392fd2e6465c3f9b8d065a4f2284ea0108c78"`
+[INFO] [stdout] 5c6d52152f20d6f2d04254f53d6392fd2e6465c3f9b8d065a4f2284ea0108c78
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\colored\\1.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3f0e2dca9500283efcb31c321f6ec61d8b21578f3d5ebaf2fd5bea1449c9ec51
+[INFO] running `"docker" "start" "-a" "3f0e2dca9500283efcb31c321f6ec61d8b21578f3d5ebaf2fd5bea1449c9ec51"`
+[INFO] [stderr]    Compiling ansi_term v0.9.0
+[INFO] [stderr]    Compiling rspec v1.0.0-beta.3
+[INFO] [stderr]    Compiling colored v1.8.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.18s
+[INFO] running `"docker" "inspect" "3f0e2dca9500283efcb31c321f6ec61d8b21578f3d5ebaf2fd5bea1449c9ec51"`
+[INFO] running `"docker" "rm" "-f" "3f0e2dca9500283efcb31c321f6ec61d8b21578f3d5ebaf2fd5bea1449c9ec51"`
+[INFO] [stdout] 3f0e2dca9500283efcb31c321f6ec61d8b21578f3d5ebaf2fd5bea1449c9ec51
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\colored\\1.8.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 44d0a34005bf2ccf57915dad213b8903355203f14efdd793de84402021a9cc4d
+[INFO] running `"docker" "start" "-a" "44d0a34005bf2ccf57915dad213b8903355203f14efdd793de84402021a9cc4d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.35s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\colored-af4a9c211501e9a7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 82 tests
+[INFO] [stdout] test color::tests::from_str::black ... ok
+[INFO] [stdout] test color::tests::from_str::blue ... ok
+[INFO] [stdout] test color::tests::from_str::brightblack ... ok
+[INFO] [stdout] test color::tests::from_str::brightblue ... ok
+[INFO] [stdout] test color::tests::from_str::brightcyan ... ok
+[INFO] [stdout] test color::tests::from_str::brightgreen ... ok
+[INFO] [stdout] test color::tests::from_str::brightmagenta ... ok
+[INFO] [stdout] test color::tests::from_str::brightred ... ok
+[INFO] [stdout] test color::tests::from_str::brightwhite ... ok
+[INFO] [stdout] test color::tests::from_str::brightyellow ... ok
+[INFO] [stdout] test color::tests::from_str::capitalized ... ok
+[INFO] [stdout] test color::tests::from_str::cyan ... ok
+[INFO] [stdout] test color::tests::from_str::magenta ... ok
+[INFO] [stdout] test color::tests::from_str::green ... ok
+[INFO] [stdout] test color::tests::from_str::invalid ... ok
+[INFO] [stdout] test color::tests::from_str::mixed_case ... ok
+[INFO] [stdout] test color::tests::from_str::red ... ok
+[INFO] [stdout] test color::tests::from_str::white ... ok
+[INFO] [stdout] test color::tests::from_str::yellow ... ok
+[INFO] [stdout] test color::tests::from_string::black ... ok
+[INFO] [stdout] test color::tests::from_string::brightblack ... ok
+[INFO] [stdout] test color::tests::from_string::blue ... ok
+[INFO] [stdout] test color::tests::from_string::brightblue ... ok
+[INFO] [stdout] test color::tests::from_string::brightcyan ... ok
+[INFO] [stdout] test color::tests::from_string::brightgreen ... ok
+[INFO] [stdout] test color::tests::from_string::brightmagenta ... ok
+[INFO] [stdout] test color::tests::from_string::brightred ... ok
+[INFO] [stdout] test color::tests::from_string::brightwhite ... ok
+[INFO] [stdout] test color::tests::from_string::brightyellow ... ok
+[INFO] [stdout] test color::tests::from_string::capitalized ... ok
+[INFO] [stdout] test color::tests::from_string::cyan ... ok
+[INFO] [stdout] test color::tests::from_string::green ... ok
+[INFO] [stdout] test color::tests::from_string::invalid ... ok
+[INFO] [stdout] test color::tests::from_string::magenta ... ok
+[INFO] [stdout] test color::tests::from_string::mixed_case ... ok
+[INFO] [stdout] test color::tests::from_string::red ... ok
+[INFO] [stdout] test color::tests::from_string::yellow ... ok
+[INFO] [stdout] test color::tests::from_string::white ... ok
+[INFO] [stdout] test color::tests::fromstr::parse ... ok
+[INFO] [stdout] test color::tests::fromstr::error ... ok
+[INFO] [stdout] Running tests:
+[INFO] [stdout] 
+[INFO] [stdout] test style::tests::styles_combine_complex::aggreg2 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::aggreg1 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::aggreg3 ... ok
+[INFO] [stdout] ...................
+[INFO] [stdout] 
+[INFO] [stdout] Failed examples:
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 27 examples; 27 passed; 0 failed;
+[INFO] [stdout] test control::specs::clicolor_behavior ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::five ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::four ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::six ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::all ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::three1 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::three2 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::two2 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::two1 ... ok
+[INFO] [stdout] test style::tests::styles_combine_complex::two3 ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_invalid_is_none::empty_is_none ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::blink ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::bold ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::dimmed ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::hidden ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::italic ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::reversed ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::strikethrough ... ok
+[INFO] [stdout] test style::tests::u8_to_styles_isomorphism::underline ... ok
+[INFO] [stdout] test tests::bright_color_fn ... ok
+[INFO] [stdout] test tests::color_fn ... ok
+[INFO] [stdout] test tests::compute_style_blue_bold_on_blue ... ok
+[INFO] [stdout] test tests::compute_style_blue_on_blue ... ok
+[INFO] [stdout] test tests::compute_style_blue_bold ... ok
+[INFO] [stdout] test tests::compute_style_bright_blue_on_bright_blue ... ok
+[INFO] [stdout] test tests::compute_style_empty_string ... ok
+[INFO] [stdout] test tests::compute_style_simple_bg_blue ... ok
+[INFO] [stdout] test tests::compute_style_simple_bg_bright_blue ... ok
+[INFO] [stdout] test tests::compute_style_simple_bold ... ok
+[INFO] [stdout] test tests::compute_style_simple_fg_blue ... ok
+[INFO] [stdout] test tests::compute_style_simple_fg_bright_blue ... ok
+[INFO] [stdout] test tests::escape_reset_sequence_spec_should_do_nothing_on_empty_strings ... ok
+[INFO] [stdout] test tests::escape_reset_sequence_spec_should_do_nothing_on_string_with_no_reset ... ok
+[INFO] [stdout] test tests::escape_reset_sequence_spec_should_replace_inner_reset_sequence_with_current_style ... ok
+[INFO] [stdout] test tests::escape_reset_sequence_spec_should_replace_multiple_inner_reset_sequences_with_current_style ... ok
+[INFO] [stdout] test tests::formatting ... ok
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ansi_term_compat-9dbdee2cfe5dbc4b.exe
+[INFO] [stdout] test tests::on_bright_color_fn ... ok
+[INFO] [stdout] test tests::on_color_fn ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 82 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 25 tests
+[INFO] [stdout] test compat_bgcolors::on_black ... ok
+[INFO] [stdout] test compat_bgcolors::on_blue ... ok
+[INFO] [stdout] test compat_bgcolors::on_cyan ... ok
+[INFO] [stdout] test compat_bgcolors::on_green ... ok
+[INFO] [stdout] test compat_bgcolors::on_magenta ... ok
+[INFO] [stdout] test compat_bgcolors::on_red ... ok
+[INFO] [stdout] test compat_bgcolors::on_white ... ok
+[INFO] [stdout] test compat_bgcolors::on_yellow ... ok
+[INFO] [stdout] test compat_colors::black ... ok
+[INFO] [stdout] test compat_colors::blue ... ok
+[INFO] [stdout] test compat_colors::cyan ... ok
+[INFO] [stdout] test compat_colors::green ... ok
+[INFO] [stdout] test compat_colors::magenta ... ok
+[INFO] [stdout] test compat_colors::red ... ok
+[INFO] [stdout] test compat_colors::white ... ok
+[INFO] [stdout] test compat_colors::yellow ... ok
+[INFO] [stdout] test compat_complex::complex1 ... ok
+[INFO] [stdout] test compat_complex::complex2 ... ok
+[INFO] [stdout] test compat_styles::blink ... ok
+[INFO] [stdout] test compat_styles::bold ... ok
+[INFO] [stderr]    Doc-tests colored
+[INFO] [stdout] test compat_styles::dimmed ... ok
+[INFO] [stdout] test compat_styles::hidden ... ok
+[INFO] [stdout] test compat_styles::italic ... ok
+[INFO] [stdout] test compat_styles::reverse ... ok
+[INFO] [stdout] test compat_styles::underline ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\lib.rs -  (line 5) ... ok
+[INFO] [stdout] test src\control.rs - control::set_virtual_terminal (line 16) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "44d0a34005bf2ccf57915dad213b8903355203f14efdd793de84402021a9cc4d"`
+[INFO] running `"docker" "rm" "-f" "44d0a34005bf2ccf57915dad213b8903355203f14efdd793de84402021a9cc4d"`
+[INFO] [stdout] 44d0a34005bf2ccf57915dad213b8903355203f14efdd793de84402021a9cc4d

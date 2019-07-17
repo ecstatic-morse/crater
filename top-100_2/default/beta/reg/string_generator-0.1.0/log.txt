@@ -1,0 +1,58 @@
+[INFO] fetching crate string_generator 0.1.0...
+[INFO] extracting crate string_generator 0.1.0 into work\ex\default\sources\stable\reg\string_generator\0.1.0
+[INFO] extracting crate string_generator 0.1.0 into work\ex\default\sources\beta\reg\string_generator\0.1.0
+[INFO] validating manifest of string_generator-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of string_generator-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing string_generator-0.1.0
+[INFO] finished frobbing string_generator-0.1.0
+[INFO] frobbed toml for string_generator-0.1.0 written to work\ex\default\sources\stable\reg\string_generator\0.1.0\Cargo.toml
+[INFO] started frobbing string_generator-0.1.0
+[INFO] finished frobbing string_generator-0.1.0
+[INFO] frobbed toml for string_generator-0.1.0 written to work\ex\default\sources\beta\reg\string_generator\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing string_generator-0.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\string_generator\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] c54675fc02d3881feff9f1d0350a5fe138dc3fdc087749c9fdadbb8ffc65d271
+[INFO] running `"docker" "start" "-a" "c54675fc02d3881feff9f1d0350a5fe138dc3fdc087749c9fdadbb8ffc65d271"`
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling string_generator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.28s
+[INFO] running `"docker" "inspect" "c54675fc02d3881feff9f1d0350a5fe138dc3fdc087749c9fdadbb8ffc65d271"`
+[INFO] running `"docker" "rm" "-f" "c54675fc02d3881feff9f1d0350a5fe138dc3fdc087749c9fdadbb8ffc65d271"`
+[INFO] [stdout] c54675fc02d3881feff9f1d0350a5fe138dc3fdc087749c9fdadbb8ffc65d271
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\string_generator\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] b6da43cb76e6cefee12a128aab85f299bc9c0773904102b3761b0fbc7de286ff
+[INFO] running `"docker" "start" "-a" "b6da43cb76e6cefee12a128aab85f299bc9c0773904102b3761b0fbc7de286ff"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling string_generator v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.81s
+[INFO] running `"docker" "inspect" "b6da43cb76e6cefee12a128aab85f299bc9c0773904102b3761b0fbc7de286ff"`
+[INFO] running `"docker" "rm" "-f" "b6da43cb76e6cefee12a128aab85f299bc9c0773904102b3761b0fbc7de286ff"`
+[INFO] [stdout] b6da43cb76e6cefee12a128aab85f299bc9c0773904102b3761b0fbc7de286ff
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\string_generator\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 952dd423162dad40195dfc05912d6f452b796380d2ee5b3ca2641d3d7e671eae
+[INFO] running `"docker" "start" "-a" "952dd423162dad40195dfc05912d6f452b796380d2ee5b3ca2641d3d7e671eae"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.27s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\string_generator-eb65b33b151bb370.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] test tests::gen_string_fof ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests string_generator
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "952dd423162dad40195dfc05912d6f452b796380d2ee5b3ca2641d3d7e671eae"`
+[INFO] running `"docker" "rm" "-f" "952dd423162dad40195dfc05912d6f452b796380d2ee5b3ca2641d3d7e671eae"`
+[INFO] [stdout] 952dd423162dad40195dfc05912d6f452b796380d2ee5b3ca2641d3d7e671eae

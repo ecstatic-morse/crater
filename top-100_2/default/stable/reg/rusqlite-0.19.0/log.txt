@@ -1,0 +1,220 @@
+[INFO] crate rusqlite 0.19.0 is already in cache
+[INFO] crate source directory work\ex\default\sources\stable\reg\rusqlite\0.19.0 already exists, cleaning it up
+[INFO] extracting crate rusqlite 0.19.0 into work\ex\default\sources\stable\reg\rusqlite\0.19.0
+[INFO] crate source directory work\ex\default\sources\beta\reg\rusqlite\0.19.0 already exists, cleaning it up
+[INFO] extracting crate rusqlite 0.19.0 into work\ex\default\sources\beta\reg\rusqlite\0.19.0
+[INFO] validating manifest of rusqlite-0.19.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rusqlite-0.19.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rusqlite-0.19.0
+[INFO] removed 3 missing tests
+[INFO] finished frobbing rusqlite-0.19.0
+[INFO] frobbed toml for rusqlite-0.19.0 written to work\ex\default\sources\stable\reg\rusqlite\0.19.0\Cargo.toml
+[INFO] started frobbing rusqlite-0.19.0
+[INFO] removed 3 missing tests
+[INFO] finished frobbing rusqlite-0.19.0
+[INFO] frobbed toml for rusqlite-0.19.0 written to work\ex\default\sources\beta\reg\rusqlite\0.19.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rusqlite-0.19.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rusqlite\\0.19.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] c627cfd248b408ca366915899321f80257cb4a2f78d8a09f48c4baff7568ee91
+[INFO] running `"docker" "start" "-a" "c627cfd248b408ca366915899321f80257cb4a2f78d8a09f48c4baff7568ee91"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling fallible-iterator v0.2.0
+[INFO] [stderr]    Compiling fallible-streaming-iterator v0.1.9
+[INFO] [stderr]    Compiling libsqlite3-sys v0.15.0
+[INFO] [stderr]    Compiling lru-cache v0.1.2
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling rusqlite v0.19.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 38.97s
+[INFO] running `"docker" "inspect" "c627cfd248b408ca366915899321f80257cb4a2f78d8a09f48c4baff7568ee91"`
+[INFO] running `"docker" "rm" "-f" "c627cfd248b408ca366915899321f80257cb4a2f78d8a09f48c4baff7568ee91"`
+[INFO] [stdout] c627cfd248b408ca366915899321f80257cb4a2f78d8a09f48c4baff7568ee91
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rusqlite\\0.19.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 76c13cfd86ba83115edf2533b652c584d21de95a03758ebad579bbe967d5473f
+[INFO] running `"docker" "start" "-a" "76c13cfd86ba83115edf2533b652c584d21de95a03758ebad579bbe967d5473f"`
+[INFO] [stderr]    Compiling rand_core v0.4.0
+[INFO] [stderr]    Compiling version_check v0.1.5
+[INFO] [stderr]    Compiling ucd-util v0.1.3
+[INFO] [stderr]    Compiling regex v1.1.9
+[INFO] [stderr]    Compiling utf8-ranges v1.0.3
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling thread_local v0.3.6
+[INFO] [stderr]    Compiling rand_core v0.3.1
+[INFO] [stderr]    Compiling regex-syntax v0.6.8
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling rand_xorshift v0.1.1
+[INFO] [stderr]    Compiling rand_isaac v0.1.1
+[INFO] [stderr]    Compiling rand_hc v0.1.0
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling rand_jitter v0.1.4
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling aho-corasick v0.7.4
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling uuid v0.7.4
+[INFO] [stderr]    Compiling rusqlite v0.19.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 02s
+[INFO] running `"docker" "inspect" "76c13cfd86ba83115edf2533b652c584d21de95a03758ebad579bbe967d5473f"`
+[INFO] running `"docker" "rm" "-f" "76c13cfd86ba83115edf2533b652c584d21de95a03758ebad579bbe967d5473f"`
+[INFO] [stdout] 76c13cfd86ba83115edf2533b652c584d21de95a03758ebad579bbe967d5473f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\rusqlite\\0.19.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 9193e7d1e0d6e3652acc18e30e4f5477044b9c72ca3ac640d8c759f1c8401297
+[INFO] running `"docker" "start" "-a" "9193e7d1e0d6e3652acc18e30e4f5477044b9c72ca3ac640d8c759f1c8401297"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.66s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rusqlite-13eef8cf32687ca1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 86 tests
+[INFO] [stdout] test busy::test::test_busy_handler ... ignored
+[INFO] [stdout] test busy::test::test_busy_timeout ... ignored
+[INFO] [stdout] test cache::test::test_cache ... ok
+[INFO] [stdout] test cache::test::test_cache_key ... ok
+[INFO] [stdout] test cache::test::test_connection_close ... ok
+[INFO] [stdout] test cache::test::test_ddl ... ok
+[INFO] [stdout] test cache::test::test_discard ... ok
+[INFO] [stdout] test cache::test::test_set_capacity ... ok
+[INFO] [stdout] test column::test::test_column_name_in_error ... ok
+[INFO] [stdout] test column::test::test_columns ... ok
+[INFO] [stdout] test config::test::test_db_config ... ok
+[INFO] [stdout] test pragma::test::double_quote ... ok
+[INFO] [stdout] test pragma::test::is_identifier ... ok
+[INFO] [stdout] test pragma::test::pragma ... ok
+[INFO] [stdout] test pragma::test::pragma_query_no_schema ... ok
+[INFO] [stdout] test pragma::test::pragma_query_value ... ok
+[INFO] [stdout] test pragma::test::pragma_query_with_schema ... ok
+[INFO] [stdout] test pragma::test::pragma_update ... ok
+[INFO] [stdout] test pragma::test::pragma_update_and_check ... ok
+[INFO] [stdout] test pragma::test::wrap_and_escape ... ok
+[INFO] [stdout] test statement::test::test_bind_parameters ... ok
+[INFO] [stdout] test statement::test::test_execute_named ... ok
+[INFO] [stdout] test statement::test::test_exists ... ok
+[INFO] [stdout] test statement::test::test_insert ... ok
+[INFO] [stdout] test statement::test::test_insert_different_tables ... ok
+[INFO] [stdout] test statement::test::test_query_and_then_named ... ok
+[INFO] [stdout] test statement::test::test_query_by_column_name ... ok
+[INFO] [stdout] test statement::test::test_query_by_column_name_ignore_case ... ok
+[INFO] [stdout] test statement::test::test_query_map_named ... ok
+[INFO] [stdout] test statement::test::test_query_named ... ok
+[INFO] [stdout] test statement::test::test_query_row ... ok
+[INFO] [stdout] test statement::test::test_stmt_execute_named ... ok
+[INFO] [stdout] test statement::test::test_unbound_parameters_are_null ... ok
+[INFO] [stdout] test statement::test::test_unbound_parameters_are_reused ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_dyn_box ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_dynamic ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_and_then ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_and_then_custom_error ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_and_then_custom_error_fails ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_and_then_fails ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_row_and_then_custom_error ... ok
+[INFO] [stdout] test test::query_and_then_tests::test_query_row_and_then_custom_error_fails ... ok
+[INFO] [stdout] test test::test_close_retry ... ok
+[INFO] [stdout] test test::test_execute ... ok
+[INFO] [stdout] test test::test_execute_batch ... ok
+[INFO] [stdout] test test::test_execute_select ... ok
+[INFO] [stdout] test test::test_from_handle ... ok
+[INFO] [stdout] test test::test_interrupt_close ... ok
+[INFO] [stdout] test test::test_get_raw ... ok
+[INFO] [stdout] test test::test_last_insert_rowid ... ok
+[INFO] [stdout] test test::test_is_autocommit ... ok
+[INFO] [stdout] test test::test_open ... ok
+[INFO] [stdout] test test::test_notnull_constraint_error ... ok
+[INFO] [stdout] test test::test_open_with_flags ... ok
+[INFO] [stdout] test test::test_optional ... ok
+[INFO] [stdout] test test::test_pragma_query_row ... ok
+[INFO] [stdout] test test::test_prepare_column_names ... ok
+[INFO] [stdout] test test::test_prepare_execute ... ok
+[INFO] [stdout] test test::test_prepare_failures ... ok
+[INFO] [stdout] test test::test_prepare_query ... ok
+[INFO] [stdout] test test::test_query_map ... ok
+[INFO] [stdout] test test::test_query_row ... ok
+[INFO] [stdout] test test::test_statement_debugging ... ok
+[INFO] [stdout] test test::test_version_string ... ok
+[INFO] [stdout] test transaction::test::test_drop ... ok
+[INFO] [stdout] test test::test_concurrent_transactions_busy_commit ... ok
+[INFO] [stdout] test transaction::test::test_ignore_drop_behavior ... ok
+[INFO] [stdout] test transaction::test::test_explicit_rollback_commit ... ok
+[INFO] [stdout] test test::test_persistence ... ok
+[INFO] [stdout] test transaction::test::test_savepoint_names ... ok
+[INFO] [stdout] test transaction::test::test_savepoint ... ok
+[INFO] [stdout] test transaction::test::test_rc ... ok
+[INFO] [stdout] test types::test::test_dynamic_type ... ok
+[INFO] [stdout] test types::test::test_blob ... ok
+[INFO] [stdout] test types::from_sql::test::test_integral_ranges ... ok
+[INFO] [stdout] test types::test::test_mismatched_types ... ok
+[INFO] [stdout] test types::test::test_empty_blob ... ok
+[INFO] [stdout] test types::test::test_str ... ok
+[INFO] [stdout] test types::test::test_string ... ok
+[INFO] [stdout] test types::test::test_option ... ok
+[INFO] [stdout] test types::time::test::test_sqlite_functions ... ok
+[INFO] [stdout] test types::test::test_value ... ok
+[INFO] [stdout] test types::time::test::test_timespec ... ok
+[INFO] [stdout] test types::to_sql::test::test_integral_types ... ok
+[INFO] [stdout] test types::to_sql::test::test_cow_str ... ok
+[INFO] [stdout] test busy::test::test_default_busy ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 84 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\config_log-86693bbc0af5cae3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\deny_single_threaded_sqlite_config-d7b6fed5660f869c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_error_when_singlethread_mode ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\vtab-212565e39527319d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests rusqlite
+[INFO] [stdout] 
+[INFO] [stdout] running 27 tests
+[INFO] [stdout] test src\lib.rs - Connection::execute_batch (line 412) ... ok
+[INFO] [stdout] test src\cache.rs - cache::Connection::prepare_cached (line 15) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::execute (line 439) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::execute_named (line 469) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::open (line 341) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::prepare (line 597) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::query_row (line 501) ... ok
+[INFO] [stdout] test src\lib.rs - Connection::query_row_and_then (line 562) ... ok
+[INFO] [stdout] test src\lib.rs - named_params (line 179) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::execute_named (line 69) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::execute (line 32) ... ok
+[INFO] [stdout] test src\lib.rs - params (line 148) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::execute_named (line 80) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query_and_then_named (line 304) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query (line 132) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query_map_named (line 246) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query_map (line 209) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query_named (line 168) ... ok
+[INFO] [stdout] test src\transaction.rs - transaction::Connection::savepoint (line 378) ... ok
+[INFO] [stdout] test src\statement.rs - statement::Statement::query_named (line 183) ... ok
+[INFO] [stdout] test src\transaction.rs - transaction::Connection::transaction (line 335) ... ok
+[INFO] [stdout] test src\transaction.rs - transaction::Savepoint (line 69) ... ok
+[INFO] [stdout] test src\transaction.rs - transaction::Transaction (line 40) ... ok
+[INFO] [stdout] test src\transaction.rs - transaction::Transaction::savepoint (line 118) ... ok
+[INFO] [stdout] test src\types\mod.rs - types::Null (line 78) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 4) ... ok
+[INFO] [stdout] test src\types\mod.rs - types (line 21) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9193e7d1e0d6e3652acc18e30e4f5477044b9c72ca3ac640d8c759f1c8401297"`
+[INFO] running `"docker" "rm" "-f" "9193e7d1e0d6e3652acc18e30e4f5477044b9c72ca3ac640d8c759f1c8401297"`
+[INFO] [stdout] 9193e7d1e0d6e3652acc18e30e4f5477044b9c72ca3ac640d8c759f1c8401297

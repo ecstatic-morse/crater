@@ -1,0 +1,57 @@
+[INFO] cloning repository ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] running `"git" "clone" "--bare" "git://github.com/ishaanmadan19/Beautiful-Soup-in-Rust.git" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust" "work\\ex\\default\\sources\\stable\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust" "work\\ex\\default\\sources\\beta\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\ishaanmadan19\Beautiful-Soup-in-Rust'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ec9d6547481ae7a56cb0da4a8dbe8cf67da45c9e
+[INFO] sha for GitHub repo ishaanmadan19/Beautiful-Soup-in-Rust: ec9d6547481ae7a56cb0da4a8dbe8cf67da45c9e
+[INFO] validating manifest of ishaanmadan19/Beautiful-Soup-in-Rust on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of ishaanmadan19/Beautiful-Soup-in-Rust on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] finished frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] frobbed toml for ishaanmadan19/Beautiful-Soup-in-Rust written to work\ex\default\sources\stable\gh\ishaanmadan19\Beautiful-Soup-in-Rust\Cargo.toml
+[INFO] started frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] finished frobbing ishaanmadan19/Beautiful-Soup-in-Rust
+[INFO] frobbed toml for ishaanmadan19/Beautiful-Soup-in-Rust written to work\ex\default\sources\beta\gh\ishaanmadan19\Beautiful-Soup-in-Rust\Cargo.toml
+[INFO] crate ishaanmadan19/Beautiful-Soup-in-Rust already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing ishaanmadan19/Beautiful-Soup-in-Rust against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 447e76f9c3059d72ab5c1b6fa9ae4f36813ecc1f9b8e8f70ebbe821989219c17
+[INFO] running `"docker" "start" "-a" "447e76f9c3059d72ab5c1b6fa9ae4f36813ecc1f9b8e8f70ebbe821989219c17"`
+[INFO] [stderr]    Compiling bsr v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.25s
+[INFO] running `"docker" "inspect" "447e76f9c3059d72ab5c1b6fa9ae4f36813ecc1f9b8e8f70ebbe821989219c17"`
+[INFO] running `"docker" "rm" "-f" "447e76f9c3059d72ab5c1b6fa9ae4f36813ecc1f9b8e8f70ebbe821989219c17"`
+[INFO] [stdout] 447e76f9c3059d72ab5c1b6fa9ae4f36813ecc1f9b8e8f70ebbe821989219c17
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ebe336676b67f8708901d2a47445786adfef19a0172fa13f4b641e7e934e44f9
+[INFO] running `"docker" "start" "-a" "ebe336676b67f8708901d2a47445786adfef19a0172fa13f4b641e7e934e44f9"`
+[INFO] [stderr]    Compiling bsr v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.89s
+[INFO] running `"docker" "inspect" "ebe336676b67f8708901d2a47445786adfef19a0172fa13f4b641e7e934e44f9"`
+[INFO] running `"docker" "rm" "-f" "ebe336676b67f8708901d2a47445786adfef19a0172fa13f4b641e7e934e44f9"`
+[INFO] [stdout] ebe336676b67f8708901d2a47445786adfef19a0172fa13f4b641e7e934e44f9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\ishaanmadan19\\Beautiful-Soup-in-Rust,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] c62645a73cd3d57edf9dfc8962075c72e8830270eb4bc701d8e56940e889c4f7
+[INFO] running `"docker" "start" "-a" "c62645a73cd3d57edf9dfc8962075c72e8830270eb4bc701d8e56940e889c4f7"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.46s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bsr-08ed7ed4b6cf714d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c62645a73cd3d57edf9dfc8962075c72e8830270eb4bc701d8e56940e889c4f7"`
+[INFO] running `"docker" "rm" "-f" "c62645a73cd3d57edf9dfc8962075c72e8830270eb4bc701d8e56940e889c4f7"`
+[INFO] [stdout] c62645a73cd3d57edf9dfc8962075c72e8830270eb4bc701d8e56940e889c4f7

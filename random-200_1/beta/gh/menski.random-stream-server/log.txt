@@ -1,0 +1,65 @@
+[INFO] cloning repository menski/random-stream-server
+[INFO] running `"git" "clone" "--bare" "git://github.com/menski/random-stream-server.git" "work\\cache\\sources\\gh\\menski\\random-stream-server"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\menski\random-stream-server'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\menski\\random-stream-server" "work\\ex\\default\\sources\\stable\\gh\\menski\\random-stream-server"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\menski\random-stream-server'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\menski\\random-stream-server" "work\\ex\\default\\sources\\beta\\gh\\menski\\random-stream-server"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\menski\random-stream-server'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a0fa5c59a8d1d1c97a225ef0419b7e9a87155f39
+[INFO] sha for GitHub repo menski/random-stream-server: a0fa5c59a8d1d1c97a225ef0419b7e9a87155f39
+[INFO] validating manifest of menski/random-stream-server on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of menski/random-stream-server on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing menski/random-stream-server
+[INFO] finished frobbing menski/random-stream-server
+[INFO] frobbed toml for menski/random-stream-server written to work\ex\default\sources\stable\gh\menski\random-stream-server\Cargo.toml
+[INFO] started frobbing menski/random-stream-server
+[INFO] finished frobbing menski/random-stream-server
+[INFO] frobbed toml for menski/random-stream-server written to work\ex\default\sources\beta\gh\menski\random-stream-server\Cargo.toml
+[INFO] crate menski/random-stream-server already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rand v0.5.1
+[INFO] [stderr]   Downloaded byteorder v1.2.3
+[INFO] [stderr]   Downloaded libc v0.2.42
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing menski/random-stream-server against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\menski\\random-stream-server,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 0269262db0c648e44735e5ed53736433b8ebf5b08d8d4ec8637d20b58782b63a
+[INFO] running `"docker" "start" "-a" "0269262db0c648e44735e5ed53736433b8ebf5b08d8d4ec8637d20b58782b63a"`
+[INFO] [stderr]    Compiling winapi v0.3.5
+[INFO] [stderr]    Compiling rand_core v0.2.1
+[INFO] [stderr]    Compiling byteorder v1.2.3
+[INFO] [stderr]    Compiling rand v0.5.1
+[INFO] [stderr]    Compiling random-stream-server v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 38.88s
+[INFO] running `"docker" "inspect" "0269262db0c648e44735e5ed53736433b8ebf5b08d8d4ec8637d20b58782b63a"`
+[INFO] running `"docker" "rm" "-f" "0269262db0c648e44735e5ed53736433b8ebf5b08d8d4ec8637d20b58782b63a"`
+[INFO] [stdout] 0269262db0c648e44735e5ed53736433b8ebf5b08d8d4ec8637d20b58782b63a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\menski\\random-stream-server,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 8e98de580a5abd612d395cd0390f9bf028f66433b48c7cca580c509c40a9be3f
+[INFO] running `"docker" "start" "-a" "8e98de580a5abd612d395cd0390f9bf028f66433b48c7cca580c509c40a9be3f"`
+[INFO] [stderr]    Compiling random-stream-server v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.40s
+[INFO] running `"docker" "inspect" "8e98de580a5abd612d395cd0390f9bf028f66433b48c7cca580c509c40a9be3f"`
+[INFO] running `"docker" "rm" "-f" "8e98de580a5abd612d395cd0390f9bf028f66433b48c7cca580c509c40a9be3f"`
+[INFO] [stdout] 8e98de580a5abd612d395cd0390f9bf028f66433b48c7cca580c509c40a9be3f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\menski\\random-stream-server,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 818787a014db11f703ac8b7759539a6d7e9ac48e9aff8f74fd9a0f92bddd813f
+[INFO] running `"docker" "start" "-a" "818787a014db11f703ac8b7759539a6d7e9ac48e9aff8f74fd9a0f92bddd813f"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.91s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\random_stream_server-ac44f5e58ec59aab.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "818787a014db11f703ac8b7759539a6d7e9ac48e9aff8f74fd9a0f92bddd813f"`
+[INFO] running `"docker" "rm" "-f" "818787a014db11f703ac8b7759539a6d7e9ac48e9aff8f74fd9a0f92bddd813f"`
+[INFO] [stdout] 818787a014db11f703ac8b7759539a6d7e9ac48e9aff8f74fd9a0f92bddd813f

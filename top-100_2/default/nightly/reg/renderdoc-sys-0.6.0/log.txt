@@ -1,0 +1,58 @@
+[INFO] fetching crate renderdoc-sys 0.6.0...
+[INFO] extracting crate renderdoc-sys 0.6.0 into work\ex\default\sources\nightly\reg\renderdoc-sys\0.6.0
+[INFO] extracting crate renderdoc-sys 0.6.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\renderdoc-sys\0.6.0
+[INFO] validating manifest of renderdoc-sys-0.6.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of renderdoc-sys-0.6.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing renderdoc-sys-0.6.0
+[INFO] finished frobbing renderdoc-sys-0.6.0
+[INFO] frobbed toml for renderdoc-sys-0.6.0 written to work\ex\default\sources\nightly\reg\renderdoc-sys\0.6.0\Cargo.toml
+[INFO] started frobbing renderdoc-sys-0.6.0
+[INFO] finished frobbing renderdoc-sys-0.6.0
+[INFO] frobbed toml for renderdoc-sys-0.6.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\renderdoc-sys\0.6.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing renderdoc-sys-0.6.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\renderdoc-sys\\0.6.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c43c45d83a8613d02efb3409dc18bad191c3303291458e8181616604dd6d4442
+[INFO] running `"docker" "start" "-a" "c43c45d83a8613d02efb3409dc18bad191c3303291458e8181616604dd6d4442"`
+[INFO] [stderr]    Compiling renderdoc-sys v0.6.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.97s
+[INFO] running `"docker" "inspect" "c43c45d83a8613d02efb3409dc18bad191c3303291458e8181616604dd6d4442"`
+[INFO] running `"docker" "rm" "-f" "c43c45d83a8613d02efb3409dc18bad191c3303291458e8181616604dd6d4442"`
+[INFO] [stdout] c43c45d83a8613d02efb3409dc18bad191c3303291458e8181616604dd6d4442
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\renderdoc-sys\\0.6.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] da66eb58d13302c7598137ea415f01cea97b8ad086bb4dc8311084d24ea49034
+[INFO] running `"docker" "start" "-a" "da66eb58d13302c7598137ea415f01cea97b8ad086bb4dc8311084d24ea49034"`
+[INFO] [stderr]    Compiling renderdoc-sys v0.6.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.47s
+[INFO] running `"docker" "inspect" "da66eb58d13302c7598137ea415f01cea97b8ad086bb4dc8311084d24ea49034"`
+[INFO] running `"docker" "rm" "-f" "da66eb58d13302c7598137ea415f01cea97b8ad086bb4dc8311084d24ea49034"`
+[INFO] [stdout] da66eb58d13302c7598137ea415f01cea97b8ad086bb4dc8311084d24ea49034
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\renderdoc-sys\\0.6.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 9c195e9b81c7916f0733077ff5f2752584703cc29f97a7dfff12985965317843
+[INFO] running `"docker" "start" "-a" "9c195e9b81c7916f0733077ff5f2752584703cc29f97a7dfff12985965317843"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.26s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\renderdoc_sys-8b8a072e0c9645f0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test bindgen_test_layout_RENDERDOC_API_1_4_0 ... ok
+[INFO] [stdout] test bindgen_test_layout_RENDERDOC_API_1_4_0__bindgen_ty_1 ... ok
+[INFO] [stdout] test bindgen_test_layout_RENDERDOC_API_1_4_0__bindgen_ty_2 ... ok
+[INFO] [stdout] test bindgen_test_layout_RENDERDOC_API_1_4_0__bindgen_ty_3 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests renderdoc-sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9c195e9b81c7916f0733077ff5f2752584703cc29f97a7dfff12985965317843"`
+[INFO] running `"docker" "rm" "-f" "9c195e9b81c7916f0733077ff5f2752584703cc29f97a7dfff12985965317843"`
+[INFO] [stdout] 9c195e9b81c7916f0733077ff5f2752584703cc29f97a7dfff12985965317843

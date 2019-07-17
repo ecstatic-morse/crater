@@ -1,0 +1,67 @@
+[INFO] fetching crate dummy-cargo-toml-creater 0.1.6...
+[INFO] extracting crate dummy-cargo-toml-creater 0.1.6 into work\ex\default\sources\stable\reg\dummy-cargo-toml-creater\0.1.6
+[INFO] extracting crate dummy-cargo-toml-creater 0.1.6 into work\ex\default\sources\beta\reg\dummy-cargo-toml-creater\0.1.6
+[INFO] validating manifest of dummy-cargo-toml-creater-0.1.6 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of dummy-cargo-toml-creater-0.1.6 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing dummy-cargo-toml-creater-0.1.6
+[INFO] finished frobbing dummy-cargo-toml-creater-0.1.6
+[INFO] frobbed toml for dummy-cargo-toml-creater-0.1.6 written to work\ex\default\sources\stable\reg\dummy-cargo-toml-creater\0.1.6\Cargo.toml
+[INFO] started frobbing dummy-cargo-toml-creater-0.1.6
+[INFO] finished frobbing dummy-cargo-toml-creater-0.1.6
+[INFO] frobbed toml for dummy-cargo-toml-creater-0.1.6 written to work\ex\default\sources\beta\reg\dummy-cargo-toml-creater\0.1.6\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded toml_edit v0.1.4
+[INFO] [stderr]   Downloaded cargo_toml v0.6.4
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing dummy-cargo-toml-creater-0.1.6 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dummy-cargo-toml-creater\\0.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 17f842b6a15e6436d2c20a084054387e4302153abd409f95ab3feb368555c05f
+[INFO] running `"docker" "start" "-a" "17f842b6a15e6436d2c20a084054387e4302153abd409f95ab3feb368555c05f"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling memchr v2.2.1
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling ascii v0.9.2
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling toml v0.4.10
+[INFO] [stderr]    Compiling toml v0.5.1
+[INFO] [stderr]    Compiling combine v3.8.1
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling cargo_toml v0.6.4
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling toml_edit v0.1.4
+[INFO] [stderr]    Compiling dummy-cargo-toml-creater v0.1.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2m 32s
+[INFO] running `"docker" "inspect" "17f842b6a15e6436d2c20a084054387e4302153abd409f95ab3feb368555c05f"`
+[INFO] running `"docker" "rm" "-f" "17f842b6a15e6436d2c20a084054387e4302153abd409f95ab3feb368555c05f"`
+[INFO] [stdout] 17f842b6a15e6436d2c20a084054387e4302153abd409f95ab3feb368555c05f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dummy-cargo-toml-creater\\0.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ba0310e06896b03a3a85c75a4d50634b08ba0909eebab1f70183e8a749729e6d
+[INFO] running `"docker" "start" "-a" "ba0310e06896b03a3a85c75a4d50634b08ba0909eebab1f70183e8a749729e6d"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]    Compiling dummy-cargo-toml-creater v0.1.6 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.26s
+[INFO] running `"docker" "inspect" "ba0310e06896b03a3a85c75a4d50634b08ba0909eebab1f70183e8a749729e6d"`
+[INFO] running `"docker" "rm" "-f" "ba0310e06896b03a3a85c75a4d50634b08ba0909eebab1f70183e8a749729e6d"`
+[INFO] [stdout] ba0310e06896b03a3a85c75a4d50634b08ba0909eebab1f70183e8a749729e6d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\dummy-cargo-toml-creater\\0.1.6,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] b5bbebea55404f82ec9d6edd2748658fc3829a7c153b5623c6a79a4b09426d39
+[INFO] running `"docker" "start" "-a" "b5bbebea55404f82ec9d6edd2748658fc3829a7c153b5623c6a79a4b09426d39"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.63s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\dummy_cargo_toml_creater-44e7381ac156d92e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b5bbebea55404f82ec9d6edd2748658fc3829a7c153b5623c6a79a4b09426d39"`
+[INFO] running `"docker" "rm" "-f" "b5bbebea55404f82ec9d6edd2748658fc3829a7c153b5623c6a79a4b09426d39"`
+[INFO] [stdout] b5bbebea55404f82ec9d6edd2748658fc3829a7c153b5623c6a79a4b09426d39

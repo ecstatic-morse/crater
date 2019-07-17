@@ -1,0 +1,98 @@
+[INFO] cloning repository fennekki/doorwayd
+[INFO] running `"git" "clone" "--bare" "git://github.com/fennekki/doorwayd.git" "work\\cache\\sources\\gh\\fennekki\\doorwayd"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\fennekki\doorwayd'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\fennekki\\doorwayd" "work\\ex\\default\\sources\\stable\\gh\\fennekki\\doorwayd"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\fennekki\doorwayd'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\fennekki\\doorwayd" "work\\ex\\default\\sources\\beta\\gh\\fennekki\\doorwayd"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\fennekki\doorwayd'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 18171d366e8e330ddefc42790c3c19a7bedf00aa
+[INFO] sha for GitHub repo fennekki/doorwayd: 18171d366e8e330ddefc42790c3c19a7bedf00aa
+[INFO] validating manifest of fennekki/doorwayd on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of fennekki/doorwayd on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing fennekki/doorwayd
+[INFO] finished frobbing fennekki/doorwayd
+[INFO] frobbed toml for fennekki/doorwayd written to work\ex\default\sources\stable\gh\fennekki\doorwayd\Cargo.toml
+[INFO] started frobbing fennekki/doorwayd
+[INFO] finished frobbing fennekki/doorwayd
+[INFO] frobbed toml for fennekki/doorwayd written to work\ex\default\sources\beta\gh\fennekki\doorwayd\Cargo.toml
+[INFO] crate fennekki/doorwayd already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Updating crates.io index
+[INFO] [stderr] error: the lock file C:\Users\mackendy\src\crater\work\ex\default\sources\stable\gh\fennekki\doorwayd\Cargo.lock needs to be updated but --locked was passed to prevent this
+[INFO] the lockfile is outdated, regenerating it
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded rust-crypto v0.2.36
+[INFO] [stderr]   Downloaded rand_hc v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing fennekki/doorwayd against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\fennekki\\doorwayd,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 8a5bab10e9a39ec3ba1b15f58e1ab71b713a0b789cbc51a00f00bbbe998ac51c
+[INFO] running `"docker" "start" "-a" "8a5bab10e9a39ec3ba1b15f58e1ab71b713a0b789cbc51a00f00bbbe998ac51c"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling spin v0.5.0
+[INFO] [stderr]    Compiling ppv-lite86 v0.2.5
+[INFO] [stderr]    Compiling getrandom v0.1.6
+[INFO] [stderr]    Compiling xdg v2.2.0
+[INFO] [stderr]    Compiling num-traits v0.2.8
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling num-integer v0.1.41
+[INFO] [stderr]    Compiling rust-crypto v0.2.36
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling rand_core v0.5.0
+[INFO] [stderr]    Compiling c2-chacha v0.2.2
+[INFO] [stderr]    Compiling rand v0.7.0
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling time v0.1.42
+[INFO] [stderr]    Compiling chrono v0.4.7
+[INFO] [stderr]    Compiling rand v0.3.23
+[INFO] [stderr]    Compiling doorwayd v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `xdg::BaseDirectories`
+[INFO] [stderr]  --> src\settings\mod.rs:9:5
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use xdg::BaseDirectories;
+[INFO] [stderr]   |     ^^^^^^^^^^^^^^^^^^^^ no `BaseDirectories` in the root
+[INFO] [stderr] 
+[INFO] [stderr] error[E0603]: struct `ConnectionHandler` is private
+[INFO] [stderr]  --> src\main.rs:9:17
+[INFO] [stderr]   |
+[INFO] [stderr] 9 | use connection::ConnectionHandler;
+[INFO] [stderr]   |                 ^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0603]: struct `SettingsHandler` is private
+[INFO] [stderr]   --> src\main.rs:10:15
+[INFO] [stderr]    |
+[INFO] [stderr] 10 | use settings::SettingsHandler;
+[INFO] [stderr]    |               ^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error[E0201]: duplicate definitions with name `get`:
+[INFO] [stderr]    --> src\settings\mod.rs:146:5
+[INFO] [stderr]     |
+[INFO] [stderr] 141 | /     fn get<T: FromStr + Default>(&self, key: &str) -> T {
+[INFO] [stderr] 142 | |         // Get string from settings, convert it or T's default to T
+[INFO] [stderr] 143 | |         T::from_str(self.get_str_ref(key)).unwrap_or(T::default())
+[INFO] [stderr] 144 | |     }
+[INFO] [stderr]     | |_____- previous definition of `get` here
+[INFO] [stderr] 145 |   
+[INFO] [stderr] 146 | /     fn get(&self, key: &str) -> &str {
+[INFO] [stderr] 147 | |         self.get_str_ref(key)
+[INFO] [stderr] 148 | |     }
+[INFO] [stderr]     | |_____^ duplicate definition
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 4 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0201, E0432, E0603.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0201`.
+[INFO] [stderr] error: Could not compile `doorwayd`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "8a5bab10e9a39ec3ba1b15f58e1ab71b713a0b789cbc51a00f00bbbe998ac51c"`
+[INFO] running `"docker" "rm" "-f" "8a5bab10e9a39ec3ba1b15f58e1ab71b713a0b789cbc51a00f00bbbe998ac51c"`
+[INFO] [stdout] 8a5bab10e9a39ec3ba1b15f58e1ab71b713a0b789cbc51a00f00bbbe998ac51c

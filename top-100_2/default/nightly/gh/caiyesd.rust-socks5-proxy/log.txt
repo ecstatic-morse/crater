@@ -1,0 +1,71 @@
+[INFO] cloning repository caiyesd/rust-socks5-proxy
+[INFO] running `"git" "clone" "--bare" "git://github.com/caiyesd/rust-socks5-proxy.git" "work\\cache\\sources\\gh\\caiyesd\\rust-socks5-proxy"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\caiyesd\rust-socks5-proxy'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\caiyesd\\rust-socks5-proxy" "work\\ex\\default\\sources\\nightly\\gh\\caiyesd\\rust-socks5-proxy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\caiyesd\rust-socks5-proxy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\caiyesd\\rust-socks5-proxy" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\caiyesd\\rust-socks5-proxy"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\caiyesd\rust-socks5-proxy'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 41608d03c3628382d031068067e802386622d59d
+[INFO] sha for GitHub repo caiyesd/rust-socks5-proxy: 41608d03c3628382d031068067e802386622d59d
+[INFO] validating manifest of caiyesd/rust-socks5-proxy on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of caiyesd/rust-socks5-proxy on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing caiyesd/rust-socks5-proxy
+[INFO] finished frobbing caiyesd/rust-socks5-proxy
+[INFO] frobbed toml for caiyesd/rust-socks5-proxy written to work\ex\default\sources\nightly\gh\caiyesd\rust-socks5-proxy\Cargo.toml
+[INFO] started frobbing caiyesd/rust-socks5-proxy
+[INFO] finished frobbing caiyesd/rust-socks5-proxy
+[INFO] frobbed toml for caiyesd/rust-socks5-proxy written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\caiyesd\rust-socks5-proxy\Cargo.toml
+[INFO] crate caiyesd/rust-socks5-proxy already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing caiyesd/rust-socks5-proxy against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\caiyesd\\rust-socks5-proxy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] e1af65ec6afb29dc04682e2080533db1eea718f1cb38a58e290ad9da54495e58
+[INFO] running `"docker" "start" "-a" "e1af65ec6afb29dc04682e2080533db1eea718f1cb38a58e290ad9da54495e58"`
+[INFO] [stderr]    Compiling libc v0.2.58
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling pkg-config v0.3.14
+[INFO] [stderr]    Compiling vcpkg v0.2.6
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling openssl v0.10.23
+[INFO] [stderr]    Compiling unicode-width v0.1.5
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling vec_map v0.8.1
+[INFO] [stderr]    Compiling strsim v0.8.0
+[INFO] [stderr]    Compiling textwrap v0.11.0
+[INFO] [stderr]    Compiling openssl-sys v0.9.47
+[INFO] [stderr]    Compiling atty v0.2.11
+[INFO] [stderr]    Compiling clap v2.33.0
+[INFO] [stderr]    Compiling rust-socks5 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 34s
+[INFO] running `"docker" "inspect" "e1af65ec6afb29dc04682e2080533db1eea718f1cb38a58e290ad9da54495e58"`
+[INFO] running `"docker" "rm" "-f" "e1af65ec6afb29dc04682e2080533db1eea718f1cb38a58e290ad9da54495e58"`
+[INFO] [stdout] e1af65ec6afb29dc04682e2080533db1eea718f1cb38a58e290ad9da54495e58
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\caiyesd\\rust-socks5-proxy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] ad9fa89c0cdde7759c4db2d8931065cac537cbdd78d6934fb0762794f6b0e408
+[INFO] running `"docker" "start" "-a" "ad9fa89c0cdde7759c4db2d8931065cac537cbdd78d6934fb0762794f6b0e408"`
+[INFO] [stderr]    Compiling rust-socks5 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.40s
+[INFO] running `"docker" "inspect" "ad9fa89c0cdde7759c4db2d8931065cac537cbdd78d6934fb0762794f6b0e408"`
+[INFO] running `"docker" "rm" "-f" "ad9fa89c0cdde7759c4db2d8931065cac537cbdd78d6934fb0762794f6b0e408"`
+[INFO] [stdout] ad9fa89c0cdde7759c4db2d8931065cac537cbdd78d6934fb0762794f6b0e408
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\caiyesd\\rust-socks5-proxy,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c9a2586c27213702e441824159bf6e5e05c15787d692eea44d8ef416dff87cd1
+[INFO] running `"docker" "start" "-a" "c9a2586c27213702e441824159bf6e5e05c15787d692eea44d8ef416dff87cd1"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.55s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_socks5-f0351e32b21c2f7c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c9a2586c27213702e441824159bf6e5e05c15787d692eea44d8ef416dff87cd1"`
+[INFO] running `"docker" "rm" "-f" "c9a2586c27213702e441824159bf6e5e05c15787d692eea44d8ef416dff87cd1"`
+[INFO] [stdout] c9a2586c27213702e441824159bf6e5e05c15787d692eea44d8ef416dff87cd1

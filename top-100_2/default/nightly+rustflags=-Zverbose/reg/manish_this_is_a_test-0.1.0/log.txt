@@ -1,0 +1,54 @@
+[INFO] fetching crate manish_this_is_a_test 0.1.0...
+[INFO] extracting crate manish_this_is_a_test 0.1.0 into work\ex\default\sources\nightly\reg\manish_this_is_a_test\0.1.0
+[INFO] extracting crate manish_this_is_a_test 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\manish_this_is_a_test\0.1.0
+[INFO] validating manifest of manish_this_is_a_test-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of manish_this_is_a_test-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing manish_this_is_a_test-0.1.0
+[INFO] finished frobbing manish_this_is_a_test-0.1.0
+[INFO] frobbed toml for manish_this_is_a_test-0.1.0 written to work\ex\default\sources\nightly\reg\manish_this_is_a_test\0.1.0\Cargo.toml
+[INFO] started frobbing manish_this_is_a_test-0.1.0
+[INFO] finished frobbing manish_this_is_a_test-0.1.0
+[INFO] frobbed toml for manish_this_is_a_test-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\manish_this_is_a_test\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing manish_this_is_a_test-0.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\manish_this_is_a_test\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7a17bcf3ad1ae8b20c3ff26d0a96ac42a2e065ef4668fc96862caf2441007f9f
+[INFO] running `"docker" "start" "-a" "7a17bcf3ad1ae8b20c3ff26d0a96ac42a2e065ef4668fc96862caf2441007f9f"`
+[INFO] [stderr]    Compiling manish_this_is_a_test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.77s
+[INFO] running `"docker" "inspect" "7a17bcf3ad1ae8b20c3ff26d0a96ac42a2e065ef4668fc96862caf2441007f9f"`
+[INFO] running `"docker" "rm" "-f" "7a17bcf3ad1ae8b20c3ff26d0a96ac42a2e065ef4668fc96862caf2441007f9f"`
+[INFO] [stdout] 7a17bcf3ad1ae8b20c3ff26d0a96ac42a2e065ef4668fc96862caf2441007f9f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\manish_this_is_a_test\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 10ac2d13eae616a6c49724dd545f3c2088e90fa3a4c4081953e6ec8efdbcbb37
+[INFO] running `"docker" "start" "-a" "10ac2d13eae616a6c49724dd545f3c2088e90fa3a4c4081953e6ec8efdbcbb37"`
+[INFO] [stderr]    Compiling manish_this_is_a_test v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.28s
+[INFO] running `"docker" "inspect" "10ac2d13eae616a6c49724dd545f3c2088e90fa3a4c4081953e6ec8efdbcbb37"`
+[INFO] running `"docker" "rm" "-f" "10ac2d13eae616a6c49724dd545f3c2088e90fa3a4c4081953e6ec8efdbcbb37"`
+[INFO] [stdout] 10ac2d13eae616a6c49724dd545f3c2088e90fa3a4c4081953e6ec8efdbcbb37
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\manish_this_is_a_test\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 617375f4dd7ab4c750814b2c7054ac0b94043d02d493e6e694b99c7d1ef6b8e6
+[INFO] running `"docker" "start" "-a" "617375f4dd7ab4c750814b2c7054ac0b94043d02d493e6e694b99c7d1ef6b8e6"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\manish_this_is_a_test-6c9e1955d7a1012b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stderr]    Doc-tests manish_this_is_a_test
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "617375f4dd7ab4c750814b2c7054ac0b94043d02d493e6e694b99c7d1ef6b8e6"`
+[INFO] running `"docker" "rm" "-f" "617375f4dd7ab4c750814b2c7054ac0b94043d02d493e6e694b99c7d1ef6b8e6"`
+[INFO] [stdout] 617375f4dd7ab4c750814b2c7054ac0b94043d02d493e6e694b99c7d1ef6b8e6

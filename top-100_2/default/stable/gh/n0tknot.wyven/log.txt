@@ -1,0 +1,134 @@
+[INFO] cloning repository n0tknot/wyven
+[INFO] running `"git" "clone" "--bare" "git://github.com/n0tknot/wyven.git" "work\\cache\\sources\\gh\\n0tknot\\wyven"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\n0tknot\wyven'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\n0tknot\\wyven" "work\\ex\\default\\sources\\stable\\gh\\n0tknot\\wyven"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\n0tknot\wyven'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\n0tknot\\wyven" "work\\ex\\default\\sources\\beta\\gh\\n0tknot\\wyven"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\n0tknot\wyven'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 488d285e2dbbefbc239b626a4e7fd34b5a3a1689
+[INFO] sha for GitHub repo n0tknot/wyven: 488d285e2dbbefbc239b626a4e7fd34b5a3a1689
+[INFO] validating manifest of n0tknot/wyven on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of n0tknot/wyven on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing n0tknot/wyven
+[INFO] finished frobbing n0tknot/wyven
+[INFO] frobbed toml for n0tknot/wyven written to work\ex\default\sources\stable\gh\n0tknot\wyven\Cargo.toml
+[INFO] started frobbing n0tknot/wyven
+[INFO] finished frobbing n0tknot/wyven
+[INFO] frobbed toml for n0tknot/wyven written to work\ex\default\sources\beta\gh\n0tknot\wyven\Cargo.toml
+[INFO] crate n0tknot/wyven already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded winit v0.10.0
+[INFO] [stderr]   Downloaded core-graphics v0.12.4
+[INFO] [stderr]   Downloaded gdi32-sys v0.1.2
+[INFO] [stderr]   Downloaded core-foundation v0.3.0
+[INFO] [stderr]   Downloaded wayland-window v0.7.0
+[INFO] [stderr]   Downloaded objc-foundation v0.1.1
+[INFO] [stderr]   Downloaded objc_id v0.1.0
+[INFO] [stderr]   Downloaded wayland-window v0.13.2
+[INFO] [stderr]   Downloaded vulkano v0.7.2
+[INFO] [stderr]   Downloaded wayland-protocols v0.12.4
+[INFO] [stderr]   Downloaded wayland-sys v0.12.4
+[INFO] [stderr]   Downloaded wayland-scanner v0.12.4
+[INFO] [stderr]   Downloaded dlib v0.4.0
+[INFO] [stderr]   Downloaded tempfile v2.2.0
+[INFO] [stderr]   Downloaded wayland-client v0.12.4
+[INFO] [stderr]   Downloaded redox_syscall v0.1.33
+[INFO] [stderr]   Downloaded rand v0.3.19
+[INFO] [stderr]   Downloaded fuchsia-zircon v0.3.2
+[INFO] [stderr]   Downloaded memmap v0.6.1
+[INFO] [stderr]   Downloaded fuchsia-zircon-sys v0.3.2
+[INFO] [stderr]   Downloaded wayland-kbd v0.13.0
+[INFO] [stderr]   Downloaded objc_exception v0.1.1
+[INFO] [stderr]   Downloaded core-foundation v0.4.6
+[INFO] [stderr]   Downloaded core-foundation-sys v0.4.6
+[INFO] [stderr]   Downloaded gcc v0.3.54
+[INFO] [stderr]   Downloaded cocoa v0.13.0
+[INFO] [stderr]   Downloaded vulkano-win v0.7.2
+[INFO] [stderr]   Downloaded wayland-sys v0.9.10
+[INFO] [stderr]   Downloaded num-traits v0.1.41
+[INFO] [stderr]   Downloaded winit v0.7.6
+[INFO] [stderr]   Downloaded wayland-scanner v0.9.10
+[INFO] [stderr]   Downloaded xml-rs v0.6.1
+[INFO] [stderr]   Downloaded wayland-client v0.9.10
+[INFO] [stderr]   Downloaded wayland-protocols v0.9.10
+[INFO] [stderr]   Downloaded user32-sys v0.1.3
+[INFO] [stderr]   Downloaded shell32-sys v0.1.2
+[INFO] [stderr]   Downloaded wayland-kbd v0.9.1
+[INFO] [stderr]   Downloaded core-graphics v0.8.2
+[INFO] [stderr]   Downloaded shared_library v0.1.8
+[INFO] [stderr]   Downloaded cocoa v0.9.2
+[INFO] [stderr]   Downloaded core-foundation-sys v0.3.1
+[INFO] [stderr]   Downloaded vk-sys v0.3.2
+[INFO] [stderr]   Downloaded smallvec v0.4.4
+[INFO] [stderr]   Downloaded vulkano-shaders v0.7.2
+[INFO] [stderr]   Downloaded metal-rs v0.4.3
+[INFO] [stderr]   Downloaded cmake v0.1.29
+[INFO] [stderr]   Downloaded x11-dl v2.17.2
+[INFO] [stderr]   Downloaded cc v1.0.3
+[INFO] [stderr]   Downloaded glsl-to-spirv v0.1.3
+[INFO] [stderr]   Downloaded dwmapi-sys v0.1.1
+[INFO] [stderr]   Downloaded winapi v0.3.2
+[INFO] [stderr]   Downloaded half v1.0.1
+[INFO] [stderr]   Downloaded crossbeam v0.3.0
+[INFO] [stderr]   Downloaded vulkano-shader-derive v0.7.2
+[INFO] [stderr]   Downloaded tempdir v0.3.5
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing n0tknot/wyven against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\n0tknot\\wyven,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 50e2d7e5973fabad3d21dc8bd3751841e37c28ba5a9977cbfa5df53b06606ae3
+[INFO] running `"docker" "start" "-a" "50e2d7e5973fabad3d21dc8bd3751841e37c28ba5a9977cbfa5df53b06606ae3"`
+[INFO] [stderr]    Compiling cc v1.0.3
+[INFO] [stderr]    Compiling winapi v0.3.2
+[INFO] [stderr]    Compiling vulkano v0.7.2
+[INFO] [stderr]    Compiling crossbeam v0.3.0
+[INFO] [stderr]    Compiling smallvec v0.4.4
+[INFO] [stderr]    Compiling vk-sys v0.3.2
+[INFO] [stderr]    Compiling half v1.0.1
+[INFO] [stderr]    Compiling rand v0.3.19
+[INFO] [stderr]    Compiling user32-sys v0.1.3
+[INFO] [stderr]    Compiling shell32-sys v0.1.2
+[INFO] [stderr]    Compiling dwmapi-sys v0.1.1
+[INFO] [stderr]    Compiling gdi32-sys v0.1.2
+[INFO] [stderr]    Compiling shared_library v0.1.8
+[INFO] [stderr]    Compiling syn v0.10.8
+[INFO] [stderr]    Compiling cmake v0.1.29
+[INFO] [stderr]    Compiling tempdir v0.3.5
+[INFO] [stderr]    Compiling glsl-to-spirv v0.1.3
+[INFO] [stderr]    Compiling winit v0.7.6
+[INFO] [stderr]    Compiling winit v0.10.0
+[INFO] [stderr]    Compiling vulkano-shaders v0.7.2
+[INFO] [stderr]    Compiling vulkano-shader-derive v0.7.2
+[INFO] [stderr]    Compiling vulkano-win v0.7.2
+[INFO] [stderr]    Compiling wyven v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 44s
+[INFO] running `"docker" "inspect" "50e2d7e5973fabad3d21dc8bd3751841e37c28ba5a9977cbfa5df53b06606ae3"`
+[INFO] running `"docker" "rm" "-f" "50e2d7e5973fabad3d21dc8bd3751841e37c28ba5a9977cbfa5df53b06606ae3"`
+[INFO] [stdout] 50e2d7e5973fabad3d21dc8bd3751841e37c28ba5a9977cbfa5df53b06606ae3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\n0tknot\\wyven,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c3fd64ffb1fcf278c7a9374c26e694e89a9f52aaba4d179385faeac13dbb544f
+[INFO] running `"docker" "start" "-a" "c3fd64ffb1fcf278c7a9374c26e694e89a9f52aaba4d179385faeac13dbb544f"`
+[INFO] [stderr]    Compiling wyven v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.75s
+[INFO] running `"docker" "inspect" "c3fd64ffb1fcf278c7a9374c26e694e89a9f52aaba4d179385faeac13dbb544f"`
+[INFO] running `"docker" "rm" "-f" "c3fd64ffb1fcf278c7a9374c26e694e89a9f52aaba4d179385faeac13dbb544f"`
+[INFO] [stdout] c3fd64ffb1fcf278c7a9374c26e694e89a9f52aaba4d179385faeac13dbb544f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\n0tknot\\wyven,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 74816e126d7a903fbfe99df4e27d2eac11704c722e900dbaea5335da8b2ec69c
+[INFO] running `"docker" "start" "-a" "74816e126d7a903fbfe99df4e27d2eac11704c722e900dbaea5335da8b2ec69c"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.70s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\wyven-ba870f8248c562d0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "74816e126d7a903fbfe99df4e27d2eac11704c722e900dbaea5335da8b2ec69c"`
+[INFO] running `"docker" "rm" "-f" "74816e126d7a903fbfe99df4e27d2eac11704c722e900dbaea5335da8b2ec69c"`
+[INFO] [stdout] 74816e126d7a903fbfe99df4e27d2eac11704c722e900dbaea5335da8b2ec69c

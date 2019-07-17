@@ -1,0 +1,55 @@
+[INFO] cloning repository kisom/netcheck
+[INFO] running `"git" "clone" "--bare" "git://github.com/kisom/netcheck.git" "work\\cache\\sources\\gh\\kisom\\netcheck"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\kisom\netcheck'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\kisom\\netcheck" "work\\ex\\default\\sources\\stable\\gh\\kisom\\netcheck"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\kisom\netcheck'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\kisom\\netcheck" "work\\ex\\default\\sources\\beta\\gh\\kisom\\netcheck"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\kisom\netcheck'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f60f5344fc658cbc25bca4c9f4dac247904c9806
+[INFO] sha for GitHub repo kisom/netcheck: f60f5344fc658cbc25bca4c9f4dac247904c9806
+[INFO] validating manifest of kisom/netcheck on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of kisom/netcheck on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing kisom/netcheck
+[INFO] finished frobbing kisom/netcheck
+[INFO] frobbed toml for kisom/netcheck written to work\ex\default\sources\stable\gh\kisom\netcheck\Cargo.toml
+[INFO] started frobbing kisom/netcheck
+[INFO] finished frobbing kisom/netcheck
+[INFO] frobbed toml for kisom/netcheck written to work\ex\default\sources\beta\gh\kisom\netcheck\Cargo.toml
+[INFO] crate kisom/netcheck already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing kisom/netcheck against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\kisom\\netcheck,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] a93481ea91ea9dade2c576480a64a1509f96a75fea0e6f8bb0aa833719a9ec53
+[INFO] running `"docker" "start" "-a" "a93481ea91ea9dade2c576480a64a1509f96a75fea0e6f8bb0aa833719a9ec53"`
+[INFO] [stderr]    Compiling netcheck v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0425]: cannot find function `lookup_host` in module `std::net`
+[INFO] [stderr]   --> src\main.rs:42:25
+[INFO] [stderr]    |
+[INFO] [stderr] 42 |         match std::net::lookup_host(srv.host) {
+[INFO] [stderr]    |                         ^^^^^^^^^^^ not found in `std::net`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0554]: #![feature] may not be used on the stable release channel
+[INFO] [stderr]  --> src\main.rs:3:1
+[INFO] [stderr]   |
+[INFO] [stderr] 3 | #![feature(lookup_host)]
+[INFO] [stderr]   | ^^^^^^^^^^^^^^^^^^^^^^^^
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 2 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0554.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `netcheck`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "a93481ea91ea9dade2c576480a64a1509f96a75fea0e6f8bb0aa833719a9ec53"`
+[INFO] running `"docker" "rm" "-f" "a93481ea91ea9dade2c576480a64a1509f96a75fea0e6f8bb0aa833719a9ec53"`
+[INFO] [stdout] a93481ea91ea9dade2c576480a64a1509f96a75fea0e6f8bb0aa833719a9ec53

@@ -1,0 +1,64 @@
+[INFO] fetching crate polytope 0.1.2...
+[INFO] extracting crate polytope 0.1.2 into work\ex\default\sources\nightly\reg\polytope\0.1.2
+[INFO] extracting crate polytope 0.1.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\polytope\0.1.2
+[INFO] validating manifest of polytope-0.1.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of polytope-0.1.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing polytope-0.1.2
+[INFO] finished frobbing polytope-0.1.2
+[INFO] frobbed toml for polytope-0.1.2 written to work\ex\default\sources\nightly\reg\polytope\0.1.2\Cargo.toml
+[INFO] started frobbing polytope-0.1.2
+[INFO] finished frobbing polytope-0.1.2
+[INFO] frobbed toml for polytope-0.1.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\polytope\0.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing polytope-0.1.2 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\polytope\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 2afb7200c625ba387fbb9b2a05258f3474fe2b58b404881529231d871ff104f1
+[INFO] running `"docker" "start" "-a" "2afb7200c625ba387fbb9b2a05258f3474fe2b58b404881529231d871ff104f1"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]    Compiling polytope v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.44s
+[INFO] running `"docker" "inspect" "2afb7200c625ba387fbb9b2a05258f3474fe2b58b404881529231d871ff104f1"`
+[INFO] running `"docker" "rm" "-f" "2afb7200c625ba387fbb9b2a05258f3474fe2b58b404881529231d871ff104f1"`
+[INFO] [stdout] 2afb7200c625ba387fbb9b2a05258f3474fe2b58b404881529231d871ff104f1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\polytope\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 35afe231f287caa6b765e640b2ee3e8baea76fede0b0e830603cfd877356b793
+[INFO] running `"docker" "start" "-a" "35afe231f287caa6b765e640b2ee3e8baea76fede0b0e830603cfd877356b793"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]    Compiling polytope v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.11s
+[INFO] running `"docker" "inspect" "35afe231f287caa6b765e640b2ee3e8baea76fede0b0e830603cfd877356b793"`
+[INFO] running `"docker" "rm" "-f" "35afe231f287caa6b765e640b2ee3e8baea76fede0b0e830603cfd877356b793"`
+[INFO] [stdout] 35afe231f287caa6b765e640b2ee3e8baea76fede0b0e830603cfd877356b793
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\polytope\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] feb27e32c2e6e00ebf380bc2834b3aacd64cbc2ed7d9bbad839a928ea9a5abe3
+[INFO] running `"docker" "start" "-a" "feb27e32c2e6e00ebf380bc2834b3aacd64cbc2ed7d9bbad839a928ea9a5abe3"`
+[INFO] [stderr] warning: only one of `license` or `license-file` is necessary
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.21s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\polytope-1235b5f3afbe5f93.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test tests::cone_line ... ok
+[INFO] [stdout] test tests::extrude_cone_line ... ok
+[INFO] [stdout] test tests::extrude_line ... ok
+[INFO] [stdout] test tests::extrude_point ... ok
+[INFO] [stdout] test tests::polytope_new ... ok
+[INFO] [stderr]    Doc-tests polytope
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test src\lib.rs - Polytope (line 58) ... ok
+[INFO] [stdout] test src\lib.rs - Polytope (line 48) ... ok
+[INFO] [stdout] test src\lib.rs - Polytope (line 75) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "feb27e32c2e6e00ebf380bc2834b3aacd64cbc2ed7d9bbad839a928ea9a5abe3"`
+[INFO] running `"docker" "rm" "-f" "feb27e32c2e6e00ebf380bc2834b3aacd64cbc2ed7d9bbad839a928ea9a5abe3"`
+[INFO] [stdout] feb27e32c2e6e00ebf380bc2834b3aacd64cbc2ed7d9bbad839a928ea9a5abe3

@@ -1,0 +1,55 @@
+[INFO] cloning repository eudaimonia/problem_of_rust_lifetime
+[INFO] running `"git" "clone" "--bare" "git://github.com/eudaimonia/problem_of_rust_lifetime.git" "work\\cache\\sources\\gh\\eudaimonia\\problem_of_rust_lifetime"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\eudaimonia\problem_of_rust_lifetime'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\eudaimonia\\problem_of_rust_lifetime" "work\\ex\\default\\sources\\nightly\\gh\\eudaimonia\\problem_of_rust_lifetime"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\eudaimonia\problem_of_rust_lifetime'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\eudaimonia\\problem_of_rust_lifetime" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\eudaimonia\\problem_of_rust_lifetime"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\eudaimonia\problem_of_rust_lifetime'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ff5e7d2169109fa52e5acc957430035d69021729
+[INFO] sha for GitHub repo eudaimonia/problem_of_rust_lifetime: ff5e7d2169109fa52e5acc957430035d69021729
+[INFO] validating manifest of eudaimonia/problem_of_rust_lifetime on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of eudaimonia/problem_of_rust_lifetime on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing eudaimonia/problem_of_rust_lifetime
+[INFO] finished frobbing eudaimonia/problem_of_rust_lifetime
+[INFO] frobbed toml for eudaimonia/problem_of_rust_lifetime written to work\ex\default\sources\nightly\gh\eudaimonia\problem_of_rust_lifetime\Cargo.toml
+[INFO] started frobbing eudaimonia/problem_of_rust_lifetime
+[INFO] finished frobbing eudaimonia/problem_of_rust_lifetime
+[INFO] frobbed toml for eudaimonia/problem_of_rust_lifetime written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\eudaimonia\problem_of_rust_lifetime\Cargo.toml
+[INFO] crate eudaimonia/problem_of_rust_lifetime already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing eudaimonia/problem_of_rust_lifetime against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\eudaimonia\\problem_of_rust_lifetime,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 7bdb3e147b066d568b44f83d77c273b18fefac2df193d6491fba8d700919c8dd
+[INFO] running `"docker" "start" "-a" "7bdb3e147b066d568b44f83d77c273b18fefac2df193d6491fba8d700919c8dd"`
+[INFO] [stderr]    Compiling r57 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6.41s
+[INFO] running `"docker" "inspect" "7bdb3e147b066d568b44f83d77c273b18fefac2df193d6491fba8d700919c8dd"`
+[INFO] running `"docker" "rm" "-f" "7bdb3e147b066d568b44f83d77c273b18fefac2df193d6491fba8d700919c8dd"`
+[INFO] [stdout] 7bdb3e147b066d568b44f83d77c273b18fefac2df193d6491fba8d700919c8dd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\eudaimonia\\problem_of_rust_lifetime,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] c1bc865aa316488b501b3747bbce44f0092a581963beada12781d21923c9b194
+[INFO] running `"docker" "start" "-a" "c1bc865aa316488b501b3747bbce44f0092a581963beada12781d21923c9b194"`
+[INFO] [stderr]    Compiling r57 v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.94s
+[INFO] running `"docker" "inspect" "c1bc865aa316488b501b3747bbce44f0092a581963beada12781d21923c9b194"`
+[INFO] running `"docker" "rm" "-f" "c1bc865aa316488b501b3747bbce44f0092a581963beada12781d21923c9b194"`
+[INFO] [stdout] c1bc865aa316488b501b3747bbce44f0092a581963beada12781d21923c9b194
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\eudaimonia\\problem_of_rust_lifetime,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] d6c4c22b1f8a877a3f8b6c4bf8aa9f21176038a0e05d7391061077f3359d510d
+[INFO] running `"docker" "start" "-a" "d6c4c22b1f8a877a3f8b6c4bf8aa9f21176038a0e05d7391061077f3359d510d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\r57-11e6b9d714421a3d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "d6c4c22b1f8a877a3f8b6c4bf8aa9f21176038a0e05d7391061077f3359d510d"`
+[INFO] running `"docker" "rm" "-f" "d6c4c22b1f8a877a3f8b6c4bf8aa9f21176038a0e05d7391061077f3359d510d"`
+[INFO] [stdout] d6c4c22b1f8a877a3f8b6c4bf8aa9f21176038a0e05d7391061077f3359d510d

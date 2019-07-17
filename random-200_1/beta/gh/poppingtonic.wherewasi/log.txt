@@ -1,0 +1,45 @@
+[INFO] cloning repository poppingtonic/wherewasi
+[INFO] running `"git" "clone" "--bare" "git://github.com/poppingtonic/wherewasi.git" "work\\cache\\sources\\gh\\poppingtonic\\wherewasi"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\poppingtonic\wherewasi'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\poppingtonic\\wherewasi" "work\\ex\\default\\sources\\stable\\gh\\poppingtonic\\wherewasi"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\poppingtonic\wherewasi'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\poppingtonic\\wherewasi" "work\\ex\\default\\sources\\beta\\gh\\poppingtonic\\wherewasi"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\poppingtonic\wherewasi'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] f062ec9be679db8e244093a700ec1b71d64e8b1b
+[INFO] sha for GitHub repo poppingtonic/wherewasi: f062ec9be679db8e244093a700ec1b71d64e8b1b
+[INFO] validating manifest of poppingtonic/wherewasi on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of poppingtonic/wherewasi on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing poppingtonic/wherewasi
+[INFO] finished frobbing poppingtonic/wherewasi
+[INFO] frobbed toml for poppingtonic/wherewasi written to work\ex\default\sources\stable\gh\poppingtonic\wherewasi\Cargo.toml
+[INFO] started frobbing poppingtonic/wherewasi
+[INFO] finished frobbing poppingtonic/wherewasi
+[INFO] frobbed toml for poppingtonic/wherewasi written to work\ex\default\sources\beta\gh\poppingtonic\wherewasi\Cargo.toml
+[INFO] crate poppingtonic/wherewasi already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing poppingtonic/wherewasi against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\poppingtonic\\wherewasi,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 69c621067552018aa7e2b3a12701b9ada2627edffd2e17cfd4c9d8ff6c94de60
+[INFO] running `"docker" "start" "-a" "69c621067552018aa7e2b3a12701b9ada2627edffd2e17cfd4c9d8ff6c94de60"`
+[INFO] [stderr]    Compiling wherewasi v0.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0425]: cannot find value `EOF` in this scope
+[INFO] [stderr]  --> src\main.rs:7:99
+[INFO] [stderr]   |
+[INFO] [stderr] 7 |     println!("Remember to do this when you restart your machine \n\n (Press {} when finished)\n", EOF);
+[INFO] [stderr]   |                                                                                                   ^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `wherewasi`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "69c621067552018aa7e2b3a12701b9ada2627edffd2e17cfd4c9d8ff6c94de60"`
+[INFO] running `"docker" "rm" "-f" "69c621067552018aa7e2b3a12701b9ada2627edffd2e17cfd4c9d8ff6c94de60"`
+[INFO] [stdout] 69c621067552018aa7e2b3a12701b9ada2627edffd2e17cfd4c9d8ff6c94de60

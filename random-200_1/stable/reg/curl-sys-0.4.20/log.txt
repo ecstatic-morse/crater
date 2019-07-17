@@ -1,0 +1,56 @@
+[INFO] crate curl-sys 0.4.20 is already in cache
+[INFO] extracting crate curl-sys 0.4.20 into work\ex\default\sources\stable\reg\curl-sys\0.4.20
+[INFO] extracting crate curl-sys 0.4.20 into work\ex\default\sources\beta\reg\curl-sys\0.4.20
+[INFO] validating manifest of curl-sys-0.4.20 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of curl-sys-0.4.20 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing curl-sys-0.4.20
+[INFO] finished frobbing curl-sys-0.4.20
+[INFO] frobbed toml for curl-sys-0.4.20 written to work\ex\default\sources\stable\reg\curl-sys\0.4.20\Cargo.toml
+[INFO] started frobbing curl-sys-0.4.20
+[INFO] finished frobbing curl-sys-0.4.20
+[INFO] frobbed toml for curl-sys-0.4.20 written to work\ex\default\sources\beta\reg\curl-sys\0.4.20\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing curl-sys-0.4.20 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\curl-sys\\0.4.20,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 5eafb0940b1173787f286caa5cf33970a2c11cee2c5379e68e7ae714236eb024
+[INFO] running `"docker" "start" "-a" "5eafb0940b1173787f286caa5cf33970a2c11cee2c5379e68e7ae714236eb024"`
+[INFO] [stderr]    Compiling cc v1.0.37
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling libz-sys v1.0.25
+[INFO] [stderr]    Compiling curl-sys v0.4.20 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 12s
+[INFO] running `"docker" "inspect" "5eafb0940b1173787f286caa5cf33970a2c11cee2c5379e68e7ae714236eb024"`
+[INFO] running `"docker" "rm" "-f" "5eafb0940b1173787f286caa5cf33970a2c11cee2c5379e68e7ae714236eb024"`
+[INFO] [stdout] 5eafb0940b1173787f286caa5cf33970a2c11cee2c5379e68e7ae714236eb024
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\curl-sys\\0.4.20,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 199e566b34e057029ec683540670fc30a7577c6040dc974faa181bf4e027e3db
+[INFO] running `"docker" "start" "-a" "199e566b34e057029ec683540670fc30a7577c6040dc974faa181bf4e027e3db"`
+[INFO] [stderr]    Compiling curl-sys v0.4.20 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.77s
+[INFO] running `"docker" "inspect" "199e566b34e057029ec683540670fc30a7577c6040dc974faa181bf4e027e3db"`
+[INFO] running `"docker" "rm" "-f" "199e566b34e057029ec683540670fc30a7577c6040dc974faa181bf4e027e3db"`
+[INFO] [stdout] 199e566b34e057029ec683540670fc30a7577c6040dc974faa181bf4e027e3db
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\curl-sys\\0.4.20,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 58af85d28e6d37b1d9269d120d4e4d1cb5036b803bea97da8154bf97c6fc0a79
+[INFO] running `"docker" "start" "-a" "58af85d28e6d37b1d9269d120d4e4d1cb5036b803bea97da8154bf97c6fc0a79"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.68s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\curl_sys-f1ad405dfcb9b5de.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests curl_sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "58af85d28e6d37b1d9269d120d4e4d1cb5036b803bea97da8154bf97c6fc0a79"`
+[INFO] running `"docker" "rm" "-f" "58af85d28e6d37b1d9269d120d4e4d1cb5036b803bea97da8154bf97c6fc0a79"`
+[INFO] [stdout] 58af85d28e6d37b1d9269d120d4e4d1cb5036b803bea97da8154bf97c6fc0a79

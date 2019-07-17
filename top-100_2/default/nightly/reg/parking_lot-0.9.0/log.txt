@@ -1,0 +1,402 @@
+[INFO] crate parking_lot 0.9.0 is already in cache
+[INFO] extracting crate parking_lot 0.9.0 into work\ex\default\sources\nightly\reg\parking_lot\0.9.0
+[INFO] extracting crate parking_lot 0.9.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\parking_lot\0.9.0
+[INFO] validating manifest of parking_lot-0.9.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of parking_lot-0.9.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing parking_lot-0.9.0
+[INFO] finished frobbing parking_lot-0.9.0
+[INFO] frobbed toml for parking_lot-0.9.0 written to work\ex\default\sources\nightly\reg\parking_lot\0.9.0\Cargo.toml
+[INFO] started frobbing parking_lot-0.9.0
+[INFO] finished frobbing parking_lot-0.9.0
+[INFO] frobbed toml for parking_lot-0.9.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\parking_lot\0.9.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing parking_lot-0.9.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\parking_lot\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c3116e40055d34c4bcb211372b6d03545cf0aa0ce7b35e3f2f3cb4ce3475f27e
+[INFO] running `"docker" "start" "-a" "c3116e40055d34c4bcb211372b6d03545cf0aa0ce7b35e3f2f3cb4ce3475f27e"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling scopeguard v1.0.0
+[INFO] [stderr]    Compiling parking_lot_core v0.6.2
+[INFO] [stderr]    Compiling parking_lot v0.9.0 (C:\crater\workdir)
+[INFO] [stderr]    Compiling lock_api v0.3.1
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 23.20s
+[INFO] running `"docker" "inspect" "c3116e40055d34c4bcb211372b6d03545cf0aa0ce7b35e3f2f3cb4ce3475f27e"`
+[INFO] running `"docker" "rm" "-f" "c3116e40055d34c4bcb211372b6d03545cf0aa0ce7b35e3f2f3cb4ce3475f27e"`
+[INFO] [stdout] c3116e40055d34c4bcb211372b6d03545cf0aa0ce7b35e3f2f3cb4ce3475f27e
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\parking_lot\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 3feeb0347a49c3147271d839ddedc079306da92abd7c36c014e5fc0d4dab74f3
+[INFO] running `"docker" "start" "-a" "3feeb0347a49c3147271d839ddedc079306da92abd7c36c014e5fc0d4dab74f3"`
+[INFO] [stderr]    Compiling ppv-lite86 v0.2.5
+[INFO] [stderr]    Compiling getrandom v0.1.6
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling rand_core v0.5.0
+[INFO] [stderr]    Compiling c2-chacha v0.2.2
+[INFO] [stderr]    Compiling rand v0.7.0
+[INFO] [stderr]    Compiling parking_lot v0.9.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 31.83s
+[INFO] running `"docker" "inspect" "3feeb0347a49c3147271d839ddedc079306da92abd7c36c014e5fc0d4dab74f3"`
+[INFO] running `"docker" "rm" "-f" "3feeb0347a49c3147271d839ddedc079306da92abd7c36c014e5fc0d4dab74f3"`
+[INFO] [stdout] 3feeb0347a49c3147271d839ddedc079306da92abd7c36c014e5fc0d4dab74f3
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\parking_lot\\0.9.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c6ff5c7f9e225892c6f49adca93961349b52ea0ddbb05cd14812a478240da967
+[INFO] running `"docker" "start" "-a" "c6ff5c7f9e225892c6f49adca93961349b52ea0ddbb05cd14812a478240da967"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.65s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\parking_lot-fea845fec2a61214.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 55 tests
+[INFO] [stdout] test condvar::tests::notify_one_return_false ... ok
+[INFO] [stdout] test condvar::tests::notify_all ... ok
+[INFO] [stdout] test condvar::tests::notify_all_return ... ok
+[INFO] [stdout] test condvar::tests::notify_one ... ok
+[INFO] [stdout] test condvar::tests::smoke ... ok
+[INFO] [stdout] test condvar::tests::test_debug_condvar ... ok
+[INFO] [stdout] test condvar::tests::notify_one_return_true ... ok
+[INFO] [stdout] test condvar::tests::test_issue_129 ... ok
+[INFO] [stdout] test condvar::tests::two_mutexes_disjoint ... ok
+[INFO] [stdout] test condvar::tests::test_condvar_requeue ... ok
+[INFO] [stdout] test condvar::tests::wait_for ... ok
+[INFO] [stdout] test condvar::tests::two_mutexes ... ok
+[INFO] [stdout] test condvar::tests::wait_until ... ok
+[INFO] [stdout] test mutex::tests::smoke ... ok
+[INFO] [stdout] test mutex::tests::lots_and_lots ... ok
+[INFO] [stdout] test mutex::tests::test_get_mut ... ok
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic', src\mutex.rs:258:13
+[INFO] [stderr] stack backtrace:
+[INFO] [stdout] test mutex::tests::test_into_inner ... ok
+[INFO] [stdout] test mutex::tests::test_into_inner_drop ... ok
+[INFO] [stdout] test mutex::tests::test_mutex_arc_condvar ... ok
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa42326 - parking_lot::mutex::tests::test_mutex_arc_access_in_unwind::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\mutex.rs:258
+[INFO] [stderr]    8:     0x7ff69aa6d303 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]    9:     0x7ff69aa3c7b3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7a9f3 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6c859 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa68866 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7c5e3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa38823 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d713 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stdout] test mutex::tests::test_mutex_debug ... ok
+[INFO] [stdout] test mutex::tests::test_mutex_unsized ... ok
+[INFO] [stdout] test mutex::tests::test_mutex_arc_nested ... ok
+[INFO] [stdout] test mutex::tests::test_mutex_arc_access_in_unwind ... ok
+[INFO] [stdout] test mutex::tests::test_mutexguard_sync ... ok
+[INFO] [stdout] test mutex::tests::try_lock ... ok
+[INFO] [stdout] test once::tests::smoke_once ... ok
+[INFO] [stdout] test once::tests::test_once_debug ... ok
+[INFO] [stdout] test once::tests::poison_bad ... ok
+[INFO] [stdout] test remutex::tests::smoke ... ok
+[INFO] [stdout] test remutex::tests::is_mutex ... ok
+[INFO] [stdout] test once::tests::stampede_once ... ok
+[INFO] [stdout] test remutex::tests::test_reentrant_mutex_debug ... ok
+[INFO] [stdout] test once::tests::wait_for_force_to_finish ... ok
+[INFO] [stdout] test rwlock::tests::smoke ... ok
+[INFO] [stdout] test rwlock::tests::test_clone ... ok
+[INFO] [stdout] test remutex::tests::trylock_works ... ok
+[INFO] [stdout] test rwlock::tests::frob ... ok
+[INFO] [stdout] test rwlock::tests::test_get_mut ... ok
+[INFO] [stdout] test rwlock::tests::test_into_inner ... ok
+[INFO] [stdout] test rwlock::tests::test_into_inner_drop ... ok
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic', src\rwlock.rs:336:13
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic', src\rwlock.rs:207:13
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa99e96 - parking_lot::rwlock::tests::test_rw_arc_access_in_unwind::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\rwlock.rs:336
+[INFO] [stderr]    8:     0x7ff69aa6d2e3 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]    9:     0x7ff69aa3c713 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7aa63 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6ca19 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa6b116 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7c893 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa38ca3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d8e3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout] test rwlock::tests::test_ruw_arc ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stderr] stack backtrace:
+[INFO] [stdout] test rwlock::tests::test_rw_arc ... ok
+[INFO] [stdout] test rwlock::tests::test_rw_arc_access_in_unwind ... ok
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa97d74 - parking_lot::rwlock::tests::test_rw_arc_no_poison_rr::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\rwlock.rs:207
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic', src\rwlock.rs:194:13
+[INFO] [stderr]    8:     0x7ff69aa6d513 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic',    9src\rwlock.rs:181:13
+[INFO] [stderr] thread '<unnamed>' panicked at 'explicit panic', src\rwlock.rs:220:13
+[INFO] [stderr] :     0x7ff69aa3c6c3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7a7a3 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6c629 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa6a196 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7c8c3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa3ac73 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d5a3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stdout] test rwlock::tests::test_rw_arc_no_poison_rr ... ok
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa979f4 - parking_lot::rwlock::tests::test_rw_arc_no_poison_ww::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\rwlock.rs:194
+[INFO] [stderr]    8:     0x7ff69aa6d4c3 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]    9:     0x7ff69aa3c2d3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7ab33 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6c1f9 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa6b286 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7c8f3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa3bed3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d5c3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout] test rwlock::tests::test_rwlock_debug ... ok
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout] test rwlock::tests::test_rw_arc_no_poison_ww ... ok
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa97674 - parking_lot::rwlock::tests::test_rw_arc_no_poison_wr::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\rwlock.rs:181
+[INFO] [stderr]    8:     0x7ff69aa6d373 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]    9:     0x7ff69aa3c4e3 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7a863 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6c6b9 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa69346 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7cbc3 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa38143 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d603 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff69ab5130c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stderr]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stderr]    1:     0x7ff69ab5130c - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stderr]    2:     0x7ff69ab5488e - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stderr]    3:     0x7ff69ab5488e - std::panicking::default_hook::{{closure}}
+[INFO] [stdout] test rwlock::tests::test_rwlock_downgrade ... ok
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stderr]    4:     0x7ff69ab54512 - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:214
+[INFO] [stderr]    5:     0x7ff69ab55120 - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stderr]    6:     0x7ff69ab38e71 - std::panicking::begin_panic<str*>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:411
+[INFO] [stderr]    7:     0x7ff69aa980f4 - parking_lot::rwlock::tests::test_rw_arc_no_poison_rw::{{closure}}
+[INFO] [stderr]                                at C:\crater\workdir\src\rwlock.rs:220
+[INFO] [stderr]    8:     0x7ff69aa6d443 - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stderr]    9:     0x7ff69aa3c613 - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stderr]   10:     0x7ff69aa7a6d3 - std::panic::{{impl}}::call_once<(),closure>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stderr]   11:     0x7ff69aa6bf59 - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stderr]   12:     0x7ff69ab58eb2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stderr]   13:     0x7ff69aa6a666 - std::panicking::try<(),std::panic::AssertUnwindSafe<closure>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stderr]   14:     0x7ff69aa7c543 - std::panic::catch_unwind<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stderr]   15:     0x7ff69aa3c113 - std::thread::{{impl}}::spawn_unchecked::{{closure}}<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stderr]   16:     0x7ff69aa7d6b3 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stderr]   17:     0x7ff69ab460a7 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   18:     0x7ff69ab57796 - alloc::boxed::{{impl}}::call_once
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stderr]   19:     0x7ff69ab57796 - std::sys_common::thread::start_thread
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stderr]   20:     0x7ff69ab57796 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stderr]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stderr]   21:     0x7ff8f1857974 - BaseThreadInitThunk
+[INFO] [stderr]   22:     0x7ff9146da271 - RtlUserThreadStart
+[INFO] [stdout] test rwlock::tests::test_rw_arc_no_poison_wr ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlock_recursive ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlock_try_read ... ok
+[INFO] [stdout] test rwlock::tests::test_rw_arc_no_poison_rw ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlock_try_upgrade ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlock_try_write ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlock_unsized ... ok
+[INFO] [stdout] test rwlock::tests::test_rwlockguard_sync ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 55 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests parking_lot
+[INFO] [stdout] 
+[INFO] [stdout] running 7 tests
+[INFO] [stdout] test src\condvar.rs - condvar::Condvar::notify_one (line 109) ... ok
+[INFO] [stdout] test src\deadlock.rs - deadlock (line 7) ... ok
+[INFO] [stdout] test src\condvar.rs - condvar::Condvar (line 62) ... ok
+[INFO] [stdout] test src\mutex.rs - mutex::Mutex (line 55) ... ok
+[INFO] [stdout] test src\once.rs - once::Once::call_once (line 132) ... ok
+[INFO] [stdout] test src\once.rs - once::Once (line 83) ... ok
+[INFO] [stdout] test src\rwlock.rs - rwlock::RwLock (line 69) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "c6ff5c7f9e225892c6f49adca93961349b52ea0ddbb05cd14812a478240da967"`
+[INFO] running `"docker" "rm" "-f" "c6ff5c7f9e225892c6f49adca93961349b52ea0ddbb05cd14812a478240da967"`
+[INFO] [stdout] c6ff5c7f9e225892c6f49adca93961349b52ea0ddbb05cd14812a478240da967

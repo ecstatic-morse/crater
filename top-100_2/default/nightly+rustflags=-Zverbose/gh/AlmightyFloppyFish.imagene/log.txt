@@ -1,0 +1,84 @@
+[INFO] cloning repository AlmightyFloppyFish/imagene
+[INFO] running `"git" "clone" "--bare" "git://github.com/AlmightyFloppyFish/imagene.git" "work\\cache\\sources\\gh\\AlmightyFloppyFish\\imagene"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\AlmightyFloppyFish\imagene'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\AlmightyFloppyFish\\imagene" "work\\ex\\default\\sources\\nightly\\gh\\AlmightyFloppyFish\\imagene"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\AlmightyFloppyFish\imagene'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\AlmightyFloppyFish\\imagene" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\AlmightyFloppyFish\\imagene"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\AlmightyFloppyFish\imagene'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] ba9dc225e8778428bd4fd5ce1e157093ba96a176
+[INFO] sha for GitHub repo AlmightyFloppyFish/imagene: ba9dc225e8778428bd4fd5ce1e157093ba96a176
+[INFO] validating manifest of AlmightyFloppyFish/imagene on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of AlmightyFloppyFish/imagene on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing AlmightyFloppyFish/imagene
+[INFO] finished frobbing AlmightyFloppyFish/imagene
+[INFO] frobbed toml for AlmightyFloppyFish/imagene written to work\ex\default\sources\nightly\gh\AlmightyFloppyFish\imagene\Cargo.toml
+[INFO] started frobbing AlmightyFloppyFish/imagene
+[INFO] finished frobbing AlmightyFloppyFish/imagene
+[INFO] frobbed toml for AlmightyFloppyFish/imagene written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\AlmightyFloppyFish\imagene\Cargo.toml
+[INFO] crate AlmightyFloppyFish/imagene already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded imageproc v0.18.0
+[INFO] [stderr]   Downloaded colored v1.7.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing AlmightyFloppyFish/imagene against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\AlmightyFloppyFish\\imagene,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 37670f353434603f41c199fa9cd3715f25146658ab5fd8929fe5358556c6a6c5
+[INFO] running `"docker" "start" "-a" "37670f353434603f41c199fa9cd3715f25146658ab5fd8929fe5358556c6a6c5"`
+[INFO] [stderr]    Compiling num-integer v0.1.39
+[INFO] [stderr]    Compiling autocfg v0.1.2
+[INFO] [stderr]    Compiling num-bigint v0.2.2
+[INFO] [stderr]    Compiling num-complex v0.2.1
+[INFO] [stderr]    Compiling num-rational v0.2.1
+[INFO] [stderr]    Compiling safe-transmute v0.10.1
+[INFO] [stderr]    Compiling custom_derive v0.1.7
+[INFO] [stderr]    Compiling colored v1.7.0
+[INFO] [stderr]    Compiling itertools v0.7.11
+[INFO] [stderr]    Compiling rand_pcg v0.1.2
+[INFO] [stderr]    Compiling rand_chacha v0.1.1
+[INFO] [stderr]    Compiling rand v0.6.5
+[INFO] [stderr]    Compiling conv v0.3.3
+[INFO] [stderr]    Compiling approx v0.3.2
+[INFO] [stderr]    Compiling ordered-float v1.0.2
+[INFO] [stderr]    Compiling stb_truetype v0.2.6
+[INFO] [stderr]    Compiling rand_jitter v0.1.3
+[INFO] [stderr]    Compiling rand_os v0.1.3
+[INFO] [stderr]    Compiling num-iter v0.1.37
+[INFO] [stderr]    Compiling rusttype v0.7.5
+[INFO] [stderr]    Compiling png v0.14.0
+[INFO] [stderr]    Compiling tiff v0.2.2
+[INFO] [stderr]    Compiling image v0.21.0
+[INFO] [stderr]    Compiling num v0.2.0
+[INFO] [stderr]    Compiling imageproc v0.18.0
+[INFO] [stderr]    Compiling imagene v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 24s
+[INFO] running `"docker" "inspect" "37670f353434603f41c199fa9cd3715f25146658ab5fd8929fe5358556c6a6c5"`
+[INFO] running `"docker" "rm" "-f" "37670f353434603f41c199fa9cd3715f25146658ab5fd8929fe5358556c6a6c5"`
+[INFO] [stdout] 37670f353434603f41c199fa9cd3715f25146658ab5fd8929fe5358556c6a6c5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\AlmightyFloppyFish\\imagene,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] cf8d10282369effca4831001551a4837dab7db902e6448a493a1b6ec25997575
+[INFO] running `"docker" "start" "-a" "cf8d10282369effca4831001551a4837dab7db902e6448a493a1b6ec25997575"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling imagene v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 23.08s
+[INFO] running `"docker" "inspect" "cf8d10282369effca4831001551a4837dab7db902e6448a493a1b6ec25997575"`
+[INFO] running `"docker" "rm" "-f" "cf8d10282369effca4831001551a4837dab7db902e6448a493a1b6ec25997575"`
+[INFO] [stdout] cf8d10282369effca4831001551a4837dab7db902e6448a493a1b6ec25997575
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\AlmightyFloppyFish\\imagene,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 9c6057af0b418900969c65d31766f14b706c3936567e70423f2f695e22076d3d
+[INFO] running `"docker" "start" "-a" "9c6057af0b418900969c65d31766f14b706c3936567e70423f2f695e22076d3d"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.88s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\imagene-5c0b504eaa9eb26d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9c6057af0b418900969c65d31766f14b706c3936567e70423f2f695e22076d3d"`
+[INFO] running `"docker" "rm" "-f" "9c6057af0b418900969c65d31766f14b706c3936567e70423f2f695e22076d3d"`
+[INFO] [stdout] 9c6057af0b418900969c65d31766f14b706c3936567e70423f2f695e22076d3d

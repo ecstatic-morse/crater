@@ -1,0 +1,56 @@
+[INFO] cloning repository akshitkrnagpal/rust-fibonacci
+[INFO] running `"git" "clone" "--bare" "git://github.com/akshitkrnagpal/rust-fibonacci.git" "work\\cache\\sources\\gh\\akshitkrnagpal\\rust-fibonacci"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\akshitkrnagpal\rust-fibonacci'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\akshitkrnagpal\\rust-fibonacci" "work\\ex\\default\\sources\\nightly\\gh\\akshitkrnagpal\\rust-fibonacci"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\akshitkrnagpal\rust-fibonacci'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\akshitkrnagpal\\rust-fibonacci" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\akshitkrnagpal\\rust-fibonacci"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\akshitkrnagpal\rust-fibonacci'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 42c52cadee09c0327d203a828481507098eb1455
+[INFO] sha for GitHub repo akshitkrnagpal/rust-fibonacci: 42c52cadee09c0327d203a828481507098eb1455
+[INFO] validating manifest of akshitkrnagpal/rust-fibonacci on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of akshitkrnagpal/rust-fibonacci on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing akshitkrnagpal/rust-fibonacci
+[INFO] finished frobbing akshitkrnagpal/rust-fibonacci
+[INFO] frobbed toml for akshitkrnagpal/rust-fibonacci written to work\ex\default\sources\nightly\gh\akshitkrnagpal\rust-fibonacci\Cargo.toml
+[INFO] started frobbing akshitkrnagpal/rust-fibonacci
+[INFO] finished frobbing akshitkrnagpal/rust-fibonacci
+[INFO] frobbed toml for akshitkrnagpal/rust-fibonacci written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\akshitkrnagpal\rust-fibonacci\Cargo.toml
+[INFO] crate akshitkrnagpal/rust-fibonacci already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing akshitkrnagpal/rust-fibonacci against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\akshitkrnagpal\\rust-fibonacci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] c69e4ca34558234e309c5cb1914b4407717bc1e431da4d095aed6697fe7e21ec
+[INFO] running `"docker" "start" "-a" "c69e4ca34558234e309c5cb1914b4407717bc1e431da4d095aed6697fe7e21ec"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling rust-fibonacci v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.07s
+[INFO] running `"docker" "inspect" "c69e4ca34558234e309c5cb1914b4407717bc1e431da4d095aed6697fe7e21ec"`
+[INFO] running `"docker" "rm" "-f" "c69e4ca34558234e309c5cb1914b4407717bc1e431da4d095aed6697fe7e21ec"`
+[INFO] [stdout] c69e4ca34558234e309c5cb1914b4407717bc1e431da4d095aed6697fe7e21ec
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\akshitkrnagpal\\rust-fibonacci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 0eec38a765e7921db4fbbfd71911996de5f0efb7c4478a7993e01bdc69ea9354
+[INFO] running `"docker" "start" "-a" "0eec38a765e7921db4fbbfd71911996de5f0efb7c4478a7993e01bdc69ea9354"`
+[INFO] [stderr]    Compiling rust-fibonacci v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.61s
+[INFO] running `"docker" "inspect" "0eec38a765e7921db4fbbfd71911996de5f0efb7c4478a7993e01bdc69ea9354"`
+[INFO] running `"docker" "rm" "-f" "0eec38a765e7921db4fbbfd71911996de5f0efb7c4478a7993e01bdc69ea9354"`
+[INFO] [stdout] 0eec38a765e7921db4fbbfd71911996de5f0efb7c4478a7993e01bdc69ea9354
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\akshitkrnagpal\\rust-fibonacci,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] ea882793fcceed90c21b84e48772419b3f0797553de7b3e5e80394e682af660b
+[INFO] running `"docker" "start" "-a" "ea882793fcceed90c21b84e48772419b3f0797553de7b3e5e80394e682af660b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rust_fibonacci-51e6f24e815cad35.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ea882793fcceed90c21b84e48772419b3f0797553de7b3e5e80394e682af660b"`
+[INFO] running `"docker" "rm" "-f" "ea882793fcceed90c21b84e48772419b3f0797553de7b3e5e80394e682af660b"`
+[INFO] [stdout] ea882793fcceed90c21b84e48772419b3f0797553de7b3e5e80394e682af660b

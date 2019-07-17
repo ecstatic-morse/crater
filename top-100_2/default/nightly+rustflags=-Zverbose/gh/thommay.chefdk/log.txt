@@ -1,0 +1,164 @@
+[INFO] cloning repository thommay/chefdk
+[INFO] running `"git" "clone" "--bare" "git://github.com/thommay/chefdk.git" "work\\cache\\sources\\gh\\thommay\\chefdk"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\thommay\chefdk'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\thommay\\chefdk" "work\\ex\\default\\sources\\nightly\\gh\\thommay\\chefdk"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\thommay\chefdk'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\thommay\\chefdk" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\thommay\\chefdk"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\thommay\chefdk'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 3a6d7b434185519c33ab605a09aee4b1f84fec3d
+[INFO] sha for GitHub repo thommay/chefdk: 3a6d7b434185519c33ab605a09aee4b1f84fec3d
+[INFO] validating manifest of thommay/chefdk on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of thommay/chefdk on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing thommay/chefdk
+[INFO] finished frobbing thommay/chefdk
+[INFO] frobbed toml for thommay/chefdk written to work\ex\default\sources\nightly\gh\thommay\chefdk\Cargo.toml
+[INFO] started frobbing thommay/chefdk
+[INFO] finished frobbing thommay/chefdk
+[INFO] frobbed toml for thommay/chefdk written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\thommay\chefdk\Cargo.toml
+[INFO] crate thommay/chefdk already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde v1.0.25
+[INFO] [stderr]   Downloaded num-iter v0.1.34
+[INFO] [stderr]   Downloaded winapi-x86_64-pc-windows-gnu v0.3.1
+[INFO] [stderr]   Downloaded chef_api v0.2.0
+[INFO] [stderr]   Downloaded tokio-core v0.1.11
+[INFO] [stderr]   Downloaded winapi-i686-pc-windows-gnu v0.3.1
+[INFO] [stderr]   Downloaded tokio-io v0.1.4
+[INFO] [stderr]   Downloaded log v0.4.0
+[INFO] [stderr]   Downloaded futures v0.1.17
+[INFO] [stderr]   Downloaded iovec v0.1.1
+[INFO] [stderr]   Downloaded bytes v0.4.5
+[INFO] [stderr]   Downloaded lazycell v0.5.1
+[INFO] [stderr]   Downloaded mio v0.6.11
+[INFO] [stderr]   Downloaded serde_derive_internals v0.18.1
+[INFO] [stderr]   Downloaded serde_derive v1.0.25
+[INFO] [stderr]   Downloaded hyper-openssl v0.3.1
+[INFO] [stderr]   Downloaded tokio-openssl v0.1.3
+[INFO] [stderr]   Downloaded relay v0.1.0
+[INFO] [stderr]   Downloaded hyper v0.11.9
+[INFO] [stderr]   Downloaded futures-cpupool v0.1.7
+[INFO] [stderr]   Downloaded base64 v0.8.0
+[INFO] [stderr]   Downloaded num v0.1.41
+[INFO] [stderr]   Downloaded backtrace v0.3.4
+[INFO] [stderr]   Downloaded chef v0.1.0
+[INFO] [stderr]   Downloaded num-integer v0.1.35
+[INFO] [stderr]   Downloaded clap v2.29.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing thommay/chefdk against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\thommay\\chefdk,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] d329c4c5ea3762c67ab0de4ebd920d311c982421a2883e8f366e75a7690d11b2
+[INFO] running `"docker" "start" "-a" "d329c4c5ea3762c67ab0de4ebd920d311c982421a2883e8f366e75a7690d11b2"`
+[INFO] [stderr]    Compiling cc v1.0.3
+[INFO] [stderr]    Compiling vcpkg v0.2.2
+[INFO] [stderr]    Compiling pkg-config v0.3.9
+[INFO] [stderr]    Compiling slab v0.3.0
+[INFO] [stderr]    Compiling futures v0.1.17
+[INFO] [stderr]    Compiling lazycell v0.5.1
+[INFO] [stderr]    Compiling foreign-types-shared v0.1.1
+[INFO] [stderr]    Compiling openssl v0.9.23
+[INFO] [stderr]    Compiling scoped-tls v0.1.0
+[INFO] [stderr]    Compiling slab v0.4.0
+[INFO] [stderr]    Compiling libc v0.2.34
+[INFO] [stderr]    Compiling num-traits v0.1.41
+[INFO] [stderr]    Compiling take v0.1.0
+[INFO] [stderr]    Compiling smallvec v0.2.1
+[INFO] [stderr]    Compiling httparse v1.2.3
+[INFO] [stderr]    Compiling regex-syntax v0.4.1
+[INFO] [stderr]    Compiling winapi v0.3.2
+[INFO] [stderr]    Compiling serde v1.0.25
+[INFO] [stderr]    Compiling rustc-serialize v0.3.24
+[INFO] [stderr]    Compiling unicode-width v0.1.4
+[INFO] [stderr]    Compiling vec_map v0.8.0
+[INFO] [stderr]    Compiling strsim v0.6.0
+[INFO] [stderr]    Compiling ansi_term v0.10.2
+[INFO] [stderr]    Compiling ws2_32-sys v0.2.1
+[INFO] [stderr]    Compiling dbghelp-sys v0.2.0
+[INFO] [stderr]    Compiling iovec v0.1.1
+[INFO] [stderr]    Compiling log v0.4.0
+[INFO] [stderr]    Compiling unicase v2.1.0
+[INFO] [stderr]    Compiling foreign-types v0.3.2
+[INFO] [stderr]    Compiling memchr v2.0.1
+[INFO] [stderr]    Compiling rand v0.3.18
+[INFO] [stderr]    Compiling num_cpus v1.7.0
+[INFO] [stderr]    Compiling base64 v0.8.0
+[INFO] [stderr]    Compiling openssl-sys v0.9.23
+[INFO] [stderr]    Compiling tokio-service v0.1.0
+[INFO] [stderr]    Compiling relay v0.1.0
+[INFO] [stderr]    Compiling num-integer v0.1.35
+[INFO] [stderr]    Compiling textwrap v0.9.0
+[INFO] [stderr]    Compiling bytes v0.4.5
+[INFO] [stderr]    Compiling log v0.3.9
+[INFO] [stderr]    Compiling aho-corasick v0.6.4
+[INFO] [stderr]    Compiling futures-cpupool v0.1.7
+[INFO] [stderr]    Compiling toml v0.4.5
+[INFO] [stderr]    Compiling serde_json v1.0.8
+[INFO] [stderr]    Compiling num-iter v0.1.34
+[INFO] [stderr]    Compiling synstructure v0.6.1
+[INFO] [stderr]    Compiling serde_derive_internals v0.18.1
+[INFO] [stderr]    Compiling tokio-io v0.1.4
+[INFO] [stderr]    Compiling regex v0.2.3
+[INFO] [stderr]    Compiling net2 v0.2.31
+[INFO] [stderr]    Compiling time v0.1.38
+[INFO] [stderr]    Compiling num v0.1.41
+[INFO] [stderr]    Compiling backtrace v0.3.4
+[INFO] [stderr]    Compiling atty v0.2.6
+[INFO] [stderr]    Compiling failure_derive v0.1.1
+[INFO] [stderr]    Compiling mime v0.3.5
+[INFO] [stderr]    Compiling serde_derive v1.0.25
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling chrono v0.4.0
+[INFO] [stderr]    Compiling clap v2.29.0
+[INFO] [stderr]    Compiling failure v0.1.1
+[INFO] [stderr]    Compiling mio v0.6.11
+[INFO] [stderr]    Compiling env_logger v0.4.3
+[INFO] [stderr]    Compiling tokio-core v0.1.11
+[INFO] [stderr]    Compiling tokio-proto v0.1.1
+[INFO] [stderr]    Compiling tokio-openssl v0.1.3
+[INFO] [stderr]    Compiling hyper v0.11.9
+[INFO] [stderr]    Compiling hyper-openssl v0.3.1
+[INFO] [stderr]    Compiling chef_api v0.2.0
+[INFO] [stderr]    Compiling chef v0.1.0
+[INFO] [stderr]    Compiling chefdk v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 6m 21s
+[INFO] running `"docker" "inspect" "d329c4c5ea3762c67ab0de4ebd920d311c982421a2883e8f366e75a7690d11b2"`
+[INFO] running `"docker" "rm" "-f" "d329c4c5ea3762c67ab0de4ebd920d311c982421a2883e8f366e75a7690d11b2"`
+[INFO] [stdout] d329c4c5ea3762c67ab0de4ebd920d311c982421a2883e8f366e75a7690d11b2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\thommay\\chefdk,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] bf589b74481f349cc3291a0d65343f3e80244e8a442971fdbadf7906c032b270
+[INFO] running `"docker" "start" "-a" "bf589b74481f349cc3291a0d65343f3e80244e8a442971fdbadf7906c032b270"`
+[INFO] [stderr]    Compiling chefdk v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.80s
+[INFO] running `"docker" "inspect" "bf589b74481f349cc3291a0d65343f3e80244e8a442971fdbadf7906c032b270"`
+[INFO] running `"docker" "rm" "-f" "bf589b74481f349cc3291a0d65343f3e80244e8a442971fdbadf7906c032b270"`
+[INFO] [stdout] bf589b74481f349cc3291a0d65343f3e80244e8a442971fdbadf7906c032b270
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\thommay\\chefdk,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 4f30366e4e7297f76d8e1595f62304ae6514c8d30b487e1f7980abcbff386f2a
+[INFO] running `"docker" "start" "-a" "4f30366e4e7297f76d8e1595f62304ae6514c8d30b487e1f7980abcbff386f2a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.52s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\chef_data_bag_list-546b46772ba82109.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\chef_data_bag_show-d6bf477098cc84f5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\chefdk-6f719866dfd4fc68.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "4f30366e4e7297f76d8e1595f62304ae6514c8d30b487e1f7980abcbff386f2a"`
+[INFO] running `"docker" "rm" "-f" "4f30366e4e7297f76d8e1595f62304ae6514c8d30b487e1f7980abcbff386f2a"`
+[INFO] [stdout] 4f30366e4e7297f76d8e1595f62304ae6514c8d30b487e1f7980abcbff386f2a

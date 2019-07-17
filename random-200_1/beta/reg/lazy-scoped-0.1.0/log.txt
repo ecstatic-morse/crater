@@ -1,0 +1,54 @@
+[INFO] fetching crate lazy-scoped 0.1.0...
+[INFO] extracting crate lazy-scoped 0.1.0 into work\ex\default\sources\stable\reg\lazy-scoped\0.1.0
+[INFO] extracting crate lazy-scoped 0.1.0 into work\ex\default\sources\beta\reg\lazy-scoped\0.1.0
+[INFO] validating manifest of lazy-scoped-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of lazy-scoped-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing lazy-scoped-0.1.0
+[INFO] finished frobbing lazy-scoped-0.1.0
+[INFO] frobbed toml for lazy-scoped-0.1.0 written to work\ex\default\sources\stable\reg\lazy-scoped\0.1.0\Cargo.toml
+[INFO] started frobbing lazy-scoped-0.1.0
+[INFO] finished frobbing lazy-scoped-0.1.0
+[INFO] frobbed toml for lazy-scoped-0.1.0 written to work\ex\default\sources\beta\reg\lazy-scoped\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing lazy-scoped-0.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lazy-scoped\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 57b7a6b8ba1bc789f029ce12c2fbd16407bc7c0fb96cce9d83c7cecdd6bbabc0
+[INFO] running `"docker" "start" "-a" "57b7a6b8ba1bc789f029ce12c2fbd16407bc7c0fb96cce9d83c7cecdd6bbabc0"`
+[INFO] [stderr]    Compiling lazy-scoped v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.73s
+[INFO] running `"docker" "inspect" "57b7a6b8ba1bc789f029ce12c2fbd16407bc7c0fb96cce9d83c7cecdd6bbabc0"`
+[INFO] running `"docker" "rm" "-f" "57b7a6b8ba1bc789f029ce12c2fbd16407bc7c0fb96cce9d83c7cecdd6bbabc0"`
+[INFO] [stdout] 57b7a6b8ba1bc789f029ce12c2fbd16407bc7c0fb96cce9d83c7cecdd6bbabc0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lazy-scoped\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 114c3d907e8d056169e36758fdbeef61a0bf8140a0b28cc888d2fd80926460bd
+[INFO] running `"docker" "start" "-a" "114c3d907e8d056169e36758fdbeef61a0bf8140a0b28cc888d2fd80926460bd"`
+[INFO] [stderr]    Compiling lazy-scoped v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.90s
+[INFO] running `"docker" "inspect" "114c3d907e8d056169e36758fdbeef61a0bf8140a0b28cc888d2fd80926460bd"`
+[INFO] running `"docker" "rm" "-f" "114c3d907e8d056169e36758fdbeef61a0bf8140a0b28cc888d2fd80926460bd"`
+[INFO] [stdout] 114c3d907e8d056169e36758fdbeef61a0bf8140a0b28cc888d2fd80926460bd
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\lazy-scoped\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 845fb2faf4cfed94bbf9ede99d3371284522bdf1798e41f906ce6a0c3ada0186
+[INFO] running `"docker" "start" "-a" "845fb2faf4cfed94bbf9ede99d3371284522bdf1798e41f906ce6a0c3ada0186"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lazy_scoped-93c8c67c9feb56c0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests lazy-scoped
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "845fb2faf4cfed94bbf9ede99d3371284522bdf1798e41f906ce6a0c3ada0186"`
+[INFO] running `"docker" "rm" "-f" "845fb2faf4cfed94bbf9ede99d3371284522bdf1798e41f906ce6a0c3ada0186"`
+[INFO] [stdout] 845fb2faf4cfed94bbf9ede99d3371284522bdf1798e41f906ce6a0c3ada0186

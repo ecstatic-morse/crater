@@ -1,0 +1,58 @@
+[INFO] cloning repository jinkaitoo/hello_world
+[INFO] running `"git" "clone" "--bare" "git://github.com/jinkaitoo/hello_world.git" "work\\cache\\sources\\gh\\jinkaitoo\\hello_world"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\jinkaitoo\hello_world'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jinkaitoo\\hello_world" "work\\ex\\default\\sources\\nightly\\gh\\jinkaitoo\\hello_world"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\jinkaitoo\hello_world'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\jinkaitoo\\hello_world" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\jinkaitoo\\hello_world"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jinkaitoo\hello_world'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] a84d0c3c26b41c55ce2d1a9c4042b6a2d05c426a
+[INFO] sha for GitHub repo jinkaitoo/hello_world: a84d0c3c26b41c55ce2d1a9c4042b6a2d05c426a
+[INFO] validating manifest of jinkaitoo/hello_world on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of jinkaitoo/hello_world on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing jinkaitoo/hello_world
+[INFO] finished frobbing jinkaitoo/hello_world
+[INFO] frobbed toml for jinkaitoo/hello_world written to work\ex\default\sources\nightly\gh\jinkaitoo\hello_world\Cargo.toml
+[INFO] started frobbing jinkaitoo/hello_world
+[INFO] finished frobbing jinkaitoo/hello_world
+[INFO] frobbed toml for jinkaitoo/hello_world written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\jinkaitoo\hello_world\Cargo.toml
+[INFO] crate jinkaitoo/hello_world already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing jinkaitoo/hello_world against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jinkaitoo\\hello_world,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 9c7ba9a434b84fdc985095d0f85aa62831af52f3bc351ab97f742cb520c185be
+[INFO] running `"docker" "start" "-a" "9c7ba9a434b84fdc985095d0f85aa62831af52f3bc351ab97f742cb520c185be"`
+[INFO] [stderr]    Compiling hello_world v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.47s
+[INFO] running `"docker" "inspect" "9c7ba9a434b84fdc985095d0f85aa62831af52f3bc351ab97f742cb520c185be"`
+[INFO] running `"docker" "rm" "-f" "9c7ba9a434b84fdc985095d0f85aa62831af52f3bc351ab97f742cb520c185be"`
+[INFO] [stdout] 9c7ba9a434b84fdc985095d0f85aa62831af52f3bc351ab97f742cb520c185be
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jinkaitoo\\hello_world,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 7abf93f43506fd4664c71a9e2272d483e954bafc9c699136ad6261ae55df4e62
+[INFO] running `"docker" "start" "-a" "7abf93f43506fd4664c71a9e2272d483e954bafc9c699136ad6261ae55df4e62"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]    Compiling hello_world v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 16.32s
+[INFO] running `"docker" "inspect" "7abf93f43506fd4664c71a9e2272d483e954bafc9c699136ad6261ae55df4e62"`
+[INFO] running `"docker" "rm" "-f" "7abf93f43506fd4664c71a9e2272d483e954bafc9c699136ad6261ae55df4e62"`
+[INFO] [stdout] 7abf93f43506fd4664c71a9e2272d483e954bafc9c699136ad6261ae55df4e62
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\jinkaitoo\\hello_world,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] ae42ac8942c1927c58caae0a44241f54ec413c42682a15af1b3004b321e1f686
+[INFO] running `"docker" "start" "-a" "ae42ac8942c1927c58caae0a44241f54ec413c42682a15af1b3004b321e1f686"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\hello_world-667a75cbb2d330c6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ae42ac8942c1927c58caae0a44241f54ec413c42682a15af1b3004b321e1f686"`
+[INFO] running `"docker" "rm" "-f" "ae42ac8942c1927c58caae0a44241f54ec413c42682a15af1b3004b321e1f686"`
+[INFO] [stdout] ae42ac8942c1927c58caae0a44241f54ec413c42682a15af1b3004b321e1f686

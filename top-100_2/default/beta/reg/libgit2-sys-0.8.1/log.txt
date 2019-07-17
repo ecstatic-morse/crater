@@ -1,0 +1,53 @@
+[INFO] fetching crate libgit2-sys 0.8.1...
+[INFO] extracting crate libgit2-sys 0.8.1 into work\ex\default\sources\stable\reg\libgit2-sys\0.8.1
+[INFO] extracting crate libgit2-sys 0.8.1 into work\ex\default\sources\beta\reg\libgit2-sys\0.8.1
+[INFO] validating manifest of libgit2-sys-0.8.1 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libgit2-sys-0.8.1 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libgit2-sys-0.8.1
+[INFO] finished frobbing libgit2-sys-0.8.1
+[INFO] frobbed toml for libgit2-sys-0.8.1 written to work\ex\default\sources\stable\reg\libgit2-sys\0.8.1\Cargo.toml
+[INFO] started frobbing libgit2-sys-0.8.1
+[INFO] finished frobbing libgit2-sys-0.8.1
+[INFO] frobbed toml for libgit2-sys-0.8.1 written to work\ex\default\sources\beta\reg\libgit2-sys\0.8.1\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libgit2-sys-0.8.1 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\libgit2-sys\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] bfbb5256fcf5c2e3ca26924c11d703d6b30bb96b9b4893479aab917bdb9d50c0
+[INFO] running `"docker" "start" "-a" "bfbb5256fcf5c2e3ca26924c11d703d6b30bb96b9b4893479aab917bdb9d50c0"`
+[INFO] [stderr]    Compiling libgit2-sys v0.8.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4m 20s
+[INFO] running `"docker" "inspect" "bfbb5256fcf5c2e3ca26924c11d703d6b30bb96b9b4893479aab917bdb9d50c0"`
+[INFO] running `"docker" "rm" "-f" "bfbb5256fcf5c2e3ca26924c11d703d6b30bb96b9b4893479aab917bdb9d50c0"`
+[INFO] [stdout] bfbb5256fcf5c2e3ca26924c11d703d6b30bb96b9b4893479aab917bdb9d50c0
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\libgit2-sys\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 60246e2df7d25c6c2b5f1f98c08c50ffa8b58590d8a9227446119d810980e1ef
+[INFO] running `"docker" "start" "-a" "60246e2df7d25c6c2b5f1f98c08c50ffa8b58590d8a9227446119d810980e1ef"`
+[INFO] [stderr]    Compiling libgit2-sys v0.8.1 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.20s
+[INFO] running `"docker" "inspect" "60246e2df7d25c6c2b5f1f98c08c50ffa8b58590d8a9227446119d810980e1ef"`
+[INFO] running `"docker" "rm" "-f" "60246e2df7d25c6c2b5f1f98c08c50ffa8b58590d8a9227446119d810980e1ef"`
+[INFO] [stdout] 60246e2df7d25c6c2b5f1f98c08c50ffa8b58590d8a9227446119d810980e1ef
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\libgit2-sys\\0.8.1,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] fe10c722435ad6701524c53f3683e3546677c8c46c3c29c7eaaa1ae168cd1b6b
+[INFO] running `"docker" "start" "-a" "fe10c722435ad6701524c53f3683e3546677c8c46c3c29c7eaaa1ae168cd1b6b"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.02s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\libgit2_sys-df3aea9200c17949.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests libgit2_sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fe10c722435ad6701524c53f3683e3546677c8c46c3c29c7eaaa1ae168cd1b6b"`
+[INFO] running `"docker" "rm" "-f" "fe10c722435ad6701524c53f3683e3546677c8c46c3c29c7eaaa1ae168cd1b6b"`
+[INFO] [stdout] fe10c722435ad6701524c53f3683e3546677c8c46c3c29c7eaaa1ae168cd1b6b

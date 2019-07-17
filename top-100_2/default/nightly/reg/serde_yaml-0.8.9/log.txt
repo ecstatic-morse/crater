@@ -1,0 +1,231 @@
+[INFO] crate serde_yaml 0.8.9 is already in cache
+[INFO] extracting crate serde_yaml 0.8.9 into work\ex\default\sources\nightly\reg\serde_yaml\0.8.9
+[INFO] extracting crate serde_yaml 0.8.9 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde_yaml\0.8.9
+[INFO] validating manifest of serde_yaml-0.8.9 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of serde_yaml-0.8.9 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing serde_yaml-0.8.9
+[INFO] finished frobbing serde_yaml-0.8.9
+[INFO] frobbed toml for serde_yaml-0.8.9 written to work\ex\default\sources\nightly\reg\serde_yaml\0.8.9\Cargo.toml
+[INFO] started frobbing serde_yaml-0.8.9
+[INFO] finished frobbing serde_yaml-0.8.9
+[INFO] frobbed toml for serde_yaml-0.8.9 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\serde_yaml\0.8.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing serde_yaml-0.8.9 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 8aeca07e389bb1525493bb7bc3033d576dfebd515b8c6d45743f03c733c2513c
+[INFO] running `"docker" "start" "-a" "8aeca07e389bb1525493bb7bc3033d576dfebd515b8c6d45743f03c733c2513c"`
+[INFO] [stderr]    Compiling linked-hash-map v0.5.2
+[INFO] [stderr]    Compiling dtoa v0.4.4
+[INFO] [stderr]    Compiling yaml-rust v0.4.3
+[INFO] [stderr]    Compiling serde_yaml v0.8.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.43s
+[INFO] running `"docker" "inspect" "8aeca07e389bb1525493bb7bc3033d576dfebd515b8c6d45743f03c733c2513c"`
+[INFO] running `"docker" "rm" "-f" "8aeca07e389bb1525493bb7bc3033d576dfebd515b8c6d45743f03c733c2513c"`
+[INFO] [stdout] 8aeca07e389bb1525493bb7bc3033d576dfebd515b8c6d45743f03c733c2513c
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 5e323cb97fcb4b2ace5004466740559d15fdb90286be137dcedd11fbbb7168ab
+[INFO] running `"docker" "start" "-a" "5e323cb97fcb4b2ace5004466740559d15fdb90286be137dcedd11fbbb7168ab"`
+[INFO] [stderr]    Compiling pulldown-cmark v0.1.2
+[INFO] [stderr]    Compiling unicode-xid v0.0.4
+[INFO] [stderr]    Compiling either v1.5.2
+[INFO] [stderr]    Compiling bitflags v0.9.1
+[INFO] [stderr]    Compiling quote v0.3.15
+[INFO] [stderr]    Compiling unindent v0.1.3
+[INFO] [stderr]    Compiling itertools v0.7.11
+[INFO] [stderr]    Compiling synom v0.11.3
+[INFO] [stderr]    Compiling toml v0.4.10
+[INFO] [stderr]    Compiling syn v0.11.11
+[INFO] [stderr]    Compiling version-sync v0.5.0
+[INFO] [stderr]    Compiling serde_yaml v0.8.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 52.39s
+[INFO] running `"docker" "inspect" "5e323cb97fcb4b2ace5004466740559d15fdb90286be137dcedd11fbbb7168ab"`
+[INFO] running `"docker" "rm" "-f" "5e323cb97fcb4b2ace5004466740559d15fdb90286be137dcedd11fbbb7168ab"`
+[INFO] [stdout] 5e323cb97fcb4b2ace5004466740559d15fdb90286be137dcedd11fbbb7168ab
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\serde_yaml\\0.8.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 09b55b49126458e6f9762866da85551562aff4466bb8a07e36b0460a00cc08bb
+[INFO] running `"docker" "start" "-a" "09b55b49126458e6f9762866da85551562aff4466bb8a07e36b0460a00cc08bb"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.45s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\serde_yaml-0f0da3c26a3969e2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_de-b22751eb1bd2398d.exe
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test test_alias ... ok
+[INFO] [stdout] test test_bomb ... ok
+[INFO] [stdout] test test_de_mapping ... ok
+[INFO] [stdout] test test_enum_alias ... ok
+[INFO] [stdout] test test_enum_tag ... ok
+[INFO] [stdout] test test_i128_big ... ok
+[INFO] [stdout] test test_number_alias_as_string ... ok
+[INFO] [stdout] test test_number_as_string ... ok
+[INFO] [stdout] test test_numbers ... ok
+[INFO] [stdout] test test_option ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_error-4f2052131632c986.exe
+[INFO] [stdout] test test_option_alias ... ok
+[INFO] [stdout] test test_u128_big ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_serde-30e90663d0d58013.exe
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test test_bad_bool ... ok
+[INFO] [stdout] test test_bad_int ... ok
+[INFO] [stdout] test test_bad_null ... ok
+[INFO] [stdout] test test_bad_float ... ok
+[INFO] [stdout] test test_ignored_unknown_anchor ... ok
+[INFO] [stdout] test test_finite_recursion_arrays ... ok
+[INFO] [stdout] test test_finite_recursion_objects ... ok
+[INFO] [stdout] test test_empty ... ok
+[INFO] [stdout] test test_incorrect_nested_type ... ok
+[INFO] [stdout] test test_incorrect_type ... ok
+[INFO] [stdout] test test_infinite_recursion_arrays ... ok
+[INFO] [stdout] test test_infinite_recursion_objects ... ok
+[INFO] [stdout] test test_invalid_scalar_type ... ok
+[INFO] [stdout] test test_long_tuple ... ok
+[INFO] [stdout] test test_missing_field ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test_visitor-e6e9a06fc36eee29.exe
+[INFO] [stdout] test test_no_location ... ok
+[INFO] [stdout] test test_short_tuple ... ok
+[INFO] [stdout] test test_two_documents ... ok
+[INFO] [stdout] test test_unknown_anchor ... ok
+[INFO] [stdout] test test_variant_map_wrong_size ... ok
+[INFO] [stdout] test test_variant_not_a_map ... ok
+[INFO] [stdout] test test_variant_not_string ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 22 tests
+[INFO] [stdout] test test_default ... ok
+[INFO] [stdout] test test_basic_struct ... ok
+[INFO] [stdout] test test_float ... ok
+[INFO] [stdout] test test_i128_small ... ok
+[INFO] [stdout] test test_int ... ok
+[INFO] [stdout] test test_int_max_i64 ... ok
+[INFO] [stdout] test test_int_max_u64 ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\version_numbers-50690a0646494a81.exe
+[INFO] [stdout] test test_int_min_i64 ... ok
+[INFO] [stderr]    Doc-tests serde_yaml
+[INFO] [stdout] test test_map ... ok
+[INFO] [stdout] test test_mapping ... ok
+[INFO] [stdout] test test_nested_struct ... ok
+[INFO] [stdout] test test_nested_vec ... ok
+[INFO] [stdout] test test_newtype_struct ... ok
+[INFO] [stdout] test test_newtype_variant ... ok
+[INFO] [stdout] test test_option ... ok
+[INFO] [stdout] test test_struct_variant ... ok
+[INFO] [stdout] test test_tuple_variant ... ok
+[INFO] [stdout] test test_u128_small ... ok
+[INFO] [stdout] test test_unit ... ok
+[INFO] [stdout] test test_unit_variant ... ok
+[INFO] [stdout] test test_value ... ok
+[INFO] [stdout] test test_vec ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_visitor ... ignored
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test test_html_root_url ... ok
+[INFO] [stdout] test test_readme_deps ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 75 tests
+[INFO] [stdout] test src\number.rs - number::Number::as_f64 (line 190) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 13) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 38) ... ok
+[INFO] [stdout] test src\error.rs - error::Error::location (line 89) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::as_u64 (line 166) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::as_f64 (line 205) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_f64 (line 104) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::as_i64 (line 131) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_nan (line 223) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_infinite (line 249) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_finite (line 274) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_i64 (line 36) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 105) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 138) ... ok
+[INFO] [stdout] test src\number.rs - number::Number::is_u64 (line 71) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 122) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 30) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 46) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 80) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 62) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from (line 88) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from_iter (line 163) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from_iter (line 156) ... ok
+[INFO] [stdout] test src\value\from.rs - value::from::Value::from_iter (line 170) ... ok
+[INFO] [stdout] test src\value\index.rs - value::index::Value::index (line 205) ... ok
+[INFO] [stdout] test src\value\index.rs - value::index::Value::index_mut (line 240) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value (line 41) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_bool (line 250) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_bool (line 256) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_f64 (line 407) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_f64 (line 401) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_i64 (line 312) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_i64 (line 318) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_mapping (line 541) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_mapping_mut (line 566) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_mapping (line 551) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_mapping_mut (line 579) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_sequence (line 480) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_null (line 209) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_null (line 215) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_sequence (line 486) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_sequence_mut (line 501) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_sequence_mut (line 509) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_str (line 448) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_str (line 442) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_u64 (line 354) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::as_u64 (line 360) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::get (line 147) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::get (line 127) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_bool (line 232) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_bool (line 238) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_f64 (line 380) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_f64 (line 386) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_i64 (line 300) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_i64 (line 294) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_mapping (line 523) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_mapping (line 529) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_null (line 188) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_null (line 194) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_number (line 276) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_number (line 270) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_sequence (line 468) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_sequence (line 462) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_string (line 430) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_string (line 424) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_u64 (line 336) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::Value::is_u64 (line 342) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::from_value (line 104) ... ok
+[INFO] [stdout] test src\value\mod.rs - value::to_value (line 82) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::&'a str::eq (line 64) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::String::eq (line 92) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::Value::eq (line 22) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::Value::eq (line 36) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::Value::eq (line 78) ... ok
+[INFO] [stdout] test src\value\partial_eq.rs - value::partial_eq::str::eq (line 50) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 75 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "09b55b49126458e6f9762866da85551562aff4466bb8a07e36b0460a00cc08bb"`
+[INFO] running `"docker" "rm" "-f" "09b55b49126458e6f9762866da85551562aff4466bb8a07e36b0460a00cc08bb"`
+[INFO] [stdout] 09b55b49126458e6f9762866da85551562aff4466bb8a07e36b0460a00cc08bb

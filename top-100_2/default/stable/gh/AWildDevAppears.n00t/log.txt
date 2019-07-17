@@ -1,0 +1,133 @@
+[INFO] cloning repository AWildDevAppears/n00t
+[INFO] running `"git" "clone" "--bare" "git://github.com/AWildDevAppears/n00t.git" "work\\cache\\sources\\gh\\AWildDevAppears\\n00t"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\AWildDevAppears\n00t'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\AWildDevAppears\\n00t" "work\\ex\\default\\sources\\stable\\gh\\AWildDevAppears\\n00t"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\AWildDevAppears\n00t'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\AWildDevAppears\\n00t" "work\\ex\\default\\sources\\beta\\gh\\AWildDevAppears\\n00t"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\AWildDevAppears\n00t'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 391f75a2c4aac5ae4c56215f1cf44c86c72ee7cb
+[INFO] sha for GitHub repo AWildDevAppears/n00t: 391f75a2c4aac5ae4c56215f1cf44c86c72ee7cb
+[INFO] validating manifest of AWildDevAppears/n00t on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of AWildDevAppears/n00t on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing AWildDevAppears/n00t
+[INFO] finished frobbing AWildDevAppears/n00t
+[INFO] frobbed toml for AWildDevAppears/n00t written to work\ex\default\sources\stable\gh\AWildDevAppears\n00t\Cargo.toml
+[INFO] started frobbing AWildDevAppears/n00t
+[INFO] finished frobbing AWildDevAppears/n00t
+[INFO] frobbed toml for AWildDevAppears/n00t written to work\ex\default\sources\beta\gh\AWildDevAppears\n00t\Cargo.toml
+[INFO] crate AWildDevAppears/n00t already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tar v0.4.20
+[INFO] [stderr]   Downloaded flate2 v1.0.4
+[INFO] [stderr]   Downloaded ncurses v5.97.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing AWildDevAppears/n00t against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\AWildDevAppears\\n00t,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] dc01080289a995d95d0c5653b527a234dbbcfa108d27cbc71dddb70ff1f0ed1f
+[INFO] running `"docker" "start" "-a" "dc01080289a995d95d0c5653b527a234dbbcfa108d27cbc71dddb70ff1f0ed1f"`
+[INFO] [stderr]    Compiling winapi v0.3.6
+[INFO] [stderr]    Compiling cc v1.0.25
+[INFO] [stderr]    Compiling gcc v0.3.55
+[INFO] [stderr]    Compiling libc v0.2.43
+[INFO] [stderr]    Compiling filetime v0.2.4
+[INFO] [stderr]    Compiling tar v0.4.20
+[INFO] [stderr]    Compiling rust-crypto v0.2.36
+[INFO] [stderr]    Compiling miniz-sys v0.1.11
+[INFO] [stderr]    Compiling ncurses v5.97.0
+[INFO] [stderr]    Compiling rand v0.4.3
+[INFO] [stderr]    Compiling time v0.1.40
+[INFO] [stderr] error: failed to run custom build command for `ncurses v5.97.0`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\ncurses-58541fc5f85d821d\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stdout
+[INFO] [stderr] cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+[INFO] [stderr] cargo:rustc-link-lib=ncurses
+[INFO] [stderr] OPT_LEVEL = Some("0")
+[INFO] [stderr] TARGET = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] HOST = Some("x86_64-pc-windows-msvc")
+[INFO] [stderr] CC_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CC_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CC = None
+[INFO] [stderr] CC = None
+[INFO] [stderr] CFLAGS_x86_64-pc-windows-msvc = None
+[INFO] [stderr] CFLAGS_x86_64_pc_windows_msvc = None
+[INFO] [stderr] HOST_CFLAGS = None
+[INFO] [stderr] CFLAGS = None
+[INFO] [stderr] DEBUG = Some("true")
+[INFO] [stderr] chtype_size.c
+[INFO] [stderr] c1: fatal error C1083: Cannot open source file: 'C:\crater\target\debug\build\ncurses-d1d0d55221f86763\out\chtype_size.c': Permission denied
+[INFO] [stderr] 
+[INFO] [stderr] --- stderr
+[INFO] [stderr] Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27032.1 for x64
+[INFO] [stderr] Copyright (C) Microsoft Corporation.  All rights reserved.
+[INFO] [stderr] 
+[INFO] [stderr] cl : Command line warning D9035 : option 'o' has been deprecated and will be removed in a future release
+[INFO] [stderr] thread 'main' panicked at 'C:\crater\target\debug\build\ncurses-d1d0d55221f86763\out\chtype_size failed: Os { code: 2, kind: NotFound, message: "The system cannot find the file specified." }', src\libcore\result.rs:999:5
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff71040642d - std::sys::windows::backtrace::set_frames
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stderr]    1:     0x7ff71040642d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stderr]    2:     0x7ff71040642d - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stderr]    3:     0x7ff71040945d - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stderr]    4:     0x7ff71040945d - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stderr]    5:     0x7ff71040915a - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:211
+[INFO] [stderr]    6:     0x7ff710409c5f - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stderr]    7:     0x7ff710409793 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stderr]    8:     0x7ff710409678 - std::panicking::rust_begin_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:308
+[INFO] [stderr]    9:     0x7ff71041745b - core::panicking::panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libcore\panicking.rs:85
+[INFO] [stderr]   10:     0x7ff710399d70 - core::result::unwrap_failed<std::io::error::Error>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\macros.rs:18
+[INFO] [stderr]   11:     0x7ff7103418e5 - core::result::Result<std::process::Output, std::io::error::Error>::expect<std::process::Output,std::io::error::Error>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\result.rs:827
+[INFO] [stderr]   12:     0x7ff710343daf - build_script_build::check_chtype_size
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\ncurses-5.97.0\build.rs:90
+[INFO] [stderr]   13:     0x7ff7103434c9 - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\ncurses-5.97.0\build.rs:48
+[INFO] [stderr]   14:     0x7ff71034112f - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   15:     0x7ff7104095d6 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:49
+[INFO] [stderr]   16:     0x7ff7104095d6 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:293
+[INFO] [stderr]   17:     0x7ff710413561 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stderr]   18:     0x7ff710409e81 - std::panicking::try
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:272
+[INFO] [stderr]   19:     0x7ff710409e81 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panic.rs:394
+[INFO] [stderr]   20:     0x7ff710409e81 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:48
+[INFO] [stderr]   21:     0x7ff71034110a - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   22:     0x7ff7103445ff - main
+[INFO] [stderr]   23:     0x7ff71041cd9f - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   24:     0x7ff71041cd9f - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   25:     0x7ff99ba17973 - BaseThreadInitThunk
+[INFO] [stderr]   26:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "dc01080289a995d95d0c5653b527a234dbbcfa108d27cbc71dddb70ff1f0ed1f"`
+[INFO] running `"docker" "rm" "-f" "dc01080289a995d95d0c5653b527a234dbbcfa108d27cbc71dddb70ff1f0ed1f"`
+[INFO] [stdout] dc01080289a995d95d0c5653b527a234dbbcfa108d27cbc71dddb70ff1f0ed1f

@@ -1,0 +1,66 @@
+[INFO] fetching crate unicase_serde 0.1.0...
+[INFO] extracting crate unicase_serde 0.1.0 into work\ex\default\sources\stable\reg\unicase_serde\0.1.0
+[INFO] extracting crate unicase_serde 0.1.0 into work\ex\default\sources\beta\reg\unicase_serde\0.1.0
+[INFO] validating manifest of unicase_serde-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of unicase_serde-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing unicase_serde-0.1.0
+[INFO] finished frobbing unicase_serde-0.1.0
+[INFO] frobbed toml for unicase_serde-0.1.0 written to work\ex\default\sources\stable\reg\unicase_serde\0.1.0\Cargo.toml
+[INFO] started frobbing unicase_serde-0.1.0
+[INFO] finished frobbing unicase_serde-0.1.0
+[INFO] frobbed toml for unicase_serde-0.1.0 written to work\ex\default\sources\beta\reg\unicase_serde\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded serde_test v1.0.97
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing unicase_serde-0.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\unicase_serde\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 10b04d410fce0c16f173a6bc74f4a0e012fbdbf3d178fa5a272b8e14b426fe7a
+[INFO] running `"docker" "start" "-a" "10b04d410fce0c16f173a6bc74f4a0e012fbdbf3d178fa5a272b8e14b426fe7a"`
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling unicase v2.4.0
+[INFO] [stderr]    Compiling unicase_serde v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 42.54s
+[INFO] running `"docker" "inspect" "10b04d410fce0c16f173a6bc74f4a0e012fbdbf3d178fa5a272b8e14b426fe7a"`
+[INFO] running `"docker" "rm" "-f" "10b04d410fce0c16f173a6bc74f4a0e012fbdbf3d178fa5a272b8e14b426fe7a"`
+[INFO] [stdout] 10b04d410fce0c16f173a6bc74f4a0e012fbdbf3d178fa5a272b8e14b426fe7a
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\unicase_serde\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] bc62dc81f3b6a0eafa55fb472104fe5ac7b4345398cb4981967a42d0d962f5e7
+[INFO] running `"docker" "start" "-a" "bc62dc81f3b6a0eafa55fb472104fe5ac7b4345398cb4981967a42d0d962f5e7"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling serde_test v1.0.97
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling unicase_serde v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 06s
+[INFO] running `"docker" "inspect" "bc62dc81f3b6a0eafa55fb472104fe5ac7b4345398cb4981967a42d0d962f5e7"`
+[INFO] running `"docker" "rm" "-f" "bc62dc81f3b6a0eafa55fb472104fe5ac7b4345398cb4981967a42d0d962f5e7"`
+[INFO] [stdout] bc62dc81f3b6a0eafa55fb472104fe5ac7b4345398cb4981967a42d0d962f5e7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\unicase_serde\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 942a76cd6e8f84ddcaa218a24c4902692d0d356bc8c886efd52e8581e2db4018
+[INFO] running `"docker" "start" "-a" "942a76cd6e8f84ddcaa218a24c4902692d0d356bc8c886efd52e8581e2db4018"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.40s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unicase_serde-bb1a64b5b0c6ff69.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test tests::test_ascii_serde ... ok
+[INFO] [stdout] test tests::test_unicase_serde ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests unicase_serde
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test src\lib.rs -  (line 113) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 66) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "942a76cd6e8f84ddcaa218a24c4902692d0d356bc8c886efd52e8581e2db4018"`
+[INFO] running `"docker" "rm" "-f" "942a76cd6e8f84ddcaa218a24c4902692d0d356bc8c886efd52e8581e2db4018"`
+[INFO] [stdout] 942a76cd6e8f84ddcaa218a24c4902692d0d356bc8c886efd52e8581e2db4018

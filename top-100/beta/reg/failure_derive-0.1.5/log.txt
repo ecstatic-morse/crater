@@ -1,0 +1,134 @@
+[INFO] fetching crate failure_derive 0.1.5...
+[INFO] extracting crate failure_derive 0.1.5 into work\ex\default\sources\stable\reg\failure_derive\0.1.5
+[INFO] extracting crate failure_derive 0.1.5 into work\ex\default\sources\beta\reg\failure_derive\0.1.5
+[INFO] validating manifest of failure_derive-0.1.5 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of failure_derive-0.1.5 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing failure_derive-0.1.5
+[INFO] finished frobbing failure_derive-0.1.5
+[INFO] frobbed toml for failure_derive-0.1.5 written to work\ex\default\sources\stable\reg\failure_derive\0.1.5\Cargo.toml
+[INFO] started frobbing failure_derive-0.1.5
+[INFO] finished frobbing failure_derive-0.1.5
+[INFO] frobbed toml for failure_derive-0.1.5 written to work\ex\default\sources\beta\reg\failure_derive\0.1.5\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing failure_derive-0.1.5 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\failure_derive\\0.1.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] bb2b8856818f45faebec3c1f76ea8f69d938f4dc7e3a06b694bc70459d344221
+[INFO] running `"docker" "start" "-a" "bb2b8856818f45faebec3c1f76ea8f69d938f4dc7e3a06b694bc70459d344221"`
+[INFO] [stderr]    Compiling failure_derive v0.1.5 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.78s
+[INFO] running `"docker" "inspect" "bb2b8856818f45faebec3c1f76ea8f69d938f4dc7e3a06b694bc70459d344221"`
+[INFO] running `"docker" "rm" "-f" "bb2b8856818f45faebec3c1f76ea8f69d938f4dc7e3a06b694bc70459d344221"`
+[INFO] [stdout] bb2b8856818f45faebec3c1f76ea8f69d938f4dc7e3a06b694bc70459d344221
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\failure_derive\\0.1.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 234b22c0c309d6e4e134c99c8a6c982a0e0e62b9f2f373b43eeede526428f218
+[INFO] running `"docker" "start" "-a" "234b22c0c309d6e4e134c99c8a6c982a0e0e62b9f2f373b43eeede526428f218"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling backtrace v0.3.32
+[INFO] [stderr]    Compiling failure v0.1.5
+[INFO] [stderr]    Compiling failure_derive v0.1.5 (C:\crater\workdir)
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\no_derive_display.rs:2:1
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\custom_type_bounds.rs:1:1
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\wraps.rs:2:1
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr] warning: unused `#[macro_use]` import
+[INFO] [stderr]  --> tests\backtrace.rs:2:1
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | #[macro_use]
+[INFO] [stderr]   | ^^^^^^^^^^^^
+[INFO] [stderr]   |
+[INFO] [stderr]   = note: #[warn(unused_imports)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 24.45s
+[INFO] running `"docker" "inspect" "234b22c0c309d6e4e134c99c8a6c982a0e0e62b9f2f373b43eeede526428f218"`
+[INFO] running `"docker" "rm" "-f" "234b22c0c309d6e4e134c99c8a6c982a0e0e62b9f2f373b43eeede526428f218"`
+[INFO] [stdout] 234b22c0c309d6e4e134c99c8a6c982a0e0e62b9f2f373b43eeede526428f218
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\failure_derive\\0.1.5,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] 109c1336fe2a1f834c21aaaa1201fe3c7d524322b0dd4c63e5788d840fedf94a
+[INFO] running `"docker" "start" "-a" "109c1336fe2a1f834c21aaaa1201fe3c7d524322b0dd4c63e5788d840fedf94a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.57s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\failure_derive-24a085fbccf24d07.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\backtrace-d82eb0b2d638743b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test backtrace_error ... ok
+[INFO] [stdout] test backtrace_tuple_error ... ok
+[INFO] [stdout] test backtrace_enum_error ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\custom_type_bounds-ace531589e86dabd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test custom_bounds_generic_tuple_error ... ok
+[INFO] [stdout] test fail_bounds_generic_tuple_error ... ok
+[INFO] [stdout] test unbounded_generic_tuple_error ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\no_derive_display-86361bf634faf3a8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test handwritten_display ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\tests-226eb39b3a94baa1.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test enum_error ... ok
+[INFO] [stdout] test record_struct ... ok
+[INFO] [stdout] test tuple_struct ... ok
+[INFO] [stdout] test unit_struct ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\wraps-15331730eb7e4ec9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test wrap_error ... ok
+[INFO] [stdout] test wrap_tuple_error ... ok
+[INFO] [stdout] test wrap_backtrace_error ... ok
+[INFO] [stdout] test wrap_enum_error ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests failure_derive
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "109c1336fe2a1f834c21aaaa1201fe3c7d524322b0dd4c63e5788d840fedf94a"`
+[INFO] running `"docker" "rm" "-f" "109c1336fe2a1f834c21aaaa1201fe3c7d524322b0dd4c63e5788d840fedf94a"`
+[INFO] [stdout] 109c1336fe2a1f834c21aaaa1201fe3c7d524322b0dd4c63e5788d840fedf94a

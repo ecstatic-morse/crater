@@ -1,0 +1,45 @@
+[INFO] crate bitflags 1.1.0 is already in cache
+[INFO] extracting crate bitflags 1.1.0 into work\ex\default\sources\nightly\reg\bitflags\1.1.0
+[INFO] extracting crate bitflags 1.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bitflags\1.1.0
+[INFO] validating manifest of bitflags-1.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of bitflags-1.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing bitflags-1.1.0
+[INFO] finished frobbing bitflags-1.1.0
+[INFO] frobbed toml for bitflags-1.1.0 written to work\ex\default\sources\nightly\reg\bitflags\1.1.0\Cargo.toml
+[INFO] started frobbing bitflags-1.1.0
+[INFO] finished frobbing bitflags-1.1.0
+[INFO] frobbed toml for bitflags-1.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\bitflags\1.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing bitflags-1.1.0 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\bitflags\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] cf110e76509abc00c4b5ab56ae21d062e127c230b00bc25ed9e8272b72121d60
+[INFO] running `"docker" "start" "-a" "cf110e76509abc00c4b5ab56ae21d062e127c230b00bc25ed9e8272b72121d60"`
+[INFO] [stderr]    Compiling bitflags v1.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.39s
+[INFO] running `"docker" "inspect" "cf110e76509abc00c4b5ab56ae21d062e127c230b00bc25ed9e8272b72121d60"`
+[INFO] running `"docker" "rm" "-f" "cf110e76509abc00c4b5ab56ae21d062e127c230b00bc25ed9e8272b72121d60"`
+[INFO] [stdout] cf110e76509abc00c4b5ab56ae21d062e127c230b00bc25ed9e8272b72121d60
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\bitflags\\1.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 1627243d385e10c5326b1bfd63b535634f348fd1a6ca671f59cc82ac144da7ea
+[INFO] running `"docker" "start" "-a" "1627243d385e10c5326b1bfd63b535634f348fd1a6ca671f59cc82ac144da7ea"`
+[INFO] [stderr]    Compiling bitflags v1.1.0 (C:\crater\workdir)
+[INFO] [stderr] error[E0425]: cannot find value `_CFG_A` in this scope
+[INFO] [stderr]    --> src\lib.rs:927:28
+[INFO] [stderr]     |
+[INFO] [stderr] 927 |             const _CFG_C = _CFG_A.bits | 0b10;
+[INFO] [stderr]     |                            ^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to previous error
+[INFO] [stderr] 
+[INFO] [stderr] For more information about this error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `bitflags`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "1627243d385e10c5326b1bfd63b535634f348fd1a6ca671f59cc82ac144da7ea"`
+[INFO] running `"docker" "rm" "-f" "1627243d385e10c5326b1bfd63b535634f348fd1a6ca671f59cc82ac144da7ea"`
+[INFO] [stdout] 1627243d385e10c5326b1bfd63b535634f348fd1a6ca671f59cc82ac144da7ea

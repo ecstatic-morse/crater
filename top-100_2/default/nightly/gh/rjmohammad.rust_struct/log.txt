@@ -1,0 +1,55 @@
+[INFO] cloning repository rjmohammad/rust_struct
+[INFO] running `"git" "clone" "--bare" "git://github.com/rjmohammad/rust_struct.git" "work\\cache\\sources\\gh\\rjmohammad\\rust_struct"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\rjmohammad\rust_struct'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rjmohammad\\rust_struct" "work\\ex\\default\\sources\\nightly\\gh\\rjmohammad\\rust_struct"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly\gh\rjmohammad\rust_struct'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\rjmohammad\\rust_struct" "work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\gh\\rjmohammad\\rust_struct"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rjmohammad\rust_struct'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 0102dbc429e5a86e500577133894f3cab9dc781f
+[INFO] sha for GitHub repo rjmohammad/rust_struct: 0102dbc429e5a86e500577133894f3cab9dc781f
+[INFO] validating manifest of rjmohammad/rust_struct on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rjmohammad/rust_struct on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rjmohammad/rust_struct
+[INFO] finished frobbing rjmohammad/rust_struct
+[INFO] frobbed toml for rjmohammad/rust_struct written to work\ex\default\sources\nightly\gh\rjmohammad\rust_struct\Cargo.toml
+[INFO] started frobbing rjmohammad/rust_struct
+[INFO] finished frobbing rjmohammad/rust_struct
+[INFO] frobbed toml for rjmohammad/rust_struct written to work\ex\default\sources\nightly+rustflags=-Zverbose\gh\rjmohammad\rust_struct\Cargo.toml
+[INFO] crate rjmohammad/rust_struct already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rjmohammad/rust_struct against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rjmohammad\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 14193d553b10481c4419715c71f028872fc20116c57e0f2aeaf28a0ed5faf555
+[INFO] running `"docker" "start" "-a" "14193d553b10481c4419715c71f028872fc20116c57e0f2aeaf28a0ed5faf555"`
+[INFO] [stderr]    Compiling struct_project v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.16s
+[INFO] running `"docker" "inspect" "14193d553b10481c4419715c71f028872fc20116c57e0f2aeaf28a0ed5faf555"`
+[INFO] running `"docker" "rm" "-f" "14193d553b10481c4419715c71f028872fc20116c57e0f2aeaf28a0ed5faf555"`
+[INFO] [stdout] 14193d553b10481c4419715c71f028872fc20116c57e0f2aeaf28a0ed5faf555
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rjmohammad\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 95c0b4e526c65175bc506f0c65ea88b04fdcd9bd33f8527cde905724c0fe71d2
+[INFO] running `"docker" "start" "-a" "95c0b4e526c65175bc506f0c65ea88b04fdcd9bd33f8527cde905724c0fe71d2"`
+[INFO] [stderr]    Compiling struct_project v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.92s
+[INFO] running `"docker" "inspect" "95c0b4e526c65175bc506f0c65ea88b04fdcd9bd33f8527cde905724c0fe71d2"`
+[INFO] running `"docker" "rm" "-f" "95c0b4e526c65175bc506f0c65ea88b04fdcd9bd33f8527cde905724c0fe71d2"`
+[INFO] [stdout] 95c0b4e526c65175bc506f0c65ea88b04fdcd9bd33f8527cde905724c0fe71d2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\gh\\rjmohammad\\rust_struct,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 9bbc3e917a2642d324dd2817c5bef0d02d20bb6660adf3d29e67fabc55188365
+[INFO] running `"docker" "start" "-a" "9bbc3e917a2642d324dd2817c5bef0d02d20bb6660adf3d29e67fabc55188365"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.15s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\struct_project-f24975b1156a366c.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "9bbc3e917a2642d324dd2817c5bef0d02d20bb6660adf3d29e67fabc55188365"`
+[INFO] running `"docker" "rm" "-f" "9bbc3e917a2642d324dd2817c5bef0d02d20bb6660adf3d29e67fabc55188365"`
+[INFO] [stdout] 9bbc3e917a2642d324dd2817c5bef0d02d20bb6660adf3d29e67fabc55188365

@@ -1,0 +1,62 @@
+[INFO] fetching crate cfg-if 0.1.9...
+[INFO] extracting crate cfg-if 0.1.9 into work\ex\default\sources\stable\reg\cfg-if\0.1.9
+[INFO] extracting crate cfg-if 0.1.9 into work\ex\default\sources\beta\reg\cfg-if\0.1.9
+[INFO] validating manifest of cfg-if-0.1.9 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cfg-if-0.1.9 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cfg-if-0.1.9
+[INFO] finished frobbing cfg-if-0.1.9
+[INFO] frobbed toml for cfg-if-0.1.9 written to work\ex\default\sources\stable\reg\cfg-if\0.1.9\Cargo.toml
+[INFO] started frobbing cfg-if-0.1.9
+[INFO] finished frobbing cfg-if-0.1.9
+[INFO] frobbed toml for cfg-if-0.1.9 written to work\ex\default\sources\beta\reg\cfg-if\0.1.9\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing cfg-if-0.1.9 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\cfg-if\\0.1.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0a9af70de766df43c3b656d53d95eb07a4994b68dbb8226a1ceade5b95051ed2
+[INFO] running `"docker" "start" "-a" "0a9af70de766df43c3b656d53d95eb07a4994b68dbb8226a1ceade5b95051ed2"`
+[INFO] [stderr]    Compiling cfg-if v0.1.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.17s
+[INFO] running `"docker" "inspect" "0a9af70de766df43c3b656d53d95eb07a4994b68dbb8226a1ceade5b95051ed2"`
+[INFO] running `"docker" "rm" "-f" "0a9af70de766df43c3b656d53d95eb07a4994b68dbb8226a1ceade5b95051ed2"`
+[INFO] [stdout] 0a9af70de766df43c3b656d53d95eb07a4994b68dbb8226a1ceade5b95051ed2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\cfg-if\\0.1.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] a859db21fa6745bce9b7e331901ee25603bee371cbc5483123176a68b4af4fb9
+[INFO] running `"docker" "start" "-a" "a859db21fa6745bce9b7e331901ee25603bee371cbc5483123176a68b4af4fb9"`
+[INFO] [stderr]    Compiling cfg-if v0.1.9 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.95s
+[INFO] running `"docker" "inspect" "a859db21fa6745bce9b7e331901ee25603bee371cbc5483123176a68b4af4fb9"`
+[INFO] running `"docker" "rm" "-f" "a859db21fa6745bce9b7e331901ee25603bee371cbc5483123176a68b4af4fb9"`
+[INFO] [stdout] a859db21fa6745bce9b7e331901ee25603bee371cbc5483123176a68b4af4fb9
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\cfg-if\\0.1.9,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 29ac624d8996895853d5422b213e7ef2dd6fe2d50c22a94739417fd84d64d7e3
+[INFO] running `"docker" "start" "-a" "29ac624d8996895853d5422b213e7ef2dd6fe2d50c22a94739417fd84d64d7e3"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\cfg_if-e25861074c65a0de.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test tests::it_works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\xcrate-f598f89fbb1d979d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests cfg-if
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 12) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "29ac624d8996895853d5422b213e7ef2dd6fe2d50c22a94739417fd84d64d7e3"`
+[INFO] running `"docker" "rm" "-f" "29ac624d8996895853d5422b213e7ef2dd6fe2d50c22a94739417fd84d64d7e3"`
+[INFO] [stdout] 29ac624d8996895853d5422b213e7ef2dd6fe2d50c22a94739417fd84d64d7e3

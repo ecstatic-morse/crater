@@ -1,0 +1,56 @@
+[INFO] fetching crate auto_from 0.3.0...
+[INFO] extracting crate auto_from 0.3.0 into work\ex\default\sources\stable\reg\auto_from\0.3.0
+[INFO] extracting crate auto_from 0.3.0 into work\ex\default\sources\beta\reg\auto_from\0.3.0
+[INFO] validating manifest of auto_from-0.3.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of auto_from-0.3.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing auto_from-0.3.0
+[INFO] finished frobbing auto_from-0.3.0
+[INFO] frobbed toml for auto_from-0.3.0 written to work\ex\default\sources\stable\reg\auto_from\0.3.0\Cargo.toml
+[INFO] started frobbing auto_from-0.3.0
+[INFO] finished frobbing auto_from-0.3.0
+[INFO] frobbed toml for auto_from-0.3.0 written to work\ex\default\sources\beta\reg\auto_from\0.3.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing auto_from-0.3.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\auto_from\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] dc472195a2efa6a36df7a28e1455a76c27b17921cd933e553c511c579fe74d71
+[INFO] running `"docker" "start" "-a" "dc472195a2efa6a36df7a28e1455a76c27b17921cd933e553c511c579fe74d71"`
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling auto_from v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 39.36s
+[INFO] running `"docker" "inspect" "dc472195a2efa6a36df7a28e1455a76c27b17921cd933e553c511c579fe74d71"`
+[INFO] running `"docker" "rm" "-f" "dc472195a2efa6a36df7a28e1455a76c27b17921cd933e553c511c579fe74d71"`
+[INFO] [stdout] dc472195a2efa6a36df7a28e1455a76c27b17921cd933e553c511c579fe74d71
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\auto_from\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 34deb941678130425d6341b1ab7d8549fa69666e8a94cf4379f8e4b4f6274aac
+[INFO] running `"docker" "start" "-a" "34deb941678130425d6341b1ab7d8549fa69666e8a94cf4379f8e4b4f6274aac"`
+[INFO] [stderr]    Compiling auto_from v0.3.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.42s
+[INFO] running `"docker" "inspect" "34deb941678130425d6341b1ab7d8549fa69666e8a94cf4379f8e4b4f6274aac"`
+[INFO] running `"docker" "rm" "-f" "34deb941678130425d6341b1ab7d8549fa69666e8a94cf4379f8e4b4f6274aac"`
+[INFO] [stdout] 34deb941678130425d6341b1ab7d8549fa69666e8a94cf4379f8e4b4f6274aac
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\auto_from\\0.3.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] a1a75ca1a6c3b704f1ce9c1d63d58ee04884af888befe55fbd213af065f2bc9f
+[INFO] running `"docker" "start" "-a" "a1a75ca1a6c3b704f1ce9c1d63d58ee04884af888befe55fbd213af065f2bc9f"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.20s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\auto_from-effb51c78cff73b7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests auto_from
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 6) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "a1a75ca1a6c3b704f1ce9c1d63d58ee04884af888befe55fbd213af065f2bc9f"`
+[INFO] running `"docker" "rm" "-f" "a1a75ca1a6c3b704f1ce9c1d63d58ee04884af888befe55fbd213af065f2bc9f"`
+[INFO] [stdout] a1a75ca1a6c3b704f1ce9c1d63d58ee04884af888befe55fbd213af065f2bc9f

@@ -1,0 +1,42 @@
+[INFO] fetching crate tempfile 3.1.0...
+[INFO] extracting crate tempfile 3.1.0 into work\ex\default\sources\stable\reg\tempfile\3.1.0
+[INFO] extracting crate tempfile 3.1.0 into work\ex\default\sources\beta\reg\tempfile\3.1.0
+[INFO] validating manifest of tempfile-3.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of tempfile-3.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing tempfile-3.1.0
+[INFO] finished frobbing tempfile-3.1.0
+[INFO] frobbed toml for tempfile-3.1.0 written to work\ex\default\sources\stable\reg\tempfile\3.1.0\Cargo.toml
+[INFO] started frobbing tempfile-3.1.0
+[INFO] finished frobbing tempfile-3.1.0
+[INFO] frobbed toml for tempfile-3.1.0 written to work\ex\default\sources\beta\reg\tempfile\3.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] building tempfile-3.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\tempfile\\3.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 19b697a1af7f8f5da0fabb4fab4c62e74723486d986ba91e17f3251fd9b94d9f
+[INFO] running `"docker" "start" "-a" "19b697a1af7f8f5da0fabb4fab4c62e74723486d986ba91e17f3251fd9b94d9f"`
+[INFO] [stderr]    Compiling getrandom v0.1.6
+[INFO] [stderr]    Compiling ppv-lite86 v0.2.5
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling rand_core v0.5.0
+[INFO] [stderr]    Compiling c2-chacha v0.2.2
+[INFO] [stderr]    Compiling rand v0.7.0
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling tempfile v3.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 36.67s
+[INFO] running `"docker" "inspect" "19b697a1af7f8f5da0fabb4fab4c62e74723486d986ba91e17f3251fd9b94d9f"`
+[INFO] running `"docker" "rm" "-f" "19b697a1af7f8f5da0fabb4fab4c62e74723486d986ba91e17f3251fd9b94d9f"`
+[INFO] [stdout] 19b697a1af7f8f5da0fabb4fab4c62e74723486d986ba91e17f3251fd9b94d9f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\tempfile\\3.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 4dea461f03553b96c395950cdfb38e235c7296354bb82423deeea5d1c9104b07
+[INFO] running `"docker" "start" "-a" "4dea461f03553b96c395950cdfb38e235c7296354bb82423deeea5d1c9104b07"`
+[INFO] [stderr]    Compiling tempfile v3.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 9.30s
+[INFO] running `"docker" "inspect" "4dea461f03553b96c395950cdfb38e235c7296354bb82423deeea5d1c9104b07"`
+[INFO] running `"docker" "rm" "-f" "4dea461f03553b96c395950cdfb38e235c7296354bb82423deeea5d1c9104b07"`
+[INFO] [stdout] 4dea461f03553b96c395950cdfb38e235c7296354bb82423deeea5d1c9104b07

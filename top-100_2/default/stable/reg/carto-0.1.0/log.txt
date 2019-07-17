@@ -1,0 +1,99 @@
+[INFO] fetching crate carto 0.1.0...
+[INFO] extracting crate carto 0.1.0 into work\ex\default\sources\stable\reg\carto\0.1.0
+[INFO] extracting crate carto 0.1.0 into work\ex\default\sources\beta\reg\carto\0.1.0
+[INFO] validating manifest of carto-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of carto-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing carto-0.1.0
+[INFO] finished frobbing carto-0.1.0
+[INFO] frobbed toml for carto-0.1.0 written to work\ex\default\sources\stable\reg\carto\0.1.0\Cargo.toml
+[INFO] started frobbing carto-0.1.0
+[INFO] finished frobbing carto-0.1.0
+[INFO] frobbed toml for carto-0.1.0 written to work\ex\default\sources\beta\reg\carto\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing carto-0.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\carto\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] ca5ce88082f2088ca5ae99adca38f60843bcda0b99a44702c134f01b7aa7df76
+[INFO] running `"docker" "start" "-a" "ca5ce88082f2088ca5ae99adca38f60843bcda0b99a44702c134f01b7aa7df76"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]    Compiling bitflags v0.3.3
+[INFO] [stderr]    Compiling gcc v0.3.9
+[INFO] [stderr]    Compiling cairo-rs v0.0.7
+[INFO] [stderr]    Compiling c_vec v1.0.12
+[INFO] [stderr]    Compiling gdk v0.2.0
+[INFO] [stderr]    Compiling gtk v0.0.6
+[INFO] [stderr]    Compiling glib-sys v0.2.1
+[INFO] [stderr]    Compiling gobject-sys v0.2.1
+[INFO] [stderr]    Compiling gio-sys v0.2.1
+[INFO] [stderr]    Compiling gdk-pixbuf-sys v0.2.1
+[INFO] [stderr]    Compiling pango-sys v0.2.1
+[INFO] [stderr]    Compiling cairo-sys-rs v0.2.1
+[INFO] [stderr]    Compiling atk-sys v0.2.1
+[INFO] [stderr]    Compiling gdk-sys v0.2.1
+[INFO] [stderr]    Compiling gtk-sys v0.2.1
+[INFO] [stderr] error: failed to run custom build command for `glib-sys v0.2.1`
+[INFO] [stderr] 
+[INFO] [stderr] Caused by:
+[INFO] [stderr]   process didn't exit successfully: `C:\crater\target\debug\build\glib-sys-c96c02a88d663515\build-script-build` (exit code: 101)
+[INFO] [stderr] --- stderr
+[INFO] [stderr] thread 'main' panicked at 'Failed to run `"pkg-config" "--libs" "--cflags" "glib-2.0"`: The system cannot find the file specified. (os error 2)', C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\glib-sys-0.2.1\build.rs:16:29
+[INFO] [stderr] stack backtrace:
+[INFO] [stderr]    0:     0x7ff70f06079d - std::sys::windows::backtrace::set_frames
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:95
+[INFO] [stderr]    1:     0x7ff70f06079d - std::sys::windows::backtrace::unwind_backtrace
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys\windows\backtrace\mod.rs:82
+[INFO] [stderr]    2:     0x7ff70f06079d - std::sys_common::backtrace::_print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:71
+[INFO] [stderr]    3:     0x7ff70f0635ed - std::sys_common::backtrace::print
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\sys_common\backtrace.rs:59
+[INFO] [stderr]    4:     0x7ff70f0635ed - std::panicking::default_hook::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:197
+[INFO] [stderr]    5:     0x7ff70f0632ea - std::panicking::default_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:211
+[INFO] [stderr]    6:     0x7ff70f063d5f - std::panicking::rust_panic_with_hook
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:474
+[INFO] [stderr]    7:     0x7ff70f063893 - std::panicking::continue_panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:381
+[INFO] [stderr]    8:     0x7ff70f0637e1 - std::panicking::begin_panic_fmt
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:336
+[INFO] [stderr]    9:     0x7ff70f015b52 - build_script_build::main::{{closure}}
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\glib-sys-0.2.1\build.rs:16
+[INFO] [stderr]   10:     0x7ff70f0173e2 - core::result::Result<pkg_config::Library, alloc::string::String>::unwrap_or_else<pkg_config::Library,alloc::string::String,closure>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libcore\result.rs:766
+[INFO] [stderr]   11:     0x7ff70f0156ae - build_script_build::main
+[INFO] [stderr]                                at C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\glib-sys-0.2.1\build.rs:15
+[INFO] [stderr]   12:     0x7ff70f01487f - std::rt::lang_start::{{closure}}<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   13:     0x7ff70f063766 - std::rt::lang_start_internal::{{closure}}
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:49
+[INFO] [stderr]   14:     0x7ff70f063766 - std::panicking::try::do_call<closure,i32>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:293
+[INFO] [stderr]   15:     0x7ff70f06ca41 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libpanic_unwind\lib.rs:85
+[INFO] [stderr]   16:     0x7ff70f063f81 - std::panicking::try
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panicking.rs:272
+[INFO] [stderr]   17:     0x7ff70f063f81 - std::panic::catch_unwind
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\panic.rs:394
+[INFO] [stderr]   18:     0x7ff70f063f81 - std::rt::lang_start_internal
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\/src\libstd\rt.rs:48
+[INFO] [stderr]   19:     0x7ff70f01485a - std::rt::lang_start<()>
+[INFO] [stderr]                                at /rustc/a53f9df32fbb0b5f4382caaad8f1a46f36ea887c\src\libstd\rt.rs:64
+[INFO] [stderr]   20:     0x7ff70f01634f - main
+[INFO] [stderr]   21:     0x7ff70f0753c7 - invoke_main
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:78
+[INFO] [stderr]   22:     0x7ff70f0753c7 - __scrt_common_main_seh
+[INFO] [stderr]                                at d:\agent\_work\2\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl:288
+[INFO] [stderr]   23:     0x7ff99cc37973 - BaseThreadInitThunk
+[INFO] [stderr]   24:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stderr] 
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "ca5ce88082f2088ca5ae99adca38f60843bcda0b99a44702c134f01b7aa7df76"`
+[INFO] running `"docker" "rm" "-f" "ca5ce88082f2088ca5ae99adca38f60843bcda0b99a44702c134f01b7aa7df76"`
+[INFO] [stdout] ca5ce88082f2088ca5ae99adca38f60843bcda0b99a44702c134f01b7aa7df76

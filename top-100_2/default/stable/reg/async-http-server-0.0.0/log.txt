@@ -1,0 +1,53 @@
+[INFO] fetching crate async-http-server 0.0.0...
+[INFO] extracting crate async-http-server 0.0.0 into work\ex\default\sources\stable\reg\async-http-server\0.0.0
+[INFO] extracting crate async-http-server 0.0.0 into work\ex\default\sources\beta\reg\async-http-server\0.0.0
+[INFO] validating manifest of async-http-server-0.0.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of async-http-server-0.0.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing async-http-server-0.0.0
+[INFO] finished frobbing async-http-server-0.0.0
+[INFO] frobbed toml for async-http-server-0.0.0 written to work\ex\default\sources\stable\reg\async-http-server\0.0.0\Cargo.toml
+[INFO] started frobbing async-http-server-0.0.0
+[INFO] finished frobbing async-http-server-0.0.0
+[INFO] frobbed toml for async-http-server-0.0.0 written to work\ex\default\sources\beta\reg\async-http-server\0.0.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing async-http-server-0.0.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\async-http-server\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 066db8d17ce12fa739b18542dc89a54998c11836b8c2b05c6b16173ef82dd41f
+[INFO] running `"docker" "start" "-a" "066db8d17ce12fa739b18542dc89a54998c11836b8c2b05c6b16173ef82dd41f"`
+[INFO] [stderr]    Compiling async-http-server v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.69s
+[INFO] running `"docker" "inspect" "066db8d17ce12fa739b18542dc89a54998c11836b8c2b05c6b16173ef82dd41f"`
+[INFO] running `"docker" "rm" "-f" "066db8d17ce12fa739b18542dc89a54998c11836b8c2b05c6b16173ef82dd41f"`
+[INFO] [stdout] 066db8d17ce12fa739b18542dc89a54998c11836b8c2b05c6b16173ef82dd41f
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\async-http-server\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 6d8effe03adff4d117f95ca2de1d8321b9e6fc464fd4b6db37aec971c0b91a91
+[INFO] running `"docker" "start" "-a" "6d8effe03adff4d117f95ca2de1d8321b9e6fc464fd4b6db37aec971c0b91a91"`
+[INFO] [stderr]    Compiling async-http-server v0.0.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.04s
+[INFO] running `"docker" "inspect" "6d8effe03adff4d117f95ca2de1d8321b9e6fc464fd4b6db37aec971c0b91a91"`
+[INFO] running `"docker" "rm" "-f" "6d8effe03adff4d117f95ca2de1d8321b9e6fc464fd4b6db37aec971c0b91a91"`
+[INFO] [stdout] 6d8effe03adff4d117f95ca2de1d8321b9e6fc464fd4b6db37aec971c0b91a91
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\async-http-server\\0.0.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] fed9eeb7f29b36f1e3d7c8900f1f50348826d3bcfc923945c3318d4ff65bc6d4
+[INFO] running `"docker" "start" "-a" "fed9eeb7f29b36f1e3d7c8900f1f50348826d3bcfc923945c3318d4ff65bc6d4"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\async_http_server-53e5c13cfaa8b8e7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests async-http-server
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fed9eeb7f29b36f1e3d7c8900f1f50348826d3bcfc923945c3318d4ff65bc6d4"`
+[INFO] running `"docker" "rm" "-f" "fed9eeb7f29b36f1e3d7c8900f1f50348826d3bcfc923945c3318d4ff65bc6d4"`
+[INFO] [stdout] fed9eeb7f29b36f1e3d7c8900f1f50348826d3bcfc923945c3318d4ff65bc6d4

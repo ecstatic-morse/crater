@@ -1,0 +1,223 @@
+[INFO] crate mio 0.6.19 is already in cache
+[INFO] extracting crate mio 0.6.19 into work\ex\default\sources\nightly\reg\mio\0.6.19
+[INFO] extracting crate mio 0.6.19 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\mio\0.6.19
+[INFO] validating manifest of mio-0.6.19 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of mio-0.6.19 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing mio-0.6.19
+[INFO] removed 0 missing tests
+[INFO] finished frobbing mio-0.6.19
+[INFO] frobbed toml for mio-0.6.19 written to work\ex\default\sources\nightly\reg\mio\0.6.19\Cargo.toml
+[INFO] started frobbing mio-0.6.19
+[INFO] removed 0 missing tests
+[INFO] finished frobbing mio-0.6.19
+[INFO] frobbed toml for mio-0.6.19 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\mio\0.6.19\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing mio-0.6.19 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\mio\\0.6.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] f8abc178a11b79eac29333212117f5fa7cb0b7519b10118b0e19cb9ef987ff64
+[INFO] running `"docker" "start" "-a" "f8abc178a11b79eac29333212117f5fa7cb0b7519b10118b0e19cb9ef987ff64"`
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling net2 v0.2.33
+[INFO] [stderr]    Compiling miow v0.2.1
+[INFO] [stderr]    Compiling mio v0.6.19 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 29.60s
+[INFO] running `"docker" "inspect" "f8abc178a11b79eac29333212117f5fa7cb0b7519b10118b0e19cb9ef987ff64"`
+[INFO] running `"docker" "rm" "-f" "f8abc178a11b79eac29333212117f5fa7cb0b7519b10118b0e19cb9ef987ff64"`
+[INFO] [stdout] f8abc178a11b79eac29333212117f5fa7cb0b7519b10118b0e19cb9ef987ff64
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\mio\\0.6.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 58a4683c45e250c42be4f82672681b58298dba288ef4da92110988c644f367d1
+[INFO] running `"docker" "start" "-a" "58a4683c45e250c42be4f82672681b58298dba288ef4da92110988c644f367d1"`
+[INFO] [stderr]    Compiling bytes v0.3.0
+[INFO] [stderr]    Compiling remove_dir_all v0.5.2
+[INFO] [stderr]    Compiling rand v0.4.6
+[INFO] [stderr]    Compiling tempdir v0.3.7
+[INFO] [stderr]    Compiling mio v0.6.19 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 16.54s
+[INFO] running `"docker" "inspect" "58a4683c45e250c42be4f82672681b58298dba288ef4da92110988c644f367d1"`
+[INFO] running `"docker" "rm" "-f" "58a4683c45e250c42be4f82672681b58298dba288ef4da92110988c644f367d1"`
+[INFO] [stdout] 58a4683c45e250c42be4f82672681b58298dba288ef4da92110988c644f367d1
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\mio\\0.6.19,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 3c9a2f028472b5823c78dcdc775f7883b3f9e035ec578e55f09ee4cb2b95de88
+[INFO] running `"docker" "start" "-a" "3c9a2f028472b5823c78dcdc775f7883b3f9e035ec578e55f09ee4cb2b95de88"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.38s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mio-a06df698c4675b60.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 29 tests
+[INFO] [stdout] test event_imp::test_debug_pollopt ... ok
+[INFO] [stdout] test event_imp::test_debug_ready ... ok
+[INFO] [stdout] test lazycell::tests::atomic_replace ... ok
+[INFO] [stdout] test lazycell::tests::normal_replace ... ok
+[INFO] [stdout] test lazycell::tests::test_already_filled_error ... ok
+[INFO] [stdout] test lazycell::tests::test_atomic_already_filled_panic ... ok
+[INFO] [stdout] test lazycell::tests::test_atomic_borrow_from_empty ... ok
+[INFO] [stdout] test lazycell::tests::test_atomic_fill_and_borrow ... ok
+[INFO] [stdout] test lazycell::tests::test_atomic_into_inner ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_from_empty ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_mut ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_mut_with ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_mut_with_already_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_mut_with_not_called_when_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_with ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_with_already_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_with_not_called_when_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_fill_and_borrow ... ok
+[INFO] [stdout] test lazycell::tests::test_borrow_with_sound_with_reentrancy ... ok
+[INFO] [stdout] test lazycell::tests::test_into_inner ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_mut_with_already_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_mut_with_err ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_mut_with_ok ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_with_already_filled ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_with_err ... ok
+[INFO] [stdout] test lazycell::tests::test_try_borrow_with_ok ... ok
+[INFO] [stdout] test sys::windows::from_raw_arc::tests::drops ... ok
+[INFO] [stdout] test sys::windows::from_raw_arc::tests::smoke ... ok
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-50fafafa3e026011.exe
+[INFO] [stdout] test lazycell::tests::test_try_borrow_with_sound_with_reentrancy ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 56 tests
+[INFO] [stdout] test test_close_on_drop::test_close_on_drop ... ok
+[INFO] [stdout] test test_custom_evented::smoke ... ok
+[INFO] [stdout] test test_custom_evented::drop_registration_from_non_main_thread ... ok
+[INFO] [stdout] test test_custom_evented::stress::multi_threaded_poll ... ok
+[INFO] [stdout] test test_battery::test_echo_server ... ok
+[INFO] [stdout] test test_custom_evented::stress::with_small_events_collection ... ok
+[INFO] [stdout] test test_echo_server::test_echo_server ... ok
+[INFO] [stdout] test test_double_register::test_double_register ... ok
+[INFO] [stdout] test test_local_addr_ready::local_addr_ready ... ok
+[INFO] [stdout] test test_multicast::test_multicast ... ok
+[INFO] [stdout] test test_notify::test_notify_capacity ... ok
+[INFO] [stdout] test test_notify::test_notify ... ok
+[INFO] [stdout] test test_oneshot::test_tcp_edge_oneshot ... ok
+[INFO] [stdout] test test_notify::test_notify_drop ... ok
+[INFO] [stdout] test test_poll::test_poll_closes_fd ... ok
+[INFO] [stdout] test test_poll_channel::test_dropping_receive_before_poll ... ok
+[INFO] [stdout] test test_poll_channel::test_mixing_channel_with_socket ... ok
+[INFO] [stdout] test test_poll_channel::test_poll_channel_level ... ok
+[INFO] [stdout] test test_poll_channel::test_poll_channel_edge ... ok
+[INFO] [stdout] test test_poll_channel::test_poll_channel_writable ... ok
+[INFO] [stdout] test test_poll_channel::test_poll_channel_oneshot ... ok
+[INFO] [stdout] test test_register_deregister::test_register_deregister ... ok
+[INFO] [stdout] test test_register_deregister::test_register_empty_interest ... ok
+[INFO] [stdout] test test_register_multiple_event_loops::test_tcp_register_multiple_event_loops ... ok
+[INFO] [stdout] test test_register_multiple_event_loops::test_udp_register_multiple_event_loops ... ok
+[INFO] [stdout] test test_reregister_without_poll::test_reregister_different_without_poll ... ok
+[INFO] [stdout] test test_custom_evented::stress::single_threaded_poll ... ok
+[INFO] [stdout] test test_smoke::add_then_drop ... ok
+[INFO] [stdout] test test_tcp::accept ... ok
+[INFO] [stdout] test test_tcp::bind_twice_bad ... ok
+[INFO] [stdout] test test_tcp::connect ... ok
+[INFO] [stdout] test test_smoke::run_once_with_nothing ... ok
+[INFO] [stdout] test test_tcp::connect_then_close ... ok
+[INFO] [stdout] test test_tcp::connection_reset_by_peer ... ok
+[INFO] [stdout] test test_poll_channel::test_sending_from_other_thread_while_polling ... ok
+[INFO] [stdout] test test_tcp::listen_then_close ... ok
+[INFO] [stdout] test test_tcp::multiple_writes_immediate_success ... ok
+[INFO] [stdout] test test_tcp::peek ... ok
+[INFO] [stdout] test test_tcp::read ... ok
+[INFO] [stdout] test test_tcp::test_tcp_sockets_are_send ... ok
+[INFO] [stdout] test test_tcp::connect_error ... ok
+[INFO] [stdout] test test_tcp::write ... ok
+[INFO] [stdout] test test_tcp::write_error ... ok
+[INFO] [stdout] test test_tcp_level::test_tcp_listener_level_triggered ... ok
+[INFO] [stdout] test test_tcp_level::test_tcp_stream_level_triggered ... ok
+[INFO] [stdout] test test_tcp_shutdown::test_write_shutdown ... ok
+[INFO] [stdout] test test_tcp::read_bufs ... ok
+[INFO] [stdout] test test_tcp::write_bufs ... ok
+[INFO] [stdout] test test_udp_socket::test_udp_socket ... ok
+[INFO] [stdout] test test_tick::test_tick ... ok
+[INFO] [stdout] test test_udp_socket::test_udp_socket_discard ... ok
+[INFO] [stdout] test test_udp_socket::test_udp_socket_send_recv ... ok
+[INFO] [stdout] test test_write_then_drop::write_then_deregister ... ok
+[INFO] [stdout] test test_write_then_drop::write_then_drop ... ok
+[INFO] [stdout] test test_udp_level::test_udp_level_triggered ... ok
+[INFO] [stdout] test test_custom_evented::set_readiness_before_register ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 56 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests mio
+[INFO] [stdout] 
+[INFO] [stdout] running 68 tests
+[INFO] [stdout] test src\event_imp.rs - event_imp::Event::token (line 1124) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Event (line 1056) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Event::new (line 1081) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Event::readiness (line 1101) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::contains (line 406) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Evented (line 32) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt (line 208) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Evented (line 67) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::contains (line 424) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::contains (line 415) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::edge (line 249) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::empty (line 229) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::insert (line 446) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::is_edge (line 325) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::is_level (line 345) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::is_oneshot (line 365) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::level (line 269) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::oneshot (line 289) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::PollOpt::remove (line 465) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready (line 579) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::all (line 694) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::as_usize (line 924) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::contains (line 850) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::contains (line 859) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::contains (line 868) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::empty (line 609) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::from_usize (line 899) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::insert (line 798) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::is_empty (line 715) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::is_readable (line 742) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::is_writable (line 762) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::readable (line 635) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::remove (line 818) ... ok
+[INFO] [stdout] test src\event_imp.rs - event_imp::Ready::writable (line 655) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 58) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket (line 27) ... ok
+[INFO] [stdout] test src\net\tcp.rs - net::tcp::TcpStream (line 34) ... ok
+[INFO] [stdout] test src\net\tcp.rs - net::tcp::TcpListener (line 474) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::recv_from (line 248) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::bind (line 102) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::send_to (line 219) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::broadcast (line 333) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::local_addr (line 151) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::set_broadcast (line 300) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::set_ttl (line 417) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::ttl (line 449) ... ok
+[INFO] [stdout] test src\net\udp.rs - net::udp::UdpSocket::try_clone (line 182) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events (line 1242) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events::is_empty (line 1395) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events::capacity (line 1380) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events::clear (line 1444) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events::iter (line 1410) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Events::with_capacity (line 1353) ... ok
+[INFO] [stdout] test src\poll.rs - poll::IntoIter (line 1318) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Iter (line 1280) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll (line 267) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll (line 90) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll::deregister (line 877) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll::new (line 627) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll::poll (line 958) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll::reregister (line 820) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Poll::register (line 735) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Registration (line 375) ... ok
+[INFO] [stdout] test src\poll.rs - poll::Registration::new2 (line 1552) ... ok
+[INFO] [stdout] test src\poll.rs - poll::SetReadiness::readiness (line 1714) ... ok
+[INFO] [stdout] test src\poll.rs - poll::SetReadiness::set_readiness (line 1754) ... ok
+[INFO] [stdout] test src\poll.rs - poll::SetReadiness::set_readiness (line 1792) ... ok
+[INFO] [stdout] test src\token.rs - token::Token (line 13) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 68 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "3c9a2f028472b5823c78dcdc775f7883b3f9e035ec578e55f09ee4cb2b95de88"`
+[INFO] running `"docker" "rm" "-f" "3c9a2f028472b5823c78dcdc775f7883b3f9e035ec578e55f09ee4cb2b95de88"`
+[INFO] [stdout] 3c9a2f028472b5823c78dcdc775f7883b3f9e035ec578e55f09ee4cb2b95de88

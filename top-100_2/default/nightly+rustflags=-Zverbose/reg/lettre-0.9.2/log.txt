@@ -1,0 +1,231 @@
+[INFO] fetching crate lettre 0.9.2...
+[INFO] extracting crate lettre 0.9.2 into work\ex\default\sources\nightly\reg\lettre\0.9.2
+[INFO] extracting crate lettre 0.9.2 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\lettre\0.9.2
+[INFO] validating manifest of lettre-0.9.2 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of lettre-0.9.2 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing lettre-0.9.2
+[INFO] removed 2 missing examples
+[INFO] finished frobbing lettre-0.9.2
+[INFO] frobbed toml for lettre-0.9.2 written to work\ex\default\sources\nightly\reg\lettre\0.9.2\Cargo.toml
+[INFO] started frobbing lettre-0.9.2
+[INFO] removed 2 missing examples
+[INFO] finished frobbing lettre-0.9.2
+[INFO] frobbed toml for lettre-0.9.2 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\lettre\0.9.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded fast_chemail v0.9.6
+[INFO] [stderr]   Downloaded ascii_utils v0.9.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing lettre-0.9.2 against nightly+rustflags=-Zverbose for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\lettre\\0.9.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] ebd46df46ae3d479e3c8e1eadec954ce72ed22673a06ea05a608439efeb45ea2
+[INFO] running `"docker" "start" "-a" "ebd46df46ae3d479e3c8e1eadec954ce72ed22673a06ea05a608439efeb45ea2"`
+[INFO] [stderr] warning: An explicit [[example]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other example targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a example target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\examples\smtp.rs
+[INFO] [stderr] * C:\crater\workdir\examples\smtp_gmail.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a example target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autoexamples = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling winapi v0.3.7
+[INFO] [stderr]    Compiling syn v0.15.40
+[INFO] [stderr]    Compiling serde v1.0.97
+[INFO] [stderr]    Compiling ascii_utils v0.9.3
+[INFO] [stderr]    Compiling nom v4.2.3
+[INFO] [stderr]    Compiling fast_chemail v0.9.6
+[INFO] [stderr]    Compiling serde_derive v1.0.97
+[INFO] [stderr]    Compiling winutil v0.1.1
+[INFO] [stderr]    Compiling schannel v0.1.15
+[INFO] [stderr]    Compiling hostname v0.1.5
+[INFO] [stderr]    Compiling native-tls v0.2.3
+[INFO] [stderr]    Compiling serde_json v1.0.40
+[INFO] [stderr]    Compiling lettre v0.9.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 03s
+[INFO] running `"docker" "inspect" "ebd46df46ae3d479e3c8e1eadec954ce72ed22673a06ea05a608439efeb45ea2"`
+[INFO] running `"docker" "rm" "-f" "ebd46df46ae3d479e3c8e1eadec954ce72ed22673a06ea05a608439efeb45ea2"`
+[INFO] [stdout] ebd46df46ae3d479e3c8e1eadec954ce72ed22673a06ea05a608439efeb45ea2
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\lettre\\0.9.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e211253879558d9e7cbcd2c5da58f1c5e1931ab4b579b19eecec61d0af12e962
+[INFO] running `"docker" "start" "-a" "e211253879558d9e7cbcd2c5da58f1c5e1931ab4b579b19eecec61d0af12e962"`
+[INFO] [stderr] warning: An explicit [[example]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other example targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a example target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\examples\smtp.rs
+[INFO] [stderr] * C:\crater\workdir\examples\smtp_gmail.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a example target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autoexamples = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]    Compiling winapi-util v0.1.2
+[INFO] [stderr]    Compiling atty v0.2.13
+[INFO] [stderr]    Compiling wincolor v1.0.1
+[INFO] [stderr]    Compiling termcolor v1.0.5
+[INFO] [stderr]    Compiling env_logger v0.6.2
+[INFO] [stderr]    Compiling lettre v0.9.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 26.40s
+[INFO] running `"docker" "inspect" "e211253879558d9e7cbcd2c5da58f1c5e1931ab4b579b19eecec61d0af12e962"`
+[INFO] running `"docker" "rm" "-f" "e211253879558d9e7cbcd2c5da58f1c5e1931ab4b579b19eecec61d0af12e962"`
+[INFO] [stdout] e211253879558d9e7cbcd2c5da58f1c5e1931ab4b579b19eecec61d0af12e962
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\nightly+rustflags=-Zverbose,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly+rustflags=-Zverbose\\reg\\lettre\\0.9.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow -Zverbose" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] c55392bad83aab901610c155206e5f22005afe07aaf84b92389bdf50c4202f85
+[INFO] running `"docker" "start" "-a" "c55392bad83aab901610c155206e5f22005afe07aaf84b92389bdf50c4202f85"`
+[INFO] [stderr] warning: An explicit [[example]] section is specified in Cargo.toml which currently
+[INFO] [stderr] disables Cargo from automatically inferring other example targets.
+[INFO] [stderr] This inference behavior will change in the Rust 2018 edition and the following
+[INFO] [stderr] files will be included as a example target:
+[INFO] [stderr] 
+[INFO] [stderr] * C:\crater\workdir\examples\smtp.rs
+[INFO] [stderr] * C:\crater\workdir\examples\smtp_gmail.rs
+[INFO] [stderr] 
+[INFO] [stderr] This is likely to break cargo build or cargo test as these files may not be
+[INFO] [stderr] ready to be compiled as a example target today. You can future-proof yourself
+[INFO] [stderr] and disable this warning by adding `autoexamples = false` to your [package]
+[INFO] [stderr] section. You may also move the files to a location where Cargo would not
+[INFO] [stderr] automatically infer them to be a target, such as in subfolders.
+[INFO] [stderr] 
+[INFO] [stderr] For more information on this warning you can consult
+[INFO] [stderr] https://github.com/rust-lang/cargo/issues/5330
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.71s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\lettre-cc8e32b759146f9e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 24 tests
+[INFO] [stdout] test smtp::authentication::test::test_plain ... ok
+[INFO] [stdout] test smtp::authentication::test::test_login ... ok
+[INFO] [stdout] test smtp::client::mock::test::clone_test ... ok
+[INFO] [stdout] test smtp::authentication::test::test_xoauth2 ... ok
+[INFO] [stdout] test smtp::client::mock::test::read_with_vec_test ... ok
+[INFO] [stdout] test smtp::client::mock::test::swap_test ... ok
+[INFO] [stdout] test smtp::client::mock::test::write_take_test ... ok
+[INFO] [stdout] test smtp::client::test::test_codec ... ok
+[INFO] [stdout] test smtp::commands::test::test_display ... ok
+[INFO] [stdout] test smtp::client::test::test_escape_crlf ... ok
+[INFO] [stdout] test smtp::extension::test::test_clientid_fmt ... ok
+[INFO] [stdout] test smtp::extension::test::test_extension_fmt ... ok
+[INFO] [stdout] test smtp::extension::test::test_serverinfo_fmt ... ok
+[INFO] [stdout] test smtp::extension::test::test_serverinfo ... ok
+[INFO] [stdout] test smtp::response::test::test_category_fmt ... ok
+[INFO] [stdout] test smtp::response::test::test_code_display ... ok
+[INFO] [stdout] test smtp::response::test::test_code_new ... ok
+[INFO] [stdout] test smtp::response::test::test_response_first_line ... ok
+[INFO] [stdout] test smtp::response::test::test_response_first_word ... ok
+[INFO] [stdout] test smtp::response::test::test_response_from_str ... ok
+[INFO] [stdout] test smtp::response::test::test_response_has_code ... ok
+[INFO] [stdout] test smtp::response::test::test_response_is_positive ... ok
+[INFO] [stdout] test smtp::response::test::test_severity_fmt ... ok
+[INFO] [stdout] test smtp::util::tests::test ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\r2d2_smtp-e4dfbfea67b3cf12.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\skeptic-4b264c8f12941273.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test book_test ... FAILED
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- book_test stdout ----
+[INFO] [stdout] thread 'book_test' panicked at 'called `Option::unwrap()` on a `None` value', src\libcore\option.rs:378:21
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff7b0e0d83c - backtrace::backtrace::trace_unsynchronized
+[INFO] [stdout]                                at C:\Program Files\Rust\.cargo\registry\src\github.com-1ecc6299db9ec823\backtrace-0.3.29\src\backtrace\mod.rs:66
+[INFO] [stdout]    1:     0x7ff7b0e0d83c - std::sys_common::backtrace::_print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:47
+[INFO] [stdout]    2:     0x7ff7b0e10dbe - std::sys_common::backtrace::print
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\backtrace.rs:36
+[INFO] [stdout]    3:     0x7ff7b0e10dbe - std::panicking::default_hook::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:200
+[INFO] [stdout]    4:     0x7ff7b0e109cd - std::panicking::default_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:211
+[INFO] [stdout]    5:     0x7ff7b0e11650 - std::panicking::rust_panic_with_hook
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:477
+[INFO] [stdout]    6:     0x7ff7b0e11184 - std::panicking::continue_panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:384
+[INFO] [stdout]    7:     0x7ff7b0e11069 - std::panicking::rust_begin_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\panicking.rs:311
+[INFO] [stdout]    8:     0x7ff7b0e23bac - core::panicking::panic_fmt
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:85
+[INFO] [stdout]    9:     0x7ff7b0e23aee - core::panicking::panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libcore\panicking.rs:49
+[INFO] [stdout]   10:     0x7ff7b0dd4bfe - core::option::Option<std::path::Path*>::unwrap<std::path::Path*>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\macros.rs:12
+[INFO] [stdout]   11:     0x7ff7b0d88df4 - skeptic::book_test
+[INFO] [stdout]                                at C:\crater\workdir\tests\skeptic.rs:29
+[INFO] [stdout]   12:     0x7ff7b0d88cde - skeptic::book_test::{{closure}}
+[INFO] [stdout]                                at C:\crater\workdir\tests\skeptic.rs:26
+[INFO] [stdout]   13:     0x7ff7b0d85b1b - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   14:     0x7ff7b0d98e17 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   15:     0x7ff7b0e1b4a2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   16:     0x7ff7b0db83d8 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   17:     0x7ff7b0db83d8 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   18:     0x7ff7b0db83d8 - test::run_test::run_test_inner::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libtest\lib.rs:1472
+[INFO] [stdout]   19:     0x7ff7b0d8acce - std::sys_common::backtrace::__rust_begin_short_backtrace<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\sys_common\backtrace.rs:77
+[INFO] [stdout]   20:     0x7ff7b0d90e6e - std::thread::{{impl}}::spawn_unchecked::{{closure}}::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:470
+[INFO] [stdout]   21:     0x7ff7b0d90e6e - std::panic::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:315
+[INFO] [stdout]   22:     0x7ff7b0d90e6e - std::panicking::try::do_call<std::panic::AssertUnwindSafe<closure>,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:296
+[INFO] [stdout]   23:     0x7ff7b0e1b4a2 - panic_unwind::__rust_maybe_catch_panic
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libpanic_unwind\lib.rs:82
+[INFO] [stdout]   24:     0x7ff7b0d91510 - std::panicking::try
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panicking.rs:275
+[INFO] [stdout]   25:     0x7ff7b0d91510 - std::panic::catch_unwind
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\panic.rs:394
+[INFO] [stdout]   26:     0x7ff7b0d91510 - std::thread::{{impl}}::spawn_unchecked::{{closure}}
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libstd\thread\mod.rs:469
+[INFO] [stdout]   27:     0x7ff7b0d91510 - core::ops::function::FnOnce::call_once<closure,()>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\libcore\ops\function.rs:231
+[INFO] [stdout]   28:     0x7ff7b0e01947 - alloc::boxed::{{impl}}::call_once<(),FnOnce<()>>
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   29:     0x7ff7b0e1a1b6 - alloc::boxed::{{impl}}::call_once
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\src\liballoc\boxed.rs:766
+[INFO] [stdout]   30:     0x7ff7b0e1a1b6 - std::sys_common::thread::start_thread
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys_common\thread.rs:13
+[INFO] [stdout]   31:     0x7ff7b0e1a1b6 - std::sys::windows::thread::{{impl}}::new::thread_start
+[INFO] [stdout]                                at /rustc/273f42b5964c29dda2c5a349dd4655529767b07f\/src\libstd\sys\windows\thread.rs:47
+[INFO] [stdout]   32:     0x7ff98aa97974 - BaseThreadInitThunk
+[INFO] [stdout]   33:     0x7ff9d33ea271 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     book_test
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--test skeptic'
+[INFO] running `"docker" "inspect" "c55392bad83aab901610c155206e5f22005afe07aaf84b92389bdf50c4202f85"`
+[INFO] running `"docker" "rm" "-f" "c55392bad83aab901610c155206e5f22005afe07aaf84b92389bdf50c4202f85"`
+[INFO] [stdout] c55392bad83aab901610c155206e5f22005afe07aaf84b92389bdf50c4202f85

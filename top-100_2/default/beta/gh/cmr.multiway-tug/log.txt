@@ -1,0 +1,161 @@
+[INFO] cloning repository cmr/multiway-tug
+[INFO] running `"git" "clone" "--bare" "git://github.com/cmr/multiway-tug.git" "work\\cache\\sources\\gh\\cmr\\multiway-tug"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\cmr\multiway-tug'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cmr\\multiway-tug" "work\\ex\\default\\sources\\stable\\gh\\cmr\\multiway-tug"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\cmr\multiway-tug'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\cmr\\multiway-tug" "work\\ex\\default\\sources\\beta\\gh\\cmr\\multiway-tug"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\cmr\multiway-tug'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 882fd07e17cab6c53b171c31af2b5831887e02c9
+[INFO] sha for GitHub repo cmr/multiway-tug: 882fd07e17cab6c53b171c31af2b5831887e02c9
+[INFO] validating manifest of cmr/multiway-tug on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of cmr/multiway-tug on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing cmr/multiway-tug
+[INFO] finished frobbing cmr/multiway-tug
+[INFO] frobbed toml for cmr/multiway-tug written to work\ex\default\sources\stable\gh\cmr\multiway-tug\Cargo.toml
+[INFO] started frobbing cmr/multiway-tug
+[INFO] finished frobbing cmr/multiway-tug
+[INFO] frobbed toml for cmr/multiway-tug written to work\ex\default\sources\beta\gh\cmr\multiway-tug\Cargo.toml
+[INFO] crate cmr/multiway-tug already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded tui v0.6.1
+[INFO] [stderr]   Downloaded itertools v0.8.0
+[INFO] [stderr]   Downloaded cassowary v0.3.0
+[INFO] [stderr]   Downloaded serde_derive v1.0.94
+[INFO] [stderr]   Downloaded serde_cbor v0.10.0
+[INFO] [stderr]   Downloaded serde v1.0.94
+[INFO] [stderr]   Downloaded half v1.3.0
+[INFO] [stderr]   Downloaded rand_pcg v0.2.0
+[INFO] [stderr]   Downloaded newtype_derive v0.1.6
+[INFO] [stderr]   Downloaded backtrace v0.3.32
+[INFO] [stderr]   Downloaded backtrace-sys v0.1.30
+[INFO] [stderr]   Downloaded termion v1.5.3
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing cmr/multiway-tug against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\gh\\cmr\\multiway-tug,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 2f65495c1c2a084e589b9dfc454135e4d46e4b7ebb4b08305067559c38d08352
+[INFO] running `"docker" "start" "-a" "2f65495c1c2a084e589b9dfc454135e4d46e4b7ebb4b08305067559c38d08352"`
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling libc v0.2.58
+[INFO] [stderr]    Compiling semver v0.1.20
+[INFO] [stderr]    Compiling byteorder v1.3.2
+[INFO] [stderr]    Compiling serde v1.0.94
+[INFO] [stderr]    Compiling bitflags v1.1.0
+[INFO] [stderr]    Compiling numtoa v0.1.0
+[INFO] [stderr]    Compiling half v1.3.0
+[INFO] [stderr]    Compiling unicode-segmentation v1.3.0
+[INFO] [stderr]    Compiling cassowary v0.3.0
+[INFO] [stderr]    Compiling smallvec v0.6.10
+[INFO] [stderr]    Compiling backtrace-sys v0.1.30
+[INFO] [stderr]    Compiling rand_chacha v0.2.0
+[INFO] [stderr]    Compiling rustc_version v0.1.7
+[INFO] [stderr]    Compiling itertools v0.8.0
+[INFO] [stderr]    Compiling newtype_derive v0.1.6
+[INFO] [stderr]    Compiling termion v1.5.3
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\lib.rs:24:9
+[INFO] [stderr]    |
+[INFO] [stderr] 24 | pub use sys::size::terminal_size;
+[INFO] [stderr]    |         ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\lib.rs:25:9
+[INFO] [stderr]    |
+[INFO] [stderr] 25 | pub use sys::tty::{is_tty, get_tty};
+[INFO] [stderr]    |         ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]  --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:5:5
+[INFO] [stderr]   |
+[INFO] [stderr] 5 | use sys::tty::get_tty;
+[INFO] [stderr]   |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0433]: failed to resolve: maybe a missing `extern crate sys;`?
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:29:5
+[INFO] [stderr]    |
+[INFO] [stderr] 29 | use sys::attr::{get_terminal_attr, raw_terminal_attr, set_terminal_attr};
+[INFO] [stderr]    |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `sys`
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:28:5
+[INFO] [stderr]    |
+[INFO] [stderr] 28 | use sys::Termios;
+[INFO] [stderr]    |     ^^^ maybe a missing `extern crate sys;`?
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_tty` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:14:36
+[INFO] [stderr]    |
+[INFO] [stderr] 14 |     thread::spawn(move || for i in get_tty().unwrap().bytes() {
+[INFO] [stderr]    |                                    ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_tty` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\async.rs:43:36
+[INFO] [stderr]    |
+[INFO] [stderr] 43 |     thread::spawn(move || for i in get_tty().unwrap().bytes() {
+[INFO] [stderr]    |                                    ^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:45:9
+[INFO] [stderr]    |
+[INFO] [stderr] 45 |         set_terminal_attr(&self.prev_ios).unwrap();
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:90:23
+[INFO] [stderr]    |
+[INFO] [stderr] 90 |         let mut ios = get_terminal_attr()?;
+[INFO] [stderr]    |                       ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `raw_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:93:9
+[INFO] [stderr]    |
+[INFO] [stderr] 93 |         raw_terminal_attr(&mut ios);
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]   --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:95:9
+[INFO] [stderr]    |
+[INFO] [stderr] 95 |         set_terminal_attr(&ios)?;
+[INFO] [stderr]    |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:106:9
+[INFO] [stderr]     |
+[INFO] [stderr] 106 |         set_terminal_attr(&self.prev_ios)?;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `get_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:111:23
+[INFO] [stderr]     |
+[INFO] [stderr] 111 |         let mut ios = get_terminal_attr()?;
+[INFO] [stderr]     |                       ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `raw_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:112:9
+[INFO] [stderr]     |
+[INFO] [stderr] 112 |         raw_terminal_attr(&mut ios);
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr] error[E0425]: cannot find function `set_terminal_attr` in this scope
+[INFO] [stderr]    --> C:\crater\cargo-home\registry\src\github.com-1ecc6299db9ec823\termion-1.5.3\src\raw.rs:113:9
+[INFO] [stderr]     |
+[INFO] [stderr] 113 |         set_terminal_attr(&ios)?;
+[INFO] [stderr]     |         ^^^^^^^^^^^^^^^^^ not found in this scope
+[INFO] [stderr] 
+[INFO] [stderr]    Compiling rand v0.7.0
+[INFO] [stderr] error: aborting due to 15 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0425, E0432, E0433.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0425`.
+[INFO] [stderr] error: Could not compile `termion`.
+[INFO] [stderr] warning: build failed, waiting for other jobs to finish...
+[INFO] [stderr] error: build failed
+[INFO] running `"docker" "inspect" "2f65495c1c2a084e589b9dfc454135e4d46e4b7ebb4b08305067559c38d08352"`
+[INFO] running `"docker" "rm" "-f" "2f65495c1c2a084e589b9dfc454135e4d46e4b7ebb4b08305067559c38d08352"`
+[INFO] [stdout] 2f65495c1c2a084e589b9dfc454135e4d46e4b7ebb4b08305067559c38d08352

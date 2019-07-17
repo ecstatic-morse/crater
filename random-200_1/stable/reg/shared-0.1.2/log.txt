@@ -1,0 +1,165 @@
+[INFO] fetching crate shared 0.1.2...
+[INFO] extracting crate shared 0.1.2 into work\ex\default\sources\stable\reg\shared\0.1.2
+[INFO] extracting crate shared 0.1.2 into work\ex\default\sources\beta\reg\shared\0.1.2
+[INFO] validating manifest of shared-0.1.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of shared-0.1.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing shared-0.1.2
+[INFO] finished frobbing shared-0.1.2
+[INFO] frobbed toml for shared-0.1.2 written to work\ex\default\sources\stable\reg\shared\0.1.2\Cargo.toml
+[INFO] started frobbing shared-0.1.2
+[INFO] finished frobbing shared-0.1.2
+[INFO] frobbed toml for shared-0.1.2 written to work\ex\default\sources\beta\reg\shared\0.1.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded cortex-m v0.5.10
+[INFO] [stderr]   Downloaded vcell v0.1.0
+[INFO] [stderr]   Downloaded cortex-m v0.6.0
+[INFO] [stderr]   Downloaded bare-metal v0.2.4
+[INFO] [stderr]   Downloaded aligned v0.3.1
+[INFO] [stderr]   Downloaded as-slice v0.1.0
+[INFO] [stderr]   Downloaded generic-array v0.12.3
+[INFO] [stderr]   Downloaded aligned v0.2.0
+[INFO] [stderr]   Downloaded volatile-register v0.2.0
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] testing shared-0.1.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\shared\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f8f7b701d2e657c977dce6ca37c573020d170083f9cc305c29c1a9989d78f338
+[INFO] running `"docker" "start" "-a" "f8f7b701d2e657c977dce6ca37c573020d170083f9cc305c29c1a9989d78f338"`
+[INFO] [stderr]    Compiling typenum v1.10.0
+[INFO] [stderr]    Compiling stable_deref_trait v1.1.1
+[INFO] [stderr]    Compiling cortex-m v0.6.0
+[INFO] [stderr]    Compiling vcell v0.1.0
+[INFO] [stderr]    Compiling cortex-m v0.5.10
+[INFO] [stderr]    Compiling aligned v0.2.0
+[INFO] [stderr]    Compiling volatile-register v0.2.0
+[INFO] [stderr]    Compiling bare-metal v0.2.4
+[INFO] [stderr]    Compiling generic-array v0.12.3
+[INFO] [stderr]    Compiling as-slice v0.1.0
+[INFO] [stderr]    Compiling aligned v0.3.1
+[INFO] [stderr]    Compiling shared v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 28.62s
+[INFO] running `"docker" "inspect" "f8f7b701d2e657c977dce6ca37c573020d170083f9cc305c29c1a9989d78f338"`
+[INFO] running `"docker" "rm" "-f" "f8f7b701d2e657c977dce6ca37c573020d170083f9cc305c29c1a9989d78f338"`
+[INFO] [stdout] f8f7b701d2e657c977dce6ca37c573020d170083f9cc305c29c1a9989d78f338
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\shared\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] e4063181f974e281f885b35e983b15e765f16ebf359b87b3a6031e667e575734
+[INFO] running `"docker" "start" "-a" "e4063181f974e281f885b35e983b15e765f16ebf359b87b3a6031e667e575734"`
+[INFO] [stderr]    Compiling shared v0.1.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.56s
+[INFO] running `"docker" "inspect" "e4063181f974e281f885b35e983b15e765f16ebf359b87b3a6031e667e575734"`
+[INFO] running `"docker" "rm" "-f" "e4063181f974e281f885b35e983b15e765f16ebf359b87b3a6031e667e575734"`
+[INFO] [stdout] e4063181f974e281f885b35e983b15e765f16ebf359b87b3a6031e667e575734
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-0\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\shared\\0.1.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 86dd51f5db86211b2cea233e3d27a306b6c658b38b98b7357f9a154fed2d4ce9
+[INFO] running `"docker" "start" "-a" "86dd51f5db86211b2cea233e3d27a306b6c658b38b98b7357f9a154fed2d4ce9"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.49s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\shared-eaa7a1912609f075.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests shared
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test src\lib.rs -  (line 8) ... FAILED
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout] 
+[INFO] [stdout] ---- src\lib.rs -  (line 8) stdout ----
+[INFO] [stdout] error[E0658]: The attribute `interrupt` is currently unknown to the compiler and may have meaning added to it in the future
+[INFO] [stdout]   --> src\lib.rs:49:3
+[INFO] [stdout]    |
+[INFO] [stdout] 43 | #[interrupt]
+[INFO] [stdout]    |   ^^^^^^^^^
+[INFO] [stdout]    |
+[INFO] [stdout]    = note: for more information, see https://github.com/rust-lang/rust/issues/29642
+[INFO] [stdout] 
+[INFO] [stdout] error[E0658]: The attribute `interrupt` is currently unknown to the compiler and may have meaning added to it in the future
+[INFO] [stdout]   --> src\lib.rs:36:3
+[INFO] [stdout]    |
+[INFO] [stdout] 30 | #[interrupt]
+[INFO] [stdout]    |   ^^^^^^^^^
+[INFO] [stdout]    |
+[INFO] [stdout]    = note: for more information, see https://github.com/rust-lang/rust/issues/29642
+[INFO] [stdout] 
+[INFO] [stdout] error[E0658]: The attribute `entry` is currently unknown to the compiler and may have meaning added to it in the future
+[INFO] [stdout]   --> src\lib.rs:20:3
+[INFO] [stdout]    |
+[INFO] [stdout] 14 | #[entry]
+[INFO] [stdout]    |   ^^^^^
+[INFO] [stdout]    |
+[INFO] [stdout]    = note: for more information, see https://github.com/rust-lang/rust/issues/29642
+[INFO] [stdout] 
+[INFO] [stdout] error[E0432]: unresolved import `nrf52832_pac`
+[INFO] [stdout]  --> src\lib.rs:9:5
+[INFO] [stdout]   |
+[INFO] [stdout] 3 | use nrf52832_pac::Interrupt;
+[INFO] [stdout]   |     ^^^^^^^^^^^^ use of undeclared type or module `nrf52832_pac`
+[INFO] [stdout] 
+[INFO] [stdout] error: cannot find macro `shared!` in this scope
+[INFO] [stdout]  --> src\lib.rs:15:1
+[INFO] [stdout]   |
+[INFO] [stdout] 9 | shared!(
+[INFO] [stdout]   | ^^^^^^
+[INFO] [stdout] 
+[INFO] [stdout] error[E0433]: failed to resolve: use of undeclared type or module `RADIO_PKTS`
+[INFO] [stdout]   --> src\lib.rs:25:21
+[INFO] [stdout]    |
+[INFO] [stdout] 19 |     let mut token = RADIO_PKTS::set_initial(27).unwrap();
+[INFO] [stdout]    |                     ^^^^^^^^^^ use of undeclared type or module `RADIO_PKTS`
+[INFO] [stdout] 
+[INFO] [stdout] error[E0433]: failed to resolve: use of undeclared type or module `RADIO_PKTS`
+[INFO] [stdout]   --> src\lib.rs:43:5
+[INFO] [stdout]    |
+[INFO] [stdout] 37 |     RADIO_PKTS::modify_int_context(|x| {
+[INFO] [stdout]    |     ^^^^^^^^^^ use of undeclared type or module `RADIO_PKTS`
+[INFO] [stdout] 
+[INFO] [stdout] error[E0433]: failed to resolve: use of undeclared type or module `BAZ`
+[INFO] [stdout]   --> src\lib.rs:54:5
+[INFO] [stdout]    |
+[INFO] [stdout] 48 |     BAZ::modify_int_context(|x| {
+[INFO] [stdout]    |     ^^^ use of undeclared type or module `BAZ`
+[INFO] [stdout] 
+[INFO] [stdout] error: aborting due to 8 previous errors
+[INFO] [stdout] 
+[INFO] [stdout] Some errors have detailed explanations: E0432, E0433, E0658.
+[INFO] [stdout] For more information about an error, try `rustc --explain E0432`.
+[INFO] [stdout] thread 'src\lib.rs -  (line 8)' panicked at 'couldn't compile the test', src\librustdoc\test.rs:319:13
+[INFO] [stdout] stack backtrace:
+[INFO] [stdout]    0:     0x7ff9768755dd - std::sys_common::alloc::realloc_fallback::hbb887366925a1f73
+[INFO] [stdout]    1:     0x7ff976878cdd - std::panicking::take_hook::h7ac43e0b93a4e391
+[INFO] [stdout]    2:     0x7ff97687895d - std::panicking::take_hook::h7ac43e0b93a4e391
+[INFO] [stdout]    3:     0x7ff97687956f - std::panicking::rust_panic_with_hook::h0abc1b81b226dfd6
+[INFO] [stdout]    4:     0x7ff655eaf494 - <unknown>
+[INFO] [stdout]    5:     0x7ff65609f95a - <unknown>
+[INFO] [stdout]    6:     0x7ff6560947cc - <unknown>
+[INFO] [stdout]    7:     0x7ff975ecf5b6 - test::Metric::new::hb76971f3dc83a8cc
+[INFO] [stdout]    8:     0x7ff975ecf5b6 - test::Metric::new::hb76971f3dc83a8cc
+[INFO] [stdout]    9:     0x7ff97688b621 - _rust_maybe_catch_panic
+[INFO] [stdout]   10:     0x7ff975eef35a - test::run_test::hb99530cb78983cdd
+[INFO] [stdout]   11:     0x7ff975ec13dd - <unknown>
+[INFO] [stdout]   12:     0x7ff975ec70ed - <unknown>
+[INFO] [stdout]   13:     0x7ff97688b621 - _rust_maybe_catch_panic
+[INFO] [stdout]   14:     0x7ff975ec7cef - <unknown>
+[INFO] [stdout]   15:     0x7ff976856fe6 - <std::error::<impl core::convert::From<alloc::string::String> for alloc::boxed::Box<dyn +std::error::Error+core::marker::Sync+core::marker::Send>>::from::StringError as core::fmt::Display>::fmt::hf64a13ae44cc0e27
+[INFO] [stdout]   16:     0x7ff9768890a6 - std::sys::windows::thread::Thread::new::hf33384bc51f3c580
+[INFO] [stdout]   17:     0x7ff99ba17973 - BaseThreadInitThunk
+[INFO] [stdout]   18:     0x7ff9d33ea270 - RtlUserThreadStart
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] failures:
+[INFO] [stdout]     src\lib.rs -  (line 8)
+[INFO] [stdout] 
+[INFO] [stdout] test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr] error: test failed, to rerun pass '--doc'
+[INFO] running `"docker" "inspect" "86dd51f5db86211b2cea233e3d27a306b6c658b38b98b7357f9a154fed2d4ce9"`
+[INFO] running `"docker" "rm" "-f" "86dd51f5db86211b2cea233e3d27a306b6c658b38b98b7357f9a154fed2d4ce9"`
+[INFO] [stdout] 86dd51f5db86211b2cea233e3d27a306b6c658b38b98b7357f9a154fed2d4ce9

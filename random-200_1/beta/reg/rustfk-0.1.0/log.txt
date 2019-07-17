@@ -1,0 +1,67 @@
+[INFO] fetching crate rustfk 0.1.0...
+[INFO] extracting crate rustfk 0.1.0 into work\ex\default\sources\stable\reg\rustfk\0.1.0
+[INFO] extracting crate rustfk 0.1.0 into work\ex\default\sources\beta\reg\rustfk\0.1.0
+[INFO] validating manifest of rustfk-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of rustfk-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing rustfk-0.1.0
+[INFO] finished frobbing rustfk-0.1.0
+[INFO] frobbed toml for rustfk-0.1.0 written to work\ex\default\sources\stable\reg\rustfk\0.1.0\Cargo.toml
+[INFO] started frobbing rustfk-0.1.0
+[INFO] finished frobbing rustfk-0.1.0
+[INFO] frobbed toml for rustfk-0.1.0 written to work\ex\default\sources\beta\reg\rustfk\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing rustfk-0.1.0 against beta for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rustfk\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "build" "--frozen"`
+[INFO] [stdout] 52b6404924bf4941cbef2fc40e0dc22b3889f70fef2a577d91944923cf7baf7d
+[INFO] running `"docker" "start" "-a" "52b6404924bf4941cbef2fc40e0dc22b3889f70fef2a577d91944923cf7baf7d"`
+[INFO] [stderr]    Compiling rustfk v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.79s
+[INFO] running `"docker" "inspect" "52b6404924bf4941cbef2fc40e0dc22b3889f70fef2a577d91944923cf7baf7d"`
+[INFO] running `"docker" "rm" "-f" "52b6404924bf4941cbef2fc40e0dc22b3889f70fef2a577d91944923cf7baf7d"`
+[INFO] [stdout] 52b6404924bf4941cbef2fc40e0dc22b3889f70fef2a577d91944923cf7baf7d
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rustfk\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen" "--no-run"`
+[INFO] [stdout] f5583fd61cca0b78f073b93df19cb0598101bb8aac4cc149543b293aae896064
+[INFO] running `"docker" "start" "-a" "f5583fd61cca0b78f073b93df19cb0598101bb8aac4cc149543b293aae896064"`
+[INFO] [stderr]    Compiling rustfk v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 3.52s
+[INFO] running `"docker" "inspect" "f5583fd61cca0b78f073b93df19cb0598101bb8aac4cc149543b293aae896064"`
+[INFO] running `"docker" "rm" "-f" "f5583fd61cca0b78f073b93df19cb0598101bb8aac4cc149543b293aae896064"`
+[INFO] [stdout] f5583fd61cca0b78f073b93df19cb0598101bb8aac4cc149543b293aae896064
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-3\\beta,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\beta\\reg\\rustfk\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+beta" "test" "--frozen"`
+[INFO] [stdout] ba7a8b62d280f282f84f21561f468f74e53183c5938fe9d8393fbadac245199a
+[INFO] running `"docker" "start" "-a" "ba7a8b62d280f282f84f21561f468f74e53183c5938fe9d8393fbadac245199a"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.23s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rustfk-bd72e177128c1d4d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\rustfk-fee31db009ef6dd8.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\interpreter_test-03db78ddb6f4fa92.exe
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test head ... ok
+[INFO] [stderr]    Doc-tests rustfk
+[INFO] [stdout] test hello_world ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "ba7a8b62d280f282f84f21561f468f74e53183c5938fe9d8393fbadac245199a"`
+[INFO] running `"docker" "rm" "-f" "ba7a8b62d280f282f84f21561f468f74e53183c5938fe9d8393fbadac245199a"`
+[INFO] [stdout] ba7a8b62d280f282f84f21561f468f74e53183c5938fe9d8393fbadac245199a

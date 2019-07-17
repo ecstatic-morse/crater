@@ -1,0 +1,458 @@
+[INFO] fetching crate futures 0.1.28...
+[INFO] extracting crate futures 0.1.28 into work\ex\default\sources\stable\reg\futures\0.1.28
+[INFO] extracting crate futures 0.1.28 into work\ex\default\sources\beta\reg\futures\0.1.28
+[INFO] validating manifest of futures-0.1.28 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of futures-0.1.28 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing futures-0.1.28
+[INFO] finished frobbing futures-0.1.28
+[INFO] frobbed toml for futures-0.1.28 written to work\ex\default\sources\stable\reg\futures\0.1.28\Cargo.toml
+[INFO] started frobbing futures-0.1.28
+[INFO] finished frobbing futures-0.1.28
+[INFO] frobbed toml for futures-0.1.28 written to work\ex\default\sources\beta\reg\futures\0.1.28\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing futures-0.1.28 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] b0b563c21c2379aaa44bfef9ee5c82eaa351fd1ab907bc3715fa2e0d9493ffa5
+[INFO] running `"docker" "start" "-a" "b0b563c21c2379aaa44bfef9ee5c82eaa351fd1ab907bc3715fa2e0d9493ffa5"`
+[INFO] [stderr]    Compiling futures v0.1.28 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 14.22s
+[INFO] running `"docker" "inspect" "b0b563c21c2379aaa44bfef9ee5c82eaa351fd1ab907bc3715fa2e0d9493ffa5"`
+[INFO] running `"docker" "rm" "-f" "b0b563c21c2379aaa44bfef9ee5c82eaa351fd1ab907bc3715fa2e0d9493ffa5"`
+[INFO] [stdout] b0b563c21c2379aaa44bfef9ee5c82eaa351fd1ab907bc3715fa2e0d9493ffa5
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 68ef24fd73189320dde2d93c85438a934e005f9f8d8b8d81bf6f8a3ec64810a7
+[INFO] running `"docker" "start" "-a" "68ef24fd73189320dde2d93c85438a934e005f9f8d8b8d81bf6f8a3ec64810a7"`
+[INFO] [stderr]    Compiling futures v0.1.28 (C:\crater\workdir)
+[INFO] [stderr] warning: unnecessary parentheses around function argument
+[INFO] [stderr]   --> tests\bilock.rs:62:38
+[INFO] [stderr]    |
+[INFO] [stderr] 62 |     let b = stream::iter_ok::<_, ()>((0..N)).fold(b, |b, _n| {
+[INFO] [stderr]    |                                      ^^^^^^ help: remove these parentheses
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: #[warn(unused_parens)] on by default
+[INFO] [stderr] 
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 18s
+[INFO] running `"docker" "inspect" "68ef24fd73189320dde2d93c85438a934e005f9f8d8b8d81bf6f8a3ec64810a7"`
+[INFO] running `"docker" "rm" "-f" "68ef24fd73189320dde2d93c85438a934e005f9f8d8b8d81bf6f8a3ec64810a7"`
+[INFO] [stdout] 68ef24fd73189320dde2d93c85438a934e005f9f8d8b8d81bf6f8a3ec64810a7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\futures\\0.1.28,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] fc98a8966235da48633ffdf45c547b9998adc56b1efedbf4a752c59c100562b3
+[INFO] running `"docker" "start" "-a" "fc98a8966235da48633ffdf45c547b9998adc56b1efedbf4a752c59c100562b3"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.63s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures-73e458ef1ba8b49f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test lock::tests::smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\all-94cadd55deb483a3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test collect_collects ... ok
+[INFO] [stdout] test flatten ... ok
+[INFO] [stdout] test join_incomplete ... ok
+[INFO] [stdout] test option ... ok
+[INFO] [stdout] test result_smoke ... ok
+[INFO] [stdout] test join_cancels ... ok
+[INFO] [stdout] test select_cancels ... ok
+[INFO] [stdout] test spawn_does_unsize ... ok
+[INFO] [stdout] test test_empty ... ok
+[INFO] [stdout] test smoke_oneshot ... ok
+[INFO] [stdout] test test_ok ... ok
+[INFO] [stdout] test select2 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\bilock-7d3d54ca1ab4fe9e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test concurrent ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\buffer_unordered-b7c8576a3df426cc.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test works ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\channel-2ece2c036fa1e957.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test drop_order ... ok
+[INFO] [stdout] test drop_rx ... ok
+[INFO] [stdout] test drop_sender ... ok
+[INFO] [stdout] test sequence ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\eager_drop-c9318b64ae8e1f35.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test and_then_drops_eagerly ... ok
+[INFO] [stdout] test map ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\eventual-4f418d4de1a8b651.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 23 tests
+[INFO] [stdout] test cancel1 ... ok
+[INFO] [stdout] test and_then1 ... ok
+[INFO] [stdout] test and_then2 ... ok
+[INFO] [stdout] test join1 ... ok
+[INFO] [stdout] test join2 ... ok
+[INFO] [stdout] test join3 ... ok
+[INFO] [stdout] test join4 ... ok
+[INFO] [stdout] test join5 ... ok
+[INFO] [stdout] test map_err1 ... ok
+[INFO] [stdout] test map_err2 ... ok
+[INFO] [stdout] test map_err3 ... ok
+[INFO] [stdout] test oneshot1 ... ok
+[INFO] [stdout] test oneshot3 ... ok
+[INFO] [stdout] test oneshot4 ... ok
+[INFO] [stdout] test oneshot2 ... ok
+[INFO] [stdout] test oneshot6 ... ok
+[INFO] [stdout] test oneshot5 ... ok
+[INFO] [stdout] test or_else1 ... ok
+[INFO] [stdout] test or_else2 ... ok
+[INFO] [stdout] test select1 ... ok
+[INFO] [stdout] test select2 ... ok
+[INFO] [stdout] test select3 ... ok
+[INFO] [stdout] test select4 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\fuse-e605fd2d18a4cbb3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test fuse ... ok
+[INFO] [stdout] test fuse_is_done ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\future_flatten_stream-19ccc41e1931fffd.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test successful_future ... ok
+[INFO] [stdout] test failed_future ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures_ordered-65d931573cb2307e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 4 tests
+[INFO] [stdout] test queue_never_unblocked ... ok
+[INFO] [stdout] test works_2 ... ok
+[INFO] [stdout] test works_1 ... ok
+[INFO] [stdout] test from_iterator ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\futures_unordered-1e7c4f2c8d0fbdb9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test from_iterator ... ok
+[INFO] [stdout] test finished_future_ok ... ok
+[INFO] [stdout] test iter_mut_cancel ... ok
+[INFO] [stdout] test iter_mut_len ... ok
+[INFO] [stdout] test works_1 ... ok
+[INFO] [stdout] test works_2 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\inspect-504c49e3044d8ac3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mpsc-f05832ad5d65983b.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 19 tests
+[INFO] [stdout] test recv_close_gets_none ... ok
+[INFO] [stdout] test send_recv ... ok
+[INFO] [stdout] test bounded_is_really_bounded ... ok
+[INFO] [stdout] test send_recv_no_buffer ... ok
+[INFO] [stdout] test send_recv_threads ... ok
+[INFO] [stdout] test send_shared_recv ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test send_recv_threads_no_capacity ... ok
+[INFO] [stdout] test stress_receiver_multi_task_bounded_hard ... ok
+[INFO] [stdout] test stress_poll_ready ... ok
+[INFO] [stdout] test stress_shared_unbounded ... ok
+[INFO] [stdout] test try_send_1 ... ok
+[INFO] [stdout] test try_send_2 ... ok
+[INFO] [stdout] test try_send_fail ... ok
+[INFO] [stdout] test tx_close_gets_none ... ok
+[INFO] [stdout] test stress_shared_bounded_hard ... ok
+[INFO] [stdout] test stress_drop_sender ... ok
+[INFO] [stdout] test stress_close_receiver ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\mpsc_close-94eacc76f9769cf4.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test stress_try_send_as_receiver_closes ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\oneshot-2f759f1e03378a26.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test close ... ok
+[INFO] [stdout] test cancel_notifies ... ok
+[INFO] [stdout] test is_canceled ... ok
+[INFO] [stdout] test close_wakes ... ok
+[INFO] [stdout] test smoke_poll ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test cancel_sends ... ok
+[INFO] [stdout] test spawn_dont_kill_forgot_dead_stream ... ok
+[INFO] [stdout] test cancel_lots ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\ready_queue-bd70ddc1ae2cccb0.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 5 tests
+[INFO] [stdout] test dropping_ready_queue ... ok
+[INFO] [stdout] test basic_usage ... ok
+[INFO] [stdout] test resolving_errors ... ok
+[INFO] [stdout] test panicking_future_dropped ... ok
+[INFO] [stdout] test stress ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\recurse-689a5883e0d55ebc.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test lots ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\select_all-084c3b9325c8695d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\select_ok-a35596cb79c1c610.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test ignore_err ... ok
+[INFO] [stdout] test last_err ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\shared-cef6d34b4bec23c6.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test drop_in_poll ... ok
+[INFO] [stdout] test peek ... ok
+[INFO] [stdout] test one_thread ... ok
+[INFO] [stdout] test polled_then_ignored ... ok
+[INFO] [stdout] test drop_on_one_task_ok ... ok
+[INFO] [stdout] test recursive_poll ... ok
+[INFO] [stdout] test recursive_poll_with_unpark ... ok
+[INFO] [stdout] test two_threads ... ok
+[INFO] [stdout] test many_threads ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\sink-37e30ef5e6faa1c2.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 14 tests
+[INFO] [stdout] test buffer ... ok
+[INFO] [stdout] test buffer_noop ... ok
+[INFO] [stdout] test fanout_backpressure ... ok
+[INFO] [stdout] test fanout_smoke ... ok
+[INFO] [stdout] test from_err ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] test mpsc_blocking_start_send ... ok
+[INFO] [stdout] test send ... ok
+[INFO] [stdout] test send_all ... ok
+[INFO] [stdout] test vec_sink ... ok
+[INFO] [stdout] test with_as_map ... ok
+[INFO] [stdout] test with_flat_map ... ok
+[INFO] [stdout] test with_flush ... ok
+[INFO] [stdout] test with_flush_propagate ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\split-f8be9d8763bdb0d7.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_split ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\stream-05a2085076f5bdb3.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 32 tests
+[INFO] [stdout] test and_then ... ok
+[INFO] [stdout] test buffered ... ok
+[INFO] [stdout] test concat ... ok
+[INFO] [stdout] test concat2 ... ok
+[INFO] [stdout] test chunks ... ok
+[INFO] [stdout] test filter ... ok
+[INFO] [stdout] test filter_map ... ok
+[INFO] [stdout] test forward ... ok
+[INFO] [stdout] test fold ... ok
+[INFO] [stdout] test from_err ... ok
+[INFO] [stdout] test flatten ... ok
+[INFO] [stdout] test fuse ... ok
+[INFO] [stdout] test inspect ... ok
+[INFO] [stdout] test inspect_err ... ok
+[INFO] [stdout] test map ... ok
+[INFO] [stdout] test map_err ... ok
+[INFO] [stdout] test or_else ... ok
+[INFO] [stdout] test peek ... ok
+[INFO] [stdout] test select ... ok
+[INFO] [stdout] test peekable ... ok
+[INFO] [stdout] test skip_passes_errors_through ... ok
+[INFO] [stdout] test skip ... ok
+[INFO] [stdout] test stream_poll_fn ... ok
+[INFO] [stdout] test skip_while ... ok
+[INFO] [stdout] test take_passes_errors_through ... ok
+[INFO] [stdout] test take ... ok
+[INFO] [stdout] test take_while ... ok
+[INFO] [stdout] test then ... ok
+[INFO] [stdout] test wait ... ok
+[INFO] [stdout] test unordered ... ok
+[INFO] [stdout] test zip ... ok
+[INFO] [stdout] test chunks_panic_on_cap_zero ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\stream_catch_unwind-e369d1f41edc3b9e.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test no_panic ... ok
+[INFO] [stdout] test panic_in_the_middle_of_the_stream ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unfold-39bc930f2d592289.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 2 tests
+[INFO] [stdout] test unfold_err1 ... ok
+[INFO] [stdout] test unfold1 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unsync-170d81a96ba2d18f.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 13 tests
+[INFO] [stdout] test dropped_sender_of_unused_channel_notifies_receiver ... ok
+[INFO] [stdout] test mpsc_backpressure ... ok
+[INFO] [stdout] test mpsc_recv_unpark ... ok
+[INFO] [stdout] test mpsc_rx_end ... ok
+[INFO] [stdout] test mpsc_rx_notready ... ok
+[INFO] [stdout] test mpsc_send_recv ... ok
+[INFO] [stdout] test mpsc_send_unpark ... ok
+[INFO] [stdout] test mpsc_tx_clone_weak_rc ... ok
+[INFO] [stdout] test mpsc_tx_err ... ok
+[INFO] [stdout] test mpsc_tx_notready ... ok
+[INFO] [stdout] test mpsc_unbounded ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unsync_oneshot-522fca71b6ed806d.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 9 tests
+[INFO] [stdout] test canceled ... ok
+[INFO] [stdout] test is_canceled ... ok
+[INFO] [stdout] test poll_cancel ... ok
+[INFO] [stdout] test smoke ... ok
+[INFO] [stdout] test spawn_kill_dead_stream ... ok
+[INFO] [stdout] test spawn_sends_items ... ok
+[INFO] [stdout] test tx_complete_rx_unparked ... ok
+[INFO] [stdout] test tx_dropped_rx_unparked ... ok
+[INFO] [stdout] test spawn_dont_kill_forgot_dead_stream ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests futures
+[INFO] [stdout] 
+[INFO] [stdout] running 58 tests
+[INFO] [stdout] test src\future\loop_fn.rs - future::loop_fn::loop_fn (line 39) ... ok
+[INFO] [stdout] test src\future\lazy.rs - future::lazy::lazy (line 34) ... ok
+[INFO] [stdout] test src\future\join_all.rs - future::join_all::join_all (line 54) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::and_then (line 511) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::boxed (line 316) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten (line 811) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten (line 799) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::catch_unwind (line 947) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::flatten_stream (line 843) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::from_err (line 433) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::fuse (line 884) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::inspect (line 914) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::into_stream (line 763) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::join (line 691) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::join (line 705) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map (line 351) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map (line 362) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map_err (line 393) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select (line 586) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::map_err (line 403) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::or_else (line 552) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select (line 609) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::select2 (line 649) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::shared (line 984) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::shared (line 995) ... ok
+[INFO] [stdout] test src\future\poll_fn.rs - future::poll_fn::poll_fn (line 20) ... ok
+[INFO] [stdout] test src\future\mod.rs - future::Future::then (line 467) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::err (line 59) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::result (line 25) ... ok
+[INFO] [stdout] test src\future\result.rs - future::result_::ok (line 43) ... ok
+[INFO] [stdout] test src\future\shared.rs - future::shared (line 6) ... ok
+[INFO] [stdout] test src\lib.rs -  (line 35) ... ok
+[INFO] [stdout] test src\lib.rs - prelude (line 253) ... ok
+[INFO] [stdout] test src\sink\mod.rs - sink::Sink::with_flat_map (line 339) ... ok
+[INFO] [stdout] test src\stream\iter.rs - stream::iter::iter (line 20) ... ok
+[INFO] [stdout] test src\stream\iter_result.rs - stream::iter_result::iter_result (line 19) ... ok
+[INFO] [stdout] test src\stream\iter_ok.rs - stream::iter_ok::iter_ok (line 22) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::and_then (line 480) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::boxed (line 263) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::by_ref (line 843) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::catch_unwind (line 883) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::collect (line 544) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::chain (line 976) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::concat (line 614) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::concat2 (line 581) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::filter (line 365) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::filter_map (line 395) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::fold (line 659) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::flatten (line 684) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::map (line 309) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::map_err (line 335) ... ok
+[INFO] [stdout] test src\stream\once.rs - stream::once::once (line 13) ... ok
+[INFO] [stdout] test src\stream\mod.rs - stream::Stream::then (line 434) ... ok
+[INFO] [stdout] test src\stream\poll_fn.rs - stream::poll_fn::poll_fn (line 20) ... ok
+[INFO] [stdout] test src\task_impl\mod.rs - task_impl::UnsafeNotify::drop_raw (line 589) ... ignored
+[INFO] [stdout] test src\stream\repeat.rs - stream::repeat::repeat (line 27) ... ok
+[INFO] [stdout] test src\stream\unfold.rs - stream::unfold::unfold (line 31) ... ok
+[INFO] [stdout] test src\sync\oneshot.rs - sync::oneshot::channel (line 82) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 57 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "fc98a8966235da48633ffdf45c547b9998adc56b1efedbf4a752c59c100562b3"`
+[INFO] running `"docker" "rm" "-f" "fc98a8966235da48633ffdf45c547b9998adc56b1efedbf4a752c59c100562b3"`
+[INFO] [stdout] fc98a8966235da48633ffdf45c547b9998adc56b1efedbf4a752c59c100562b3

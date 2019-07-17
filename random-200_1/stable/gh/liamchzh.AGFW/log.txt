@@ -1,0 +1,92 @@
+[INFO] cloning repository liamchzh/AGFW
+[INFO] running `"git" "clone" "--bare" "git://github.com/liamchzh/AGFW.git" "work\\cache\\sources\\gh\\liamchzh\\AGFW"`
+[INFO] [stderr] Cloning into bare repository 'work\cache\sources\gh\liamchzh\AGFW'...
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\liamchzh\\AGFW" "work\\ex\\default\\sources\\stable\\gh\\liamchzh\\AGFW"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\stable\gh\liamchzh\AGFW'...
+[INFO] [stderr] done.
+[INFO] running `"git" "clone" "work\\cache\\sources\\gh\\liamchzh\\AGFW" "work\\ex\\default\\sources\\beta\\gh\\liamchzh\\AGFW"`
+[INFO] [stderr] Cloning into 'work\ex\default\sources\beta\gh\liamchzh\AGFW'...
+[INFO] [stderr] done.
+[INFO] running `"git" "rev-parse" "HEAD"`
+[INFO] [stdout] 80b474aaf17c32bd6af93e27f0fdd3aade8d8df2
+[INFO] sha for GitHub repo liamchzh/AGFW: 80b474aaf17c32bd6af93e27f0fdd3aade8d8df2
+[INFO] validating manifest of liamchzh/AGFW on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of liamchzh/AGFW on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing liamchzh/AGFW
+[INFO] finished frobbing liamchzh/AGFW
+[INFO] frobbed toml for liamchzh/AGFW written to work\ex\default\sources\stable\gh\liamchzh\AGFW\Cargo.toml
+[INFO] started frobbing liamchzh/AGFW
+[INFO] finished frobbing liamchzh/AGFW
+[INFO] frobbed toml for liamchzh/AGFW written to work\ex\default\sources\beta\gh\liamchzh\AGFW\Cargo.toml
+[INFO] crate liamchzh/AGFW already has a lockfile, it will not be regenerated
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing liamchzh/AGFW against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\gh\\liamchzh\\AGFW,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] f2fdd479a845e911eef03cce6eb47052801bb7a665e3ea03db2fed5af1c5931c
+[INFO] running `"docker" "start" "-a" "f2fdd479a845e911eef03cce6eb47052801bb7a665e3ea03db2fed5af1c5931c"`
+[INFO] [stderr]    Compiling AGFW v0.0.1 (C:\crater\workdir)
+[INFO] [stderr] error[E0432]: unresolved import `std::old_io`
+[INFO] [stderr]  --> src\client.rs:1:10
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use std::old_io::TcpStream;
+[INFO] [stderr]   |          ^^^^^^ could not find `old_io` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::old_io`
+[INFO] [stderr]  --> src\server.rs:1:10
+[INFO] [stderr]   |
+[INFO] [stderr] 1 | use std::old_io::{TcpListener, TcpStream};
+[INFO] [stderr]   |          ^^^^^^ could not find `old_io` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0432]: unresolved import `std::old_io`
+[INFO] [stderr]  --> src\server.rs:2:10
+[INFO] [stderr]   |
+[INFO] [stderr] 2 | use std::old_io::{Acceptor, Listener};
+[INFO] [stderr]   |          ^^^^^^ could not find `old_io` in `std`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\client.rs:12:8
+[INFO] [stderr]    |
+[INFO] [stderr] 12 |                 None => { println!("response error!") },
+[INFO] [stderr]    |                 ^^^^ expected enum `std::result::Result`, found enum `std::option::Option`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `std::result::Result<&str, std::str::Utf8Error>`
+[INFO] [stderr]               found type `std::option::Option<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\client.rs:13:8
+[INFO] [stderr]    |
+[INFO] [stderr] 11 |             match str::from_utf8(buf.as_slice()) {
+[INFO] [stderr]    |                   ------------------------------ this match expression has type `std::result::Result<&str, std::str::Utf8Error>`
+[INFO] [stderr] 12 |                 None => { println!("response error!") },
+[INFO] [stderr] 13 |                 Some(s) => { println!("response get! {}", s) }
+[INFO] [stderr]    |                 ^^^^^^^ expected enum `std::result::Result`, found enum `std::option::Option`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `std::result::Result<&str, std::str::Utf8Error>`
+[INFO] [stderr]               found type `std::option::Option<_>`
+[INFO] [stderr] 
+[INFO] [stderr] error[E0308]: mismatched types
+[INFO] [stderr]   --> src\server.rs:14:17
+[INFO] [stderr]    |
+[INFO] [stderr] 14 | /                 thread::spawn(move|| {
+[INFO] [stderr] 15 | |                     handler_client(stream)
+[INFO] [stderr] 16 | |                 })
+[INFO] [stderr]    | |                  ^- help: try adding a semicolon: `;`
+[INFO] [stderr]    | |__________________|
+[INFO] [stderr]    |                    expected (), found struct `std::thread::JoinHandle`
+[INFO] [stderr]    |
+[INFO] [stderr]    = note: expected type `()`
+[INFO] [stderr]               found type `std::thread::JoinHandle<()>`
+[INFO] [stderr] 
+[INFO] [stderr] error: aborting due to 6 previous errors
+[INFO] [stderr] 
+[INFO] [stderr] Some errors have detailed explanations: E0308, E0432.
+[INFO] [stderr] For more information about an error, try `rustc --explain E0308`.
+[INFO] [stderr] error: Could not compile `AGFW`.
+[INFO] [stderr] 
+[INFO] [stderr] To learn more, run the command again with --verbose.
+[INFO] running `"docker" "inspect" "f2fdd479a845e911eef03cce6eb47052801bb7a665e3ea03db2fed5af1c5931c"`
+[INFO] running `"docker" "rm" "-f" "f2fdd479a845e911eef03cce6eb47052801bb7a665e3ea03db2fed5af1c5931c"`
+[INFO] [stdout] f2fdd479a845e911eef03cce6eb47052801bb7a665e3ea03db2fed5af1c5931c

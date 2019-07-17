@@ -1,0 +1,208 @@
+[INFO] crate libsodium-sys 0.2.2 is already in cache
+[INFO] extracting crate libsodium-sys 0.2.2 into work\ex\default\sources\stable\reg\libsodium-sys\0.2.2
+[INFO] extracting crate libsodium-sys 0.2.2 into work\ex\default\sources\beta\reg\libsodium-sys\0.2.2
+[INFO] validating manifest of libsodium-sys-0.2.2 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of libsodium-sys-0.2.2 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing libsodium-sys-0.2.2
+[INFO] finished frobbing libsodium-sys-0.2.2
+[INFO] frobbed toml for libsodium-sys-0.2.2 written to work\ex\default\sources\stable\reg\libsodium-sys\0.2.2\Cargo.toml
+[INFO] started frobbing libsodium-sys-0.2.2
+[INFO] finished frobbing libsodium-sys-0.2.2
+[INFO] frobbed toml for libsodium-sys-0.2.2 written to work\ex\default\sources\beta\reg\libsodium-sys\0.2.2\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing libsodium-sys-0.2.2 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libsodium-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] 0b8e501fbc2970be12c2c7605b1dc0c2f070df71f8f4c5850d5510db7e478c44
+[INFO] running `"docker" "start" "-a" "0b8e501fbc2970be12c2c7605b1dc0c2f070df71f8f4c5850d5510db7e478c44"`
+[INFO] [stderr]    Compiling libc v0.2.60
+[INFO] [stderr]    Compiling libsodium-sys v0.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 8.46s
+[INFO] running `"docker" "inspect" "0b8e501fbc2970be12c2c7605b1dc0c2f070df71f8f4c5850d5510db7e478c44"`
+[INFO] running `"docker" "rm" "-f" "0b8e501fbc2970be12c2c7605b1dc0c2f070df71f8f4c5850d5510db7e478c44"`
+[INFO] [stdout] 0b8e501fbc2970be12c2c7605b1dc0c2f070df71f8f4c5850d5510db7e478c44
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libsodium-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 2e5d91091e758d3c370b3d63b812d33e001adb277f003d54e2d1b84237803710
+[INFO] running `"docker" "start" "-a" "2e5d91091e758d3c370b3d63b812d33e001adb277f003d54e2d1b84237803710"`
+[INFO] [stderr]    Compiling libsodium-sys v0.2.2 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 4.16s
+[INFO] running `"docker" "inspect" "2e5d91091e758d3c370b3d63b812d33e001adb277f003d54e2d1b84237803710"`
+[INFO] running `"docker" "rm" "-f" "2e5d91091e758d3c370b3d63b812d33e001adb277f003d54e2d1b84237803710"`
+[INFO] [stdout] 2e5d91091e758d3c370b3d63b812d33e001adb277f003d54e2d1b84237803710
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\libsodium-sys\\0.2.2,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 574622ecf07e05ff9f8312e155e5da15a6c7b2265f53cdd07db35961d5a2acf0
+[INFO] running `"docker" "start" "-a" "574622ecf07e05ff9f8312e155e5da15a6c7b2265f53cdd07db35961d5a2acf0"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.32s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\libsodium_sys-ff44a70761683fa5.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 10 tests
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_aead_aes256gcm_state_ ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_auth_hmacsha256_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_auth_hmacsha512_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_generichash_blake2b_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_hash_sha256_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_hash_sha512_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_onetimeauth_poly1305_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_secretstream_xchacha20poly1305_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_crypto_sign_ed25519ph_state ... ok
+[INFO] [stdout] test sodium_bindings::bindgen_test_layout_randombytes_implementation ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\test-cc4cb29028280188.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 137 tests
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_abytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_ietf_abytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_ietf_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_ietf_npubbytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_ietf_nsecbytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_npubbytes ... ok
+[INFO] [stdout] test crypto::crypto_aead_chacha20poly1305::test_crypto_aead_chacha20poly1305_nsecbytes ... ok
+[INFO] [stdout] test crypto::crypto_auth::test_crypto_auth_bytes ... ok
+[INFO] [stdout] test crypto::crypto_auth::test_crypto_auth_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_auth::test_crypto_auth_primitive ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha256::test_crypto_auth_hmacsha256_bytes ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha256::test_crypto_auth_hmacsha256_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha512256::test_crypto_auth_hmacsha512256_bytes ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha512256::test_crypto_auth_hmacsha512256_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha512::test_crypto_auth_hmacsha512_bytes ... ok
+[INFO] [stdout] test crypto::crypto_auth_hmacsha512::test_crypto_auth_hmacsha512_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_beforenmbytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_boxzerobytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_macbytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_primitive ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_publickeybytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_sealbytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_secretkeybytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_seedbytes ... ok
+[INFO] [stdout] test crypto::crypto_box::test_crypto_box_zerobytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_beforenmbytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_boxzerobytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_macbytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_publickeybytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_secretkeybytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_seedbytes ... ok
+[INFO] [stdout] test crypto::crypto_box_curve25519xsalsa20poly1305::test_crypto_box_curve25519xsalsa20poly1305_zerobytes ... ok
+[INFO] [stdout] test crypto::crypto_core_hsalsa20::test_crypto_core_hsalsa20_constbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_hsalsa20::test_crypto_core_hsalsa20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_core_hsalsa20::test_crypto_core_hsalsa20_inputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_hsalsa20::test_crypto_core_hsalsa20_outputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa2012::test_crypto_core_salsa2012_constbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa2012::test_crypto_core_salsa2012_outputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa208::test_crypto_core_salsa208_constbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa2012::test_crypto_core_salsa2012_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa2012::test_crypto_core_salsa2012_inputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa208::test_crypto_core_salsa208_inputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa208::test_crypto_core_salsa208_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa208::test_crypto_core_salsa208_outputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa20::test_crypto_core_salsa20_constbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa20::test_crypto_core_salsa20_inputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa20::test_crypto_core_salsa20_outputbytes ... ok
+[INFO] [stdout] test crypto::crypto_core_salsa20::test_crypto_core_salsa20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_bytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_bytes_max ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_bytes_min ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_keybytes_max ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_keybytes_min ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_multipart ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_primitive ... ok
+[INFO] [stdout] test crypto::crypto_generichash::test_crypto_generichash_statebytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_bytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_bytes_max ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_bytes_min ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_keybytes_max ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_keybytes_min ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_personalbytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_salt_personal ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_saltbytes ... ok
+[INFO] [stdout] test crypto::crypto_generichash_blake2b::test_crypto_generichash_blake2b_state_alignment ... ok
+[INFO] [stdout] test crypto::crypto_hash::test_crypto_hash_bytes ... ok
+[INFO] [stdout] test crypto::crypto_hash::test_crypto_hash_primitive ... ok
+[INFO] [stdout] test crypto::crypto_hash_sha256::test_crypto_hash_sha256_bytes ... ok
+[INFO] [stdout] test crypto::crypto_hash_sha512::test_crypto_hash_sha512_bytes ... ok
+[INFO] [stdout] test crypto::crypto_kx::test_crypto_kx_publickeybytes ... ok
+[INFO] [stdout] test crypto::crypto_kx::test_crypto_kx_primitive ... ok
+[INFO] [stdout] test crypto::crypto_kx::test_crypto_kx_secretkeybytes ... ok
+[INFO] [stdout] test crypto::crypto_kx::test_crypto_kx_seedbytes ... ok
+[INFO] [stdout] test crypto::crypto_kx::test_crypto_kx_sessionkeybytes ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth::test_crypto_onetimeauth_bytes ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth::test_crypto_onetimeauth_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth::test_crypto_onetimeauth_primitive ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth_poly1305::test_crypto_onetimeauth_poly1305_bytes ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth_poly1305::test_crypto_onetimeauth_poly1305_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_ll_1 ... ok
+[INFO] [stdout] test crypto::crypto_onetimeauth_poly1305::test_crypto_onetimeauth_poly1305_state_alignment ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_memlimit_interactive ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_opslimit_interactive ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_saltbytes ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_ll_2 ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_ll_3 ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_strbytes ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_strprefix ... ok
+[INFO] [stdout] test crypto::crypto_scalarmult::test_crypto_scalarmult_bytes ... ok
+[INFO] [stdout] test crypto::crypto_scalarmult::test_crypto_scalarmult_primitive ... ok
+[INFO] [stdout] test crypto::crypto_scalarmult::test_crypto_scalarmult_scalarbytes ... ok
+[INFO] [stdout] test crypto::crypto_scalarmult_curve25519::test_crypto_scalarmult_curve25519_bytes ... ok
+[INFO] [stdout] test crypto::crypto_scalarmult_curve25519::test_crypto_scalarmult_curve25519_scalarbytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox::test_crypto_secretbox_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox::test_crypto_secretbox_macbytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox::test_crypto_secretbox_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox::test_crypto_secretbox_primitive ... ok
+[INFO] [stdout] test crypto::crypto_secretbox_xsalsa20poly1305::test_crypto_secretbox_xsalsa20poly1305_boxzerobytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox_xsalsa20poly1305::test_crypto_secretbox_xsalsa20poly1305_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox_xsalsa20poly1305::test_crypto_secretbox_xsalsa20poly1305_macbytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox_xsalsa20poly1305::test_crypto_secretbox_xsalsa20poly1305_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_secretbox_xsalsa20poly1305::test_crypto_secretbox_xsalsa20poly1305_zerobytes ... ok
+[INFO] [stdout] test crypto::crypto_shorthash_siphash24::test_crypto_shorthash_siphash24_bytes ... ok
+[INFO] [stdout] test crypto::crypto_shorthash_siphash24::test_crypto_shorthash_siphash24_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_sign_ed25519::test_crypto_sign_ed25519_bytes ... ok
+[INFO] [stdout] test crypto::crypto_sign_ed25519::test_crypto_sign_ed25519_publickeybytes ... ok
+[INFO] [stdout] test crypto::crypto_sign_ed25519::test_crypto_sign_ed25519_secretkeybytes ... ok
+[INFO] [stdout] test crypto::crypto_sign_ed25519::test_crypto_sign_ed25519_seedbytes ... ok
+[INFO] [stdout] test crypto::crypto_stream::test_crypto_stream_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream::test_crypto_stream_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream::test_crypto_stream_primitive ... ok
+[INFO] [stdout] test crypto::crypto_stream_chacha20::test_crypto_stream_chacha20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_chacha20::test_crypto_stream_chacha20_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa2012::test_crypto_stream_salsa2012_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa2012::test_crypto_stream_salsa2012_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa208::test_crypto_stream_salsa208_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa208::test_crypto_stream_salsa208_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa20::test_crypto_stream_salsa20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_salsa20::test_crypto_stream_salsa20_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_xchacha20::test_crypto_stream_xchacha20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_xchacha20::test_crypto_stream_xchacha20_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_xsalsa20::test_crypto_stream_xsalsa20_keybytes ... ok
+[INFO] [stdout] test crypto::crypto_stream_xsalsa20::test_crypto_stream_xsalsa20_noncebytes ... ok
+[INFO] [stdout] test crypto::crypto_verify_16::test_crypto_verify_16_bytes ... ok
+[INFO] [stdout] test crypto::crypto_verify_32::test_crypto_verify_32_bytes ... ok
+[INFO] [stdout] test crypto::crypto_verify_64::test_crypto_verify_64_bytes ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_str ... ok
+[INFO] [stdout] test crypto::crypto_pwhash_scryptsalsa208sha256::test_crypto_pwhash_scryptsalsa208sha256_ll_4 ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 137 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests libsodium_sys
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "574622ecf07e05ff9f8312e155e5da15a6c7b2265f53cdd07db35961d5a2acf0"`
+[INFO] running `"docker" "rm" "-f" "574622ecf07e05ff9f8312e155e5da15a6c7b2265f53cdd07db35961d5a2acf0"`
+[INFO] [stdout] 574622ecf07e05ff9f8312e155e5da15a6c7b2265f53cdd07db35961d5a2acf0

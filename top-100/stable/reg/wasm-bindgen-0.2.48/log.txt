@@ -1,0 +1,114 @@
+[INFO] fetching crate wasm-bindgen 0.2.48...
+[INFO] extracting crate wasm-bindgen 0.2.48 into work\ex\default\sources\stable\reg\wasm-bindgen\0.2.48
+[INFO] extracting crate wasm-bindgen 0.2.48 into work\ex\default\sources\beta\reg\wasm-bindgen\0.2.48
+[INFO] validating manifest of wasm-bindgen-0.2.48 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of wasm-bindgen-0.2.48 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing wasm-bindgen-0.2.48
+[INFO] finished frobbing wasm-bindgen-0.2.48
+[INFO] frobbed toml for wasm-bindgen-0.2.48 written to work\ex\default\sources\stable\reg\wasm-bindgen\0.2.48\Cargo.toml
+[INFO] started frobbing wasm-bindgen-0.2.48
+[INFO] finished frobbing wasm-bindgen-0.2.48
+[INFO] frobbed toml for wasm-bindgen-0.2.48 written to work\ex\default\sources\beta\reg\wasm-bindgen\0.2.48\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache lock
+[INFO] [stderr]  Downloading crates ...
+[INFO] [stderr]   Downloaded wasm-bindgen-macro v0.2.48
+[INFO] [stderr]   Downloaded wasm-bindgen-backend v0.2.48
+[INFO] [stderr]   Downloaded wasm-bindgen-macro-support v0.2.48
+[INFO] [stderr]   Downloaded bumpalo v2.5.0
+[INFO] [stderr]   Downloaded wasm-bindgen-shared v0.2.48
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing wasm-bindgen-0.2.48 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\wasm-bindgen\\0.2.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] cdb34ef9a6a51f0a8a631c25cb5a634c5917bb90c1cd6c1008cc0a4e562cd924
+[INFO] running `"docker" "start" "-a" "cdb34ef9a6a51f0a8a631c25cb5a634c5917bb90c1cd6c1008cc0a4e562cd924"`
+[INFO] [stderr]    Compiling proc-macro2 v0.4.30
+[INFO] [stderr]    Compiling unicode-xid v0.1.0
+[INFO] [stderr]    Compiling syn v0.15.39
+[INFO] [stderr]    Compiling wasm-bindgen-shared v0.2.48
+[INFO] [stderr]    Compiling log v0.4.7
+[INFO] [stderr]    Compiling cfg-if v0.1.9
+[INFO] [stderr]    Compiling bumpalo v2.5.0
+[INFO] [stderr]    Compiling lazy_static v1.3.0
+[INFO] [stderr]    Compiling wasm-bindgen v0.2.48 (C:\crater\workdir)
+[INFO] [stderr]    Compiling quote v0.6.13
+[INFO] [stderr]    Compiling wasm-bindgen-backend v0.2.48
+[INFO] [stderr]    Compiling wasm-bindgen-macro-support v0.2.48
+[INFO] [stderr]    Compiling wasm-bindgen-macro v0.2.48
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1m 31s
+[INFO] running `"docker" "inspect" "cdb34ef9a6a51f0a8a631c25cb5a634c5917bb90c1cd6c1008cc0a4e562cd924"`
+[INFO] running `"docker" "rm" "-f" "cdb34ef9a6a51f0a8a631c25cb5a634c5917bb90c1cd6c1008cc0a4e562cd924"`
+[INFO] [stdout] cdb34ef9a6a51f0a8a631c25cb5a634c5917bb90c1cd6c1008cc0a4e562cd924
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\wasm-bindgen\\0.2.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 386abb2d0b87e184f621440ae668651859195eb04ac4221791099b3bd5b68f85
+[INFO] running `"docker" "start" "-a" "386abb2d0b87e184f621440ae668651859195eb04ac4221791099b3bd5b68f85"`
+[INFO] [stderr]    Compiling wasm-bindgen v0.2.48 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 7.50s
+[INFO] running `"docker" "inspect" "386abb2d0b87e184f621440ae668651859195eb04ac4221791099b3bd5b68f85"`
+[INFO] running `"docker" "rm" "-f" "386abb2d0b87e184f621440ae668651859195eb04ac4221791099b3bd5b68f85"`
+[INFO] [stdout] 386abb2d0b87e184f621440ae668651859195eb04ac4221791099b3bd5b68f85
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-1\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\wasm-bindgen\\0.2.48,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "USER_ID=0" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "MAP_USER_ID=0" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=forbid" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] b0a5e04aa595c001a76883415f6ace181883c8039b042379b4f493847ce2f272
+[INFO] running `"docker" "start" "-a" "b0a5e04aa595c001a76883415f6ace181883c8039b042379b4f493847ce2f272"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\headless-de952f5d8fb69c66.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\non_wasm-f8f716deaf294dd9.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 1 test
+[INFO] [stdout] test test_foo ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\std_crate_no_std_dep-505330857b701a38.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\unwrap_throw-8f1df0a4d2c9c332.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test unwrap_throw_ok ... ok
+[INFO] [stdout] test unwrap_throw_err ... ok
+[INFO] [stdout] test unwrap_throw_none ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]      Running C:\crater\target\debug\deps\wasm-6448763a1b5ec392.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests wasm-bindgen
+[INFO] [stdout] 
+[INFO] [stdout] running 12 tests
+[INFO] [stdout] test src\closure.rs - closure::Closure (line 98) ... ignored
+[INFO] [stdout] test src\closure.rs - closure::Closure<FnOnce() -> ()>::once (line 391) ... ok
+[INFO] [stdout] test src\closure.rs - closure::Closure<FnOnce() -> ()>::once_into_js (line 427) ... ignored
+[INFO] [stdout] test src\lib.rs - JsStatic (line 577) ... ignored
+[INFO] [stdout] test src\lib.rs - JsStatic (line 586) ... ignored
+[INFO] [stdout] test src\closure.rs - closure::Closure (line 142) ... ok
+[INFO] [stdout] test src\closure.rs - closure::Closure (line 46) ... ok
+[INFO] [stdout] test src\lib.rs - anyref_heap_live_count (line 687) ... ignored
+[INFO] [stdout] test src\lib.rs - anyref_heap_live_count (line 698) ... ignored
+[INFO] [stdout] test src\closure.rs - closure::Closure (line 202) ... ok
+[INFO] [stdout] test src\lib.rs - prelude (line 45) ... ok
+[INFO] [stdout] test src\lib.rs - UnwrapThrowExt (line 719) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 6 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "b0a5e04aa595c001a76883415f6ace181883c8039b042379b4f493847ce2f272"`
+[INFO] running `"docker" "rm" "-f" "b0a5e04aa595c001a76883415f6ace181883c8039b042379b4f493847ce2f272"`
+[INFO] [stdout] b0a5e04aa595c001a76883415f6ace181883c8039b042379b4f493847ce2f272

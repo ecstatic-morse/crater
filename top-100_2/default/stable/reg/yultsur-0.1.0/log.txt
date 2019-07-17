@@ -1,0 +1,84 @@
+[INFO] fetching crate yultsur 0.1.0...
+[INFO] extracting crate yultsur 0.1.0 into work\ex\default\sources\stable\reg\yultsur\0.1.0
+[INFO] extracting crate yultsur 0.1.0 into work\ex\default\sources\beta\reg\yultsur\0.1.0
+[INFO] validating manifest of yultsur-0.1.0 on toolchain stable
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of yultsur-0.1.0 on toolchain beta
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing yultsur-0.1.0
+[INFO] finished frobbing yultsur-0.1.0
+[INFO] frobbed toml for yultsur-0.1.0 written to work\ex\default\sources\stable\reg\yultsur\0.1.0\Cargo.toml
+[INFO] started frobbing yultsur-0.1.0
+[INFO] finished frobbing yultsur-0.1.0
+[INFO] frobbed toml for yultsur-0.1.0 written to work\ex\default\sources\beta\reg\yultsur\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+stable" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+beta" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing yultsur-0.1.0 against stable for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\yultsur\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "build" "--frozen"`
+[INFO] [stdout] acae8080548674136ef4bb00fb6402907d93567242986eeec719df48fda930e8
+[INFO] running `"docker" "start" "-a" "acae8080548674136ef4bb00fb6402907d93567242986eeec719df48fda930e8"`
+[INFO] [stderr]    Compiling yultsur v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.59s
+[INFO] running `"docker" "inspect" "acae8080548674136ef4bb00fb6402907d93567242986eeec719df48fda930e8"`
+[INFO] running `"docker" "rm" "-f" "acae8080548674136ef4bb00fb6402907d93567242986eeec719df48fda930e8"`
+[INFO] [stdout] acae8080548674136ef4bb00fb6402907d93567242986eeec719df48fda930e8
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\yultsur\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen" "--no-run"`
+[INFO] [stdout] 97fc5f6db63119262a9d41493da03abe7391b8194e6dc040c8ff030c3ad060d7
+[INFO] running `"docker" "start" "-a" "97fc5f6db63119262a9d41493da03abe7391b8194e6dc040c8ff030c3ad060d7"`
+[INFO] [stderr]    Compiling yultsur v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 5.33s
+[INFO] running `"docker" "inspect" "97fc5f6db63119262a9d41493da03abe7391b8194e6dc040c8ff030c3ad060d7"`
+[INFO] running `"docker" "rm" "-f" "97fc5f6db63119262a9d41493da03abe7391b8194e6dc040c8ff030c3ad060d7"`
+[INFO] [stdout] 97fc5f6db63119262a9d41493da03abe7391b8194e6dc040c8ff030c3ad060d7
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\stable,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\stable\\reg\\yultsur\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+stable" "test" "--frozen"`
+[INFO] [stdout] 79bb4d395a66994079d00577c9d24b14d8890437d261a5b835693643a5ed3e92
+[INFO] running `"docker" "start" "-a" "79bb4d395a66994079d00577c9d24b14d8890437d261a5b835693643a5ed3e92"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.34s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\yultsur-95ac00ccd1df6a80.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 31 tests
+[INFO] [stdout] test validator::tests::basic_type ... ok
+[INFO] [stdout] test validator::tests::case_invalid_default ... ok
+[INFO] [stdout] test validator::tests::complex_example ... ok
+[INFO] [stdout] test validator::tests::custom_type ... ok
+[INFO] [stdout] test validator::tests::invalid_custom_type ... ok
+[INFO] [stdout] test validator::tests::typed_literal ... ok
+[INFO] [stdout] test validator::tests::untyped_literal ... ok
+[INFO] [stdout] test yul::tests::assignment_multi ... ok
+[INFO] [stdout] test yul::tests::assignment_single ... ok
+[INFO] [stdout] test yul::tests::block_empty ... ok
+[INFO] [stdout] test yul::tests::block_literal ... ok
+[INFO] [stdout] test yul::tests::block_nested ... ok
+[INFO] [stdout] test yul::tests::case ... ok
+[INFO] [stdout] test yul::tests::case_default ... ok
+[INFO] [stdout] test yul::tests::forloop ... ok
+[INFO] [stdout] test yul::tests::functioncall ... ok
+[INFO] [stdout] test yul::tests::functiondefinition_basic ... ok
+[INFO] [stdout] test yul::tests::functiondefinition_multi ... ok
+[INFO] [stdout] test yul::tests::functiondefinition_single_arg ... ok
+[INFO] [stdout] test yul::tests::functiondefinition_single_ret ... ok
+[INFO] [stdout] test yul::tests::identifier_typed ... ok
+[INFO] [stdout] test yul::tests::identifier ... ok
+[INFO] [stdout] test yul::tests::identifierr_custom_typed ... ok
+[INFO] [stdout] test yul::tests::if_statement ... ok
+[INFO] [stdout] test yul::tests::literal ... ok
+[INFO] [stdout] test yul::tests::literal_typed ... ok
+[INFO] [stdout] test yul::tests::literal_custom_typed ... ok
+[INFO] [stdout] test yul::tests::switch ... ok
+[INFO] [stdout] test yul::tests::variabledeclaration_empty ... ok
+[INFO] [stdout] test yul::tests::variabledeclaration_multi ... ok
+[INFO] [stdout] test yul::tests::variabledeclaration_single ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests yultsur
+[INFO] [stdout] 
+[INFO] [stdout] running 0 tests
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "79bb4d395a66994079d00577c9d24b14d8890437d261a5b835693643a5ed3e92"`
+[INFO] running `"docker" "rm" "-f" "79bb4d395a66994079d00577c9d24b14d8890437d261a5b835693643a5ed3e92"`
+[INFO] [stdout] 79bb4d395a66994079d00577c9d24b14d8890437d261a5b835693643a5ed3e92

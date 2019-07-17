@@ -1,0 +1,63 @@
+[INFO] fetching crate eztrace 0.1.0...
+[INFO] extracting crate eztrace 0.1.0 into work\ex\default\sources\nightly\reg\eztrace\0.1.0
+[INFO] extracting crate eztrace 0.1.0 into work\ex\default\sources\nightly+rustflags=-Zverbose\reg\eztrace\0.1.0
+[INFO] validating manifest of eztrace-0.1.0 on toolchain nightly
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] validating manifest of eztrace-0.1.0 on toolchain nightly+rustflags=-Zverbose
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "read-manifest" "--manifest-path" "Cargo.toml"`
+[INFO] started frobbing eztrace-0.1.0
+[INFO] finished frobbing eztrace-0.1.0
+[INFO] frobbed toml for eztrace-0.1.0 written to work\ex\default\sources\nightly\reg\eztrace\0.1.0\Cargo.toml
+[INFO] started frobbing eztrace-0.1.0
+[INFO] finished frobbing eztrace-0.1.0
+[INFO] frobbed toml for eztrace-0.1.0 written to work\ex\default\sources\nightly+rustflags=-Zverbose\reg\eztrace\0.1.0\Cargo.toml
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] [stderr]     Blocking waiting for file lock on package cache
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "generate-lockfile" "--manifest-path" "Cargo.toml" "-Zno-index-update"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] running `"C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home\\bin\\cargo.exe" "+nightly" "fetch" "--locked" "--manifest-path" "Cargo.toml"`
+[INFO] testing eztrace-0.1.0 against nightly for default
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\eztrace\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "build" "--frozen"`
+[INFO] [stdout] 54fbc36df9bbb34251da65e351f2c62fa5760efc44f12dfd4b3254056ca29fae
+[INFO] running `"docker" "start" "-a" "54fbc36df9bbb34251da65e351f2c62fa5760efc44f12dfd4b3254056ca29fae"`
+[INFO] [stderr]    Compiling eztrace v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 1.05s
+[INFO] running `"docker" "inspect" "54fbc36df9bbb34251da65e351f2c62fa5760efc44f12dfd4b3254056ca29fae"`
+[INFO] running `"docker" "rm" "-f" "54fbc36df9bbb34251da65e351f2c62fa5760efc44f12dfd4b3254056ca29fae"`
+[INFO] [stdout] 54fbc36df9bbb34251da65e351f2c62fa5760efc44f12dfd4b3254056ca29fae
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\eztrace\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen" "--no-run"`
+[INFO] [stdout] eae2e37ed730d98f9d386b4d163f52acf7d59eecb0a46f0f5196f60227a01d66
+[INFO] running `"docker" "start" "-a" "eae2e37ed730d98f9d386b4d163f52acf7d59eecb0a46f0f5196f60227a01d66"`
+[INFO] [stderr]    Compiling eztrace v0.1.0 (C:\crater\workdir)
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 2.36s
+[INFO] running `"docker" "inspect" "eae2e37ed730d98f9d386b4d163f52acf7d59eecb0a46f0f5196f60227a01d66"`
+[INFO] running `"docker" "rm" "-f" "eae2e37ed730d98f9d386b4d163f52acf7d59eecb0a46f0f5196f60227a01d66"`
+[INFO] [stdout] eae2e37ed730d98f9d386b4d163f52acf7d59eecb0a46f0f5196f60227a01d66
+[INFO] running `"docker" "create" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\target-dirs\\default\\worker-2\\nightly,dst=C:\\crater\\target" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\ex\\default\\sources\\nightly\\reg\\eztrace\\0.1.0,dst=C:\\crater\\workdir,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\cargo-home,dst=C:\\crater\\cargo-home,readonly" "--mount" "type=bind,src=C:\\Users\\mackendy\\src\\crater\\work\\local\\rustup-home,dst=C:\\crater\\rustup-home,readonly" "-e" "SOURCE_DIR=C:\\crater\\workdir" "-e" "CARGO_TARGET_DIR=C:\\crater\\target" "-e" "CARGO_INCREMENTAL=0" "-e" "RUST_BACKTRACE=full" "-e" "RUSTFLAGS=--cap-lints=allow" "-e" "CARGO_HOME=C:\\crater\\cargo-home" "-e" "RUSTUP_HOME=C:\\crater\\rustup-home" "-w" "C:\\crater\\workdir" "-m" "1536M" "--network" "none" "--isolation=process" "crates-build-env-windows" "C:\\crater\\cargo-home\\bin\\cargo" "+nightly" "test" "--frozen"`
+[INFO] [stdout] 43b55292181063f1ee3f2d959ac802db6ebcd61ef761f9d406ffba2cda2ee877
+[INFO] running `"docker" "start" "-a" "43b55292181063f1ee3f2d959ac802db6ebcd61ef761f9d406ffba2cda2ee877"`
+[INFO] [stderr]     Finished dev [unoptimized + debuginfo] target(s) in 0.18s
+[INFO] [stderr]      Running C:\crater\target\debug\deps\eztrace-67c3368da4a1cc93.exe
+[INFO] [stdout] 
+[INFO] [stdout] running 6 tests
+[INFO] [stdout] test tests::empty ... ok
+[INFO] [stdout] test tests::multi ... ok
+[INFO] [stdout] test tests::no_move ... ok
+[INFO] [stdout] test tests::single ... ok
+[INFO] [stdout] test tests::single_eval_per_arg ... ok
+[INFO] [stdout] test tests::the_docs ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] [stderr]    Doc-tests eztrace
+[INFO] [stdout] 
+[INFO] [stdout] running 3 tests
+[INFO] [stdout] test eztrace.rs - trace (line 45) ... ok
+[INFO] [stdout] test eztrace.rs - trace (line 32) ... ok
+[INFO] [stdout] test eztrace.rs -  (line 10) ... ok
+[INFO] [stdout] 
+[INFO] [stdout] test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+[INFO] [stdout] 
+[INFO] running `"docker" "inspect" "43b55292181063f1ee3f2d959ac802db6ebcd61ef761f9d406ffba2cda2ee877"`
+[INFO] running `"docker" "rm" "-f" "43b55292181063f1ee3f2d959ac802db6ebcd61ef761f9d406ffba2cda2ee877"`
+[INFO] [stdout] 43b55292181063f1ee3f2d959ac802db6ebcd61ef761f9d406ffba2cda2ee877
