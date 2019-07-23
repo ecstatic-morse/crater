@@ -126,9 +126,7 @@ impl MinicraterRun {
             &String::from_utf8(expected_report)
                 .expect("invalid utf-8 in the expected report")
                 .replace("\r\n", "\n"),
-            &String::from_utf8(actual_report.clone())
-                .expect("invalid utf-8 in the actual report")
-                .replace("\r\n", "\n"),
+            &String::from_utf8(actual_report).expect("invalid utf-8 in the actual report"),
             "\n",
         );
         if changeset.distance != 0 {
